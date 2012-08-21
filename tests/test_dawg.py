@@ -64,3 +64,30 @@ def test_pickling():
     for key, value in payload.items():
         assert key in d2
         assert d[key] == value
+
+def test_completion():
+    keys = ['f', 'bar', 'foo', 'foobar']
+    d = dawg.CompletionDAWG(keys)
+    for key in keys:
+        assert key in d
+
+    assert d.keys('foo') == ['foo', 'foobar']
+    assert d.keys('b') == ['bar']
+    assert d.keys('z') == []
+
+def test_completion_dawg_saveload():
+    keys = ['f', 'bar', 'foo', 'foobar']
+
+    buf = BytesIO()
+    dawg.CompletionDAWG(keys).write(buf)
+    buf.seek(0)
+
+    d = dawg.CompletionDAWG()
+    d.read(buf)
+
+    for key in keys:
+        assert key in d
+
+    assert d.keys('foo') == ['foo', 'foobar']
+    assert d.keys('b') == ['bar']
+    assert d.keys('z') == []

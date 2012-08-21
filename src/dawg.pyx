@@ -1,9 +1,14 @@
+from __future__ import unicode_literals
 from libcpp.string cimport string
 from iostream cimport stringstream, istream, ostream
 
 cimport _dawg
 from _dawg_builder cimport DawgBuilder
 from _dictionary cimport Dictionary
+from _guide cimport Guide
+from _completer cimport Completer
+from _base_types cimport BaseType
+cimport _guide_builder
 cimport _dictionary_builder
 
 import operator
@@ -14,9 +19,11 @@ cdef class DAWG:
     Base DAWG wrapper.
     """
     cdef Dictionary dct
+    cdef _dawg.Dawg dawg
 
     def __dealloc__(self):
         self.dct.Clear()
+        self.dawg.Clear()
 
     def __init__(self, arg=None):
         if arg is None:
@@ -35,9 +42,8 @@ cdef class DAWG:
                 b_key = key
             dawg_builder.Insert(b_key)
 
-        cdef _dawg.Dawg dawg
-        dawg_builder.Finish(&dawg)
-        _dictionary_builder.Build(dawg, &(self.dct))
+        dawg_builder.Finish(&self.dawg)
+        _dictionary_builder.Build(self.dawg, &(self.dct))
 
     def __contains__(self, key):
         if isinstance(key, unicode):
@@ -116,6 +122,64 @@ cdef class DAWG:
 
     def _file_size(self):
         return self.dct.file_size()
+
+
+cdef class CompletionDAWG(DAWG):
+    """
+    DAWG with key completion support.
+    """
+    cdef Guide guide
+
+    def __init__(self, arg=None):
+        super(CompletionDAWG, self).__init__(arg)
+        if not _guide_builder.Build(self.dawg, self.dct, &self.guide):
+            raise Exception("Error building completion information")
+
+    def __dealloc__(self):
+        self.guide.Clear()
+
+    cpdef list keys(self, unicode prefix=""):
+        cdef bytes b_prefix = prefix.encode('utf8')
+        cdef bytes key
+        cdef BaseType index = self.dct.root()
+        cdef list res = []
+
+        if not self.dct.Follow(b_prefix, &index):
+            return res
+
+        cdef Completer* completer = new Completer(self.dct, self.guide)
+        try:
+            completer.Start(index, b_prefix)
+            while completer.Next():
+                key = completer.key()
+                res.append(key.decode('utf8'))
+
+        finally:
+            del completer
+
+        return res
+
+    cpdef bytes tobytes(self) except +:
+        """
+        Returns raw DAWG content as bytes.
+        """
+        cdef stringstream stream
+        self.dct.Write(<ostream *> &stream)
+        self.guide.Write(<ostream *> &stream)
+        cdef bytes res = stream.str()
+        return res
+
+    cpdef frombytes(self, bytes data) except +:
+        """
+        Loads DAWG from bytes ``data``.
+        """
+        cdef stringstream* stream = new stringstream(data)
+        try:
+            self.dct.Read(<istream *> stream)
+            self.guide.Read(<istream *> stream)
+        finally:
+            del stream
+        return self
 
 
 

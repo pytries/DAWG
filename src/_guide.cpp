@@ -271,8 +271,10 @@
 #define _USE_MATH_DEFINES
 #endif
 #include <math.h>
-#define __PYX_HAVE__iostream
-#define __PYX_HAVE_API__iostream
+#define __PYX_HAVE___guide
+#define __PYX_HAVE_API___guide
+#include "../lib/dawgdic/base-types.h"
+#include "../lib/dawgdic/guide-unit.h"
 #include "string.h"
 #include <string>
 #include <istream>
@@ -281,6 +283,7 @@
 #include "stdexcept"
 #include "typeinfo"
 #include <sstream>
+#include "../lib/dawgdic/guide.h"
 #ifdef _OPENMP
 #include <omp.h>
 #endif /* _OPENMP */
@@ -367,7 +370,7 @@ static const char *__pyx_filename;
 
 
 static const char *__pyx_f[] = {
-  "iostream.pxd",
+  "_guide.pxd",
 };
 
 /*--- Type declarations ---*/
@@ -479,15 +482,21 @@ static void __Pyx_AddTraceback(const char *funcname, int c_line,
 static int __Pyx_InitStrings(__Pyx_StringTabEntry *t); /*proto*/
 
 
+/* Module declarations from '_base_types' */
+
+/* Module declarations from '_guide_unit' */
+
 /* Module declarations from 'libc.string' */
 
 /* Module declarations from 'libcpp.string' */
 
 /* Module declarations from 'iostream' */
-#define __Pyx_MODULE_NAME "iostream"
-int __pyx_module_is_main_iostream = 0;
 
-/* Implementation of 'iostream' */
+/* Module declarations from '_guide' */
+#define __Pyx_MODULE_NAME "_guide"
+int __pyx_module_is_main__guide = 0;
+
+/* Implementation of '_guide' */
 static char __pyx_k____main__[] = "__main__";
 static char __pyx_k____test__[] = "__test__";
 static PyObject *__pyx_n_s____main__;
@@ -500,7 +509,7 @@ static PyMethodDef __pyx_methods[] = {
 #if PY_MAJOR_VERSION >= 3
 static struct PyModuleDef __pyx_moduledef = {
     PyModuleDef_HEAD_INIT,
-    __Pyx_NAMESTR("iostream"),
+    __Pyx_NAMESTR("_guide"),
     0, /* m_doc */
     -1, /* m_size */
     __pyx_methods /* m_methods */,
@@ -535,11 +544,11 @@ static int __Pyx_InitGlobals(void) {
 }
 
 #if PY_MAJOR_VERSION < 3
-PyMODINIT_FUNC initiostream(void); /*proto*/
-PyMODINIT_FUNC initiostream(void)
+PyMODINIT_FUNC init_guide(void); /*proto*/
+PyMODINIT_FUNC init_guide(void)
 #else
-PyMODINIT_FUNC PyInit_iostream(void); /*proto*/
-PyMODINIT_FUNC PyInit_iostream(void)
+PyMODINIT_FUNC PyInit__guide(void); /*proto*/
+PyMODINIT_FUNC PyInit__guide(void)
 #endif
 {
   PyObject *__pyx_t_1 = NULL;
@@ -553,7 +562,7 @@ PyMODINIT_FUNC PyInit_iostream(void)
           Py_FatalError("failed to import 'refnanny' module");
   }
   #endif
-  __Pyx_RefNannySetupContext("PyMODINIT_FUNC PyInit_iostream(void)", 0);
+  __Pyx_RefNannySetupContext("PyMODINIT_FUNC PyInit__guide(void)", 0);
   if ( __Pyx_check_binary_version() < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 1; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __pyx_empty_tuple = PyTuple_New(0); if (unlikely(!__pyx_empty_tuple)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 1; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __pyx_empty_bytes = PyBytes_FromStringAndSize("", 0); if (unlikely(!__pyx_empty_bytes)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 1; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
@@ -575,7 +584,7 @@ PyMODINIT_FUNC PyInit_iostream(void)
   #endif
   /*--- Module creation code ---*/
   #if PY_MAJOR_VERSION < 3
-  __pyx_m = Py_InitModule4(__Pyx_NAMESTR("iostream"), __pyx_methods, 0, 0, PYTHON_API_VERSION);
+  __pyx_m = Py_InitModule4(__Pyx_NAMESTR("_guide"), __pyx_methods, 0, 0, PYTHON_API_VERSION);
   #else
   __pyx_m = PyModule_Create(&__pyx_moduledef);
   #endif
@@ -591,7 +600,7 @@ PyMODINIT_FUNC PyInit_iostream(void)
   if (__Pyx_SetAttrString(__pyx_m, "__builtins__", __pyx_b) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 1; __pyx_clineno = __LINE__; goto __pyx_L1_error;};
   /*--- Initialize various global constants etc. ---*/
   if (unlikely(__Pyx_InitGlobals() < 0)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 1; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  if (__pyx_module_is_main_iostream) {
+  if (__pyx_module_is_main__guide) {
     if (__Pyx_SetAttrString(__pyx_m, "__name__", __pyx_n_s____main__) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 1; __pyx_clineno = __LINE__; goto __pyx_L1_error;};
   }
   /*--- Builtin init code ---*/
@@ -607,10 +616,10 @@ PyMODINIT_FUNC PyInit_iostream(void)
   /*--- Function import code ---*/
   /*--- Execution code ---*/
 
-  /* "iostream.pxd":1
- * from libcpp.string cimport string             # <<<<<<<<<<<<<<
- * 
- * cdef extern from "<istream>" namespace "std":
+  /* "_guide.pxd":1
+ * from _base_types cimport BaseType, SizeType, ValueType, UCharType, CharType             # <<<<<<<<<<<<<<
+ * from _guide_unit cimport GuideUnit
+ * from iostream cimport istream, ostream
  */
   __pyx_t_1 = PyDict_New(); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 1; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(((PyObject *)__pyx_t_1));
@@ -620,10 +629,10 @@ PyMODINIT_FUNC PyInit_iostream(void)
   __pyx_L1_error:;
   __Pyx_XDECREF(__pyx_t_1);
   if (__pyx_m) {
-    __Pyx_AddTraceback("init iostream", __pyx_clineno, __pyx_lineno, __pyx_filename);
+    __Pyx_AddTraceback("init _guide", __pyx_clineno, __pyx_lineno, __pyx_filename);
     Py_DECREF(__pyx_m); __pyx_m = 0;
   } else if (!PyErr_Occurred()) {
-    PyErr_SetString(PyExc_ImportError, "init iostream");
+    PyErr_SetString(PyExc_ImportError, "init _guide");
   }
   __pyx_L0:;
   __Pyx_RefNannyFinishContext();
