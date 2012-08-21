@@ -15,6 +15,10 @@ def test_contains():
     assert 'fo' not in d
     assert 'x' not in d
 
+    assert b'foo' in d
+    assert b'x' not in d
+
+
 def test_getitem():
     d = dawg.IntDict({'foo': 1, 'bar': 5, 'foobar': 3})
     assert d['foo'] == 1
@@ -28,10 +32,10 @@ def test_getitem():
 def test_dumps_loads():
     payload = {'foo': 1, 'bar': 5, 'foobar': 3}
     d = dawg.IntDict(payload)
-    data = d.dumps()
+    data = d.tobytes()
 
     d2 = dawg.IntDict()
-    d2.loads(data)
+    d2.frombytes(data)
     for key, value in payload.items():
         assert key in d2
         assert d2[key] == value
@@ -40,11 +44,11 @@ def test_dump_load():
     payload = {'foo': 1, 'bar': 5, 'foobar': 3}
 
     buf = BytesIO()
-    dawg.IntDict(payload).dump(buf)
+    dawg.IntDict(payload).write(buf)
     buf.seek(0)
 
     d = dawg.IntDict()
-    d.load(buf)
+    d.read(buf)
 
     for key, value in payload.items():
         assert key in d
