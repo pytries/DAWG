@@ -49,15 +49,7 @@ Make sure `tox`_ is installed and run
 
     $ tox
 
-from the source checkout. Tests should pass under python 2.6, 2.7, 3.2 and 3.3.
-
-.. note::
-
-    At the moment of writing the latest pip release (1.1) does not
-    support Python 3.3; in order to run tox tests under Python 3.3
-    find the "virtualenv_support" directory in site-packages
-    (of the env you run tox from) and place an sdist zip/tarball of the newer
-    pip (from github) there.
+from the source checkout. Tests should pass under python 2.6, 2.7 and 3.2.
 
 .. _cython: http://cython.org
 .. _tox: http://tox.testrun.org

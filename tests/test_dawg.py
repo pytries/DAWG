@@ -75,6 +75,11 @@ def test_completion():
     assert d.keys('b') == ['bar']
     assert d.keys('z') == []
 
+#def test_int_keys():
+#    payload = {'foo': 1, 'bar': 5, 'foobar': 3}
+#    d = dawg.IntDict(payload)
+#    assert d.keys() == payload.keys()
+
 def test_completion_dawg_saveload():
     keys = ['f', 'bar', 'foo', 'foobar']
 

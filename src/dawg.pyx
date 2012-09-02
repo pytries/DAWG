@@ -15,6 +15,8 @@ import operator
 import collections
 import struct
 
+from binascii import a2b_base64, b2a_base64
+
 cdef class DAWG:
     """
     Base DAWG wrapper.
@@ -29,10 +31,10 @@ cdef class DAWG:
     def __init__(self, arg=None):
         if arg is None:
             arg = []
-        self._build_from_keys_iterable(sorted(list(arg)))
+        self._build_from_iterable(sorted(list(arg)))
 
 
-    cdef _build_from_keys_iterable(self, iterable):
+    def _build_from_iterable(self, iterable):
         cdef DawgBuilder dawg_builder
 
         cdef bytes b_key
@@ -186,7 +188,7 @@ cdef class CompletionDAWG(DAWG):
 # as a separator between utf8-encoded string and binary payload.
 DEF PAYLOAD_SEPARATOR = b'\xff'
 
-cdef class PayloadDAWG(CompletionDAWG):
+cdef class BytesDAWG(CompletionDAWG):
     """
     DAWG that is able to transparently store extra binary payload in keys;
     there may be several payloads for the same key.
@@ -204,11 +206,12 @@ cdef class PayloadDAWG(CompletionDAWG):
 
         keys = (self._raw_key(d[0], d[1]) for d in arg)
 
-        super(PayloadDAWG, self).__init__(keys)
+        super(BytesDAWG, self).__init__(keys)
 
 
     cpdef bytes _raw_key(self, unicode key, bytes payload):
-        return key.encode('utf8') + PAYLOAD_SEPARATOR + payload
+        cdef bytes encoded_payload = b2a_base64(payload)
+        return key.encode('utf8') + PAYLOAD_SEPARATOR + encoded_payload
 
     cpdef bint b_has_key(self, bytes key) except -1:
         cdef BaseType index
@@ -241,6 +244,7 @@ cdef class PayloadDAWG(CompletionDAWG):
         cdef BaseType index
         cdef list res = []
         cdef bytes payload
+        cdef bytes decoded_payload
 
         if not self._follow_key(key, &index):
             return res
@@ -250,7 +254,8 @@ cdef class PayloadDAWG(CompletionDAWG):
             completer.Start(index)
             while completer.Next():
                 payload = completer.key()[:completer.length()]
-                res.append(payload)
+                decoded_payload = a2b_base64(payload)
+                res.append(decoded_payload)
         finally:
             del completer
 
@@ -258,7 +263,7 @@ cdef class PayloadDAWG(CompletionDAWG):
 
     cpdef list items(self, unicode prefix=""):
         cdef bytes b_prefix = prefix.encode('utf8')
-        cdef bytes key, raw_key, value
+        cdef bytes key, raw_key, value, decoded_value
         cdef list res = []
 
         cdef BaseType index = self.dct.root()
@@ -271,8 +276,9 @@ cdef class PayloadDAWG(CompletionDAWG):
             while completer.Next():
                 raw_key = completer.key()[:completer.length()]
                 key, value = raw_key.split(PAYLOAD_SEPARATOR, 1)
+                decoded_value = a2b_base64(value)
                 res.append(
-                    (key.decode('utf8'), value)
+                    (key.decode('utf8'), decoded_value)
                 )
 
         finally:
@@ -281,11 +287,14 @@ cdef class PayloadDAWG(CompletionDAWG):
         return res
 
     cpdef list keys(self, unicode prefix=""):
-        keys, values = zip(*self.items(prefix))
-        return keys
+        items = self.items(prefix)
+        if not items:
+            return []
+        keys, values = zip(*items)
+        return list(keys)
 
 
-cdef class StructuredDAWG(PayloadDAWG):
+cdef class RecordDAWG(BytesDAWG):
     """
     DAWG that is able to transparently store binary payload in keys;
     there may be several payloads for the same key.
@@ -318,16 +327,16 @@ cdef class StructuredDAWG(PayloadDAWG):
             arg = []
 
         keys = ((d[0], self._struct.pack(*d[1])) for d in arg)
-        super(StructuredDAWG, self).__init__(keys)
+        super(RecordDAWG, self).__init__(keys)
 
 
     cpdef list b_get_value(self, bytes key):
-        cdef list values = PayloadDAWG.b_get_value(self, key)
+        cdef list values = BytesDAWG.b_get_value(self, key)
         return [self._struct.unpack(val) for val in values]
 
 
     cpdef list items(self, unicode prefix=""):
-        cdef list items = super(StructuredDAWG, self).items(prefix)
+        cdef list items = BytesDAWG.items(self, prefix)
         return [(key, self._struct.unpack(val)) for (key, val) in items]
 
 
@@ -347,10 +356,10 @@ cdef class IntDict(DAWG):
             iterable = arg
 
         iterable = sorted(iterable, key=operator.itemgetter(0))
-        self._build_from_key_value_iterable(iterable)
+        super(IntDict, self).__init__(iterable)
 
 
-    cpdef _build_from_key_value_iterable(self, iterable):
+    def _build_from_iterable(self, iterable):
         cdef DawgBuilder dawg_builder
 
         cdef bytes b_key

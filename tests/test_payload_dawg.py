@@ -21,7 +21,7 @@ STRUCTURED_DATA = (  # payload is (length, vowels count, index) tuple
 )
 
 def test_contains():
-    d = dawg.PayloadDAWG(DATA)
+    d = dawg.BytesDAWG(DATA)
     for key, val in DATA:
         assert key in d
 
@@ -31,7 +31,7 @@ def test_contains():
 
 
 def test_getitem():
-    d = dawg.PayloadDAWG(DATA)
+    d = dawg.BytesDAWG(DATA)
 
     assert d['foo'] == [b'data1', b'data3']
     assert d['bar'] == [b'data2']
@@ -50,8 +50,22 @@ def test_getitem():
         d['x']
 
 
-def test_strutured_getitem():
-    d = dawg.StructuredDAWG("=3H", STRUCTURED_DATA)
+def test_record_getitem():
+    d = dawg.RecordDAWG("=3H", STRUCTURED_DATA)
     assert d['foo'] == [(3, 2, 0), (3, 2, 1)]
     assert d['bar'] == [(3, 1, 0)]
     assert d['foobar'] == [(6, 3, 0)]
+
+def test_record_items():
+    d = dawg.RecordDAWG("=3H", STRUCTURED_DATA)
+    assert sorted(d.items()) == sorted(STRUCTURED_DATA)
+
+def test_record_keys():
+    d = dawg.RecordDAWG("=3H", STRUCTURED_DATA)
+    assert sorted(d.keys()) == ['bar', 'foo', 'foo', 'foobar',]
+
+def test_record_keys_prefix():
+    d = dawg.RecordDAWG("=3H", STRUCTURED_DATA)
+    assert sorted(d.keys('fo')) == ['foo', 'foo', 'foobar']
+    assert d.keys('bar') == ['bar']
+    assert d.keys('barz') == []
