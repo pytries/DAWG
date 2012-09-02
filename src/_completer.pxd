@@ -3,7 +3,7 @@ from _dawg cimport Dawg
 from _dictionary cimport Dictionary
 from _guide cimport Guide
 
-cdef extern from "../lib/dawgdic/completer.h" namespace "dawgdic":
+cdef extern from "../lib/dawgdic/completer.h" namespace "dawgdic" nogil:
     cdef cppclass Completer:
         Completer()
         Completer(Dictionary &dic, Guide &guide)

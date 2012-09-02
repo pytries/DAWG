@@ -1,13 +1,13 @@
 from libcpp.string cimport string
 
-cdef extern from "<istream>" namespace "std":
+cdef extern from "<istream>" namespace "std" nogil:
     cdef cppclass istream:
-        istream() nogil except +
-        istream& read (char* s, int n) nogil except +
+        istream() except +
+        istream& read (char* s, int n) except +
 
     cdef cppclass ostream:
-        ostream() nogil except +
-        ostream& write (char* s, int n) nogil except +
+        ostream() except +
+        ostream& write (char* s, int n) except +
 
 cdef extern from "<sstream>" namespace "std":
 
