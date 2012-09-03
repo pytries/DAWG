@@ -177,15 +177,21 @@ def profiling():
     import pstats
     import cProfile
     print('\n====== Profiling =======\n')
-    trie = create_dawg()
+    d = create_bytes_dawg()
     WORDS = words100k()
+
+    def check_getitem(trie, words):
+        for word in words:
+            trie[word]
+
+    cProfile.runctx("check_getitem(d, WORDS)", globals(), locals(), "Profile.prof")
 
 #    def check_prefixes(trie, words):
 #        for word in words:
 #            trie.keys(word)
-#    cProfile.runctx("check_prefixes(trie, NON_WORDS_1k)", globals(), locals(), "Profile.prof")
+#    cProfile.runctx("check_prefixes(d, NON_WORDS_1k)", globals(), locals(), "Profile.prof")
 #
-    cProfile.runctx("check_trie(trie, WORDS)", globals(), locals(), "Profile.prof")
+    #cProfile.runctx("check_trie(d, WORDS)", globals(), locals(), "Profile.prof")
 
     s = pstats.Stats("Profile.prof")
     s.strip_dirs().sort_stats("time").print_stats(20)

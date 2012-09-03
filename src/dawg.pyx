@@ -1,3 +1,4 @@
+# cython: profile=True
 from __future__ import unicode_literals
 from libcpp.string cimport string
 from iostream cimport stringstream, istream, ostream
@@ -10,6 +11,7 @@ from _completer cimport Completer
 from _base_types cimport BaseType, SizeType
 cimport _guide_builder
 cimport _dictionary_builder
+cimport b64_decode
 
 import operator
 import collections
@@ -244,22 +246,27 @@ cdef class BytesDAWG(CompletionDAWG):
         cdef BaseType index
         cdef list res = []
         cdef bytes payload
-        cdef bytes decoded_payload
 
         if not self._follow_key(key, &index):
             return res
+
+        cdef char[32768] _buf
+        cdef int _len
+        cdef b64_decode.decoder dec
 
         cdef Completer* completer = new Completer(self.dct, self.guide)
         try:
             completer.Start(index)
             while completer.Next():
-                payload = completer.key()[:completer.length()]
-                decoded_payload = a2b_base64(payload)
-                res.append(decoded_payload)
+                dec.init()
+                _len = dec.decode(completer.key(), completer.length(), _buf)
+                payload = _buf[:_len]
+                res.append(payload)
         finally:
             del completer
 
         return res
+
 
     cpdef list items(self, unicode prefix=""):
         cdef bytes b_prefix = prefix.encode('utf8')

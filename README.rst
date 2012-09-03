@@ -62,6 +62,10 @@ Authors & Contributors
 This module is based on `dawgdic`_ C++ library by
 Susumu Yata & contributors.
 
+base64 decoder is based on Public Domain libb64_ by Chris Venter.
+
+.. _libb64: http://libb64.sourceforge.net/
+
 License
 =======
 

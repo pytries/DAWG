@@ -15,7 +15,7 @@ setup(
     ext_modules = [
         Extension(
             "dawg",
-            sources = glob.glob('src/*.cpp'),
+            sources = glob.glob('src/*.cpp') + glob.glob('lib/b64/*.c'),
             include_dirs=['lib'],
             language = "c++",
         )
