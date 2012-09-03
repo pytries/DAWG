@@ -246,10 +246,17 @@
 #define _USE_MATH_DEFINES
 #endif
 #include <math.h>
-#define __PYX_HAVE___dawg
-#define __PYX_HAVE_API___dawg
-#include "../lib/dawgdic/base-types.h"
-#include "../lib/dawgdic/dawg.h"
+#define __PYX_HAVE__b64_decode
+#define __PYX_HAVE_API__b64_decode
+#include "string.h"
+#include <string>
+#include "ios"
+#include "new"
+#include "stdexcept"
+#include "typeinfo"
+#include <istream>
+#include <sstream>
+#include "../lib/b64/decode.h"
 #ifdef _OPENMP
 #include <omp.h>
 #endif /* _OPENMP */
@@ -336,7 +343,7 @@ static const char *__pyx_filename;
 
 
 static const char *__pyx_f[] = {
-  "_dawg.pxd",
+  "b64_decode.pxd",
 };
 
 /*--- Type declarations ---*/
@@ -448,13 +455,17 @@ static void __Pyx_AddTraceback(const char *funcname, int c_line,
 static int __Pyx_InitStrings(__Pyx_StringTabEntry *t); /*proto*/
 
 
-/* Module declarations from '_base_types' */
+/* Module declarations from 'libc.string' */
 
-/* Module declarations from '_dawg' */
-#define __Pyx_MODULE_NAME "_dawg"
-int __pyx_module_is_main__dawg = 0;
+/* Module declarations from 'libcpp.string' */
 
-/* Implementation of '_dawg' */
+/* Module declarations from 'iostream' */
+
+/* Module declarations from 'b64_decode' */
+#define __Pyx_MODULE_NAME "b64_decode"
+int __pyx_module_is_main_b64_decode = 0;
+
+/* Implementation of 'b64_decode' */
 static char __pyx_k____main__[] = "__main__";
 static char __pyx_k____test__[] = "__test__";
 static PyObject *__pyx_n_s____main__;
@@ -467,7 +478,7 @@ static PyMethodDef __pyx_methods[] = {
 #if PY_MAJOR_VERSION >= 3
 static struct PyModuleDef __pyx_moduledef = {
     PyModuleDef_HEAD_INIT,
-    __Pyx_NAMESTR("_dawg"),
+    __Pyx_NAMESTR("b64_decode"),
     0, /* m_doc */
     -1, /* m_size */
     __pyx_methods /* m_methods */,
@@ -502,11 +513,11 @@ static int __Pyx_InitGlobals(void) {
 }
 
 #if PY_MAJOR_VERSION < 3
-PyMODINIT_FUNC init_dawg(void); /*proto*/
-PyMODINIT_FUNC init_dawg(void)
+PyMODINIT_FUNC initb64_decode(void); /*proto*/
+PyMODINIT_FUNC initb64_decode(void)
 #else
-PyMODINIT_FUNC PyInit__dawg(void); /*proto*/
-PyMODINIT_FUNC PyInit__dawg(void)
+PyMODINIT_FUNC PyInit_b64_decode(void); /*proto*/
+PyMODINIT_FUNC PyInit_b64_decode(void)
 #endif
 {
   PyObject *__pyx_t_1 = NULL;
@@ -520,7 +531,7 @@ PyMODINIT_FUNC PyInit__dawg(void)
           Py_FatalError("failed to import 'refnanny' module");
   }
   #endif
-  __Pyx_RefNannySetupContext("PyMODINIT_FUNC PyInit__dawg(void)", 0);
+  __Pyx_RefNannySetupContext("PyMODINIT_FUNC PyInit_b64_decode(void)", 0);
   if ( __Pyx_check_binary_version() < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 1; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __pyx_empty_tuple = PyTuple_New(0); if (unlikely(!__pyx_empty_tuple)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 1; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __pyx_empty_bytes = PyBytes_FromStringAndSize("", 0); if (unlikely(!__pyx_empty_bytes)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 1; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
@@ -542,7 +553,7 @@ PyMODINIT_FUNC PyInit__dawg(void)
   #endif
   /*--- Module creation code ---*/
   #if PY_MAJOR_VERSION < 3
-  __pyx_m = Py_InitModule4(__Pyx_NAMESTR("_dawg"), __pyx_methods, 0, 0, PYTHON_API_VERSION); Py_XINCREF(__pyx_m);
+  __pyx_m = Py_InitModule4(__Pyx_NAMESTR("b64_decode"), __pyx_methods, 0, 0, PYTHON_API_VERSION); Py_XINCREF(__pyx_m);
   #else
   __pyx_m = PyModule_Create(&__pyx_moduledef);
   #endif
@@ -554,7 +565,7 @@ PyMODINIT_FUNC PyInit__dawg(void)
   if (__Pyx_SetAttrString(__pyx_m, "__builtins__", __pyx_b) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 1; __pyx_clineno = __LINE__; goto __pyx_L1_error;};
   /*--- Initialize various global constants etc. ---*/
   if (unlikely(__Pyx_InitGlobals() < 0)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 1; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  if (__pyx_module_is_main__dawg) {
+  if (__pyx_module_is_main_b64_decode) {
     if (__Pyx_SetAttrString(__pyx_m, "__name__", __pyx_n_s____main__) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 1; __pyx_clineno = __LINE__; goto __pyx_L1_error;};
   }
   /*--- Builtin init code ---*/
@@ -570,10 +581,10 @@ PyMODINIT_FUNC PyInit__dawg(void)
   /*--- Function import code ---*/
   /*--- Execution code ---*/
 
-  /* "_dawg.pxd":1
- * from _base_types cimport BaseType, SizeType, ValueType, UCharType             # <<<<<<<<<<<<<<
+  /* "b64_decode.pxd":1
+ * from iostream cimport istream, ostream             # <<<<<<<<<<<<<<
  * 
- * cdef extern from "../lib/dawgdic/dawg.h" namespace "dawgdic":
+ * cdef extern from "../lib/b64/decode.h" namespace "base64":
  */
   __pyx_t_1 = PyDict_New(); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 1; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(((PyObject *)__pyx_t_1));
@@ -583,10 +594,10 @@ PyMODINIT_FUNC PyInit__dawg(void)
   __pyx_L1_error:;
   __Pyx_XDECREF(__pyx_t_1);
   if (__pyx_m) {
-    __Pyx_AddTraceback("init _dawg", __pyx_clineno, __pyx_lineno, __pyx_filename);
+    __Pyx_AddTraceback("init b64_decode", __pyx_clineno, __pyx_lineno, __pyx_filename);
     Py_DECREF(__pyx_m); __pyx_m = 0;
   } else if (!PyErr_Occurred()) {
-    PyErr_SetString(PyExc_ImportError, "init _dawg");
+    PyErr_SetString(PyExc_ImportError, "init b64_decode");
   }
   __pyx_L0:;
   __Pyx_RefNannyFinishContext();
