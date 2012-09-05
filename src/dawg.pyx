@@ -144,7 +144,7 @@ cdef class CompletionDAWG(DAWG):
 
     cpdef list keys(self, unicode prefix=""):
         cdef bytes b_prefix = prefix.encode('utf8')
-        cdef bytes key
+        cdef unicode key
         cdef BaseType index = self.dct.root()
         cdef list res = []
 
@@ -155,8 +155,8 @@ cdef class CompletionDAWG(DAWG):
         try:
             completer.Start(index, b_prefix)
             while completer.Next():
-                key = completer.key()
-                res.append(key.decode('utf8'))
+                key = (<char*>completer.key()).decode('utf8')
+                res.append(key)
 
         finally:
             del completer
@@ -282,7 +282,7 @@ cdef class BytesDAWG(CompletionDAWG):
     cpdef list items(self, unicode prefix=""):
         cdef bytes b_prefix = prefix.encode('utf8')
         cdef bytes value, b_value
-        cdef str u_key
+        cdef unicode u_key
         cdef int i
         cdef list res = []
         cdef char* raw_key
@@ -326,7 +326,7 @@ cdef class BytesDAWG(CompletionDAWG):
 
     cpdef list keys(self, unicode prefix=""):
         cdef bytes b_prefix = prefix.encode('utf8')
-        cdef str u_key
+        cdef unicode u_key
         cdef int i
         cdef list res = []
         cdef char* raw_key
