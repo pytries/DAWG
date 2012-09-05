@@ -398,13 +398,16 @@ cdef class RecordDAWG(BytesDAWG):
         return [(key, self._struct.unpack(val)) for (key, val) in items]
 
 
-
 cdef class IntDAWG(DAWG):
     """
     Dict-like class based on DAWG.
     It can store integer values for unicode keys.
     """
     def __init__(self, arg=None):
+        """
+        ``arg`` must be an iterable of tuples (unicode_key, int_value)
+        or a dict {unicode_key: int_value}.
+        """
         if arg is None:
             arg = []
 
@@ -422,6 +425,8 @@ cdef class IntDAWG(DAWG):
 
         cdef bytes b_key
         for key, value in iterable:
+            if value < 0:
+                raise ValueError("Negative values are not supported")
             b_key = key.encode('utf8')
             dawg_builder.Insert(b_key, value)
 
@@ -429,8 +434,17 @@ cdef class IntDAWG(DAWG):
         dawg_builder.Finish(&dawg)
         _dictionary_builder.Build(dawg, &(self.dct))
 
-
     def __getitem__(self, key):
+        cdef int res = self.get(key, -1)
+        if res == -1:
+            raise KeyError(key)
+        return res
+
+    cpdef get(self, key, default=None):
+        """
+        Returns a list of payloads (as byte objects) for a given key
+        or ``default`` if the key is not found.
+        """
         cdef int res
 
         if isinstance(key, unicode):
@@ -439,9 +453,8 @@ cdef class IntDAWG(DAWG):
             res = self.b_get_value(key)
 
         if res == -1:
-            raise KeyError(key)
+            return default
         return res
-
 
     cpdef int get_value(self, unicode key):
         cdef bytes b_key = key.encode('utf8')

@@ -75,6 +75,18 @@ def test_completion():
     assert d.keys('b') == ['bar']
     assert d.keys('z') == []
 
+def test_int_value_ranges():
+    for val in [0, 5, 2**16-1, 2**31-1]:
+        d = dawg.IntDAWG({'f': val})
+        assert d['f'] == val
+
+    with pytest.raises(ValueError):
+        dawg.IntDAWG({'f': -1})
+
+    with pytest.raises(OverflowError):
+        dawg.IntDAWG({'f': 2**32-1})
+
+
 #def test_int_keys():
 #    payload = {'foo': 1, 'bar': 5, 'foobar': 3}
 #    d = dawg.IntDAWG(payload)

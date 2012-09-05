@@ -82,7 +82,7 @@ def create_record_dawg():
 def create_int_dawg():
     words = words100k()
     values = [len(word) for word in words]
-    return dawg.IntDict(zip(words, values))
+    return dawg.IntDAWG(zip(words, values))
 
 
 def benchmark():
@@ -117,7 +117,7 @@ NON_WORDS_1k = ['ыва', 'xyz', 'соы', 'Axx', 'avы']*200
         ('DAWG', dawg_setup),
         ('BytesDAWG', bytes_dawg_setup),
         ('RecordDAWG', record_dawg_setup),
-        ('IntDict', int_dawg_setup),
+        ('IntDAWG', int_dawg_setup),
     ]
     for test_name, test, descr, op_count, repeats in tests:
         for name, setup in structures:
@@ -128,23 +128,23 @@ NON_WORDS_1k = ['ыва', 'xyz', 'соы', 'Axx', 'avы']*200
 
     # trie-specific benchmarks
     for struct_name, setup in structures[1:]:
-        _bench_data = [
-            ('hits', 'WORDS100k'),
-            ('mixed', 'MIXED_WORDS100k'),
-            ('misses', 'NON_WORDS100k'),
-        ]
-
-        for meth in ['prefixes', 'iter_prefixes']:
-            for name, data in _bench_data:
-                bench(
-                    '%s.%s (%s)' % (struct_name, meth, name),
-                    timeit.Timer(
-                        "for word in %s:\n"
-                        "   for it in data.%s(word): pass" % (data, meth),
-                        setup
-                    ),
-                    runs=3
-                )
+#        _bench_data = [
+#            ('hits', 'WORDS100k'),
+#            ('mixed', 'MIXED_WORDS100k'),
+#            ('misses', 'NON_WORDS100k'),
+#        ]
+#
+#        for meth in ['prefixes', 'iter_prefixes']:
+#            for name, data in _bench_data:
+#                bench(
+#                    '%s.%s (%s)' % (struct_name, meth, name),
+#                    timeit.Timer(
+#                        "for word in %s:\n"
+#                        "   for it in data.%s(word): pass" % (data, meth),
+#                        setup
+#                    ),
+#                    runs=3
+#                )
 
         _bench_data = [
             ('xxx', 'avg_len(res)==415', 'PREFIXES_3_1k'),
@@ -154,7 +154,7 @@ NON_WORDS_1k = ['ыва', 'xyz', 'соы', 'Axx', 'avы']*200
             ('xxx', 'NON_EXISTING', 'NON_WORDS_1k'),
         ]
         for xxx, avg, data in _bench_data:
-            for meth in ['keys']: #('items', 'keys', 'values'):
+            for meth in ['keys', 'items']:
                 bench(
                     '%s.%s(prefix="%s"), %s' % (struct_name, meth, xxx, avg),
                     timeit.Timer(
