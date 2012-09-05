@@ -7,7 +7,7 @@ import pytest
 import dawg
 
 def test_contains():
-    d = dawg.IntDict({'foo': 1, 'bar': 2, 'foobar': 3})
+    d = dawg.IntDAWG({'foo': 1, 'bar': 2, 'foobar': 3})
 
     assert 'foo' in d
     assert 'bar' in d
@@ -20,7 +20,7 @@ def test_contains():
 
 
 def test_getitem():
-    d = dawg.IntDict({'foo': 1, 'bar': 5, 'foobar': 3})
+    d = dawg.IntDAWG({'foo': 1, 'bar': 5, 'foobar': 3})
     assert d['foo'] == 1
     assert d['bar'] == 5
     assert d['foobar'] == 3
@@ -31,10 +31,10 @@ def test_getitem():
 
 def test_dumps_loads():
     payload = {'foo': 1, 'bar': 5, 'foobar': 3}
-    d = dawg.IntDict(payload)
+    d = dawg.IntDAWG(payload)
     data = d.tobytes()
 
-    d2 = dawg.IntDict()
+    d2 = dawg.IntDAWG()
     d2.frombytes(data)
     for key, value in payload.items():
         assert key in d2
@@ -44,10 +44,10 @@ def test_dump_load():
     payload = {'foo': 1, 'bar': 5, 'foobar': 3}
 
     buf = BytesIO()
-    dawg.IntDict(payload).write(buf)
+    dawg.IntDAWG(payload).write(buf)
     buf.seek(0)
 
-    d = dawg.IntDict()
+    d = dawg.IntDAWG()
     d.read(buf)
 
     for key, value in payload.items():
@@ -56,7 +56,7 @@ def test_dump_load():
 
 def test_pickling():
     payload = {'foo': 1, 'bar': 5, 'foobar': 3}
-    d = dawg.IntDict(payload)
+    d = dawg.IntDAWG(payload)
 
     data = pickle.dumps(d)
     d2 = pickle.loads(data)
@@ -77,7 +77,7 @@ def test_completion():
 
 #def test_int_keys():
 #    payload = {'foo': 1, 'bar': 5, 'foobar': 3}
-#    d = dawg.IntDict(payload)
+#    d = dawg.IntDAWG(payload)
 #    assert d.keys() == payload.keys()
 
 def test_completion_dawg_saveload():

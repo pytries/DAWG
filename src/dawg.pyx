@@ -399,7 +399,7 @@ cdef class RecordDAWG(BytesDAWG):
 
 
 
-cdef class IntDict(DAWG):
+cdef class IntDAWG(DAWG):
     """
     Dict-like class based on DAWG.
     It can store integer values for unicode keys.
@@ -414,7 +414,7 @@ cdef class IntDict(DAWG):
             iterable = arg
 
         iterable = sorted(iterable, key=operator.itemgetter(0))
-        super(IntDict, self).__init__(iterable)
+        super(IntDAWG, self).__init__(iterable)
 
 
     def _build_from_iterable(self, iterable):
