@@ -133,14 +133,19 @@ cdef class CompletionDAWG(DAWG):
     DAWG with key completion support.
     """
     cdef Guide guide
+    cdef Completer* completer
 
     def __init__(self, arg=None):
         super(CompletionDAWG, self).__init__(arg)
         if not _guide_builder.Build(self.dawg, self.dct, &self.guide):
             raise Exception("Error building completion information")
+        if not self.completer:
+            self.completer = new Completer(self.dct, self.guide)
+
 
     def __dealloc__(self):
         self.guide.Clear()
+        del self.completer
 
     cpdef list keys(self, unicode prefix=""):
         cdef bytes b_prefix = prefix.encode('utf8')
@@ -151,15 +156,10 @@ cdef class CompletionDAWG(DAWG):
         if not self.dct.Follow(b_prefix, &index):
             return res
 
-        cdef Completer* completer = new Completer(self.dct, self.guide)
-        try:
-            completer.Start(index, b_prefix)
-            while completer.Next():
-                key = (<char*>completer.key()).decode('utf8')
-                res.append(key)
-
-        finally:
-            del completer
+        self.completer.Start(index, b_prefix)
+        while self.completer.Next():
+            key = (<char*>self.completer.key()).decode('utf8')
+            res.append(key)
 
         return res
 
@@ -181,6 +181,11 @@ cdef class CompletionDAWG(DAWG):
         try:
             self.dct.Read(<istream *> stream)
             self.guide.Read(<istream *> stream)
+
+            if self.completer:
+                del self.completer
+            self.completer = new Completer(self.dct, self.guide)
+
         finally:
             del stream
         return self
@@ -242,7 +247,6 @@ cdef class BytesDAWG(CompletionDAWG):
             return default
         return res
 
-
     cdef bint _follow_key(self, bytes key, BaseType* index):
         index[0] = self.dct.root()
         if not self.dct.Follow(key, len(key), index):
@@ -253,30 +257,32 @@ cdef class BytesDAWG(CompletionDAWG):
         cdef bytes b_key = key.encode('utf8')
         return self.b_get_value(b_key)
 
-    cpdef list b_get_value(self, bytes key):
-        cdef BaseType index
+    cdef list _value_for_index(self, BaseType index):
         cdef list res = []
-        cdef bytes payload
-
-        if not self._follow_key(key, &index):
-            return res
-
         cdef int _len
         cdef b64_decode.decoder _b64_decoder
         cdef char[MAX_VALUE_SIZE] _b64_decoder_storage
+        cdef bytes payload
 
-        cdef Completer* completer = new Completer(self.dct, self.guide)
-        try:
-            completer.Start(index)
-            while completer.Next():
-                _b64_decoder.init()
-                _len = _b64_decoder.decode(completer.key(), completer.length(), _b64_decoder_storage)
-                payload = _b64_decoder_storage[:_len]
-                res.append(payload)
-        finally:
-            del completer
+        self.completer.Start(index)
+        while self.completer.Next():
+            _b64_decoder.init()
+            _len = _b64_decoder.decode(
+                self.completer.key(),
+                self.completer.length(),
+                _b64_decoder_storage
+            )
+            payload = _b64_decoder_storage[:_len]
+            res.append(payload)
 
         return res
+
+
+    cpdef list b_get_value(self, bytes key):
+        cdef BaseType index
+        if not self._follow_key(key, &index):
+            return []
+        return self._value_for_index(index)
 
 
     cpdef list items(self, unicode prefix=""):
@@ -297,30 +303,25 @@ cdef class BytesDAWG(CompletionDAWG):
         cdef b64_decode.decoder _b64_decoder
         cdef char[MAX_VALUE_SIZE] _b64_decoder_storage
 
-        cdef Completer* completer = new Completer(self.dct, self.guide)
-        try:
-            completer.Start(index, b_prefix)
-            while completer.Next():
-                raw_key = <char*>completer.key()
+        self.completer.Start(index, b_prefix)
+        while self.completer.Next():
+            raw_key = <char*>self.completer.key()
 
-                for i in range(0, completer.length()):
-                    if raw_key[i] == PAYLOAD_SEPARATOR:
-                        break
+            for i in range(0, self.completer.length()):
+                if raw_key[i] == PAYLOAD_SEPARATOR:
+                    break
 
-                raw_value = &(raw_key[i])
-                raw_value_len = completer.length() - i
+            raw_value = &(raw_key[i])
+            raw_value_len = self.completer.length() - i
 
-                _b64_decoder.init()
-                _len = _b64_decoder.decode(raw_value, raw_value_len, _b64_decoder_storage)
-                value = _b64_decoder_storage[:_len]
+            _b64_decoder.init()
+            _len = _b64_decoder.decode(raw_value, raw_value_len, _b64_decoder_storage)
+            value = _b64_decoder_storage[:_len]
 
-                u_key = raw_key[:i].decode('utf8')
-                res.append(
-                    (u_key, value)
-                )
-
-        finally:
-            del completer
+            u_key = raw_key[:i].decode('utf8')
+            res.append(
+                (u_key, value)
+            )
 
         return res
 
@@ -335,20 +336,16 @@ cdef class BytesDAWG(CompletionDAWG):
         if not self.dct.Follow(b_prefix, &index):
             return res
 
-        cdef Completer* completer = new Completer(self.dct, self.guide)
-        try:
-            completer.Start(index, b_prefix)
-            while completer.Next():
-                raw_key = <char*>completer.key()
+        self.completer.Start(index, b_prefix)
+        while self.completer.Next():
+            raw_key = <char*>self.completer.key()
 
-                for i in range(0, completer.length()):
-                    if raw_key[i] == PAYLOAD_SEPARATOR:
-                        break
+            for i in range(0, self.completer.length()):
+                if raw_key[i] == PAYLOAD_SEPARATOR:
+                    break
 
-                u_key = raw_key[:i].decode('utf8')
-                res.append(u_key)
-        finally:
-            del completer
+            u_key = raw_key[:i].decode('utf8')
+            res.append(u_key)
         return res
 
 

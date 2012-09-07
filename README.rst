@@ -40,7 +40,7 @@ There are several DAWG classes in this package:
 * ``dawg.IntDAWG`` - ``dawg.DAWG`` subclass that maps unicode keys
   to integer values.
 
-TODO: detailed usage? 
+TODO: detailed usage?
 
 Benchmarks
 ==========
@@ -69,13 +69,13 @@ Python 3.2, macbook air i5 1.8 Ghz)::
 
     dict __getitem__ (hits):        4.102M ops/sec
     DAWG __getitem__ (hits):        not supported
-    BytesDAWG __getitem__ (hits):   0.543M ops/sec
-    RecordDAWG __getitem__ (hits):  0.440M ops/sec
+    BytesDAWG __getitem__ (hits):   1.558M ops/sec
+    RecordDAWG __getitem__ (hits):  0.950M ops/sec
     IntDAWG __getitem__ (hits):     2.835M ops/sec
     dict get() (hits):              3.053M ops/sec
     DAWG get() (hits):              not supported
-    BytesDAWG get() (hits):         0.523M ops/sec
-    RecordDAWG get() (hits):        0.426M ops/sec
+    BytesDAWG get() (hits):         1.340M ops/sec
+    RecordDAWG get() (hits):        0.882M ops/sec
     IntDAWG get() (hits):           2.370M ops/sec
     dict get() (misses):            3.250M ops/sec
     DAWG get() (misses):            not supported
@@ -106,10 +106,10 @@ Python 3.2, macbook air i5 1.8 Ghz)::
     RecordDAWG keys():  23.726 ops/sec
     IntDAWG keys():     not supported
 
-    RecordDAWG.keys(prefix="xxx"), avg_len(res)==415:       5.943K ops/sec
-    RecordDAWG.keys(prefix="xxxxx"), avg_len(res)==17:      113.025K ops/sec
-    RecordDAWG.keys(prefix="xxxxxxxx"), avg_len(res)==3:    323.485K ops/sec
-    RecordDAWG.keys(prefix="xxxxx..xx"), avg_len(res)==1.4: 431.099K ops/sec
+    RecordDAWG.keys(prefix="xxx"), avg_len(res)==415:       6.057K ops/sec
+    RecordDAWG.keys(prefix="xxxxx"), avg_len(res)==17:      130.680K ops/sec
+    RecordDAWG.keys(prefix="xxxxxxxx"), avg_len(res)==3:    507.355K ops/sec
+    RecordDAWG.keys(prefix="xxxxx..xx"), avg_len(res)==1.4: 745.566K ops/sec
     RecordDAWG.keys(prefix="xxx"), NON_EXISTING:            3032.758K ops/sec
 
 
