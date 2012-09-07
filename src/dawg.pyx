@@ -30,10 +30,12 @@ cdef class DAWG:
         self.dct.Clear()
         self.dawg.Clear()
 
-    def __init__(self, arg=None):
+    def __init__(self, arg=None, input_is_sorted=False):
         if arg is None:
             arg = []
-        self._build_from_iterable(sorted(list(arg)))
+        if not input_is_sorted:
+            arg = sorted(arg)
+        self._build_from_iterable(arg)
 
 
     def _build_from_iterable(self, iterable):
@@ -135,8 +137,8 @@ cdef class CompletionDAWG(DAWG):
     cdef Guide guide
     cdef Completer* completer
 
-    def __init__(self, arg=None):
-        super(CompletionDAWG, self).__init__(arg)
+    def __init__(self, arg=None, input_is_sorted=False):
+        super(CompletionDAWG, self).__init__(arg, input_is_sorted)
         if not _guide_builder.Build(self.dawg, self.dct, &self.guide):
             raise Exception("Error building completion information")
         if not self.completer:
@@ -205,7 +207,7 @@ cdef class BytesDAWG(CompletionDAWG):
     {unicode -> list of bytes objects} mapping.
     """
 
-    def __init__(self, arg=None):
+    def __init__(self, arg=None, input_is_sorted=False):
         """
         ``arg`` must be an iterable of tuples (unicode_key, bytes_payload).
         """
@@ -214,7 +216,7 @@ cdef class BytesDAWG(CompletionDAWG):
 
         keys = (self._raw_key(d[0], d[1]) for d in arg)
 
-        super(BytesDAWG, self).__init__(keys)
+        super(BytesDAWG, self).__init__(keys, input_is_sorted)
 
 
     cpdef bytes _raw_key(self, unicode key, bytes payload):
@@ -366,7 +368,7 @@ cdef class RecordDAWG(BytesDAWG):
     """
     cdef _struct
 
-    def __init__(self, fmt, arg=None):
+    def __init__(self, fmt, arg=None, input_is_sorted=False):
         """
         ``arg`` must be an iterable of tuples (unicode_key, data_tuple).
         data tuples will be converted to bytes with
@@ -382,7 +384,7 @@ cdef class RecordDAWG(BytesDAWG):
             arg = []
 
         keys = ((d[0], self._struct.pack(*d[1])) for d in arg)
-        super(RecordDAWG, self).__init__(keys)
+        super(RecordDAWG, self).__init__(keys, input_is_sorted)
 
 
     cpdef list b_get_value(self, bytes key):
@@ -400,7 +402,7 @@ cdef class IntDAWG(DAWG):
     Dict-like class based on DAWG.
     It can store integer values for unicode keys.
     """
-    def __init__(self, arg=None):
+    def __init__(self, arg=None, input_is_sorted=False):
         """
         ``arg`` must be an iterable of tuples (unicode_key, int_value)
         or a dict {unicode_key: int_value}.
@@ -413,8 +415,7 @@ cdef class IntDAWG(DAWG):
         else:
             iterable = arg
 
-        iterable = sorted(iterable, key=operator.itemgetter(0))
-        super(IntDAWG, self).__init__(iterable)
+        super(IntDAWG, self).__init__(iterable, input_is_sorted)
 
 
     def _build_from_iterable(self, iterable):

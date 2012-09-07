@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 from __future__ import absolute_import, unicode_literals
 import pickle
+import tempfile
 from io import BytesIO
 
 import pytest
@@ -17,6 +18,20 @@ def test_contains():
 
     assert b'foo' in d
     assert b'x' not in d
+
+def test_sorted_iterable():
+
+    sorted_data = ['bar', 'foo', 'foobar']
+    contents = "\n".join(sorted_data).encode('utf8')
+    with tempfile.NamedTemporaryFile() as f:
+        f.write(contents)
+        f.seek(0)
+
+        words = (line.strip() for line in f)
+        d = dawg.DAWG(words, input_is_sorted=True)
+
+    assert 'bar' in d
+    assert 'foo' in d
 
 
 def test_getitem():
