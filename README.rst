@@ -24,10 +24,10 @@ Usage
 There are several DAWG classes in this package:
 
 * ``dawg.DAWG`` - basic DAWG wrapper; it can store unicode keys
-  and do exact and prefix lookups;
+  and do exact lookups;
 
 * ``dawg.CompletionDAWG`` - ``dawg.DAWG`` subclass that supports
-  key completion (but requires more memory);
+  key completion and prefix lookups (but requires more memory);
 
 * ``dawg.BytesDAWG`` - ``dawg.CompletionDAWG`` subclass that
   maps unicode keys to lists of ``bytes`` objects.
