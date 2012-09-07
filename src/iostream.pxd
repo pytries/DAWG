@@ -15,6 +15,8 @@ cdef extern from "<sstream>" namespace "std":
         stringstream()
         stringstream(string s)
         string str ()
+        stringstream& write (char* s, int n)
+        stringstream& seekg (int pos)
 
 
 

@@ -76,14 +76,16 @@ cdef class DAWG:
         """
         Loads DAWG from bytes ``data``.
         """
-        cdef stringstream* stream = new stringstream(data)
-        try:
-            res = self.dct.Read(<istream *> stream)
-            if not res:
-                self.dct.Clear()
-                raise IOError("Invalid data format")
-        finally:
-            del stream
+        cdef char* c_data = data
+        cdef stringstream stream
+        stream.write(c_data, len(data))
+        stream.seekg(0)
+
+        res = self.dct.Read(<istream *> &stream)
+        if not res:
+            self.dct.Clear()
+            raise IOError("Invalid data format")
+
         return self
 
     def read(self, f):
@@ -181,26 +183,26 @@ cdef class CompletionDAWG(DAWG):
         """
         Loads DAWG from bytes ``data``.
         """
-        cdef stringstream* stream = new stringstream(data)
-        try:
-            res = self.dct.Read(<istream *> stream)
-            if not res:
-                self.dct.Clear()
-                raise IOError("Invalid data format: can't load _dawg.Dictionary")
+        cdef char* c_data = data
+        cdef stringstream stream
+        stream.write(c_data, len(data))
+        stream.seekg(0)
 
+        res = self.dct.Read(<istream *> &stream)
+        if not res:
+            self.dct.Clear()
+            raise IOError("Invalid data format: can't load _dawg.Dictionary")
 
-            res = self.guide.Read(<istream *> stream)
-            if not res:
-                self.guide.Clear()
-                self.dct.Clear()
-                raise IOError("Invalid data format: can't load _dawg.Guide")
+        res = self.guide.Read(<istream *> &stream)
+        if not res:
+            self.guide.Clear()
+            self.dct.Clear()
+            raise IOError("Invalid data format: can't load _dawg.Guide")
 
-            if self.completer:
-                del self.completer
-            self.completer = new Completer(self.dct, self.guide)
+        if self.completer:
+            del self.completer
+        self.completer = new Completer(self.dct, self.guide)
 
-        finally:
-            del stream
         return self
 
 
