@@ -2,9 +2,9 @@ DAWG
 ====
 
 This package provides DAWG-based dictionary-like
-read-only object for Python (2.x and 3.x).
+read-only objects for Python (2.x and 3.x).
 
-String data in a DAWG may take up to 50x-100x less
+String data in a DAWG may take up to 50x less
 memory than in a standard Python dict; the raw lookup
 speed is comparable; DAWG also provides fast
 advanced methods like prefix search.
@@ -40,7 +40,149 @@ There are several DAWG classes in this package:
 * ``dawg.IntDAWG`` - ``dawg.DAWG`` subclass that maps unicode keys
   to integer values.
 
-TODO: detailed usage?
+DAWG and CompletionDAWG
+-----------------------
+
+``DAWG`` and ``CompletionDAWG`` are useful when you need
+fast & memory efficient simple string storage. These classes
+does not support assigning values to keys.
+
+``DAWG`` and ``CompletionDAWG`` constructors accept an iterable with keys::
+
+    >>> import dawg
+    >>> words = [u'foo', u'bar', u'foobar']
+    >>> base_dawg = dawg.DAWG(words)
+    >>> completion_dawg = dawg.CompletionDAWG(words)
+
+It is then possible to check if the key is in a DAWG::
+
+    >>> u'foo' in base_dawg
+    True
+    >>> u'baz' in completion_dawg
+    False
+
+It is possible to find all keys that starts with a given
+prefix in a ``CompletionDAWG``::
+
+    >>> completion_dawg.keys(u'foo')
+    >>> [u'foo', u'foobar']
+
+BytesDAWG
+---------
+
+``BytesDAWG`` is a ``CompletionDAWG`` subclass that can store
+binary data for each key.
+
+``BytesDAWG`` constructor accepts an iterable with
+``(unicode_key, bytes_value)`` tuples::
+
+    >>> data = [(u'key1', b'value1'), (u'key2', b'value2'), (u'key1', b'value3')]
+    >>> bytes_dawg = dawg.BytesDAWG(data)
+
+There can be duplicate keys; all unique values are stored in this case::
+
+    >>> bytes_dawg[u'key1']
+    [b'value1, b'value3']
+
+For unique keys a list with a single value is returned for consistency::
+
+    >>> bytes_dawg[u'key2']
+    [b'value2']
+
+``KeyError`` is raised for missing keys; use ``get`` method if you need
+a default value instead::
+
+    >>> bytes_dawg.get(u'foo', None)
+    None
+
+``BytesDAWG`` also support ``keys`` and ``items`` methods (they both
+accept optional key prefix).
+
+
+RecordDAWG
+----------
+
+``RecordDAWG`` is a ``BytesDAWG`` subclass that automatically
+packs & unpacks the binary data from/to Python objects
+using ``struct`` module from the standard library.
+
+First, you have to define a format of the data. Consult Python docs
+(http://docs.python.org/library/struct.html#format-strings) for the format
+string specification..
+
+For example, let's store 3 short unsigned numbers (in a Big-Endian byte order)
+as values::
+
+    >>> format = ">HHH"
+
+``RecordDAWG`` constructor accepts an iterable with
+``(unicode_key, value_tuple)``. Let's create such iterable
+using ``zip`` function::
+
+    >>> keys = [u'foo', u'bar', u'foobar', u'foo']
+    >>> values = [(1, 2, 3), (2, 1, 0), (3, 3, 3), (2, 1, 5)]
+    >>> data = zip(keys, values)
+    >>> record_dawg = RecordDAWG(format, data)
+
+As with ``BytesDAWG``, there can be several values for the same key::
+
+    >>> record_dawg['foo']
+    [(1, 2, 3), (2, 1, 5)]
+    >>> record_dawg['foobar']
+    [(3, 3, 3)]
+
+
+IntDAWG
+-------
+
+``IntDAWG`` is a ``{unicode -> int}`` mapping. It is possible to
+use ``RecordDAWG`` for this, but ``IntDAWG`` is natively
+supported by dawgdic_ C++ library and so ``__getitem__`` is much faster.
+
+Unlike ``BytesDAWG`` and ``RecordDAWG``, ``IntDAWG`` doesn't support
+having several values for the same key.
+
+``IntDAWG`` constructor accepts an iterable with (unicode_key, integer_value)
+tuples::
+
+    >>> data = [ (u'foo', 1), (u'bar', 2) ]
+    >>> int_dawg = dawg.IntDAWG(data)
+
+It is then possible to get a value from the IntDAWG::
+
+    >>> int_dawg[u'foo']
+    1
+
+Persistence
+-----------
+
+All DAWGs support saving/loading and pickling/unpickling.
+
+Write DAWG to a stream::
+
+    >>> with open('words.dawg', 'wb') as f:
+    ...     d.write(f)
+
+Save DAWG to a file::
+
+    >>> d.save('words.dawg')
+
+Read DAWG from a stream::
+
+    >>> d = dawg.RecordDAWG(format_string)
+    >>> with open('words.record-dawg', 'rb') as f:
+    ...     d.read(f)
+
+Load DAWG from a file::
+
+    >>> d = dawg.DAWG()
+    >>> d.load('words.dawg')
+
+DAWG objects are picklable::
+
+    >>> import pickle
+    >>> data = pickle.dumps(d)
+    >>> d2 = pickle.loads(data)
 
 Benchmarks
 ==========
@@ -121,11 +263,15 @@ Current limitations
 ===================
 
 * The library is not tested under Windows;
+* ``IntDAWG`` is currently a subclass of ``DAWG`` and so it doesn't
+  support ``keys()`` and ``items()`` methods;
 * ``read()`` method reads the whole stream (DAWG must be the last or the
   only item in a stream if it is read with ``read()`` method) - pickling
   doesn't have this limitation;
 * iterator versions of methods are not always implemented;
 * there are ``keys()`` and ``items()`` methods but no ``values()`` method.
+* ``prefixes()`` method for getting all prefixes of a given work is
+  not implemented yet;
 
 Contributions are welcome!
 
