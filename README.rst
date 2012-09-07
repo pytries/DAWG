@@ -108,7 +108,7 @@ using ``struct`` module from the standard library.
 
 First, you have to define a format of the data. Consult Python docs
 (http://docs.python.org/library/struct.html#format-strings) for the format
-string specification..
+string specification.
 
 For example, let's store 3 short unsigned numbers (in a Big-Endian byte order)
 as values::
