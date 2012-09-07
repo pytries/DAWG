@@ -13,7 +13,6 @@ cimport _guide_builder
 cimport _dictionary_builder
 cimport b64_decode
 
-import operator
 import collections
 import struct
 
@@ -64,7 +63,7 @@ cdef class DAWG:
     cpdef bint b_has_key(self, bytes key) except -1:
         return self.dct.Contains(key)
 
-    cpdef bytes tobytes(self) except +:
+    cpdef bytes tobytes(self):
         """
         Returns raw DAWG content as bytes.
         """
@@ -73,13 +72,16 @@ cdef class DAWG:
         cdef bytes res = stream.str()
         return res
 
-    cpdef frombytes(self, bytes data) except +:
+    cpdef frombytes(self, bytes data):
         """
         Loads DAWG from bytes ``data``.
         """
         cdef stringstream* stream = new stringstream(data)
         try:
-            self.dct.Read(<istream *> stream)
+            res = self.dct.Read(<istream *> stream)
+            if not res:
+                self.dct.Clear()
+                raise IOError("Invalid data format")
         finally:
             del stream
         return self
@@ -102,14 +104,14 @@ cdef class DAWG:
         """
         Loads DAWG from a file.
         """
-        with open(path, 'r') as f:
+        with open(path, 'rb') as f:
             self.read(f)
 
     def save(self, path):
         """
         Saves DAWG to a file.
         """
-        with open(path, 'w') as f:
+        with open(path, 'wb') as f:
             self.write(f)
 
     # pickling support
@@ -175,14 +177,23 @@ cdef class CompletionDAWG(DAWG):
         cdef bytes res = stream.str()
         return res
 
-    cpdef frombytes(self, bytes data) except +:
+    cpdef frombytes(self, bytes data):
         """
         Loads DAWG from bytes ``data``.
         """
         cdef stringstream* stream = new stringstream(data)
         try:
-            self.dct.Read(<istream *> stream)
-            self.guide.Read(<istream *> stream)
+            res = self.dct.Read(<istream *> stream)
+            if not res:
+                self.dct.Clear()
+                raise IOError("Invalid data format: can't load _dawg.Dictionary")
+
+
+            res = self.guide.Read(<istream *> stream)
+            if not res:
+                self.guide.Clear()
+                self.dct.Clear()
+                raise IOError("Invalid data format: can't load _dawg.Guide")
 
             if self.completer:
                 del self.completer
