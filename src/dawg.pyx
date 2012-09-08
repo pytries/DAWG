@@ -1,7 +1,8 @@
 # cython: profile=True
 from __future__ import unicode_literals
 from libcpp.string cimport string
-from iostream cimport stringstream, istream, ostream
+from iostream cimport stringstream, istream, ostream, ifstream
+cimport iostream
 
 cimport _dawg
 from _dawg_builder cimport DawgBuilder
@@ -9,13 +10,14 @@ from _dictionary cimport Dictionary
 from _guide cimport Guide
 from _completer cimport Completer
 from _base_types cimport BaseType, SizeType
+
 cimport _guide_builder
 cimport _dictionary_builder
 cimport b64_decode
 
 import collections
 import struct
-
+import sys
 from binascii import a2b_base64, b2a_base64
 
 cdef class DAWG:
@@ -75,18 +77,24 @@ cdef class DAWG:
     cpdef frombytes(self, bytes data):
         """
         Loads DAWG from bytes ``data``.
+
+        FIXME: it seems there is a memory leak here (DAWG uses 3x memory
+        when loaded using ``.frombytes`` compared to DAWG loaded
+        using ``.load``).
         """
-        cdef char* c_data = data
-        cdef stringstream stream
-        stream.write(c_data, len(data))
-        stream.seekg(0)
+        cdef string s_data = data
+        cdef stringstream* stream = new stringstream(s_data)
 
-        res = self.dct.Read(<istream *> &stream)
-        if not res:
-            self.dct.Clear()
-            raise IOError("Invalid data format")
+        try:
+            res = self.dct.Read(<istream *> stream)
 
-        return self
+            if not res:
+                self.dct.Clear()
+                raise IOError("Invalid data format")
+
+            return self
+        finally:
+            del stream
 
     def read(self, f):
         """
@@ -106,8 +114,21 @@ cdef class DAWG:
         """
         Loads DAWG from a file.
         """
-        with open(path, 'rb') as f:
-            self.read(f)
+        if isinstance(path, unicode):
+            path = path.encode(sys.getfilesystemencoding())
+
+        cdef ifstream stream
+        stream.open(path, iostream.binary)
+
+        res = self.dct.Read(<istream*> &stream)
+
+        stream.close()
+
+        if not res:
+            self.dct.Clear()
+            raise IOError("Invalid data format")
+
+
 
     def save(self, path):
         """
@@ -182,18 +203,21 @@ cdef class CompletionDAWG(DAWG):
     cpdef frombytes(self, bytes data):
         """
         Loads DAWG from bytes ``data``.
+
+        FIXME: it seems there is memory leak here (DAWG uses 3x memory when
+        loaded using frombytes vs load).
         """
         cdef char* c_data = data
         cdef stringstream stream
         stream.write(c_data, len(data))
         stream.seekg(0)
 
-        res = self.dct.Read(<istream *> &stream)
+        res = self.dct.Read(<istream*> &stream)
         if not res:
             self.dct.Clear()
             raise IOError("Invalid data format: can't load _dawg.Dictionary")
 
-        res = self.guide.Read(<istream *> &stream)
+        res = self.guide.Read(<istream*> &stream)
         if not res:
             self.guide.Clear()
             self.dct.Clear()
@@ -204,6 +228,38 @@ cdef class CompletionDAWG(DAWG):
         self.completer = new Completer(self.dct, self.guide)
 
         return self
+
+
+    def load(self, path):
+        """
+        Loads DAWG from a file.
+        """
+        if isinstance(path, unicode):
+            path = path.encode(sys.getfilesystemencoding())
+
+        cdef ifstream stream
+        stream.open(path, iostream.binary)
+
+        try:
+            res = self.dct.Read(<istream*> &stream)
+            if not res:
+                self.dct.Clear()
+                raise IOError("Invalid data format: can't load _dawg.Dictionary")
+
+            res = self.guide.Read(<istream*> &stream)
+            if not res:
+                self.guide.Clear()
+                self.dct.Clear()
+                raise IOError("Invalid data format: can't load _dawg.Guide")
+
+            if self.completer:
+                del self.completer
+            self.completer = new Completer(self.dct, self.guide)
+
+            return self
+        finally:
+            stream.close()
+
 
 
 # This symbol is not allowed in utf8 so it is safe to use

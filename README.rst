@@ -4,9 +4,10 @@ DAWG
 This package provides DAWG-based dictionary-like
 read-only objects for Python (2.x and 3.x).
 
-String data in a DAWG may take up to 50x less
-memory than in a standard Python dict; the raw lookup
-speed is comparable; DAWG also provides fast
+String data in a DAWG may take up to 200x less
+memory than in a standard Python dict and the raw lookup
+speed is comparable (DAWG may be even faster that built-in
+dict for some operations); DAWG also provides fast
 advanced methods like prefix search.
 
 Based on `dawgdic` C++ library.
@@ -167,16 +168,22 @@ Save DAWG to a file::
 
     >>> d.save('words.dawg')
 
+Load DAWG from a file::
+
+    >>> d = dawg.DAWG()
+    >>> d.load('words.dawg')
+
+.. warning::
+
+    Reading DAWGs from streams and unpickling are currently using 3x memory
+    compared to loading DAWGs using ``load`` method; please avoid them until
+    the issue is fixed.
+
 Read DAWG from a stream::
 
     >>> d = dawg.RecordDAWG(format_string)
     >>> with open('words.record-dawg', 'rb') as f:
     ...     d.read(f)
-
-Load DAWG from a file::
-
-    >>> d = dawg.DAWG()
-    >>> d.load('words.dawg')
 
 DAWG objects are picklable::
 
@@ -194,10 +201,10 @@ with different data structures (under Python 2.7):
 * list(unicode words) : about 300M
 * ``marisa_trie.RecordTrie`` : 11M
 * ``marisa_trie.Trie``: 7M
-* ``dawg.DAWG``: 8M
-* ``dawg.CompletionDAWG``: 10M
-* ``dawg.IntDAWG``: 11M
-* ``dawg.RecordDAWG``: 16M
+* ``dawg.DAWG``: 2M
+* ``dawg.CompletionDAWG``: 3M
+* ``dawg.IntDAWG``: 2.7M
+* ``dawg.RecordDAWG``: 4M
 
 
 .. note::
@@ -230,6 +237,7 @@ Python 3.2, macbook air i5 1.8 Ghz)::
     BytesDAWG __contains__ (hits):      2.627M ops/sec
     RecordDAWG __contains__ (hits):     2.613M ops/sec
     IntDAWG __contains__ (hits):        3.021M ops/sec
+
     dict __contains__ (misses):         3.471M ops/sec
     DAWG __contains__ (misses):         3.537M ops/sec
     BytesDAWG __contains__ (misses):    3.381M ops/sec
@@ -268,6 +276,8 @@ Current limitations
 * ``read()`` method reads the whole stream (DAWG must be the last or the
   only item in a stream if it is read with ``read()`` method) - pickling
   doesn't have this limitation;
+* DAWGs loaded with ``read()`` and unpickled DAWGs uses 3x-4x memory
+  compared to DAWGs loaded with ``load()`` method;
 * iterator versions of methods are not always implemented;
 * there are ``keys()`` and ``items()`` methods but no ``values()`` method.
 * ``prefixes()`` method for getting all prefixes of a given work is
