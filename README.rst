@@ -4,10 +4,10 @@ DAWG
 This package provides DAWG-based dictionary-like
 read-only objects for Python (2.x and 3.x).
 
-String data in a DAWG may take up to 200x less
-memory than in a standard Python dict and the raw lookup
-speed is comparable (DAWG may be even faster that built-in
-dict for some operations); DAWG also provides fast
+String data in a DAWG (Directed Acyclic Word Graph) may take
+200x less memory than in a standard Python dict or list and
+the raw lookup speed is comparable. DAWG may be even faster than
+built-in dict for some operations. It also provides fast
 advanced methods like prefix search.
 
 Based on `dawgdic` C++ library.
