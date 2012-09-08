@@ -128,6 +128,7 @@ cdef class DAWG:
             self.dct.Clear()
             raise IOError("Invalid data format")
 
+        return self
 
 
     def save(self, path):
@@ -256,10 +257,10 @@ cdef class CompletionDAWG(DAWG):
                 del self.completer
             self.completer = new Completer(self.dct, self.guide)
 
-            return self
         finally:
             stream.close()
 
+        return self
 
 
 # This symbol is not allowed in utf8 so it is safe to use
