@@ -1,4 +1,12 @@
 
+0.3 (2012-09-13)
+----------------
+
+- ``similar_keys``, ``similar_items`` and ``similar_item_values`` methods
+  for more permissive lookups (they may be useful e.g. for umlaut handling);
+- ``load`` method returns self;
+- Python 3.3 support.
+
 0.2 (2012-09-08)
 ----------------
 
