@@ -108,7 +108,8 @@ a default value instead::
     None
 
 ``BytesDAWG`` support ``keys`` and ``items`` methods (they both
-accept optional key prefix). ``similar_keys`` method is also supported.
+accept optional key prefix). There is also support for
+``similar_keys``, ``similar_items`` and ``similar_item_values`` methods.
 
 
 RecordDAWG

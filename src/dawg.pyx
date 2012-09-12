@@ -492,6 +492,99 @@ cdef class BytesDAWG(CompletionDAWG):
         cdef BaseType _index = index
         return self.dct.Follow(PAYLOAD_SEPARATOR, &_index)
 
+    cdef list _similar_items(self, unicode current_prefix, unicode key, BaseType cur_index, dict replace_chars):
+        cdef BaseType next_index, index = cur_index
+        cdef unicode prefix, u_replace_char, found_key
+        cdef bytes b_step, b_replace_char
+        cdef list res = []
+        cdef list extra_items, value
+
+        cdef int start_pos = len(current_prefix)
+        cdef int end_pos = len(key)
+        cdef int word_pos = start_pos
+
+        while word_pos < end_pos:
+            b_step = key[word_pos].encode('utf8')
+
+            if b_step in replace_chars:
+                next_index = index
+                b_replace_char, u_replace_char = replace_chars[b_step]
+
+                if self.dct.Follow(b_replace_char, &next_index):
+                    prefix = current_prefix + key[start_pos:word_pos] + u_replace_char
+                    extra_items = self._similar_items(prefix, key, next_index, replace_chars)
+                    PySequence_InPlaceConcat(res, extra_items)
+
+            if not self.dct.Follow(b_step, &index):
+                break
+            word_pos += 1
+
+        else:
+            if self.dct.Follow(PAYLOAD_SEPARATOR, &index):
+                found_key = current_prefix + key[start_pos:]
+                value = self._value_for_index(index)
+                res.insert(0, (found_key, value))
+
+        return res
+
+    cpdef list similar_items(self, unicode key, dict replaces):
+        """
+        Returns a list of (key, value) tuples for all variants of ``key``
+        in this DAWG according to ``replaces``.
+
+        ``replaces`` is an object obtained from
+        ``DAWG.compile_replaces(mapping)`` where mapping is a dict
+        that maps single-char unicode sitrings to another single-char
+        unicode strings.
+        """
+        return self._similar_items("", key, self.dct.root(), replaces)
+
+    cdef list _similar_item_values(self, int start_pos, unicode key, BaseType cur_index, dict replace_chars):
+        cdef BaseType next_index, index = cur_index
+        cdef unicode prefix, u_replace_char, found_key
+        cdef bytes b_step, b_replace_char
+        cdef list res = []
+        cdef list extra_items, value
+
+        #cdef int start_pos = len(current_prefix)
+        cdef int end_pos = len(key)
+        cdef int word_pos = start_pos
+
+        while word_pos < end_pos:
+            b_step = key[word_pos].encode('utf8')
+
+            if b_step in replace_chars:
+                next_index = index
+                b_replace_char, u_replace_char = replace_chars[b_step]
+
+                if self.dct.Follow(b_replace_char, &next_index):
+                    extra_items = self._similar_item_values(word_pos+1, key, next_index, replace_chars)
+                    PySequence_InPlaceConcat(res, extra_items)
+
+            if not self.dct.Follow(b_step, &index):
+                break
+            word_pos += 1
+
+        else:
+            if self.dct.Follow(PAYLOAD_SEPARATOR, &index):
+                value = self._value_for_index(index)
+                res.insert(0, value)
+
+        return res
+
+    cpdef list similar_item_values(self, unicode key, dict replaces):
+        """
+        Returns a list of values for all variants of the ``key``
+        in this DAWG according to ``replaces``.
+
+        ``replaces`` is an object obtained from
+        ``DAWG.compile_replaces(mapping)`` where mapping is a dict
+        that maps single-char unicode sitrings to another single-char
+        unicode strings.
+        """
+        return self._similar_item_values(0, key, self.dct.root(), replaces)
+
+
 
 cdef class RecordDAWG(BytesDAWG):
     """
@@ -528,11 +621,9 @@ cdef class RecordDAWG(BytesDAWG):
         keys = ((d[0], self._struct.pack(*d[1])) for d in arg)
         super(RecordDAWG, self).__init__(keys, input_is_sorted)
 
-
-    cpdef list b_get_value(self, bytes key):
-        cdef list values = BytesDAWG.b_get_value(self, key)
-        return [self._struct.unpack(val) for val in values]
-
+    cdef list _value_for_index(self, BaseType index):
+        cdef list value = BytesDAWG._value_for_index(self, index)
+        return [self._struct.unpack(val) for val in value]
 
     cpdef list items(self, unicode prefix=""):
         cdef list items = BytesDAWG.items(self, prefix)
