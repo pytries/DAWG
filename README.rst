@@ -51,7 +51,7 @@ does not support assigning values to keys.
 ``DAWG`` and ``CompletionDAWG`` constructors accept an iterable with keys::
 
     >>> import dawg
-    >>> words = [u'foo', u'bar', u'foobar']
+    >>> words = [u'foo', u'bar', u'foobar', u'foö', u'bör']
     >>> base_dawg = dawg.DAWG(words)
     >>> completion_dawg = dawg.CompletionDAWG(words)
 
@@ -67,6 +67,17 @@ prefix in a ``CompletionDAWG``::
 
     >>> completion_dawg.keys(u'foo')
     >>> [u'foo', u'foobar']
+
+It is possible to find all keys similar to a given key (using a one-way
+char translation table)::
+
+    >>> replaces = dawg.DAWG.compile_replaces({u'o': u'ö'})
+    >>> base_dawg.similar_keys(u'foo', replaces)
+    [u'foo', u'foö']
+    >>> base_dawg.similar_keys(u'foö', replaces)
+    [u'foö']
+    >>> base_dawg.similar_keys(u'bor', replaces)
+    [u'bör']
 
 BytesDAWG
 ---------
@@ -96,8 +107,8 @@ a default value instead::
     >>> bytes_dawg.get(u'foo', None)
     None
 
-``BytesDAWG`` also support ``keys`` and ``items`` methods (they both
-accept optional key prefix).
+``BytesDAWG`` support ``keys`` and ``items`` methods (they both
+accept optional key prefix). ``similar_keys`` method is also supported.
 
 
 RecordDAWG

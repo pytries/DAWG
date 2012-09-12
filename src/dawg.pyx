@@ -157,6 +157,9 @@ cdef class DAWG:
     def _file_size(self):
         return self.dct.file_size()
 
+    cdef bint _has_value(self, BaseType index):
+        return  self.dct.has_value(index)
+
     cdef list _similar_keys(self, unicode current_prefix, unicode key, BaseType cur_index, dict replace_chars):
         cdef BaseType next_index, index = cur_index
         cdef unicode prefix, u_replace_char, found_key
@@ -176,7 +179,7 @@ cdef class DAWG:
                 b_replace_char, u_replace_char = replace_chars[b_step]
 
                 if self.dct.Follow(b_replace_char, &next_index):
-                    prefix = "".join((current_prefix, key[start_pos:word_pos], u_replace_char))
+                    prefix = current_prefix + key[start_pos:word_pos] + u_replace_char
                     extra_keys = self._similar_keys(prefix, key, next_index, replace_chars)
                     PySequence_InPlaceConcat(res, extra_keys)
 
@@ -185,26 +188,41 @@ cdef class DAWG:
             word_pos += 1
 
         else:
-            if self.dct.has_value(index):
+            if self._has_value(index):
                 found_key = current_prefix + key[start_pos:]
                 res.insert(0, found_key)
 
         return res
 
-    cpdef list similar_keys(self, unicode key, dict replace_chars):
+    cpdef list similar_keys(self, unicode key, dict replaces):
         """
         Returns all variants of ``key`` in this DAWG according to
-        ``replace_chars`` dict.
+        ``replaces``.
 
-        ``replace_chars`` must be a dict that maps utf8-encoded byte strings
-        (representing a single unicode character) to a tuple
-        (<utf8-encoded char>, <unicode char>).
+        ``replaces`` is an object obtained from
+        ``DAWG.compile_replaces(mapping)`` where mapping is a dict
+        that maps single-char unicode sitrings to another single-char
+        unicode strings.
 
         This may be useful e.g. for handling single-character umlauts.
-
-        Only single-character replaces are currently supported.
         """
-        return self._similar_keys("", key, self.dct.root(), replace_chars)
+        return self._similar_keys("", key, self.dct.root(), replaces)
+
+    @classmethod
+    def compile_replaces(cls, dict replaces):
+
+        for k,v in replaces.items():
+            if len(k) != 1 or len(v) != 1:
+                raise ValueError("Keys and values must be single-char unicode strings.")
+
+        return dict(
+            (
+                k.encode('utf8'),
+                (v.encode('utf8'), v)
+            )
+            for k, v in replaces.items()
+        )
+
 
 
 cdef class CompletionDAWG(DAWG):
@@ -469,6 +487,10 @@ cdef class BytesDAWG(CompletionDAWG):
             u_key = raw_key[:i].decode('utf8')
             res.append(u_key)
         return res
+
+    cdef bint _has_value(self, BaseType index):
+        cdef BaseType _index = index
+        return self.dct.Follow(PAYLOAD_SEPARATOR, &_index)
 
 
 cdef class RecordDAWG(BytesDAWG):

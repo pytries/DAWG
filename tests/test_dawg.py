@@ -152,28 +152,3 @@ class TestCompletionDAWG(object):
             d.load(path)
             assert "can't load _dawg.Dictionary" in e.args[0]
 
-class TestPrediction(object):
-    DATA = ['ЁЖИК', 'ЁЖИКЕ', 'ЁЖ', 'ДЕРЕВНЯ', 'ДЕРЁВНЯ', 'ЕМ', 'ОЗЕРА', 'ОЗЁРА', 'ОЗЕРО']
-    REPLACES = {'Е': 'Ё'}
-
-    @pytest.mark.parametrize(("word", "prediction"), [
-        ('УЖ', []),
-        ('ЕМ', ['ЕМ']),
-        ('ЁМ', []),
-        ('ЁЖ', ['ЁЖ']),
-        ('ЕЖ', ['ЁЖ']),
-        ('ЁЖИК', ['ЁЖИК']),
-        ('ЕЖИКЕ', ['ЁЖИКЕ']),
-        ('ДЕРЕВНЯ', ['ДЕРЕВНЯ', 'ДЕРЁВНЯ']),
-        ('ДЕРЁВНЯ', ['ДЕРЁВНЯ']),
-        ('ОЗЕРА', ['ОЗЕРА', 'ОЗЁРА']),
-        ('ОЗЕРО', ['ОЗЕРО']),
-    ])
-    def test_prediction(self, word, prediction):
-        d = dawg.DAWG(self.DATA)
-        byte_replaces = dict(
-            (k.encode('utf8'), (v.encode('utf8'), v))
-            for k,v in self.REPLACES.items()
-        )
-        assert d.similar_keys(word, byte_replaces) == prediction
-
