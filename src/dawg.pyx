@@ -1,6 +1,9 @@
 # cython: profile=True
 from __future__ import unicode_literals
 from libcpp.string cimport string
+cimport cython
+from cpython.sequence cimport PySequence_InPlaceConcat
+
 from iostream cimport stringstream, istream, ostream, ifstream
 cimport iostream
 
@@ -10,7 +13,6 @@ from _dictionary cimport Dictionary
 from _guide cimport Guide
 from _completer cimport Completer
 from _base_types cimport BaseType, SizeType
-
 cimport _guide_builder
 cimport _dictionary_builder
 cimport b64_decode
@@ -18,7 +20,7 @@ cimport b64_decode
 import collections
 import struct
 import sys
-from binascii import a2b_base64, b2a_base64
+from binascii import b2a_base64
 
 cdef class DAWG:
     """
@@ -154,6 +156,55 @@ cdef class DAWG:
 
     def _file_size(self):
         return self.dct.file_size()
+
+    cdef list _similar_keys(self, unicode current_prefix, unicode key, BaseType cur_index, dict replace_chars):
+        cdef BaseType next_index, index = cur_index
+        cdef unicode prefix, u_replace_char, found_key
+        cdef bytes b_step, b_replace_char
+        cdef list res = []
+        cdef list extra_keys
+
+        cdef int start_pos = len(current_prefix)
+        cdef int end_pos = len(key)
+        cdef int word_pos = start_pos
+
+        while word_pos < end_pos:
+            b_step = key[word_pos].encode('utf8')
+
+            if b_step in replace_chars:
+                next_index = index
+                b_replace_char, u_replace_char = replace_chars[b_step]
+
+                if self.dct.Follow(b_replace_char, &next_index):
+                    prefix = "".join((current_prefix, key[start_pos:word_pos], u_replace_char))
+                    extra_keys = self._similar_keys(prefix, key, next_index, replace_chars)
+                    PySequence_InPlaceConcat(res, extra_keys)
+
+            if not self.dct.Follow(b_step, &index):
+                break
+            word_pos += 1
+
+        else:
+            if self.dct.has_value(index):
+                found_key = current_prefix + key[start_pos:]
+                res.insert(0, found_key)
+
+        return res
+
+    cpdef list similar_keys(self, unicode key, dict replace_chars):
+        """
+        Returns all variants of ``key`` in this DAWG according to
+        ``replace_chars`` dict.
+
+        ``replace_chars`` must be a dict that maps utf8-encoded byte strings
+        (representing a single unicode character) to a tuple
+        (<utf8-encoded char>, <unicode char>).
+
+        This may be useful e.g. for handling single-character umlauts.
+
+        Only single-character replaces are currently supported.
+        """
+        return self._similar_keys("", key, self.dct.root(), replace_chars)
 
 
 cdef class CompletionDAWG(DAWG):
@@ -348,7 +399,6 @@ cdef class BytesDAWG(CompletionDAWG):
             res.append(payload)
 
         return res
-
 
     cpdef list b_get_value(self, bytes key):
         cdef BaseType index
