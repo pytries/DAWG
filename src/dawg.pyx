@@ -224,7 +224,6 @@ cdef class DAWG:
         )
 
 
-
 cdef class CompletionDAWG(DAWG):
     """
     DAWG with key completion support.
@@ -330,6 +329,26 @@ cdef class CompletionDAWG(DAWG):
             stream.close()
 
         return self
+
+    def _transitions(self):
+        transitions = set()
+        cdef BaseType index, prev_index, completer_index
+        cdef char* key
+
+        self.completer.Start(self.dct.root())
+        while self.completer.Next():
+            key = <char*>self.completer.key()
+
+            index = self.dct.root()
+
+            for i in range(self.completer.length()):
+                prev_index = index
+                self.dct.Follow(&(key[i]), 1, &index)
+                transitions.add(
+                    (prev_index, <unsigned char>key[i], index)
+                )
+
+        return sorted(list(transitions))
 
 
 # This symbol is not allowed in utf8 so it is safe to use
