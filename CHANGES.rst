@@ -1,4 +1,9 @@
 
+0.3.1 (2012-09-20)
+------------------
+
+- bundled dawgdic C++ library is updated to the latest version.
+
 0.3 (2012-09-13)
 ----------------
 
