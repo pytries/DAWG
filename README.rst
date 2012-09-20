@@ -282,7 +282,6 @@ is a very simple benchmark on a single data set.
 Current limitations
 ===================
 
-* The library is not tested under Windows;
 * ``IntDAWG`` is currently a subclass of ``DAWG`` and so it doesn't
   support ``keys()`` and ``items()`` methods;
 * ``read()`` method reads the whole stream (DAWG must be the last or the
@@ -294,6 +293,8 @@ Current limitations
 * there are ``keys()`` and ``items()`` methods but no ``values()`` method.
 * ``prefixes()`` method for getting all prefixes of a given work is
   not implemented yet;
+* ``BytesDAWG`` and ``RecordDAWG`` has a limitation: values
+  larger than 8KB are unsupported.
 
 Contributions are welcome!
 
@@ -340,7 +341,7 @@ Make sure `tox`_ is installed and run
 
     $ tox
 
-from the source checkout. Tests should pass under python 2.6, 2.7 and 3.2.
+from the source checkout. Tests should pass under python 2.6, 2.7, 3.2 and 3.3.
 
 In order to run benchmarks, type
 
