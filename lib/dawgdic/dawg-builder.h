@@ -68,19 +68,76 @@ class DawgBuilder {
 
   // Inserts a key.
   bool Insert(const CharType *key, ValueType value = 0) {
-    SizeType length = 0;
+    if (key == NULL || *key == '\0' || value < 0) {
+      return false;
+    }
+    SizeType length = 1;
     while (key[length]) {
       ++length;
     }
-    return Insert(key, length, value);
+    return InsertKey(key, length, value);
   }
 
   // Inserts a key.
   bool Insert(const CharType *key, SizeType length, ValueType value) {
-    if (value < 0 || length <= 0) {
+    if (key == NULL || length <= 0 || value < 0) {
       return false;
     }
+    for (SizeType i = 0; i < length; ++i) {
+      if (key[i] == '\0') {
+        return false;
+      }
+    }
+    return InsertKey(key, length, value);
+  }
 
+  // Finishes building a dawg.
+  bool Finish(Dawg *dawg) {
+    // Initializes a builder if not initialized.
+    if (hash_table_.empty()) {
+      Init();
+    }
+
+    FixUnits(0);
+    base_pool_[0].set_base(unit_pool_[0].base());
+    label_pool_[0] = unit_pool_[0].label();
+
+    dawg->set_num_of_states(num_of_states_);
+    dawg->set_num_of_merged_transitions(num_of_merged_transitions_);
+    dawg->set_num_of_merged_states(num_of_merged_states());
+    dawg->set_num_of_merging_states(num_of_merging_states_);
+
+    dawg->SwapBasePool(&base_pool_);
+    dawg->SwapLabelPool(&label_pool_);
+    dawg->SwapFlagPool(&flag_pool_);
+
+    Clear();
+    return true;
+  }
+
+ private:
+  enum {
+    DEFAULT_INITIAL_HASH_TABLE_SIZE = 1 << 8
+  };
+
+  const SizeType initial_hash_table_size_;
+  ObjectPool<BaseUnit> base_pool_;
+  ObjectPool<UCharType> label_pool_;
+  BitPool<> flag_pool_;
+  ObjectPool<DawgUnit> unit_pool_;
+  std::vector<BaseType> hash_table_;
+  std::stack<BaseType> unfixed_units_;
+  std::stack<BaseType> unused_units_;
+  SizeType num_of_states_;
+  SizeType num_of_merged_transitions_;
+  SizeType num_of_merging_states_;
+
+  // Disallows copies.
+  DawgBuilder(const DawgBuilder &);
+  DawgBuilder &operator=(const DawgBuilder &);
+
+  // Inserts a key.
+  bool InsertKey(const CharType *key, SizeType length, ValueType value) {
     // Initializes a builder if not initialized.
     if (hash_table_.empty()) {
       Init();
@@ -131,51 +188,6 @@ class DawgBuilder {
     unit_pool_[index].set_value(value);
     return true;
   }
-
-  // Finishes building a dawg.
-  bool Finish(Dawg *dawg) {
-    // Initializes a builder if not initialized.
-    if (hash_table_.empty()) {
-      Init();
-    }
-
-    FixUnits(0);
-    base_pool_[0].set_base(unit_pool_[0].base());
-    label_pool_[0] = unit_pool_[0].label();
-
-    dawg->set_num_of_states(num_of_states_);
-    dawg->set_num_of_merged_transitions(num_of_merged_transitions_);
-    dawg->set_num_of_merged_states(num_of_merged_states());
-    dawg->set_num_of_merging_states(num_of_merging_states_);
-
-    dawg->SwapBasePool(&base_pool_);
-    dawg->SwapLabelPool(&label_pool_);
-    dawg->SwapFlagPool(&flag_pool_);
-
-    Clear();
-    return true;
-  }
-
- private:
-  enum {
-    DEFAULT_INITIAL_HASH_TABLE_SIZE = 1 << 8
-  };
-
-  const SizeType initial_hash_table_size_;
-  ObjectPool<BaseUnit> base_pool_;
-  ObjectPool<UCharType> label_pool_;
-  BitPool<> flag_pool_;
-  ObjectPool<DawgUnit> unit_pool_;
-  std::vector<BaseType> hash_table_;
-  std::stack<BaseType> unfixed_units_;
-  std::stack<BaseType> unused_units_;
-  SizeType num_of_states_;
-  SizeType num_of_merged_transitions_;
-  SizeType num_of_merging_states_;
-
-  // Disallows copies.
-  DawgBuilder(const DawgBuilder &);
-  DawgBuilder &operator=(const DawgBuilder &);
 
   // Initializes an object.
   void Init() {
