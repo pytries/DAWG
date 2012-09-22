@@ -118,14 +118,21 @@ class TestCompletionDAWG(object):
     def dawg(self):
         return dawg.CompletionDAWG(self.keys)
 
-    def test_completion(self):
-        keys, d = self.keys, self.dawg()
-        for key in keys:
+    def test_contains(self):
+        d = self.dawg()
+        for key in self.keys:
             assert key in d
 
-        assert d.keys('foo') == ['foo', 'foobar']
-        assert d.keys('b') == ['bar']
+    def test_keys(self):
+        d = self.dawg()
+        assert d.keys() == sorted(self.keys)
+
+    def test_completion(self):
+        d = self.dawg()
+
         assert d.keys('z') == []
+        assert d.keys('b') == ['bar']
+        assert d.keys('foo') == ['foo', 'foobar']
 
     def test_completion_dawg_saveload(self):
         buf = BytesIO()
