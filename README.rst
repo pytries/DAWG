@@ -68,6 +68,11 @@ prefix in a ``CompletionDAWG``::
     >>> completion_dawg.keys(u'foo')
     >>> [u'foo', u'foobar']
 
+and to find all prefixes of a given key::
+
+    >>> base_dawg.prefixes(u'foobarz')
+    [u'foo', u'foobar']
+
 It is possible to find all keys similar to a given key (using a one-way
 char translation table)::
 
@@ -267,6 +272,10 @@ Python 3.2, macbook air i5 1.8 Ghz)::
     BytesDAWG keys():   23.929 ops/sec
     RecordDAWG keys():  23.726 ops/sec
     IntDAWG keys():     not supported
+
+    DAWG.prefixes (hits):    0.244M ops/sec
+    DAWG.prefixes (mixed):   1.414M ops/sec
+    DAWG.prefixes (misses):  2.156M ops/sec
 
     RecordDAWG.keys(prefix="xxx"), avg_len(res)==415:       6.057K ops/sec
     RecordDAWG.keys(prefix="xxxxx"), avg_len(res)==17:      130.680K ops/sec

@@ -12,7 +12,7 @@ from _dawg_builder cimport DawgBuilder
 from _dictionary cimport Dictionary
 from _guide cimport Guide
 from _completer cimport Completer
-from _base_types cimport BaseType, SizeType
+from _base_types cimport BaseType, SizeType, CharType
 cimport _guide_builder
 cimport _dictionary_builder
 cimport b64_decode
@@ -207,6 +207,25 @@ cdef class DAWG:
         This may be useful e.g. for handling single-character umlauts.
         """
         return self._similar_keys("", key, self.dct.root(), replaces)
+
+    cpdef list prefixes(self, unicode key):
+        '''
+        Returns a list with keys of this DAWG that are prefixes of the ``key``.
+        '''
+        cdef list res = []
+        cdef BaseType index = self.dct.root()
+        cdef bytes b_key = key.encode('utf8')
+        cdef int pos = 1
+        cdef CharType ch
+
+        for ch in b_key:
+            if not self.dct.Follow(ch, &index):
+                break
+            if self._has_value(index):
+                res.append(b_key[:pos].decode('utf8'))
+            pos += 1
+
+        return res
 
     @classmethod
     def compile_replaces(cls, dict replaces):

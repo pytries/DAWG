@@ -126,26 +126,29 @@ NON_WORDS_1k = ['ыва', 'xyz', 'соы', 'Axx', 'avы']*200
             bench(full_test_name, timer, descr, op_count, repeats)
 
 
-    # trie-specific benchmarks
+    # DAWG-specific benchmarks
     for struct_name, setup in structures[1:]:
-#        _bench_data = [
-#            ('hits', 'WORDS100k'),
-#            ('mixed', 'MIXED_WORDS100k'),
-#            ('misses', 'NON_WORDS100k'),
-#        ]
-#
-#        for meth in ['prefixes', 'iter_prefixes']:
-#            for name, data in _bench_data:
-#                bench(
-#                    '%s.%s (%s)' % (struct_name, meth, name),
-#                    timeit.Timer(
-#                        "for word in %s:\n"
-#                        "   for it in data.%s(word): pass" % (data, meth),
-#                        setup
-#                    ),
-#                    runs=3
-#                )
 
+        # prefixes of a given key
+        _bench_data = [
+            ('hits', 'WORDS100k'),
+            ('mixed', 'MIXED_WORDS100k'),
+            ('misses', 'NON_WORDS100k'),
+        ]
+
+        for meth in ['prefixes']:
+            for name, data in _bench_data:
+                bench(
+                    '%s.%s (%s)' % (struct_name, meth, name),
+                    timeit.Timer(
+                        "for word in %s:\n"
+                        "   data.%s(word)" % (data, meth),
+                        setup
+                    ),
+                    runs=3
+                )
+
+        # keys with a given prefix
         _bench_data = [
             ('xxx', 'avg_len(res)==415', 'PREFIXES_3_1k'),
             ('xxxxx', 'avg_len(res)==17', 'PREFIXES_5_1k'),

@@ -50,6 +50,7 @@ class TestDAWG(object):
                 d.read(f)
                 assert 'Invalid' in e.args[0]
 
+
 class TestIntDAWG(object):
 
     def dawg(self):
@@ -126,6 +127,12 @@ class TestCompletionDAWG(object):
     def test_keys(self):
         d = self.dawg()
         assert d.keys() == sorted(self.keys)
+
+    def test_prefixes(self):
+        d = self.dawg()
+        assert d.prefixes("foobarz") == ["f", "foo", "foobar"]
+        assert d.prefixes("x") == []
+        assert d.prefixes("bar") == ["bar"]
 
     def test_completion(self):
         d = self.dawg()
