@@ -1,4 +1,9 @@
 
+0.3.2 (2012-09-24)
+------------------
+
+- ``prefixes`` method for finding all prefixes of a given key.
+
 0.3.1 (2012-09-20)
 ------------------
 
