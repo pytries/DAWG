@@ -136,13 +136,25 @@ NON_WORDS_1k = ['ыва', 'xyz', 'соы', 'Axx', 'avы']*200
             ('misses', 'NON_WORDS100k'),
         ]
 
-        for meth in ['prefixes', 'iterprefixes']:
+        for meth in ['prefixes']:
             for name, data in _bench_data:
                 bench(
                     '%s.%s (%s)' % (struct_name, meth, name),
                     timeit.Timer(
                         "for word in %s:\n"
                         "   data.%s(word)" % (data, meth),
+                        setup
+                    ),
+                    runs=3
+                )
+
+        for meth in ['iterprefixes']:
+            for name, data in _bench_data:
+                bench(
+                    '%s.%s (%s)' % (struct_name, meth, name),
+                    timeit.Timer(
+                        "for word in %s:\n"
+                        "   list(data.%s(word))" % (data, meth),
                         setup
                     ),
                     runs=3
@@ -157,7 +169,7 @@ NON_WORDS_1k = ['ыва', 'xyz', 'соы', 'Axx', 'avы']*200
             ('xxx', 'NON_EXISTING', 'NON_WORDS_1k'),
         ]
         for xxx, avg, data in _bench_data:
-            for meth in ['keys', 'items', 'iterkeys', 'iteritems']:
+            for meth in ['keys', 'items']:
                 bench(
                     '%s.%s(prefix="%s"), %s' % (struct_name, meth, xxx, avg),
                     timeit.Timer(
@@ -168,6 +180,18 @@ NON_WORDS_1k = ['ыва', 'xyz', 'соы', 'Axx', 'avы']*200
                     op_count=1,
                     runs=3
                 )
+            for meth in ['iterkeys', 'iteritems']:
+                bench(
+                    '%s.%s(prefix="%s"), %s' % (struct_name, meth, xxx, avg),
+                    timeit.Timer(
+                        "for word in %s: list(data.%s(word))" % (data, meth),
+                        setup
+                    ),
+                    'K ops/sec',
+                    op_count=1,
+                    runs=3
+                )
+
 
 def check_dawg(trie, words):
     value = 0
