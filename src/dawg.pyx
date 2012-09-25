@@ -227,6 +227,22 @@ cdef class DAWG:
 
         return res
 
+    def iterprefixes(self, unicode key):
+        '''
+        Returns a generator with keys of this DAWG that are prefixes of the ``key``.
+        '''
+        cdef BaseType index = self.dct.root()
+        cdef bytes b_key = key.encode('utf8')
+        cdef int pos = 1
+        cdef CharType ch
+
+        for ch in b_key:
+            if not self.dct.Follow(ch, &index):
+                return
+            if self._has_value(index):
+                yield b_key[:pos].decode('utf8')
+            pos += 1
+
     @classmethod
     def compile_replaces(cls, dict replaces):
 
@@ -277,6 +293,20 @@ cdef class CompletionDAWG(DAWG):
             res.append(key)
 
         return res
+
+    def iterkeys(self, unicode prefix=""):
+        cdef bytes b_prefix = prefix.encode('utf8')
+        cdef unicode key
+        cdef BaseType index = self.dct.root()
+
+        if not self.dct.Follow(b_prefix, &index):
+            return
+
+        self.completer.Start(index, b_prefix)
+        while self.completer.Next():
+            key = (<char*>self.completer.key()).decode('utf8')
+            yield key
+
 
     cpdef bytes tobytes(self) except +:
         """
@@ -503,6 +533,41 @@ cdef class BytesDAWG(CompletionDAWG):
 
         return res
 
+    def iteritems(self, unicode prefix=""):
+        cdef bytes b_prefix = prefix.encode('utf8')
+        cdef bytes value, b_value
+        cdef unicode u_key
+        cdef int i
+        cdef char* raw_key
+        cdef char* raw_value
+        cdef int raw_value_len
+
+        cdef BaseType index = self.dct.root()
+        if not self.dct.Follow(b_prefix, &index):
+            return
+
+        cdef int _len
+        cdef b64_decode.decoder _b64_decoder
+        cdef char[MAX_VALUE_SIZE] _b64_decoder_storage
+
+        self.completer.Start(index, b_prefix)
+        while self.completer.Next():
+            raw_key = <char*>self.completer.key()
+
+            for i in range(0, self.completer.length()):
+                if raw_key[i] == PAYLOAD_SEPARATOR:
+                    break
+
+            raw_value = &(raw_key[i])
+            raw_value_len = self.completer.length() - i
+
+            _b64_decoder.init()
+            _len = _b64_decoder.decode(raw_value, raw_value_len, _b64_decoder_storage)
+            value = _b64_decoder_storage[:_len]
+
+            u_key = raw_key[:i].decode('utf8')
+            yield (u_key, value)
+
     cpdef list keys(self, unicode prefix=""):
         cdef bytes b_prefix = prefix.encode('utf8')
         cdef unicode u_key
@@ -525,6 +590,27 @@ cdef class BytesDAWG(CompletionDAWG):
             u_key = raw_key[:i].decode('utf8')
             res.append(u_key)
         return res
+
+    def iterkeys(self, unicode prefix=""):
+        cdef bytes b_prefix = prefix.encode('utf8')
+        cdef unicode u_key
+        cdef int i
+        cdef char* raw_key
+
+        cdef BaseType index = self.dct.root()
+        if not self.dct.Follow(b_prefix, &index):
+            return
+
+        self.completer.Start(index, b_prefix)
+        while self.completer.Next():
+            raw_key = <char*>self.completer.key()
+
+            for i in range(0, self.completer.length()):
+                if raw_key[i] == PAYLOAD_SEPARATOR:
+                    break
+
+            u_key = raw_key[:i].decode('utf8')
+            yield u_key
 
     cdef bint _has_value(self, BaseType index):
         cdef BaseType _index = index
@@ -666,6 +752,10 @@ cdef class RecordDAWG(BytesDAWG):
     cpdef list items(self, unicode prefix=""):
         cdef list items = BytesDAWG.items(self, prefix)
         return [(key, self._struct.unpack(val)) for (key, val) in items]
+
+    def iteritems(self, unicode prefix=""):
+        for key, val in BytesDAWG.iteritems(self, prefix):
+            yield (key, self._struct.unpack(val))
 
 
 cdef class IntDAWG(DAWG):

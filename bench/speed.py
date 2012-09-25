@@ -148,6 +148,18 @@ NON_WORDS_1k = ['ыва', 'xyz', 'соы', 'Axx', 'avы']*200
                     runs=3
                 )
 
+        for meth in ['iterprefixes']:
+            for name, data in _bench_data:
+                bench(
+                    '%s.%s (%s)' % (struct_name, meth, name),
+                    timeit.Timer(
+                        "for word in %s:\n"
+                        "   list(data.%s(word))" % (data, meth),
+                        setup
+                    ),
+                    runs=3
+                )
+
         # keys with a given prefix
         _bench_data = [
             ('xxx', 'avg_len(res)==415', 'PREFIXES_3_1k'),
@@ -168,6 +180,18 @@ NON_WORDS_1k = ['ыва', 'xyz', 'соы', 'Axx', 'avы']*200
                     op_count=1,
                     runs=3
                 )
+            for meth in ['iterkeys', 'iteritems']:
+                bench(
+                    '%s.%s(prefix="%s"), %s' % (struct_name, meth, xxx, avg),
+                    timeit.Timer(
+                        "for word in %s: list(data.%s(word))" % (data, meth),
+                        setup
+                    ),
+                    'K ops/sec',
+                    op_count=1,
+                    runs=3
+                )
+
 
 def check_dawg(trie, words):
     value = 0
