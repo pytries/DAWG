@@ -136,7 +136,7 @@ NON_WORDS_1k = ['ыва', 'xyz', 'соы', 'Axx', 'avы']*200
             ('misses', 'NON_WORDS100k'),
         ]
 
-        for meth in ['prefixes']:
+        for meth in ['prefixes', 'iterprefixes']:
             for name, data in _bench_data:
                 bench(
                     '%s.%s (%s)' % (struct_name, meth, name),
@@ -157,7 +157,7 @@ NON_WORDS_1k = ['ыва', 'xyz', 'соы', 'Axx', 'avы']*200
             ('xxx', 'NON_EXISTING', 'NON_WORDS_1k'),
         ]
         for xxx, avg, data in _bench_data:
-            for meth in ['keys', 'items']:
+            for meth in ['keys', 'items', 'iterkeys', 'iteritems']:
                 bench(
                     '%s.%s(prefix="%s"), %s' % (struct_name, meth, xxx, avg),
                     timeit.Timer(

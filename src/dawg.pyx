@@ -227,9 +227,9 @@ cdef class DAWG:
 
         return res
 
-    cpdef iterprefixes(self, unicode key):
+    def iterprefixes(self, unicode key):
         '''
-        Returns a list with keys of this DAWG that are prefixes of the ``key``.
+        Returns a generator with keys of this DAWG that are prefixes of the ``key``.
         '''
         cdef BaseType index = self.dct.root()
         cdef bytes b_key = key.encode('utf8')
@@ -294,7 +294,7 @@ cdef class CompletionDAWG(DAWG):
 
         return res
 
-    cpdef iterkeys(self, unicode prefix=""):
+    def iterkeys(self, unicode prefix=""):
         cdef bytes b_prefix = prefix.encode('utf8')
         cdef unicode key
         cdef BaseType index = self.dct.root()
@@ -533,7 +533,7 @@ cdef class BytesDAWG(CompletionDAWG):
 
         return res
 
-    cpdef iteritems(self, unicode prefix=""):
+    def iteritems(self, unicode prefix=""):
         cdef bytes b_prefix = prefix.encode('utf8')
         cdef bytes value, b_value
         cdef unicode u_key
@@ -591,7 +591,7 @@ cdef class BytesDAWG(CompletionDAWG):
             res.append(u_key)
         return res
 
-    cpdef iterkeys(self, unicode prefix=""):
+    def iterkeys(self, unicode prefix=""):
         cdef bytes b_prefix = prefix.encode('utf8')
         cdef unicode u_key
         cdef int i
@@ -753,7 +753,7 @@ cdef class RecordDAWG(BytesDAWG):
         cdef list items = BytesDAWG.items(self, prefix)
         return [(key, self._struct.unpack(val)) for (key, val) in items]
 
-    cpdef iteritems(self, unicode prefix=""):
+    def iteritems(self, unicode prefix=""):
         for key, val in BytesDAWG.iteritems(self, prefix):
             yield (key, self._struct.unpack(val))
 
