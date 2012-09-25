@@ -1,4 +1,10 @@
 
+0.4 (2012-09-26)
+----------------
+
+- ``iterkeys``, ``iteritems`` and ``iterprefixes`` methods
+  (thanks Dan Blanchard).
+
 0.3.2 (2012-09-24)
 ------------------
 
