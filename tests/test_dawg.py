@@ -128,11 +128,22 @@ class TestCompletionDAWG(object):
         d = self.dawg()
         assert d.keys() == sorted(self.keys)
 
+    def test_iterkeys(self):
+        d = self.dawg()
+        assert list(d.iterkeys()) == sorted(self.keys)
+        assert list(d.iterkeys()) == d.keys()
+
     def test_prefixes(self):
         d = self.dawg()
         assert d.prefixes("foobarz") == ["f", "foo", "foobar"]
         assert d.prefixes("x") == []
         assert d.prefixes("bar") == ["bar"]
+
+    def test_iterprefixes(self):
+        d = self.dawg()
+        assert list(d.iterprefixes("foobarz")) == d.prefixes("foobarz")
+        assert list(d.iterprefixes("x")) == d.prefixes("x")
+        assert list(d.iterprefixes("bar")) == d.prefixes("bar")
 
     def test_completion(self):
         d = self.dawg()
