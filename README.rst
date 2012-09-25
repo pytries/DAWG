@@ -73,6 +73,17 @@ and to find all prefixes of a given key::
     >>> base_dawg.prefixes(u'foobarz')
     [u'foo', u'foobar']
 
+Iterator versions are also available::
+
+    >>> for key in completion_dawg.iterkeys(u'foo'):
+    ...     print(key)
+    foo
+    foobar
+    >>> for prefix in base_dawg.iterprefixes(u'foobarz'):
+    ...     print(prefix)
+    foo
+    foobar
+
 It is possible to find all keys similar to a given key (using a one-way
 char translation table)::
 
@@ -112,10 +123,18 @@ a default value instead::
     >>> bytes_dawg.get(u'foo', None)
     None
 
-``BytesDAWG`` support ``keys`` and ``items`` methods (they both
-accept optional key prefix). There is also support for
+``BytesDAWG`` support ``keys``, ``items``, ``iterkeys`` and ``iteritems``
+methods (they all accept optional key prefix). There is also support for
 ``similar_keys``, ``similar_items`` and ``similar_item_values`` methods.
 
+.. note::
+
+    Currently the order of keys returned by ``BytesDAWG`` is not the same
+    as the order of keys returned by ``CompletionDAWG`` because
+    of the way ``BytesDAWG`` is implemented: values are internally stored inside
+    DAWG keys after a separator; separator is a chr(255) byte and thus
+    ``'foo'`` key is greater than ``'foobar'`` key (values compared
+    are ``'foo<sep>'`` and ``'foobar<sep>'``).
 
 RecordDAWG
 ----------
@@ -298,10 +317,10 @@ Current limitations
   doesn't have this limitation;
 * DAWGs loaded with ``read()`` and unpickled DAWGs uses 3x-4x memory
   compared to DAWGs loaded with ``load()`` method;
+* there are ``keys()`` and ``items()`` methods but no ``values()`` method;
 * iterator versions of methods are not always implemented;
-* there are ``keys()`` and ``items()`` methods but no ``values()`` method.
-* ``prefixes()`` method for getting all prefixes of a given work is
-  not implemented yet;
+* ``BytesDAWG`` and ``RecordDAWG`` key order is different from
+  ``CompletionDAWG`` key order;
 * ``BytesDAWG`` and ``RecordDAWG`` has a limitation: values
   larger than 8KB are unsupported.
 
@@ -364,7 +383,8 @@ In order to run benchmarks, type
 Authors & Contributors
 ----------------------
 
-* Mikhail Korobov <kmike84@gmail.com>
+* Mikhail Korobov <kmike84@gmail.com>;
+* Dan Blanchard.
 
 This module is based on `dawgdic`_ C++ library by
 Susumu Yata & contributors.
