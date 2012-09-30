@@ -177,3 +177,8 @@ class TestCompletionDAWG(object):
             d.load(path)
             assert "can't load _dawg.Dictionary" in e.args[0]
 
+    def test_no_segfaults_on_empty_dawg(self):
+        pytest.skip("this test segfaults")
+        d = dawg.CompletionDAWG([])
+        assert d.keys() == []
+

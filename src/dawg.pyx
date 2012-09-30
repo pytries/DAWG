@@ -29,10 +29,6 @@ cdef class DAWG:
     cdef Dictionary dct
     cdef _dawg.Dawg dawg
 
-    def __dealloc__(self):
-        self.dct.Clear()
-        self.dawg.Clear()
-
     def __init__(self, arg=None, input_is_sorted=False):
         if arg is None:
             arg = []
@@ -40,6 +36,9 @@ cdef class DAWG:
             arg = sorted(arg)
         self._build_from_iterable(arg)
 
+    def __dealloc__(self):
+        self.dct.Clear()
+        self.dawg.Clear()
 
     def _build_from_iterable(self, iterable):
         cdef DawgBuilder dawg_builder
@@ -53,7 +52,8 @@ cdef class DAWG:
             dawg_builder.Insert(b_key)
 
         dawg_builder.Finish(&self.dawg)
-        _dictionary_builder.Build(self.dawg, &(self.dct))
+        if not _dictionary_builder.Build(self.dawg, &(self.dct)):
+            raise Exception("Can't build dictionary")
 
     def __contains__(self, key):
         if isinstance(key, unicode):
@@ -273,10 +273,10 @@ cdef class CompletionDAWG(DAWG):
         if not self.completer:
             self.completer = new Completer(self.dct, self.guide)
 
-
     def __dealloc__(self):
         self.guide.Clear()
-        del self.completer
+        if self.completer:
+            del self.completer
 
     cpdef list keys(self, unicode prefix=""):
         cdef bytes b_prefix = prefix.encode('utf8')
@@ -288,6 +288,7 @@ cdef class CompletionDAWG(DAWG):
             return res
 
         self.completer.Start(index, b_prefix)
+
         while self.completer.Next():
             key = (<char*>self.completer.key()).decode('utf8')
             res.append(key)
