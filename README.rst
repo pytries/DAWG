@@ -10,7 +10,7 @@ the raw lookup speed is comparable. DAWG may be even faster than
 built-in dict for some operations. It also provides fast
 advanced methods like prefix search.
 
-Based on `dawgdic` C++ library.
+Based on `dawgdic`_ C++ library.
 
 .. _dawgdic: https://code.google.com/p/dawgdic/
 
