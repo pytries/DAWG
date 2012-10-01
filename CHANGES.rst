@@ -1,4 +1,9 @@
 
+0.4.1 (2012-10-01)
+------------------
+
+- Segfaults with empty DAWGs are fixed by updating dawgdic to latest svn.
+
 0.4 (2012-09-26)
 ----------------
 
