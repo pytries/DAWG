@@ -72,13 +72,14 @@ class RankedCompleterBase {
     value_ = -1;
 
     nodes_.clear();
-    CreateNode(index, 0, 'X');
-
     node_queue_.clear();
-    EnqueueNode(0);
-
     while (!candidate_queue_.empty()) {
       candidate_queue_.pop();
+    }
+
+    if (guide_->size() != 0) {
+      CreateNode(index, 0, 'X');
+      EnqueueNode(0);
     }
   }
 

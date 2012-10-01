@@ -86,10 +86,10 @@ class Guide {
   }
 
   // Swaps Guides.
-  void Swap(Guide *Guide) {
-    std::swap(units_, Guide->units_);
-    std::swap(size_, Guide->size_);
-    units_buf_.swap(Guide->units_buf_);
+  void Swap(Guide *guide) {
+    std::swap(units_, guide->units_);
+    std::swap(size_, guide->size_);
+    units_buf_.swap(guide->units_buf_);
   }
 
   // Initializes a Guide.

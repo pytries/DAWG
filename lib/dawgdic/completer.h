@@ -56,8 +56,10 @@ class Completer {
     key_[length] = '\0';
 
     index_stack_.clear();
-    index_stack_.push_back(index);
-    last_index_ = dic_->root();
+    if (guide_->size() != 0) {
+      index_stack_.push_back(index);
+      last_index_ = dic_->root();
+    }
   }
 
   // Gets the next key.

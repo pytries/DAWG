@@ -86,10 +86,10 @@ class RankedGuide {
   }
 
   // Swaps RankedGuides.
-  void Swap(RankedGuide *RankedGuide) {
-    std::swap(units_, RankedGuide->units_);
-    std::swap(size_, RankedGuide->size_);
-    units_buf_.swap(RankedGuide->units_buf_);
+  void Swap(RankedGuide *guide) {
+    std::swap(units_, guide->units_);
+    std::swap(size_, guide->size_);
+    units_buf_.swap(guide->units_buf_);
   }
 
   // Initializes a RankedGuide.
