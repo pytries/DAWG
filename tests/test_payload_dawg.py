@@ -1,7 +1,5 @@
 # -*- coding: utf-8 -*-
 from __future__ import absolute_import, unicode_literals
-import pickle
-from io import BytesIO
 
 import pytest
 import dawg
@@ -9,16 +7,16 @@ import dawg
 class TestBytesDAWG(object):
 
     DATA = (
-        ('foo', b'data1'),
-        ('bar', b'data2'),
         ('foo', b'data3'),
+        ('bar', b'data2'),
+        ('foo', b'data1'),
         ('foobar', b'data4')
     )
 
     DATA_KEYS = list(zip(*DATA))[0]
 
-    def dawg(self):
-        return dawg.BytesDAWG(self.DATA)
+    def dawg(self, **kwargs):
+        return dawg.BytesDAWG(self.DATA, **kwargs)
 
     def test_contains(self):
         d = self.dawg()
@@ -57,16 +55,25 @@ class TestBytesDAWG(object):
 
     def test_keys(self):
         d = self.dawg()
-        assert sorted(d.keys()) == sorted(self.DATA_KEYS)
+        assert d.keys() == sorted(self.DATA_KEYS)
+
+    def test_keys_ordering(self):
+        data = [('foo', b'v1'), ('foobar', b'v2'), ('bar', b'v3')]
+
+        d = dawg.BytesDAWG(data, payload_separator=b'\xff')
+        assert d.keys() == ['bar', 'foobar', 'foo']
+
+        d2 = dawg.BytesDAWG(data, payload_separator=b'\x01')
+        assert d2.keys() == ['bar', 'foo', 'foobar']
 
     def test_iterkeys(self):
         d = self.dawg()
         assert list(d.iterkeys()) == d.keys()
-        assert sorted(d.iterkeys()) == sorted(self.DATA_KEYS)
+        assert list(d.iterkeys()) == sorted(self.DATA_KEYS)
 
     def test_items(self):
         d = self.dawg()
-        assert sorted(d.items()) == sorted(self.DATA)
+        assert d.items() == sorted(self.DATA)
 
     def test_iteritems(self):
         d = self.dawg()
@@ -75,29 +82,29 @@ class TestBytesDAWG(object):
 
 class TestRecordDAWG(object):
 
-    STRUCTURED_DATA = (  # payload is (length, vowels count, index) tuple
-        ('foo',     (3, 2, 0)),
+    STRUCTURED_DATA = (
+        ('foo',     (3, 2, 256)),
         ('bar',     (3, 1, 0)),
         ('foo',     (3, 2, 1)),
         ('foobar',  (6, 3, 0))
     )
 
     def dawg(self):
-        return dawg.RecordDAWG("=3H", self.STRUCTURED_DATA)
+        return dawg.RecordDAWG(">3H", self.STRUCTURED_DATA)
 
     def test_record_getitem(self):
         d = self.dawg()
-        assert d['foo'] == [(3, 2, 0), (3, 2, 1)]
+        assert d['foo'] == [(3, 2, 1), (3, 2, 256)]
         assert d['bar'] == [(3, 1, 0)]
         assert d['foobar'] == [(6, 3, 0)]
 
     def test_record_items(self):
         d = self.dawg()
-        assert sorted(d.items()) == sorted(self.STRUCTURED_DATA)
+        assert d.items() == sorted(self.STRUCTURED_DATA)
 
     def test_record_keys(self):
         d = self.dawg()
-        assert sorted(d.keys()) == ['bar', 'foo', 'foo', 'foobar',]
+        assert d.keys() == ['bar', 'foo', 'foo', 'foobar',]
 
     def test_record_iterkeys(self):
         d = self.dawg()
@@ -109,7 +116,7 @@ class TestRecordDAWG(object):
 
     def test_record_keys_prefix(self):
         d = self.dawg()
-        assert sorted(d.keys('fo')) == ['foo', 'foo', 'foobar']
+        assert d.keys('fo') == ['foo', 'foo', 'foobar']
         assert d.keys('bar') == ['bar']
         assert d.keys('barz') == []
 

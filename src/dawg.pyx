@@ -1,7 +1,6 @@
 # cython: profile=True
 from __future__ import unicode_literals
 from libcpp.string cimport string
-cimport cython
 from cpython.sequence cimport PySequence_InPlaceConcat
 
 from iostream cimport stringstream, istream, ostream, ifstream
@@ -401,9 +400,23 @@ cdef class CompletionDAWG(DAWG):
         return sorted(list(transitions))
 
 
-# This symbol is not allowed in utf8 so it is safe to use
+# The following symbol is not allowed in utf8 so it is safe to use
 # as a separator between utf8-encoded string and binary payload.
-DEF PAYLOAD_SEPARATOR = b'\xff'
+# It has drawbacks however: sorting of utf8-encoded keys changes:
+# (foo' becomes greater than 'foox' because strings are compared as
+# 'foo<sep>' and 'foox<sep>' and ord(<sep>)==255 is greater than
+# ord(<any other character>).
+# DEF PAYLOAD_SEPARATOR = b'\xff'
+
+# That's why chr(1) is used as separator by default: this is the lowest allowed
+# character and so it will preserve keys alphabetical order.
+# It is not strictly correct to use chr(1) as separator because chr(1)
+# is a valid UTF8 character. But I think in practice this won't be an issue:
+# such control character is very unlikely in text keys, and binary keys
+# are not supported anyway because dawgdic doesn't support keys containing
+# chr(0).
+DEF PAYLOAD_SEPARATOR = b'\x01'
+
 DEF MAX_VALUE_SIZE = 32768
 
 cdef class BytesDAWG(CompletionDAWG):
@@ -415,12 +428,18 @@ cdef class BytesDAWG(CompletionDAWG):
     {unicode -> list of bytes objects} mapping.
     """
 
-    def __init__(self, arg=None, input_is_sorted=False):
+    cdef bytes _b_payload_separator
+    cdef CharType _c_payload_separator
+
+    def __init__(self, arg=None, input_is_sorted=False, bytes payload_separator=PAYLOAD_SEPARATOR):
         """
         ``arg`` must be an iterable of tuples (unicode_key, bytes_payload).
         """
         if arg is None:
             arg = []
+
+        self._b_payload_separator = payload_separator
+        self._c_payload_separator = <unsigned int>ord(payload_separator)
 
         keys = (self._raw_key(d[0], d[1]) for d in arg)
 
@@ -429,7 +448,7 @@ cdef class BytesDAWG(CompletionDAWG):
 
     cpdef bytes _raw_key(self, unicode key, bytes payload):
         cdef bytes encoded_payload = b2a_base64(payload)
-        return key.encode('utf8') + PAYLOAD_SEPARATOR + encoded_payload
+        return key.encode('utf8') + self._b_payload_separator + encoded_payload
 
     cpdef bint b_has_key(self, bytes key) except -1:
         cdef BaseType index
@@ -461,7 +480,7 @@ cdef class BytesDAWG(CompletionDAWG):
         index[0] = self.dct.root()
         if not self.dct.Follow(key, len(key), index):
             return False
-        return self.dct.Follow(PAYLOAD_SEPARATOR, index)
+        return self.dct.Follow(self._c_payload_separator, index)
 
     cpdef list get_value(self, unicode key):
         cdef bytes b_key = key.encode('utf8')
@@ -517,7 +536,7 @@ cdef class BytesDAWG(CompletionDAWG):
             raw_key = <char*>self.completer.key()
 
             for i in range(0, self.completer.length()):
-                if raw_key[i] == PAYLOAD_SEPARATOR:
+                if raw_key[i] == self._c_payload_separator:
                     break
 
             raw_value = &(raw_key[i])
@@ -556,7 +575,7 @@ cdef class BytesDAWG(CompletionDAWG):
             raw_key = <char*>self.completer.key()
 
             for i in range(0, self.completer.length()):
-                if raw_key[i] == PAYLOAD_SEPARATOR:
+                if raw_key[i] == self._c_payload_separator:
                     break
 
             raw_value = &(raw_key[i])
@@ -585,7 +604,7 @@ cdef class BytesDAWG(CompletionDAWG):
             raw_key = <char*>self.completer.key()
 
             for i in range(0, self.completer.length()):
-                if raw_key[i] == PAYLOAD_SEPARATOR:
+                if raw_key[i] == self._c_payload_separator:
                     break
 
             u_key = raw_key[:i].decode('utf8')
@@ -607,7 +626,7 @@ cdef class BytesDAWG(CompletionDAWG):
             raw_key = <char*>self.completer.key()
 
             for i in range(0, self.completer.length()):
-                if raw_key[i] == PAYLOAD_SEPARATOR:
+                if raw_key[i] == self._c_payload_separator:
                     break
 
             u_key = raw_key[:i].decode('utf8')
@@ -615,7 +634,7 @@ cdef class BytesDAWG(CompletionDAWG):
 
     cdef bint _has_value(self, BaseType index):
         cdef BaseType _index = index
-        return self.dct.Follow(PAYLOAD_SEPARATOR, &_index)
+        return self.dct.Follow(self._c_payload_separator, &_index)
 
     cdef list _similar_items(self, unicode current_prefix, unicode key, BaseType cur_index, dict replace_chars):
         cdef BaseType next_index, index = cur_index
@@ -645,7 +664,7 @@ cdef class BytesDAWG(CompletionDAWG):
             word_pos += 1
 
         else:
-            if self.dct.Follow(PAYLOAD_SEPARATOR, &index):
+            if self.dct.Follow(self._c_payload_separator, &index):
                 found_key = current_prefix + key[start_pos:]
                 value = self._value_for_index(index)
                 res.insert(0, (found_key, value))
@@ -691,7 +710,7 @@ cdef class BytesDAWG(CompletionDAWG):
             word_pos += 1
 
         else:
-            if self.dct.Follow(PAYLOAD_SEPARATOR, &index):
+            if self.dct.Follow(self._c_payload_separator, &index):
                 value = self._value_for_index(index)
                 res.insert(0, value)
 
@@ -728,7 +747,7 @@ cdef class RecordDAWG(BytesDAWG):
     """
     cdef _struct
 
-    def __init__(self, fmt, arg=None, input_is_sorted=False):
+    def __init__(self, fmt, arg=None, input_is_sorted=False, bytes payload_separator=PAYLOAD_SEPARATOR):
         """
         ``arg`` must be an iterable of tuples (unicode_key, data_tuple).
         data tuples will be converted to bytes with
@@ -744,7 +763,7 @@ cdef class RecordDAWG(BytesDAWG):
             arg = []
 
         keys = ((d[0], self._struct.pack(*d[1])) for d in arg)
-        super(RecordDAWG, self).__init__(keys, input_is_sorted)
+        super(RecordDAWG, self).__init__(keys, input_is_sorted, payload_separator)
 
     cdef list _value_for_index(self, BaseType index):
         cdef list value = BytesDAWG._value_for_index(self, index)

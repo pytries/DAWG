@@ -127,15 +127,6 @@ a default value instead::
 methods (they all accept optional key prefix). There is also support for
 ``similar_keys``, ``similar_items`` and ``similar_item_values`` methods.
 
-.. note::
-
-    Currently the order of keys returned by ``BytesDAWG`` is not the same
-    as the order of keys returned by ``CompletionDAWG`` because
-    of the way ``BytesDAWG`` is implemented: values are internally stored inside
-    DAWG keys after a separator; separator is a chr(255) byte and thus
-    ``'foo'`` key is greater than ``'foobar'`` key (values compared
-    are ``'foo<sep>'`` and ``'foobar<sep>'``).
-
 RecordDAWG
 ----------
 
@@ -169,6 +160,61 @@ As with ``BytesDAWG``, there can be several values for the same key::
     [(3, 3, 3)]
 
 
+BytesDAWG and RecordDAWG implementation details
+-----------------------------------------------
+
+``BytesDAWG`` and ``RecordDAWG`` stores data at the end of the keys::
+
+    <utf8-encoded key><separator><base64-encoded data>
+
+Data is encoded to base64 because dawgdic_ C++ library doesn't allow
+zero bytes in keys (it uses null-terminated strings) and such keys are
+very likely in binary data.
+
+In DAWG versions prior to 0.5 ``<separator>`` was ``chr(255)`` byte.
+It was chosen because keys are stored as UTF8-encoded strings and
+``chr(255)`` is guaranteed not to appear in valid UTF8, so the end of
+text part of the key is not ambiguous.
+
+But ``chr(255)`` was proven to be problematic: it changes the order
+of the keys. Keys are naturally returned in lexicographical order by DAWG.
+But if ``chr(255)`` appears at the end of each text part of a key then the
+visible order would change. Imaging ``'foo'`` key with some payload
+and ``'foobar'`` key with some payload. ``'foo'`` key would be greater
+than ``'foobar'`` key: values compared would be ``'foo<sep>'`` and ``'foobar<sep>'``
+and ``ord(<sep>)==255`` is greater than ``ord(<any other character>)``.
+
+So now the default ``<separator>`` is chr(1). This is the lowest allowed
+character and so it preserves the alphabetical order.
+
+It is not strictly correct to use chr(1) as a separator because chr(1)
+is a valid UTF8 character. But I think in practice this won't be an issue:
+such control character is very unlikely in text keys, and binary keys
+are not supported anyway because dawgdic_ doesn't support keys containing
+chr(0).
+
+If you can't guarantee chr(1) is not a part of keys, lexicographical order
+is not important to you or there is a need to read
+a ``BytesDAWG``/``RecordDAWG`` created by DAWG < 0.5 then pass
+``payload_separator`` argument to the constructor::
+
+    >>> BytesDAWG(payload_separator=b'\xff').load('old.dawg')
+
+The storage scheme has one more implication: values of ``BytesDAWG``
+and ``RecordDAWG`` are also sorted lexicographically.
+
+For ``RecordDAWG`` there is a gotcha: in order to have meaningful
+ordering of numeric values store them in big-endian format::
+
+    >>> data = [('foo', (3, 2, 256)), ('foo', (3, 2, 1)), ('foo', (3, 2, 3))]
+    >>> d = RecordDAWG("3H", data)
+    >>> d.items()
+    [(u'foo', (3, 2, 256)), (u'foo', (3, 2, 1)), (u'foo', (3, 2, 3))]
+
+    >>> d2 = RecordDAWG(">3H", data)
+    >>> d2.items()
+    [(u'foo', (3, 2, 1)), (u'foo', (3, 2, 3)), (u'foo', (3, 2, 256))]
+
 IntDAWG
 -------
 
@@ -189,6 +235,7 @@ It is then possible to get a value from the IntDAWG::
 
     >>> int_dawg[u'foo']
     1
+
 
 Persistence
 -----------
@@ -319,8 +366,6 @@ Current limitations
   compared to DAWGs loaded with ``load()`` method;
 * there are ``keys()`` and ``items()`` methods but no ``values()`` method;
 * iterator versions of methods are not always implemented;
-* ``BytesDAWG`` and ``RecordDAWG`` key order is different from
-  ``CompletionDAWG`` key order;
 * ``BytesDAWG`` and ``RecordDAWG`` has a limitation: values
   larger than 8KB are unsupported.
 
