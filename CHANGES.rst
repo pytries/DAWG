@@ -1,4 +1,17 @@
 
+0.5 (2012-10-08)
+----------------
+
+The storage scheme of ``BytesDAWG`` and ``RecordDAWG`` is changed in
+this release in order to provide the alphabetical ordering of items.
+
+This is a backwards-incompatible release. In order to read ``BytesDAWG`` or
+``RecordDAWG`` created with previous versions of DAWG use ``payload_separator``
+constructor argument::
+
+    >>> BytesDAWG(payload_separator=b'\xff').load('old.dawg')
+
+
 0.4.1 (2012-10-01)
 ------------------
 
