@@ -179,7 +179,7 @@ text part of the key is not ambiguous.
 But ``chr(255)`` was proven to be problematic: it changes the order
 of the keys. Keys are naturally returned in lexicographical order by DAWG.
 But if ``chr(255)`` appears at the end of each text part of a key then the
-visible order would change. Imaging ``'foo'`` key with some payload
+visible order would change. Imagine ``'foo'`` key with some payload
 and ``'foobar'`` key with some payload. ``'foo'`` key would be greater
 than ``'foobar'`` key: values compared would be ``'foo<sep>'`` and ``'foobar<sep>'``
 and ``ord(<sep>)==255`` is greater than ``ord(<any other character>)``.
