@@ -79,6 +79,11 @@ class TestBytesDAWG(object):
         d = self.dawg()
         assert list(d.iteritems()) == d.items()
 
+    def test_build_error(self):
+        with pytest.raises(dawg.Error):
+            self.dawg(payload_separator=b'f')
+
+
 
 class TestRecordDAWG(object):
 

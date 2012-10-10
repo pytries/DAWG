@@ -21,6 +21,9 @@ import struct
 import sys
 from binascii import b2a_base64
 
+class Error(Exception):
+    pass
+
 cdef class DAWG:
     """
     Base DAWG wrapper.
@@ -41,18 +44,22 @@ cdef class DAWG:
 
     def _build_from_iterable(self, iterable):
         cdef DawgBuilder dawg_builder
-
         cdef bytes b_key
+
         for key in iterable:
             if isinstance(key, unicode):
                 b_key = key.encode('utf8')
             else:
                 b_key = key
-            dawg_builder.Insert(b_key)
 
-        dawg_builder.Finish(&self.dawg)
-        if not _dictionary_builder.Build(self.dawg, &(self.dct)):
-            raise Exception("Can't build dictionary")
+            if not dawg_builder.Insert(b_key, len(b_key), 0):
+                raise Error("Can't insert key %r" % b_key)
+
+        if not dawg_builder.Finish(&self.dawg):
+            raise Error("dawg_builder.Finish error")
+
+        if not _dictionary_builder.Build(self.dawg, &self.dct):
+            raise Error("Can't build dictionary")
 
     def __contains__(self, key):
         if isinstance(key, unicode):
@@ -268,7 +275,7 @@ cdef class CompletionDAWG(DAWG):
     def __init__(self, arg=None, input_is_sorted=False):
         super(CompletionDAWG, self).__init__(arg, input_is_sorted)
         if not _guide_builder.Build(self.dawg, self.dct, &self.guide):
-            raise Exception("Error building completion information")
+            raise Error("Error building completion information")
         if not self.completer:
             self.completer = new Completer(self.dct, self.guide)
 
@@ -447,8 +454,13 @@ cdef class BytesDAWG(CompletionDAWG):
 
 
     cpdef bytes _raw_key(self, unicode key, bytes payload):
+        cdef bytes b_key = key.encode('utf8')
+
+        if self._b_payload_separator in b_key:
+            raise Error("Payload separator (%r) is found within utf8-encoded key ('%s')" % (self._b_payload_separator, key))
+
         cdef bytes encoded_payload = b2a_base64(payload)
-        return key.encode('utf8') + self._b_payload_separator + encoded_payload
+        return b_key + self._b_payload_separator + encoded_payload
 
     cpdef bint b_has_key(self, bytes key) except -1:
         cdef BaseType index

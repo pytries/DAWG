@@ -50,6 +50,13 @@ class TestDAWG(object):
                 d.read(f)
                 assert 'Invalid' in e.args[0]
 
+    def test_build_errors(self):
+        with pytest.raises(dawg.Error):
+            data = [b'foo\x00bar', b'bar']
+            dawg.DAWG(data)
+
+
+
 
 class TestIntDAWG(object):
 
