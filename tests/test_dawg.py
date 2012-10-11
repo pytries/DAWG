@@ -55,6 +55,10 @@ class TestDAWG(object):
             data = [b'foo\x00bar', b'bar']
             dawg.DAWG(data)
 
+    def test_contains_with_null_bytes(self):
+        d = dawg.DAWG(['foo'])
+        assert b'foo' in d
+        assert b'foo\x00bar' not in d
 
 
 

@@ -71,7 +71,7 @@ cdef class DAWG:
         return self.b_has_key(b_key)
 
     cpdef bint b_has_key(self, bytes key) except -1:
-        return self.dct.Contains(key)
+        return self.dct.Contains(key, len(key))
 
     cpdef bytes tobytes(self):
         """
