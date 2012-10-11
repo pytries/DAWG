@@ -1,4 +1,14 @@
 
+0.5.1 (2012-10-11)
+------------------
+
+- better error reporting while building DAWGs;
+- ``__contains__`` is fixed for keys with zero bytes;
+- ``dawg.Error`` exception class;
+- building of ``BytesDAWG`` and ``RecordDAWG`` fails instead of
+  producing incorrect results if some of the keys has unsupported characters.
+
+
 0.5 (2012-10-08)
 ----------------
 
