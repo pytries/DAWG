@@ -47,11 +47,13 @@ PREFIXES_8_1k = prefixes1k(WORDS100k, 8)
 PREFIXES_15_1k = prefixes1k(WORDS100k, 15)
 
 
-def format_result(key, value):
-    print("%55s:    %s" % (key, value))
+def format_result(key, value, text_width):
+    key = key.ljust(text_width)
+    print("    %s %s" % (key, value))
 
 
-def bench(name, timer, descr='M ops/sec', op_count=0.1, repeats=3, runs=5):
+def bench(name, timer, descr='M ops/sec', op_count=0.1, repeats=3, runs=5,
+          text_width=33):
     try:
         times = []
         for x in range(runs):
@@ -61,9 +63,9 @@ def bench(name, timer, descr='M ops/sec', op_count=0.1, repeats=3, runs=5):
             return op_count*repeats / time
 
         val = "%0.3f%s" % (op_time(min(times)), descr)
-        format_result(name, val)
+        format_result(name, val, text_width)
     except (AttributeError, TypeError) as e:
-        format_result(name, "not supported")
+        format_result(name, "not supported", text_width)
 
 def create_dawg():
     words = words100k()
@@ -123,8 +125,7 @@ NON_WORDS_1k = ['ыва', 'xyz', 'соы', 'Axx', 'avы']*200
         for name, setup in structures:
             timer = timeit.Timer(test, setup)
             full_test_name = "%s %s" % (name, test_name)
-            bench(full_test_name, timer, descr, op_count, repeats)
-
+            bench(full_test_name, timer, descr, op_count, repeats, 9)
 
     # DAWG-specific benchmarks
     for struct_name, setup in structures[1:]:
@@ -145,7 +146,7 @@ NON_WORDS_1k = ['ыва', 'xyz', 'соы', 'Axx', 'avы']*200
                         "   data.%s(word)" % (data, meth),
                         setup
                     ),
-                    runs=3
+                    runs=3,
                 )
 
         for meth in ['iterprefixes']:
@@ -157,7 +158,7 @@ NON_WORDS_1k = ['ыва', 'xyz', 'соы', 'Axx', 'avы']*200
                         "   list(data.%s(word))" % (data, meth),
                         setup
                     ),
-                    runs=3
+                    runs=3,
                 )
 
         # keys with a given prefix
@@ -178,7 +179,8 @@ NON_WORDS_1k = ['ыва', 'xyz', 'соы', 'Axx', 'avы']*200
                     ),
                     'K ops/sec',
                     op_count=1,
-                    runs=3
+                    runs=3,
+                    text_width=60,
                 )
             for meth in ['iterkeys', 'iteritems']:
                 bench(
@@ -189,7 +191,8 @@ NON_WORDS_1k = ['ыва', 'xyz', 'соы', 'Axx', 'avы']*200
                     ),
                     'K ops/sec',
                     op_count=1,
-                    runs=3
+                    runs=3,
+                    text_width=60,
                 )
 
 

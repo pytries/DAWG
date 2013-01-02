@@ -6,8 +6,7 @@ read-only objects for Python (2.x and 3.x).
 
 String data in a DAWG (Directed Acyclic Word Graph) may take
 200x less memory than in a standard Python dict or list and
-the raw lookup speed is comparable. DAWG may be even faster than
-built-in dict for some operations. It also provides fast
+the raw lookup speed is comparable; it also provides fast
 advanced methods like prefix search.
 
 Based on `dawgdic`_ C++ library.
@@ -296,59 +295,71 @@ with different data structures (under Python 2.7):
     ``dawg.CompletionDAWG`` and ``marisa_trie.Trie`` because they don't
     support this.
 
+.. note::
+
+    `marisa-trie`_ is often more more memory efficient than
+    DAWG (depending on data); it can also handle larger datasets
+    and provides memory-mapped IO, so don't dismiss `marisa-trie`_
+    based on this README file. It is still several times slower than
+    DAWG though.
+
+.. _marisa-trie: https://github.com/kmike/marisa-trie
+
 Benchmark results (100k unicode words, integer values (lenghts of the words),
 Python 3.2, macbook air i5 1.8 Ghz)::
 
-    dict __getitem__ (hits):        4.102M ops/sec
-    DAWG __getitem__ (hits):        not supported
-    BytesDAWG __getitem__ (hits):   1.558M ops/sec
-    RecordDAWG __getitem__ (hits):  0.950M ops/sec
-    IntDAWG __getitem__ (hits):     2.835M ops/sec
-    dict get() (hits):              3.053M ops/sec
-    DAWG get() (hits):              not supported
-    BytesDAWG get() (hits):         1.340M ops/sec
-    RecordDAWG get() (hits):        0.882M ops/sec
-    IntDAWG get() (hits):           2.370M ops/sec
-    dict get() (misses):            3.250M ops/sec
-    DAWG get() (misses):            not supported
-    BytesDAWG get() (misses):       2.483M ops/sec
-    RecordDAWG get() (misses):      2.249M ops/sec
-    IntDAWG get() (misses):         2.806M ops/sec
+    dict __getitem__ (hits)           8.427M ops/sec
+    DAWG __getitem__ (hits)           not supported
+    BytesDAWG __getitem__ (hits)      1.897M ops/sec
+    RecordDAWG __getitem__ (hits)     1.036M ops/sec
+    IntDAWG __getitem__ (hits)        3.990M ops/sec
+    dict get() (hits)                 4.409M ops/sec
+    DAWG get() (hits)                 not supported
+    BytesDAWG get() (hits)            1.566M ops/sec
+    RecordDAWG get() (hits)           0.910M ops/sec
+    IntDAWG get() (hits)              3.070M ops/sec
+    dict get() (misses)               4.998M ops/sec
+    DAWG get() (misses)               not supported
+    BytesDAWG get() (misses)          3.300M ops/sec
+    RecordDAWG get() (misses)         3.194M ops/sec
+    IntDAWG get() (misses)            3.752M ops/sec
 
-    dict __contains__ (hits):           4.068M ops/sec
-    DAWG __contains__ (hits):           3.065M ops/sec
-    BytesDAWG __contains__ (hits):      2.627M ops/sec
-    RecordDAWG __contains__ (hits):     2.613M ops/sec
-    IntDAWG __contains__ (hits):        3.021M ops/sec
+    dict __contains__ (hits)          8.270M ops/sec
+    DAWG __contains__ (hits)          4.419M ops/sec
+    BytesDAWG __contains__ (hits)     3.762M ops/sec
+    RecordDAWG __contains__ (hits)    3.743M ops/sec
+    IntDAWG __contains__ (hits)       4.374M ops/sec
 
-    dict __contains__ (misses):         3.471M ops/sec
-    DAWG __contains__ (misses):         3.537M ops/sec
-    BytesDAWG __contains__ (misses):    3.381M ops/sec
-    RecordDAWG __contains__ (misses):   3.361M ops/sec
-    IntDAWG __contains__ (misses):      3.540M ops/sec
+    dict __contains__ (misses)        6.596M ops/sec
+    DAWG __contains__ (misses)        5.530M ops/sec
+    BytesDAWG __contains__ (misses)   5.411M ops/sec
+    RecordDAWG __contains__ (misses)  5.418M ops/sec
+    IntDAWG __contains__ (misses)     5.563M ops/sec
 
-    dict items():       58.754 ops/sec
-    DAWG items():       not supported
-    BytesDAWG items():  15.914 ops/sec
-    RecordDAWG items(): 10.699 ops/sec
-    IntDAWG items():    not supported
+    dict items()                      56.471 ops/sec
+    DAWG items()                      not supported
+    BytesDAWG items()                 16.129 ops/sec
+    RecordDAWG items()                10.370 ops/sec
+    IntDAWG items()                   not supported
 
-    dict keys():        214.499 ops/sec
-    DAWG keys():        not supported
-    BytesDAWG keys():   23.929 ops/sec
-    RecordDAWG keys():  23.726 ops/sec
-    IntDAWG keys():     not supported
+    dict keys()                       207.690 ops/sec
+    DAWG keys()                       not supported
+    BytesDAWG keys()                  23.898 ops/sec
+    RecordDAWG keys()                 23.504 ops/sec
+    IntDAWG keys()                    not supported
 
-    DAWG.prefixes (hits):    0.244M ops/sec
-    DAWG.prefixes (mixed):   1.414M ops/sec
-    DAWG.prefixes (misses):  2.156M ops/sec
+    DAWG.prefixes (hits)              0.242M ops/sec
+    DAWG.prefixes (mixed)             1.627M ops/sec
+    DAWG.prefixes (misses)            2.890M ops/sec
+    DAWG.iterprefixes (hits)          0.159M ops/sec
+    DAWG.iterprefixes (mixed)         0.457M ops/sec
+    DAWG.iterprefixes (misses)        0.523M ops/sec
 
-    RecordDAWG.keys(prefix="xxx"), avg_len(res)==415:       6.057K ops/sec
-    RecordDAWG.keys(prefix="xxxxx"), avg_len(res)==17:      130.680K ops/sec
-    RecordDAWG.keys(prefix="xxxxxxxx"), avg_len(res)==3:    507.355K ops/sec
-    RecordDAWG.keys(prefix="xxxxx..xx"), avg_len(res)==1.4: 745.566K ops/sec
-    RecordDAWG.keys(prefix="xxx"), NON_EXISTING:            3032.758K ops/sec
-
+    RecordDAWG.keys(prefix="xxx"), avg_len(res)==415        5.826K ops/sec
+    RecordDAWG.keys(prefix="xxxxx"), avg_len(res)==17       128.452K ops/sec
+    RecordDAWG.keys(prefix="xxxxxxxx"), avg_len(res)==3     535.808K ops/sec
+    RecordDAWG.keys(prefix="xxxxx..xx"), avg_len(res)==1.4  832.864K ops/sec
+    RecordDAWG.keys(prefix="xxx"), NON_EXISTING             4038.162K ops/sec
 
 Please take this benchmark results with a grain of salt; this
 is a very simple benchmark on a single data set.
@@ -367,7 +378,12 @@ Current limitations
 * there are ``keys()`` and ``items()`` methods but no ``values()`` method;
 * iterator versions of methods are not always implemented;
 * ``BytesDAWG`` and ``RecordDAWG`` has a limitation: values
-  larger than 8KB are unsupported.
+  larger than 8KB are unsupported;
+* the maximum number of DAWG units is limited: number of DAWG units
+  (and thus transitions - but not elements) should be less than 2^29;
+  this mean that it may be impossible to build an especially huge DAWG
+  (you may split your data into several DAWGs or try `marisa-trie`_ in
+  this case).
 
 Contributions are welcome!
 
