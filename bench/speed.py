@@ -38,6 +38,12 @@ def prefixes1k(words, prefix_len):
     _words = [w[:prefix_len] for w in words[::every_nth]]
     return _words[:1000]
 
+def leet_words(words, replaces):
+    for key, value in replaces.items():
+        words = [w.replace(key, value) for w in words]
+    return words
+
+
 WORDS100k = words100k()
 MIXED_WORDS100k = truncated_words(WORDS100k)
 NON_WORDS100k = random_words(100000)
@@ -46,6 +52,20 @@ PREFIXES_5_1k = prefixes1k(WORDS100k, 5)
 PREFIXES_8_1k = prefixes1k(WORDS100k, 8)
 PREFIXES_15_1k = prefixes1k(WORDS100k, 15)
 
+LEET_REPLACES = {
+    'o': '0',
+    'O': '0',
+    'u': '0',
+    'l': '1',
+    'i': '1',
+    'e': '3',
+    'E': '3',
+    'A': '4',
+    'a': '4',
+    'h': '4',
+    's': 'z',
+}
+LEET_50k = leet_words(WORDS100k[:50000], LEET_REPLACES)
 
 def format_result(key, value, text_width):
     key = key.ljust(text_width)
@@ -86,6 +106,9 @@ def create_int_dawg():
     values = [len(word) for word in words]
     return dawg.IntDAWG(zip(words, values))
 
+def create_leet_dawg():
+    return dawg.DAWG(LEET_50k)
+
 
 def benchmark():
     print('\n====== Benchmarks (100k unique unicode words) =======\n')
@@ -102,17 +125,19 @@ def benchmark():
     ]
 
     common_setup = """
-from __main__ import create_dawg, create_bytes_dawg, create_record_dawg, create_int_dawg
+from __main__ import create_dawg, create_bytes_dawg, create_record_dawg, create_int_dawg, create_leet_dawg
 from __main__ import WORDS100k, NON_WORDS100k, MIXED_WORDS100k
 from __main__ import PREFIXES_3_1k, PREFIXES_5_1k, PREFIXES_8_1k, PREFIXES_15_1k
+from __main__ import LEET_50k, LEET_REPLACES
 NON_WORDS_10k = NON_WORDS100k[:10000]
 NON_WORDS_1k = ['ыва', 'xyz', 'соы', 'Axx', 'avы']*200
 """
     dict_setup = common_setup + 'data = dict((word, len(word)) for word in WORDS100k);'
-    dawg_setup = common_setup + 'data = create_dawg();'
+    dawg_setup = common_setup + 'data = create_dawg(); repl = data.compile_replaces(LEET_REPLACES);'
     bytes_dawg_setup = common_setup + 'data = create_bytes_dawg();'
     record_dawg_setup = common_setup + 'data = create_record_dawg();'
     int_dawg_setup = common_setup + 'data = create_int_dawg();'
+    leet_dawg_setup = common_setup + 'data = create_leet_dawg(); repl = data.compile_replaces(LEET_REPLACES);'
 
     structures = [
         ('dict', dict_setup),
@@ -128,6 +153,25 @@ NON_WORDS_1k = ['ыва', 'xyz', 'соы', 'Axx', 'avы']*200
             bench(full_test_name, timer, descr, op_count, repeats, 9)
 
     # DAWG-specific benchmarks
+
+    # benchmark for similar_keys
+    bench(
+        "DAWG.similar_keys  (no replaces)",
+        timeit.Timer(
+            "for word in WORDS100k[:50000]: data.similar_keys(word, repl)",
+            setup=dawg_setup,
+        ),
+        op_count=0.05
+    )
+    bench(
+        "DAWG.similar_keys  (l33t)",
+        timeit.Timer(
+            "for word in WORDS100k[:50000]: data.similar_keys(word, repl)",
+            setup=leet_dawg_setup,
+        ),
+        op_count=0.05
+    )
+
     for struct_name, setup in structures[1:]:
 
         # prefixes of a given key
