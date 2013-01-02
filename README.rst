@@ -336,6 +336,9 @@ Python 3.2, macbook air i5 1.8 Ghz)::
     RecordDAWG __contains__ (misses)  5.418M ops/sec
     IntDAWG __contains__ (misses)     5.563M ops/sec
 
+    DAWG.similar_keys  (no replaces)  0.595M ops/sec
+    DAWG.similar_keys  (l33t)         0.496M ops/sec
+
     dict items()                      56.471 ops/sec
     DAWG items()                      not supported
     BytesDAWG items()                 16.129 ops/sec
@@ -348,12 +351,12 @@ Python 3.2, macbook air i5 1.8 Ghz)::
     RecordDAWG keys()                 23.504 ops/sec
     IntDAWG keys()                    not supported
 
-    DAWG.prefixes (hits)              0.242M ops/sec
-    DAWG.prefixes (mixed)             1.627M ops/sec
-    DAWG.prefixes (misses)            2.890M ops/sec
-    DAWG.iterprefixes (hits)          0.159M ops/sec
-    DAWG.iterprefixes (mixed)         0.457M ops/sec
-    DAWG.iterprefixes (misses)        0.523M ops/sec
+    DAWG.prefixes (hits)              1.574M ops/sec
+    DAWG.prefixes (mixed)             4.238M ops/sec
+    DAWG.prefixes (misses)            3.833M ops/sec
+    DAWG.iterprefixes (hits)          0.485M ops/sec
+    DAWG.iterprefixes (mixed)         0.625M ops/sec
+    DAWG.iterprefixes (misses)        0.612M ops/sec
 
     RecordDAWG.keys(prefix="xxx"), avg_len(res)==415        5.826K ops/sec
     RecordDAWG.keys(prefix="xxxxx"), avg_len(res)==17       128.452K ops/sec

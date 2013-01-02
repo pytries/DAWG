@@ -1,3 +1,12 @@
+0.5.3 (2013-01-03)
+------------------
+
+- small improvements to ``.compile_replaces`` method;
+- benchmarks for ``.similar_items`` method;
+- the extension is rebuilt with Cython pre-0.18; this made
+  ``.prefixes`` and ``.iterprefixes`` methods faster
+  (up to 6x in some cases).
+
 0.5.2 (2013-01-02)
 ------------------
 
