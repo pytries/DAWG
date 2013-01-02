@@ -1,3 +1,11 @@
+0.5.2 (2013-01-02)
+------------------
+
+- tests are included in source distribution;
+- benchmark results in README was nonrepresentative because of my
+  broken (slow) Python 3.2 install;
+- installation is fixed under Python 3.x with ``LC_ALL=C`` (thanks
+  Jakub Wilk).
 
 0.5.1 (2012-10-11)
 ------------------

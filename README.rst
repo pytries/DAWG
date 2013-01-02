@@ -445,7 +445,8 @@ Authors & Contributors
 ----------------------
 
 * Mikhail Korobov <kmike84@gmail.com>;
-* Dan Blanchard.
+* Dan Blanchard;
+* Jakub Wilk.
 
 This module is based on `dawgdic`_ C++ library by
 Susumu Yata & contributors.
