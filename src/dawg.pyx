@@ -250,7 +250,7 @@ cdef class DAWG:
             pos += 1
 
     @classmethod
-    def compile_replaces(cls, dict replaces):
+    def compile_replaces(cls, replaces):
 
         for k,v in replaces.items():
             if len(k) != 1 or len(v) != 1:
@@ -259,7 +259,7 @@ cdef class DAWG:
         return dict(
             (
                 k.encode('utf8'),
-                (v.encode('utf8'), v)
+                (v.encode('utf8'), unicode(v))
             )
             for k, v in replaces.items()
         )
@@ -527,7 +527,7 @@ cdef class BytesDAWG(CompletionDAWG):
 
     cpdef list items(self, unicode prefix=""):
         cdef bytes b_prefix = prefix.encode('utf8')
-        cdef bytes value, b_value
+        cdef bytes value
         cdef unicode u_key
         cdef int i
         cdef list res = []
@@ -567,7 +567,7 @@ cdef class BytesDAWG(CompletionDAWG):
 
     def iteritems(self, unicode prefix=""):
         cdef bytes b_prefix = prefix.encode('utf8')
-        cdef bytes value, b_value
+        cdef bytes value
         cdef unicode u_key
         cdef int i
         cdef char* raw_key
