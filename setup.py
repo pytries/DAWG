@@ -16,7 +16,7 @@ setup(
     name="DAWG",
     version="0.5.3",
     description="Fast and memory efficient DAWG for Python",
-    long_description = read_utf8_file('README.rst') + read_utf8_file('CHANGES.rst'),
+    long_description = read_utf8_file('README.rst') +'\n' + read_utf8_file('CHANGES.rst'),
     author='Mikhail Korobov',
     author_email='kmike84@gmail.com',
     url='https://github.com/kmike/DAWG/',
