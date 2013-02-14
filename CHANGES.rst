@@ -1,3 +1,9 @@
+0.5.4 (2013-02-14)
+------------------
+
+- small tweaks for docstrings;
+- the extension is rebuilt using Cython 0.18.
+
 0.5.3 (2013-01-03)
 ------------------
 
