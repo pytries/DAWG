@@ -75,7 +75,7 @@ cdef class DAWG:
 
     cpdef bytes tobytes(self):
         """
-        Returns raw DAWG content as bytes.
+        Return raw DAWG content as bytes.
         """
         cdef stringstream stream
         self.dct.Write(<ostream *> &stream)
@@ -84,7 +84,7 @@ cdef class DAWG:
 
     cpdef frombytes(self, bytes data):
         """
-        Loads DAWG from bytes ``data``.
+        Load DAWG from bytes ``data``.
 
         FIXME: it seems there is a memory leak here (DAWG uses 3x memory
         when loaded using ``.frombytes`` compared to DAWG loaded
@@ -106,7 +106,7 @@ cdef class DAWG:
 
     def read(self, f):
         """
-        Loads DAWG from a file-like object.
+        Load DAWG from a file-like object.
 
         FIXME: this method should'n read the whole stream.
         """
@@ -114,13 +114,13 @@ cdef class DAWG:
 
     def write(self, f):
         """
-        Writes DAWG to a file-like object.
+        Write DAWG to a file-like object.
         """
         f.write(self.tobytes())
 
     def load(self, path):
         """
-        Loads DAWG from a file.
+        Load DAWG from a file.
         """
         if isinstance(path, unicode):
             path = path.encode(sys.getfilesystemencoding())
@@ -138,10 +138,9 @@ cdef class DAWG:
 
         return self
 
-
     def save(self, path):
         """
-        Saves DAWG to a file.
+        Save DAWG to a file.
         """
         with open(path, 'wb') as f:
             self.write(f)
@@ -202,7 +201,7 @@ cdef class DAWG:
 
     cpdef list similar_keys(self, unicode key, dict replaces):
         """
-        Returns all variants of ``key`` in this DAWG according to
+        Return all variants of ``key`` in this DAWG according to
         ``replaces``.
 
         ``replaces`` is an object obtained from
@@ -216,7 +215,7 @@ cdef class DAWG:
 
     cpdef list prefixes(self, unicode key):
         '''
-        Returns a list with keys of this DAWG that are prefixes of the ``key``.
+        Return a list with keys of this DAWG that are prefixes of the ``key``.
         '''
         cdef list res = []
         cdef BaseType index = self.dct.root()
@@ -235,7 +234,7 @@ cdef class DAWG:
 
     def iterprefixes(self, unicode key):
         '''
-        Returns a generator with keys of this DAWG that are prefixes of the ``key``.
+        Return a generator with keys of this DAWG that are prefixes of the ``key``.
         '''
         cdef BaseType index = self.dct.root()
         cdef bytes b_key = key.encode('utf8')
@@ -317,7 +316,7 @@ cdef class CompletionDAWG(DAWG):
 
     cpdef bytes tobytes(self) except +:
         """
-        Returns raw DAWG content as bytes.
+        Return raw DAWG content as bytes.
         """
         cdef stringstream stream
         self.dct.Write(<ostream *> &stream)
@@ -327,7 +326,7 @@ cdef class CompletionDAWG(DAWG):
 
     cpdef frombytes(self, bytes data):
         """
-        Loads DAWG from bytes ``data``.
+        Load DAWG from bytes ``data``.
 
         FIXME: it seems there is memory leak here (DAWG uses 3x memory when
         loaded using frombytes vs load).
@@ -357,7 +356,7 @@ cdef class CompletionDAWG(DAWG):
 
     def load(self, path):
         """
-        Loads DAWG from a file.
+        Load DAWG from a file.
         """
         if isinstance(path, unicode):
             path = path.encode(sys.getfilesystemencoding())
@@ -474,7 +473,7 @@ cdef class BytesDAWG(CompletionDAWG):
 
     cpdef get(self, key, default=None):
         """
-        Returns a list of payloads (as byte objects) for a given key
+        Return a list of payloads (as byte objects) for a given key
         or ``default`` if the key is not found.
         """
         cdef list res
@@ -685,7 +684,7 @@ cdef class BytesDAWG(CompletionDAWG):
 
     cpdef list similar_items(self, unicode key, dict replaces):
         """
-        Returns a list of (key, value) tuples for all variants of ``key``
+        Return a list of (key, value) tuples for all variants of ``key``
         in this DAWG according to ``replaces``.
 
         ``replaces`` is an object obtained from
@@ -730,7 +729,7 @@ cdef class BytesDAWG(CompletionDAWG):
 
     cpdef list similar_item_values(self, unicode key, dict replaces):
         """
-        Returns a list of values for all variants of the ``key``
+        Return a list of values for all variants of the ``key``
         in this DAWG according to ``replaces``.
 
         ``replaces`` is an object obtained from
@@ -833,8 +832,7 @@ cdef class IntDAWG(DAWG):
 
     cpdef get(self, key, default=None):
         """
-        Returns a list of payloads (as byte objects) for a given key
-        or ``default`` if the key is not found.
+        Return value for the given key or ``default`` if the key is not found.
         """
         cdef int res
 
