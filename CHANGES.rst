@@ -1,3 +1,10 @@
+
+0.5.5 (2013-02-19)
+------------------
+
+- fix installation under PyPy (note: DAWG is slow under PyPy
+  and may have bugs).
+
 0.5.4 (2013-02-14)
 ------------------
 
