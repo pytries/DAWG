@@ -1,7 +1,6 @@
-# cython: profile=True
+# cython: profile=False
 from __future__ import unicode_literals
 from libcpp.string cimport string
-from cpython.sequence cimport PySequence_InPlaceConcat
 
 from iostream cimport stringstream, istream, ostream, ifstream
 cimport iostream
@@ -186,7 +185,7 @@ cdef class DAWG:
                 if self.dct.Follow(b_replace_char, &next_index):
                     prefix = current_prefix + key[start_pos:word_pos] + u_replace_char
                     extra_keys = self._similar_keys(prefix, key, next_index, replace_chars)
-                    PySequence_InPlaceConcat(res, extra_keys)
+                    res += extra_keys
 
             if not self.dct.Follow(b_step, &index):
                 break
@@ -668,7 +667,7 @@ cdef class BytesDAWG(CompletionDAWG):
                 if self.dct.Follow(b_replace_char, &next_index):
                     prefix = current_prefix + key[start_pos:word_pos] + u_replace_char
                     extra_items = self._similar_items(prefix, key, next_index, replace_chars)
-                    PySequence_InPlaceConcat(res, extra_items)
+                    res += extra_items
 
             if not self.dct.Follow(b_step, &index):
                 break
@@ -714,7 +713,7 @@ cdef class BytesDAWG(CompletionDAWG):
 
                 if self.dct.Follow(b_replace_char, &next_index):
                     extra_items = self._similar_item_values(word_pos+1, key, next_index, replace_chars)
-                    PySequence_InPlaceConcat(res, extra_items)
+                    res += extra_items
 
             if not self.dct.Follow(b_step, &index):
                 break
