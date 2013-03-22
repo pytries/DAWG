@@ -12,6 +12,7 @@ it also provides fast advanced methods like prefix search.
 Based on `dawgdic`_ C++ library.
 
 .. _dawgdic: https://code.google.com/p/dawgdic/
+.. _libb64: http://libb64.sourceforge.net/
 .. _DAFSA: https://en.wikipedia.org/wiki/Deterministic_acyclic_finite_state_automaton
 
 License
