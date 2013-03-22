@@ -306,63 +306,64 @@ with different data structures (under Python 2.7):
 .. _marisa-trie: https://github.com/kmike/marisa-trie
 
 Benchmark results (100k unicode words, integer values (lenghts of the words),
-Python 3.2, macbook air i5 1.8 Ghz)::
+Python 3.3, macbook air i5 1.8 Ghz)::
 
-    dict __getitem__ (hits)           8.427M ops/sec
+    dict __getitem__ (hits)           7.300M ops/sec
     DAWG __getitem__ (hits)           not supported
-    BytesDAWG __getitem__ (hits)      1.897M ops/sec
-    RecordDAWG __getitem__ (hits)     1.036M ops/sec
-    IntDAWG __getitem__ (hits)        3.990M ops/sec
-    dict get() (hits)                 4.409M ops/sec
+    BytesDAWG __getitem__ (hits)      1.230M ops/sec
+    RecordDAWG __getitem__ (hits)     0.792M ops/sec
+    IntDAWG __getitem__ (hits)        4.217M ops/sec
+    dict get() (hits)                 3.775M ops/sec
     DAWG get() (hits)                 not supported
-    BytesDAWG get() (hits)            1.566M ops/sec
-    RecordDAWG get() (hits)           0.910M ops/sec
-    IntDAWG get() (hits)              3.070M ops/sec
-    dict get() (misses)               4.998M ops/sec
+    BytesDAWG get() (hits)            1.027M ops/sec
+    RecordDAWG get() (hits)           0.733M ops/sec
+    IntDAWG get() (hits)              3.162M ops/sec
+    dict get() (misses)               4.533M ops/sec
     DAWG get() (misses)               not supported
-    BytesDAWG get() (misses)          3.300M ops/sec
-    RecordDAWG get() (misses)         3.194M ops/sec
-    IntDAWG get() (misses)            3.752M ops/sec
+    BytesDAWG get() (misses)          3.545M ops/sec
+    RecordDAWG get() (misses)         3.485M ops/sec
+    IntDAWG get() (misses)            3.928M ops/sec
 
-    dict __contains__ (hits)          8.270M ops/sec
-    DAWG __contains__ (hits)          4.419M ops/sec
-    BytesDAWG __contains__ (hits)     3.762M ops/sec
-    RecordDAWG __contains__ (hits)    3.743M ops/sec
-    IntDAWG __contains__ (hits)       4.374M ops/sec
+    dict __contains__ (hits)          7.090M ops/sec
+    DAWG __contains__ (hits)          4.685M ops/sec
+    BytesDAWG __contains__ (hits)     3.885M ops/sec
+    RecordDAWG __contains__ (hits)    3.898M ops/sec
+    IntDAWG __contains__ (hits)       4.612M ops/sec
 
-    dict __contains__ (misses)        6.596M ops/sec
-    DAWG __contains__ (misses)        5.530M ops/sec
-    BytesDAWG __contains__ (misses)   5.411M ops/sec
-    RecordDAWG __contains__ (misses)  5.418M ops/sec
-    IntDAWG __contains__ (misses)     5.563M ops/sec
+    dict __contains__ (misses)        5.617M ops/sec
+    DAWG __contains__ (misses)        6.204M ops/sec
+    BytesDAWG __contains__ (misses)   6.026M ops/sec
+    RecordDAWG __contains__ (misses)  6.007M ops/sec
+    IntDAWG __contains__ (misses)     6.180M ops/sec
 
-    DAWG.similar_keys  (no replaces)  0.595M ops/sec
-    DAWG.similar_keys  (l33t)         0.496M ops/sec
+    DAWG.similar_keys  (no replaces)  0.492M ops/sec
+    DAWG.similar_keys  (l33t)         0.413M ops/sec
 
-    dict items()                      56.471 ops/sec
+    dict items()                      55.032 ops/sec
     DAWG items()                      not supported
-    BytesDAWG items()                 16.129 ops/sec
-    RecordDAWG items()                10.370 ops/sec
+    BytesDAWG items()                 14.826 ops/sec
+    RecordDAWG items()                9.436 ops/sec
     IntDAWG items()                   not supported
 
-    dict keys()                       207.690 ops/sec
+    dict keys()                       200.788 ops/sec
     DAWG keys()                       not supported
-    BytesDAWG keys()                  23.898 ops/sec
-    RecordDAWG keys()                 23.504 ops/sec
+    BytesDAWG keys()                  20.657 ops/sec
+    RecordDAWG keys()                 20.873 ops/sec
     IntDAWG keys()                    not supported
 
-    DAWG.prefixes (hits)              1.574M ops/sec
-    DAWG.prefixes (mixed)             4.238M ops/sec
-    DAWG.prefixes (misses)            3.833M ops/sec
-    DAWG.iterprefixes (hits)          0.485M ops/sec
-    DAWG.iterprefixes (mixed)         0.625M ops/sec
-    DAWG.iterprefixes (misses)        0.612M ops/sec
+    DAWG.prefixes (hits)              1.552M ops/sec
+    DAWG.prefixes (mixed)             4.342M ops/sec
+    DAWG.prefixes (misses)            4.094M ops/sec
+    DAWG.iterprefixes (hits)          0.391M ops/sec
+    DAWG.iterprefixes (mixed)         0.476M ops/sec
+    DAWG.iterprefixes (misses)        0.498M ops/sec
 
-    RecordDAWG.keys(prefix="xxx"), avg_len(res)==415        5.826K ops/sec
-    RecordDAWG.keys(prefix="xxxxx"), avg_len(res)==17       128.452K ops/sec
-    RecordDAWG.keys(prefix="xxxxxxxx"), avg_len(res)==3     535.808K ops/sec
-    RecordDAWG.keys(prefix="xxxxx..xx"), avg_len(res)==1.4  832.864K ops/sec
-    RecordDAWG.keys(prefix="xxx"), NON_EXISTING             4038.162K ops/sec
+    RecordDAWG.keys(prefix="xxx"), avg_len(res)==415             5.562K ops/sec
+    RecordDAWG.keys(prefix="xxxxx"), avg_len(res)==17            104.011K ops/sec
+    RecordDAWG.keys(prefix="xxxxxxxx"), avg_len(res)==3          318.129K ops/sec
+    RecordDAWG.keys(prefix="xxxxx..xx"), avg_len(res)==1.4       462.238K ops/sec
+    RecordDAWG.keys(prefix="xxx"), NON_EXISTING                  4292.625K ops/sec
+
 
 Please take this benchmark results with a grain of salt; this
 is a very simple benchmark on a single data set.
@@ -451,10 +452,11 @@ Authors & Contributors
 * Dan Blanchard;
 * Jakub Wilk.
 
-This module is based on `dawgdic`_ C++ library by
+This module uses `dawgdic`_ C++ library by
 Susumu Yata & contributors.
 
-base64 decoder is based on libb64_ by Chris Venter.
+base64 decoder is a modified version of libb64_ (original author
+is Chris Venter).
 
 .. _libb64: http://libb64.sourceforge.net/
 
@@ -463,4 +465,4 @@ License
 
 Wrapper code is licensed under MIT License.
 Bundled `dawgdic`_ C++ library is licensed under BSD license.
-libb64_ is Public Domain.
+Bundled libb64_ is Public Domain.
