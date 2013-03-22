@@ -417,7 +417,7 @@ cdef class CompletionDAWG(DAWG):
 # such control character is very unlikely in text keys, and binary keys
 # are not supported anyway because dawgdic doesn't support keys containing
 # chr(0).
-DEF PAYLOAD_SEPARATOR = b'\x01'
+cdef bytes PAYLOAD_SEPARATOR = b'\x01'
 
 DEF MAX_VALUE_SIZE = 32768
 
