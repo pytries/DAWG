@@ -66,8 +66,7 @@ cdef class DAWG:
         return self.b_has_key(key)
 
     cpdef bint has_key(self, unicode key) except -1:
-        cdef bytes b_key = key.encode('utf8')
-        return self.b_has_key(b_key)
+        return self.b_has_key(key.encode('utf8'))
 
     cpdef bint b_has_key(self, bytes key) except -1:
         return self.dct.Contains(key, len(key))
@@ -284,7 +283,6 @@ cdef class CompletionDAWG(DAWG):
 
     cpdef list keys(self, unicode prefix=""):
         cdef bytes b_prefix = prefix.encode('utf8')
-        cdef unicode key
         cdef BaseType index = self.dct.root()
         cdef list res = []
 
@@ -303,7 +301,6 @@ cdef class CompletionDAWG(DAWG):
 
     def iterkeys(self, unicode prefix=""):
         cdef bytes b_prefix = prefix.encode('utf8')
-        cdef unicode key
         cdef BaseType index = self.dct.root()
 
         if not self.dct.Follow(b_prefix, &index):
@@ -485,7 +482,7 @@ cdef class BytesDAWG(CompletionDAWG):
         return self._follow_key(key, &index)
 
     def __getitem__(self, key):
-        cdef list res = self.get(key)
+        res = self.get(key)
         if res is None:
             raise KeyError(key)
         return res
@@ -495,8 +492,6 @@ cdef class BytesDAWG(CompletionDAWG):
         Return a list of payloads (as byte objects) for a given key
         or ``default`` if the key is not found.
         """
-        cdef list res
-
         if isinstance(key, unicode):
             res = self.get_value(key)
         else:
@@ -513,8 +508,7 @@ cdef class BytesDAWG(CompletionDAWG):
         return self.dct.Follow(self._c_payload_separator, index)
 
     cpdef list get_value(self, unicode key):
-        cdef bytes b_key = key.encode('utf8')
-        return self.b_get_value(b_key)
+        return self.b_get_value(key.encode('utf8'))
 
     cdef list _value_for_index(self, BaseType index):
 
@@ -553,7 +547,6 @@ cdef class BytesDAWG(CompletionDAWG):
     cpdef list items(self, unicode prefix=""):
         cdef bytes b_prefix = prefix.encode('utf8')
         cdef bytes value
-        cdef unicode u_key
         cdef int i
         cdef list res = []
         cdef char* raw_key
@@ -596,7 +589,6 @@ cdef class BytesDAWG(CompletionDAWG):
     def iteritems(self, unicode prefix=""):
         cdef bytes b_prefix = prefix.encode('utf8')
         cdef bytes value
-        cdef unicode u_key
         cdef int i
         cdef char* raw_key
         cdef char* raw_value
@@ -633,7 +625,6 @@ cdef class BytesDAWG(CompletionDAWG):
 
     cpdef list keys(self, unicode prefix=""):
         cdef bytes b_prefix = prefix.encode('utf8')
-        cdef unicode u_key
         cdef int i
         cdef list res = []
         cdef char* raw_key
@@ -659,7 +650,6 @@ cdef class BytesDAWG(CompletionDAWG):
 
     def iterkeys(self, unicode prefix=""):
         cdef bytes b_prefix = prefix.encode('utf8')
-        cdef unicode u_key
         cdef int i
         cdef char* raw_key
 
