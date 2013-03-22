@@ -19,6 +19,9 @@ Source code:
 
 Issue tracker: https://github.com/kmike/DAWG/issues
 
+.. image:: https://travis-ci.org/kmike/DAWG.png?branch=master
+    :target: https://travis-ci.org/kmike/DAWG
+
 License
 =======
 

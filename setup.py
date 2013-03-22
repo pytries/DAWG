@@ -3,20 +3,11 @@ import glob
 from distutils.core import setup
 from distutils.extension import Extension
 
-
-def read_utf8_file(path):
-    try:
-        fp = open(path, encoding='utf8')
-    except TypeError:
-        fp = open(path)
-    with fp:
-        return fp.read()
-
 setup(
     name="DAWG",
     version="0.6",
     description="Fast and memory efficient DAWG for Python",
-    long_description = read_utf8_file('README.rst') +'\n\n' + read_utf8_file('CHANGES.rst'),
+    long_description = open('README.rst').read() +'\n\n' + open('CHANGES.rst').read(),
     author='Mikhail Korobov',
     author_email='kmike84@gmail.com',
     url='https://github.com/kmike/DAWG/',
