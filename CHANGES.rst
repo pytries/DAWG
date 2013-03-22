@@ -1,4 +1,9 @@
 
+0.6 (2013-03-22)
+----------------
+
+- many thread-safety bugs are fixed (at the cost of slowing library down).
+
 0.5.5 (2013-02-19)
 ------------------
 

@@ -14,7 +14,7 @@ def read_utf8_file(path):
 
 setup(
     name="DAWG",
-    version="0.5.5",
+    version="0.6",
     description="Fast and memory efficient DAWG for Python",
     long_description = read_utf8_file('README.rst') +'\n' + read_utf8_file('CHANGES.rst'),
     author='Mikhail Korobov',
