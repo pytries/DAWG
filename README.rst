@@ -1,6 +1,9 @@
 DAWG
 ====
 
+.. image:: https://travis-ci.org/kmike/DAWG.png?branch=master
+    :target: https://travis-ci.org/kmike/DAWG
+
 This package provides DAWG(DAFSA_)-based dictionary-like
 read-only objects for Python (2.x and 3.x).
 
@@ -18,9 +21,6 @@ Source code:
 * https://bitbucket.org/kmike/DAWG
 
 Issue tracker: https://github.com/kmike/DAWG/issues
-
-.. image:: https://travis-ci.org/kmike/DAWG.png?branch=master
-    :target: https://travis-ci.org/kmike/DAWG
 
 License
 =======
