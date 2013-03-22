@@ -1,17 +1,17 @@
 DAWG
 ====
 
-This package provides DAWG-based dictionary-like
+This package provides DAWG(DAFSA_)-based dictionary-like
 read-only objects for Python (2.x and 3.x).
 
-String data in a DAWG (Directed Acyclic Word Graph) may take
-200x less memory than in a standard Python dict or list and
-the raw lookup speed is comparable; it also provides fast
-advanced methods like prefix search.
+String data in a DAWG may take 200x less memory than in
+a standard Python dict and the raw lookup speed is comparable;
+it also provides fast advanced methods like prefix search.
 
 Based on `dawgdic`_ C++ library.
 
 .. _dawgdic: https://code.google.com/p/dawgdic/
+.. _DAFSA: https://en.wikipedia.org/wiki/Deterministic_acyclic_finite_state_automaton
 
 Installation
 ============
