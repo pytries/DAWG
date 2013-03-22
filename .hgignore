@@ -17,3 +17,4 @@
 \.orig$
 \.prof$
 \.coverage$
+^docs/_

@@ -1,9 +1,12 @@
 include README.rst
+include AUTHORS.rst
 include CHANGES.rst
 include LICENSE
 include tox.ini
 include update_cpp.sh
 include lib/COPYING
+
+recursive-include docs *.rst *.py Makefile make.bat
 
 recursive-include src *.cpp *.pxd *.pyx
 recursive-include lib *.c *.h
