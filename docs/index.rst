@@ -49,6 +49,9 @@ There are several DAWG classes in this package:
 * ``dawg.IntDAWG`` - ``dawg.DAWG`` subclass that maps unicode keys
   to integer values.
 
+* ``dawg.IntCompletionDAWG`` - ``dawg.CompletionDAWG`` subclass
+  that maps unicode keys to integer values.
+
 DAWG and CompletionDAWG
 -----------------------
 
@@ -223,8 +226,8 @@ ordering of numeric values store them in big-endian format::
     >>> d2.items()
     [(u'foo', (3, 2, 1)), (u'foo', (3, 2, 3)), (u'foo', (3, 2, 256))]
 
-IntDAWG
--------
+IntDAWG and IntCompletionDAWG
+-----------------------------
 
 ``IntDAWG`` is a ``{unicode -> int}`` mapping. It is possible to
 use ``RecordDAWG`` for this, but ``IntDAWG`` is natively
@@ -244,6 +247,8 @@ It is then possible to get a value from the IntDAWG::
     >>> int_dawg[u'foo']
     1
 
+``IntCompletionDAWG`` supports all ``IntDAWG`` and ``CompletionDAWG`` methods,
+plus ``.items()`` and ``.iteritems()``.
 
 Persistence
 -----------

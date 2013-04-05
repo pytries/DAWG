@@ -64,9 +64,11 @@ class TestDAWG(object):
 
 class TestIntDAWG(object):
 
+    IntDAWG = dawg.IntDAWG
+
     def dawg(self):
         payload = {'foo': 1, 'bar': 5, 'foobar': 3}
-        d = dawg.IntDAWG(payload)
+        d = self.IntDAWG(payload)
         return payload, d
 
     def test_getitem(self):
@@ -82,7 +84,7 @@ class TestIntDAWG(object):
         payload, d = self.dawg()
         data = d.tobytes()
 
-        d2 = dawg.IntDAWG()
+        d2 = self.IntDAWG()
         d2.frombytes(data)
         for key, value in payload.items():
             assert key in d2
@@ -92,10 +94,10 @@ class TestIntDAWG(object):
         payload, _ = self.dawg()
 
         buf = BytesIO()
-        dawg.IntDAWG(payload).write(buf)
+        self.IntDAWG(payload).write(buf)
         buf.seek(0)
 
-        d = dawg.IntDAWG()
+        d = self.IntDAWG()
         d.read(buf)
 
         for key, value in payload.items():
@@ -114,14 +116,18 @@ class TestIntDAWG(object):
 
     def test_int_value_ranges(self):
         for val in [0, 5, 2**16-1, 2**31-1]:
-            d = dawg.IntDAWG({'f': val})
+            d = self.IntDAWG({'f': val})
             assert d['f'] == val
 
         with pytest.raises(ValueError):
-            dawg.IntDAWG({'f': -1})
+            self.IntDAWG({'f': -1})
 
         with pytest.raises(OverflowError):
-            dawg.IntDAWG({'f': 2**32-1})
+            self.IntDAWG({'f': 2**32-1})
+
+
+class TestIntCompletionDAWG(TestIntDAWG):
+    IntDAWG = dawg.IntCompletionDAWG  # checks that all tests for IntDAWG pass
 
 
 class TestCompletionDAWG(object):
@@ -129,6 +135,9 @@ class TestCompletionDAWG(object):
 
     def dawg(self):
         return dawg.CompletionDAWG(self.keys)
+
+    def empty_dawg(self):
+        return dawg.CompletionDAWG()
 
     def test_contains(self):
         d = self.dawg()
@@ -165,10 +174,10 @@ class TestCompletionDAWG(object):
 
     def test_completion_dawg_saveload(self):
         buf = BytesIO()
-        dawg.CompletionDAWG(self.keys).write(buf)
+        self.dawg().write(buf)
         buf.seek(0)
 
-        d = dawg.CompletionDAWG()
+        d = self.empty_dawg()
         d.read(buf)
 
         for key in self.keys:
@@ -192,3 +201,32 @@ class TestCompletionDAWG(object):
         d = dawg.CompletionDAWG([])
         assert d.keys() == []
 
+
+class TestIntCompletionDAWGComplete(TestCompletionDAWG):
+    keys = ['f', 'bar', 'foo', 'foobar']
+
+    def dawg(self):
+        return dawg.IntCompletionDAWG((k, len(k)) for k in self.keys)
+
+    def empty_dawg(self):
+        return dawg.IntCompletionDAWG()
+
+    def test_no_segfaults_on_empty_dawg(self):
+        d = dawg.IntCompletionDAWG([])
+        assert d.keys() == []
+
+    def test_items(self):
+        d = self.dawg()
+        items = d.items()
+        assert isinstance(items, list)
+        for key, value in items:
+            assert len(key) == value
+
+    def test_iteritems(self):
+        d = self.dawg()
+        for key, value in d.iteritems():
+            assert len(key) == value
+
+    def test_items_prefix(self):
+        d = self.dawg()
+        assert d.items('fo') == [('foo', 3), ('foobar', 6)]

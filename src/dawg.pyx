@@ -44,21 +44,30 @@ cdef class DAWG:
     def _build_from_iterable(self, iterable):
         cdef DawgBuilder dawg_builder
         cdef bytes b_key
+        cdef int value
 
         for key in iterable:
+            if isinstance(key, tuple) or isinstance(key, list):
+                key, value = key
+                if value < 0:
+                    raise ValueError("Negative values are not supported")
+            else:
+                value = 0
+
             if isinstance(key, unicode):
                 b_key = key.encode('utf8')
             else:
                 b_key = key
 
-            if not dawg_builder.Insert(b_key, len(b_key), 0):
-                raise Error("Can't insert key %r" % b_key)
+            if not dawg_builder.Insert(b_key, len(b_key), value):
+                raise Error("Can't insert key %r (with value %r)" % (b_key, value))
 
         if not dawg_builder.Finish(&self.dawg):
             raise Error("dawg_builder.Finish error")
 
         if not _dictionary_builder.Build(self.dawg, &self.dct):
             raise Error("Can't build dictionary")
+
 
     def __contains__(self, key):
         if isinstance(key, unicode):
@@ -817,6 +826,17 @@ cdef class RecordDAWG(BytesDAWG):
             yield (key, self._struct.unpack(val))
 
 
+def _iterable_from_argument(arg):
+    if arg is None:
+        arg = []
+
+    if isinstance(arg, collections.Mapping):
+        return ((key, arg[key]) for key in arg)
+    else:
+        return arg
+
+DEF LOOKUP_ERROR = -1
+
 cdef class IntDAWG(DAWG):
     """
     Dict-like class based on DAWG.
@@ -827,34 +847,12 @@ cdef class IntDAWG(DAWG):
         ``arg`` must be an iterable of tuples (unicode_key, int_value)
         or a dict {unicode_key: int_value}.
         """
-        if arg is None:
-            arg = []
-
-        if isinstance(arg, collections.Mapping):
-            iterable = ((key, arg[key]) for key in arg)
-        else:
-            iterable = arg
-
+        iterable = _iterable_from_argument(arg)
         super(IntDAWG, self).__init__(iterable, input_is_sorted)
 
-
-    def _build_from_iterable(self, iterable):
-        cdef DawgBuilder dawg_builder
-
-        cdef bytes b_key
-        for key, value in iterable:
-            if value < 0:
-                raise ValueError("Negative values are not supported")
-            b_key = key.encode('utf8')
-            dawg_builder.Insert(b_key, value)
-
-        cdef _dawg.Dawg dawg
-        dawg_builder.Finish(&dawg)
-        _dictionary_builder.Build(dawg, &(self.dct))
-
     def __getitem__(self, key):
-        cdef int res = self.get(key, -1)
-        if res == -1:
+        cdef int res = self.get(key, LOOKUP_ERROR)
+        if res == LOOKUP_ERROR:
             raise KeyError(key)
         return res
 
@@ -869,7 +867,7 @@ cdef class IntDAWG(DAWG):
         else:
             res = self.b_get_value(key)
 
-        if res == -1:
+        if res == LOOKUP_ERROR:
             return default
         return res
 
@@ -879,3 +877,84 @@ cdef class IntDAWG(DAWG):
 
     cpdef int b_get_value(self, bytes key):
         return self.dct.Find(key)
+
+
+# FIXME: code duplication.
+cdef class IntCompletionDAWG(CompletionDAWG):
+    """
+    Dict-like class based on DAWG.
+    It can store integer values for unicode keys and support key completion.
+    """
+
+    def __init__(self, arg=None, input_is_sorted=False):
+        """
+        ``arg`` must be an iterable of tuples (unicode_key, int_value)
+        or a dict {unicode_key: int_value}.
+        """
+        iterable = _iterable_from_argument(arg)
+        super(IntCompletionDAWG, self).__init__(iterable, input_is_sorted)
+
+    def __getitem__(self, key):
+        cdef int res = self.get(key, LOOKUP_ERROR)
+        if res == LOOKUP_ERROR:
+            raise KeyError(key)
+        return res
+
+    cpdef get(self, key, default=None):
+        """
+        Return value for the given key or ``default`` if the key is not found.
+        """
+        cdef int res
+
+        if isinstance(key, unicode):
+            res = self.get_value(key)
+        else:
+            res = self.b_get_value(key)
+
+        if res == LOOKUP_ERROR:
+            return default
+        return res
+
+    cpdef int get_value(self, unicode key):
+        cdef bytes b_key = key.encode('utf8')
+        return self.dct.Find(b_key)
+
+    cpdef int b_get_value(self, bytes key):
+        return self.dct.Find(key)
+
+    cpdef list items(self, unicode prefix=""):
+        cdef bytes b_prefix = prefix.encode('utf8')
+        cdef BaseType index = self.dct.root()
+        cdef list res = []
+        cdef int value
+
+        if not self.dct.Follow(b_prefix, &index):
+            return res
+
+        cdef Completer completer
+        init_completer(completer, self.dct, self.guide)
+        completer.Start(index, b_prefix)
+
+        while completer.Next():
+            key = (<char*>completer.key()).decode('utf8')
+            value = completer.value()
+            res.append((key, value))
+
+        return res
+
+    def iteritems(self, unicode prefix=""):
+        cdef bytes b_prefix = prefix.encode('utf8')
+        cdef BaseType index = self.dct.root()
+        cdef int value
+
+        if not self.dct.Follow(b_prefix, &index):
+            return
+
+        cdef Completer completer
+        init_completer(completer, self.dct, self.guide)
+        completer.Start(index, b_prefix)
+
+        while completer.Next():
+            key = (<char*>completer.key()).decode('utf8')
+            value = completer.value()
+            yield key, value
