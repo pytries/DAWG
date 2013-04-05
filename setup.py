@@ -5,7 +5,7 @@ from distutils.extension import Extension
 
 setup(
     name="DAWG",
-    version="0.6.1",
+    version="0.7",
     description="Fast and memory efficient DAWG for Python",
     long_description = open('README.rst').read() +'\n\n' + open('CHANGES.rst').read(),
     author='Mikhail Korobov',
@@ -22,7 +22,7 @@ setup(
     ],
 
     classifiers=[
-        'Development Status :: 3 - Alpha',
+        'Development Status :: 4 - Beta',
         'Intended Audience :: Developers',
         'Intended Audience :: Science/Research',
         'License :: OSI Approved :: MIT License',
