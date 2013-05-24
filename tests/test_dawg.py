@@ -50,6 +50,16 @@ class TestDAWG(object):
                 d.read(f)
                 assert 'Invalid' in e.args[0]
 
+    def test_no_segfaults_after_wrong_stream(self):
+        d = dawg.DAWG()
+        wrong_path = tempfile.mktemp()  # file doesn't exists
+
+        try:
+            d.load(wrong_path)
+        except:
+            pass                     # ignore error
+        assert 'random-key' not in d # there is possible segfault
+
     def test_build_errors(self):
         with pytest.raises(dawg.Error):
             data = [b'foo\x00bar', b'bar']
