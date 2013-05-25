@@ -2,6 +2,13 @@
 Changes
 =======
 
+0.7.1 (2013-05-25)
+------------------
+
+- Extension is rebuilt with Cython 0.19.1;
+- fixed segfault that happened on lookup from incorrectly loaded DAWG
+  (thanks Alex Moiseenko).
+
 0.7 (2013-04-05)
 ----------------
 

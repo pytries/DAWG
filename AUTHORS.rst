@@ -3,7 +3,8 @@ Authors & Contributors
 
 * Mikhail Korobov <kmike84@gmail.com>;
 * Dan Blanchard;
-* Jakub Wilk.
+* Jakub Wilk;
+* Alex Moiseenko.
 
 This module uses `dawgdic`_ C++ library by
 Susumu Yata & contributors.
