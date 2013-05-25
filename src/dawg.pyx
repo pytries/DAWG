@@ -134,6 +134,8 @@ cdef class DAWG:
 
         cdef ifstream stream
         stream.open(path, iostream.binary)
+        if stream.fail():
+            raise IOError("It's not possible to read file stream")
 
         res = self.dct.Read(<istream*> &stream)
 
@@ -369,6 +371,8 @@ cdef class CompletionDAWG(DAWG):
 
         cdef ifstream stream
         stream.open(path, iostream.binary)
+        if stream.fail():
+            raise IOError("It's not possible to read file stream")
 
         try:
             res = self.dct.Read(<istream*> &stream)
