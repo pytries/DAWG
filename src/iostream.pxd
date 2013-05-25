@@ -1,4 +1,5 @@
 from libcpp.string cimport string
+from libcpp cimport bool
 
 cdef extern from "<istream>" namespace "std" nogil:
     cdef cppclass istream:
@@ -14,6 +15,8 @@ cdef extern from "<fstream>" namespace "std" nogil:
         ifstream() except +
         istream(char* filename) except +
         istream(char* filename, int mode) except +
+
+        bool fail() except +
 
         void open(char* filename) except +
         void open(char* filename, int mode) except +
