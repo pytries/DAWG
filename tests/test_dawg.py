@@ -54,10 +54,9 @@ class TestDAWG(object):
         d = dawg.DAWG()
         wrong_path = tempfile.mktemp()  # file doesn't exists
 
-        try:
+        with pytest.raises(IOError):
             d.load(wrong_path)
-        except:
-            pass                     # ignore error
+
         assert 'random-key' not in d # there is possible segfault
 
     def test_build_errors(self):
