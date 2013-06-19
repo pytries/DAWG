@@ -222,40 +222,42 @@ cdef class DAWG:
         """
         return self._similar_keys("", key, self.dct.root(), replaces)
 
-    cpdef list prefixes(self, unicode key):
+    cpdef list prefixes(self, unicode key, int offset=0):
         '''
         Return a list with keys of this DAWG that are prefixes of the ``key``.
+        [starting at ``offset``].
         '''
         cdef list res = []
         cdef BaseType index = self.dct.root()
         cdef bytes b_key = key.encode('utf8')
-        cdef int pos = 1
+        cdef int pos
         cdef CharType ch
 
-        for ch in b_key:
+        for pos in range(offset, len(b_key)):
+            ch = b_key[pos]
             if not self.dct.Follow(ch, &index):
                 break
             if self._has_value(index):
-                res.append(b_key[:pos].decode('utf8'))
-            pos += 1
+                res.append(b_key[offset:pos+1].decode('utf8'))
 
         return res
 
-    def iterprefixes(self, unicode key):
+    def iterprefixes(self, unicode key, int offset=0):
         '''
-        Return a generator with keys of this DAWG that are prefixes of the ``key``.
+        Return a generator with keys of this DAWG that are prefixes of the ``key``
+        [starting at ``offset``].
         '''
         cdef BaseType index = self.dct.root()
         cdef bytes b_key = key.encode('utf8')
-        cdef int pos = 1
+        cdef int pos
         cdef CharType ch
 
-        for ch in b_key:
+        for pos in range(offset, len(b_key)):
+            ch = b_key[pos]
             if not self.dct.Follow(ch, &index):
                 return
             if self._has_value(index):
-                yield b_key[:pos].decode('utf8')
-            pos += 1
+                yield b_key[offset:pos+1].decode('utf8')
 
     @classmethod
     def compile_replaces(cls, replaces):
