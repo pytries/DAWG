@@ -79,6 +79,11 @@ prefix in a ``CompletionDAWG``::
     >>> completion_dawg.keys(u'foo')
     >>> [u'foo', u'foobar']
 
+to test whether some key begins with a given prefix::
+
+    >>> completion_dawg.has_keys_with_prefix(u'foo')
+    >>> True
+
 and to find all prefixes of a given key::
 
     >>> base_dawg.prefixes(u'foobarz')
