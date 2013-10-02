@@ -181,6 +181,15 @@ class TestCompletionDAWG(object):
         assert d.keys('b') == ['bar']
         assert d.keys('foo') == ['foo', 'foobar']
 
+    def test_has_keys_with_prefix(self):
+        assert self.empty_dawg().has_keys_with_prefix('') == False
+
+        d = self.dawg()
+        assert d.has_keys_with_prefix('') == True
+        assert d.has_keys_with_prefix('b') == True
+        assert d.has_keys_with_prefix('fo') == True
+        assert d.has_keys_with_prefix('bo') == False
+
     def test_completion_dawg_saveload(self):
         buf = BytesIO()
         self.dawg().write(buf)

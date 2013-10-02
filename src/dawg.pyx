@@ -325,6 +325,18 @@ cdef class CompletionDAWG(DAWG):
             key = (<char*>completer.key()).decode('utf8')
             yield key
 
+    def has_keys_with_prefix(self, unicode prefix):
+        cdef bytes b_prefix = prefix.encode('utf8')
+        cdef BaseType index = self.dct.root()
+
+        if not self.dct.Follow(b_prefix, &index):
+            return False
+
+        cdef Completer completer
+        init_completer(completer, self.dct, self.guide)
+        completer.Start(index, b_prefix)
+
+        return completer.Next()
 
     cpdef bytes tobytes(self) except +:
         """
