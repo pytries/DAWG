@@ -4,7 +4,8 @@ Authors & Contributors
 * Mikhail Korobov <kmike84@gmail.com>;
 * Dan Blanchard;
 * Jakub Wilk;
-* Alex Moiseenko.
+* Alex Moiseenko;
+* `Matt Hickford <https://github.com/matt-hickford>`_.
 
 This module uses `dawgdic`_ C++ library by
 Susumu Yata & contributors.
