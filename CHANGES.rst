@@ -2,6 +2,12 @@
 Changes
 =======
 
+0.7.2 (2013-10-03)
+------------------
+
+* ``has_keys_with_prefix(prefix)`` method (thanks
+  `Matt Hickford <https://github.com/matt-hickford>`_)
+
 0.7.1 (2013-05-25)
 ------------------
 
