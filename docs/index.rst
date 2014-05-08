@@ -25,7 +25,9 @@ Bundled libb64_ is Public Domain.
 Installation
 ============
 
-pip install DAWG
+From `PyPI <https://pypi.python.org/pypi/DAWG>`_::
+
+    pip install DAWG
 
 Usage
 =====
