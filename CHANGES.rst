@@ -2,6 +2,12 @@
 Changes
 =======
 
+0.7.3 (2014-05-29)
+------------------
+
+* Wrapper is rebuilt with Cython 0.21dev;
+* Python 3.4 compatibility is verified.
+
 0.7.2 (2013-10-03)
 ------------------
 
