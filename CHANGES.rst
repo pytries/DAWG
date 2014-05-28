@@ -2,6 +2,12 @@
 Changes
 =======
 
+0.7.4 (2014-05-29)
+------------------
+
+* Fixed a bug in DAWG building: input should be sorted according to its
+  binary representation.
+
 0.7.3 (2014-05-29)
 ------------------
 
