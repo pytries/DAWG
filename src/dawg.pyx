@@ -34,7 +34,11 @@ cdef class DAWG:
         if arg is None:
             arg = []
         if not input_is_sorted:
-            arg = sorted(arg)
+            arg = [
+                key.encode('utf8') if isinstance(key, unicode) else key
+                for key in arg
+            ]
+            arg.sort()
         self._build_from_iterable(arg)
 
     def __dealloc__(self):
