@@ -1,4 +1,5 @@
 # cython: profile=False
+# cython: embedsignature=True
 from __future__ import unicode_literals
 from libcpp.string cimport string
 from libcpp.vector cimport vector
@@ -20,8 +21,10 @@ import struct
 import sys
 from binascii import b2a_base64
 
+
 class Error(Exception):
     pass
+
 
 cdef class DAWG:
     """
@@ -71,7 +74,6 @@ cdef class DAWG:
 
         if not _dictionary_builder.Build(self.dawg, &self.dct):
             raise Error("Can't build dictionary")
-
 
     def __contains__(self, key):
         if isinstance(key, unicode):
@@ -377,7 +379,6 @@ cdef class CompletionDAWG(DAWG):
 
         return self
 
-
     def load(self, path):
         """
         Load DAWG from a file.
@@ -571,7 +572,6 @@ cdef class BytesDAWG(CompletionDAWG):
         if not self._follow_key(key, &index):
             return []
         return self._value_for_index(index)
-
 
     cpdef list items(self, unicode prefix=""):
         cdef bytes b_prefix = prefix.encode('utf8')
