@@ -4,6 +4,7 @@
 \.so$
 \.o$
 \.lo$
+egg-info/
 
 \.svn
 \.cvsignore

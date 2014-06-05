@@ -1,7 +1,6 @@
 #! /usr/bin/env python
 import glob
-from distutils.core import setup
-from distutils.extension import Extension
+from setuptools import setup, Extension
 
 setup(
     name="DAWG",
