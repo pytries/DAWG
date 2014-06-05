@@ -2,6 +2,12 @@
 Changes
 =======
 
+0.7.5 (2014-06-05)
+------------------
+
+* Switched to setuptools;
+* some wheels are uploaded to pypi.
+
 0.7.4 (2014-05-29)
 ------------------
 
