@@ -2,6 +2,11 @@
 Changes
 =======
 
+0.7.6 (2014-08-10)
+------------------
+
+* Wrapper is rebuilt with Cython 0.20.2 to fix some issues.
+
 0.7.5 (2014-06-05)
 ------------------
 
