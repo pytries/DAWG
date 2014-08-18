@@ -182,6 +182,12 @@ class TestCompletionDAWG(object):
         assert d.prefixes("x") == []
         assert d.prefixes("bar") == ["bar"]
 
+    def test_b_prefixes(self):
+        d = self.dawg()
+        assert d.b_prefixes(b"foobarz") == [b"f", b"foo", b"foobar"]
+        assert d.b_prefixes(b"x") == []
+        assert d.b_prefixes(b"bar") == [b"bar"]
+
     def test_iterprefixes(self):
         d = self.dawg()
         assert list(d.iterprefixes("foobarz")) == d.prefixes("foobarz")
