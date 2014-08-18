@@ -232,9 +232,11 @@ cdef class DAWG:
         '''
         Return a list with keys of this DAWG that are prefixes of the ``key``.
         '''
+        return [p.decode('utf8') for p in self.b_prefixes(key.encode('utf8'))]
+
+    cpdef list b_prefixes(self, bytes b_key):
         cdef list res = []
         cdef BaseType index = self.dct.root()
-        cdef bytes b_key = key.encode('utf8')
         cdef int pos = 1
         cdef CharType ch
 
@@ -242,7 +244,7 @@ cdef class DAWG:
             if not self.dct.Follow(ch, &index):
                 break
             if self._has_value(index):
-                res.append(b_key[:pos].decode('utf8'))
+                res.append(b_key[:pos])
             pos += 1
 
         return res
