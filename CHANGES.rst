@@ -2,6 +2,13 @@
 Changes
 =======
 
+0.7.7 (2014-11-19)
+------------------
+
+* ``DAWG.b_prefixes`` method for avoiding utf8 encoding/decoding
+  (thanks Ikuya Yamada);
+* wrapper is rebuilt with Cython 0.21.1.
+
 0.7.6 (2014-08-10)
 ------------------
 
