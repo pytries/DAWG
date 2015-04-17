@@ -416,15 +416,11 @@ Contributions are welcome!
 Contributing
 ============
 
-Development happens at github and bitbucket:
+Development happens at github: https://github.com/kmike/DAWG
 
-* https://github.com/kmike/DAWG
-* https://bitbucket.org/kmike/DAWG
+Issue tracker: https://github.com/kmike/DAWG/issues
 
-The main issue tracker is at github: https://github.com/kmike/DAWG/issues
-
-Feel free to submit ideas, bugs, pull requests (git or hg) or
-regular patches.
+Feel free to submit ideas, bugs or pull requests.
 
 If you found a bug in a C++ part please report it to the original
 `bug tracker <https://code.google.com/p/dawgdic/issues/list>`_.
