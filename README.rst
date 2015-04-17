@@ -13,14 +13,9 @@ it also provides fast advanced methods like prefix search.
 
 .. _DAFSA: https://en.wikipedia.org/wiki/Deterministic_acyclic_finite_state_automaton
 
-Docs: http://dawg.readthedocs.org
-
-Source code:
-
-* https://github.com/kmike/DAWG
-* https://bitbucket.org/kmike/DAWG
-
-Issue tracker: https://github.com/kmike/DAWG/issues
+* Docs: http://dawg.readthedocs.org
+* Source code: https://github.com/kmike/DAWG
+* Issue tracker: https://github.com/kmike/DAWG/issues
 
 License
 =======
