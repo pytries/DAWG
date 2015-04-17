@@ -42,7 +42,7 @@ master_doc = 'index'
 
 # General information about the project.
 project = 'DAWG'
-copyright = '2013, Mikhail Korobov'
+copyright = '2015, Mikhail Korobov'
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the

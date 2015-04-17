@@ -2,6 +2,13 @@
 Changes
 =======
 
+0.7.8 (2015-04-18)
+------------------
+
+* extra type annotations are added to make the code a bit faster;
+* mercurial mirror at bitbucket is dropped;
+* wrapper is rebuilt with Cython 0.22.
+
 0.7.7 (2014-11-19)
 ------------------
 
