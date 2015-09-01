@@ -455,6 +455,41 @@ cdef class RankedCompletionDAWG(DAWG):
     def __dealloc__(self):
         self.ranked_guide.Clear()
 
+    cpdef list items(self, unicode prefix=""):
+        cdef bytes b_prefix = prefix.encode('utf8')
+        cdef BaseType index = self.dct.root()
+        cdef list res = []
+
+        if not self.dct.Follow(b_prefix, &index):
+            return res
+
+        cdef RankedCompleter ranked_completer
+        init_ranked_completer(ranked_completer, self.dct, self.ranked_guide)
+        ranked_completer.Start(index, b_prefix)
+
+        while ranked_completer.Next():
+            key = (<char*>ranked_completer.key()).decode("utf8")
+            value = ranked_completer.value()
+            res.append((key, value))
+
+        return res
+
+    def iteritems(self, unicode prefix=""):
+        cdef bytes b_prefix = prefix.encode('utf8')
+        cdef BaseType index = self.dct.root()
+
+        if not self.dct.Follow(b_prefix, &index):
+            return
+
+        cdef RankedCompleter ranked_completer
+        init_ranked_completer(ranked_completer, self.dct, self.ranked_guide)
+        ranked_completer.Start(index, b_prefix)
+
+        while ranked_completer.Next():
+            key = (<char*>ranked_completer.key()).decode("utf8")
+            value = ranked_completer.value()
+            yield key, value
+
     cpdef list keys(self, unicode prefix=""):
         cdef bytes b_prefix = prefix.encode('utf8')
         cdef BaseType index = self.dct.root()
