@@ -300,7 +300,7 @@ Benchmarks
 For a list of 3000000 (3 million) Russian words memory consumption
 with different data structures (under Python 2.7):
 
-* dict(unicode words -> word lenghts): about 600M
+* dict(unicode words -> word lengths): about 600M
 * list(unicode words) : about 300M
 * ``marisa_trie.RecordTrie`` : 11M
 * ``marisa_trie.Trie``: 7M
@@ -318,7 +318,7 @@ with different data structures (under Python 2.7):
 
 .. note::
 
-    `marisa-trie`_ is often more more memory efficient than
+    `marisa-trie`_ is often more memory efficient than
     DAWG (depending on data); it can also handle larger datasets
     and provides memory-mapped IO, so don't dismiss `marisa-trie`_
     based on this README file. It is still several times slower than
@@ -326,7 +326,7 @@ with different data structures (under Python 2.7):
 
 .. _marisa-trie: https://github.com/kmike/marisa-trie
 
-Benchmark results (100k unicode words, integer values (lenghts of the words),
+Benchmark results (100k unicode words, integer values (lengths of the words),
 Python 3.3, macbook air i5 1.8 Ghz)::
 
     dict __getitem__ (hits)           7.300M ops/sec
