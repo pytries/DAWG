@@ -9,7 +9,7 @@ setup(
     long_description = open('README.rst').read() +'\n\n' + open('CHANGES.rst').read(),
     author='Mikhail Korobov',
     author_email='kmike84@gmail.com',
-    url='https://github.com/kmike/DAWG/',
+    url='https://github.com/pytries/DAWG/',
 
     ext_modules = [
         Extension(

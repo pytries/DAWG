@@ -1,8 +1,8 @@
 DAWG
 ====
 
-.. image:: https://travis-ci.org/kmike/DAWG.png?branch=master
-    :target: https://travis-ci.org/kmike/DAWG
+.. image:: https://travis-ci.org/pytries/DAWG.png?branch=master
+    :target: https://travis-ci.org/pytries/DAWG
 
 This package provides DAWG(DAFSA_)-based dictionary-like
 read-only objects for Python (2.x and 3.x).
@@ -14,8 +14,8 @@ it also provides fast advanced methods like prefix search.
 .. _DAFSA: https://en.wikipedia.org/wiki/Deterministic_acyclic_finite_state_automaton
 
 * Docs: http://dawg.readthedocs.org
-* Source code: https://github.com/kmike/DAWG
-* Issue tracker: https://github.com/kmike/DAWG/issues
+* Source code: https://github.com/pytries/DAWG
+* Issue tracker: https://github.com/pytries/DAWG/issues
 
 License
 =======
