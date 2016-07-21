@@ -324,7 +324,7 @@ with different data structures (under Python 2.7):
     based on this README file. It is still several times slower than
     DAWG though.
 
-.. _marisa-trie: https://github.com/kmike/marisa-trie
+.. _marisa-trie: https://github.com/pytries/marisa-trie
 
 Benchmark results (100k unicode words, integer values (lengths of the words),
 Python 3.3, macbook air i5 1.8 Ghz)::
@@ -416,9 +416,9 @@ Contributions are welcome!
 Contributing
 ============
 
-Development happens at github: https://github.com/kmike/DAWG
+Development happens at github: https://github.com/pytries/DAWG
 
-Issue tracker: https://github.com/kmike/DAWG/issues
+Issue tracker: https://github.com/pytries/DAWG/issues
 
 Feel free to submit ideas, bugs or pull requests.
 

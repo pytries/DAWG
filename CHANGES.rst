@@ -63,7 +63,7 @@ Changes
 - Installation issues in environments with LC_ALL=C are fixed;
 - PyPy is officially unsupported now (use DAWG-Python_ with PyPy).
 
-.. _DAWG-Python: https://github.com/kmike/DAWG-Python
+.. _DAWG-Python: https://github.com/pytries/DAWG-Python
 
 0.6 (2013-03-22)
 ----------------
