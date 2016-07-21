@@ -813,7 +813,7 @@ cdef class RecordDAWG(BytesDAWG):
 
     In other words, this class implements read-only DAWG-based
     {unicode -> list of tuples} mapping where all tuples are of the
-    same structure an may be packed with the same format string.
+    same structure and may be packed with the same format string.
     """
     cdef _struct
 
