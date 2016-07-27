@@ -10,9 +10,12 @@ cimport _dawg
 from _dawg_builder cimport DawgBuilder
 from _dictionary cimport Dictionary
 from _guide cimport Guide
+from _ranked_guide cimport RankedGuide
 from _completer cimport Completer
+from _ranked_completer cimport RankedCompleter
 from _base_types cimport BaseType, SizeType, CharType
 cimport _guide_builder
+cimport _ranked_guide_builder
 cimport _dictionary_builder
 cimport b64_decode
 
@@ -425,6 +428,193 @@ cdef class CompletionDAWG(DAWG):
             index = self.dct.root()
 
             for i in range(completer.length()):
+                prev_index = index
+                self.dct.Follow(&(key[i]), 1, &index)
+                transitions.add(
+                    (prev_index, <unsigned char>key[i], index)
+                )
+
+        return sorted(list(transitions))
+
+cdef void init_ranked_completer(RankedCompleter& ranked_completer,
+                                Dictionary& dic,
+                                RankedGuide& ranked_guide):
+    ranked_completer.set_dic(dic)
+    ranked_completer.set_guide(ranked_guide)
+
+cdef class RankedCompletionDAWG(DAWG):
+
+    cdef RankedGuide ranked_guide
+
+    def __init__(self, arg=None, input_is_sorted=False):
+        super(RankedCompletionDAWG, self).__init__(arg, input_is_sorted)
+        if not _ranked_guide_builder.Build(self.dawg, self.dct,
+                &self.ranked_guide):
+            raise Error("Error building ranked completion information")
+
+    def __dealloc__(self):
+        self.ranked_guide.Clear()
+
+    cpdef list items(self, unicode prefix=""):
+        cdef bytes b_prefix = prefix.encode('utf8')
+        cdef BaseType index = self.dct.root()
+        cdef list res = []
+
+        if not self.dct.Follow(b_prefix, &index):
+            return res
+
+        cdef RankedCompleter ranked_completer
+        init_ranked_completer(ranked_completer, self.dct, self.ranked_guide)
+        ranked_completer.Start(index, b_prefix)
+
+        while ranked_completer.Next():
+            key = (<char*>ranked_completer.key()).decode("utf8")
+            value = ranked_completer.value()
+            res.append((key, value))
+
+        return res
+
+    def iteritems(self, unicode prefix=""):
+        cdef bytes b_prefix = prefix.encode('utf8')
+        cdef BaseType index = self.dct.root()
+
+        if not self.dct.Follow(b_prefix, &index):
+            return
+
+        cdef RankedCompleter ranked_completer
+        init_ranked_completer(ranked_completer, self.dct, self.ranked_guide)
+        ranked_completer.Start(index, b_prefix)
+
+        while ranked_completer.Next():
+            key = (<char*>ranked_completer.key()).decode("utf8")
+            value = ranked_completer.value()
+            yield key, value
+
+    cpdef list keys(self, unicode prefix=""):
+        cdef bytes b_prefix = prefix.encode('utf8')
+        cdef BaseType index = self.dct.root()
+        cdef list res = []
+
+        if not self.dct.Follow(b_prefix, &index):
+            return res
+
+        cdef RankedCompleter ranked_completer
+        init_ranked_completer(ranked_completer, self.dct, self.ranked_guide)
+        ranked_completer.Start(index, b_prefix)
+
+        while ranked_completer.Next():
+            key = (<char*>ranked_completer.key()).decode("utf8")
+            res.append(key)
+
+        return res
+
+    def iterkeys(self, unicode prefix=""):
+        cdef bytes b_prefix = prefix.encode("utf8")
+        cdef BaseType index = self.dct.root()
+
+        if not self.dct.Follow(b_prefix, &index):
+            return
+
+        cdef RankedCompleter ranked_completer
+        init_ranked_completer(ranked_completer, self.dct, self.ranked_guide)
+        ranked_completer.Start(index, b_prefix)
+
+        while ranked_completer.Next():
+            key = (<char*>ranked_completer.key()).decode("utf8")
+            yield key
+
+    def has_keys_with_prefix(self, unicode prefix):
+        cdef bytes b_prefix = prefix.encode("utf8")
+        cdef BaseType index = self.dct.root()
+
+        if not self.dct.Follow(b_prefix, &index):
+            return False
+
+        cdef RankedCompleter ranked_completer
+        init_ranked_completer(ranked_completer, self.dct, self.ranked_guide)
+        ranked_completer.Start(index, b_prefix)
+
+        return ranked_completer.Next()
+
+    cpdef bytes tobytes(self) except +:
+        """
+        Return raw DAWG content as bytes.
+        """
+        cdef stringstream stream
+        self.dct.Write(<ostream *> &stream)
+        self.ranked_guide.Write(<ostream *> &stream)
+        cdef bytes res = stream.str()
+        return res
+
+    cpdef frombytes(self, bytes data):
+        """
+        Load DAWG from bytes ``data``.
+
+        FIXME: it seems there is memroy leak here (DAWG uses 3x memory
+        when loaded using frombytes vs load).
+        """
+        cdef char* c_data = data
+        cdef stringstream stream
+        stream.write(c_data, len(data))
+        stream.seekg(0)
+
+        res = self.dct.Read(<istream*> &stream)
+        if not res:
+            self.dct.Clear()
+            raise IOError("Invalid data format: can't load _dawg.Dictionary")
+
+        res = self.ranked_guide.Read(<istream*> &stream)
+        if not res:
+            self.ranked_guide.Clear()
+            self.dct.Clear()
+            raise IOError("Invalid data format: can't load _dawg.RankedGuide")
+
+        return self
+
+    def load(self, path):
+        """
+        Load DAWG from a file.
+        """
+        if isinstance(path, unicode):
+            path = path.encode(sys.getfilesystemencoding())
+
+        cdef ifstream stream
+        stream.open(path, iostream.binary)
+        if stream.fail():
+            raise IOError("It's not possible to read file stream")
+
+        try:
+            res = self.dct.Read(<istream*> &stream)
+            if not res:
+                self.dct.Clear()
+                raise IOError("Invalid data format: can't load _dawg.Dictionary")
+
+            res = self.ranked_guide.Read(<istream*> &stream)
+            if not res:
+                self.ranked_guide.Clear()
+                self.dct.Clear()
+                raise IOError("Invalid data format: can't load _dawg.RankedGuide")
+
+        finally:
+            stream.close()
+
+        return self
+
+    def _transitions(self):
+        transitions = set()
+        cdef BaseType index, prev_index, completer_index
+        cdef char* key
+
+        cdef RankedCompleter ranked_completer
+        init_ranked_completer(ranked_completer, self.dct, self.ranked_guide)
+        ranked_completer.Start(self.dct.root())
+
+        while ranked_completer.Next():
+            key = <char*>ranked_completer.key()
+
+            index = self.dct.root()
+
+            for i in xrange(ranked_completer.length()):
                 prev_index = index
                 self.dct.Follow(&(key[i]), 1, &index)
                 transitions.add(
