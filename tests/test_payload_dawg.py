@@ -83,7 +83,12 @@ class TestBytesDAWG(object):
         with pytest.raises(dawg.Error):
             self.dawg(payload_separator=b'f')
 
-
+    def test_longest_prefix(self):
+        d = dawg.BytesDAWG([("a", b"a1"), ("a", b"a2"), ("as", b"as"), ("asdf", b"asdf")])
+        assert d.longest_prefix("a") == ("a", [b"a1", b"a2"])
+        assert d.longest_prefix("as") == ("as", [b"as"])
+        assert d.longest_prefix("asd") == ("as", [b"as"])
+        assert d.longest_prefix("asdf") == ("asdf", [b"asdf"])
 
 class TestRecordDAWG(object):
 

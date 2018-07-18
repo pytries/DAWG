@@ -253,6 +253,24 @@ cdef class DAWG:
 
         return res
 
+    def longest_prefix(self, unicode key):
+        cdef BaseType index = self.dct.root()
+        cdef int pos = 1
+        cdef int lastpos = 0
+        cdef CharType ch
+
+        for ch in key:
+            if not self.dct.Follow(ch, &index):
+                break
+            if self.dct.has_value(index):
+                lastpos = pos
+            pos += 1
+
+        if lastpos:
+            return key[:lastpos]
+        else:
+            raise KeyError("No prefix found")
+
     def iterprefixes(self, unicode key):
         '''
         Return a generator with keys of this DAWG that are prefixes of the ``key``.
@@ -802,7 +820,28 @@ cdef class BytesDAWG(CompletionDAWG):
         """
         return self._similar_item_values(0, key, self.dct.root(), replaces)
 
+    def longest_prefix(self, unicode key):
+        cdef BaseType index = self.dct.root()
+        cdef BaseType tmp
+        cdef BaseType lastindex
+        cdef int pos = 1
+        cdef int lastpos = 0
+        cdef CharType ch
 
+        for ch in key:
+            if not self.dct.Follow(ch, &index):
+                break
+
+            tmp = index
+            if self.dct.Follow(self._c_payload_separator, &tmp):
+                lastpos = pos
+                lastindex = tmp
+            pos += 1
+
+        if lastpos:
+            return key[:lastpos], self._value_for_index(lastindex)
+        else:
+            raise KeyError("No prefix found")
 
 cdef class RecordDAWG(BytesDAWG):
     """
@@ -904,6 +943,26 @@ cdef class IntDAWG(DAWG):
     cpdef int b_get_value(self, bytes key):
         return self.dct.Find(key)
 
+    def longest_prefix(self, unicode key):
+        cdef BaseType index = self.dct.root()
+        cdef BaseType lastindex
+        cdef int pos = 1
+        cdef int lastpos = 0
+        cdef CharType ch
+
+        for ch in key:
+            if not self.dct.Follow(ch, &index):
+                break
+
+            if self.dct.has_value(index):
+                lastpos = pos
+                lastindex = index
+            pos += 1
+
+        if lastpos:
+            return key[:lastpos], self.dct.value(lastindex)
+        else:
+            raise KeyError("No prefix found")
 
 # FIXME: code duplication.
 cdef class IntCompletionDAWG(CompletionDAWG):
