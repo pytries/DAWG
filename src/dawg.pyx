@@ -176,6 +176,17 @@ cdef class DAWG:
 
     def _file_size(self):
         return self.dct.file_size()
+    
+    cpdef BaseType root(self):
+        return self.dct.root()
+
+    cpdef (bint, BaseType) follow(self, unicode label, BaseType index):
+        cdef bytes _label = <bytes>label.encode('utf8')
+        rs = self.dct.Follow(_label, &index)
+        return rs, index
+
+    def has_value(self, index: BaseType) -> bool:
+        return self._has_value(index) 
 
     cdef bint _has_value(self, BaseType index):
         return  self.dct.has_value(index)
