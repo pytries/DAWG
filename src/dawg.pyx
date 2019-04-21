@@ -13,6 +13,7 @@ from src._dawg_builder cimport DawgBuilder
 from src._dictionary cimport Dictionary
 from src._guide cimport Guide
 from src._completer cimport Completer
+from src._nearest cimport Nearest
 from src._base_types cimport BaseType, SizeType, CharType
 cimport src._guide_builder as _guide_builder
 cimport src._dictionary_builder as _dictionary_builder
@@ -982,3 +983,33 @@ cdef class IntCompletionDAWG(CompletionDAWG):
             key = (<char*>completer.key()).decode('utf8')
             value = completer.value()
             yield key, value
+
+
+cdef void init_nearest(Nearest& nearest, Dictionary& dic, Guide& guide):
+    nearest.set_dic(dic)
+    nearest.set_guide(guide)
+
+cdef class NearestDAWG(DAWG):
+    """
+    DAWG with nearest calculation.
+    """
+    cdef Guide guide
+
+    def __init__(self, arg=None, input_is_sorted=False):
+        super(NearestDAWG, self).__init__(arg, input_is_sorted)
+        if not _guide_builder.Build(self.dawg, self.dct, &self.guide):
+            raise Error("Error building completion information")
+
+    def __dealloc__(self):
+        self.guide.Clear()
+
+    def items(self, unicode search="", max_cost=1):
+        cdef bytes b_search = search.encode('utf8')
+
+        cdef Nearest nearest
+        init_nearest(nearest, self.dct, self.guide)
+        nearest.Start(b_search, max_cost)
+
+        while nearest.Next():
+            key = (<char*>nearest.key()).decode('utf8')
+            yield key, nearest.cost()
