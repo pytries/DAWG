@@ -5,6 +5,8 @@ cdef extern from "<istream>" namespace "std" nogil:
     cdef cppclass istream:
         istream() except +
         istream& read (char* s, int n) except +
+        bool eof()
+        int peek()
 
     cdef cppclass ostream:
         ostream() except +

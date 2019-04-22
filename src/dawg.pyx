@@ -34,8 +34,10 @@ cdef class DAWG:
     """
     cdef Dictionary dct
     cdef _dawg.Dawg dawg
+    cdef Guide guide
+    cdef bint completions
 
-    def __init__(self, arg=None, input_is_sorted=False):
+    def __init__(self, arg=None, input_is_sorted=False, completions=False):
         if arg is None:
             arg = []
         if not input_is_sorted:
@@ -44,9 +46,11 @@ cdef class DAWG:
                 for key in arg
             ]
             arg.sort()
+        self.completions = completions
         self._build_from_iterable(arg)
 
     def __dealloc__(self):
+        self.guide.Clear()
         self.dct.Clear()
         self.dawg.Clear()
 
@@ -77,6 +81,28 @@ cdef class DAWG:
         if not _dictionary_builder.Build(self.dawg, &self.dct):
             raise Error("Can't build dictionary")
 
+        if self.completions and self.dawg.num_of_transitions() > 0:
+            if not _guide_builder.Build(self.dawg, self.dct, &self.guide):
+                raise Error("Error building completion information")            
+
+    cdef _load_from_stream(self, istream *stream):
+        res = self.dct.Read(stream)
+        if not res:
+            self.dct.Clear()
+            raise IOError("Invalid data format: can't load dct")
+
+        stream.peek()
+        if not stream.eof():
+            res = self.guide.Read(stream)
+            if not res:
+                self.guide.Clear()
+                self.dct.Clear()
+                raise IOError("Invalid data format: can't load guide")
+            self.completions = True
+        else:
+            self.guide.Clear()            
+            self.completions = False
+
     def __contains__(self, key):
         if isinstance(key, unicode):
             return self.has_key(<unicode>key)
@@ -88,12 +114,19 @@ cdef class DAWG:
     cpdef bint b_has_key(self, bytes key) except -1:
         return self.dct.Contains(key, len(key))
 
+    cpdef completer(self):
+        if not self.completions:
+            raise Error("Cannot create completer on DAWG without completions")
+        return PyCompleter(self)
+
     cpdef bytes tobytes(self):
         """
         Return raw DAWG content as bytes.
         """
         cdef stringstream stream
         self.dct.Write(<ostream *> &stream)
+        if self.completions:
+            self.guide.Write(<ostream *> &stream)
         cdef bytes res = stream.str()
         return res
 
@@ -105,19 +138,13 @@ cdef class DAWG:
         when loaded using ``.frombytes`` compared to DAWG loaded
         using ``.load``).
         """
-        cdef string s_data = data
-        cdef stringstream* stream = new stringstream(s_data)
+        cdef char* c_data = data
+        cdef stringstream stream
+        stream.write(c_data, len(data))
+        stream.seekg(0)
 
-        try:
-            res = self.dct.Read(<istream *> stream)
-
-            if not res:
-                self.dct.Clear()
-                raise IOError("Invalid data format")
-
-            return self
-        finally:
-            del stream
+        self._load_from_stream(<istream *> &stream)
+        return self
 
     def read(self, f):
         """
@@ -145,13 +172,10 @@ cdef class DAWG:
         if stream.fail():
             raise IOError("It's not possible to read file stream")
 
-        res = self.dct.Read(<istream*> &stream)
-
-        stream.close()
-
-        if not res:
-            self.dct.Clear()
-            raise IOError("Invalid data format")
+        try:
+            self._load_from_stream(<istream *> &stream)
+        finally:
+            stream.close()
 
         return self
 
@@ -283,152 +307,82 @@ cdef class DAWG:
         )
 
 
+cdef class CompletionDAWG(DAWG):
+    """
+    DAWG with key completion support.
+    """
+    def __init__(self, arg=None, **kwargs):
+        super(CompletionDAWG, self).__init__(arg, completions=True, **kwargs)
+
+
 cdef void init_completer(Completer& completer, Dictionary& dic, Guide& guide):
     completer.set_dic(dic)
     completer.set_guide(guide)
 
 
-cdef class CompletionDAWG(DAWG):
-    """
-    DAWG with key completion support.
-    """
-    cdef Guide guide
+cdef class PyCompleter:
+    cdef DAWG dawg
+    cdef Completer completer
 
-    def __init__(self, arg=None, input_is_sorted=False):
-        super(CompletionDAWG, self).__init__(arg, input_is_sorted)
-        if not _guide_builder.Build(self.dawg, self.dct, &self.guide):
-            raise Error("Error building completion information")
-
-    def __dealloc__(self):
-        self.guide.Clear()
+    def __init__(self, dawg):
+        self.dawg = dawg
+        init_completer(self.completer, self.dawg.dct, self.dawg.guide)
 
     cpdef list keys(self, unicode prefix=""):
         cdef bytes b_prefix = prefix.encode('utf8')
-        cdef BaseType index = self.dct.root()
+        cdef BaseType index = self.dawg.dct.root()
         cdef list res = []
 
-        if not self.dct.Follow(b_prefix, &index):
+        if not self.dawg.dct.Follow(b_prefix, &index):
             return res
 
-        cdef Completer completer
-        init_completer(completer, self.dct, self.guide)
-        completer.Start(index, b_prefix)
+        self.completer.Start(index, b_prefix)
 
-        while completer.Next():
-            key = (<char*>completer.key()).decode('utf8')
+        while self.completer.Next():
+            key = (<char*>self.completer.key()).decode('utf8')
             res.append(key)
 
         return res
 
     def iterkeys(self, unicode prefix=""):
         cdef bytes b_prefix = prefix.encode('utf8')
-        cdef BaseType index = self.dct.root()
+        cdef BaseType index = self.dawg.dct.root()
 
-        if not self.dct.Follow(b_prefix, &index):
+        if not self.dawg.dct.Follow(b_prefix, &index):
             return
 
-        cdef Completer completer
-        init_completer(completer, self.dct, self.guide)
-        completer.Start(index, b_prefix)
+        self.completer.Start(index, b_prefix)
 
-        while completer.Next():
-            key = (<char*>completer.key()).decode('utf8')
+        while self.completer.Next():
+            key = (<char*>self.completer.key()).decode('utf8')
             yield key
 
     def has_keys_with_prefix(self, unicode prefix):
         cdef bytes b_prefix = prefix.encode('utf8')
-        cdef BaseType index = self.dct.root()
+        cdef BaseType index = self.dawg.dct.root()
 
-        if not self.dct.Follow(b_prefix, &index):
+        if not self.dawg.dct.Follow(b_prefix, &index):
             return False
 
-        cdef Completer completer
-        init_completer(completer, self.dct, self.guide)
-        completer.Start(index, b_prefix)
+        self.completer.Start(index, b_prefix)
 
-        return completer.Next()
-
-    cpdef bytes tobytes(self):
-        """
-        Return raw DAWG content as bytes.
-        """
-        cdef stringstream stream
-        self.dct.Write(<ostream *> &stream)
-        self.guide.Write(<ostream *> &stream)
-        cdef bytes res = stream.str()
-        return res
-
-    cpdef frombytes(self, bytes data):
-        """
-        Load DAWG from bytes ``data``.
-
-        FIXME: it seems there is memory leak here (DAWG uses 3x memory when
-        loaded using frombytes vs load).
-        """
-        cdef char* c_data = data
-        cdef stringstream stream
-        stream.write(c_data, len(data))
-        stream.seekg(0)
-
-        res = self.dct.Read(<istream*> &stream)
-        if not res:
-            self.dct.Clear()
-            raise IOError("Invalid data format: can't load _dawg.Dictionary")
-
-        res = self.guide.Read(<istream*> &stream)
-        if not res:
-            self.guide.Clear()
-            self.dct.Clear()
-            raise IOError("Invalid data format: can't load _dawg.Guide")
-
-        return self
-
-    def load(self, path):
-        """
-        Load DAWG from a file.
-        """
-        if isinstance(path, unicode):
-            path = path.encode(sys.getfilesystemencoding())
-
-        cdef ifstream stream
-        stream.open(path, iostream.binary)
-        if stream.fail():
-            raise IOError("It's not possible to read file stream")
-
-        try:
-            res = self.dct.Read(<istream*> &stream)
-            if not res:
-                self.dct.Clear()
-                raise IOError("Invalid data format: can't load _dawg.Dictionary")
-
-            res = self.guide.Read(<istream*> &stream)
-            if not res:
-                self.guide.Clear()
-                self.dct.Clear()
-                raise IOError("Invalid data format: can't load _dawg.Guide")
-
-        finally:
-            stream.close()
-
-        return self
+        return self.completer.Next()
 
     def _transitions(self):
         transitions = set()
         cdef BaseType index, prev_index, completer_index
         cdef char* key
 
-        cdef Completer completer
-        init_completer(completer, self.dct, self.guide)
-        completer.Start(self.dct.root())
+        self.completer.Start(self.dawg.dct.root())
 
-        while completer.Next():
-            key = <char*>completer.key()
+        while self.completer.Next():
+            key = <char*>self.completer.key()
 
-            index = self.dct.root()
+            index = self.dawg.dct.root()
 
-            for i in range(completer.length()):
+            for i in range(self.completer.length()):
                 prev_index = index
-                self.dct.Follow(&(key[i]), 1, &index)
+                self.dawg.dct.Follow(&(key[i]), 1, &index)
                 transitions.add(
                     (prev_index, <unsigned char>key[i], index)
                 )
@@ -866,13 +820,13 @@ cdef class IntDAWG(DAWG):
     Dict-like class based on DAWG.
     It can store integer values for unicode keys.
     """
-    def __init__(self, arg=None, input_is_sorted=False):
+    def __init__(self, arg=None, **kwargs):
         """
         ``arg`` must be an iterable of tuples (unicode_key, int_value)
         or a dict {unicode_key: int_value}.
         """
         iterable = _iterable_from_argument(arg)
-        super(IntDAWG, self).__init__(iterable, input_is_sorted)
+        super(IntDAWG, self).__init__(iterable, **kwargs)
 
     def __getitem__(self, key):
         cdef int res = self.get(key, LOOKUP_ERROR)
@@ -903,82 +857,15 @@ cdef class IntDAWG(DAWG):
         return self.dct.Find(key)
 
 
-# FIXME: code duplication.
-cdef class IntCompletionDAWG(CompletionDAWG):
+cdef class IntCompletionDAWG(IntDAWG):
     """
     Dict-like class based on DAWG.
     It can store integer values for unicode keys and support key completion.
     """
 
-    def __init__(self, arg=None, input_is_sorted=False):
+    def __init__(self, arg=None, **kwargs):
         """
         ``arg`` must be an iterable of tuples (unicode_key, int_value)
         or a dict {unicode_key: int_value}.
         """
-        iterable = _iterable_from_argument(arg)
-        super(IntCompletionDAWG, self).__init__(iterable, input_is_sorted)
-
-    def __getitem__(self, key):
-        cdef int res = self.get(key, LOOKUP_ERROR)
-        if res == LOOKUP_ERROR:
-            raise KeyError(key)
-        return res
-
-    cpdef get(self, key, default=None):
-        """
-        Return value for the given key or ``default`` if the key is not found.
-        """
-        cdef int res
-
-        if isinstance(key, unicode):
-            res = self.get_value(<unicode>key)
-        else:
-            res = self.b_get_value(key)
-
-        if res == LOOKUP_ERROR:
-            return default
-        return res
-
-    cpdef int get_value(self, unicode key):
-        cdef bytes b_key = <bytes>key.encode('utf8')
-        return self.dct.Find(b_key)
-
-    cpdef int b_get_value(self, bytes key):
-        return self.dct.Find(key)
-
-    cpdef list items(self, unicode prefix=""):
-        cdef bytes b_prefix = prefix.encode('utf8')
-        cdef BaseType index = self.dct.root()
-        cdef list res = []
-        cdef int value
-
-        if not self.dct.Follow(b_prefix, &index):
-            return res
-
-        cdef Completer completer
-        init_completer(completer, self.dct, self.guide)
-        completer.Start(index, b_prefix)
-
-        while completer.Next():
-            key = (<char*>completer.key()).decode('utf8')
-            value = completer.value()
-            res.append((key, value))
-
-        return res
-
-    def iteritems(self, unicode prefix=""):
-        cdef bytes b_prefix = prefix.encode('utf8')
-        cdef BaseType index = self.dct.root()
-        cdef int value
-
-        if not self.dct.Follow(b_prefix, &index):
-            return
-
-        cdef Completer completer
-        init_completer(completer, self.dct, self.guide)
-        completer.Start(index, b_prefix)
-
-        while completer.Next():
-            key = (<char*>completer.key()).decode('utf8')
-            value = completer.value()
-            yield key, value
+        super(IntCompletionDAWG, self).__init__(arg, completions=True, **kwargs)
