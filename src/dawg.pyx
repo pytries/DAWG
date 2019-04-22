@@ -1,20 +1,22 @@
+# distutils: language = c++
+# cython: language_level=2
 # cython: profile=False
 # cython: embedsignature=True
 from __future__ import unicode_literals
 from libcpp.string cimport string
 from libcpp.vector cimport vector
-from iostream cimport stringstream, istream, ostream, ifstream
-cimport iostream
+from src.iostream cimport stringstream, istream, ostream, ifstream
+cimport src.iostream as iostream
 
-cimport _dawg
-from _dawg_builder cimport DawgBuilder
-from _dictionary cimport Dictionary
-from _guide cimport Guide
-from _completer cimport Completer
-from _base_types cimport BaseType, SizeType, CharType
-cimport _guide_builder
-cimport _dictionary_builder
-cimport b64_decode
+cimport src._dawg as _dawg
+from src._dawg_builder cimport DawgBuilder
+from src._dictionary cimport Dictionary
+from src._guide cimport Guide
+from src._completer cimport Completer
+from src._base_types cimport BaseType, SizeType, CharType
+cimport src._guide_builder as _guide_builder
+cimport src._dictionary_builder as _dictionary_builder
+cimport src.b64_decode as b64_decode
 
 import collections
 import struct
@@ -346,7 +348,7 @@ cdef class CompletionDAWG(DAWG):
 
         return completer.Next()
 
-    cpdef bytes tobytes(self) except +:
+    cpdef bytes tobytes(self):
         """
         Return raw DAWG content as bytes.
         """
@@ -599,7 +601,7 @@ cdef class BytesDAWG(CompletionDAWG):
         while completer.Next():
             raw_key = <char*>completer.key()
 
-            for i in range(0, completer.length()):
+            for i in range(0, int(completer.length())):
                 if raw_key[i] == self._c_payload_separator:
                     break
 
@@ -640,7 +642,7 @@ cdef class BytesDAWG(CompletionDAWG):
         while completer.Next():
             raw_key = <char*>completer.key()
 
-            for i in range(0, completer.length()):
+            for i in range(0, int(completer.length())):
                 if raw_key[i] == self._c_payload_separator:
                     break
 
@@ -671,7 +673,7 @@ cdef class BytesDAWG(CompletionDAWG):
         while completer.Next():
             raw_key = <char*>completer.key()
 
-            for i in range(0, completer.length()):
+            for i in range(0, int(completer.length())):
                 if raw_key[i] == self._c_payload_separator:
                     break
 
@@ -695,7 +697,7 @@ cdef class BytesDAWG(CompletionDAWG):
         while completer.Next():
             raw_key = <char*>completer.key()
 
-            for i in range(0, completer.length()):
+            for i in range(0, int(completer.length())):
                 if raw_key[i] == self._c_payload_separator:
                     break
 

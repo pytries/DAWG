@@ -1,6 +1,7 @@
 #! /usr/bin/env python
 import glob
 from setuptools import setup, Extension
+from Cython.Build import cythonize
 
 setup(
     name="DAWG",
@@ -11,14 +12,14 @@ setup(
     author_email='kmike84@gmail.com',
     url='https://github.com/pytries/DAWG/',
 
-    ext_modules = [
+    ext_modules = cythonize(
         Extension(
             "dawg",
-            sources = glob.glob('src/*.cpp') + glob.glob('lib/b64/*.c'),
+            glob.glob('src/dawg.pyx') + glob.glob('lib/b64/*.c'),
             include_dirs=['lib'],
             language = "c++",
         )
-    ],
+    ),
 
     classifiers=[
         'Development Status :: 4 - Beta',
