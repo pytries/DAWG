@@ -6,17 +6,17 @@ setup(
     name="DAWG",
     version="0.7.8",
     description="Fast and memory efficient DAWG (DAFSA) for Python",
-    long_description = open('README.rst').read() +'\n\n' + open('CHANGES.rst').read(),
+    long_description=open('README.rst').read() + '\n\n' + open('CHANGES.rst').read(),
     author='Mikhail Korobov',
     author_email='kmike84@gmail.com',
     url='https://github.com/pytries/DAWG/',
 
-    ext_modules = [
+    ext_modules=[
         Extension(
             "dawg",
-            sources = glob.glob('src/*.cpp') + glob.glob('lib/b64/*.c'),
+            sources=glob.glob('src/*.cpp') + glob.glob('lib/b64/*.c'),
             include_dirs=['lib'],
-            language = "c++",
+            language="c++",
         )
     ],
 
