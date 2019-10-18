@@ -1,13 +1,17 @@
 language: python
-python:
-  - "3.4"
-  - "3.3"
-  - "3.2"
-  - "2.7"
-  - "2.6"
+
+matrix:
+  include:
+  - python: 3.5
+    env: TOXENV=py35
+  - python: 3.5
+    env: TOXENV=py35-locale
+  - python: 3.6
+    env: TOXENV=py36
+  - python: 3.7
+    env: TOXENV=py37
 
 install:
-  - python setup.py install
+- pip install -U tox
 
-# command to run tests, e.g. python setup.py test
-script: py.test
+script: tox
