@@ -13,7 +13,7 @@ it also provides fast advanced methods like prefix search.
 
 .. _DAFSA: https://en.wikipedia.org/wiki/Deterministic_acyclic_finite_state_automaton
 
-* Docs: http://dawg.readthedocs.org
+* Docs: https://dawg.readthedocs.org
 * Source code: https://github.com/pytries/DAWG
 * Issue tracker: https://github.com/pytries/DAWG/issues
 
