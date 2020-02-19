@@ -2,6 +2,13 @@
 Changes
 =======
 
+0.8.0 (2020-02-19)
+------------------
+
+* Python 3.8 support is added
+* Python 3.2, 3.3 and 3.4 support is dropped
+* Extension is rebuilt with Cython 0.29.15
+
 0.7.8 (2015-04-18)
 ------------------
 
