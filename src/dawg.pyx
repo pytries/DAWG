@@ -16,7 +16,11 @@ cimport _guide_builder
 cimport _dictionary_builder
 cimport b64_decode
 
-import collections
+try:
+    from collections.abc import Mapping
+except ImportError:
+    # Python 2.7
+    from collections import Mapping
 import struct
 import sys
 from binascii import b2a_base64
@@ -852,7 +856,7 @@ def _iterable_from_argument(arg):
     if arg is None:
         arg = []
 
-    if isinstance(arg, collections.Mapping):
+    if isinstance(arg, Mapping):
         return ((key, arg[key]) for key in arg)
     else:
         return arg
