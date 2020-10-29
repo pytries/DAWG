@@ -83,7 +83,12 @@ class TestDAWG(object):
         # if data is sorted according to unicode rules.
         dawg.DAWG([key1, key2])
 
-
+    def test_longest_prefix(self):
+        d = dawg.DAWG(["a", "as", "asdf"])
+        assert d.longest_prefix("a") == "a"
+        assert d.longest_prefix("as") == "as"
+        assert d.longest_prefix("asd") == "as"
+        assert d.longest_prefix("asdf") == "asdf"
 
 class TestIntDAWG(object):
 
@@ -147,6 +152,13 @@ class TestIntDAWG(object):
 
         with pytest.raises(OverflowError):
             self.IntDAWG({'f': 2**32-1})
+
+    def test_longest_prefix(self):
+        d = dawg.IntDAWG([("a", 1), ("as", 2), ("asdf", 3)])
+        assert d.longest_prefix("a") == ("a", 1)
+        assert d.longest_prefix("as") == ("as", 2)
+        assert d.longest_prefix("asd") == ("as", 2)
+        assert d.longest_prefix("asdf") == ("asdf", 3)
 
 
 class TestIntCompletionDAWG(TestIntDAWG):
