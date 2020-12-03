@@ -50,16 +50,21 @@ class Dictionary {
 
     SizeType size = static_cast<SizeType>(base_size);
     std::vector<DictionaryUnit> units_buf;
-    SizeType bufsize = 1000;
-    SizeType cur_idx = 0;
-    while (cur_idx < size) {
-      SizeType size_to_read = std::min(size, bufsize);
-      units_buf.resize(units_buf.size() + size_to_read);
-      if (!input->read(reinterpret_cast<char *>(&units_buf[cur_idx]),
+
+    // read the file in batches to avoid a corrupted file from asking to allocate
+    // a very large amount of memory
+    SizeType batch_size = 1000;
+    while( size > 0 ) {
+      SizeType size_to_read = std::min(size, batch_size);
+      SizeType cur_size = units_buf.size();
+      units_buf.resize(cur_size + size_to_read);
+      if (!input->read(reinterpret_cast<char *>(&units_buf[cur_size]),
                        sizeof(DictionaryUnit) * size_to_read)) {
         return false;
       }
-      cur_idx += size_to_read;
+      // subtract size_to_read (not batch_size)
+      // so size does not integer overflow on becoming negative
+      size -= size_to_read;
     }
 
     SwapUnitsBuf(&units_buf);
