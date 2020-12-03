@@ -49,10 +49,17 @@ class Dictionary {
     }
 
     SizeType size = static_cast<SizeType>(base_size);
-    std::vector<DictionaryUnit> units_buf(size);
-    if (!input->read(reinterpret_cast<char *>(&units_buf[0]),
-                     sizeof(DictionaryUnit) * size)) {
-      return false;
+    std::vector<DictionaryUnit> units_buf;
+    SizeType bufsize = 1000;
+    SizeType cur_idx = 0;
+    while (cur_idx < size) {
+      SizeType size_to_read = std::min(size, bufsize);
+      units_buf.resize(units_buf.size() + size_to_read);
+      if (!input->read(reinterpret_cast<char *>(&units_buf[cur_idx]),
+                       sizeof(DictionaryUnit) * size_to_read)) {
+        return false;
+      }
+      cur_idx += size_to_read;
     }
 
     SwapUnitsBuf(&units_buf);
