@@ -870,7 +870,7 @@ struct __pyx_opt_args_4dawg_7IntDAWG_get;
 struct __pyx_opt_args_4dawg_17IntCompletionDAWG_get;
 struct __pyx_opt_args_4dawg_17IntCompletionDAWG_items;
 
-/* "dawg.pyx":307
+/* "dawg.pyx":313
  *         self.guide.Clear()
  * 
  *     cpdef list keys(self, unicode prefix=""):             # <<<<<<<<<<<<<<
@@ -882,7 +882,7 @@ struct __pyx_opt_args_4dawg_14CompletionDAWG_keys {
   PyObject *prefix;
 };
 
-/* "dawg.pyx":526
+/* "dawg.pyx":532
  *         return res
  * 
  *     cpdef get(self, key, default=None):             # <<<<<<<<<<<<<<
@@ -894,7 +894,7 @@ struct __pyx_opt_args_4dawg_9BytesDAWG_get {
   PyObject *__pyx_default;
 };
 
-/* "dawg.pyx":582
+/* "dawg.pyx":588
  *         return self._value_for_index(index)
  * 
  *     cpdef list items(self, unicode prefix=""):             # <<<<<<<<<<<<<<
@@ -906,7 +906,7 @@ struct __pyx_opt_args_4dawg_9BytesDAWG_items {
   PyObject *prefix;
 };
 
-/* "dawg.pyx":661
+/* "dawg.pyx":667
  *             yield (u_key, value)
  * 
  *     cpdef list keys(self, unicode prefix=""):             # <<<<<<<<<<<<<<
@@ -918,7 +918,7 @@ struct __pyx_opt_args_4dawg_9BytesDAWG_keys {
   PyObject *prefix;
 };
 
-/* "dawg.pyx":846
+/* "dawg.pyx":852
  *         return [self._struct.unpack(val) for val in value]
  * 
  *     cpdef list items(self, unicode prefix=""):             # <<<<<<<<<<<<<<
@@ -930,7 +930,7 @@ struct __pyx_opt_args_4dawg_10RecordDAWG_items {
   PyObject *prefix;
 };
 
-/* "dawg.pyx":885
+/* "dawg.pyx":891
  *         return res
  * 
  *     cpdef get(self, key, default=None):             # <<<<<<<<<<<<<<
@@ -942,7 +942,7 @@ struct __pyx_opt_args_4dawg_7IntDAWG_get {
   PyObject *__pyx_default;
 };
 
-/* "dawg.pyx":929
+/* "dawg.pyx":935
  *         return res
  * 
  *     cpdef get(self, key, default=None):             # <<<<<<<<<<<<<<
@@ -954,7 +954,7 @@ struct __pyx_opt_args_4dawg_17IntCompletionDAWG_get {
   PyObject *__pyx_default;
 };
 
-/* "dawg.pyx":951
+/* "dawg.pyx":957
  *         return self.dct.Find(key)
  * 
  *     cpdef list items(self, unicode prefix=""):             # <<<<<<<<<<<<<<
@@ -981,7 +981,7 @@ struct __pyx_obj_4dawg_DAWG {
 };
 
 
-/* "dawg.pyx":293
+/* "dawg.pyx":299
  * 
  * 
  * cdef class CompletionDAWG(DAWG):             # <<<<<<<<<<<<<<
@@ -994,7 +994,7 @@ struct __pyx_obj_4dawg_CompletionDAWG {
 };
 
 
-/* "dawg.pyx":460
+/* "dawg.pyx":466
  * DEF MAX_VALUE_SIZE = 32768
  * 
  * cdef class BytesDAWG(CompletionDAWG):             # <<<<<<<<<<<<<<
@@ -1009,7 +1009,7 @@ struct __pyx_obj_4dawg_BytesDAWG {
 };
 
 
-/* "dawg.pyx":807
+/* "dawg.pyx":813
  * 
  * 
  * cdef class RecordDAWG(BytesDAWG):             # <<<<<<<<<<<<<<
@@ -1022,7 +1022,7 @@ struct __pyx_obj_4dawg_RecordDAWG {
 };
 
 
-/* "dawg.pyx":866
+/* "dawg.pyx":872
  * DEF LOOKUP_ERROR = -1
  * 
  * cdef class IntDAWG(DAWG):             # <<<<<<<<<<<<<<
@@ -1034,7 +1034,7 @@ struct __pyx_obj_4dawg_IntDAWG {
 };
 
 
-/* "dawg.pyx":909
+/* "dawg.pyx":915
  * 
  * # FIXME: code duplication.
  * cdef class IntCompletionDAWG(CompletionDAWG):             # <<<<<<<<<<<<<<
@@ -1046,7 +1046,7 @@ struct __pyx_obj_4dawg_IntCompletionDAWG {
 };
 
 
-/* "dawg.pyx":256
+/* "dawg.pyx":262
  *         return res
  * 
  *     def iterprefixes(self, unicode key):             # <<<<<<<<<<<<<<
@@ -1069,7 +1069,7 @@ struct __pyx_obj_4dawg___pyx_scope_struct__iterprefixes {
 };
 
 
-/* "dawg.pyx":273
+/* "dawg.pyx":279
  * 
  *     @classmethod
  *     def compile_replaces(cls, replaces):             # <<<<<<<<<<<<<<
@@ -1082,7 +1082,7 @@ struct __pyx_obj_4dawg___pyx_scope_struct_1_compile_replaces {
 };
 
 
-/* "dawg.pyx":281
+/* "dawg.pyx":287
  *         return dict(
  *             (
  *                 k.encode('utf8'),             # <<<<<<<<<<<<<<
@@ -1097,7 +1097,7 @@ struct __pyx_obj_4dawg___pyx_scope_struct_2_genexpr {
 };
 
 
-/* "dawg.pyx":325
+/* "dawg.pyx":331
  *         return res
  * 
  *     def iterkeys(self, unicode prefix=""):             # <<<<<<<<<<<<<<
@@ -1115,7 +1115,7 @@ struct __pyx_obj_4dawg___pyx_scope_struct_3_iterkeys {
 };
 
 
-/* "dawg.pyx":473
+/* "dawg.pyx":479
  *     cdef Completer* _completer
  * 
  *     def __init__(self, arg=None, input_is_sorted=False, bytes payload_separator=PAYLOAD_SEPARATOR):             # <<<<<<<<<<<<<<
@@ -1129,7 +1129,7 @@ struct __pyx_obj_4dawg___pyx_scope_struct_4___init__ {
 };
 
 
-/* "dawg.pyx":483
+/* "dawg.pyx":489
  *         self._c_payload_separator = <unsigned int>ord(payload_separator)
  * 
  *         keys = (self._raw_key(d[0], d[1]) for d in arg)             # <<<<<<<<<<<<<<
@@ -1146,7 +1146,7 @@ struct __pyx_obj_4dawg___pyx_scope_struct_5_genexpr {
 };
 
 
-/* "dawg.pyx":624
+/* "dawg.pyx":630
  *         return res
  * 
  *     def iteritems(self, unicode prefix=""):             # <<<<<<<<<<<<<<
@@ -1172,7 +1172,7 @@ struct __pyx_obj_4dawg___pyx_scope_struct_6_iteritems {
 };
 
 
-/* "dawg.pyx":686
+/* "dawg.pyx":692
  *         return res
  * 
  *     def iterkeys(self, unicode prefix=""):             # <<<<<<<<<<<<<<
@@ -1192,7 +1192,7 @@ struct __pyx_obj_4dawg___pyx_scope_struct_7_iterkeys {
 };
 
 
-/* "dawg.pyx":824
+/* "dawg.pyx":830
  *     cdef _struct
  * 
  *     def __init__(self, fmt, arg=None, input_is_sorted=False, bytes payload_separator=PAYLOAD_SEPARATOR):             # <<<<<<<<<<<<<<
@@ -1206,7 +1206,7 @@ struct __pyx_obj_4dawg___pyx_scope_struct_8___init__ {
 };
 
 
-/* "dawg.pyx":839
+/* "dawg.pyx":845
  *             arg = []
  * 
  *         keys = ((d[0], self._struct.pack(*d[1])) for d in arg)             # <<<<<<<<<<<<<<
@@ -1223,7 +1223,7 @@ struct __pyx_obj_4dawg___pyx_scope_struct_9_genexpr {
 };
 
 
-/* "dawg.pyx":850
+/* "dawg.pyx":856
  *         return [(key, self._struct.unpack(val)) for (key, val) in items]
  * 
  *     def iteritems(self, unicode prefix=""):             # <<<<<<<<<<<<<<
@@ -1242,7 +1242,7 @@ struct __pyx_obj_4dawg___pyx_scope_struct_10_iteritems {
 };
 
 
-/* "dawg.pyx":855
+/* "dawg.pyx":861
  * 
  * 
  * def _iterable_from_argument(arg):             # <<<<<<<<<<<<<<
@@ -1255,7 +1255,7 @@ struct __pyx_obj_4dawg___pyx_scope_struct_11__iterable_from_argument {
 };
 
 
-/* "dawg.pyx":860
+/* "dawg.pyx":866
  * 
  *     if isinstance(arg, Mapping):
  *         return ((key, arg[key]) for key in arg)             # <<<<<<<<<<<<<<
@@ -1272,7 +1272,7 @@ struct __pyx_obj_4dawg___pyx_scope_struct_12_genexpr {
 };
 
 
-/* "dawg.pyx":971
+/* "dawg.pyx":977
  *         return res
  * 
  *     def iteritems(self, unicode prefix=""):             # <<<<<<<<<<<<<<
@@ -1314,7 +1314,7 @@ struct __pyx_vtabstruct_4dawg_DAWG {
 static struct __pyx_vtabstruct_4dawg_DAWG *__pyx_vtabptr_4dawg_DAWG;
 
 
-/* "dawg.pyx":293
+/* "dawg.pyx":299
  * 
  * 
  * cdef class CompletionDAWG(DAWG):             # <<<<<<<<<<<<<<
@@ -1329,7 +1329,7 @@ struct __pyx_vtabstruct_4dawg_CompletionDAWG {
 static struct __pyx_vtabstruct_4dawg_CompletionDAWG *__pyx_vtabptr_4dawg_CompletionDAWG;
 
 
-/* "dawg.pyx":460
+/* "dawg.pyx":466
  * DEF MAX_VALUE_SIZE = 32768
  * 
  * cdef class BytesDAWG(CompletionDAWG):             # <<<<<<<<<<<<<<
@@ -1355,7 +1355,7 @@ struct __pyx_vtabstruct_4dawg_BytesDAWG {
 static struct __pyx_vtabstruct_4dawg_BytesDAWG *__pyx_vtabptr_4dawg_BytesDAWG;
 
 
-/* "dawg.pyx":807
+/* "dawg.pyx":813
  * 
  * 
  * cdef class RecordDAWG(BytesDAWG):             # <<<<<<<<<<<<<<
@@ -1369,7 +1369,7 @@ struct __pyx_vtabstruct_4dawg_RecordDAWG {
 static struct __pyx_vtabstruct_4dawg_RecordDAWG *__pyx_vtabptr_4dawg_RecordDAWG;
 
 
-/* "dawg.pyx":866
+/* "dawg.pyx":872
  * DEF LOOKUP_ERROR = -1
  * 
  * cdef class IntDAWG(DAWG):             # <<<<<<<<<<<<<<
@@ -1386,7 +1386,7 @@ struct __pyx_vtabstruct_4dawg_IntDAWG {
 static struct __pyx_vtabstruct_4dawg_IntDAWG *__pyx_vtabptr_4dawg_IntDAWG;
 
 
-/* "dawg.pyx":909
+/* "dawg.pyx":915
  * 
  * # FIXME: code duplication.
  * cdef class IntCompletionDAWG(CompletionDAWG):             # <<<<<<<<<<<<<<
@@ -1989,6 +1989,9 @@ static void __Pyx_AddTraceback(const char *funcname, int c_line,
 /* None.proto */
 #include <new>
 
+/* CIntToPy.proto */
+static CYTHON_INLINE PyObject* __Pyx_PyInt_From_dawgdic_3a__3a_SizeType(dawgdic::SizeType value);
+
 /* CppExceptionConversion.proto */
 #ifndef __Pyx_CppExn2PyErr
 #include <new>
@@ -2030,9 +2033,6 @@ static void __Pyx_CppExn2PyErr() {
   }
 }
 #endif
-
-/* CIntToPy.proto */
-static CYTHON_INLINE PyObject* __Pyx_PyInt_From_dawgdic_3a__3a_SizeType(dawgdic::SizeType value);
 
 /* CIntToPy.proto */
 static CYTHON_INLINE PyObject* __Pyx_PyInt_From_int(int value);
@@ -2270,10 +2270,10 @@ int __pyx_module_is_main_dawg = 0;
 
 /* Implementation of 'dawg' */
 static PyObject *__pyx_builtin_ImportError;
+static PyObject *__pyx_builtin_super;
 static PyObject *__pyx_builtin_ValueError;
 static PyObject *__pyx_builtin_IOError;
 static PyObject *__pyx_builtin_open;
-static PyObject *__pyx_builtin_super;
 static PyObject *__pyx_builtin_range;
 static PyObject *__pyx_builtin_KeyError;
 static const char __pyx_k__2[] = ")";
@@ -2319,6 +2319,7 @@ static const char __pyx_k_encode[] = "encode";
 static const char __pyx_k_import[] = "__import__";
 static const char __pyx_k_module[] = "__module__";
 static const char __pyx_k_prefix[] = "prefix";
+static const char __pyx_k_sizeof[] = "__sizeof__";
 static const char __pyx_k_struct[] = "struct";
 static const char __pyx_k_unpack[] = "unpack";
 static const char __pyx_k_IOError[] = "IOError";
@@ -2487,6 +2488,7 @@ static PyObject *__pyx_n_s_send;
 static PyObject *__pyx_n_s_similar_item_values;
 static PyObject *__pyx_n_s_similar_items;
 static PyObject *__pyx_n_s_similar_keys;
+static PyObject *__pyx_n_s_sizeof;
 static PyObject *__pyx_n_s_sort;
 static PyObject *__pyx_kp_s_src_dawg_pyx;
 static PyObject *__pyx_n_s_struct;
@@ -2502,27 +2504,29 @@ static PyObject *__pyx_kp_u_with_value;
 static PyObject *__pyx_n_s_write;
 static int __pyx_pf_4dawg_4DAWG___init__(struct __pyx_obj_4dawg_DAWG *__pyx_v_self, PyObject *__pyx_v_arg, PyObject *__pyx_v_input_is_sorted); /* proto */
 static void __pyx_pf_4dawg_4DAWG_2__dealloc__(struct __pyx_obj_4dawg_DAWG *__pyx_v_self); /* proto */
-static PyObject *__pyx_pf_4dawg_4DAWG_4_build_from_iterable(struct __pyx_obj_4dawg_DAWG *__pyx_v_self, PyObject *__pyx_v_iterable); /* proto */
-static int __pyx_pf_4dawg_4DAWG_6__contains__(struct __pyx_obj_4dawg_DAWG *__pyx_v_self, PyObject *__pyx_v_key); /* proto */
-static PyObject *__pyx_pf_4dawg_4DAWG_8has_key(struct __pyx_obj_4dawg_DAWG *__pyx_v_self, PyObject *__pyx_v_key); /* proto */
-static PyObject *__pyx_pf_4dawg_4DAWG_10b_has_key(struct __pyx_obj_4dawg_DAWG *__pyx_v_self, PyObject *__pyx_v_key); /* proto */
-static PyObject *__pyx_pf_4dawg_4DAWG_12tobytes(struct __pyx_obj_4dawg_DAWG *__pyx_v_self); /* proto */
-static PyObject *__pyx_pf_4dawg_4DAWG_14frombytes(struct __pyx_obj_4dawg_DAWG *__pyx_v_self, PyObject *__pyx_v_data); /* proto */
-static PyObject *__pyx_pf_4dawg_4DAWG_16read(struct __pyx_obj_4dawg_DAWG *__pyx_v_self, PyObject *__pyx_v_f); /* proto */
-static PyObject *__pyx_pf_4dawg_4DAWG_18write(struct __pyx_obj_4dawg_DAWG *__pyx_v_self, PyObject *__pyx_v_f); /* proto */
-static PyObject *__pyx_pf_4dawg_4DAWG_20load(struct __pyx_obj_4dawg_DAWG *__pyx_v_self, PyObject *__pyx_v_path); /* proto */
-static PyObject *__pyx_pf_4dawg_4DAWG_22save(struct __pyx_obj_4dawg_DAWG *__pyx_v_self, PyObject *__pyx_v_path); /* proto */
-static PyObject *__pyx_pf_4dawg_4DAWG_24__reduce__(struct __pyx_obj_4dawg_DAWG *__pyx_v_self); /* proto */
-static PyObject *__pyx_pf_4dawg_4DAWG_26__setstate__(struct __pyx_obj_4dawg_DAWG *__pyx_v_self, PyObject *__pyx_v_state); /* proto */
-static PyObject *__pyx_pf_4dawg_4DAWG_28_size(struct __pyx_obj_4dawg_DAWG *__pyx_v_self); /* proto */
-static PyObject *__pyx_pf_4dawg_4DAWG_30_total_size(struct __pyx_obj_4dawg_DAWG *__pyx_v_self); /* proto */
-static PyObject *__pyx_pf_4dawg_4DAWG_32_file_size(struct __pyx_obj_4dawg_DAWG *__pyx_v_self); /* proto */
-static PyObject *__pyx_pf_4dawg_4DAWG_34similar_keys(struct __pyx_obj_4dawg_DAWG *__pyx_v_self, PyObject *__pyx_v_key, PyObject *__pyx_v_replaces); /* proto */
-static PyObject *__pyx_pf_4dawg_4DAWG_36prefixes(struct __pyx_obj_4dawg_DAWG *__pyx_v_self, PyObject *__pyx_v_key); /* proto */
-static PyObject *__pyx_pf_4dawg_4DAWG_38b_prefixes(struct __pyx_obj_4dawg_DAWG *__pyx_v_self, PyObject *__pyx_v_b_key); /* proto */
-static PyObject *__pyx_pf_4dawg_4DAWG_40iterprefixes(struct __pyx_obj_4dawg_DAWG *__pyx_v_self, PyObject *__pyx_v_key); /* proto */
+static PyObject *__pyx_pf_4dawg_4DAWG_4__sizeof__(struct __pyx_obj_4dawg_DAWG *__pyx_v_self); /* proto */
+static PyObject *__pyx_pf_4dawg_4DAWG_6_build_from_iterable(struct __pyx_obj_4dawg_DAWG *__pyx_v_self, PyObject *__pyx_v_iterable); /* proto */
+static Py_ssize_t __pyx_pf_4dawg_4DAWG_8__len__(struct __pyx_obj_4dawg_DAWG *__pyx_v_self); /* proto */
+static int __pyx_pf_4dawg_4DAWG_10__contains__(struct __pyx_obj_4dawg_DAWG *__pyx_v_self, PyObject *__pyx_v_key); /* proto */
+static PyObject *__pyx_pf_4dawg_4DAWG_12has_key(struct __pyx_obj_4dawg_DAWG *__pyx_v_self, PyObject *__pyx_v_key); /* proto */
+static PyObject *__pyx_pf_4dawg_4DAWG_14b_has_key(struct __pyx_obj_4dawg_DAWG *__pyx_v_self, PyObject *__pyx_v_key); /* proto */
+static PyObject *__pyx_pf_4dawg_4DAWG_16tobytes(struct __pyx_obj_4dawg_DAWG *__pyx_v_self); /* proto */
+static PyObject *__pyx_pf_4dawg_4DAWG_18frombytes(struct __pyx_obj_4dawg_DAWG *__pyx_v_self, PyObject *__pyx_v_data); /* proto */
+static PyObject *__pyx_pf_4dawg_4DAWG_20read(struct __pyx_obj_4dawg_DAWG *__pyx_v_self, PyObject *__pyx_v_f); /* proto */
+static PyObject *__pyx_pf_4dawg_4DAWG_22write(struct __pyx_obj_4dawg_DAWG *__pyx_v_self, PyObject *__pyx_v_f); /* proto */
+static PyObject *__pyx_pf_4dawg_4DAWG_24load(struct __pyx_obj_4dawg_DAWG *__pyx_v_self, PyObject *__pyx_v_path); /* proto */
+static PyObject *__pyx_pf_4dawg_4DAWG_26save(struct __pyx_obj_4dawg_DAWG *__pyx_v_self, PyObject *__pyx_v_path); /* proto */
+static PyObject *__pyx_pf_4dawg_4DAWG_28__reduce__(struct __pyx_obj_4dawg_DAWG *__pyx_v_self); /* proto */
+static PyObject *__pyx_pf_4dawg_4DAWG_30__setstate__(struct __pyx_obj_4dawg_DAWG *__pyx_v_self, PyObject *__pyx_v_state); /* proto */
+static PyObject *__pyx_pf_4dawg_4DAWG_32_size(struct __pyx_obj_4dawg_DAWG *__pyx_v_self); /* proto */
+static PyObject *__pyx_pf_4dawg_4DAWG_34_total_size(struct __pyx_obj_4dawg_DAWG *__pyx_v_self); /* proto */
+static PyObject *__pyx_pf_4dawg_4DAWG_36_file_size(struct __pyx_obj_4dawg_DAWG *__pyx_v_self); /* proto */
+static PyObject *__pyx_pf_4dawg_4DAWG_38similar_keys(struct __pyx_obj_4dawg_DAWG *__pyx_v_self, PyObject *__pyx_v_key, PyObject *__pyx_v_replaces); /* proto */
+static PyObject *__pyx_pf_4dawg_4DAWG_40prefixes(struct __pyx_obj_4dawg_DAWG *__pyx_v_self, PyObject *__pyx_v_key); /* proto */
+static PyObject *__pyx_pf_4dawg_4DAWG_42b_prefixes(struct __pyx_obj_4dawg_DAWG *__pyx_v_self, PyObject *__pyx_v_b_key); /* proto */
+static PyObject *__pyx_pf_4dawg_4DAWG_44iterprefixes(struct __pyx_obj_4dawg_DAWG *__pyx_v_self, PyObject *__pyx_v_key); /* proto */
 static PyObject *__pyx_pf_4dawg_4DAWG_16compile_replaces_genexpr(PyObject *__pyx_self); /* proto */
-static PyObject *__pyx_pf_4dawg_4DAWG_43compile_replaces(CYTHON_UNUSED PyTypeObject *__pyx_v_cls, PyObject *__pyx_v_replaces); /* proto */
+static PyObject *__pyx_pf_4dawg_4DAWG_47compile_replaces(CYTHON_UNUSED PyTypeObject *__pyx_v_cls, PyObject *__pyx_v_replaces); /* proto */
 static int __pyx_pf_4dawg_14CompletionDAWG___init__(struct __pyx_obj_4dawg_CompletionDAWG *__pyx_v_self, PyObject *__pyx_v_arg, PyObject *__pyx_v_input_is_sorted); /* proto */
 static void __pyx_pf_4dawg_14CompletionDAWG_2__dealloc__(struct __pyx_obj_4dawg_CompletionDAWG *__pyx_v_self); /* proto */
 static PyObject *__pyx_pf_4dawg_14CompletionDAWG_4keys(struct __pyx_obj_4dawg_CompletionDAWG *__pyx_v_self, PyObject *__pyx_v_prefix); /* proto */
@@ -2954,7 +2958,7 @@ static void __pyx_pf_4dawg_4DAWG_2__dealloc__(struct __pyx_obj_4dawg_DAWG *__pyx
  *         self.dct.Clear()
  *         self.dawg.Clear()             # <<<<<<<<<<<<<<
  * 
- *     def _build_from_iterable(self, iterable):
+ *     def __sizeof__(self):
  */
   __pyx_v_self->dawg.Clear();
 
@@ -2973,26 +2977,124 @@ static void __pyx_pf_4dawg_4DAWG_2__dealloc__(struct __pyx_obj_4dawg_DAWG *__pyx
 /* "dawg.pyx":55
  *         self.dawg.Clear()
  * 
- *     def _build_from_iterable(self, iterable):             # <<<<<<<<<<<<<<
- *         cdef DawgBuilder dawg_builder
- *         cdef bytes b_key
+ *     def __sizeof__(self):             # <<<<<<<<<<<<<<
+ *         return super(DAWG, self).__sizeof__() + self.dct.total_size()
+ * 
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_4dawg_4DAWG_5_build_from_iterable(PyObject *__pyx_v_self, PyObject *__pyx_v_iterable); /*proto*/
-static char __pyx_doc_4dawg_4DAWG_4_build_from_iterable[] = "DAWG._build_from_iterable(self, iterable)";
-static PyObject *__pyx_pw_4dawg_4DAWG_5_build_from_iterable(PyObject *__pyx_v_self, PyObject *__pyx_v_iterable) {
+static PyObject *__pyx_pw_4dawg_4DAWG_5__sizeof__(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused); /*proto*/
+static char __pyx_doc_4dawg_4DAWG_4__sizeof__[] = "DAWG.__sizeof__(self)";
+static PyObject *__pyx_pw_4dawg_4DAWG_5__sizeof__(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused) {
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
-  __Pyx_RefNannySetupContext("_build_from_iterable (wrapper)", 0);
-  __pyx_r = __pyx_pf_4dawg_4DAWG_4_build_from_iterable(((struct __pyx_obj_4dawg_DAWG *)__pyx_v_self), ((PyObject *)__pyx_v_iterable));
+  __Pyx_RefNannySetupContext("__sizeof__ (wrapper)", 0);
+  __pyx_r = __pyx_pf_4dawg_4DAWG_4__sizeof__(((struct __pyx_obj_4dawg_DAWG *)__pyx_v_self));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_4dawg_4DAWG_4_build_from_iterable(struct __pyx_obj_4dawg_DAWG *__pyx_v_self, PyObject *__pyx_v_iterable) {
+static PyObject *__pyx_pf_4dawg_4DAWG_4__sizeof__(struct __pyx_obj_4dawg_DAWG *__pyx_v_self) {
+  PyObject *__pyx_r = NULL;
+  __Pyx_RefNannyDeclarations
+  PyObject *__pyx_t_1 = NULL;
+  PyObject *__pyx_t_2 = NULL;
+  PyObject *__pyx_t_3 = NULL;
+  __Pyx_RefNannySetupContext("__sizeof__", 0);
+
+  /* "dawg.pyx":56
+ * 
+ *     def __sizeof__(self):
+ *         return super(DAWG, self).__sizeof__() + self.dct.total_size()             # <<<<<<<<<<<<<<
+ * 
+ *     def _build_from_iterable(self, iterable):
+ */
+  __Pyx_XDECREF(__pyx_r);
+  __pyx_t_2 = PyTuple_New(2); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 56, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_2);
+  __Pyx_INCREF(((PyObject *)__pyx_ptype_4dawg_DAWG));
+  __Pyx_GIVEREF(((PyObject *)__pyx_ptype_4dawg_DAWG));
+  PyTuple_SET_ITEM(__pyx_t_2, 0, ((PyObject *)__pyx_ptype_4dawg_DAWG));
+  __Pyx_INCREF(((PyObject *)__pyx_v_self));
+  __Pyx_GIVEREF(((PyObject *)__pyx_v_self));
+  PyTuple_SET_ITEM(__pyx_t_2, 1, ((PyObject *)__pyx_v_self));
+  __pyx_t_3 = __Pyx_PyObject_Call(__pyx_builtin_super, __pyx_t_2, NULL); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 56, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_3);
+  __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
+  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_sizeof); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 56, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_2);
+  __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
+  __pyx_t_3 = NULL;
+  if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_2))) {
+    __pyx_t_3 = PyMethod_GET_SELF(__pyx_t_2);
+    if (likely(__pyx_t_3)) {
+      PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_2);
+      __Pyx_INCREF(__pyx_t_3);
+      __Pyx_INCREF(function);
+      __Pyx_DECREF_SET(__pyx_t_2, function);
+    }
+  }
+  __pyx_t_1 = (__pyx_t_3) ? __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_t_3) : __Pyx_PyObject_CallNoArg(__pyx_t_2);
+  __Pyx_XDECREF(__pyx_t_3); __pyx_t_3 = 0;
+  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 56, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_1);
+  __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
+  __pyx_t_2 = __Pyx_PyInt_From_dawgdic_3a__3a_SizeType(__pyx_v_self->dct.total_size()); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 56, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_2);
+  __pyx_t_3 = PyNumber_Add(__pyx_t_1, __pyx_t_2); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 56, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_3);
+  __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+  __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
+  __pyx_r = __pyx_t_3;
+  __pyx_t_3 = 0;
+  goto __pyx_L0;
+
+  /* "dawg.pyx":55
+ *         self.dawg.Clear()
+ * 
+ *     def __sizeof__(self):             # <<<<<<<<<<<<<<
+ *         return super(DAWG, self).__sizeof__() + self.dct.total_size()
+ * 
+ */
+
+  /* function exit code */
+  __pyx_L1_error:;
+  __Pyx_XDECREF(__pyx_t_1);
+  __Pyx_XDECREF(__pyx_t_2);
+  __Pyx_XDECREF(__pyx_t_3);
+  __Pyx_AddTraceback("dawg.DAWG.__sizeof__", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __pyx_r = NULL;
+  __pyx_L0:;
+  __Pyx_XGIVEREF(__pyx_r);
+  __Pyx_RefNannyFinishContext();
+  return __pyx_r;
+}
+
+/* "dawg.pyx":58
+ *         return super(DAWG, self).__sizeof__() + self.dct.total_size()
+ * 
+ *     def _build_from_iterable(self, iterable):             # <<<<<<<<<<<<<<
+ *         cdef DawgBuilder dawg_builder
+ *         cdef bytes b_key
+ */
+
+/* Python wrapper */
+static PyObject *__pyx_pw_4dawg_4DAWG_7_build_from_iterable(PyObject *__pyx_v_self, PyObject *__pyx_v_iterable); /*proto*/
+static char __pyx_doc_4dawg_4DAWG_6_build_from_iterable[] = "DAWG._build_from_iterable(self, iterable)";
+static PyObject *__pyx_pw_4dawg_4DAWG_7_build_from_iterable(PyObject *__pyx_v_self, PyObject *__pyx_v_iterable) {
+  PyObject *__pyx_r = 0;
+  __Pyx_RefNannyDeclarations
+  __Pyx_RefNannySetupContext("_build_from_iterable (wrapper)", 0);
+  __pyx_r = __pyx_pf_4dawg_4DAWG_6_build_from_iterable(((struct __pyx_obj_4dawg_DAWG *)__pyx_v_self), ((PyObject *)__pyx_v_iterable));
+
+  /* function exit code */
+  __Pyx_RefNannyFinishContext();
+  return __pyx_r;
+}
+
+static PyObject *__pyx_pf_4dawg_4DAWG_6_build_from_iterable(struct __pyx_obj_4dawg_DAWG *__pyx_v_self, PyObject *__pyx_v_iterable) {
   dawgdic::DawgBuilder __pyx_v_dawg_builder;
   PyObject *__pyx_v_b_key = 0;
   int __pyx_v_value;
@@ -3016,7 +3118,7 @@ static PyObject *__pyx_pf_4dawg_4DAWG_4_build_from_iterable(struct __pyx_obj_4da
   PyObject *__pyx_t_15 = NULL;
   __Pyx_RefNannySetupContext("_build_from_iterable", 0);
 
-  /* "dawg.pyx":60
+  /* "dawg.pyx":63
  *         cdef int value
  * 
  *         for key in iterable:             # <<<<<<<<<<<<<<
@@ -3027,26 +3129,26 @@ static PyObject *__pyx_pf_4dawg_4DAWG_4_build_from_iterable(struct __pyx_obj_4da
     __pyx_t_1 = __pyx_v_iterable; __Pyx_INCREF(__pyx_t_1); __pyx_t_2 = 0;
     __pyx_t_3 = NULL;
   } else {
-    __pyx_t_2 = -1; __pyx_t_1 = PyObject_GetIter(__pyx_v_iterable); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 60, __pyx_L1_error)
+    __pyx_t_2 = -1; __pyx_t_1 = PyObject_GetIter(__pyx_v_iterable); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 63, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
-    __pyx_t_3 = Py_TYPE(__pyx_t_1)->tp_iternext; if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 60, __pyx_L1_error)
+    __pyx_t_3 = Py_TYPE(__pyx_t_1)->tp_iternext; if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 63, __pyx_L1_error)
   }
   for (;;) {
     if (likely(!__pyx_t_3)) {
       if (likely(PyList_CheckExact(__pyx_t_1))) {
         if (__pyx_t_2 >= PyList_GET_SIZE(__pyx_t_1)) break;
         #if CYTHON_ASSUME_SAFE_MACROS && !CYTHON_AVOID_BORROWED_REFS
-        __pyx_t_4 = PyList_GET_ITEM(__pyx_t_1, __pyx_t_2); __Pyx_INCREF(__pyx_t_4); __pyx_t_2++; if (unlikely(0 < 0)) __PYX_ERR(0, 60, __pyx_L1_error)
+        __pyx_t_4 = PyList_GET_ITEM(__pyx_t_1, __pyx_t_2); __Pyx_INCREF(__pyx_t_4); __pyx_t_2++; if (unlikely(0 < 0)) __PYX_ERR(0, 63, __pyx_L1_error)
         #else
-        __pyx_t_4 = PySequence_ITEM(__pyx_t_1, __pyx_t_2); __pyx_t_2++; if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 60, __pyx_L1_error)
+        __pyx_t_4 = PySequence_ITEM(__pyx_t_1, __pyx_t_2); __pyx_t_2++; if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 63, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_4);
         #endif
       } else {
         if (__pyx_t_2 >= PyTuple_GET_SIZE(__pyx_t_1)) break;
         #if CYTHON_ASSUME_SAFE_MACROS && !CYTHON_AVOID_BORROWED_REFS
-        __pyx_t_4 = PyTuple_GET_ITEM(__pyx_t_1, __pyx_t_2); __Pyx_INCREF(__pyx_t_4); __pyx_t_2++; if (unlikely(0 < 0)) __PYX_ERR(0, 60, __pyx_L1_error)
+        __pyx_t_4 = PyTuple_GET_ITEM(__pyx_t_1, __pyx_t_2); __Pyx_INCREF(__pyx_t_4); __pyx_t_2++; if (unlikely(0 < 0)) __PYX_ERR(0, 63, __pyx_L1_error)
         #else
-        __pyx_t_4 = PySequence_ITEM(__pyx_t_1, __pyx_t_2); __pyx_t_2++; if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 60, __pyx_L1_error)
+        __pyx_t_4 = PySequence_ITEM(__pyx_t_1, __pyx_t_2); __pyx_t_2++; if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 63, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_4);
         #endif
       }
@@ -3056,7 +3158,7 @@ static PyObject *__pyx_pf_4dawg_4DAWG_4_build_from_iterable(struct __pyx_obj_4da
         PyObject* exc_type = PyErr_Occurred();
         if (exc_type) {
           if (likely(__Pyx_PyErr_GivenExceptionMatches(exc_type, PyExc_StopIteration))) PyErr_Clear();
-          else __PYX_ERR(0, 60, __pyx_L1_error)
+          else __PYX_ERR(0, 63, __pyx_L1_error)
         }
         break;
       }
@@ -3065,7 +3167,7 @@ static PyObject *__pyx_pf_4dawg_4DAWG_4_build_from_iterable(struct __pyx_obj_4da
     __Pyx_XDECREF_SET(__pyx_v_key, __pyx_t_4);
     __pyx_t_4 = 0;
 
-    /* "dawg.pyx":61
+    /* "dawg.pyx":64
  * 
  *         for key in iterable:
  *             if isinstance(key, tuple) or isinstance(key, list):             # <<<<<<<<<<<<<<
@@ -3085,7 +3187,7 @@ static PyObject *__pyx_pf_4dawg_4DAWG_4_build_from_iterable(struct __pyx_obj_4da
     __pyx_L6_bool_binop_done:;
     if (__pyx_t_5) {
 
-      /* "dawg.pyx":62
+      /* "dawg.pyx":65
  *         for key in iterable:
  *             if isinstance(key, tuple) or isinstance(key, list):
  *                 key, value = key             # <<<<<<<<<<<<<<
@@ -3098,7 +3200,7 @@ static PyObject *__pyx_pf_4dawg_4DAWG_4_build_from_iterable(struct __pyx_obj_4da
         if (unlikely(size != 2)) {
           if (size > 2) __Pyx_RaiseTooManyValuesError(2);
           else if (size >= 0) __Pyx_RaiseNeedMoreValuesError(size);
-          __PYX_ERR(0, 62, __pyx_L1_error)
+          __PYX_ERR(0, 65, __pyx_L1_error)
         }
         #if CYTHON_ASSUME_SAFE_MACROS && !CYTHON_AVOID_BORROWED_REFS
         if (likely(PyTuple_CheckExact(sequence))) {
@@ -3111,21 +3213,21 @@ static PyObject *__pyx_pf_4dawg_4DAWG_4_build_from_iterable(struct __pyx_obj_4da
         __Pyx_INCREF(__pyx_t_4);
         __Pyx_INCREF(__pyx_t_8);
         #else
-        __pyx_t_4 = PySequence_ITEM(sequence, 0); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 62, __pyx_L1_error)
+        __pyx_t_4 = PySequence_ITEM(sequence, 0); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 65, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_4);
-        __pyx_t_8 = PySequence_ITEM(sequence, 1); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 62, __pyx_L1_error)
+        __pyx_t_8 = PySequence_ITEM(sequence, 1); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 65, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_8);
         #endif
       } else {
         Py_ssize_t index = -1;
-        __pyx_t_9 = PyObject_GetIter(__pyx_v_key); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 62, __pyx_L1_error)
+        __pyx_t_9 = PyObject_GetIter(__pyx_v_key); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 65, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_9);
         __pyx_t_10 = Py_TYPE(__pyx_t_9)->tp_iternext;
         index = 0; __pyx_t_4 = __pyx_t_10(__pyx_t_9); if (unlikely(!__pyx_t_4)) goto __pyx_L8_unpacking_failed;
         __Pyx_GOTREF(__pyx_t_4);
         index = 1; __pyx_t_8 = __pyx_t_10(__pyx_t_9); if (unlikely(!__pyx_t_8)) goto __pyx_L8_unpacking_failed;
         __Pyx_GOTREF(__pyx_t_8);
-        if (__Pyx_IternextUnpackEndCheck(__pyx_t_10(__pyx_t_9), 2) < 0) __PYX_ERR(0, 62, __pyx_L1_error)
+        if (__Pyx_IternextUnpackEndCheck(__pyx_t_10(__pyx_t_9), 2) < 0) __PYX_ERR(0, 65, __pyx_L1_error)
         __pyx_t_10 = NULL;
         __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
         goto __pyx_L9_unpacking_done;
@@ -3133,16 +3235,16 @@ static PyObject *__pyx_pf_4dawg_4DAWG_4_build_from_iterable(struct __pyx_obj_4da
         __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
         __pyx_t_10 = NULL;
         if (__Pyx_IterFinish() == 0) __Pyx_RaiseNeedMoreValuesError(index);
-        __PYX_ERR(0, 62, __pyx_L1_error)
+        __PYX_ERR(0, 65, __pyx_L1_error)
         __pyx_L9_unpacking_done:;
       }
-      __pyx_t_11 = __Pyx_PyInt_As_int(__pyx_t_8); if (unlikely((__pyx_t_11 == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 62, __pyx_L1_error)
+      __pyx_t_11 = __Pyx_PyInt_As_int(__pyx_t_8); if (unlikely((__pyx_t_11 == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 65, __pyx_L1_error)
       __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
       __Pyx_DECREF_SET(__pyx_v_key, __pyx_t_4);
       __pyx_t_4 = 0;
       __pyx_v_value = __pyx_t_11;
 
-      /* "dawg.pyx":63
+      /* "dawg.pyx":66
  *             if isinstance(key, tuple) or isinstance(key, list):
  *                 key, value = key
  *                 if value < 0:             # <<<<<<<<<<<<<<
@@ -3152,20 +3254,20 @@ static PyObject *__pyx_pf_4dawg_4DAWG_4_build_from_iterable(struct __pyx_obj_4da
       __pyx_t_5 = ((__pyx_v_value < 0) != 0);
       if (unlikely(__pyx_t_5)) {
 
-        /* "dawg.pyx":64
+        /* "dawg.pyx":67
  *                 key, value = key
  *                 if value < 0:
  *                     raise ValueError("Negative values are not supported")             # <<<<<<<<<<<<<<
  *             else:
  *                 value = 0
  */
-        __pyx_t_8 = __Pyx_PyObject_Call(__pyx_builtin_ValueError, __pyx_tuple_, NULL); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 64, __pyx_L1_error)
+        __pyx_t_8 = __Pyx_PyObject_Call(__pyx_builtin_ValueError, __pyx_tuple_, NULL); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 67, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_8);
         __Pyx_Raise(__pyx_t_8, 0, 0, 0);
         __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
-        __PYX_ERR(0, 64, __pyx_L1_error)
+        __PYX_ERR(0, 67, __pyx_L1_error)
 
-        /* "dawg.pyx":63
+        /* "dawg.pyx":66
  *             if isinstance(key, tuple) or isinstance(key, list):
  *                 key, value = key
  *                 if value < 0:             # <<<<<<<<<<<<<<
@@ -3174,7 +3276,7 @@ static PyObject *__pyx_pf_4dawg_4DAWG_4_build_from_iterable(struct __pyx_obj_4da
  */
       }
 
-      /* "dawg.pyx":61
+      /* "dawg.pyx":64
  * 
  *         for key in iterable:
  *             if isinstance(key, tuple) or isinstance(key, list):             # <<<<<<<<<<<<<<
@@ -3184,7 +3286,7 @@ static PyObject *__pyx_pf_4dawg_4DAWG_4_build_from_iterable(struct __pyx_obj_4da
       goto __pyx_L5;
     }
 
-    /* "dawg.pyx":66
+    /* "dawg.pyx":69
  *                     raise ValueError("Negative values are not supported")
  *             else:
  *                 value = 0             # <<<<<<<<<<<<<<
@@ -3196,7 +3298,7 @@ static PyObject *__pyx_pf_4dawg_4DAWG_4_build_from_iterable(struct __pyx_obj_4da
     }
     __pyx_L5:;
 
-    /* "dawg.pyx":68
+    /* "dawg.pyx":71
  *                 value = 0
  * 
  *             if isinstance(key, unicode):             # <<<<<<<<<<<<<<
@@ -3207,7 +3309,7 @@ static PyObject *__pyx_pf_4dawg_4DAWG_4_build_from_iterable(struct __pyx_obj_4da
     __pyx_t_6 = (__pyx_t_5 != 0);
     if (__pyx_t_6) {
 
-      /* "dawg.pyx":69
+      /* "dawg.pyx":72
  * 
  *             if isinstance(key, unicode):
  *                 b_key = <bytes>(<unicode>key).encode('utf8')             # <<<<<<<<<<<<<<
@@ -3216,9 +3318,9 @@ static PyObject *__pyx_pf_4dawg_4DAWG_4_build_from_iterable(struct __pyx_obj_4da
  */
       if (unlikely(__pyx_v_key == Py_None)) {
         PyErr_Format(PyExc_AttributeError, "'NoneType' object has no attribute '%.30s'", "encode");
-        __PYX_ERR(0, 69, __pyx_L1_error)
+        __PYX_ERR(0, 72, __pyx_L1_error)
       }
-      __pyx_t_8 = PyUnicode_AsUTF8String(((PyObject*)__pyx_v_key)); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 69, __pyx_L1_error)
+      __pyx_t_8 = PyUnicode_AsUTF8String(((PyObject*)__pyx_v_key)); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 72, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_8);
       __pyx_t_4 = __pyx_t_8;
       __Pyx_INCREF(__pyx_t_4);
@@ -3226,7 +3328,7 @@ static PyObject *__pyx_pf_4dawg_4DAWG_4_build_from_iterable(struct __pyx_obj_4da
       __Pyx_XDECREF_SET(__pyx_v_b_key, ((PyObject*)__pyx_t_4));
       __pyx_t_4 = 0;
 
-      /* "dawg.pyx":68
+      /* "dawg.pyx":71
  *                 value = 0
  * 
  *             if isinstance(key, unicode):             # <<<<<<<<<<<<<<
@@ -3236,7 +3338,7 @@ static PyObject *__pyx_pf_4dawg_4DAWG_4_build_from_iterable(struct __pyx_obj_4da
       goto __pyx_L11;
     }
 
-    /* "dawg.pyx":71
+    /* "dawg.pyx":74
  *                 b_key = <bytes>(<unicode>key).encode('utf8')
  *             else:
  *                 b_key = key             # <<<<<<<<<<<<<<
@@ -3244,7 +3346,7 @@ static PyObject *__pyx_pf_4dawg_4DAWG_4_build_from_iterable(struct __pyx_obj_4da
  *             if not dawg_builder.Insert(b_key, len(b_key), value):
  */
     /*else*/ {
-      if (!(likely(PyBytes_CheckExact(__pyx_v_key))||((__pyx_v_key) == Py_None)||(PyErr_Format(PyExc_TypeError, "Expected %.16s, got %.200s", "bytes", Py_TYPE(__pyx_v_key)->tp_name), 0))) __PYX_ERR(0, 71, __pyx_L1_error)
+      if (!(likely(PyBytes_CheckExact(__pyx_v_key))||((__pyx_v_key) == Py_None)||(PyErr_Format(PyExc_TypeError, "Expected %.16s, got %.200s", "bytes", Py_TYPE(__pyx_v_key)->tp_name), 0))) __PYX_ERR(0, 74, __pyx_L1_error)
       __pyx_t_4 = __pyx_v_key;
       __Pyx_INCREF(__pyx_t_4);
       __Pyx_XDECREF_SET(__pyx_v_b_key, ((PyObject*)__pyx_t_4));
@@ -3252,7 +3354,7 @@ static PyObject *__pyx_pf_4dawg_4DAWG_4_build_from_iterable(struct __pyx_obj_4da
     }
     __pyx_L11:;
 
-    /* "dawg.pyx":73
+    /* "dawg.pyx":76
  *                 b_key = key
  * 
  *             if not dawg_builder.Insert(b_key, len(b_key), value):             # <<<<<<<<<<<<<<
@@ -3261,27 +3363,27 @@ static PyObject *__pyx_pf_4dawg_4DAWG_4_build_from_iterable(struct __pyx_obj_4da
  */
     if (unlikely(__pyx_v_b_key == Py_None)) {
       PyErr_SetString(PyExc_TypeError, "expected bytes, NoneType found");
-      __PYX_ERR(0, 73, __pyx_L1_error)
+      __PYX_ERR(0, 76, __pyx_L1_error)
     }
-    __pyx_t_12 = __Pyx_PyBytes_AsWritableString(__pyx_v_b_key); if (unlikely((!__pyx_t_12) && PyErr_Occurred())) __PYX_ERR(0, 73, __pyx_L1_error)
+    __pyx_t_12 = __Pyx_PyBytes_AsWritableString(__pyx_v_b_key); if (unlikely((!__pyx_t_12) && PyErr_Occurred())) __PYX_ERR(0, 76, __pyx_L1_error)
     if (unlikely(__pyx_v_b_key == Py_None)) {
       PyErr_SetString(PyExc_TypeError, "object of type 'NoneType' has no len()");
-      __PYX_ERR(0, 73, __pyx_L1_error)
+      __PYX_ERR(0, 76, __pyx_L1_error)
     }
-    __pyx_t_13 = PyBytes_GET_SIZE(__pyx_v_b_key); if (unlikely(__pyx_t_13 == ((Py_ssize_t)-1))) __PYX_ERR(0, 73, __pyx_L1_error)
+    __pyx_t_13 = PyBytes_GET_SIZE(__pyx_v_b_key); if (unlikely(__pyx_t_13 == ((Py_ssize_t)-1))) __PYX_ERR(0, 76, __pyx_L1_error)
     __pyx_t_6 = ((!(__pyx_v_dawg_builder.Insert(__pyx_t_12, __pyx_t_13, __pyx_v_value) != 0)) != 0);
     if (unlikely(__pyx_t_6)) {
 
-      /* "dawg.pyx":74
+      /* "dawg.pyx":77
  * 
  *             if not dawg_builder.Insert(b_key, len(b_key), value):
  *                 raise Error("Can't insert key %r (with value %r)" % (b_key, value))             # <<<<<<<<<<<<<<
  * 
  *         if not dawg_builder.Finish(&self.dawg):
  */
-      __Pyx_GetModuleGlobalName(__pyx_t_8, __pyx_n_s_Error); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 74, __pyx_L1_error)
+      __Pyx_GetModuleGlobalName(__pyx_t_8, __pyx_n_s_Error); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 77, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_8);
-      __pyx_t_9 = PyTuple_New(5); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 74, __pyx_L1_error)
+      __pyx_t_9 = PyTuple_New(5); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 77, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_9);
       __pyx_t_13 = 0;
       __pyx_t_14 = 127;
@@ -3289,7 +3391,7 @@ static PyObject *__pyx_pf_4dawg_4DAWG_4_build_from_iterable(struct __pyx_obj_4da
       __pyx_t_13 += 17;
       __Pyx_GIVEREF(__pyx_kp_u_Can_t_insert_key);
       PyTuple_SET_ITEM(__pyx_t_9, 0, __pyx_kp_u_Can_t_insert_key);
-      __pyx_t_15 = __Pyx_PyObject_FormatSimpleAndDecref(PyObject_Repr(__pyx_v_b_key), __pyx_empty_unicode); if (unlikely(!__pyx_t_15)) __PYX_ERR(0, 74, __pyx_L1_error)
+      __pyx_t_15 = __Pyx_PyObject_FormatSimpleAndDecref(PyObject_Repr(__pyx_v_b_key), __pyx_empty_unicode); if (unlikely(!__pyx_t_15)) __PYX_ERR(0, 77, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_15);
       __pyx_t_14 = (__Pyx_PyUnicode_MAX_CHAR_VALUE(__pyx_t_15) > __pyx_t_14) ? __Pyx_PyUnicode_MAX_CHAR_VALUE(__pyx_t_15) : __pyx_t_14;
       __pyx_t_13 += __Pyx_PyUnicode_GET_LENGTH(__pyx_t_15);
@@ -3300,7 +3402,7 @@ static PyObject *__pyx_pf_4dawg_4DAWG_4_build_from_iterable(struct __pyx_obj_4da
       __pyx_t_13 += 13;
       __Pyx_GIVEREF(__pyx_kp_u_with_value);
       PyTuple_SET_ITEM(__pyx_t_9, 2, __pyx_kp_u_with_value);
-      __pyx_t_15 = __Pyx_PyUnicode_From_int(__pyx_v_value, 0, ' ', 'd'); if (unlikely(!__pyx_t_15)) __PYX_ERR(0, 74, __pyx_L1_error)
+      __pyx_t_15 = __Pyx_PyUnicode_From_int(__pyx_v_value, 0, ' ', 'd'); if (unlikely(!__pyx_t_15)) __PYX_ERR(0, 77, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_15);
       __pyx_t_13 += __Pyx_PyUnicode_GET_LENGTH(__pyx_t_15);
       __Pyx_GIVEREF(__pyx_t_15);
@@ -3310,7 +3412,7 @@ static PyObject *__pyx_pf_4dawg_4DAWG_4_build_from_iterable(struct __pyx_obj_4da
       __pyx_t_13 += 1;
       __Pyx_GIVEREF(__pyx_kp_u__2);
       PyTuple_SET_ITEM(__pyx_t_9, 4, __pyx_kp_u__2);
-      __pyx_t_15 = __Pyx_PyUnicode_Join(__pyx_t_9, 5, __pyx_t_13, __pyx_t_14); if (unlikely(!__pyx_t_15)) __PYX_ERR(0, 74, __pyx_L1_error)
+      __pyx_t_15 = __Pyx_PyUnicode_Join(__pyx_t_9, 5, __pyx_t_13, __pyx_t_14); if (unlikely(!__pyx_t_15)) __PYX_ERR(0, 77, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_15);
       __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
       __pyx_t_9 = NULL;
@@ -3326,14 +3428,14 @@ static PyObject *__pyx_pf_4dawg_4DAWG_4_build_from_iterable(struct __pyx_obj_4da
       __pyx_t_4 = (__pyx_t_9) ? __Pyx_PyObject_Call2Args(__pyx_t_8, __pyx_t_9, __pyx_t_15) : __Pyx_PyObject_CallOneArg(__pyx_t_8, __pyx_t_15);
       __Pyx_XDECREF(__pyx_t_9); __pyx_t_9 = 0;
       __Pyx_DECREF(__pyx_t_15); __pyx_t_15 = 0;
-      if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 74, __pyx_L1_error)
+      if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 77, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_4);
       __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
       __Pyx_Raise(__pyx_t_4, 0, 0, 0);
       __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-      __PYX_ERR(0, 74, __pyx_L1_error)
+      __PYX_ERR(0, 77, __pyx_L1_error)
 
-      /* "dawg.pyx":73
+      /* "dawg.pyx":76
  *                 b_key = key
  * 
  *             if not dawg_builder.Insert(b_key, len(b_key), value):             # <<<<<<<<<<<<<<
@@ -3342,7 +3444,7 @@ static PyObject *__pyx_pf_4dawg_4DAWG_4_build_from_iterable(struct __pyx_obj_4da
  */
     }
 
-    /* "dawg.pyx":60
+    /* "dawg.pyx":63
  *         cdef int value
  * 
  *         for key in iterable:             # <<<<<<<<<<<<<<
@@ -3352,7 +3454,7 @@ static PyObject *__pyx_pf_4dawg_4DAWG_4_build_from_iterable(struct __pyx_obj_4da
   }
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "dawg.pyx":76
+  /* "dawg.pyx":79
  *                 raise Error("Can't insert key %r (with value %r)" % (b_key, value))
  * 
  *         if not dawg_builder.Finish(&self.dawg):             # <<<<<<<<<<<<<<
@@ -3362,59 +3464,12 @@ static PyObject *__pyx_pf_4dawg_4DAWG_4_build_from_iterable(struct __pyx_obj_4da
   __pyx_t_6 = ((!(__pyx_v_dawg_builder.Finish((&__pyx_v_self->dawg)) != 0)) != 0);
   if (unlikely(__pyx_t_6)) {
 
-    /* "dawg.pyx":77
+    /* "dawg.pyx":80
  * 
  *         if not dawg_builder.Finish(&self.dawg):
  *             raise Error("dawg_builder.Finish error")             # <<<<<<<<<<<<<<
  * 
  *         if not _dictionary_builder.Build(self.dawg, &self.dct):
- */
-    __Pyx_GetModuleGlobalName(__pyx_t_4, __pyx_n_s_Error); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 77, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_4);
-    __pyx_t_8 = NULL;
-    if (CYTHON_UNPACK_METHODS && unlikely(PyMethod_Check(__pyx_t_4))) {
-      __pyx_t_8 = PyMethod_GET_SELF(__pyx_t_4);
-      if (likely(__pyx_t_8)) {
-        PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_4);
-        __Pyx_INCREF(__pyx_t_8);
-        __Pyx_INCREF(function);
-        __Pyx_DECREF_SET(__pyx_t_4, function);
-      }
-    }
-    __pyx_t_1 = (__pyx_t_8) ? __Pyx_PyObject_Call2Args(__pyx_t_4, __pyx_t_8, __pyx_kp_u_dawg_builder_Finish_error) : __Pyx_PyObject_CallOneArg(__pyx_t_4, __pyx_kp_u_dawg_builder_Finish_error);
-    __Pyx_XDECREF(__pyx_t_8); __pyx_t_8 = 0;
-    if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 77, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_1);
-    __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-    __Pyx_Raise(__pyx_t_1, 0, 0, 0);
-    __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-    __PYX_ERR(0, 77, __pyx_L1_error)
-
-    /* "dawg.pyx":76
- *                 raise Error("Can't insert key %r (with value %r)" % (b_key, value))
- * 
- *         if not dawg_builder.Finish(&self.dawg):             # <<<<<<<<<<<<<<
- *             raise Error("dawg_builder.Finish error")
- * 
- */
-  }
-
-  /* "dawg.pyx":79
- *             raise Error("dawg_builder.Finish error")
- * 
- *         if not _dictionary_builder.Build(self.dawg, &self.dct):             # <<<<<<<<<<<<<<
- *             raise Error("Can't build dictionary")
- * 
- */
-  __pyx_t_6 = ((!(dawgdic::DictionaryBuilder::Build(__pyx_v_self->dawg, (&__pyx_v_self->dct)) != 0)) != 0);
-  if (unlikely(__pyx_t_6)) {
-
-    /* "dawg.pyx":80
- * 
- *         if not _dictionary_builder.Build(self.dawg, &self.dct):
- *             raise Error("Can't build dictionary")             # <<<<<<<<<<<<<<
- * 
- *     def __contains__(self, key):
  */
     __Pyx_GetModuleGlobalName(__pyx_t_4, __pyx_n_s_Error); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 80, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_4);
@@ -3428,7 +3483,7 @@ static PyObject *__pyx_pf_4dawg_4DAWG_4_build_from_iterable(struct __pyx_obj_4da
         __Pyx_DECREF_SET(__pyx_t_4, function);
       }
     }
-    __pyx_t_1 = (__pyx_t_8) ? __Pyx_PyObject_Call2Args(__pyx_t_4, __pyx_t_8, __pyx_kp_u_Can_t_build_dictionary) : __Pyx_PyObject_CallOneArg(__pyx_t_4, __pyx_kp_u_Can_t_build_dictionary);
+    __pyx_t_1 = (__pyx_t_8) ? __Pyx_PyObject_Call2Args(__pyx_t_4, __pyx_t_8, __pyx_kp_u_dawg_builder_Finish_error) : __Pyx_PyObject_CallOneArg(__pyx_t_4, __pyx_kp_u_dawg_builder_Finish_error);
     __Pyx_XDECREF(__pyx_t_8); __pyx_t_8 = 0;
     if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 80, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
@@ -3438,6 +3493,53 @@ static PyObject *__pyx_pf_4dawg_4DAWG_4_build_from_iterable(struct __pyx_obj_4da
     __PYX_ERR(0, 80, __pyx_L1_error)
 
     /* "dawg.pyx":79
+ *                 raise Error("Can't insert key %r (with value %r)" % (b_key, value))
+ * 
+ *         if not dawg_builder.Finish(&self.dawg):             # <<<<<<<<<<<<<<
+ *             raise Error("dawg_builder.Finish error")
+ * 
+ */
+  }
+
+  /* "dawg.pyx":82
+ *             raise Error("dawg_builder.Finish error")
+ * 
+ *         if not _dictionary_builder.Build(self.dawg, &self.dct):             # <<<<<<<<<<<<<<
+ *             raise Error("Can't build dictionary")
+ * 
+ */
+  __pyx_t_6 = ((!(dawgdic::DictionaryBuilder::Build(__pyx_v_self->dawg, (&__pyx_v_self->dct)) != 0)) != 0);
+  if (unlikely(__pyx_t_6)) {
+
+    /* "dawg.pyx":83
+ * 
+ *         if not _dictionary_builder.Build(self.dawg, &self.dct):
+ *             raise Error("Can't build dictionary")             # <<<<<<<<<<<<<<
+ * 
+ *     def __len__(self):
+ */
+    __Pyx_GetModuleGlobalName(__pyx_t_4, __pyx_n_s_Error); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 83, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_4);
+    __pyx_t_8 = NULL;
+    if (CYTHON_UNPACK_METHODS && unlikely(PyMethod_Check(__pyx_t_4))) {
+      __pyx_t_8 = PyMethod_GET_SELF(__pyx_t_4);
+      if (likely(__pyx_t_8)) {
+        PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_4);
+        __Pyx_INCREF(__pyx_t_8);
+        __Pyx_INCREF(function);
+        __Pyx_DECREF_SET(__pyx_t_4, function);
+      }
+    }
+    __pyx_t_1 = (__pyx_t_8) ? __Pyx_PyObject_Call2Args(__pyx_t_4, __pyx_t_8, __pyx_kp_u_Can_t_build_dictionary) : __Pyx_PyObject_CallOneArg(__pyx_t_4, __pyx_kp_u_Can_t_build_dictionary);
+    __Pyx_XDECREF(__pyx_t_8); __pyx_t_8 = 0;
+    if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 83, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_1);
+    __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
+    __Pyx_Raise(__pyx_t_1, 0, 0, 0);
+    __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+    __PYX_ERR(0, 83, __pyx_L1_error)
+
+    /* "dawg.pyx":82
  *             raise Error("dawg_builder.Finish error")
  * 
  *         if not _dictionary_builder.Build(self.dawg, &self.dct):             # <<<<<<<<<<<<<<
@@ -3446,8 +3548,8 @@ static PyObject *__pyx_pf_4dawg_4DAWG_4_build_from_iterable(struct __pyx_obj_4da
  */
   }
 
-  /* "dawg.pyx":55
- *         self.dawg.Clear()
+  /* "dawg.pyx":58
+ *         return super(DAWG, self).__sizeof__() + self.dct.total_size()
  * 
  *     def _build_from_iterable(self, iterable):             # <<<<<<<<<<<<<<
  *         cdef DawgBuilder dawg_builder
@@ -3473,8 +3575,58 @@ static PyObject *__pyx_pf_4dawg_4DAWG_4_build_from_iterable(struct __pyx_obj_4da
   return __pyx_r;
 }
 
-/* "dawg.pyx":82
+/* "dawg.pyx":85
  *             raise Error("Can't build dictionary")
+ * 
+ *     def __len__(self):             # <<<<<<<<<<<<<<
+ *         return self.dawg.num_of_states()
+ * 
+ */
+
+/* Python wrapper */
+static Py_ssize_t __pyx_pw_4dawg_4DAWG_9__len__(PyObject *__pyx_v_self); /*proto*/
+static Py_ssize_t __pyx_pw_4dawg_4DAWG_9__len__(PyObject *__pyx_v_self) {
+  Py_ssize_t __pyx_r;
+  __Pyx_RefNannyDeclarations
+  __Pyx_RefNannySetupContext("__len__ (wrapper)", 0);
+  __pyx_r = __pyx_pf_4dawg_4DAWG_8__len__(((struct __pyx_obj_4dawg_DAWG *)__pyx_v_self));
+
+  /* function exit code */
+  __Pyx_RefNannyFinishContext();
+  return __pyx_r;
+}
+
+static Py_ssize_t __pyx_pf_4dawg_4DAWG_8__len__(struct __pyx_obj_4dawg_DAWG *__pyx_v_self) {
+  Py_ssize_t __pyx_r;
+  __Pyx_RefNannyDeclarations
+  __Pyx_RefNannySetupContext("__len__", 0);
+
+  /* "dawg.pyx":86
+ * 
+ *     def __len__(self):
+ *         return self.dawg.num_of_states()             # <<<<<<<<<<<<<<
+ * 
+ *     def __contains__(self, key):
+ */
+  __pyx_r = __pyx_v_self->dawg.num_of_states();
+  goto __pyx_L0;
+
+  /* "dawg.pyx":85
+ *             raise Error("Can't build dictionary")
+ * 
+ *     def __len__(self):             # <<<<<<<<<<<<<<
+ *         return self.dawg.num_of_states()
+ * 
+ */
+
+  /* function exit code */
+  __pyx_L0:;
+  __Pyx_RefNannyFinishContext();
+  return __pyx_r;
+}
+
+/* "dawg.pyx":88
+ *         return self.dawg.num_of_states()
  * 
  *     def __contains__(self, key):             # <<<<<<<<<<<<<<
  *         if isinstance(key, unicode):
@@ -3482,26 +3634,26 @@ static PyObject *__pyx_pf_4dawg_4DAWG_4_build_from_iterable(struct __pyx_obj_4da
  */
 
 /* Python wrapper */
-static int __pyx_pw_4dawg_4DAWG_7__contains__(PyObject *__pyx_v_self, PyObject *__pyx_v_key); /*proto*/
-static int __pyx_pw_4dawg_4DAWG_7__contains__(PyObject *__pyx_v_self, PyObject *__pyx_v_key) {
+static int __pyx_pw_4dawg_4DAWG_11__contains__(PyObject *__pyx_v_self, PyObject *__pyx_v_key); /*proto*/
+static int __pyx_pw_4dawg_4DAWG_11__contains__(PyObject *__pyx_v_self, PyObject *__pyx_v_key) {
   int __pyx_r;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("__contains__ (wrapper)", 0);
-  __pyx_r = __pyx_pf_4dawg_4DAWG_6__contains__(((struct __pyx_obj_4dawg_DAWG *)__pyx_v_self), ((PyObject *)__pyx_v_key));
+  __pyx_r = __pyx_pf_4dawg_4DAWG_10__contains__(((struct __pyx_obj_4dawg_DAWG *)__pyx_v_self), ((PyObject *)__pyx_v_key));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static int __pyx_pf_4dawg_4DAWG_6__contains__(struct __pyx_obj_4dawg_DAWG *__pyx_v_self, PyObject *__pyx_v_key) {
+static int __pyx_pf_4dawg_4DAWG_10__contains__(struct __pyx_obj_4dawg_DAWG *__pyx_v_self, PyObject *__pyx_v_key) {
   int __pyx_r;
   __Pyx_RefNannyDeclarations
   int __pyx_t_1;
   int __pyx_t_2;
   __Pyx_RefNannySetupContext("__contains__", 0);
 
-  /* "dawg.pyx":83
+  /* "dawg.pyx":89
  * 
  *     def __contains__(self, key):
  *         if isinstance(key, unicode):             # <<<<<<<<<<<<<<
@@ -3512,18 +3664,18 @@ static int __pyx_pf_4dawg_4DAWG_6__contains__(struct __pyx_obj_4dawg_DAWG *__pyx
   __pyx_t_2 = (__pyx_t_1 != 0);
   if (__pyx_t_2) {
 
-    /* "dawg.pyx":84
+    /* "dawg.pyx":90
  *     def __contains__(self, key):
  *         if isinstance(key, unicode):
  *             return self.has_key(<unicode>key)             # <<<<<<<<<<<<<<
  *         return self.b_has_key(key)
  * 
  */
-    __pyx_t_2 = ((struct __pyx_vtabstruct_4dawg_DAWG *)__pyx_v_self->__pyx_vtab)->has_key(__pyx_v_self, ((PyObject*)__pyx_v_key), 0); if (unlikely(__pyx_t_2 == ((int)-1))) __PYX_ERR(0, 84, __pyx_L1_error)
+    __pyx_t_2 = ((struct __pyx_vtabstruct_4dawg_DAWG *)__pyx_v_self->__pyx_vtab)->has_key(__pyx_v_self, ((PyObject*)__pyx_v_key), 0); if (unlikely(__pyx_t_2 == ((int)-1))) __PYX_ERR(0, 90, __pyx_L1_error)
     __pyx_r = __pyx_t_2;
     goto __pyx_L0;
 
-    /* "dawg.pyx":83
+    /* "dawg.pyx":89
  * 
  *     def __contains__(self, key):
  *         if isinstance(key, unicode):             # <<<<<<<<<<<<<<
@@ -3532,20 +3684,20 @@ static int __pyx_pf_4dawg_4DAWG_6__contains__(struct __pyx_obj_4dawg_DAWG *__pyx
  */
   }
 
-  /* "dawg.pyx":85
+  /* "dawg.pyx":91
  *         if isinstance(key, unicode):
  *             return self.has_key(<unicode>key)
  *         return self.b_has_key(key)             # <<<<<<<<<<<<<<
  * 
  *     cpdef bint has_key(self, unicode key) except -1:
  */
-  if (!(likely(PyBytes_CheckExact(__pyx_v_key))||((__pyx_v_key) == Py_None)||(PyErr_Format(PyExc_TypeError, "Expected %.16s, got %.200s", "bytes", Py_TYPE(__pyx_v_key)->tp_name), 0))) __PYX_ERR(0, 85, __pyx_L1_error)
-  __pyx_t_2 = ((struct __pyx_vtabstruct_4dawg_DAWG *)__pyx_v_self->__pyx_vtab)->b_has_key(__pyx_v_self, ((PyObject*)__pyx_v_key), 0); if (unlikely(__pyx_t_2 == ((int)-1))) __PYX_ERR(0, 85, __pyx_L1_error)
+  if (!(likely(PyBytes_CheckExact(__pyx_v_key))||((__pyx_v_key) == Py_None)||(PyErr_Format(PyExc_TypeError, "Expected %.16s, got %.200s", "bytes", Py_TYPE(__pyx_v_key)->tp_name), 0))) __PYX_ERR(0, 91, __pyx_L1_error)
+  __pyx_t_2 = ((struct __pyx_vtabstruct_4dawg_DAWG *)__pyx_v_self->__pyx_vtab)->b_has_key(__pyx_v_self, ((PyObject*)__pyx_v_key), 0); if (unlikely(__pyx_t_2 == ((int)-1))) __PYX_ERR(0, 91, __pyx_L1_error)
   __pyx_r = __pyx_t_2;
   goto __pyx_L0;
 
-  /* "dawg.pyx":82
- *             raise Error("Can't build dictionary")
+  /* "dawg.pyx":88
+ *         return self.dawg.num_of_states()
  * 
  *     def __contains__(self, key):             # <<<<<<<<<<<<<<
  *         if isinstance(key, unicode):
@@ -3561,7 +3713,7 @@ static int __pyx_pf_4dawg_4DAWG_6__contains__(struct __pyx_obj_4dawg_DAWG *__pyx
   return __pyx_r;
 }
 
-/* "dawg.pyx":87
+/* "dawg.pyx":93
  *         return self.b_has_key(key)
  * 
  *     cpdef bint has_key(self, unicode key) except -1:             # <<<<<<<<<<<<<<
@@ -3569,7 +3721,7 @@ static int __pyx_pf_4dawg_4DAWG_6__contains__(struct __pyx_obj_4dawg_DAWG *__pyx
  * 
  */
 
-static PyObject *__pyx_pw_4dawg_4DAWG_9has_key(PyObject *__pyx_v_self, PyObject *__pyx_v_key); /*proto*/
+static PyObject *__pyx_pw_4dawg_4DAWG_13has_key(PyObject *__pyx_v_self, PyObject *__pyx_v_key); /*proto*/
 static int __pyx_f_4dawg_4DAWG_has_key(struct __pyx_obj_4dawg_DAWG *__pyx_v_self, PyObject *__pyx_v_key, int __pyx_skip_dispatch) {
   int __pyx_r;
   __Pyx_RefNannyDeclarations
@@ -3588,9 +3740,9 @@ static int __pyx_f_4dawg_4DAWG_has_key(struct __pyx_obj_4dawg_DAWG *__pyx_v_self
     if (unlikely(!__Pyx_object_dict_version_matches(((PyObject *)__pyx_v_self), __pyx_tp_dict_version, __pyx_obj_dict_version))) {
       PY_UINT64_T __pyx_type_dict_guard = __Pyx_get_tp_dict_version(((PyObject *)__pyx_v_self));
       #endif
-      __pyx_t_1 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_has_key); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 87, __pyx_L1_error)
+      __pyx_t_1 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_has_key); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 93, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_1);
-      if (!PyCFunction_Check(__pyx_t_1) || (PyCFunction_GET_FUNCTION(__pyx_t_1) != (PyCFunction)(void*)__pyx_pw_4dawg_4DAWG_9has_key)) {
+      if (!PyCFunction_Check(__pyx_t_1) || (PyCFunction_GET_FUNCTION(__pyx_t_1) != (PyCFunction)(void*)__pyx_pw_4dawg_4DAWG_13has_key)) {
         __Pyx_INCREF(__pyx_t_1);
         __pyx_t_3 = __pyx_t_1; __pyx_t_4 = NULL;
         if (CYTHON_UNPACK_METHODS && unlikely(PyMethod_Check(__pyx_t_3))) {
@@ -3604,10 +3756,10 @@ static int __pyx_f_4dawg_4DAWG_has_key(struct __pyx_obj_4dawg_DAWG *__pyx_v_self
         }
         __pyx_t_2 = (__pyx_t_4) ? __Pyx_PyObject_Call2Args(__pyx_t_3, __pyx_t_4, __pyx_v_key) : __Pyx_PyObject_CallOneArg(__pyx_t_3, __pyx_v_key);
         __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
-        if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 87, __pyx_L1_error)
+        if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 93, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_2);
         __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-        __pyx_t_5 = __Pyx_PyObject_IsTrue(__pyx_t_2); if (unlikely((__pyx_t_5 == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 87, __pyx_L1_error)
+        __pyx_t_5 = __Pyx_PyObject_IsTrue(__pyx_t_2); if (unlikely((__pyx_t_5 == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 93, __pyx_L1_error)
         __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
         __pyx_r = __pyx_t_5;
         __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
@@ -3626,7 +3778,7 @@ static int __pyx_f_4dawg_4DAWG_has_key(struct __pyx_obj_4dawg_DAWG *__pyx_v_self
     #endif
   }
 
-  /* "dawg.pyx":88
+  /* "dawg.pyx":94
  * 
  *     cpdef bint has_key(self, unicode key) except -1:
  *         return self.b_has_key(<bytes>key.encode('utf8'))             # <<<<<<<<<<<<<<
@@ -3635,16 +3787,16 @@ static int __pyx_f_4dawg_4DAWG_has_key(struct __pyx_obj_4dawg_DAWG *__pyx_v_self
  */
   if (unlikely(__pyx_v_key == Py_None)) {
     PyErr_Format(PyExc_AttributeError, "'NoneType' object has no attribute '%.30s'", "encode");
-    __PYX_ERR(0, 88, __pyx_L1_error)
+    __PYX_ERR(0, 94, __pyx_L1_error)
   }
-  __pyx_t_1 = PyUnicode_AsUTF8String(__pyx_v_key); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 88, __pyx_L1_error)
+  __pyx_t_1 = PyUnicode_AsUTF8String(__pyx_v_key); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 94, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_5 = ((struct __pyx_vtabstruct_4dawg_DAWG *)__pyx_v_self->__pyx_vtab)->b_has_key(__pyx_v_self, ((PyObject*)__pyx_t_1), 0); if (unlikely(__pyx_t_5 == ((int)-1))) __PYX_ERR(0, 88, __pyx_L1_error)
+  __pyx_t_5 = ((struct __pyx_vtabstruct_4dawg_DAWG *)__pyx_v_self->__pyx_vtab)->b_has_key(__pyx_v_self, ((PyObject*)__pyx_t_1), 0); if (unlikely(__pyx_t_5 == ((int)-1))) __PYX_ERR(0, 94, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __pyx_r = __pyx_t_5;
   goto __pyx_L0;
 
-  /* "dawg.pyx":87
+  /* "dawg.pyx":93
  *         return self.b_has_key(key)
  * 
  *     cpdef bint has_key(self, unicode key) except -1:             # <<<<<<<<<<<<<<
@@ -3666,14 +3818,14 @@ static int __pyx_f_4dawg_4DAWG_has_key(struct __pyx_obj_4dawg_DAWG *__pyx_v_self
 }
 
 /* Python wrapper */
-static PyObject *__pyx_pw_4dawg_4DAWG_9has_key(PyObject *__pyx_v_self, PyObject *__pyx_v_key); /*proto*/
-static char __pyx_doc_4dawg_4DAWG_8has_key[] = "DAWG.has_key(self, unicode key) -> bool";
-static PyObject *__pyx_pw_4dawg_4DAWG_9has_key(PyObject *__pyx_v_self, PyObject *__pyx_v_key) {
+static PyObject *__pyx_pw_4dawg_4DAWG_13has_key(PyObject *__pyx_v_self, PyObject *__pyx_v_key); /*proto*/
+static char __pyx_doc_4dawg_4DAWG_12has_key[] = "DAWG.has_key(self, unicode key) -> bool";
+static PyObject *__pyx_pw_4dawg_4DAWG_13has_key(PyObject *__pyx_v_self, PyObject *__pyx_v_key) {
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("has_key (wrapper)", 0);
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_key), (&PyUnicode_Type), 1, "key", 1))) __PYX_ERR(0, 87, __pyx_L1_error)
-  __pyx_r = __pyx_pf_4dawg_4DAWG_8has_key(((struct __pyx_obj_4dawg_DAWG *)__pyx_v_self), ((PyObject*)__pyx_v_key));
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_key), (&PyUnicode_Type), 1, "key", 1))) __PYX_ERR(0, 93, __pyx_L1_error)
+  __pyx_r = __pyx_pf_4dawg_4DAWG_12has_key(((struct __pyx_obj_4dawg_DAWG *)__pyx_v_self), ((PyObject*)__pyx_v_key));
 
   /* function exit code */
   goto __pyx_L0;
@@ -3684,15 +3836,15 @@ static PyObject *__pyx_pw_4dawg_4DAWG_9has_key(PyObject *__pyx_v_self, PyObject 
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_4dawg_4DAWG_8has_key(struct __pyx_obj_4dawg_DAWG *__pyx_v_self, PyObject *__pyx_v_key) {
+static PyObject *__pyx_pf_4dawg_4DAWG_12has_key(struct __pyx_obj_4dawg_DAWG *__pyx_v_self, PyObject *__pyx_v_key) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   int __pyx_t_1;
   PyObject *__pyx_t_2 = NULL;
   __Pyx_RefNannySetupContext("has_key", 0);
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = __pyx_f_4dawg_4DAWG_has_key(__pyx_v_self, __pyx_v_key, 1); if (unlikely(__pyx_t_1 == ((int)-1))) __PYX_ERR(0, 87, __pyx_L1_error)
-  __pyx_t_2 = __Pyx_PyBool_FromLong(__pyx_t_1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 87, __pyx_L1_error)
+  __pyx_t_1 = __pyx_f_4dawg_4DAWG_has_key(__pyx_v_self, __pyx_v_key, 1); if (unlikely(__pyx_t_1 == ((int)-1))) __PYX_ERR(0, 93, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyBool_FromLong(__pyx_t_1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 93, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __pyx_r = __pyx_t_2;
   __pyx_t_2 = 0;
@@ -3709,7 +3861,7 @@ static PyObject *__pyx_pf_4dawg_4DAWG_8has_key(struct __pyx_obj_4dawg_DAWG *__py
   return __pyx_r;
 }
 
-/* "dawg.pyx":90
+/* "dawg.pyx":96
  *         return self.b_has_key(<bytes>key.encode('utf8'))
  * 
  *     cpdef bint b_has_key(self, bytes key) except -1:             # <<<<<<<<<<<<<<
@@ -3717,7 +3869,7 @@ static PyObject *__pyx_pf_4dawg_4DAWG_8has_key(struct __pyx_obj_4dawg_DAWG *__py
  * 
  */
 
-static PyObject *__pyx_pw_4dawg_4DAWG_11b_has_key(PyObject *__pyx_v_self, PyObject *__pyx_v_key); /*proto*/
+static PyObject *__pyx_pw_4dawg_4DAWG_15b_has_key(PyObject *__pyx_v_self, PyObject *__pyx_v_key); /*proto*/
 static int __pyx_f_4dawg_4DAWG_b_has_key(struct __pyx_obj_4dawg_DAWG *__pyx_v_self, PyObject *__pyx_v_key, int __pyx_skip_dispatch) {
   int __pyx_r;
   __Pyx_RefNannyDeclarations
@@ -3738,9 +3890,9 @@ static int __pyx_f_4dawg_4DAWG_b_has_key(struct __pyx_obj_4dawg_DAWG *__pyx_v_se
     if (unlikely(!__Pyx_object_dict_version_matches(((PyObject *)__pyx_v_self), __pyx_tp_dict_version, __pyx_obj_dict_version))) {
       PY_UINT64_T __pyx_type_dict_guard = __Pyx_get_tp_dict_version(((PyObject *)__pyx_v_self));
       #endif
-      __pyx_t_1 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_b_has_key); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 90, __pyx_L1_error)
+      __pyx_t_1 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_b_has_key); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 96, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_1);
-      if (!PyCFunction_Check(__pyx_t_1) || (PyCFunction_GET_FUNCTION(__pyx_t_1) != (PyCFunction)(void*)__pyx_pw_4dawg_4DAWG_11b_has_key)) {
+      if (!PyCFunction_Check(__pyx_t_1) || (PyCFunction_GET_FUNCTION(__pyx_t_1) != (PyCFunction)(void*)__pyx_pw_4dawg_4DAWG_15b_has_key)) {
         __Pyx_INCREF(__pyx_t_1);
         __pyx_t_3 = __pyx_t_1; __pyx_t_4 = NULL;
         if (CYTHON_UNPACK_METHODS && unlikely(PyMethod_Check(__pyx_t_3))) {
@@ -3754,10 +3906,10 @@ static int __pyx_f_4dawg_4DAWG_b_has_key(struct __pyx_obj_4dawg_DAWG *__pyx_v_se
         }
         __pyx_t_2 = (__pyx_t_4) ? __Pyx_PyObject_Call2Args(__pyx_t_3, __pyx_t_4, __pyx_v_key) : __Pyx_PyObject_CallOneArg(__pyx_t_3, __pyx_v_key);
         __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
-        if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 90, __pyx_L1_error)
+        if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 96, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_2);
         __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-        __pyx_t_5 = __Pyx_PyObject_IsTrue(__pyx_t_2); if (unlikely((__pyx_t_5 == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 90, __pyx_L1_error)
+        __pyx_t_5 = __Pyx_PyObject_IsTrue(__pyx_t_2); if (unlikely((__pyx_t_5 == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 96, __pyx_L1_error)
         __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
         __pyx_r = __pyx_t_5;
         __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
@@ -3776,7 +3928,7 @@ static int __pyx_f_4dawg_4DAWG_b_has_key(struct __pyx_obj_4dawg_DAWG *__pyx_v_se
     #endif
   }
 
-  /* "dawg.pyx":91
+  /* "dawg.pyx":97
  * 
  *     cpdef bint b_has_key(self, bytes key) except -1:
  *         return self.dct.Contains(key, len(key))             # <<<<<<<<<<<<<<
@@ -3785,18 +3937,18 @@ static int __pyx_f_4dawg_4DAWG_b_has_key(struct __pyx_obj_4dawg_DAWG *__pyx_v_se
  */
   if (unlikely(__pyx_v_key == Py_None)) {
     PyErr_SetString(PyExc_TypeError, "expected bytes, NoneType found");
-    __PYX_ERR(0, 91, __pyx_L1_error)
+    __PYX_ERR(0, 97, __pyx_L1_error)
   }
-  __pyx_t_6 = __Pyx_PyBytes_AsWritableString(__pyx_v_key); if (unlikely((!__pyx_t_6) && PyErr_Occurred())) __PYX_ERR(0, 91, __pyx_L1_error)
+  __pyx_t_6 = __Pyx_PyBytes_AsWritableString(__pyx_v_key); if (unlikely((!__pyx_t_6) && PyErr_Occurred())) __PYX_ERR(0, 97, __pyx_L1_error)
   if (unlikely(__pyx_v_key == Py_None)) {
     PyErr_SetString(PyExc_TypeError, "object of type 'NoneType' has no len()");
-    __PYX_ERR(0, 91, __pyx_L1_error)
+    __PYX_ERR(0, 97, __pyx_L1_error)
   }
-  __pyx_t_7 = PyBytes_GET_SIZE(__pyx_v_key); if (unlikely(__pyx_t_7 == ((Py_ssize_t)-1))) __PYX_ERR(0, 91, __pyx_L1_error)
+  __pyx_t_7 = PyBytes_GET_SIZE(__pyx_v_key); if (unlikely(__pyx_t_7 == ((Py_ssize_t)-1))) __PYX_ERR(0, 97, __pyx_L1_error)
   __pyx_r = __pyx_v_self->dct.Contains(__pyx_t_6, __pyx_t_7);
   goto __pyx_L0;
 
-  /* "dawg.pyx":90
+  /* "dawg.pyx":96
  *         return self.b_has_key(<bytes>key.encode('utf8'))
  * 
  *     cpdef bint b_has_key(self, bytes key) except -1:             # <<<<<<<<<<<<<<
@@ -3818,14 +3970,14 @@ static int __pyx_f_4dawg_4DAWG_b_has_key(struct __pyx_obj_4dawg_DAWG *__pyx_v_se
 }
 
 /* Python wrapper */
-static PyObject *__pyx_pw_4dawg_4DAWG_11b_has_key(PyObject *__pyx_v_self, PyObject *__pyx_v_key); /*proto*/
-static char __pyx_doc_4dawg_4DAWG_10b_has_key[] = "DAWG.b_has_key(self, bytes key) -> bool";
-static PyObject *__pyx_pw_4dawg_4DAWG_11b_has_key(PyObject *__pyx_v_self, PyObject *__pyx_v_key) {
+static PyObject *__pyx_pw_4dawg_4DAWG_15b_has_key(PyObject *__pyx_v_self, PyObject *__pyx_v_key); /*proto*/
+static char __pyx_doc_4dawg_4DAWG_14b_has_key[] = "DAWG.b_has_key(self, bytes key) -> bool";
+static PyObject *__pyx_pw_4dawg_4DAWG_15b_has_key(PyObject *__pyx_v_self, PyObject *__pyx_v_key) {
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("b_has_key (wrapper)", 0);
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_key), (&PyBytes_Type), 1, "key", 1))) __PYX_ERR(0, 90, __pyx_L1_error)
-  __pyx_r = __pyx_pf_4dawg_4DAWG_10b_has_key(((struct __pyx_obj_4dawg_DAWG *)__pyx_v_self), ((PyObject*)__pyx_v_key));
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_key), (&PyBytes_Type), 1, "key", 1))) __PYX_ERR(0, 96, __pyx_L1_error)
+  __pyx_r = __pyx_pf_4dawg_4DAWG_14b_has_key(((struct __pyx_obj_4dawg_DAWG *)__pyx_v_self), ((PyObject*)__pyx_v_key));
 
   /* function exit code */
   goto __pyx_L0;
@@ -3836,15 +3988,15 @@ static PyObject *__pyx_pw_4dawg_4DAWG_11b_has_key(PyObject *__pyx_v_self, PyObje
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_4dawg_4DAWG_10b_has_key(struct __pyx_obj_4dawg_DAWG *__pyx_v_self, PyObject *__pyx_v_key) {
+static PyObject *__pyx_pf_4dawg_4DAWG_14b_has_key(struct __pyx_obj_4dawg_DAWG *__pyx_v_self, PyObject *__pyx_v_key) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   int __pyx_t_1;
   PyObject *__pyx_t_2 = NULL;
   __Pyx_RefNannySetupContext("b_has_key", 0);
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = __pyx_f_4dawg_4DAWG_b_has_key(__pyx_v_self, __pyx_v_key, 1); if (unlikely(__pyx_t_1 == ((int)-1))) __PYX_ERR(0, 90, __pyx_L1_error)
-  __pyx_t_2 = __Pyx_PyBool_FromLong(__pyx_t_1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 90, __pyx_L1_error)
+  __pyx_t_1 = __pyx_f_4dawg_4DAWG_b_has_key(__pyx_v_self, __pyx_v_key, 1); if (unlikely(__pyx_t_1 == ((int)-1))) __PYX_ERR(0, 96, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyBool_FromLong(__pyx_t_1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 96, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __pyx_r = __pyx_t_2;
   __pyx_t_2 = 0;
@@ -3861,7 +4013,7 @@ static PyObject *__pyx_pf_4dawg_4DAWG_10b_has_key(struct __pyx_obj_4dawg_DAWG *_
   return __pyx_r;
 }
 
-/* "dawg.pyx":93
+/* "dawg.pyx":99
  *         return self.dct.Contains(key, len(key))
  * 
  *     cpdef bytes tobytes(self) except +:             # <<<<<<<<<<<<<<
@@ -3869,7 +4021,7 @@ static PyObject *__pyx_pf_4dawg_4DAWG_10b_has_key(struct __pyx_obj_4dawg_DAWG *_
  *         Return raw DAWG content as bytes.
  */
 
-static PyObject *__pyx_pw_4dawg_4DAWG_13tobytes(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused); /*proto*/
+static PyObject *__pyx_pw_4dawg_4DAWG_17tobytes(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused); /*proto*/
 static PyObject *__pyx_f_4dawg_4DAWG_tobytes(struct __pyx_obj_4dawg_DAWG *__pyx_v_self, int __pyx_skip_dispatch) {
   std::stringstream __pyx_v_stream;
   PyObject *__pyx_v_res = 0;
@@ -3889,9 +4041,9 @@ static PyObject *__pyx_f_4dawg_4DAWG_tobytes(struct __pyx_obj_4dawg_DAWG *__pyx_
     if (unlikely(!__Pyx_object_dict_version_matches(((PyObject *)__pyx_v_self), __pyx_tp_dict_version, __pyx_obj_dict_version))) {
       PY_UINT64_T __pyx_type_dict_guard = __Pyx_get_tp_dict_version(((PyObject *)__pyx_v_self));
       #endif
-      __pyx_t_1 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_tobytes); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 93, __pyx_L1_error)
+      __pyx_t_1 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_tobytes); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 99, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_1);
-      if (!PyCFunction_Check(__pyx_t_1) || (PyCFunction_GET_FUNCTION(__pyx_t_1) != (PyCFunction)(void*)__pyx_pw_4dawg_4DAWG_13tobytes)) {
+      if (!PyCFunction_Check(__pyx_t_1) || (PyCFunction_GET_FUNCTION(__pyx_t_1) != (PyCFunction)(void*)__pyx_pw_4dawg_4DAWG_17tobytes)) {
         __Pyx_XDECREF(__pyx_r);
         __Pyx_INCREF(__pyx_t_1);
         __pyx_t_3 = __pyx_t_1; __pyx_t_4 = NULL;
@@ -3906,10 +4058,10 @@ static PyObject *__pyx_f_4dawg_4DAWG_tobytes(struct __pyx_obj_4dawg_DAWG *__pyx_
         }
         __pyx_t_2 = (__pyx_t_4) ? __Pyx_PyObject_CallOneArg(__pyx_t_3, __pyx_t_4) : __Pyx_PyObject_CallNoArg(__pyx_t_3);
         __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
-        if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 93, __pyx_L1_error)
+        if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 99, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_2);
         __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-        if (!(likely(PyBytes_CheckExact(__pyx_t_2))||((__pyx_t_2) == Py_None)||(PyErr_Format(PyExc_TypeError, "Expected %.16s, got %.200s", "bytes", Py_TYPE(__pyx_t_2)->tp_name), 0))) __PYX_ERR(0, 93, __pyx_L1_error)
+        if (!(likely(PyBytes_CheckExact(__pyx_t_2))||((__pyx_t_2) == Py_None)||(PyErr_Format(PyExc_TypeError, "Expected %.16s, got %.200s", "bytes", Py_TYPE(__pyx_t_2)->tp_name), 0))) __PYX_ERR(0, 99, __pyx_L1_error)
         __pyx_r = ((PyObject*)__pyx_t_2);
         __pyx_t_2 = 0;
         __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
@@ -3928,7 +4080,7 @@ static PyObject *__pyx_f_4dawg_4DAWG_tobytes(struct __pyx_obj_4dawg_DAWG *__pyx_
     #endif
   }
 
-  /* "dawg.pyx":98
+  /* "dawg.pyx":104
  *         """
  *         cdef stringstream stream
  *         self.dct.Write(<ostream *> &stream)             # <<<<<<<<<<<<<<
@@ -3939,22 +4091,22 @@ static PyObject *__pyx_f_4dawg_4DAWG_tobytes(struct __pyx_obj_4dawg_DAWG *__pyx_
     __pyx_v_self->dct.Write(((std::ostream *)(&__pyx_v_stream)));
   } catch(...) {
     __Pyx_CppExn2PyErr();
-    __PYX_ERR(0, 98, __pyx_L1_error)
+    __PYX_ERR(0, 104, __pyx_L1_error)
   }
 
-  /* "dawg.pyx":99
+  /* "dawg.pyx":105
  *         cdef stringstream stream
  *         self.dct.Write(<ostream *> &stream)
  *         cdef bytes res = stream.str()             # <<<<<<<<<<<<<<
  *         return res
  * 
  */
-  __pyx_t_1 = __pyx_convert_PyBytes_string_to_py_std__in_string(__pyx_v_stream.str()); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 99, __pyx_L1_error)
+  __pyx_t_1 = __pyx_convert_PyBytes_string_to_py_std__in_string(__pyx_v_stream.str()); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 105, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_v_res = ((PyObject*)__pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "dawg.pyx":100
+  /* "dawg.pyx":106
  *         self.dct.Write(<ostream *> &stream)
  *         cdef bytes res = stream.str()
  *         return res             # <<<<<<<<<<<<<<
@@ -3966,7 +4118,7 @@ static PyObject *__pyx_f_4dawg_4DAWG_tobytes(struct __pyx_obj_4dawg_DAWG *__pyx_
   __pyx_r = __pyx_v_res;
   goto __pyx_L0;
 
-  /* "dawg.pyx":93
+  /* "dawg.pyx":99
  *         return self.dct.Contains(key, len(key))
  * 
  *     cpdef bytes tobytes(self) except +:             # <<<<<<<<<<<<<<
@@ -3990,20 +4142,20 @@ static PyObject *__pyx_f_4dawg_4DAWG_tobytes(struct __pyx_obj_4dawg_DAWG *__pyx_
 }
 
 /* Python wrapper */
-static PyObject *__pyx_pw_4dawg_4DAWG_13tobytes(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused); /*proto*/
-static char __pyx_doc_4dawg_4DAWG_12tobytes[] = "DAWG.tobytes(self) -> bytes\n\n        Return raw DAWG content as bytes.\n        ";
-static PyObject *__pyx_pw_4dawg_4DAWG_13tobytes(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused) {
+static PyObject *__pyx_pw_4dawg_4DAWG_17tobytes(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused); /*proto*/
+static char __pyx_doc_4dawg_4DAWG_16tobytes[] = "DAWG.tobytes(self) -> bytes\n\n        Return raw DAWG content as bytes.\n        ";
+static PyObject *__pyx_pw_4dawg_4DAWG_17tobytes(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused) {
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("tobytes (wrapper)", 0);
-  __pyx_r = __pyx_pf_4dawg_4DAWG_12tobytes(((struct __pyx_obj_4dawg_DAWG *)__pyx_v_self));
+  __pyx_r = __pyx_pf_4dawg_4DAWG_16tobytes(((struct __pyx_obj_4dawg_DAWG *)__pyx_v_self));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_4dawg_4DAWG_12tobytes(struct __pyx_obj_4dawg_DAWG *__pyx_v_self) {
+static PyObject *__pyx_pf_4dawg_4DAWG_16tobytes(struct __pyx_obj_4dawg_DAWG *__pyx_v_self) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
@@ -4011,10 +4163,10 @@ static PyObject *__pyx_pf_4dawg_4DAWG_12tobytes(struct __pyx_obj_4dawg_DAWG *__p
   __Pyx_XDECREF(__pyx_r);
   try {
     __pyx_t_1 = __pyx_f_4dawg_4DAWG_tobytes(__pyx_v_self, 1);
-    if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 93, __pyx_L1_error)
+    if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 99, __pyx_L1_error)
   } catch(...) {
     __Pyx_CppExn2PyErr();
-    __PYX_ERR(0, 93, __pyx_L1_error)
+    __PYX_ERR(0, 99, __pyx_L1_error)
   }
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
@@ -4032,7 +4184,7 @@ static PyObject *__pyx_pf_4dawg_4DAWG_12tobytes(struct __pyx_obj_4dawg_DAWG *__p
   return __pyx_r;
 }
 
-/* "dawg.pyx":102
+/* "dawg.pyx":108
  *         return res
  * 
  *     cpdef frombytes(self, bytes data):             # <<<<<<<<<<<<<<
@@ -4040,7 +4192,7 @@ static PyObject *__pyx_pf_4dawg_4DAWG_12tobytes(struct __pyx_obj_4dawg_DAWG *__p
  *         Load DAWG from bytes ``data``.
  */
 
-static PyObject *__pyx_pw_4dawg_4DAWG_15frombytes(PyObject *__pyx_v_self, PyObject *__pyx_v_data); /*proto*/
+static PyObject *__pyx_pw_4dawg_4DAWG_19frombytes(PyObject *__pyx_v_self, PyObject *__pyx_v_data); /*proto*/
 static PyObject *__pyx_f_4dawg_4DAWG_frombytes(struct __pyx_obj_4dawg_DAWG *__pyx_v_self, PyObject *__pyx_v_data, int __pyx_skip_dispatch) {
   std::string __pyx_v_s_data;
   std::stringstream *__pyx_v_stream;
@@ -4072,9 +4224,9 @@ static PyObject *__pyx_f_4dawg_4DAWG_frombytes(struct __pyx_obj_4dawg_DAWG *__py
     if (unlikely(!__Pyx_object_dict_version_matches(((PyObject *)__pyx_v_self), __pyx_tp_dict_version, __pyx_obj_dict_version))) {
       PY_UINT64_T __pyx_type_dict_guard = __Pyx_get_tp_dict_version(((PyObject *)__pyx_v_self));
       #endif
-      __pyx_t_1 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_frombytes); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 102, __pyx_L1_error)
+      __pyx_t_1 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_frombytes); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 108, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_1);
-      if (!PyCFunction_Check(__pyx_t_1) || (PyCFunction_GET_FUNCTION(__pyx_t_1) != (PyCFunction)(void*)__pyx_pw_4dawg_4DAWG_15frombytes)) {
+      if (!PyCFunction_Check(__pyx_t_1) || (PyCFunction_GET_FUNCTION(__pyx_t_1) != (PyCFunction)(void*)__pyx_pw_4dawg_4DAWG_19frombytes)) {
         __Pyx_XDECREF(__pyx_r);
         __Pyx_INCREF(__pyx_t_1);
         __pyx_t_3 = __pyx_t_1; __pyx_t_4 = NULL;
@@ -4089,7 +4241,7 @@ static PyObject *__pyx_f_4dawg_4DAWG_frombytes(struct __pyx_obj_4dawg_DAWG *__py
         }
         __pyx_t_2 = (__pyx_t_4) ? __Pyx_PyObject_Call2Args(__pyx_t_3, __pyx_t_4, __pyx_v_data) : __Pyx_PyObject_CallOneArg(__pyx_t_3, __pyx_v_data);
         __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
-        if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 102, __pyx_L1_error)
+        if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 108, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_2);
         __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
         __pyx_r = __pyx_t_2;
@@ -4110,17 +4262,17 @@ static PyObject *__pyx_f_4dawg_4DAWG_frombytes(struct __pyx_obj_4dawg_DAWG *__py
     #endif
   }
 
-  /* "dawg.pyx":110
+  /* "dawg.pyx":116
  *         using ``.load``).
  *         """
  *         cdef string s_data = data             # <<<<<<<<<<<<<<
  *         cdef stringstream* stream = new stringstream(s_data)
  * 
  */
-  __pyx_t_5 = __pyx_convert_string_from_py_std__in_string(__pyx_v_data); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 110, __pyx_L1_error)
+  __pyx_t_5 = __pyx_convert_string_from_py_std__in_string(__pyx_v_data); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 116, __pyx_L1_error)
   __pyx_v_s_data = __pyx_t_5;
 
-  /* "dawg.pyx":111
+  /* "dawg.pyx":117
  *         """
  *         cdef string s_data = data
  *         cdef stringstream* stream = new stringstream(s_data)             # <<<<<<<<<<<<<<
@@ -4129,7 +4281,7 @@ static PyObject *__pyx_f_4dawg_4DAWG_frombytes(struct __pyx_obj_4dawg_DAWG *__py
  */
   __pyx_v_stream = new std::stringstream(__pyx_v_s_data);
 
-  /* "dawg.pyx":113
+  /* "dawg.pyx":119
  *         cdef stringstream* stream = new stringstream(s_data)
  * 
  *         try:             # <<<<<<<<<<<<<<
@@ -4138,7 +4290,7 @@ static PyObject *__pyx_f_4dawg_4DAWG_frombytes(struct __pyx_obj_4dawg_DAWG *__py
  */
   /*try:*/ {
 
-    /* "dawg.pyx":114
+    /* "dawg.pyx":120
  * 
  *         try:
  *             res = self.dct.Read(<istream *> stream)             # <<<<<<<<<<<<<<
@@ -4149,11 +4301,11 @@ static PyObject *__pyx_f_4dawg_4DAWG_frombytes(struct __pyx_obj_4dawg_DAWG *__py
       __pyx_t_6 = __pyx_v_self->dct.Read(((std::istream *)__pyx_v_stream));
     } catch(...) {
       __Pyx_CppExn2PyErr();
-      __PYX_ERR(0, 114, __pyx_L4_error)
+      __PYX_ERR(0, 120, __pyx_L4_error)
     }
     __pyx_v_res = __pyx_t_6;
 
-    /* "dawg.pyx":116
+    /* "dawg.pyx":122
  *             res = self.dct.Read(<istream *> stream)
  * 
  *             if not res:             # <<<<<<<<<<<<<<
@@ -4163,7 +4315,7 @@ static PyObject *__pyx_f_4dawg_4DAWG_frombytes(struct __pyx_obj_4dawg_DAWG *__py
     __pyx_t_6 = ((!(__pyx_v_res != 0)) != 0);
     if (unlikely(__pyx_t_6)) {
 
-      /* "dawg.pyx":117
+      /* "dawg.pyx":123
  * 
  *             if not res:
  *                 self.dct.Clear()             # <<<<<<<<<<<<<<
@@ -4172,20 +4324,20 @@ static PyObject *__pyx_f_4dawg_4DAWG_frombytes(struct __pyx_obj_4dawg_DAWG *__py
  */
       __pyx_v_self->dct.Clear();
 
-      /* "dawg.pyx":118
+      /* "dawg.pyx":124
  *             if not res:
  *                 self.dct.Clear()
  *                 raise IOError("Invalid data format")             # <<<<<<<<<<<<<<
  * 
  *             return self
  */
-      __pyx_t_1 = __Pyx_PyObject_Call(__pyx_builtin_IOError, __pyx_tuple__3, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 118, __pyx_L4_error)
+      __pyx_t_1 = __Pyx_PyObject_Call(__pyx_builtin_IOError, __pyx_tuple__3, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 124, __pyx_L4_error)
       __Pyx_GOTREF(__pyx_t_1);
       __Pyx_Raise(__pyx_t_1, 0, 0, 0);
       __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-      __PYX_ERR(0, 118, __pyx_L4_error)
+      __PYX_ERR(0, 124, __pyx_L4_error)
 
-      /* "dawg.pyx":116
+      /* "dawg.pyx":122
  *             res = self.dct.Read(<istream *> stream)
  * 
  *             if not res:             # <<<<<<<<<<<<<<
@@ -4194,7 +4346,7 @@ static PyObject *__pyx_f_4dawg_4DAWG_frombytes(struct __pyx_obj_4dawg_DAWG *__py
  */
     }
 
-    /* "dawg.pyx":120
+    /* "dawg.pyx":126
  *                 raise IOError("Invalid data format")
  * 
  *             return self             # <<<<<<<<<<<<<<
@@ -4207,7 +4359,7 @@ static PyObject *__pyx_f_4dawg_4DAWG_frombytes(struct __pyx_obj_4dawg_DAWG *__py
     goto __pyx_L3_return;
   }
 
-  /* "dawg.pyx":122
+  /* "dawg.pyx":128
  *             return self
  *         finally:
  *             del stream             # <<<<<<<<<<<<<<
@@ -4260,7 +4412,7 @@ static PyObject *__pyx_f_4dawg_4DAWG_frombytes(struct __pyx_obj_4dawg_DAWG *__py
     }
   }
 
-  /* "dawg.pyx":102
+  /* "dawg.pyx":108
  *         return res
  * 
  *     cpdef frombytes(self, bytes data):             # <<<<<<<<<<<<<<
@@ -4283,14 +4435,14 @@ static PyObject *__pyx_f_4dawg_4DAWG_frombytes(struct __pyx_obj_4dawg_DAWG *__py
 }
 
 /* Python wrapper */
-static PyObject *__pyx_pw_4dawg_4DAWG_15frombytes(PyObject *__pyx_v_self, PyObject *__pyx_v_data); /*proto*/
-static char __pyx_doc_4dawg_4DAWG_14frombytes[] = "DAWG.frombytes(self, bytes data)\n\n        Load DAWG from bytes ``data``.\n\n        FIXME: it seems there is a memory leak here (DAWG uses 3x memory\n        when loaded using ``.frombytes`` compared to DAWG loaded\n        using ``.load``).\n        ";
-static PyObject *__pyx_pw_4dawg_4DAWG_15frombytes(PyObject *__pyx_v_self, PyObject *__pyx_v_data) {
+static PyObject *__pyx_pw_4dawg_4DAWG_19frombytes(PyObject *__pyx_v_self, PyObject *__pyx_v_data); /*proto*/
+static char __pyx_doc_4dawg_4DAWG_18frombytes[] = "DAWG.frombytes(self, bytes data)\n\n        Load DAWG from bytes ``data``.\n\n        FIXME: it seems there is a memory leak here (DAWG uses 3x memory\n        when loaded using ``.frombytes`` compared to DAWG loaded\n        using ``.load``).\n        ";
+static PyObject *__pyx_pw_4dawg_4DAWG_19frombytes(PyObject *__pyx_v_self, PyObject *__pyx_v_data) {
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("frombytes (wrapper)", 0);
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_data), (&PyBytes_Type), 1, "data", 1))) __PYX_ERR(0, 102, __pyx_L1_error)
-  __pyx_r = __pyx_pf_4dawg_4DAWG_14frombytes(((struct __pyx_obj_4dawg_DAWG *)__pyx_v_self), ((PyObject*)__pyx_v_data));
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_data), (&PyBytes_Type), 1, "data", 1))) __PYX_ERR(0, 108, __pyx_L1_error)
+  __pyx_r = __pyx_pf_4dawg_4DAWG_18frombytes(((struct __pyx_obj_4dawg_DAWG *)__pyx_v_self), ((PyObject*)__pyx_v_data));
 
   /* function exit code */
   goto __pyx_L0;
@@ -4301,13 +4453,13 @@ static PyObject *__pyx_pw_4dawg_4DAWG_15frombytes(PyObject *__pyx_v_self, PyObje
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_4dawg_4DAWG_14frombytes(struct __pyx_obj_4dawg_DAWG *__pyx_v_self, PyObject *__pyx_v_data) {
+static PyObject *__pyx_pf_4dawg_4DAWG_18frombytes(struct __pyx_obj_4dawg_DAWG *__pyx_v_self, PyObject *__pyx_v_data) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
   __Pyx_RefNannySetupContext("frombytes", 0);
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = __pyx_f_4dawg_4DAWG_frombytes(__pyx_v_self, __pyx_v_data, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 102, __pyx_L1_error)
+  __pyx_t_1 = __pyx_f_4dawg_4DAWG_frombytes(__pyx_v_self, __pyx_v_data, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 108, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
@@ -4324,7 +4476,7 @@ static PyObject *__pyx_pf_4dawg_4DAWG_14frombytes(struct __pyx_obj_4dawg_DAWG *_
   return __pyx_r;
 }
 
-/* "dawg.pyx":124
+/* "dawg.pyx":130
  *             del stream
  * 
  *     def read(self, f):             # <<<<<<<<<<<<<<
@@ -4333,20 +4485,20 @@ static PyObject *__pyx_pf_4dawg_4DAWG_14frombytes(struct __pyx_obj_4dawg_DAWG *_
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_4dawg_4DAWG_17read(PyObject *__pyx_v_self, PyObject *__pyx_v_f); /*proto*/
-static char __pyx_doc_4dawg_4DAWG_16read[] = "DAWG.read(self, f)\n\n        Load DAWG from a file-like object.\n\n        FIXME: this method should'n read the whole stream.\n        ";
-static PyObject *__pyx_pw_4dawg_4DAWG_17read(PyObject *__pyx_v_self, PyObject *__pyx_v_f) {
+static PyObject *__pyx_pw_4dawg_4DAWG_21read(PyObject *__pyx_v_self, PyObject *__pyx_v_f); /*proto*/
+static char __pyx_doc_4dawg_4DAWG_20read[] = "DAWG.read(self, f)\n\n        Load DAWG from a file-like object.\n\n        FIXME: this method should'n read the whole stream.\n        ";
+static PyObject *__pyx_pw_4dawg_4DAWG_21read(PyObject *__pyx_v_self, PyObject *__pyx_v_f) {
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("read (wrapper)", 0);
-  __pyx_r = __pyx_pf_4dawg_4DAWG_16read(((struct __pyx_obj_4dawg_DAWG *)__pyx_v_self), ((PyObject *)__pyx_v_f));
+  __pyx_r = __pyx_pf_4dawg_4DAWG_20read(((struct __pyx_obj_4dawg_DAWG *)__pyx_v_self), ((PyObject *)__pyx_v_f));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_4dawg_4DAWG_16read(struct __pyx_obj_4dawg_DAWG *__pyx_v_self, PyObject *__pyx_v_f) {
+static PyObject *__pyx_pf_4dawg_4DAWG_20read(struct __pyx_obj_4dawg_DAWG *__pyx_v_self, PyObject *__pyx_v_f) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
@@ -4354,14 +4506,14 @@ static PyObject *__pyx_pf_4dawg_4DAWG_16read(struct __pyx_obj_4dawg_DAWG *__pyx_
   PyObject *__pyx_t_3 = NULL;
   __Pyx_RefNannySetupContext("read", 0);
 
-  /* "dawg.pyx":130
+  /* "dawg.pyx":136
  *         FIXME: this method should'n read the whole stream.
  *         """
  *         self.frombytes(f.read())             # <<<<<<<<<<<<<<
  * 
  *     def write(self, f):
  */
-  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_v_f, __pyx_n_s_read); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 130, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_v_f, __pyx_n_s_read); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 136, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __pyx_t_3 = NULL;
   if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_2))) {
@@ -4375,16 +4527,16 @@ static PyObject *__pyx_pf_4dawg_4DAWG_16read(struct __pyx_obj_4dawg_DAWG *__pyx_
   }
   __pyx_t_1 = (__pyx_t_3) ? __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_t_3) : __Pyx_PyObject_CallNoArg(__pyx_t_2);
   __Pyx_XDECREF(__pyx_t_3); __pyx_t_3 = 0;
-  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 130, __pyx_L1_error)
+  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 136, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  if (!(likely(PyBytes_CheckExact(__pyx_t_1))||((__pyx_t_1) == Py_None)||(PyErr_Format(PyExc_TypeError, "Expected %.16s, got %.200s", "bytes", Py_TYPE(__pyx_t_1)->tp_name), 0))) __PYX_ERR(0, 130, __pyx_L1_error)
-  __pyx_t_2 = ((struct __pyx_vtabstruct_4dawg_DAWG *)__pyx_v_self->__pyx_vtab)->frombytes(__pyx_v_self, ((PyObject*)__pyx_t_1), 0); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 130, __pyx_L1_error)
+  if (!(likely(PyBytes_CheckExact(__pyx_t_1))||((__pyx_t_1) == Py_None)||(PyErr_Format(PyExc_TypeError, "Expected %.16s, got %.200s", "bytes", Py_TYPE(__pyx_t_1)->tp_name), 0))) __PYX_ERR(0, 136, __pyx_L1_error)
+  __pyx_t_2 = ((struct __pyx_vtabstruct_4dawg_DAWG *)__pyx_v_self->__pyx_vtab)->frombytes(__pyx_v_self, ((PyObject*)__pyx_t_1), 0); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 136, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "dawg.pyx":124
+  /* "dawg.pyx":130
  *             del stream
  * 
  *     def read(self, f):             # <<<<<<<<<<<<<<
@@ -4407,7 +4559,7 @@ static PyObject *__pyx_pf_4dawg_4DAWG_16read(struct __pyx_obj_4dawg_DAWG *__pyx_
   return __pyx_r;
 }
 
-/* "dawg.pyx":132
+/* "dawg.pyx":138
  *         self.frombytes(f.read())
  * 
  *     def write(self, f):             # <<<<<<<<<<<<<<
@@ -4416,20 +4568,20 @@ static PyObject *__pyx_pf_4dawg_4DAWG_16read(struct __pyx_obj_4dawg_DAWG *__pyx_
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_4dawg_4DAWG_19write(PyObject *__pyx_v_self, PyObject *__pyx_v_f); /*proto*/
-static char __pyx_doc_4dawg_4DAWG_18write[] = "DAWG.write(self, f)\n\n        Write DAWG to a file-like object.\n        ";
-static PyObject *__pyx_pw_4dawg_4DAWG_19write(PyObject *__pyx_v_self, PyObject *__pyx_v_f) {
+static PyObject *__pyx_pw_4dawg_4DAWG_23write(PyObject *__pyx_v_self, PyObject *__pyx_v_f); /*proto*/
+static char __pyx_doc_4dawg_4DAWG_22write[] = "DAWG.write(self, f)\n\n        Write DAWG to a file-like object.\n        ";
+static PyObject *__pyx_pw_4dawg_4DAWG_23write(PyObject *__pyx_v_self, PyObject *__pyx_v_f) {
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("write (wrapper)", 0);
-  __pyx_r = __pyx_pf_4dawg_4DAWG_18write(((struct __pyx_obj_4dawg_DAWG *)__pyx_v_self), ((PyObject *)__pyx_v_f));
+  __pyx_r = __pyx_pf_4dawg_4DAWG_22write(((struct __pyx_obj_4dawg_DAWG *)__pyx_v_self), ((PyObject *)__pyx_v_f));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_4dawg_4DAWG_18write(struct __pyx_obj_4dawg_DAWG *__pyx_v_self, PyObject *__pyx_v_f) {
+static PyObject *__pyx_pf_4dawg_4DAWG_22write(struct __pyx_obj_4dawg_DAWG *__pyx_v_self, PyObject *__pyx_v_f) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
@@ -4438,21 +4590,21 @@ static PyObject *__pyx_pf_4dawg_4DAWG_18write(struct __pyx_obj_4dawg_DAWG *__pyx
   PyObject *__pyx_t_4 = NULL;
   __Pyx_RefNannySetupContext("write", 0);
 
-  /* "dawg.pyx":136
+  /* "dawg.pyx":142
  *         Write DAWG to a file-like object.
  *         """
  *         f.write(self.tobytes())             # <<<<<<<<<<<<<<
  * 
  *     def load(self, path):
  */
-  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_v_f, __pyx_n_s_write); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 136, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_v_f, __pyx_n_s_write); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 142, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   try {
     __pyx_t_3 = ((struct __pyx_vtabstruct_4dawg_DAWG *)__pyx_v_self->__pyx_vtab)->tobytes(__pyx_v_self, 0);
-    if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 136, __pyx_L1_error)
+    if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 142, __pyx_L1_error)
   } catch(...) {
     __Pyx_CppExn2PyErr();
-    __PYX_ERR(0, 136, __pyx_L1_error)
+    __PYX_ERR(0, 142, __pyx_L1_error)
   }
   __Pyx_GOTREF(__pyx_t_3);
   __pyx_t_4 = NULL;
@@ -4468,12 +4620,12 @@ static PyObject *__pyx_pf_4dawg_4DAWG_18write(struct __pyx_obj_4dawg_DAWG *__pyx
   __pyx_t_1 = (__pyx_t_4) ? __Pyx_PyObject_Call2Args(__pyx_t_2, __pyx_t_4, __pyx_t_3) : __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_t_3);
   __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 136, __pyx_L1_error)
+  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 142, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "dawg.pyx":132
+  /* "dawg.pyx":138
  *         self.frombytes(f.read())
  * 
  *     def write(self, f):             # <<<<<<<<<<<<<<
@@ -4497,7 +4649,7 @@ static PyObject *__pyx_pf_4dawg_4DAWG_18write(struct __pyx_obj_4dawg_DAWG *__pyx
   return __pyx_r;
 }
 
-/* "dawg.pyx":138
+/* "dawg.pyx":144
  *         f.write(self.tobytes())
  * 
  *     def load(self, path):             # <<<<<<<<<<<<<<
@@ -4506,20 +4658,20 @@ static PyObject *__pyx_pf_4dawg_4DAWG_18write(struct __pyx_obj_4dawg_DAWG *__pyx
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_4dawg_4DAWG_21load(PyObject *__pyx_v_self, PyObject *__pyx_v_path); /*proto*/
-static char __pyx_doc_4dawg_4DAWG_20load[] = "DAWG.load(self, path)\n\n        Load DAWG from a file.\n        ";
-static PyObject *__pyx_pw_4dawg_4DAWG_21load(PyObject *__pyx_v_self, PyObject *__pyx_v_path) {
+static PyObject *__pyx_pw_4dawg_4DAWG_25load(PyObject *__pyx_v_self, PyObject *__pyx_v_path); /*proto*/
+static char __pyx_doc_4dawg_4DAWG_24load[] = "DAWG.load(self, path)\n\n        Load DAWG from a file.\n        ";
+static PyObject *__pyx_pw_4dawg_4DAWG_25load(PyObject *__pyx_v_self, PyObject *__pyx_v_path) {
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("load (wrapper)", 0);
-  __pyx_r = __pyx_pf_4dawg_4DAWG_20load(((struct __pyx_obj_4dawg_DAWG *)__pyx_v_self), ((PyObject *)__pyx_v_path));
+  __pyx_r = __pyx_pf_4dawg_4DAWG_24load(((struct __pyx_obj_4dawg_DAWG *)__pyx_v_self), ((PyObject *)__pyx_v_path));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_4dawg_4DAWG_20load(struct __pyx_obj_4dawg_DAWG *__pyx_v_self, PyObject *__pyx_v_path) {
+static PyObject *__pyx_pf_4dawg_4DAWG_24load(struct __pyx_obj_4dawg_DAWG *__pyx_v_self, PyObject *__pyx_v_path) {
   std::ifstream __pyx_v_stream;
   int __pyx_v_res;
   PyObject *__pyx_r = NULL;
@@ -4536,7 +4688,7 @@ static PyObject *__pyx_pf_4dawg_4DAWG_20load(struct __pyx_obj_4dawg_DAWG *__pyx_
   __Pyx_RefNannySetupContext("load", 0);
   __Pyx_INCREF(__pyx_v_path);
 
-  /* "dawg.pyx":142
+  /* "dawg.pyx":148
  *         Load DAWG from a file.
  *         """
  *         if isinstance(path, unicode):             # <<<<<<<<<<<<<<
@@ -4547,18 +4699,18 @@ static PyObject *__pyx_pf_4dawg_4DAWG_20load(struct __pyx_obj_4dawg_DAWG *__pyx_
   __pyx_t_2 = (__pyx_t_1 != 0);
   if (__pyx_t_2) {
 
-    /* "dawg.pyx":143
+    /* "dawg.pyx":149
  *         """
  *         if isinstance(path, unicode):
  *             path = path.encode(sys.getfilesystemencoding())             # <<<<<<<<<<<<<<
  * 
  *         cdef ifstream stream
  */
-    __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_v_path, __pyx_n_s_encode); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 143, __pyx_L1_error)
+    __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_v_path, __pyx_n_s_encode); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 149, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_4);
-    __Pyx_GetModuleGlobalName(__pyx_t_6, __pyx_n_s_sys); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 143, __pyx_L1_error)
+    __Pyx_GetModuleGlobalName(__pyx_t_6, __pyx_n_s_sys); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 149, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_6);
-    __pyx_t_7 = __Pyx_PyObject_GetAttrStr(__pyx_t_6, __pyx_n_s_getfilesystemencoding); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 143, __pyx_L1_error)
+    __pyx_t_7 = __Pyx_PyObject_GetAttrStr(__pyx_t_6, __pyx_n_s_getfilesystemencoding); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 149, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_7);
     __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
     __pyx_t_6 = NULL;
@@ -4573,7 +4725,7 @@ static PyObject *__pyx_pf_4dawg_4DAWG_20load(struct __pyx_obj_4dawg_DAWG *__pyx_
     }
     __pyx_t_5 = (__pyx_t_6) ? __Pyx_PyObject_CallOneArg(__pyx_t_7, __pyx_t_6) : __Pyx_PyObject_CallNoArg(__pyx_t_7);
     __Pyx_XDECREF(__pyx_t_6); __pyx_t_6 = 0;
-    if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 143, __pyx_L1_error)
+    if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 149, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_5);
     __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
     __pyx_t_7 = NULL;
@@ -4589,13 +4741,13 @@ static PyObject *__pyx_pf_4dawg_4DAWG_20load(struct __pyx_obj_4dawg_DAWG *__pyx_
     __pyx_t_3 = (__pyx_t_7) ? __Pyx_PyObject_Call2Args(__pyx_t_4, __pyx_t_7, __pyx_t_5) : __Pyx_PyObject_CallOneArg(__pyx_t_4, __pyx_t_5);
     __Pyx_XDECREF(__pyx_t_7); __pyx_t_7 = 0;
     __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-    if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 143, __pyx_L1_error)
+    if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 149, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
     __Pyx_DECREF_SET(__pyx_v_path, __pyx_t_3);
     __pyx_t_3 = 0;
 
-    /* "dawg.pyx":142
+    /* "dawg.pyx":148
  *         Load DAWG from a file.
  *         """
  *         if isinstance(path, unicode):             # <<<<<<<<<<<<<<
@@ -4604,22 +4756,22 @@ static PyObject *__pyx_pf_4dawg_4DAWG_20load(struct __pyx_obj_4dawg_DAWG *__pyx_
  */
   }
 
-  /* "dawg.pyx":146
+  /* "dawg.pyx":152
  * 
  *         cdef ifstream stream
  *         stream.open(path, iostream.binary)             # <<<<<<<<<<<<<<
  *         if stream.fail():
  *             raise IOError("It's not possible to read file stream")
  */
-  __pyx_t_8 = __Pyx_PyObject_AsWritableString(__pyx_v_path); if (unlikely((!__pyx_t_8) && PyErr_Occurred())) __PYX_ERR(0, 146, __pyx_L1_error)
+  __pyx_t_8 = __Pyx_PyObject_AsWritableString(__pyx_v_path); if (unlikely((!__pyx_t_8) && PyErr_Occurred())) __PYX_ERR(0, 152, __pyx_L1_error)
   try {
     __pyx_v_stream.open(__pyx_t_8, std::stringstream::binary);
   } catch(...) {
     __Pyx_CppExn2PyErr();
-    __PYX_ERR(0, 146, __pyx_L1_error)
+    __PYX_ERR(0, 152, __pyx_L1_error)
   }
 
-  /* "dawg.pyx":147
+  /* "dawg.pyx":153
  *         cdef ifstream stream
  *         stream.open(path, iostream.binary)
  *         if stream.fail():             # <<<<<<<<<<<<<<
@@ -4630,25 +4782,25 @@ static PyObject *__pyx_pf_4dawg_4DAWG_20load(struct __pyx_obj_4dawg_DAWG *__pyx_
     __pyx_t_9 = __pyx_v_stream.fail();
   } catch(...) {
     __Pyx_CppExn2PyErr();
-    __PYX_ERR(0, 147, __pyx_L1_error)
+    __PYX_ERR(0, 153, __pyx_L1_error)
   }
   __pyx_t_2 = (__pyx_t_9 != 0);
   if (unlikely(__pyx_t_2)) {
 
-    /* "dawg.pyx":148
+    /* "dawg.pyx":154
  *         stream.open(path, iostream.binary)
  *         if stream.fail():
  *             raise IOError("It's not possible to read file stream")             # <<<<<<<<<<<<<<
  * 
  *         res = self.dct.Read(<istream*> &stream)
  */
-    __pyx_t_3 = __Pyx_PyObject_Call(__pyx_builtin_IOError, __pyx_tuple__4, NULL); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 148, __pyx_L1_error)
+    __pyx_t_3 = __Pyx_PyObject_Call(__pyx_builtin_IOError, __pyx_tuple__4, NULL); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 154, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
     __Pyx_Raise(__pyx_t_3, 0, 0, 0);
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-    __PYX_ERR(0, 148, __pyx_L1_error)
+    __PYX_ERR(0, 154, __pyx_L1_error)
 
-    /* "dawg.pyx":147
+    /* "dawg.pyx":153
  *         cdef ifstream stream
  *         stream.open(path, iostream.binary)
  *         if stream.fail():             # <<<<<<<<<<<<<<
@@ -4657,7 +4809,7 @@ static PyObject *__pyx_pf_4dawg_4DAWG_20load(struct __pyx_obj_4dawg_DAWG *__pyx_
  */
   }
 
-  /* "dawg.pyx":150
+  /* "dawg.pyx":156
  *             raise IOError("It's not possible to read file stream")
  * 
  *         res = self.dct.Read(<istream*> &stream)             # <<<<<<<<<<<<<<
@@ -4668,11 +4820,11 @@ static PyObject *__pyx_pf_4dawg_4DAWG_20load(struct __pyx_obj_4dawg_DAWG *__pyx_
     __pyx_t_2 = __pyx_v_self->dct.Read(((std::istream *)(&__pyx_v_stream)));
   } catch(...) {
     __Pyx_CppExn2PyErr();
-    __PYX_ERR(0, 150, __pyx_L1_error)
+    __PYX_ERR(0, 156, __pyx_L1_error)
   }
   __pyx_v_res = __pyx_t_2;
 
-  /* "dawg.pyx":152
+  /* "dawg.pyx":158
  *         res = self.dct.Read(<istream*> &stream)
  * 
  *         stream.close()             # <<<<<<<<<<<<<<
@@ -4683,10 +4835,10 @@ static PyObject *__pyx_pf_4dawg_4DAWG_20load(struct __pyx_obj_4dawg_DAWG *__pyx_
     __pyx_v_stream.close();
   } catch(...) {
     __Pyx_CppExn2PyErr();
-    __PYX_ERR(0, 152, __pyx_L1_error)
+    __PYX_ERR(0, 158, __pyx_L1_error)
   }
 
-  /* "dawg.pyx":154
+  /* "dawg.pyx":160
  *         stream.close()
  * 
  *         if not res:             # <<<<<<<<<<<<<<
@@ -4696,7 +4848,7 @@ static PyObject *__pyx_pf_4dawg_4DAWG_20load(struct __pyx_obj_4dawg_DAWG *__pyx_
   __pyx_t_2 = ((!(__pyx_v_res != 0)) != 0);
   if (unlikely(__pyx_t_2)) {
 
-    /* "dawg.pyx":155
+    /* "dawg.pyx":161
  * 
  *         if not res:
  *             self.dct.Clear()             # <<<<<<<<<<<<<<
@@ -4705,20 +4857,20 @@ static PyObject *__pyx_pf_4dawg_4DAWG_20load(struct __pyx_obj_4dawg_DAWG *__pyx_
  */
     __pyx_v_self->dct.Clear();
 
-    /* "dawg.pyx":156
+    /* "dawg.pyx":162
  *         if not res:
  *             self.dct.Clear()
  *             raise IOError("Invalid data format")             # <<<<<<<<<<<<<<
  * 
  *         return self
  */
-    __pyx_t_3 = __Pyx_PyObject_Call(__pyx_builtin_IOError, __pyx_tuple__3, NULL); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 156, __pyx_L1_error)
+    __pyx_t_3 = __Pyx_PyObject_Call(__pyx_builtin_IOError, __pyx_tuple__3, NULL); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 162, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
     __Pyx_Raise(__pyx_t_3, 0, 0, 0);
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-    __PYX_ERR(0, 156, __pyx_L1_error)
+    __PYX_ERR(0, 162, __pyx_L1_error)
 
-    /* "dawg.pyx":154
+    /* "dawg.pyx":160
  *         stream.close()
  * 
  *         if not res:             # <<<<<<<<<<<<<<
@@ -4727,7 +4879,7 @@ static PyObject *__pyx_pf_4dawg_4DAWG_20load(struct __pyx_obj_4dawg_DAWG *__pyx_
  */
   }
 
-  /* "dawg.pyx":158
+  /* "dawg.pyx":164
  *             raise IOError("Invalid data format")
  * 
  *         return self             # <<<<<<<<<<<<<<
@@ -4739,7 +4891,7 @@ static PyObject *__pyx_pf_4dawg_4DAWG_20load(struct __pyx_obj_4dawg_DAWG *__pyx_
   __pyx_r = ((PyObject *)__pyx_v_self);
   goto __pyx_L0;
 
-  /* "dawg.pyx":138
+  /* "dawg.pyx":144
  *         f.write(self.tobytes())
  * 
  *     def load(self, path):             # <<<<<<<<<<<<<<
@@ -4763,7 +4915,7 @@ static PyObject *__pyx_pf_4dawg_4DAWG_20load(struct __pyx_obj_4dawg_DAWG *__pyx_
   return __pyx_r;
 }
 
-/* "dawg.pyx":160
+/* "dawg.pyx":166
  *         return self
  * 
  *     def save(self, path):             # <<<<<<<<<<<<<<
@@ -4772,20 +4924,20 @@ static PyObject *__pyx_pf_4dawg_4DAWG_20load(struct __pyx_obj_4dawg_DAWG *__pyx_
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_4dawg_4DAWG_23save(PyObject *__pyx_v_self, PyObject *__pyx_v_path); /*proto*/
-static char __pyx_doc_4dawg_4DAWG_22save[] = "DAWG.save(self, path)\n\n        Save DAWG to a file.\n        ";
-static PyObject *__pyx_pw_4dawg_4DAWG_23save(PyObject *__pyx_v_self, PyObject *__pyx_v_path) {
+static PyObject *__pyx_pw_4dawg_4DAWG_27save(PyObject *__pyx_v_self, PyObject *__pyx_v_path); /*proto*/
+static char __pyx_doc_4dawg_4DAWG_26save[] = "DAWG.save(self, path)\n\n        Save DAWG to a file.\n        ";
+static PyObject *__pyx_pw_4dawg_4DAWG_27save(PyObject *__pyx_v_self, PyObject *__pyx_v_path) {
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("save (wrapper)", 0);
-  __pyx_r = __pyx_pf_4dawg_4DAWG_22save(((struct __pyx_obj_4dawg_DAWG *)__pyx_v_self), ((PyObject *)__pyx_v_path));
+  __pyx_r = __pyx_pf_4dawg_4DAWG_26save(((struct __pyx_obj_4dawg_DAWG *)__pyx_v_self), ((PyObject *)__pyx_v_path));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_4dawg_4DAWG_22save(struct __pyx_obj_4dawg_DAWG *__pyx_v_self, PyObject *__pyx_v_path) {
+static PyObject *__pyx_pf_4dawg_4DAWG_26save(struct __pyx_obj_4dawg_DAWG *__pyx_v_self, PyObject *__pyx_v_path) {
   PyObject *__pyx_v_f = NULL;
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
@@ -4802,7 +4954,7 @@ static PyObject *__pyx_pf_4dawg_4DAWG_22save(struct __pyx_obj_4dawg_DAWG *__pyx_
   int __pyx_t_11;
   __Pyx_RefNannySetupContext("save", 0);
 
-  /* "dawg.pyx":164
+  /* "dawg.pyx":170
  *         Save DAWG to a file.
  *         """
  *         with open(path, 'wb') as f:             # <<<<<<<<<<<<<<
@@ -4810,7 +4962,7 @@ static PyObject *__pyx_pf_4dawg_4DAWG_22save(struct __pyx_obj_4dawg_DAWG *__pyx_
  * 
  */
   /*with:*/ {
-    __pyx_t_1 = PyTuple_New(2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 164, __pyx_L1_error)
+    __pyx_t_1 = PyTuple_New(2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 170, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_INCREF(__pyx_v_path);
     __Pyx_GIVEREF(__pyx_v_path);
@@ -4818,12 +4970,12 @@ static PyObject *__pyx_pf_4dawg_4DAWG_22save(struct __pyx_obj_4dawg_DAWG *__pyx_
     __Pyx_INCREF(__pyx_n_u_wb);
     __Pyx_GIVEREF(__pyx_n_u_wb);
     PyTuple_SET_ITEM(__pyx_t_1, 1, __pyx_n_u_wb);
-    __pyx_t_2 = __Pyx_PyObject_Call(__pyx_builtin_open, __pyx_t_1, NULL); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 164, __pyx_L1_error)
+    __pyx_t_2 = __Pyx_PyObject_Call(__pyx_builtin_open, __pyx_t_1, NULL); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 170, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-    __pyx_t_3 = __Pyx_PyObject_LookupSpecial(__pyx_t_2, __pyx_n_s_exit); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 164, __pyx_L1_error)
+    __pyx_t_3 = __Pyx_PyObject_LookupSpecial(__pyx_t_2, __pyx_n_s_exit); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 170, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
-    __pyx_t_4 = __Pyx_PyObject_LookupSpecial(__pyx_t_2, __pyx_n_s_enter); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 164, __pyx_L3_error)
+    __pyx_t_4 = __Pyx_PyObject_LookupSpecial(__pyx_t_2, __pyx_n_s_enter); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 170, __pyx_L3_error)
     __Pyx_GOTREF(__pyx_t_4);
     __pyx_t_5 = NULL;
     if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_4))) {
@@ -4837,7 +4989,7 @@ static PyObject *__pyx_pf_4dawg_4DAWG_22save(struct __pyx_obj_4dawg_DAWG *__pyx_
     }
     __pyx_t_1 = (__pyx_t_5) ? __Pyx_PyObject_CallOneArg(__pyx_t_4, __pyx_t_5) : __Pyx_PyObject_CallNoArg(__pyx_t_4);
     __Pyx_XDECREF(__pyx_t_5); __pyx_t_5 = 0;
-    if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 164, __pyx_L3_error)
+    if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 170, __pyx_L3_error)
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
     __pyx_t_4 = __pyx_t_1;
@@ -4855,14 +5007,14 @@ static PyObject *__pyx_pf_4dawg_4DAWG_22save(struct __pyx_obj_4dawg_DAWG *__pyx_
           __pyx_v_f = __pyx_t_4;
           __pyx_t_4 = 0;
 
-          /* "dawg.pyx":165
+          /* "dawg.pyx":171
  *         """
  *         with open(path, 'wb') as f:
  *             self.write(f)             # <<<<<<<<<<<<<<
  * 
  *     # pickling support
  */
-          __pyx_t_2 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_write); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 165, __pyx_L7_error)
+          __pyx_t_2 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_write); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 171, __pyx_L7_error)
           __Pyx_GOTREF(__pyx_t_2);
           __pyx_t_1 = NULL;
           if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_2))) {
@@ -4876,12 +5028,12 @@ static PyObject *__pyx_pf_4dawg_4DAWG_22save(struct __pyx_obj_4dawg_DAWG *__pyx_
           }
           __pyx_t_4 = (__pyx_t_1) ? __Pyx_PyObject_Call2Args(__pyx_t_2, __pyx_t_1, __pyx_v_f) : __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_v_f);
           __Pyx_XDECREF(__pyx_t_1); __pyx_t_1 = 0;
-          if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 165, __pyx_L7_error)
+          if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 171, __pyx_L7_error)
           __Pyx_GOTREF(__pyx_t_4);
           __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
           __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-          /* "dawg.pyx":164
+          /* "dawg.pyx":170
  *         Save DAWG to a file.
  *         """
  *         with open(path, 'wb') as f:             # <<<<<<<<<<<<<<
@@ -4900,20 +5052,20 @@ static PyObject *__pyx_pf_4dawg_4DAWG_22save(struct __pyx_obj_4dawg_DAWG *__pyx_
         __Pyx_XDECREF(__pyx_t_5); __pyx_t_5 = 0;
         /*except:*/ {
           __Pyx_AddTraceback("dawg.DAWG.save", __pyx_clineno, __pyx_lineno, __pyx_filename);
-          if (__Pyx_GetException(&__pyx_t_4, &__pyx_t_2, &__pyx_t_1) < 0) __PYX_ERR(0, 164, __pyx_L9_except_error)
+          if (__Pyx_GetException(&__pyx_t_4, &__pyx_t_2, &__pyx_t_1) < 0) __PYX_ERR(0, 170, __pyx_L9_except_error)
           __Pyx_GOTREF(__pyx_t_4);
           __Pyx_GOTREF(__pyx_t_2);
           __Pyx_GOTREF(__pyx_t_1);
-          __pyx_t_5 = PyTuple_Pack(3, __pyx_t_4, __pyx_t_2, __pyx_t_1); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 164, __pyx_L9_except_error)
+          __pyx_t_5 = PyTuple_Pack(3, __pyx_t_4, __pyx_t_2, __pyx_t_1); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 170, __pyx_L9_except_error)
           __Pyx_GOTREF(__pyx_t_5);
           __pyx_t_9 = __Pyx_PyObject_Call(__pyx_t_3, __pyx_t_5, NULL);
           __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
           __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-          if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 164, __pyx_L9_except_error)
+          if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 170, __pyx_L9_except_error)
           __Pyx_GOTREF(__pyx_t_9);
           __pyx_t_10 = __Pyx_PyObject_IsTrue(__pyx_t_9);
           __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
-          if (__pyx_t_10 < 0) __PYX_ERR(0, 164, __pyx_L9_except_error)
+          if (__pyx_t_10 < 0) __PYX_ERR(0, 170, __pyx_L9_except_error)
           __pyx_t_11 = ((!(__pyx_t_10 != 0)) != 0);
           if (__pyx_t_11) {
             __Pyx_GIVEREF(__pyx_t_4);
@@ -4921,7 +5073,7 @@ static PyObject *__pyx_pf_4dawg_4DAWG_22save(struct __pyx_obj_4dawg_DAWG *__pyx_
             __Pyx_XGIVEREF(__pyx_t_1);
             __Pyx_ErrRestoreWithState(__pyx_t_4, __pyx_t_2, __pyx_t_1);
             __pyx_t_4 = 0; __pyx_t_2 = 0; __pyx_t_1 = 0; 
-            __PYX_ERR(0, 164, __pyx_L9_except_error)
+            __PYX_ERR(0, 170, __pyx_L9_except_error)
           }
           __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
           __Pyx_XDECREF(__pyx_t_2); __pyx_t_2 = 0;
@@ -4947,7 +5099,7 @@ static PyObject *__pyx_pf_4dawg_4DAWG_22save(struct __pyx_obj_4dawg_DAWG *__pyx_
         if (__pyx_t_3) {
           __pyx_t_8 = __Pyx_PyObject_Call(__pyx_t_3, __pyx_tuple__5, NULL);
           __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-          if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 164, __pyx_L1_error)
+          if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 170, __pyx_L1_error)
           __Pyx_GOTREF(__pyx_t_8);
           __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
         }
@@ -4962,7 +5114,7 @@ static PyObject *__pyx_pf_4dawg_4DAWG_22save(struct __pyx_obj_4dawg_DAWG *__pyx_
     __pyx_L16:;
   }
 
-  /* "dawg.pyx":160
+  /* "dawg.pyx":166
  *         return self
  * 
  *     def save(self, path):             # <<<<<<<<<<<<<<
@@ -4987,7 +5139,7 @@ static PyObject *__pyx_pf_4dawg_4DAWG_22save(struct __pyx_obj_4dawg_DAWG *__pyx_
   return __pyx_r;
 }
 
-/* "dawg.pyx":168
+/* "dawg.pyx":174
  * 
  *     # pickling support
  *     def __reduce__(self):             # <<<<<<<<<<<<<<
@@ -4996,20 +5148,20 @@ static PyObject *__pyx_pf_4dawg_4DAWG_22save(struct __pyx_obj_4dawg_DAWG *__pyx_
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_4dawg_4DAWG_25__reduce__(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused); /*proto*/
-static char __pyx_doc_4dawg_4DAWG_24__reduce__[] = "DAWG.__reduce__(self)";
-static PyObject *__pyx_pw_4dawg_4DAWG_25__reduce__(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused) {
+static PyObject *__pyx_pw_4dawg_4DAWG_29__reduce__(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused); /*proto*/
+static char __pyx_doc_4dawg_4DAWG_28__reduce__[] = "DAWG.__reduce__(self)";
+static PyObject *__pyx_pw_4dawg_4DAWG_29__reduce__(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused) {
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("__reduce__ (wrapper)", 0);
-  __pyx_r = __pyx_pf_4dawg_4DAWG_24__reduce__(((struct __pyx_obj_4dawg_DAWG *)__pyx_v_self));
+  __pyx_r = __pyx_pf_4dawg_4DAWG_28__reduce__(((struct __pyx_obj_4dawg_DAWG *)__pyx_v_self));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_4dawg_4DAWG_24__reduce__(struct __pyx_obj_4dawg_DAWG *__pyx_v_self) {
+static PyObject *__pyx_pf_4dawg_4DAWG_28__reduce__(struct __pyx_obj_4dawg_DAWG *__pyx_v_self) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
@@ -5018,7 +5170,7 @@ static PyObject *__pyx_pf_4dawg_4DAWG_24__reduce__(struct __pyx_obj_4dawg_DAWG *
   PyObject *__pyx_t_4 = NULL;
   __Pyx_RefNannySetupContext("__reduce__", 0);
 
-  /* "dawg.pyx":169
+  /* "dawg.pyx":175
  *     # pickling support
  *     def __reduce__(self):
  *         return self.__class__, tuple(), self.tobytes()             # <<<<<<<<<<<<<<
@@ -5026,19 +5178,19 @@ static PyObject *__pyx_pf_4dawg_4DAWG_24__reduce__(struct __pyx_obj_4dawg_DAWG *
  *     def __setstate__(self, state):
  */
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_class); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 169, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_class); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 175, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_2 = __Pyx_PyObject_CallNoArg(((PyObject *)(&PyTuple_Type))); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 169, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_CallNoArg(((PyObject *)(&PyTuple_Type))); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 175, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   try {
     __pyx_t_3 = ((struct __pyx_vtabstruct_4dawg_DAWG *)__pyx_v_self->__pyx_vtab)->tobytes(__pyx_v_self, 0);
-    if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 169, __pyx_L1_error)
+    if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 175, __pyx_L1_error)
   } catch(...) {
     __Pyx_CppExn2PyErr();
-    __PYX_ERR(0, 169, __pyx_L1_error)
+    __PYX_ERR(0, 175, __pyx_L1_error)
   }
   __Pyx_GOTREF(__pyx_t_3);
-  __pyx_t_4 = PyTuple_New(3); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 169, __pyx_L1_error)
+  __pyx_t_4 = PyTuple_New(3); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 175, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __Pyx_GIVEREF(__pyx_t_1);
   PyTuple_SET_ITEM(__pyx_t_4, 0, __pyx_t_1);
@@ -5053,7 +5205,7 @@ static PyObject *__pyx_pf_4dawg_4DAWG_24__reduce__(struct __pyx_obj_4dawg_DAWG *
   __pyx_t_4 = 0;
   goto __pyx_L0;
 
-  /* "dawg.pyx":168
+  /* "dawg.pyx":174
  * 
  *     # pickling support
  *     def __reduce__(self):             # <<<<<<<<<<<<<<
@@ -5075,7 +5227,7 @@ static PyObject *__pyx_pf_4dawg_4DAWG_24__reduce__(struct __pyx_obj_4dawg_DAWG *
   return __pyx_r;
 }
 
-/* "dawg.pyx":171
+/* "dawg.pyx":177
  *         return self.__class__, tuple(), self.tobytes()
  * 
  *     def __setstate__(self, state):             # <<<<<<<<<<<<<<
@@ -5084,38 +5236,38 @@ static PyObject *__pyx_pf_4dawg_4DAWG_24__reduce__(struct __pyx_obj_4dawg_DAWG *
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_4dawg_4DAWG_27__setstate__(PyObject *__pyx_v_self, PyObject *__pyx_v_state); /*proto*/
-static char __pyx_doc_4dawg_4DAWG_26__setstate__[] = "DAWG.__setstate__(self, state)";
-static PyObject *__pyx_pw_4dawg_4DAWG_27__setstate__(PyObject *__pyx_v_self, PyObject *__pyx_v_state) {
+static PyObject *__pyx_pw_4dawg_4DAWG_31__setstate__(PyObject *__pyx_v_self, PyObject *__pyx_v_state); /*proto*/
+static char __pyx_doc_4dawg_4DAWG_30__setstate__[] = "DAWG.__setstate__(self, state)";
+static PyObject *__pyx_pw_4dawg_4DAWG_31__setstate__(PyObject *__pyx_v_self, PyObject *__pyx_v_state) {
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("__setstate__ (wrapper)", 0);
-  __pyx_r = __pyx_pf_4dawg_4DAWG_26__setstate__(((struct __pyx_obj_4dawg_DAWG *)__pyx_v_self), ((PyObject *)__pyx_v_state));
+  __pyx_r = __pyx_pf_4dawg_4DAWG_30__setstate__(((struct __pyx_obj_4dawg_DAWG *)__pyx_v_self), ((PyObject *)__pyx_v_state));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_4dawg_4DAWG_26__setstate__(struct __pyx_obj_4dawg_DAWG *__pyx_v_self, PyObject *__pyx_v_state) {
+static PyObject *__pyx_pf_4dawg_4DAWG_30__setstate__(struct __pyx_obj_4dawg_DAWG *__pyx_v_self, PyObject *__pyx_v_state) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
   __Pyx_RefNannySetupContext("__setstate__", 0);
 
-  /* "dawg.pyx":172
+  /* "dawg.pyx":178
  * 
  *     def __setstate__(self, state):
  *         self.frombytes(state)             # <<<<<<<<<<<<<<
  * 
  *     # half-internal methods
  */
-  if (!(likely(PyBytes_CheckExact(__pyx_v_state))||((__pyx_v_state) == Py_None)||(PyErr_Format(PyExc_TypeError, "Expected %.16s, got %.200s", "bytes", Py_TYPE(__pyx_v_state)->tp_name), 0))) __PYX_ERR(0, 172, __pyx_L1_error)
-  __pyx_t_1 = ((struct __pyx_vtabstruct_4dawg_DAWG *)__pyx_v_self->__pyx_vtab)->frombytes(__pyx_v_self, ((PyObject*)__pyx_v_state), 0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 172, __pyx_L1_error)
+  if (!(likely(PyBytes_CheckExact(__pyx_v_state))||((__pyx_v_state) == Py_None)||(PyErr_Format(PyExc_TypeError, "Expected %.16s, got %.200s", "bytes", Py_TYPE(__pyx_v_state)->tp_name), 0))) __PYX_ERR(0, 178, __pyx_L1_error)
+  __pyx_t_1 = ((struct __pyx_vtabstruct_4dawg_DAWG *)__pyx_v_self->__pyx_vtab)->frombytes(__pyx_v_self, ((PyObject*)__pyx_v_state), 0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 178, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "dawg.pyx":171
+  /* "dawg.pyx":177
  *         return self.__class__, tuple(), self.tobytes()
  * 
  *     def __setstate__(self, state):             # <<<<<<<<<<<<<<
@@ -5136,7 +5288,7 @@ static PyObject *__pyx_pf_4dawg_4DAWG_26__setstate__(struct __pyx_obj_4dawg_DAWG
   return __pyx_r;
 }
 
-/* "dawg.pyx":175
+/* "dawg.pyx":181
  * 
  *     # half-internal methods
  *     def _size(self):             # <<<<<<<<<<<<<<
@@ -5145,26 +5297,26 @@ static PyObject *__pyx_pf_4dawg_4DAWG_26__setstate__(struct __pyx_obj_4dawg_DAWG
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_4dawg_4DAWG_29_size(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused); /*proto*/
-static char __pyx_doc_4dawg_4DAWG_28_size[] = "DAWG._size(self)";
-static PyObject *__pyx_pw_4dawg_4DAWG_29_size(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused) {
+static PyObject *__pyx_pw_4dawg_4DAWG_33_size(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused); /*proto*/
+static char __pyx_doc_4dawg_4DAWG_32_size[] = "DAWG._size(self)";
+static PyObject *__pyx_pw_4dawg_4DAWG_33_size(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused) {
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("_size (wrapper)", 0);
-  __pyx_r = __pyx_pf_4dawg_4DAWG_28_size(((struct __pyx_obj_4dawg_DAWG *)__pyx_v_self));
+  __pyx_r = __pyx_pf_4dawg_4DAWG_32_size(((struct __pyx_obj_4dawg_DAWG *)__pyx_v_self));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_4dawg_4DAWG_28_size(struct __pyx_obj_4dawg_DAWG *__pyx_v_self) {
+static PyObject *__pyx_pf_4dawg_4DAWG_32_size(struct __pyx_obj_4dawg_DAWG *__pyx_v_self) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
   __Pyx_RefNannySetupContext("_size", 0);
 
-  /* "dawg.pyx":176
+  /* "dawg.pyx":182
  *     # half-internal methods
  *     def _size(self):
  *         return self.dct.size()             # <<<<<<<<<<<<<<
@@ -5172,13 +5324,13 @@ static PyObject *__pyx_pf_4dawg_4DAWG_28_size(struct __pyx_obj_4dawg_DAWG *__pyx
  *     def _total_size(self):
  */
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = __Pyx_PyInt_From_dawgdic_3a__3a_SizeType(__pyx_v_self->dct.size()); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 176, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyInt_From_dawgdic_3a__3a_SizeType(__pyx_v_self->dct.size()); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 182, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "dawg.pyx":175
+  /* "dawg.pyx":181
  * 
  *     # half-internal methods
  *     def _size(self):             # <<<<<<<<<<<<<<
@@ -5197,7 +5349,7 @@ static PyObject *__pyx_pf_4dawg_4DAWG_28_size(struct __pyx_obj_4dawg_DAWG *__pyx
   return __pyx_r;
 }
 
-/* "dawg.pyx":178
+/* "dawg.pyx":184
  *         return self.dct.size()
  * 
  *     def _total_size(self):             # <<<<<<<<<<<<<<
@@ -5206,26 +5358,26 @@ static PyObject *__pyx_pf_4dawg_4DAWG_28_size(struct __pyx_obj_4dawg_DAWG *__pyx
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_4dawg_4DAWG_31_total_size(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused); /*proto*/
-static char __pyx_doc_4dawg_4DAWG_30_total_size[] = "DAWG._total_size(self)";
-static PyObject *__pyx_pw_4dawg_4DAWG_31_total_size(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused) {
+static PyObject *__pyx_pw_4dawg_4DAWG_35_total_size(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused); /*proto*/
+static char __pyx_doc_4dawg_4DAWG_34_total_size[] = "DAWG._total_size(self)";
+static PyObject *__pyx_pw_4dawg_4DAWG_35_total_size(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused) {
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("_total_size (wrapper)", 0);
-  __pyx_r = __pyx_pf_4dawg_4DAWG_30_total_size(((struct __pyx_obj_4dawg_DAWG *)__pyx_v_self));
+  __pyx_r = __pyx_pf_4dawg_4DAWG_34_total_size(((struct __pyx_obj_4dawg_DAWG *)__pyx_v_self));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_4dawg_4DAWG_30_total_size(struct __pyx_obj_4dawg_DAWG *__pyx_v_self) {
+static PyObject *__pyx_pf_4dawg_4DAWG_34_total_size(struct __pyx_obj_4dawg_DAWG *__pyx_v_self) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
   __Pyx_RefNannySetupContext("_total_size", 0);
 
-  /* "dawg.pyx":179
+  /* "dawg.pyx":185
  * 
  *     def _total_size(self):
  *         return self.dct.total_size()             # <<<<<<<<<<<<<<
@@ -5233,13 +5385,13 @@ static PyObject *__pyx_pf_4dawg_4DAWG_30_total_size(struct __pyx_obj_4dawg_DAWG 
  *     def _file_size(self):
  */
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = __Pyx_PyInt_From_dawgdic_3a__3a_SizeType(__pyx_v_self->dct.total_size()); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 179, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyInt_From_dawgdic_3a__3a_SizeType(__pyx_v_self->dct.total_size()); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 185, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "dawg.pyx":178
+  /* "dawg.pyx":184
  *         return self.dct.size()
  * 
  *     def _total_size(self):             # <<<<<<<<<<<<<<
@@ -5258,7 +5410,7 @@ static PyObject *__pyx_pf_4dawg_4DAWG_30_total_size(struct __pyx_obj_4dawg_DAWG 
   return __pyx_r;
 }
 
-/* "dawg.pyx":181
+/* "dawg.pyx":187
  *         return self.dct.total_size()
  * 
  *     def _file_size(self):             # <<<<<<<<<<<<<<
@@ -5267,26 +5419,26 @@ static PyObject *__pyx_pf_4dawg_4DAWG_30_total_size(struct __pyx_obj_4dawg_DAWG 
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_4dawg_4DAWG_33_file_size(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused); /*proto*/
-static char __pyx_doc_4dawg_4DAWG_32_file_size[] = "DAWG._file_size(self)";
-static PyObject *__pyx_pw_4dawg_4DAWG_33_file_size(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused) {
+static PyObject *__pyx_pw_4dawg_4DAWG_37_file_size(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused); /*proto*/
+static char __pyx_doc_4dawg_4DAWG_36_file_size[] = "DAWG._file_size(self)";
+static PyObject *__pyx_pw_4dawg_4DAWG_37_file_size(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused) {
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("_file_size (wrapper)", 0);
-  __pyx_r = __pyx_pf_4dawg_4DAWG_32_file_size(((struct __pyx_obj_4dawg_DAWG *)__pyx_v_self));
+  __pyx_r = __pyx_pf_4dawg_4DAWG_36_file_size(((struct __pyx_obj_4dawg_DAWG *)__pyx_v_self));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_4dawg_4DAWG_32_file_size(struct __pyx_obj_4dawg_DAWG *__pyx_v_self) {
+static PyObject *__pyx_pf_4dawg_4DAWG_36_file_size(struct __pyx_obj_4dawg_DAWG *__pyx_v_self) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
   __Pyx_RefNannySetupContext("_file_size", 0);
 
-  /* "dawg.pyx":182
+  /* "dawg.pyx":188
  * 
  *     def _file_size(self):
  *         return self.dct.file_size()             # <<<<<<<<<<<<<<
@@ -5294,13 +5446,13 @@ static PyObject *__pyx_pf_4dawg_4DAWG_32_file_size(struct __pyx_obj_4dawg_DAWG *
  *     cdef bint _has_value(self, BaseType index):
  */
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = __Pyx_PyInt_From_dawgdic_3a__3a_SizeType(__pyx_v_self->dct.file_size()); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 182, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyInt_From_dawgdic_3a__3a_SizeType(__pyx_v_self->dct.file_size()); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 188, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "dawg.pyx":181
+  /* "dawg.pyx":187
  *         return self.dct.total_size()
  * 
  *     def _file_size(self):             # <<<<<<<<<<<<<<
@@ -5319,7 +5471,7 @@ static PyObject *__pyx_pf_4dawg_4DAWG_32_file_size(struct __pyx_obj_4dawg_DAWG *
   return __pyx_r;
 }
 
-/* "dawg.pyx":184
+/* "dawg.pyx":190
  *         return self.dct.file_size()
  * 
  *     cdef bint _has_value(self, BaseType index):             # <<<<<<<<<<<<<<
@@ -5332,7 +5484,7 @@ static int __pyx_f_4dawg_4DAWG__has_value(struct __pyx_obj_4dawg_DAWG *__pyx_v_s
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("_has_value", 0);
 
-  /* "dawg.pyx":185
+  /* "dawg.pyx":191
  * 
  *     cdef bint _has_value(self, BaseType index):
  *         return  self.dct.has_value(index)             # <<<<<<<<<<<<<<
@@ -5342,7 +5494,7 @@ static int __pyx_f_4dawg_4DAWG__has_value(struct __pyx_obj_4dawg_DAWG *__pyx_v_s
   __pyx_r = __pyx_v_self->dct.has_value(__pyx_v_index);
   goto __pyx_L0;
 
-  /* "dawg.pyx":184
+  /* "dawg.pyx":190
  *         return self.dct.file_size()
  * 
  *     cdef bint _has_value(self, BaseType index):             # <<<<<<<<<<<<<<
@@ -5356,7 +5508,7 @@ static int __pyx_f_4dawg_4DAWG__has_value(struct __pyx_obj_4dawg_DAWG *__pyx_v_s
   return __pyx_r;
 }
 
-/* "dawg.pyx":187
+/* "dawg.pyx":193
  *         return  self.dct.has_value(index)
  * 
  *     cdef list _similar_keys(self, unicode current_prefix, unicode key, BaseType cur_index, dict replace_chars):             # <<<<<<<<<<<<<<
@@ -5390,7 +5542,7 @@ static PyObject *__pyx_f_4dawg_4DAWG__similar_keys(struct __pyx_obj_4dawg_DAWG *
   int __pyx_t_9;
   __Pyx_RefNannySetupContext("_similar_keys", 0);
 
-  /* "dawg.pyx":188
+  /* "dawg.pyx":194
  * 
  *     cdef list _similar_keys(self, unicode current_prefix, unicode key, BaseType cur_index, dict replace_chars):
  *         cdef BaseType next_index, index = cur_index             # <<<<<<<<<<<<<<
@@ -5399,19 +5551,19 @@ static PyObject *__pyx_f_4dawg_4DAWG__similar_keys(struct __pyx_obj_4dawg_DAWG *
  */
   __pyx_v_index = __pyx_v_cur_index;
 
-  /* "dawg.pyx":191
+  /* "dawg.pyx":197
  *         cdef unicode prefix, u_replace_char, found_key
  *         cdef bytes b_step, b_replace_char
  *         cdef list res = []             # <<<<<<<<<<<<<<
  *         cdef list extra_keys
  * 
  */
-  __pyx_t_1 = PyList_New(0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 191, __pyx_L1_error)
+  __pyx_t_1 = PyList_New(0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 197, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_v_res = ((PyObject*)__pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "dawg.pyx":194
+  /* "dawg.pyx":200
  *         cdef list extra_keys
  * 
  *         cdef int start_pos = len(current_prefix)             # <<<<<<<<<<<<<<
@@ -5420,12 +5572,12 @@ static PyObject *__pyx_f_4dawg_4DAWG__similar_keys(struct __pyx_obj_4dawg_DAWG *
  */
   if (unlikely(__pyx_v_current_prefix == Py_None)) {
     PyErr_SetString(PyExc_TypeError, "object of type 'NoneType' has no len()");
-    __PYX_ERR(0, 194, __pyx_L1_error)
+    __PYX_ERR(0, 200, __pyx_L1_error)
   }
-  __pyx_t_2 = __Pyx_PyUnicode_GET_LENGTH(__pyx_v_current_prefix); if (unlikely(__pyx_t_2 == ((Py_ssize_t)-1))) __PYX_ERR(0, 194, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyUnicode_GET_LENGTH(__pyx_v_current_prefix); if (unlikely(__pyx_t_2 == ((Py_ssize_t)-1))) __PYX_ERR(0, 200, __pyx_L1_error)
   __pyx_v_start_pos = __pyx_t_2;
 
-  /* "dawg.pyx":195
+  /* "dawg.pyx":201
  * 
  *         cdef int start_pos = len(current_prefix)
  *         cdef int end_pos = len(key)             # <<<<<<<<<<<<<<
@@ -5434,12 +5586,12 @@ static PyObject *__pyx_f_4dawg_4DAWG__similar_keys(struct __pyx_obj_4dawg_DAWG *
  */
   if (unlikely(__pyx_v_key == Py_None)) {
     PyErr_SetString(PyExc_TypeError, "object of type 'NoneType' has no len()");
-    __PYX_ERR(0, 195, __pyx_L1_error)
+    __PYX_ERR(0, 201, __pyx_L1_error)
   }
-  __pyx_t_2 = __Pyx_PyUnicode_GET_LENGTH(__pyx_v_key); if (unlikely(__pyx_t_2 == ((Py_ssize_t)-1))) __PYX_ERR(0, 195, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyUnicode_GET_LENGTH(__pyx_v_key); if (unlikely(__pyx_t_2 == ((Py_ssize_t)-1))) __PYX_ERR(0, 201, __pyx_L1_error)
   __pyx_v_end_pos = __pyx_t_2;
 
-  /* "dawg.pyx":196
+  /* "dawg.pyx":202
  *         cdef int start_pos = len(current_prefix)
  *         cdef int end_pos = len(key)
  *         cdef int word_pos = start_pos             # <<<<<<<<<<<<<<
@@ -5448,7 +5600,7 @@ static PyObject *__pyx_f_4dawg_4DAWG__similar_keys(struct __pyx_obj_4dawg_DAWG *
  */
   __pyx_v_word_pos = __pyx_v_start_pos;
 
-  /* "dawg.pyx":198
+  /* "dawg.pyx":204
  *         cdef int word_pos = start_pos
  * 
  *         while word_pos < end_pos:             # <<<<<<<<<<<<<<
@@ -5459,17 +5611,17 @@ static PyObject *__pyx_f_4dawg_4DAWG__similar_keys(struct __pyx_obj_4dawg_DAWG *
     __pyx_t_3 = ((__pyx_v_word_pos < __pyx_v_end_pos) != 0);
     if (!__pyx_t_3) break;
 
-    /* "dawg.pyx":199
+    /* "dawg.pyx":205
  * 
  *         while word_pos < end_pos:
  *             b_step = <bytes>(key[word_pos].encode('utf8'))             # <<<<<<<<<<<<<<
  * 
  *             if b_step in replace_chars:
  */
-    __pyx_t_4 = __Pyx_GetItemInt_Unicode(__pyx_v_key, __pyx_v_word_pos, int, 1, __Pyx_PyInt_From_int, 0, 1, 1); if (unlikely(__pyx_t_4 == (Py_UCS4)-1)) __PYX_ERR(0, 199, __pyx_L1_error)
-    __pyx_t_1 = PyUnicode_FromOrdinal(__pyx_t_4); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 199, __pyx_L1_error)
+    __pyx_t_4 = __Pyx_GetItemInt_Unicode(__pyx_v_key, __pyx_v_word_pos, int, 1, __Pyx_PyInt_From_int, 0, 1, 1); if (unlikely(__pyx_t_4 == (Py_UCS4)-1)) __PYX_ERR(0, 205, __pyx_L1_error)
+    __pyx_t_1 = PyUnicode_FromOrdinal(__pyx_t_4); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 205, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
-    __pyx_t_5 = PyUnicode_AsUTF8String(((PyObject*)__pyx_t_1)); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 199, __pyx_L1_error)
+    __pyx_t_5 = PyUnicode_AsUTF8String(((PyObject*)__pyx_t_1)); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 205, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_5);
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
     __pyx_t_1 = __pyx_t_5;
@@ -5478,7 +5630,7 @@ static PyObject *__pyx_f_4dawg_4DAWG__similar_keys(struct __pyx_obj_4dawg_DAWG *
     __Pyx_XDECREF_SET(__pyx_v_b_step, ((PyObject*)__pyx_t_1));
     __pyx_t_1 = 0;
 
-    /* "dawg.pyx":201
+    /* "dawg.pyx":207
  *             b_step = <bytes>(key[word_pos].encode('utf8'))
  * 
  *             if b_step in replace_chars:             # <<<<<<<<<<<<<<
@@ -5487,13 +5639,13 @@ static PyObject *__pyx_f_4dawg_4DAWG__similar_keys(struct __pyx_obj_4dawg_DAWG *
  */
     if (unlikely(__pyx_v_replace_chars == Py_None)) {
       PyErr_SetString(PyExc_TypeError, "'NoneType' object is not iterable");
-      __PYX_ERR(0, 201, __pyx_L1_error)
+      __PYX_ERR(0, 207, __pyx_L1_error)
     }
-    __pyx_t_3 = (__Pyx_PyDict_ContainsTF(__pyx_v_b_step, __pyx_v_replace_chars, Py_EQ)); if (unlikely(__pyx_t_3 < 0)) __PYX_ERR(0, 201, __pyx_L1_error)
+    __pyx_t_3 = (__Pyx_PyDict_ContainsTF(__pyx_v_b_step, __pyx_v_replace_chars, Py_EQ)); if (unlikely(__pyx_t_3 < 0)) __PYX_ERR(0, 207, __pyx_L1_error)
     __pyx_t_6 = (__pyx_t_3 != 0);
     if (__pyx_t_6) {
 
-      /* "dawg.pyx":202
+      /* "dawg.pyx":208
  * 
  *             if b_step in replace_chars:
  *                 next_index = index             # <<<<<<<<<<<<<<
@@ -5502,7 +5654,7 @@ static PyObject *__pyx_f_4dawg_4DAWG__similar_keys(struct __pyx_obj_4dawg_DAWG *
  */
       __pyx_v_next_index = __pyx_v_index;
 
-      /* "dawg.pyx":203
+      /* "dawg.pyx":209
  *             if b_step in replace_chars:
  *                 next_index = index
  *                 b_replace_char, u_replace_char = <tuple>replace_chars[b_step]             # <<<<<<<<<<<<<<
@@ -5511,9 +5663,9 @@ static PyObject *__pyx_f_4dawg_4DAWG__similar_keys(struct __pyx_obj_4dawg_DAWG *
  */
       if (unlikely(__pyx_v_replace_chars == Py_None)) {
         PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
-        __PYX_ERR(0, 203, __pyx_L1_error)
+        __PYX_ERR(0, 209, __pyx_L1_error)
       }
-      __pyx_t_1 = __Pyx_PyDict_GetItem(__pyx_v_replace_chars, __pyx_v_b_step); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 203, __pyx_L1_error)
+      __pyx_t_1 = __Pyx_PyDict_GetItem(__pyx_v_replace_chars, __pyx_v_b_step); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 209, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_1);
       __pyx_t_5 = __pyx_t_1;
       __Pyx_INCREF(__pyx_t_5);
@@ -5524,7 +5676,7 @@ static PyObject *__pyx_f_4dawg_4DAWG__similar_keys(struct __pyx_obj_4dawg_DAWG *
         if (unlikely(size != 2)) {
           if (size > 2) __Pyx_RaiseTooManyValuesError(2);
           else if (size >= 0) __Pyx_RaiseNeedMoreValuesError(size);
-          __PYX_ERR(0, 203, __pyx_L1_error)
+          __PYX_ERR(0, 209, __pyx_L1_error)
         }
         #if CYTHON_ASSUME_SAFE_MACROS && !CYTHON_AVOID_BORROWED_REFS
         __pyx_t_1 = PyTuple_GET_ITEM(sequence, 0); 
@@ -5532,23 +5684,23 @@ static PyObject *__pyx_f_4dawg_4DAWG__similar_keys(struct __pyx_obj_4dawg_DAWG *
         __Pyx_INCREF(__pyx_t_1);
         __Pyx_INCREF(__pyx_t_7);
         #else
-        __pyx_t_1 = PySequence_ITEM(sequence, 0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 203, __pyx_L1_error)
+        __pyx_t_1 = PySequence_ITEM(sequence, 0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 209, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_1);
-        __pyx_t_7 = PySequence_ITEM(sequence, 1); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 203, __pyx_L1_error)
+        __pyx_t_7 = PySequence_ITEM(sequence, 1); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 209, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_7);
         #endif
         __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
       } else {
-        __Pyx_RaiseNoneNotIterableError(); __PYX_ERR(0, 203, __pyx_L1_error)
+        __Pyx_RaiseNoneNotIterableError(); __PYX_ERR(0, 209, __pyx_L1_error)
       }
-      if (!(likely(PyBytes_CheckExact(__pyx_t_1))||((__pyx_t_1) == Py_None)||(PyErr_Format(PyExc_TypeError, "Expected %.16s, got %.200s", "bytes", Py_TYPE(__pyx_t_1)->tp_name), 0))) __PYX_ERR(0, 203, __pyx_L1_error)
-      if (!(likely(PyUnicode_CheckExact(__pyx_t_7))||((__pyx_t_7) == Py_None)||(PyErr_Format(PyExc_TypeError, "Expected %.16s, got %.200s", "unicode", Py_TYPE(__pyx_t_7)->tp_name), 0))) __PYX_ERR(0, 203, __pyx_L1_error)
+      if (!(likely(PyBytes_CheckExact(__pyx_t_1))||((__pyx_t_1) == Py_None)||(PyErr_Format(PyExc_TypeError, "Expected %.16s, got %.200s", "bytes", Py_TYPE(__pyx_t_1)->tp_name), 0))) __PYX_ERR(0, 209, __pyx_L1_error)
+      if (!(likely(PyUnicode_CheckExact(__pyx_t_7))||((__pyx_t_7) == Py_None)||(PyErr_Format(PyExc_TypeError, "Expected %.16s, got %.200s", "unicode", Py_TYPE(__pyx_t_7)->tp_name), 0))) __PYX_ERR(0, 209, __pyx_L1_error)
       __Pyx_XDECREF_SET(__pyx_v_b_replace_char, ((PyObject*)__pyx_t_1));
       __pyx_t_1 = 0;
       __Pyx_XDECREF_SET(__pyx_v_u_replace_char, ((PyObject*)__pyx_t_7));
       __pyx_t_7 = 0;
 
-      /* "dawg.pyx":205
+      /* "dawg.pyx":211
  *                 b_replace_char, u_replace_char = <tuple>replace_chars[b_step]
  * 
  *                 if self.dct.Follow(b_replace_char, &next_index):             # <<<<<<<<<<<<<<
@@ -5557,13 +5709,13 @@ static PyObject *__pyx_f_4dawg_4DAWG__similar_keys(struct __pyx_obj_4dawg_DAWG *
  */
       if (unlikely(__pyx_v_b_replace_char == Py_None)) {
         PyErr_SetString(PyExc_TypeError, "expected bytes, NoneType found");
-        __PYX_ERR(0, 205, __pyx_L1_error)
+        __PYX_ERR(0, 211, __pyx_L1_error)
       }
-      __pyx_t_8 = __Pyx_PyBytes_AsWritableString(__pyx_v_b_replace_char); if (unlikely((!__pyx_t_8) && PyErr_Occurred())) __PYX_ERR(0, 205, __pyx_L1_error)
+      __pyx_t_8 = __Pyx_PyBytes_AsWritableString(__pyx_v_b_replace_char); if (unlikely((!__pyx_t_8) && PyErr_Occurred())) __PYX_ERR(0, 211, __pyx_L1_error)
       __pyx_t_6 = (__pyx_v_self->dct.Follow(__pyx_t_8, (&__pyx_v_next_index)) != 0);
       if (__pyx_t_6) {
 
-        /* "dawg.pyx":206
+        /* "dawg.pyx":212
  * 
  *                 if self.dct.Follow(b_replace_char, &next_index):
  *                     prefix = current_prefix + key[start_pos:word_pos] + u_replace_char             # <<<<<<<<<<<<<<
@@ -5572,41 +5724,41 @@ static PyObject *__pyx_f_4dawg_4DAWG__similar_keys(struct __pyx_obj_4dawg_DAWG *
  */
         if (unlikely(__pyx_v_key == Py_None)) {
           PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
-          __PYX_ERR(0, 206, __pyx_L1_error)
+          __PYX_ERR(0, 212, __pyx_L1_error)
         }
-        __pyx_t_5 = __Pyx_PyUnicode_Substring(__pyx_v_key, __pyx_v_start_pos, __pyx_v_word_pos); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 206, __pyx_L1_error)
+        __pyx_t_5 = __Pyx_PyUnicode_Substring(__pyx_v_key, __pyx_v_start_pos, __pyx_v_word_pos); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 212, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_5);
-        __pyx_t_7 = __Pyx_PyUnicode_ConcatSafe(__pyx_v_current_prefix, __pyx_t_5); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 206, __pyx_L1_error)
+        __pyx_t_7 = __Pyx_PyUnicode_ConcatSafe(__pyx_v_current_prefix, __pyx_t_5); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 212, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_7);
         __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-        __pyx_t_5 = __Pyx_PyUnicode_ConcatSafe(__pyx_t_7, __pyx_v_u_replace_char); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 206, __pyx_L1_error)
+        __pyx_t_5 = __Pyx_PyUnicode_ConcatSafe(__pyx_t_7, __pyx_v_u_replace_char); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 212, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_5);
         __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
         __Pyx_XDECREF_SET(__pyx_v_prefix, ((PyObject*)__pyx_t_5));
         __pyx_t_5 = 0;
 
-        /* "dawg.pyx":207
+        /* "dawg.pyx":213
  *                 if self.dct.Follow(b_replace_char, &next_index):
  *                     prefix = current_prefix + key[start_pos:word_pos] + u_replace_char
  *                     extra_keys = self._similar_keys(prefix, key, next_index, replace_chars)             # <<<<<<<<<<<<<<
  *                     res.extend(extra_keys)
  * 
  */
-        __pyx_t_5 = ((struct __pyx_vtabstruct_4dawg_DAWG *)__pyx_v_self->__pyx_vtab)->_similar_keys(__pyx_v_self, __pyx_v_prefix, __pyx_v_key, __pyx_v_next_index, __pyx_v_replace_chars); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 207, __pyx_L1_error)
+        __pyx_t_5 = ((struct __pyx_vtabstruct_4dawg_DAWG *)__pyx_v_self->__pyx_vtab)->_similar_keys(__pyx_v_self, __pyx_v_prefix, __pyx_v_key, __pyx_v_next_index, __pyx_v_replace_chars); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 213, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_5);
         __Pyx_XDECREF_SET(__pyx_v_extra_keys, ((PyObject*)__pyx_t_5));
         __pyx_t_5 = 0;
 
-        /* "dawg.pyx":208
+        /* "dawg.pyx":214
  *                     prefix = current_prefix + key[start_pos:word_pos] + u_replace_char
  *                     extra_keys = self._similar_keys(prefix, key, next_index, replace_chars)
  *                     res.extend(extra_keys)             # <<<<<<<<<<<<<<
  * 
  *             if not self.dct.Follow(b_step, &index):
  */
-        __pyx_t_9 = __Pyx_PyList_Extend(__pyx_v_res, __pyx_v_extra_keys); if (unlikely(__pyx_t_9 == ((int)-1))) __PYX_ERR(0, 208, __pyx_L1_error)
+        __pyx_t_9 = __Pyx_PyList_Extend(__pyx_v_res, __pyx_v_extra_keys); if (unlikely(__pyx_t_9 == ((int)-1))) __PYX_ERR(0, 214, __pyx_L1_error)
 
-        /* "dawg.pyx":205
+        /* "dawg.pyx":211
  *                 b_replace_char, u_replace_char = <tuple>replace_chars[b_step]
  * 
  *                 if self.dct.Follow(b_replace_char, &next_index):             # <<<<<<<<<<<<<<
@@ -5615,7 +5767,7 @@ static PyObject *__pyx_f_4dawg_4DAWG__similar_keys(struct __pyx_obj_4dawg_DAWG *
  */
       }
 
-      /* "dawg.pyx":201
+      /* "dawg.pyx":207
  *             b_step = <bytes>(key[word_pos].encode('utf8'))
  * 
  *             if b_step in replace_chars:             # <<<<<<<<<<<<<<
@@ -5624,7 +5776,7 @@ static PyObject *__pyx_f_4dawg_4DAWG__similar_keys(struct __pyx_obj_4dawg_DAWG *
  */
     }
 
-    /* "dawg.pyx":210
+    /* "dawg.pyx":216
  *                     res.extend(extra_keys)
  * 
  *             if not self.dct.Follow(b_step, &index):             # <<<<<<<<<<<<<<
@@ -5633,13 +5785,13 @@ static PyObject *__pyx_f_4dawg_4DAWG__similar_keys(struct __pyx_obj_4dawg_DAWG *
  */
     if (unlikely(__pyx_v_b_step == Py_None)) {
       PyErr_SetString(PyExc_TypeError, "expected bytes, NoneType found");
-      __PYX_ERR(0, 210, __pyx_L1_error)
+      __PYX_ERR(0, 216, __pyx_L1_error)
     }
-    __pyx_t_8 = __Pyx_PyBytes_AsWritableString(__pyx_v_b_step); if (unlikely((!__pyx_t_8) && PyErr_Occurred())) __PYX_ERR(0, 210, __pyx_L1_error)
+    __pyx_t_8 = __Pyx_PyBytes_AsWritableString(__pyx_v_b_step); if (unlikely((!__pyx_t_8) && PyErr_Occurred())) __PYX_ERR(0, 216, __pyx_L1_error)
     __pyx_t_6 = ((!(__pyx_v_self->dct.Follow(__pyx_t_8, (&__pyx_v_index)) != 0)) != 0);
     if (__pyx_t_6) {
 
-      /* "dawg.pyx":211
+      /* "dawg.pyx":217
  * 
  *             if not self.dct.Follow(b_step, &index):
  *                 break             # <<<<<<<<<<<<<<
@@ -5648,7 +5800,7 @@ static PyObject *__pyx_f_4dawg_4DAWG__similar_keys(struct __pyx_obj_4dawg_DAWG *
  */
       goto __pyx_L4_break;
 
-      /* "dawg.pyx":210
+      /* "dawg.pyx":216
  *                     res.extend(extra_keys)
  * 
  *             if not self.dct.Follow(b_step, &index):             # <<<<<<<<<<<<<<
@@ -5657,7 +5809,7 @@ static PyObject *__pyx_f_4dawg_4DAWG__similar_keys(struct __pyx_obj_4dawg_DAWG *
  */
     }
 
-    /* "dawg.pyx":212
+    /* "dawg.pyx":218
  *             if not self.dct.Follow(b_step, &index):
  *                 break
  *             word_pos += 1             # <<<<<<<<<<<<<<
@@ -5667,7 +5819,7 @@ static PyObject *__pyx_f_4dawg_4DAWG__similar_keys(struct __pyx_obj_4dawg_DAWG *
     __pyx_v_word_pos = (__pyx_v_word_pos + 1);
   }
 
-  /* "dawg.pyx":215
+  /* "dawg.pyx":221
  * 
  *         else:
  *             if self._has_value(index):             # <<<<<<<<<<<<<<
@@ -5678,7 +5830,7 @@ static PyObject *__pyx_f_4dawg_4DAWG__similar_keys(struct __pyx_obj_4dawg_DAWG *
     __pyx_t_6 = (((struct __pyx_vtabstruct_4dawg_DAWG *)__pyx_v_self->__pyx_vtab)->_has_value(__pyx_v_self, __pyx_v_index) != 0);
     if (__pyx_t_6) {
 
-      /* "dawg.pyx":216
+      /* "dawg.pyx":222
  *         else:
  *             if self._has_value(index):
  *                 found_key = current_prefix + key[start_pos:]             # <<<<<<<<<<<<<<
@@ -5687,26 +5839,26 @@ static PyObject *__pyx_f_4dawg_4DAWG__similar_keys(struct __pyx_obj_4dawg_DAWG *
  */
       if (unlikely(__pyx_v_key == Py_None)) {
         PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
-        __PYX_ERR(0, 216, __pyx_L1_error)
+        __PYX_ERR(0, 222, __pyx_L1_error)
       }
-      __pyx_t_5 = __Pyx_PyUnicode_Substring(__pyx_v_key, __pyx_v_start_pos, PY_SSIZE_T_MAX); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 216, __pyx_L1_error)
+      __pyx_t_5 = __Pyx_PyUnicode_Substring(__pyx_v_key, __pyx_v_start_pos, PY_SSIZE_T_MAX); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 222, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_5);
-      __pyx_t_7 = __Pyx_PyUnicode_ConcatSafe(__pyx_v_current_prefix, __pyx_t_5); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 216, __pyx_L1_error)
+      __pyx_t_7 = __Pyx_PyUnicode_ConcatSafe(__pyx_v_current_prefix, __pyx_t_5); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 222, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_7);
       __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
       __pyx_v_found_key = ((PyObject*)__pyx_t_7);
       __pyx_t_7 = 0;
 
-      /* "dawg.pyx":217
+      /* "dawg.pyx":223
  *             if self._has_value(index):
  *                 found_key = current_prefix + key[start_pos:]
  *                 res.insert(0, found_key)             # <<<<<<<<<<<<<<
  * 
  *         return res
  */
-      __pyx_t_9 = PyList_Insert(__pyx_v_res, 0, __pyx_v_found_key); if (unlikely(__pyx_t_9 == ((int)-1))) __PYX_ERR(0, 217, __pyx_L1_error)
+      __pyx_t_9 = PyList_Insert(__pyx_v_res, 0, __pyx_v_found_key); if (unlikely(__pyx_t_9 == ((int)-1))) __PYX_ERR(0, 223, __pyx_L1_error)
 
-      /* "dawg.pyx":215
+      /* "dawg.pyx":221
  * 
  *         else:
  *             if self._has_value(index):             # <<<<<<<<<<<<<<
@@ -5717,7 +5869,7 @@ static PyObject *__pyx_f_4dawg_4DAWG__similar_keys(struct __pyx_obj_4dawg_DAWG *
   }
   __pyx_L4_break:;
 
-  /* "dawg.pyx":219
+  /* "dawg.pyx":225
  *                 res.insert(0, found_key)
  * 
  *         return res             # <<<<<<<<<<<<<<
@@ -5729,7 +5881,7 @@ static PyObject *__pyx_f_4dawg_4DAWG__similar_keys(struct __pyx_obj_4dawg_DAWG *
   __pyx_r = __pyx_v_res;
   goto __pyx_L0;
 
-  /* "dawg.pyx":187
+  /* "dawg.pyx":193
  *         return  self.dct.has_value(index)
  * 
  *     cdef list _similar_keys(self, unicode current_prefix, unicode key, BaseType cur_index, dict replace_chars):             # <<<<<<<<<<<<<<
@@ -5757,7 +5909,7 @@ static PyObject *__pyx_f_4dawg_4DAWG__similar_keys(struct __pyx_obj_4dawg_DAWG *
   return __pyx_r;
 }
 
-/* "dawg.pyx":221
+/* "dawg.pyx":227
  *         return res
  * 
  *     cpdef list similar_keys(self, unicode key, dict replaces):             # <<<<<<<<<<<<<<
@@ -5765,7 +5917,7 @@ static PyObject *__pyx_f_4dawg_4DAWG__similar_keys(struct __pyx_obj_4dawg_DAWG *
  *         Return all variants of ``key`` in this DAWG according to
  */
 
-static PyObject *__pyx_pw_4dawg_4DAWG_35similar_keys(PyObject *__pyx_v_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static PyObject *__pyx_pw_4dawg_4DAWG_39similar_keys(PyObject *__pyx_v_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
 static PyObject *__pyx_f_4dawg_4DAWG_similar_keys(struct __pyx_obj_4dawg_DAWG *__pyx_v_self, PyObject *__pyx_v_key, PyObject *__pyx_v_replaces, int __pyx_skip_dispatch) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
@@ -5785,9 +5937,9 @@ static PyObject *__pyx_f_4dawg_4DAWG_similar_keys(struct __pyx_obj_4dawg_DAWG *_
     if (unlikely(!__Pyx_object_dict_version_matches(((PyObject *)__pyx_v_self), __pyx_tp_dict_version, __pyx_obj_dict_version))) {
       PY_UINT64_T __pyx_type_dict_guard = __Pyx_get_tp_dict_version(((PyObject *)__pyx_v_self));
       #endif
-      __pyx_t_1 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_similar_keys); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 221, __pyx_L1_error)
+      __pyx_t_1 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_similar_keys); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 227, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_1);
-      if (!PyCFunction_Check(__pyx_t_1) || (PyCFunction_GET_FUNCTION(__pyx_t_1) != (PyCFunction)(void*)__pyx_pw_4dawg_4DAWG_35similar_keys)) {
+      if (!PyCFunction_Check(__pyx_t_1) || (PyCFunction_GET_FUNCTION(__pyx_t_1) != (PyCFunction)(void*)__pyx_pw_4dawg_4DAWG_39similar_keys)) {
         __Pyx_XDECREF(__pyx_r);
         __Pyx_INCREF(__pyx_t_1);
         __pyx_t_3 = __pyx_t_1; __pyx_t_4 = NULL;
@@ -5805,7 +5957,7 @@ static PyObject *__pyx_f_4dawg_4DAWG_similar_keys(struct __pyx_obj_4dawg_DAWG *_
         #if CYTHON_FAST_PYCALL
         if (PyFunction_Check(__pyx_t_3)) {
           PyObject *__pyx_temp[3] = {__pyx_t_4, __pyx_v_key, __pyx_v_replaces};
-          __pyx_t_2 = __Pyx_PyFunction_FastCall(__pyx_t_3, __pyx_temp+1-__pyx_t_5, 2+__pyx_t_5); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 221, __pyx_L1_error)
+          __pyx_t_2 = __Pyx_PyFunction_FastCall(__pyx_t_3, __pyx_temp+1-__pyx_t_5, 2+__pyx_t_5); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 227, __pyx_L1_error)
           __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
           __Pyx_GOTREF(__pyx_t_2);
         } else
@@ -5813,13 +5965,13 @@ static PyObject *__pyx_f_4dawg_4DAWG_similar_keys(struct __pyx_obj_4dawg_DAWG *_
         #if CYTHON_FAST_PYCCALL
         if (__Pyx_PyFastCFunction_Check(__pyx_t_3)) {
           PyObject *__pyx_temp[3] = {__pyx_t_4, __pyx_v_key, __pyx_v_replaces};
-          __pyx_t_2 = __Pyx_PyCFunction_FastCall(__pyx_t_3, __pyx_temp+1-__pyx_t_5, 2+__pyx_t_5); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 221, __pyx_L1_error)
+          __pyx_t_2 = __Pyx_PyCFunction_FastCall(__pyx_t_3, __pyx_temp+1-__pyx_t_5, 2+__pyx_t_5); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 227, __pyx_L1_error)
           __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
           __Pyx_GOTREF(__pyx_t_2);
         } else
         #endif
         {
-          __pyx_t_6 = PyTuple_New(2+__pyx_t_5); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 221, __pyx_L1_error)
+          __pyx_t_6 = PyTuple_New(2+__pyx_t_5); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 227, __pyx_L1_error)
           __Pyx_GOTREF(__pyx_t_6);
           if (__pyx_t_4) {
             __Pyx_GIVEREF(__pyx_t_4); PyTuple_SET_ITEM(__pyx_t_6, 0, __pyx_t_4); __pyx_t_4 = NULL;
@@ -5830,12 +5982,12 @@ static PyObject *__pyx_f_4dawg_4DAWG_similar_keys(struct __pyx_obj_4dawg_DAWG *_
           __Pyx_INCREF(__pyx_v_replaces);
           __Pyx_GIVEREF(__pyx_v_replaces);
           PyTuple_SET_ITEM(__pyx_t_6, 1+__pyx_t_5, __pyx_v_replaces);
-          __pyx_t_2 = __Pyx_PyObject_Call(__pyx_t_3, __pyx_t_6, NULL); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 221, __pyx_L1_error)
+          __pyx_t_2 = __Pyx_PyObject_Call(__pyx_t_3, __pyx_t_6, NULL); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 227, __pyx_L1_error)
           __Pyx_GOTREF(__pyx_t_2);
           __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
         }
         __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-        if (!(likely(PyList_CheckExact(__pyx_t_2))||((__pyx_t_2) == Py_None)||(PyErr_Format(PyExc_TypeError, "Expected %.16s, got %.200s", "list", Py_TYPE(__pyx_t_2)->tp_name), 0))) __PYX_ERR(0, 221, __pyx_L1_error)
+        if (!(likely(PyList_CheckExact(__pyx_t_2))||((__pyx_t_2) == Py_None)||(PyErr_Format(PyExc_TypeError, "Expected %.16s, got %.200s", "list", Py_TYPE(__pyx_t_2)->tp_name), 0))) __PYX_ERR(0, 227, __pyx_L1_error)
         __pyx_r = ((PyObject*)__pyx_t_2);
         __pyx_t_2 = 0;
         __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
@@ -5854,7 +6006,7 @@ static PyObject *__pyx_f_4dawg_4DAWG_similar_keys(struct __pyx_obj_4dawg_DAWG *_
     #endif
   }
 
-  /* "dawg.pyx":233
+  /* "dawg.pyx":239
  *         This may be useful e.g. for handling single-character umlauts.
  *         """
  *         return self._similar_keys("", key, self.dct.root(), replaces)             # <<<<<<<<<<<<<<
@@ -5862,13 +6014,13 @@ static PyObject *__pyx_f_4dawg_4DAWG_similar_keys(struct __pyx_obj_4dawg_DAWG *_
  *     cpdef list prefixes(self, unicode key):
  */
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = ((struct __pyx_vtabstruct_4dawg_DAWG *)__pyx_v_self->__pyx_vtab)->_similar_keys(__pyx_v_self, __pyx_kp_u__6, __pyx_v_key, __pyx_v_self->dct.root(), __pyx_v_replaces); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 233, __pyx_L1_error)
+  __pyx_t_1 = ((struct __pyx_vtabstruct_4dawg_DAWG *)__pyx_v_self->__pyx_vtab)->_similar_keys(__pyx_v_self, __pyx_kp_u__6, __pyx_v_key, __pyx_v_self->dct.root(), __pyx_v_replaces); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 239, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = ((PyObject*)__pyx_t_1);
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "dawg.pyx":221
+  /* "dawg.pyx":227
  *         return res
  * 
  *     cpdef list similar_keys(self, unicode key, dict replaces):             # <<<<<<<<<<<<<<
@@ -5892,9 +6044,9 @@ static PyObject *__pyx_f_4dawg_4DAWG_similar_keys(struct __pyx_obj_4dawg_DAWG *_
 }
 
 /* Python wrapper */
-static PyObject *__pyx_pw_4dawg_4DAWG_35similar_keys(PyObject *__pyx_v_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static char __pyx_doc_4dawg_4DAWG_34similar_keys[] = "DAWG.similar_keys(self, unicode key, dict replaces) -> list\n\n        Return all variants of ``key`` in this DAWG according to\n        ``replaces``.\n\n        ``replaces`` is an object obtained from\n        ``DAWG.compile_replaces(mapping)`` where mapping is a dict\n        that maps single-char unicode sitrings to another single-char\n        unicode strings.\n\n        This may be useful e.g. for handling single-character umlauts.\n        ";
-static PyObject *__pyx_pw_4dawg_4DAWG_35similar_keys(PyObject *__pyx_v_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
+static PyObject *__pyx_pw_4dawg_4DAWG_39similar_keys(PyObject *__pyx_v_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static char __pyx_doc_4dawg_4DAWG_38similar_keys[] = "DAWG.similar_keys(self, unicode key, dict replaces) -> list\n\n        Return all variants of ``key`` in this DAWG according to\n        ``replaces``.\n\n        ``replaces`` is an object obtained from\n        ``DAWG.compile_replaces(mapping)`` where mapping is a dict\n        that maps single-char unicode sitrings to another single-char\n        unicode strings.\n\n        This may be useful e.g. for handling single-character umlauts.\n        ";
+static PyObject *__pyx_pw_4dawg_4DAWG_39similar_keys(PyObject *__pyx_v_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
   PyObject *__pyx_v_key = 0;
   PyObject *__pyx_v_replaces = 0;
   PyObject *__pyx_r = 0;
@@ -5923,11 +6075,11 @@ static PyObject *__pyx_pw_4dawg_4DAWG_35similar_keys(PyObject *__pyx_v_self, PyO
         case  1:
         if (likely((values[1] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_replaces)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("similar_keys", 1, 2, 2, 1); __PYX_ERR(0, 221, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("similar_keys", 1, 2, 2, 1); __PYX_ERR(0, 227, __pyx_L3_error)
         }
       }
       if (unlikely(kw_args > 0)) {
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "similar_keys") < 0)) __PYX_ERR(0, 221, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "similar_keys") < 0)) __PYX_ERR(0, 227, __pyx_L3_error)
       }
     } else if (PyTuple_GET_SIZE(__pyx_args) != 2) {
       goto __pyx_L5_argtuple_error;
@@ -5940,15 +6092,15 @@ static PyObject *__pyx_pw_4dawg_4DAWG_35similar_keys(PyObject *__pyx_v_self, PyO
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("similar_keys", 1, 2, 2, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 221, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("similar_keys", 1, 2, 2, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 227, __pyx_L3_error)
   __pyx_L3_error:;
   __Pyx_AddTraceback("dawg.DAWG.similar_keys", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_key), (&PyUnicode_Type), 1, "key", 1))) __PYX_ERR(0, 221, __pyx_L1_error)
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_replaces), (&PyDict_Type), 1, "replaces", 1))) __PYX_ERR(0, 221, __pyx_L1_error)
-  __pyx_r = __pyx_pf_4dawg_4DAWG_34similar_keys(((struct __pyx_obj_4dawg_DAWG *)__pyx_v_self), __pyx_v_key, __pyx_v_replaces);
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_key), (&PyUnicode_Type), 1, "key", 1))) __PYX_ERR(0, 227, __pyx_L1_error)
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_replaces), (&PyDict_Type), 1, "replaces", 1))) __PYX_ERR(0, 227, __pyx_L1_error)
+  __pyx_r = __pyx_pf_4dawg_4DAWG_38similar_keys(((struct __pyx_obj_4dawg_DAWG *)__pyx_v_self), __pyx_v_key, __pyx_v_replaces);
 
   /* function exit code */
   goto __pyx_L0;
@@ -5959,13 +6111,13 @@ static PyObject *__pyx_pw_4dawg_4DAWG_35similar_keys(PyObject *__pyx_v_self, PyO
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_4dawg_4DAWG_34similar_keys(struct __pyx_obj_4dawg_DAWG *__pyx_v_self, PyObject *__pyx_v_key, PyObject *__pyx_v_replaces) {
+static PyObject *__pyx_pf_4dawg_4DAWG_38similar_keys(struct __pyx_obj_4dawg_DAWG *__pyx_v_self, PyObject *__pyx_v_key, PyObject *__pyx_v_replaces) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
   __Pyx_RefNannySetupContext("similar_keys", 0);
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = __pyx_f_4dawg_4DAWG_similar_keys(__pyx_v_self, __pyx_v_key, __pyx_v_replaces, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 221, __pyx_L1_error)
+  __pyx_t_1 = __pyx_f_4dawg_4DAWG_similar_keys(__pyx_v_self, __pyx_v_key, __pyx_v_replaces, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 227, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
@@ -5982,7 +6134,7 @@ static PyObject *__pyx_pf_4dawg_4DAWG_34similar_keys(struct __pyx_obj_4dawg_DAWG
   return __pyx_r;
 }
 
-/* "dawg.pyx":235
+/* "dawg.pyx":241
  *         return self._similar_keys("", key, self.dct.root(), replaces)
  * 
  *     cpdef list prefixes(self, unicode key):             # <<<<<<<<<<<<<<
@@ -5990,7 +6142,7 @@ static PyObject *__pyx_pf_4dawg_4DAWG_34similar_keys(struct __pyx_obj_4dawg_DAWG
  *         Return a list with keys of this DAWG that are prefixes of the ``key``.
  */
 
-static PyObject *__pyx_pw_4dawg_4DAWG_37prefixes(PyObject *__pyx_v_self, PyObject *__pyx_v_key); /*proto*/
+static PyObject *__pyx_pw_4dawg_4DAWG_41prefixes(PyObject *__pyx_v_self, PyObject *__pyx_v_key); /*proto*/
 static PyObject *__pyx_f_4dawg_4DAWG_prefixes(struct __pyx_obj_4dawg_DAWG *__pyx_v_self, PyObject *__pyx_v_key, int __pyx_skip_dispatch) {
   PyObject *__pyx_v_p = NULL;
   PyObject *__pyx_r = NULL;
@@ -6011,9 +6163,9 @@ static PyObject *__pyx_f_4dawg_4DAWG_prefixes(struct __pyx_obj_4dawg_DAWG *__pyx
     if (unlikely(!__Pyx_object_dict_version_matches(((PyObject *)__pyx_v_self), __pyx_tp_dict_version, __pyx_obj_dict_version))) {
       PY_UINT64_T __pyx_type_dict_guard = __Pyx_get_tp_dict_version(((PyObject *)__pyx_v_self));
       #endif
-      __pyx_t_1 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_prefixes); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 235, __pyx_L1_error)
+      __pyx_t_1 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_prefixes); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 241, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_1);
-      if (!PyCFunction_Check(__pyx_t_1) || (PyCFunction_GET_FUNCTION(__pyx_t_1) != (PyCFunction)(void*)__pyx_pw_4dawg_4DAWG_37prefixes)) {
+      if (!PyCFunction_Check(__pyx_t_1) || (PyCFunction_GET_FUNCTION(__pyx_t_1) != (PyCFunction)(void*)__pyx_pw_4dawg_4DAWG_41prefixes)) {
         __Pyx_XDECREF(__pyx_r);
         __Pyx_INCREF(__pyx_t_1);
         __pyx_t_3 = __pyx_t_1; __pyx_t_4 = NULL;
@@ -6028,10 +6180,10 @@ static PyObject *__pyx_f_4dawg_4DAWG_prefixes(struct __pyx_obj_4dawg_DAWG *__pyx
         }
         __pyx_t_2 = (__pyx_t_4) ? __Pyx_PyObject_Call2Args(__pyx_t_3, __pyx_t_4, __pyx_v_key) : __Pyx_PyObject_CallOneArg(__pyx_t_3, __pyx_v_key);
         __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
-        if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 235, __pyx_L1_error)
+        if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 241, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_2);
         __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-        if (!(likely(PyList_CheckExact(__pyx_t_2))||((__pyx_t_2) == Py_None)||(PyErr_Format(PyExc_TypeError, "Expected %.16s, got %.200s", "list", Py_TYPE(__pyx_t_2)->tp_name), 0))) __PYX_ERR(0, 235, __pyx_L1_error)
+        if (!(likely(PyList_CheckExact(__pyx_t_2))||((__pyx_t_2) == Py_None)||(PyErr_Format(PyExc_TypeError, "Expected %.16s, got %.200s", "list", Py_TYPE(__pyx_t_2)->tp_name), 0))) __PYX_ERR(0, 241, __pyx_L1_error)
         __pyx_r = ((PyObject*)__pyx_t_2);
         __pyx_t_2 = 0;
         __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
@@ -6050,7 +6202,7 @@ static PyObject *__pyx_f_4dawg_4DAWG_prefixes(struct __pyx_obj_4dawg_DAWG *__pyx
     #endif
   }
 
-  /* "dawg.pyx":239
+  /* "dawg.pyx":245
  *         Return a list with keys of this DAWG that are prefixes of the ``key``.
  *         '''
  *         return [p.decode('utf8') for p in self.b_prefixes(<bytes>key.encode('utf8'))]             # <<<<<<<<<<<<<<
@@ -6058,34 +6210,34 @@ static PyObject *__pyx_f_4dawg_4DAWG_prefixes(struct __pyx_obj_4dawg_DAWG *__pyx
  *     cpdef list b_prefixes(self, bytes b_key):
  */
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = PyList_New(0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 239, __pyx_L1_error)
+  __pyx_t_1 = PyList_New(0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 245, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   if (unlikely(__pyx_v_key == Py_None)) {
     PyErr_Format(PyExc_AttributeError, "'NoneType' object has no attribute '%.30s'", "encode");
-    __PYX_ERR(0, 239, __pyx_L1_error)
+    __PYX_ERR(0, 245, __pyx_L1_error)
   }
-  __pyx_t_2 = PyUnicode_AsUTF8String(__pyx_v_key); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 239, __pyx_L1_error)
+  __pyx_t_2 = PyUnicode_AsUTF8String(__pyx_v_key); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 245, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_3 = ((struct __pyx_vtabstruct_4dawg_DAWG *)__pyx_v_self->__pyx_vtab)->b_prefixes(__pyx_v_self, ((PyObject*)__pyx_t_2), 0); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 239, __pyx_L1_error)
+  __pyx_t_3 = ((struct __pyx_vtabstruct_4dawg_DAWG *)__pyx_v_self->__pyx_vtab)->b_prefixes(__pyx_v_self, ((PyObject*)__pyx_t_2), 0); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 245, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   if (unlikely(__pyx_t_3 == Py_None)) {
     PyErr_SetString(PyExc_TypeError, "'NoneType' object is not iterable");
-    __PYX_ERR(0, 239, __pyx_L1_error)
+    __PYX_ERR(0, 245, __pyx_L1_error)
   }
   __pyx_t_2 = __pyx_t_3; __Pyx_INCREF(__pyx_t_2); __pyx_t_5 = 0;
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   for (;;) {
     if (__pyx_t_5 >= PyList_GET_SIZE(__pyx_t_2)) break;
     #if CYTHON_ASSUME_SAFE_MACROS && !CYTHON_AVOID_BORROWED_REFS
-    __pyx_t_3 = PyList_GET_ITEM(__pyx_t_2, __pyx_t_5); __Pyx_INCREF(__pyx_t_3); __pyx_t_5++; if (unlikely(0 < 0)) __PYX_ERR(0, 239, __pyx_L1_error)
+    __pyx_t_3 = PyList_GET_ITEM(__pyx_t_2, __pyx_t_5); __Pyx_INCREF(__pyx_t_3); __pyx_t_5++; if (unlikely(0 < 0)) __PYX_ERR(0, 245, __pyx_L1_error)
     #else
-    __pyx_t_3 = PySequence_ITEM(__pyx_t_2, __pyx_t_5); __pyx_t_5++; if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 239, __pyx_L1_error)
+    __pyx_t_3 = PySequence_ITEM(__pyx_t_2, __pyx_t_5); __pyx_t_5++; if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 245, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
     #endif
     __Pyx_XDECREF_SET(__pyx_v_p, __pyx_t_3);
     __pyx_t_3 = 0;
-    __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_v_p, __pyx_n_s_decode); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 239, __pyx_L1_error)
+    __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_v_p, __pyx_n_s_decode); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 245, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_4);
     __pyx_t_6 = NULL;
     if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_4))) {
@@ -6099,10 +6251,10 @@ static PyObject *__pyx_f_4dawg_4DAWG_prefixes(struct __pyx_obj_4dawg_DAWG *__pyx
     }
     __pyx_t_3 = (__pyx_t_6) ? __Pyx_PyObject_Call2Args(__pyx_t_4, __pyx_t_6, __pyx_n_u_utf8) : __Pyx_PyObject_CallOneArg(__pyx_t_4, __pyx_n_u_utf8);
     __Pyx_XDECREF(__pyx_t_6); __pyx_t_6 = 0;
-    if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 239, __pyx_L1_error)
+    if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 245, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-    if (unlikely(__Pyx_ListComp_Append(__pyx_t_1, (PyObject*)__pyx_t_3))) __PYX_ERR(0, 239, __pyx_L1_error)
+    if (unlikely(__Pyx_ListComp_Append(__pyx_t_1, (PyObject*)__pyx_t_3))) __PYX_ERR(0, 245, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   }
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
@@ -6110,7 +6262,7 @@ static PyObject *__pyx_f_4dawg_4DAWG_prefixes(struct __pyx_obj_4dawg_DAWG *__pyx
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "dawg.pyx":235
+  /* "dawg.pyx":241
  *         return self._similar_keys("", key, self.dct.root(), replaces)
  * 
  *     cpdef list prefixes(self, unicode key):             # <<<<<<<<<<<<<<
@@ -6135,14 +6287,14 @@ static PyObject *__pyx_f_4dawg_4DAWG_prefixes(struct __pyx_obj_4dawg_DAWG *__pyx
 }
 
 /* Python wrapper */
-static PyObject *__pyx_pw_4dawg_4DAWG_37prefixes(PyObject *__pyx_v_self, PyObject *__pyx_v_key); /*proto*/
-static char __pyx_doc_4dawg_4DAWG_36prefixes[] = "DAWG.prefixes(self, unicode key) -> list\n\n        Return a list with keys of this DAWG that are prefixes of the ``key``.\n        ";
-static PyObject *__pyx_pw_4dawg_4DAWG_37prefixes(PyObject *__pyx_v_self, PyObject *__pyx_v_key) {
+static PyObject *__pyx_pw_4dawg_4DAWG_41prefixes(PyObject *__pyx_v_self, PyObject *__pyx_v_key); /*proto*/
+static char __pyx_doc_4dawg_4DAWG_40prefixes[] = "DAWG.prefixes(self, unicode key) -> list\n\n        Return a list with keys of this DAWG that are prefixes of the ``key``.\n        ";
+static PyObject *__pyx_pw_4dawg_4DAWG_41prefixes(PyObject *__pyx_v_self, PyObject *__pyx_v_key) {
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("prefixes (wrapper)", 0);
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_key), (&PyUnicode_Type), 1, "key", 1))) __PYX_ERR(0, 235, __pyx_L1_error)
-  __pyx_r = __pyx_pf_4dawg_4DAWG_36prefixes(((struct __pyx_obj_4dawg_DAWG *)__pyx_v_self), ((PyObject*)__pyx_v_key));
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_key), (&PyUnicode_Type), 1, "key", 1))) __PYX_ERR(0, 241, __pyx_L1_error)
+  __pyx_r = __pyx_pf_4dawg_4DAWG_40prefixes(((struct __pyx_obj_4dawg_DAWG *)__pyx_v_self), ((PyObject*)__pyx_v_key));
 
   /* function exit code */
   goto __pyx_L0;
@@ -6153,13 +6305,13 @@ static PyObject *__pyx_pw_4dawg_4DAWG_37prefixes(PyObject *__pyx_v_self, PyObjec
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_4dawg_4DAWG_36prefixes(struct __pyx_obj_4dawg_DAWG *__pyx_v_self, PyObject *__pyx_v_key) {
+static PyObject *__pyx_pf_4dawg_4DAWG_40prefixes(struct __pyx_obj_4dawg_DAWG *__pyx_v_self, PyObject *__pyx_v_key) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
   __Pyx_RefNannySetupContext("prefixes", 0);
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = __pyx_f_4dawg_4DAWG_prefixes(__pyx_v_self, __pyx_v_key, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 235, __pyx_L1_error)
+  __pyx_t_1 = __pyx_f_4dawg_4DAWG_prefixes(__pyx_v_self, __pyx_v_key, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 241, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
@@ -6176,7 +6328,7 @@ static PyObject *__pyx_pf_4dawg_4DAWG_36prefixes(struct __pyx_obj_4dawg_DAWG *__
   return __pyx_r;
 }
 
-/* "dawg.pyx":241
+/* "dawg.pyx":247
  *         return [p.decode('utf8') for p in self.b_prefixes(<bytes>key.encode('utf8'))]
  * 
  *     cpdef list b_prefixes(self, bytes b_key):             # <<<<<<<<<<<<<<
@@ -6184,7 +6336,7 @@ static PyObject *__pyx_pf_4dawg_4DAWG_36prefixes(struct __pyx_obj_4dawg_DAWG *__
  *         cdef BaseType index = self.dct.root()
  */
 
-static PyObject *__pyx_pw_4dawg_4DAWG_39b_prefixes(PyObject *__pyx_v_self, PyObject *__pyx_v_b_key); /*proto*/
+static PyObject *__pyx_pw_4dawg_4DAWG_43b_prefixes(PyObject *__pyx_v_self, PyObject *__pyx_v_b_key); /*proto*/
 static PyObject *__pyx_f_4dawg_4DAWG_b_prefixes(struct __pyx_obj_4dawg_DAWG *__pyx_v_self, PyObject *__pyx_v_b_key, int __pyx_skip_dispatch) {
   PyObject *__pyx_v_res = 0;
   dawgdic::BaseType __pyx_v_index;
@@ -6213,9 +6365,9 @@ static PyObject *__pyx_f_4dawg_4DAWG_b_prefixes(struct __pyx_obj_4dawg_DAWG *__p
     if (unlikely(!__Pyx_object_dict_version_matches(((PyObject *)__pyx_v_self), __pyx_tp_dict_version, __pyx_obj_dict_version))) {
       PY_UINT64_T __pyx_type_dict_guard = __Pyx_get_tp_dict_version(((PyObject *)__pyx_v_self));
       #endif
-      __pyx_t_1 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_b_prefixes); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 241, __pyx_L1_error)
+      __pyx_t_1 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_b_prefixes); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 247, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_1);
-      if (!PyCFunction_Check(__pyx_t_1) || (PyCFunction_GET_FUNCTION(__pyx_t_1) != (PyCFunction)(void*)__pyx_pw_4dawg_4DAWG_39b_prefixes)) {
+      if (!PyCFunction_Check(__pyx_t_1) || (PyCFunction_GET_FUNCTION(__pyx_t_1) != (PyCFunction)(void*)__pyx_pw_4dawg_4DAWG_43b_prefixes)) {
         __Pyx_XDECREF(__pyx_r);
         __Pyx_INCREF(__pyx_t_1);
         __pyx_t_3 = __pyx_t_1; __pyx_t_4 = NULL;
@@ -6230,10 +6382,10 @@ static PyObject *__pyx_f_4dawg_4DAWG_b_prefixes(struct __pyx_obj_4dawg_DAWG *__p
         }
         __pyx_t_2 = (__pyx_t_4) ? __Pyx_PyObject_Call2Args(__pyx_t_3, __pyx_t_4, __pyx_v_b_key) : __Pyx_PyObject_CallOneArg(__pyx_t_3, __pyx_v_b_key);
         __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
-        if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 241, __pyx_L1_error)
+        if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 247, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_2);
         __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-        if (!(likely(PyList_CheckExact(__pyx_t_2))||((__pyx_t_2) == Py_None)||(PyErr_Format(PyExc_TypeError, "Expected %.16s, got %.200s", "list", Py_TYPE(__pyx_t_2)->tp_name), 0))) __PYX_ERR(0, 241, __pyx_L1_error)
+        if (!(likely(PyList_CheckExact(__pyx_t_2))||((__pyx_t_2) == Py_None)||(PyErr_Format(PyExc_TypeError, "Expected %.16s, got %.200s", "list", Py_TYPE(__pyx_t_2)->tp_name), 0))) __PYX_ERR(0, 247, __pyx_L1_error)
         __pyx_r = ((PyObject*)__pyx_t_2);
         __pyx_t_2 = 0;
         __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
@@ -6252,19 +6404,19 @@ static PyObject *__pyx_f_4dawg_4DAWG_b_prefixes(struct __pyx_obj_4dawg_DAWG *__p
     #endif
   }
 
-  /* "dawg.pyx":242
+  /* "dawg.pyx":248
  * 
  *     cpdef list b_prefixes(self, bytes b_key):
  *         cdef list res = []             # <<<<<<<<<<<<<<
  *         cdef BaseType index = self.dct.root()
  *         cdef int pos = 1
  */
-  __pyx_t_1 = PyList_New(0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 242, __pyx_L1_error)
+  __pyx_t_1 = PyList_New(0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 248, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_v_res = ((PyObject*)__pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "dawg.pyx":243
+  /* "dawg.pyx":249
  *     cpdef list b_prefixes(self, bytes b_key):
  *         cdef list res = []
  *         cdef BaseType index = self.dct.root()             # <<<<<<<<<<<<<<
@@ -6273,7 +6425,7 @@ static PyObject *__pyx_f_4dawg_4DAWG_b_prefixes(struct __pyx_obj_4dawg_DAWG *__p
  */
   __pyx_v_index = __pyx_v_self->dct.root();
 
-  /* "dawg.pyx":244
+  /* "dawg.pyx":250
  *         cdef list res = []
  *         cdef BaseType index = self.dct.root()
  *         cdef int pos = 1             # <<<<<<<<<<<<<<
@@ -6282,7 +6434,7 @@ static PyObject *__pyx_f_4dawg_4DAWG_b_prefixes(struct __pyx_obj_4dawg_DAWG *__p
  */
   __pyx_v_pos = 1;
 
-  /* "dawg.pyx":247
+  /* "dawg.pyx":253
  *         cdef CharType ch
  * 
  *         for ch in b_key:             # <<<<<<<<<<<<<<
@@ -6291,7 +6443,7 @@ static PyObject *__pyx_f_4dawg_4DAWG_b_prefixes(struct __pyx_obj_4dawg_DAWG *__p
  */
   if (unlikely(__pyx_v_b_key == Py_None)) {
     PyErr_SetString(PyExc_TypeError, "'NoneType' is not iterable");
-    __PYX_ERR(0, 247, __pyx_L1_error)
+    __PYX_ERR(0, 253, __pyx_L1_error)
   }
   __Pyx_INCREF(__pyx_v_b_key);
   __pyx_t_5 = __pyx_v_b_key;
@@ -6301,7 +6453,7 @@ static PyObject *__pyx_f_4dawg_4DAWG_b_prefixes(struct __pyx_obj_4dawg_DAWG *__p
     __pyx_t_6 = __pyx_t_9;
     __pyx_v_ch = (__pyx_t_6[0]);
 
-    /* "dawg.pyx":248
+    /* "dawg.pyx":254
  * 
  *         for ch in b_key:
  *             if not self.dct.Follow(ch, &index):             # <<<<<<<<<<<<<<
@@ -6311,7 +6463,7 @@ static PyObject *__pyx_f_4dawg_4DAWG_b_prefixes(struct __pyx_obj_4dawg_DAWG *__p
     __pyx_t_10 = ((!(__pyx_v_self->dct.Follow(__pyx_v_ch, (&__pyx_v_index)) != 0)) != 0);
     if (__pyx_t_10) {
 
-      /* "dawg.pyx":249
+      /* "dawg.pyx":255
  *         for ch in b_key:
  *             if not self.dct.Follow(ch, &index):
  *                 break             # <<<<<<<<<<<<<<
@@ -6320,7 +6472,7 @@ static PyObject *__pyx_f_4dawg_4DAWG_b_prefixes(struct __pyx_obj_4dawg_DAWG *__p
  */
       goto __pyx_L4_break;
 
-      /* "dawg.pyx":248
+      /* "dawg.pyx":254
  * 
  *         for ch in b_key:
  *             if not self.dct.Follow(ch, &index):             # <<<<<<<<<<<<<<
@@ -6329,7 +6481,7 @@ static PyObject *__pyx_f_4dawg_4DAWG_b_prefixes(struct __pyx_obj_4dawg_DAWG *__p
  */
     }
 
-    /* "dawg.pyx":250
+    /* "dawg.pyx":256
  *             if not self.dct.Follow(ch, &index):
  *                 break
  *             if self._has_value(index):             # <<<<<<<<<<<<<<
@@ -6339,7 +6491,7 @@ static PyObject *__pyx_f_4dawg_4DAWG_b_prefixes(struct __pyx_obj_4dawg_DAWG *__p
     __pyx_t_10 = (((struct __pyx_vtabstruct_4dawg_DAWG *)__pyx_v_self->__pyx_vtab)->_has_value(__pyx_v_self, __pyx_v_index) != 0);
     if (__pyx_t_10) {
 
-      /* "dawg.pyx":251
+      /* "dawg.pyx":257
  *                 break
  *             if self._has_value(index):
  *                 res.append(b_key[:pos])             # <<<<<<<<<<<<<<
@@ -6348,14 +6500,14 @@ static PyObject *__pyx_f_4dawg_4DAWG_b_prefixes(struct __pyx_obj_4dawg_DAWG *__p
  */
       if (unlikely(__pyx_v_b_key == Py_None)) {
         PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
-        __PYX_ERR(0, 251, __pyx_L1_error)
+        __PYX_ERR(0, 257, __pyx_L1_error)
       }
-      __pyx_t_1 = PySequence_GetSlice(__pyx_v_b_key, 0, __pyx_v_pos); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 251, __pyx_L1_error)
+      __pyx_t_1 = PySequence_GetSlice(__pyx_v_b_key, 0, __pyx_v_pos); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 257, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_1);
-      __pyx_t_11 = __Pyx_PyList_Append(__pyx_v_res, __pyx_t_1); if (unlikely(__pyx_t_11 == ((int)-1))) __PYX_ERR(0, 251, __pyx_L1_error)
+      __pyx_t_11 = __Pyx_PyList_Append(__pyx_v_res, __pyx_t_1); if (unlikely(__pyx_t_11 == ((int)-1))) __PYX_ERR(0, 257, __pyx_L1_error)
       __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-      /* "dawg.pyx":250
+      /* "dawg.pyx":256
  *             if not self.dct.Follow(ch, &index):
  *                 break
  *             if self._has_value(index):             # <<<<<<<<<<<<<<
@@ -6364,7 +6516,7 @@ static PyObject *__pyx_f_4dawg_4DAWG_b_prefixes(struct __pyx_obj_4dawg_DAWG *__p
  */
     }
 
-    /* "dawg.pyx":252
+    /* "dawg.pyx":258
  *             if self._has_value(index):
  *                 res.append(b_key[:pos])
  *             pos += 1             # <<<<<<<<<<<<<<
@@ -6376,7 +6528,7 @@ static PyObject *__pyx_f_4dawg_4DAWG_b_prefixes(struct __pyx_obj_4dawg_DAWG *__p
   __pyx_L4_break:;
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
 
-  /* "dawg.pyx":254
+  /* "dawg.pyx":260
  *             pos += 1
  * 
  *         return res             # <<<<<<<<<<<<<<
@@ -6388,7 +6540,7 @@ static PyObject *__pyx_f_4dawg_4DAWG_b_prefixes(struct __pyx_obj_4dawg_DAWG *__p
   __pyx_r = __pyx_v_res;
   goto __pyx_L0;
 
-  /* "dawg.pyx":241
+  /* "dawg.pyx":247
  *         return [p.decode('utf8') for p in self.b_prefixes(<bytes>key.encode('utf8'))]
  * 
  *     cpdef list b_prefixes(self, bytes b_key):             # <<<<<<<<<<<<<<
@@ -6413,14 +6565,14 @@ static PyObject *__pyx_f_4dawg_4DAWG_b_prefixes(struct __pyx_obj_4dawg_DAWG *__p
 }
 
 /* Python wrapper */
-static PyObject *__pyx_pw_4dawg_4DAWG_39b_prefixes(PyObject *__pyx_v_self, PyObject *__pyx_v_b_key); /*proto*/
-static char __pyx_doc_4dawg_4DAWG_38b_prefixes[] = "DAWG.b_prefixes(self, bytes b_key) -> list";
-static PyObject *__pyx_pw_4dawg_4DAWG_39b_prefixes(PyObject *__pyx_v_self, PyObject *__pyx_v_b_key) {
+static PyObject *__pyx_pw_4dawg_4DAWG_43b_prefixes(PyObject *__pyx_v_self, PyObject *__pyx_v_b_key); /*proto*/
+static char __pyx_doc_4dawg_4DAWG_42b_prefixes[] = "DAWG.b_prefixes(self, bytes b_key) -> list";
+static PyObject *__pyx_pw_4dawg_4DAWG_43b_prefixes(PyObject *__pyx_v_self, PyObject *__pyx_v_b_key) {
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("b_prefixes (wrapper)", 0);
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_b_key), (&PyBytes_Type), 1, "b_key", 1))) __PYX_ERR(0, 241, __pyx_L1_error)
-  __pyx_r = __pyx_pf_4dawg_4DAWG_38b_prefixes(((struct __pyx_obj_4dawg_DAWG *)__pyx_v_self), ((PyObject*)__pyx_v_b_key));
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_b_key), (&PyBytes_Type), 1, "b_key", 1))) __PYX_ERR(0, 247, __pyx_L1_error)
+  __pyx_r = __pyx_pf_4dawg_4DAWG_42b_prefixes(((struct __pyx_obj_4dawg_DAWG *)__pyx_v_self), ((PyObject*)__pyx_v_b_key));
 
   /* function exit code */
   goto __pyx_L0;
@@ -6431,13 +6583,13 @@ static PyObject *__pyx_pw_4dawg_4DAWG_39b_prefixes(PyObject *__pyx_v_self, PyObj
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_4dawg_4DAWG_38b_prefixes(struct __pyx_obj_4dawg_DAWG *__pyx_v_self, PyObject *__pyx_v_b_key) {
+static PyObject *__pyx_pf_4dawg_4DAWG_42b_prefixes(struct __pyx_obj_4dawg_DAWG *__pyx_v_self, PyObject *__pyx_v_b_key) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
   __Pyx_RefNannySetupContext("b_prefixes", 0);
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = __pyx_f_4dawg_4DAWG_b_prefixes(__pyx_v_self, __pyx_v_b_key, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 241, __pyx_L1_error)
+  __pyx_t_1 = __pyx_f_4dawg_4DAWG_b_prefixes(__pyx_v_self, __pyx_v_b_key, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 247, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
@@ -6453,9 +6605,9 @@ static PyObject *__pyx_pf_4dawg_4DAWG_38b_prefixes(struct __pyx_obj_4dawg_DAWG *
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
-static PyObject *__pyx_gb_4dawg_4DAWG_42generator(__pyx_CoroutineObject *__pyx_generator, CYTHON_UNUSED PyThreadState *__pyx_tstate, PyObject *__pyx_sent_value); /* proto */
+static PyObject *__pyx_gb_4dawg_4DAWG_46generator(__pyx_CoroutineObject *__pyx_generator, CYTHON_UNUSED PyThreadState *__pyx_tstate, PyObject *__pyx_sent_value); /* proto */
 
-/* "dawg.pyx":256
+/* "dawg.pyx":262
  *         return res
  * 
  *     def iterprefixes(self, unicode key):             # <<<<<<<<<<<<<<
@@ -6464,14 +6616,14 @@ static PyObject *__pyx_gb_4dawg_4DAWG_42generator(__pyx_CoroutineObject *__pyx_g
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_4dawg_4DAWG_41iterprefixes(PyObject *__pyx_v_self, PyObject *__pyx_v_key); /*proto*/
-static char __pyx_doc_4dawg_4DAWG_40iterprefixes[] = "DAWG.iterprefixes(self, unicode key)\n\n        Return a generator with keys of this DAWG that are prefixes of the ``key``.\n        ";
-static PyObject *__pyx_pw_4dawg_4DAWG_41iterprefixes(PyObject *__pyx_v_self, PyObject *__pyx_v_key) {
+static PyObject *__pyx_pw_4dawg_4DAWG_45iterprefixes(PyObject *__pyx_v_self, PyObject *__pyx_v_key); /*proto*/
+static char __pyx_doc_4dawg_4DAWG_44iterprefixes[] = "DAWG.iterprefixes(self, unicode key)\n\n        Return a generator with keys of this DAWG that are prefixes of the ``key``.\n        ";
+static PyObject *__pyx_pw_4dawg_4DAWG_45iterprefixes(PyObject *__pyx_v_self, PyObject *__pyx_v_key) {
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("iterprefixes (wrapper)", 0);
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_key), (&PyUnicode_Type), 1, "key", 1))) __PYX_ERR(0, 256, __pyx_L1_error)
-  __pyx_r = __pyx_pf_4dawg_4DAWG_40iterprefixes(((struct __pyx_obj_4dawg_DAWG *)__pyx_v_self), ((PyObject*)__pyx_v_key));
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_key), (&PyUnicode_Type), 1, "key", 1))) __PYX_ERR(0, 262, __pyx_L1_error)
+  __pyx_r = __pyx_pf_4dawg_4DAWG_44iterprefixes(((struct __pyx_obj_4dawg_DAWG *)__pyx_v_self), ((PyObject*)__pyx_v_key));
 
   /* function exit code */
   goto __pyx_L0;
@@ -6482,7 +6634,7 @@ static PyObject *__pyx_pw_4dawg_4DAWG_41iterprefixes(PyObject *__pyx_v_self, PyO
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_4dawg_4DAWG_40iterprefixes(struct __pyx_obj_4dawg_DAWG *__pyx_v_self, PyObject *__pyx_v_key) {
+static PyObject *__pyx_pf_4dawg_4DAWG_44iterprefixes(struct __pyx_obj_4dawg_DAWG *__pyx_v_self, PyObject *__pyx_v_key) {
   struct __pyx_obj_4dawg___pyx_scope_struct__iterprefixes *__pyx_cur_scope;
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
@@ -6491,7 +6643,7 @@ static PyObject *__pyx_pf_4dawg_4DAWG_40iterprefixes(struct __pyx_obj_4dawg_DAWG
   if (unlikely(!__pyx_cur_scope)) {
     __pyx_cur_scope = ((struct __pyx_obj_4dawg___pyx_scope_struct__iterprefixes *)Py_None);
     __Pyx_INCREF(Py_None);
-    __PYX_ERR(0, 256, __pyx_L1_error)
+    __PYX_ERR(0, 262, __pyx_L1_error)
   } else {
     __Pyx_GOTREF(__pyx_cur_scope);
   }
@@ -6502,7 +6654,7 @@ static PyObject *__pyx_pf_4dawg_4DAWG_40iterprefixes(struct __pyx_obj_4dawg_DAWG
   __Pyx_INCREF(__pyx_cur_scope->__pyx_v_key);
   __Pyx_GIVEREF(__pyx_cur_scope->__pyx_v_key);
   {
-    __pyx_CoroutineObject *gen = __Pyx_Generator_New((__pyx_coroutine_body_t) __pyx_gb_4dawg_4DAWG_42generator, NULL, (PyObject *) __pyx_cur_scope, __pyx_n_s_iterprefixes, __pyx_n_s_DAWG_iterprefixes, __pyx_n_s_dawg); if (unlikely(!gen)) __PYX_ERR(0, 256, __pyx_L1_error)
+    __pyx_CoroutineObject *gen = __Pyx_Generator_New((__pyx_coroutine_body_t) __pyx_gb_4dawg_4DAWG_46generator, NULL, (PyObject *) __pyx_cur_scope, __pyx_n_s_iterprefixes, __pyx_n_s_DAWG_iterprefixes, __pyx_n_s_dawg); if (unlikely(!gen)) __PYX_ERR(0, 262, __pyx_L1_error)
     __Pyx_DECREF(__pyx_cur_scope);
     __Pyx_RefNannyFinishContext();
     return (PyObject *) gen;
@@ -6518,7 +6670,7 @@ static PyObject *__pyx_pf_4dawg_4DAWG_40iterprefixes(struct __pyx_obj_4dawg_DAWG
   return __pyx_r;
 }
 
-static PyObject *__pyx_gb_4dawg_4DAWG_42generator(__pyx_CoroutineObject *__pyx_generator, CYTHON_UNUSED PyThreadState *__pyx_tstate, PyObject *__pyx_sent_value) /* generator body */
+static PyObject *__pyx_gb_4dawg_4DAWG_46generator(__pyx_CoroutineObject *__pyx_generator, CYTHON_UNUSED PyThreadState *__pyx_tstate, PyObject *__pyx_sent_value) /* generator body */
 {
   struct __pyx_obj_4dawg___pyx_scope_struct__iterprefixes *__pyx_cur_scope = ((struct __pyx_obj_4dawg___pyx_scope_struct__iterprefixes *)__pyx_generator->closure);
   PyObject *__pyx_r = NULL;
@@ -6540,9 +6692,9 @@ static PyObject *__pyx_gb_4dawg_4DAWG_42generator(__pyx_CoroutineObject *__pyx_g
     return NULL;
   }
   __pyx_L3_first_run:;
-  if (unlikely(!__pyx_sent_value)) __PYX_ERR(0, 256, __pyx_L1_error)
+  if (unlikely(!__pyx_sent_value)) __PYX_ERR(0, 262, __pyx_L1_error)
 
-  /* "dawg.pyx":260
+  /* "dawg.pyx":266
  *         Return a generator with keys of this DAWG that are prefixes of the ``key``.
  *         '''
  *         cdef BaseType index = self.dct.root()             # <<<<<<<<<<<<<<
@@ -6551,7 +6703,7 @@ static PyObject *__pyx_gb_4dawg_4DAWG_42generator(__pyx_CoroutineObject *__pyx_g
  */
   __pyx_cur_scope->__pyx_v_index = __pyx_cur_scope->__pyx_v_self->dct.root();
 
-  /* "dawg.pyx":261
+  /* "dawg.pyx":267
  *         '''
  *         cdef BaseType index = self.dct.root()
  *         cdef bytes b_key = <bytes>key.encode('utf8')             # <<<<<<<<<<<<<<
@@ -6560,9 +6712,9 @@ static PyObject *__pyx_gb_4dawg_4DAWG_42generator(__pyx_CoroutineObject *__pyx_g
  */
   if (unlikely(__pyx_cur_scope->__pyx_v_key == Py_None)) {
     PyErr_Format(PyExc_AttributeError, "'NoneType' object has no attribute '%.30s'", "encode");
-    __PYX_ERR(0, 261, __pyx_L1_error)
+    __PYX_ERR(0, 267, __pyx_L1_error)
   }
-  __pyx_t_1 = PyUnicode_AsUTF8String(__pyx_cur_scope->__pyx_v_key); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 261, __pyx_L1_error)
+  __pyx_t_1 = PyUnicode_AsUTF8String(__pyx_cur_scope->__pyx_v_key); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 267, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_t_2 = __pyx_t_1;
   __Pyx_INCREF(__pyx_t_2);
@@ -6571,7 +6723,7 @@ static PyObject *__pyx_gb_4dawg_4DAWG_42generator(__pyx_CoroutineObject *__pyx_g
   __pyx_cur_scope->__pyx_v_b_key = ((PyObject*)__pyx_t_2);
   __pyx_t_2 = 0;
 
-  /* "dawg.pyx":262
+  /* "dawg.pyx":268
  *         cdef BaseType index = self.dct.root()
  *         cdef bytes b_key = <bytes>key.encode('utf8')
  *         cdef int pos = 1             # <<<<<<<<<<<<<<
@@ -6580,7 +6732,7 @@ static PyObject *__pyx_gb_4dawg_4DAWG_42generator(__pyx_CoroutineObject *__pyx_g
  */
   __pyx_cur_scope->__pyx_v_pos = 1;
 
-  /* "dawg.pyx":265
+  /* "dawg.pyx":271
  *         cdef CharType ch
  * 
  *         for ch in b_key:             # <<<<<<<<<<<<<<
@@ -6589,7 +6741,7 @@ static PyObject *__pyx_gb_4dawg_4DAWG_42generator(__pyx_CoroutineObject *__pyx_g
  */
   if (unlikely(__pyx_cur_scope->__pyx_v_b_key == Py_None)) {
     PyErr_SetString(PyExc_TypeError, "'NoneType' is not iterable");
-    __PYX_ERR(0, 265, __pyx_L1_error)
+    __PYX_ERR(0, 271, __pyx_L1_error)
   }
   __Pyx_INCREF(__pyx_cur_scope->__pyx_v_b_key);
   __pyx_t_3 = __pyx_cur_scope->__pyx_v_b_key;
@@ -6599,7 +6751,7 @@ static PyObject *__pyx_gb_4dawg_4DAWG_42generator(__pyx_CoroutineObject *__pyx_g
     __pyx_t_4 = __pyx_t_7;
     __pyx_cur_scope->__pyx_v_ch = (__pyx_t_4[0]);
 
-    /* "dawg.pyx":266
+    /* "dawg.pyx":272
  * 
  *         for ch in b_key:
  *             if not self.dct.Follow(ch, &index):             # <<<<<<<<<<<<<<
@@ -6609,7 +6761,7 @@ static PyObject *__pyx_gb_4dawg_4DAWG_42generator(__pyx_CoroutineObject *__pyx_g
     __pyx_t_8 = ((!(__pyx_cur_scope->__pyx_v_self->dct.Follow(__pyx_cur_scope->__pyx_v_ch, (&__pyx_cur_scope->__pyx_v_index)) != 0)) != 0);
     if (__pyx_t_8) {
 
-      /* "dawg.pyx":267
+      /* "dawg.pyx":273
  *         for ch in b_key:
  *             if not self.dct.Follow(ch, &index):
  *                 return             # <<<<<<<<<<<<<<
@@ -6621,7 +6773,7 @@ static PyObject *__pyx_gb_4dawg_4DAWG_42generator(__pyx_CoroutineObject *__pyx_g
       __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
       goto __pyx_L0;
 
-      /* "dawg.pyx":266
+      /* "dawg.pyx":272
  * 
  *         for ch in b_key:
  *             if not self.dct.Follow(ch, &index):             # <<<<<<<<<<<<<<
@@ -6630,7 +6782,7 @@ static PyObject *__pyx_gb_4dawg_4DAWG_42generator(__pyx_CoroutineObject *__pyx_g
  */
     }
 
-    /* "dawg.pyx":268
+    /* "dawg.pyx":274
  *             if not self.dct.Follow(ch, &index):
  *                 return
  *             if self._has_value(index):             # <<<<<<<<<<<<<<
@@ -6640,7 +6792,7 @@ static PyObject *__pyx_gb_4dawg_4DAWG_42generator(__pyx_CoroutineObject *__pyx_g
     __pyx_t_8 = (((struct __pyx_vtabstruct_4dawg_DAWG *)__pyx_cur_scope->__pyx_v_self->__pyx_vtab)->_has_value(__pyx_cur_scope->__pyx_v_self, __pyx_cur_scope->__pyx_v_index) != 0);
     if (__pyx_t_8) {
 
-      /* "dawg.pyx":269
+      /* "dawg.pyx":275
  *                 return
  *             if self._has_value(index):
  *                 yield b_key[:pos].decode('utf8')             # <<<<<<<<<<<<<<
@@ -6649,9 +6801,9 @@ static PyObject *__pyx_gb_4dawg_4DAWG_42generator(__pyx_CoroutineObject *__pyx_g
  */
       if (unlikely(__pyx_cur_scope->__pyx_v_b_key == Py_None)) {
         PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
-        __PYX_ERR(0, 269, __pyx_L1_error)
+        __PYX_ERR(0, 275, __pyx_L1_error)
       }
-      __pyx_t_2 = __Pyx_decode_bytes(__pyx_cur_scope->__pyx_v_b_key, 0, __pyx_cur_scope->__pyx_v_pos, NULL, NULL, PyUnicode_DecodeUTF8); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 269, __pyx_L1_error)
+      __pyx_t_2 = __Pyx_decode_bytes(__pyx_cur_scope->__pyx_v_b_key, 0, __pyx_cur_scope->__pyx_v_pos, NULL, NULL, PyUnicode_DecodeUTF8); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 275, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_2);
       __pyx_r = __pyx_t_2;
       __pyx_t_2 = 0;
@@ -6675,9 +6827,9 @@ static PyObject *__pyx_gb_4dawg_4DAWG_42generator(__pyx_CoroutineObject *__pyx_g
       __pyx_t_5 = __pyx_cur_scope->__pyx_t_2;
       __pyx_t_6 = __pyx_cur_scope->__pyx_t_3;
       __pyx_t_7 = __pyx_cur_scope->__pyx_t_4;
-      if (unlikely(!__pyx_sent_value)) __PYX_ERR(0, 269, __pyx_L1_error)
+      if (unlikely(!__pyx_sent_value)) __PYX_ERR(0, 275, __pyx_L1_error)
 
-      /* "dawg.pyx":268
+      /* "dawg.pyx":274
  *             if not self.dct.Follow(ch, &index):
  *                 return
  *             if self._has_value(index):             # <<<<<<<<<<<<<<
@@ -6686,7 +6838,7 @@ static PyObject *__pyx_gb_4dawg_4DAWG_42generator(__pyx_CoroutineObject *__pyx_g
  */
     }
 
-    /* "dawg.pyx":270
+    /* "dawg.pyx":276
  *             if self._has_value(index):
  *                 yield b_key[:pos].decode('utf8')
  *             pos += 1             # <<<<<<<<<<<<<<
@@ -6698,7 +6850,7 @@ static PyObject *__pyx_gb_4dawg_4DAWG_42generator(__pyx_CoroutineObject *__pyx_g
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   CYTHON_MAYBE_UNUSED_VAR(__pyx_cur_scope);
 
-  /* "dawg.pyx":256
+  /* "dawg.pyx":262
  *         return res
  * 
  *     def iterprefixes(self, unicode key):             # <<<<<<<<<<<<<<
@@ -6725,7 +6877,7 @@ static PyObject *__pyx_gb_4dawg_4DAWG_42generator(__pyx_CoroutineObject *__pyx_g
   return __pyx_r;
 }
 
-/* "dawg.pyx":273
+/* "dawg.pyx":279
  * 
  *     @classmethod
  *     def compile_replaces(cls, replaces):             # <<<<<<<<<<<<<<
@@ -6734,13 +6886,13 @@ static PyObject *__pyx_gb_4dawg_4DAWG_42generator(__pyx_CoroutineObject *__pyx_g
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_4dawg_4DAWG_44compile_replaces(PyObject *__pyx_v_cls, PyObject *__pyx_v_replaces); /*proto*/
-static char __pyx_doc_4dawg_4DAWG_43compile_replaces[] = "DAWG.compile_replaces(type cls, replaces)";
-static PyObject *__pyx_pw_4dawg_4DAWG_44compile_replaces(PyObject *__pyx_v_cls, PyObject *__pyx_v_replaces) {
+static PyObject *__pyx_pw_4dawg_4DAWG_48compile_replaces(PyObject *__pyx_v_cls, PyObject *__pyx_v_replaces); /*proto*/
+static char __pyx_doc_4dawg_4DAWG_47compile_replaces[] = "DAWG.compile_replaces(type cls, replaces)";
+static PyObject *__pyx_pw_4dawg_4DAWG_48compile_replaces(PyObject *__pyx_v_cls, PyObject *__pyx_v_replaces) {
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("compile_replaces (wrapper)", 0);
-  __pyx_r = __pyx_pf_4dawg_4DAWG_43compile_replaces(((PyTypeObject*)__pyx_v_cls), ((PyObject *)__pyx_v_replaces));
+  __pyx_r = __pyx_pf_4dawg_4DAWG_47compile_replaces(((PyTypeObject*)__pyx_v_cls), ((PyObject *)__pyx_v_replaces));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
@@ -6748,7 +6900,7 @@ static PyObject *__pyx_pw_4dawg_4DAWG_44compile_replaces(PyObject *__pyx_v_cls, 
 }
 static PyObject *__pyx_gb_4dawg_4DAWG_16compile_replaces_2generator6(__pyx_CoroutineObject *__pyx_generator, CYTHON_UNUSED PyThreadState *__pyx_tstate, PyObject *__pyx_sent_value); /* proto */
 
-/* "dawg.pyx":281
+/* "dawg.pyx":287
  *         return dict(
  *             (
  *                 k.encode('utf8'),             # <<<<<<<<<<<<<<
@@ -6765,7 +6917,7 @@ static PyObject *__pyx_pf_4dawg_4DAWG_16compile_replaces_genexpr(PyObject *__pyx
   if (unlikely(!__pyx_cur_scope)) {
     __pyx_cur_scope = ((struct __pyx_obj_4dawg___pyx_scope_struct_2_genexpr *)Py_None);
     __Pyx_INCREF(Py_None);
-    __PYX_ERR(0, 281, __pyx_L1_error)
+    __PYX_ERR(0, 287, __pyx_L1_error)
   } else {
     __Pyx_GOTREF(__pyx_cur_scope);
   }
@@ -6773,7 +6925,7 @@ static PyObject *__pyx_pf_4dawg_4DAWG_16compile_replaces_genexpr(PyObject *__pyx
   __Pyx_INCREF(((PyObject *)__pyx_cur_scope->__pyx_outer_scope));
   __Pyx_GIVEREF(__pyx_cur_scope->__pyx_outer_scope);
   {
-    __pyx_CoroutineObject *gen = __Pyx_Generator_New((__pyx_coroutine_body_t) __pyx_gb_4dawg_4DAWG_16compile_replaces_2generator6, NULL, (PyObject *) __pyx_cur_scope, __pyx_n_s_genexpr, __pyx_n_s_compile_replaces_locals_genexpr, __pyx_n_s_dawg); if (unlikely(!gen)) __PYX_ERR(0, 281, __pyx_L1_error)
+    __pyx_CoroutineObject *gen = __Pyx_Generator_New((__pyx_coroutine_body_t) __pyx_gb_4dawg_4DAWG_16compile_replaces_2generator6, NULL, (PyObject *) __pyx_cur_scope, __pyx_n_s_genexpr, __pyx_n_s_compile_replaces_locals_genexpr, __pyx_n_s_dawg); if (unlikely(!gen)) __PYX_ERR(0, 287, __pyx_L1_error)
     __Pyx_DECREF(__pyx_cur_scope);
     __Pyx_RefNannyFinishContext();
     return (PyObject *) gen;
@@ -6810,19 +6962,19 @@ static PyObject *__pyx_gb_4dawg_4DAWG_16compile_replaces_2generator6(__pyx_Corou
     return NULL;
   }
   __pyx_L3_first_run:;
-  if (unlikely(!__pyx_sent_value)) __PYX_ERR(0, 281, __pyx_L1_error)
-  __pyx_r = PyDict_New(); if (unlikely(!__pyx_r)) __PYX_ERR(0, 281, __pyx_L1_error)
+  if (unlikely(!__pyx_sent_value)) __PYX_ERR(0, 287, __pyx_L1_error)
+  __pyx_r = PyDict_New(); if (unlikely(!__pyx_r)) __PYX_ERR(0, 287, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_r);
 
-  /* "dawg.pyx":284
+  /* "dawg.pyx":290
  *                 (v.encode('utf8'), unicode(v))
  *             )
  *             for k, v in replaces.items()             # <<<<<<<<<<<<<<
  *         )
  * 
  */
-  if (unlikely(!__pyx_cur_scope->__pyx_outer_scope->__pyx_v_replaces)) { __Pyx_RaiseClosureNameError("replaces"); __PYX_ERR(0, 284, __pyx_L1_error) }
-  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_cur_scope->__pyx_outer_scope->__pyx_v_replaces, __pyx_n_s_items); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 284, __pyx_L1_error)
+  if (unlikely(!__pyx_cur_scope->__pyx_outer_scope->__pyx_v_replaces)) { __Pyx_RaiseClosureNameError("replaces"); __PYX_ERR(0, 290, __pyx_L1_error) }
+  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_cur_scope->__pyx_outer_scope->__pyx_v_replaces, __pyx_n_s_items); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 290, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __pyx_t_3 = NULL;
   if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_2))) {
@@ -6836,16 +6988,16 @@ static PyObject *__pyx_gb_4dawg_4DAWG_16compile_replaces_2generator6(__pyx_Corou
   }
   __pyx_t_1 = (__pyx_t_3) ? __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_t_3) : __Pyx_PyObject_CallNoArg(__pyx_t_2);
   __Pyx_XDECREF(__pyx_t_3); __pyx_t_3 = 0;
-  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 284, __pyx_L1_error)
+  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 290, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   if (likely(PyList_CheckExact(__pyx_t_1)) || PyTuple_CheckExact(__pyx_t_1)) {
     __pyx_t_2 = __pyx_t_1; __Pyx_INCREF(__pyx_t_2); __pyx_t_4 = 0;
     __pyx_t_5 = NULL;
   } else {
-    __pyx_t_4 = -1; __pyx_t_2 = PyObject_GetIter(__pyx_t_1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 284, __pyx_L1_error)
+    __pyx_t_4 = -1; __pyx_t_2 = PyObject_GetIter(__pyx_t_1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 290, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
-    __pyx_t_5 = Py_TYPE(__pyx_t_2)->tp_iternext; if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 284, __pyx_L1_error)
+    __pyx_t_5 = Py_TYPE(__pyx_t_2)->tp_iternext; if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 290, __pyx_L1_error)
   }
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   for (;;) {
@@ -6853,17 +7005,17 @@ static PyObject *__pyx_gb_4dawg_4DAWG_16compile_replaces_2generator6(__pyx_Corou
       if (likely(PyList_CheckExact(__pyx_t_2))) {
         if (__pyx_t_4 >= PyList_GET_SIZE(__pyx_t_2)) break;
         #if CYTHON_ASSUME_SAFE_MACROS && !CYTHON_AVOID_BORROWED_REFS
-        __pyx_t_1 = PyList_GET_ITEM(__pyx_t_2, __pyx_t_4); __Pyx_INCREF(__pyx_t_1); __pyx_t_4++; if (unlikely(0 < 0)) __PYX_ERR(0, 284, __pyx_L1_error)
+        __pyx_t_1 = PyList_GET_ITEM(__pyx_t_2, __pyx_t_4); __Pyx_INCREF(__pyx_t_1); __pyx_t_4++; if (unlikely(0 < 0)) __PYX_ERR(0, 290, __pyx_L1_error)
         #else
-        __pyx_t_1 = PySequence_ITEM(__pyx_t_2, __pyx_t_4); __pyx_t_4++; if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 284, __pyx_L1_error)
+        __pyx_t_1 = PySequence_ITEM(__pyx_t_2, __pyx_t_4); __pyx_t_4++; if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 290, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_1);
         #endif
       } else {
         if (__pyx_t_4 >= PyTuple_GET_SIZE(__pyx_t_2)) break;
         #if CYTHON_ASSUME_SAFE_MACROS && !CYTHON_AVOID_BORROWED_REFS
-        __pyx_t_1 = PyTuple_GET_ITEM(__pyx_t_2, __pyx_t_4); __Pyx_INCREF(__pyx_t_1); __pyx_t_4++; if (unlikely(0 < 0)) __PYX_ERR(0, 284, __pyx_L1_error)
+        __pyx_t_1 = PyTuple_GET_ITEM(__pyx_t_2, __pyx_t_4); __Pyx_INCREF(__pyx_t_1); __pyx_t_4++; if (unlikely(0 < 0)) __PYX_ERR(0, 290, __pyx_L1_error)
         #else
-        __pyx_t_1 = PySequence_ITEM(__pyx_t_2, __pyx_t_4); __pyx_t_4++; if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 284, __pyx_L1_error)
+        __pyx_t_1 = PySequence_ITEM(__pyx_t_2, __pyx_t_4); __pyx_t_4++; if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 290, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_1);
         #endif
       }
@@ -6873,7 +7025,7 @@ static PyObject *__pyx_gb_4dawg_4DAWG_16compile_replaces_2generator6(__pyx_Corou
         PyObject* exc_type = PyErr_Occurred();
         if (exc_type) {
           if (likely(__Pyx_PyErr_GivenExceptionMatches(exc_type, PyExc_StopIteration))) PyErr_Clear();
-          else __PYX_ERR(0, 284, __pyx_L1_error)
+          else __PYX_ERR(0, 290, __pyx_L1_error)
         }
         break;
       }
@@ -6885,7 +7037,7 @@ static PyObject *__pyx_gb_4dawg_4DAWG_16compile_replaces_2generator6(__pyx_Corou
       if (unlikely(size != 2)) {
         if (size > 2) __Pyx_RaiseTooManyValuesError(2);
         else if (size >= 0) __Pyx_RaiseNeedMoreValuesError(size);
-        __PYX_ERR(0, 284, __pyx_L1_error)
+        __PYX_ERR(0, 290, __pyx_L1_error)
       }
       #if CYTHON_ASSUME_SAFE_MACROS && !CYTHON_AVOID_BORROWED_REFS
       if (likely(PyTuple_CheckExact(sequence))) {
@@ -6898,15 +7050,15 @@ static PyObject *__pyx_gb_4dawg_4DAWG_16compile_replaces_2generator6(__pyx_Corou
       __Pyx_INCREF(__pyx_t_3);
       __Pyx_INCREF(__pyx_t_6);
       #else
-      __pyx_t_3 = PySequence_ITEM(sequence, 0); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 284, __pyx_L1_error)
+      __pyx_t_3 = PySequence_ITEM(sequence, 0); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 290, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_3);
-      __pyx_t_6 = PySequence_ITEM(sequence, 1); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 284, __pyx_L1_error)
+      __pyx_t_6 = PySequence_ITEM(sequence, 1); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 290, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_6);
       #endif
       __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
     } else {
       Py_ssize_t index = -1;
-      __pyx_t_7 = PyObject_GetIter(__pyx_t_1); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 284, __pyx_L1_error)
+      __pyx_t_7 = PyObject_GetIter(__pyx_t_1); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 290, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_7);
       __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
       __pyx_t_8 = Py_TYPE(__pyx_t_7)->tp_iternext;
@@ -6914,7 +7066,7 @@ static PyObject *__pyx_gb_4dawg_4DAWG_16compile_replaces_2generator6(__pyx_Corou
       __Pyx_GOTREF(__pyx_t_3);
       index = 1; __pyx_t_6 = __pyx_t_8(__pyx_t_7); if (unlikely(!__pyx_t_6)) goto __pyx_L6_unpacking_failed;
       __Pyx_GOTREF(__pyx_t_6);
-      if (__Pyx_IternextUnpackEndCheck(__pyx_t_8(__pyx_t_7), 2) < 0) __PYX_ERR(0, 284, __pyx_L1_error)
+      if (__Pyx_IternextUnpackEndCheck(__pyx_t_8(__pyx_t_7), 2) < 0) __PYX_ERR(0, 290, __pyx_L1_error)
       __pyx_t_8 = NULL;
       __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
       goto __pyx_L7_unpacking_done;
@@ -6922,7 +7074,7 @@ static PyObject *__pyx_gb_4dawg_4DAWG_16compile_replaces_2generator6(__pyx_Corou
       __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
       __pyx_t_8 = NULL;
       if (__Pyx_IterFinish() == 0) __Pyx_RaiseNeedMoreValuesError(index);
-      __PYX_ERR(0, 284, __pyx_L1_error)
+      __PYX_ERR(0, 290, __pyx_L1_error)
       __pyx_L7_unpacking_done:;
     }
     __Pyx_XGOTREF(__pyx_cur_scope->__pyx_v_k);
@@ -6934,14 +7086,14 @@ static PyObject *__pyx_gb_4dawg_4DAWG_16compile_replaces_2generator6(__pyx_Corou
     __Pyx_GIVEREF(__pyx_t_6);
     __pyx_t_6 = 0;
 
-    /* "dawg.pyx":281
+    /* "dawg.pyx":287
  *         return dict(
  *             (
  *                 k.encode('utf8'),             # <<<<<<<<<<<<<<
  *                 (v.encode('utf8'), unicode(v))
  *             )
  */
-    __pyx_t_6 = __Pyx_PyObject_GetAttrStr(__pyx_cur_scope->__pyx_v_k, __pyx_n_s_encode); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 281, __pyx_L1_error)
+    __pyx_t_6 = __Pyx_PyObject_GetAttrStr(__pyx_cur_scope->__pyx_v_k, __pyx_n_s_encode); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 287, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_6);
     __pyx_t_3 = NULL;
     if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_6))) {
@@ -6955,18 +7107,18 @@ static PyObject *__pyx_gb_4dawg_4DAWG_16compile_replaces_2generator6(__pyx_Corou
     }
     __pyx_t_1 = (__pyx_t_3) ? __Pyx_PyObject_Call2Args(__pyx_t_6, __pyx_t_3, __pyx_n_u_utf8) : __Pyx_PyObject_CallOneArg(__pyx_t_6, __pyx_n_u_utf8);
     __Pyx_XDECREF(__pyx_t_3); __pyx_t_3 = 0;
-    if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 281, __pyx_L1_error)
+    if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 287, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
 
-    /* "dawg.pyx":282
+    /* "dawg.pyx":288
  *             (
  *                 k.encode('utf8'),
  *                 (v.encode('utf8'), unicode(v))             # <<<<<<<<<<<<<<
  *             )
  *             for k, v in replaces.items()
  */
-    __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_cur_scope->__pyx_v_v, __pyx_n_s_encode); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 282, __pyx_L1_error)
+    __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_cur_scope->__pyx_v_v, __pyx_n_s_encode); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 288, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
     __pyx_t_7 = NULL;
     if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_3))) {
@@ -6980,12 +7132,12 @@ static PyObject *__pyx_gb_4dawg_4DAWG_16compile_replaces_2generator6(__pyx_Corou
     }
     __pyx_t_6 = (__pyx_t_7) ? __Pyx_PyObject_Call2Args(__pyx_t_3, __pyx_t_7, __pyx_n_u_utf8) : __Pyx_PyObject_CallOneArg(__pyx_t_3, __pyx_n_u_utf8);
     __Pyx_XDECREF(__pyx_t_7); __pyx_t_7 = 0;
-    if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 282, __pyx_L1_error)
+    if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 288, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_6);
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-    __pyx_t_3 = __Pyx_PyObject_Unicode(__pyx_cur_scope->__pyx_v_v); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 282, __pyx_L1_error)
+    __pyx_t_3 = __Pyx_PyObject_Unicode(__pyx_cur_scope->__pyx_v_v); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 288, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
-    __pyx_t_7 = PyTuple_New(2); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 282, __pyx_L1_error)
+    __pyx_t_7 = PyTuple_New(2); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 288, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_7);
     __Pyx_GIVEREF(__pyx_t_6);
     PyTuple_SET_ITEM(__pyx_t_7, 0, __pyx_t_6);
@@ -6993,11 +7145,11 @@ static PyObject *__pyx_gb_4dawg_4DAWG_16compile_replaces_2generator6(__pyx_Corou
     PyTuple_SET_ITEM(__pyx_t_7, 1, __pyx_t_3);
     __pyx_t_6 = 0;
     __pyx_t_3 = 0;
-    if (unlikely(PyDict_SetItem(__pyx_r, (PyObject*)__pyx_t_1, (PyObject*)__pyx_t_7))) __PYX_ERR(0, 281, __pyx_L1_error)
+    if (unlikely(PyDict_SetItem(__pyx_r, (PyObject*)__pyx_t_1, (PyObject*)__pyx_t_7))) __PYX_ERR(0, 287, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
     __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
 
-    /* "dawg.pyx":284
+    /* "dawg.pyx":290
  *                 (v.encode('utf8'), unicode(v))
  *             )
  *             for k, v in replaces.items()             # <<<<<<<<<<<<<<
@@ -7008,7 +7160,7 @@ static PyObject *__pyx_gb_4dawg_4DAWG_16compile_replaces_2generator6(__pyx_Corou
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   CYTHON_MAYBE_UNUSED_VAR(__pyx_cur_scope);
 
-  /* "dawg.pyx":281
+  /* "dawg.pyx":287
  *         return dict(
  *             (
  *                 k.encode('utf8'),             # <<<<<<<<<<<<<<
@@ -7037,7 +7189,7 @@ static PyObject *__pyx_gb_4dawg_4DAWG_16compile_replaces_2generator6(__pyx_Corou
   return __pyx_r;
 }
 
-/* "dawg.pyx":273
+/* "dawg.pyx":279
  * 
  *     @classmethod
  *     def compile_replaces(cls, replaces):             # <<<<<<<<<<<<<<
@@ -7045,7 +7197,7 @@ static PyObject *__pyx_gb_4dawg_4DAWG_16compile_replaces_2generator6(__pyx_Corou
  *         for k,v in replaces.items():
  */
 
-static PyObject *__pyx_pf_4dawg_4DAWG_43compile_replaces(CYTHON_UNUSED PyTypeObject *__pyx_v_cls, PyObject *__pyx_v_replaces) {
+static PyObject *__pyx_pf_4dawg_4DAWG_47compile_replaces(CYTHON_UNUSED PyTypeObject *__pyx_v_cls, PyObject *__pyx_v_replaces) {
   struct __pyx_obj_4dawg___pyx_scope_struct_1_compile_replaces *__pyx_cur_scope;
   PyObject *__pyx_v_k = NULL;
   PyObject *__pyx_v_v = NULL;
@@ -7067,7 +7219,7 @@ static PyObject *__pyx_pf_4dawg_4DAWG_43compile_replaces(CYTHON_UNUSED PyTypeObj
   if (unlikely(!__pyx_cur_scope)) {
     __pyx_cur_scope = ((struct __pyx_obj_4dawg___pyx_scope_struct_1_compile_replaces *)Py_None);
     __Pyx_INCREF(Py_None);
-    __PYX_ERR(0, 273, __pyx_L1_error)
+    __PYX_ERR(0, 279, __pyx_L1_error)
   } else {
     __Pyx_GOTREF(__pyx_cur_scope);
   }
@@ -7075,14 +7227,14 @@ static PyObject *__pyx_pf_4dawg_4DAWG_43compile_replaces(CYTHON_UNUSED PyTypeObj
   __Pyx_INCREF(__pyx_cur_scope->__pyx_v_replaces);
   __Pyx_GIVEREF(__pyx_cur_scope->__pyx_v_replaces);
 
-  /* "dawg.pyx":275
+  /* "dawg.pyx":281
  *     def compile_replaces(cls, replaces):
  * 
  *         for k,v in replaces.items():             # <<<<<<<<<<<<<<
  *             if len(k) != 1 or len(v) != 1:
  *                 raise ValueError("Keys and values must be single-char unicode strings.")
  */
-  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_cur_scope->__pyx_v_replaces, __pyx_n_s_items); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 275, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_cur_scope->__pyx_v_replaces, __pyx_n_s_items); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 281, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __pyx_t_3 = NULL;
   if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_2))) {
@@ -7096,16 +7248,16 @@ static PyObject *__pyx_pf_4dawg_4DAWG_43compile_replaces(CYTHON_UNUSED PyTypeObj
   }
   __pyx_t_1 = (__pyx_t_3) ? __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_t_3) : __Pyx_PyObject_CallNoArg(__pyx_t_2);
   __Pyx_XDECREF(__pyx_t_3); __pyx_t_3 = 0;
-  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 275, __pyx_L1_error)
+  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 281, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   if (likely(PyList_CheckExact(__pyx_t_1)) || PyTuple_CheckExact(__pyx_t_1)) {
     __pyx_t_2 = __pyx_t_1; __Pyx_INCREF(__pyx_t_2); __pyx_t_4 = 0;
     __pyx_t_5 = NULL;
   } else {
-    __pyx_t_4 = -1; __pyx_t_2 = PyObject_GetIter(__pyx_t_1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 275, __pyx_L1_error)
+    __pyx_t_4 = -1; __pyx_t_2 = PyObject_GetIter(__pyx_t_1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 281, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
-    __pyx_t_5 = Py_TYPE(__pyx_t_2)->tp_iternext; if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 275, __pyx_L1_error)
+    __pyx_t_5 = Py_TYPE(__pyx_t_2)->tp_iternext; if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 281, __pyx_L1_error)
   }
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   for (;;) {
@@ -7113,17 +7265,17 @@ static PyObject *__pyx_pf_4dawg_4DAWG_43compile_replaces(CYTHON_UNUSED PyTypeObj
       if (likely(PyList_CheckExact(__pyx_t_2))) {
         if (__pyx_t_4 >= PyList_GET_SIZE(__pyx_t_2)) break;
         #if CYTHON_ASSUME_SAFE_MACROS && !CYTHON_AVOID_BORROWED_REFS
-        __pyx_t_1 = PyList_GET_ITEM(__pyx_t_2, __pyx_t_4); __Pyx_INCREF(__pyx_t_1); __pyx_t_4++; if (unlikely(0 < 0)) __PYX_ERR(0, 275, __pyx_L1_error)
+        __pyx_t_1 = PyList_GET_ITEM(__pyx_t_2, __pyx_t_4); __Pyx_INCREF(__pyx_t_1); __pyx_t_4++; if (unlikely(0 < 0)) __PYX_ERR(0, 281, __pyx_L1_error)
         #else
-        __pyx_t_1 = PySequence_ITEM(__pyx_t_2, __pyx_t_4); __pyx_t_4++; if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 275, __pyx_L1_error)
+        __pyx_t_1 = PySequence_ITEM(__pyx_t_2, __pyx_t_4); __pyx_t_4++; if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 281, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_1);
         #endif
       } else {
         if (__pyx_t_4 >= PyTuple_GET_SIZE(__pyx_t_2)) break;
         #if CYTHON_ASSUME_SAFE_MACROS && !CYTHON_AVOID_BORROWED_REFS
-        __pyx_t_1 = PyTuple_GET_ITEM(__pyx_t_2, __pyx_t_4); __Pyx_INCREF(__pyx_t_1); __pyx_t_4++; if (unlikely(0 < 0)) __PYX_ERR(0, 275, __pyx_L1_error)
+        __pyx_t_1 = PyTuple_GET_ITEM(__pyx_t_2, __pyx_t_4); __Pyx_INCREF(__pyx_t_1); __pyx_t_4++; if (unlikely(0 < 0)) __PYX_ERR(0, 281, __pyx_L1_error)
         #else
-        __pyx_t_1 = PySequence_ITEM(__pyx_t_2, __pyx_t_4); __pyx_t_4++; if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 275, __pyx_L1_error)
+        __pyx_t_1 = PySequence_ITEM(__pyx_t_2, __pyx_t_4); __pyx_t_4++; if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 281, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_1);
         #endif
       }
@@ -7133,7 +7285,7 @@ static PyObject *__pyx_pf_4dawg_4DAWG_43compile_replaces(CYTHON_UNUSED PyTypeObj
         PyObject* exc_type = PyErr_Occurred();
         if (exc_type) {
           if (likely(__Pyx_PyErr_GivenExceptionMatches(exc_type, PyExc_StopIteration))) PyErr_Clear();
-          else __PYX_ERR(0, 275, __pyx_L1_error)
+          else __PYX_ERR(0, 281, __pyx_L1_error)
         }
         break;
       }
@@ -7145,7 +7297,7 @@ static PyObject *__pyx_pf_4dawg_4DAWG_43compile_replaces(CYTHON_UNUSED PyTypeObj
       if (unlikely(size != 2)) {
         if (size > 2) __Pyx_RaiseTooManyValuesError(2);
         else if (size >= 0) __Pyx_RaiseNeedMoreValuesError(size);
-        __PYX_ERR(0, 275, __pyx_L1_error)
+        __PYX_ERR(0, 281, __pyx_L1_error)
       }
       #if CYTHON_ASSUME_SAFE_MACROS && !CYTHON_AVOID_BORROWED_REFS
       if (likely(PyTuple_CheckExact(sequence))) {
@@ -7158,15 +7310,15 @@ static PyObject *__pyx_pf_4dawg_4DAWG_43compile_replaces(CYTHON_UNUSED PyTypeObj
       __Pyx_INCREF(__pyx_t_3);
       __Pyx_INCREF(__pyx_t_6);
       #else
-      __pyx_t_3 = PySequence_ITEM(sequence, 0); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 275, __pyx_L1_error)
+      __pyx_t_3 = PySequence_ITEM(sequence, 0); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 281, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_3);
-      __pyx_t_6 = PySequence_ITEM(sequence, 1); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 275, __pyx_L1_error)
+      __pyx_t_6 = PySequence_ITEM(sequence, 1); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 281, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_6);
       #endif
       __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
     } else {
       Py_ssize_t index = -1;
-      __pyx_t_7 = PyObject_GetIter(__pyx_t_1); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 275, __pyx_L1_error)
+      __pyx_t_7 = PyObject_GetIter(__pyx_t_1); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 281, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_7);
       __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
       __pyx_t_8 = Py_TYPE(__pyx_t_7)->tp_iternext;
@@ -7174,7 +7326,7 @@ static PyObject *__pyx_pf_4dawg_4DAWG_43compile_replaces(CYTHON_UNUSED PyTypeObj
       __Pyx_GOTREF(__pyx_t_3);
       index = 1; __pyx_t_6 = __pyx_t_8(__pyx_t_7); if (unlikely(!__pyx_t_6)) goto __pyx_L5_unpacking_failed;
       __Pyx_GOTREF(__pyx_t_6);
-      if (__Pyx_IternextUnpackEndCheck(__pyx_t_8(__pyx_t_7), 2) < 0) __PYX_ERR(0, 275, __pyx_L1_error)
+      if (__Pyx_IternextUnpackEndCheck(__pyx_t_8(__pyx_t_7), 2) < 0) __PYX_ERR(0, 281, __pyx_L1_error)
       __pyx_t_8 = NULL;
       __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
       goto __pyx_L6_unpacking_done;
@@ -7182,7 +7334,7 @@ static PyObject *__pyx_pf_4dawg_4DAWG_43compile_replaces(CYTHON_UNUSED PyTypeObj
       __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
       __pyx_t_8 = NULL;
       if (__Pyx_IterFinish() == 0) __Pyx_RaiseNeedMoreValuesError(index);
-      __PYX_ERR(0, 275, __pyx_L1_error)
+      __PYX_ERR(0, 281, __pyx_L1_error)
       __pyx_L6_unpacking_done:;
     }
     __Pyx_XDECREF_SET(__pyx_v_k, __pyx_t_3);
@@ -7190,40 +7342,40 @@ static PyObject *__pyx_pf_4dawg_4DAWG_43compile_replaces(CYTHON_UNUSED PyTypeObj
     __Pyx_XDECREF_SET(__pyx_v_v, __pyx_t_6);
     __pyx_t_6 = 0;
 
-    /* "dawg.pyx":276
+    /* "dawg.pyx":282
  * 
  *         for k,v in replaces.items():
  *             if len(k) != 1 or len(v) != 1:             # <<<<<<<<<<<<<<
  *                 raise ValueError("Keys and values must be single-char unicode strings.")
  * 
  */
-    __pyx_t_10 = PyObject_Length(__pyx_v_k); if (unlikely(__pyx_t_10 == ((Py_ssize_t)-1))) __PYX_ERR(0, 276, __pyx_L1_error)
+    __pyx_t_10 = PyObject_Length(__pyx_v_k); if (unlikely(__pyx_t_10 == ((Py_ssize_t)-1))) __PYX_ERR(0, 282, __pyx_L1_error)
     __pyx_t_11 = ((__pyx_t_10 != 1) != 0);
     if (!__pyx_t_11) {
     } else {
       __pyx_t_9 = __pyx_t_11;
       goto __pyx_L8_bool_binop_done;
     }
-    __pyx_t_10 = PyObject_Length(__pyx_v_v); if (unlikely(__pyx_t_10 == ((Py_ssize_t)-1))) __PYX_ERR(0, 276, __pyx_L1_error)
+    __pyx_t_10 = PyObject_Length(__pyx_v_v); if (unlikely(__pyx_t_10 == ((Py_ssize_t)-1))) __PYX_ERR(0, 282, __pyx_L1_error)
     __pyx_t_11 = ((__pyx_t_10 != 1) != 0);
     __pyx_t_9 = __pyx_t_11;
     __pyx_L8_bool_binop_done:;
     if (unlikely(__pyx_t_9)) {
 
-      /* "dawg.pyx":277
+      /* "dawg.pyx":283
  *         for k,v in replaces.items():
  *             if len(k) != 1 or len(v) != 1:
  *                 raise ValueError("Keys and values must be single-char unicode strings.")             # <<<<<<<<<<<<<<
  * 
  *         return dict(
  */
-      __pyx_t_1 = __Pyx_PyObject_Call(__pyx_builtin_ValueError, __pyx_tuple__7, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 277, __pyx_L1_error)
+      __pyx_t_1 = __Pyx_PyObject_Call(__pyx_builtin_ValueError, __pyx_tuple__7, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 283, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_1);
       __Pyx_Raise(__pyx_t_1, 0, 0, 0);
       __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-      __PYX_ERR(0, 277, __pyx_L1_error)
+      __PYX_ERR(0, 283, __pyx_L1_error)
 
-      /* "dawg.pyx":276
+      /* "dawg.pyx":282
  * 
  *         for k,v in replaces.items():
  *             if len(k) != 1 or len(v) != 1:             # <<<<<<<<<<<<<<
@@ -7232,7 +7384,7 @@ static PyObject *__pyx_pf_4dawg_4DAWG_43compile_replaces(CYTHON_UNUSED PyTypeObj
  */
     }
 
-    /* "dawg.pyx":275
+    /* "dawg.pyx":281
  *     def compile_replaces(cls, replaces):
  * 
  *         for k,v in replaces.items():             # <<<<<<<<<<<<<<
@@ -7242,7 +7394,7 @@ static PyObject *__pyx_pf_4dawg_4DAWG_43compile_replaces(CYTHON_UNUSED PyTypeObj
   }
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "dawg.pyx":279
+  /* "dawg.pyx":285
  *                 raise ValueError("Keys and values must be single-char unicode strings.")
  * 
  *         return dict(             # <<<<<<<<<<<<<<
@@ -7251,31 +7403,31 @@ static PyObject *__pyx_pf_4dawg_4DAWG_43compile_replaces(CYTHON_UNUSED PyTypeObj
  */
   __Pyx_XDECREF(__pyx_r);
 
-  /* "dawg.pyx":281
+  /* "dawg.pyx":287
  *         return dict(
  *             (
  *                 k.encode('utf8'),             # <<<<<<<<<<<<<<
  *                 (v.encode('utf8'), unicode(v))
  *             )
  */
-  __pyx_t_2 = __pyx_pf_4dawg_4DAWG_16compile_replaces_genexpr(((PyObject*)__pyx_cur_scope)); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 281, __pyx_L1_error)
+  __pyx_t_2 = __pyx_pf_4dawg_4DAWG_16compile_replaces_genexpr(((PyObject*)__pyx_cur_scope)); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 287, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
 
-  /* "dawg.pyx":279
+  /* "dawg.pyx":285
  *                 raise ValueError("Keys and values must be single-char unicode strings.")
  * 
  *         return dict(             # <<<<<<<<<<<<<<
  *             (
  *                 k.encode('utf8'),
  */
-  __pyx_t_1 = __Pyx_Generator_Next(__pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 279, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_Generator_Next(__pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 285, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "dawg.pyx":273
+  /* "dawg.pyx":279
  * 
  *     @classmethod
  *     def compile_replaces(cls, replaces):             # <<<<<<<<<<<<<<
@@ -7301,7 +7453,7 @@ static PyObject *__pyx_pf_4dawg_4DAWG_43compile_replaces(CYTHON_UNUSED PyTypeObj
   return __pyx_r;
 }
 
-/* "dawg.pyx":288
+/* "dawg.pyx":294
  * 
  * 
  * cdef void init_completer(Completer& completer, Dictionary& dic, Guide& guide):             # <<<<<<<<<<<<<<
@@ -7313,7 +7465,7 @@ static void __pyx_f_4dawg_init_completer(dawgdic::Completer &__pyx_v_completer, 
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("init_completer", 0);
 
-  /* "dawg.pyx":289
+  /* "dawg.pyx":295
  * 
  * cdef void init_completer(Completer& completer, Dictionary& dic, Guide& guide):
  *     completer.set_dic(dic)             # <<<<<<<<<<<<<<
@@ -7322,7 +7474,7 @@ static void __pyx_f_4dawg_init_completer(dawgdic::Completer &__pyx_v_completer, 
  */
   __pyx_v_completer.set_dic(__pyx_v_dic);
 
-  /* "dawg.pyx":290
+  /* "dawg.pyx":296
  * cdef void init_completer(Completer& completer, Dictionary& dic, Guide& guide):
  *     completer.set_dic(dic)
  *     completer.set_guide(guide)             # <<<<<<<<<<<<<<
@@ -7331,7 +7483,7 @@ static void __pyx_f_4dawg_init_completer(dawgdic::Completer &__pyx_v_completer, 
  */
   __pyx_v_completer.set_guide(__pyx_v_guide);
 
-  /* "dawg.pyx":288
+  /* "dawg.pyx":294
  * 
  * 
  * cdef void init_completer(Completer& completer, Dictionary& dic, Guide& guide):             # <<<<<<<<<<<<<<
@@ -7343,7 +7495,7 @@ static void __pyx_f_4dawg_init_completer(dawgdic::Completer &__pyx_v_completer, 
   __Pyx_RefNannyFinishContext();
 }
 
-/* "dawg.pyx":299
+/* "dawg.pyx":305
  *     cdef Guide guide
  * 
  *     def __init__(self, arg=None, input_is_sorted=False):             # <<<<<<<<<<<<<<
@@ -7390,7 +7542,7 @@ static int __pyx_pw_4dawg_14CompletionDAWG_1__init__(PyObject *__pyx_v_self, PyO
         }
       }
       if (unlikely(kw_args > 0)) {
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "__init__") < 0)) __PYX_ERR(0, 299, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "__init__") < 0)) __PYX_ERR(0, 305, __pyx_L3_error)
       }
     } else {
       switch (PyTuple_GET_SIZE(__pyx_args)) {
@@ -7407,7 +7559,7 @@ static int __pyx_pw_4dawg_14CompletionDAWG_1__init__(PyObject *__pyx_v_self, PyO
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("__init__", 0, 0, 2, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 299, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("__init__", 0, 0, 2, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 305, __pyx_L3_error)
   __pyx_L3_error:;
   __Pyx_AddTraceback("dawg.CompletionDAWG.__init__", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
@@ -7431,14 +7583,14 @@ static int __pyx_pf_4dawg_14CompletionDAWG___init__(struct __pyx_obj_4dawg_Compl
   int __pyx_t_6;
   __Pyx_RefNannySetupContext("__init__", 0);
 
-  /* "dawg.pyx":300
+  /* "dawg.pyx":306
  * 
  *     def __init__(self, arg=None, input_is_sorted=False):
  *         super(CompletionDAWG, self).__init__(arg, input_is_sorted)             # <<<<<<<<<<<<<<
  *         if not _guide_builder.Build(self.dawg, self.dct, &self.guide):
  *             raise Error("Error building completion information")
  */
-  __pyx_t_2 = PyTuple_New(2); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 300, __pyx_L1_error)
+  __pyx_t_2 = PyTuple_New(2); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 306, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_INCREF(((PyObject *)__pyx_ptype_4dawg_CompletionDAWG));
   __Pyx_GIVEREF(((PyObject *)__pyx_ptype_4dawg_CompletionDAWG));
@@ -7446,10 +7598,10 @@ static int __pyx_pf_4dawg_14CompletionDAWG___init__(struct __pyx_obj_4dawg_Compl
   __Pyx_INCREF(((PyObject *)__pyx_v_self));
   __Pyx_GIVEREF(((PyObject *)__pyx_v_self));
   PyTuple_SET_ITEM(__pyx_t_2, 1, ((PyObject *)__pyx_v_self));
-  __pyx_t_3 = __Pyx_PyObject_Call(__pyx_builtin_super, __pyx_t_2, NULL); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 300, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyObject_Call(__pyx_builtin_super, __pyx_t_2, NULL); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 306, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_init); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 300, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_init); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 306, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __pyx_t_3 = NULL;
@@ -7467,7 +7619,7 @@ static int __pyx_pf_4dawg_14CompletionDAWG___init__(struct __pyx_obj_4dawg_Compl
   #if CYTHON_FAST_PYCALL
   if (PyFunction_Check(__pyx_t_2)) {
     PyObject *__pyx_temp[3] = {__pyx_t_3, __pyx_v_arg, __pyx_v_input_is_sorted};
-    __pyx_t_1 = __Pyx_PyFunction_FastCall(__pyx_t_2, __pyx_temp+1-__pyx_t_4, 2+__pyx_t_4); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 300, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyFunction_FastCall(__pyx_t_2, __pyx_temp+1-__pyx_t_4, 2+__pyx_t_4); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 306, __pyx_L1_error)
     __Pyx_XDECREF(__pyx_t_3); __pyx_t_3 = 0;
     __Pyx_GOTREF(__pyx_t_1);
   } else
@@ -7475,13 +7627,13 @@ static int __pyx_pf_4dawg_14CompletionDAWG___init__(struct __pyx_obj_4dawg_Compl
   #if CYTHON_FAST_PYCCALL
   if (__Pyx_PyFastCFunction_Check(__pyx_t_2)) {
     PyObject *__pyx_temp[3] = {__pyx_t_3, __pyx_v_arg, __pyx_v_input_is_sorted};
-    __pyx_t_1 = __Pyx_PyCFunction_FastCall(__pyx_t_2, __pyx_temp+1-__pyx_t_4, 2+__pyx_t_4); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 300, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyCFunction_FastCall(__pyx_t_2, __pyx_temp+1-__pyx_t_4, 2+__pyx_t_4); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 306, __pyx_L1_error)
     __Pyx_XDECREF(__pyx_t_3); __pyx_t_3 = 0;
     __Pyx_GOTREF(__pyx_t_1);
   } else
   #endif
   {
-    __pyx_t_5 = PyTuple_New(2+__pyx_t_4); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 300, __pyx_L1_error)
+    __pyx_t_5 = PyTuple_New(2+__pyx_t_4); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 306, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_5);
     if (__pyx_t_3) {
       __Pyx_GIVEREF(__pyx_t_3); PyTuple_SET_ITEM(__pyx_t_5, 0, __pyx_t_3); __pyx_t_3 = NULL;
@@ -7492,14 +7644,14 @@ static int __pyx_pf_4dawg_14CompletionDAWG___init__(struct __pyx_obj_4dawg_Compl
     __Pyx_INCREF(__pyx_v_input_is_sorted);
     __Pyx_GIVEREF(__pyx_v_input_is_sorted);
     PyTuple_SET_ITEM(__pyx_t_5, 1+__pyx_t_4, __pyx_v_input_is_sorted);
-    __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_t_5, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 300, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_t_5, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 306, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
   }
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "dawg.pyx":301
+  /* "dawg.pyx":307
  *     def __init__(self, arg=None, input_is_sorted=False):
  *         super(CompletionDAWG, self).__init__(arg, input_is_sorted)
  *         if not _guide_builder.Build(self.dawg, self.dct, &self.guide):             # <<<<<<<<<<<<<<
@@ -7509,14 +7661,14 @@ static int __pyx_pf_4dawg_14CompletionDAWG___init__(struct __pyx_obj_4dawg_Compl
   __pyx_t_6 = ((!(dawgdic::GuideBuilder::Build(__pyx_v_self->__pyx_base.dawg, __pyx_v_self->__pyx_base.dct, (&__pyx_v_self->guide)) != 0)) != 0);
   if (unlikely(__pyx_t_6)) {
 
-    /* "dawg.pyx":302
+    /* "dawg.pyx":308
  *         super(CompletionDAWG, self).__init__(arg, input_is_sorted)
  *         if not _guide_builder.Build(self.dawg, self.dct, &self.guide):
  *             raise Error("Error building completion information")             # <<<<<<<<<<<<<<
  * 
  *     def __dealloc__(self):
  */
-    __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_Error); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 302, __pyx_L1_error)
+    __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_Error); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 308, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
     __pyx_t_5 = NULL;
     if (CYTHON_UNPACK_METHODS && unlikely(PyMethod_Check(__pyx_t_2))) {
@@ -7530,14 +7682,14 @@ static int __pyx_pf_4dawg_14CompletionDAWG___init__(struct __pyx_obj_4dawg_Compl
     }
     __pyx_t_1 = (__pyx_t_5) ? __Pyx_PyObject_Call2Args(__pyx_t_2, __pyx_t_5, __pyx_kp_u_Error_building_completion_inform) : __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_kp_u_Error_building_completion_inform);
     __Pyx_XDECREF(__pyx_t_5); __pyx_t_5 = 0;
-    if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 302, __pyx_L1_error)
+    if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 308, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
     __Pyx_Raise(__pyx_t_1, 0, 0, 0);
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-    __PYX_ERR(0, 302, __pyx_L1_error)
+    __PYX_ERR(0, 308, __pyx_L1_error)
 
-    /* "dawg.pyx":301
+    /* "dawg.pyx":307
  *     def __init__(self, arg=None, input_is_sorted=False):
  *         super(CompletionDAWG, self).__init__(arg, input_is_sorted)
  *         if not _guide_builder.Build(self.dawg, self.dct, &self.guide):             # <<<<<<<<<<<<<<
@@ -7546,7 +7698,7 @@ static int __pyx_pf_4dawg_14CompletionDAWG___init__(struct __pyx_obj_4dawg_Compl
  */
   }
 
-  /* "dawg.pyx":299
+  /* "dawg.pyx":305
  *     cdef Guide guide
  * 
  *     def __init__(self, arg=None, input_is_sorted=False):             # <<<<<<<<<<<<<<
@@ -7569,7 +7721,7 @@ static int __pyx_pf_4dawg_14CompletionDAWG___init__(struct __pyx_obj_4dawg_Compl
   return __pyx_r;
 }
 
-/* "dawg.pyx":304
+/* "dawg.pyx":310
  *             raise Error("Error building completion information")
  * 
  *     def __dealloc__(self):             # <<<<<<<<<<<<<<
@@ -7592,7 +7744,7 @@ static void __pyx_pf_4dawg_14CompletionDAWG_2__dealloc__(struct __pyx_obj_4dawg_
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("__dealloc__", 0);
 
-  /* "dawg.pyx":305
+  /* "dawg.pyx":311
  * 
  *     def __dealloc__(self):
  *         self.guide.Clear()             # <<<<<<<<<<<<<<
@@ -7601,7 +7753,7 @@ static void __pyx_pf_4dawg_14CompletionDAWG_2__dealloc__(struct __pyx_obj_4dawg_
  */
   __pyx_v_self->guide.Clear();
 
-  /* "dawg.pyx":304
+  /* "dawg.pyx":310
  *             raise Error("Error building completion information")
  * 
  *     def __dealloc__(self):             # <<<<<<<<<<<<<<
@@ -7613,7 +7765,7 @@ static void __pyx_pf_4dawg_14CompletionDAWG_2__dealloc__(struct __pyx_obj_4dawg_
   __Pyx_RefNannyFinishContext();
 }
 
-/* "dawg.pyx":307
+/* "dawg.pyx":313
  *         self.guide.Clear()
  * 
  *     cpdef list keys(self, unicode prefix=""):             # <<<<<<<<<<<<<<
@@ -7654,7 +7806,7 @@ static PyObject *__pyx_f_4dawg_14CompletionDAWG_keys(struct __pyx_obj_4dawg_Comp
     if (unlikely(!__Pyx_object_dict_version_matches(((PyObject *)__pyx_v_self), __pyx_tp_dict_version, __pyx_obj_dict_version))) {
       PY_UINT64_T __pyx_type_dict_guard = __Pyx_get_tp_dict_version(((PyObject *)__pyx_v_self));
       #endif
-      __pyx_t_1 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_keys); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 307, __pyx_L1_error)
+      __pyx_t_1 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_keys); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 313, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_1);
       if (!PyCFunction_Check(__pyx_t_1) || (PyCFunction_GET_FUNCTION(__pyx_t_1) != (PyCFunction)(void*)__pyx_pw_4dawg_14CompletionDAWG_5keys)) {
         __Pyx_XDECREF(__pyx_r);
@@ -7671,10 +7823,10 @@ static PyObject *__pyx_f_4dawg_14CompletionDAWG_keys(struct __pyx_obj_4dawg_Comp
         }
         __pyx_t_2 = (__pyx_t_4) ? __Pyx_PyObject_Call2Args(__pyx_t_3, __pyx_t_4, __pyx_v_prefix) : __Pyx_PyObject_CallOneArg(__pyx_t_3, __pyx_v_prefix);
         __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
-        if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 307, __pyx_L1_error)
+        if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 313, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_2);
         __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-        if (!(likely(PyList_CheckExact(__pyx_t_2))||((__pyx_t_2) == Py_None)||(PyErr_Format(PyExc_TypeError, "Expected %.16s, got %.200s", "list", Py_TYPE(__pyx_t_2)->tp_name), 0))) __PYX_ERR(0, 307, __pyx_L1_error)
+        if (!(likely(PyList_CheckExact(__pyx_t_2))||((__pyx_t_2) == Py_None)||(PyErr_Format(PyExc_TypeError, "Expected %.16s, got %.200s", "list", Py_TYPE(__pyx_t_2)->tp_name), 0))) __PYX_ERR(0, 313, __pyx_L1_error)
         __pyx_r = ((PyObject*)__pyx_t_2);
         __pyx_t_2 = 0;
         __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
@@ -7693,7 +7845,7 @@ static PyObject *__pyx_f_4dawg_14CompletionDAWG_keys(struct __pyx_obj_4dawg_Comp
     #endif
   }
 
-  /* "dawg.pyx":308
+  /* "dawg.pyx":314
  * 
  *     cpdef list keys(self, unicode prefix=""):
  *         cdef bytes b_prefix = prefix.encode('utf8')             # <<<<<<<<<<<<<<
@@ -7702,14 +7854,14 @@ static PyObject *__pyx_f_4dawg_14CompletionDAWG_keys(struct __pyx_obj_4dawg_Comp
  */
   if (unlikely(__pyx_v_prefix == Py_None)) {
     PyErr_Format(PyExc_AttributeError, "'NoneType' object has no attribute '%.30s'", "encode");
-    __PYX_ERR(0, 308, __pyx_L1_error)
+    __PYX_ERR(0, 314, __pyx_L1_error)
   }
-  __pyx_t_1 = PyUnicode_AsUTF8String(__pyx_v_prefix); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 308, __pyx_L1_error)
+  __pyx_t_1 = PyUnicode_AsUTF8String(__pyx_v_prefix); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 314, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_v_b_prefix = ((PyObject*)__pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "dawg.pyx":309
+  /* "dawg.pyx":315
  *     cpdef list keys(self, unicode prefix=""):
  *         cdef bytes b_prefix = prefix.encode('utf8')
  *         cdef BaseType index = self.dct.root()             # <<<<<<<<<<<<<<
@@ -7718,19 +7870,19 @@ static PyObject *__pyx_f_4dawg_14CompletionDAWG_keys(struct __pyx_obj_4dawg_Comp
  */
   __pyx_v_index = __pyx_v_self->__pyx_base.dct.root();
 
-  /* "dawg.pyx":310
+  /* "dawg.pyx":316
  *         cdef bytes b_prefix = prefix.encode('utf8')
  *         cdef BaseType index = self.dct.root()
  *         cdef list res = []             # <<<<<<<<<<<<<<
  * 
  *         if not self.dct.Follow(b_prefix, &index):
  */
-  __pyx_t_1 = PyList_New(0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 310, __pyx_L1_error)
+  __pyx_t_1 = PyList_New(0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 316, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_v_res = ((PyObject*)__pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "dawg.pyx":312
+  /* "dawg.pyx":318
  *         cdef list res = []
  * 
  *         if not self.dct.Follow(b_prefix, &index):             # <<<<<<<<<<<<<<
@@ -7739,13 +7891,13 @@ static PyObject *__pyx_f_4dawg_14CompletionDAWG_keys(struct __pyx_obj_4dawg_Comp
  */
   if (unlikely(__pyx_v_b_prefix == Py_None)) {
     PyErr_SetString(PyExc_TypeError, "expected bytes, NoneType found");
-    __PYX_ERR(0, 312, __pyx_L1_error)
+    __PYX_ERR(0, 318, __pyx_L1_error)
   }
-  __pyx_t_5 = __Pyx_PyBytes_AsWritableString(__pyx_v_b_prefix); if (unlikely((!__pyx_t_5) && PyErr_Occurred())) __PYX_ERR(0, 312, __pyx_L1_error)
+  __pyx_t_5 = __Pyx_PyBytes_AsWritableString(__pyx_v_b_prefix); if (unlikely((!__pyx_t_5) && PyErr_Occurred())) __PYX_ERR(0, 318, __pyx_L1_error)
   __pyx_t_6 = ((!(__pyx_v_self->__pyx_base.dct.Follow(__pyx_t_5, (&__pyx_v_index)) != 0)) != 0);
   if (__pyx_t_6) {
 
-    /* "dawg.pyx":313
+    /* "dawg.pyx":319
  * 
  *         if not self.dct.Follow(b_prefix, &index):
  *             return res             # <<<<<<<<<<<<<<
@@ -7757,7 +7909,7 @@ static PyObject *__pyx_f_4dawg_14CompletionDAWG_keys(struct __pyx_obj_4dawg_Comp
     __pyx_r = __pyx_v_res;
     goto __pyx_L0;
 
-    /* "dawg.pyx":312
+    /* "dawg.pyx":318
  *         cdef list res = []
  * 
  *         if not self.dct.Follow(b_prefix, &index):             # <<<<<<<<<<<<<<
@@ -7766,7 +7918,7 @@ static PyObject *__pyx_f_4dawg_14CompletionDAWG_keys(struct __pyx_obj_4dawg_Comp
  */
   }
 
-  /* "dawg.pyx":316
+  /* "dawg.pyx":322
  * 
  *         cdef Completer completer
  *         init_completer(completer, self.dct, self.guide)             # <<<<<<<<<<<<<<
@@ -7775,7 +7927,7 @@ static PyObject *__pyx_f_4dawg_14CompletionDAWG_keys(struct __pyx_obj_4dawg_Comp
  */
   __pyx_f_4dawg_init_completer(__pyx_v_completer, __pyx_v_self->__pyx_base.dct, __pyx_v_self->guide);
 
-  /* "dawg.pyx":317
+  /* "dawg.pyx":323
  *         cdef Completer completer
  *         init_completer(completer, self.dct, self.guide)
  *         completer.Start(index, b_prefix)             # <<<<<<<<<<<<<<
@@ -7784,12 +7936,12 @@ static PyObject *__pyx_f_4dawg_14CompletionDAWG_keys(struct __pyx_obj_4dawg_Comp
  */
   if (unlikely(__pyx_v_b_prefix == Py_None)) {
     PyErr_SetString(PyExc_TypeError, "expected bytes, NoneType found");
-    __PYX_ERR(0, 317, __pyx_L1_error)
+    __PYX_ERR(0, 323, __pyx_L1_error)
   }
-  __pyx_t_7 = __Pyx_PyBytes_AsWritableString(__pyx_v_b_prefix); if (unlikely((!__pyx_t_7) && PyErr_Occurred())) __PYX_ERR(0, 317, __pyx_L1_error)
+  __pyx_t_7 = __Pyx_PyBytes_AsWritableString(__pyx_v_b_prefix); if (unlikely((!__pyx_t_7) && PyErr_Occurred())) __PYX_ERR(0, 323, __pyx_L1_error)
   __pyx_v_completer.Start(__pyx_v_index, __pyx_t_7);
 
-  /* "dawg.pyx":319
+  /* "dawg.pyx":325
  *         completer.Start(index, b_prefix)
  * 
  *         while completer.Next():             # <<<<<<<<<<<<<<
@@ -7800,7 +7952,7 @@ static PyObject *__pyx_f_4dawg_14CompletionDAWG_keys(struct __pyx_obj_4dawg_Comp
     __pyx_t_6 = (__pyx_v_completer.Next() != 0);
     if (!__pyx_t_6) break;
 
-    /* "dawg.pyx":320
+    /* "dawg.pyx":326
  * 
  *         while completer.Next():
  *             key = (<char*>completer.key()).decode('utf8')             # <<<<<<<<<<<<<<
@@ -7808,23 +7960,23 @@ static PyObject *__pyx_f_4dawg_14CompletionDAWG_keys(struct __pyx_obj_4dawg_Comp
  * 
  */
     __pyx_t_7 = ((char *)__pyx_v_completer.key());
-    __pyx_t_1 = __Pyx_decode_c_string(__pyx_t_7, 0, strlen(__pyx_t_7), NULL, NULL, PyUnicode_DecodeUTF8); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 320, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_decode_c_string(__pyx_t_7, 0, strlen(__pyx_t_7), NULL, NULL, PyUnicode_DecodeUTF8); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 326, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_INCREF(__pyx_t_1);
     __Pyx_XDECREF_SET(__pyx_v_key, __pyx_t_1);
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-    /* "dawg.pyx":321
+    /* "dawg.pyx":327
  *         while completer.Next():
  *             key = (<char*>completer.key()).decode('utf8')
  *             res.append(key)             # <<<<<<<<<<<<<<
  * 
  *         return res
  */
-    __pyx_t_8 = __Pyx_PyList_Append(__pyx_v_res, __pyx_v_key); if (unlikely(__pyx_t_8 == ((int)-1))) __PYX_ERR(0, 321, __pyx_L1_error)
+    __pyx_t_8 = __Pyx_PyList_Append(__pyx_v_res, __pyx_v_key); if (unlikely(__pyx_t_8 == ((int)-1))) __PYX_ERR(0, 327, __pyx_L1_error)
   }
 
-  /* "dawg.pyx":323
+  /* "dawg.pyx":329
  *             res.append(key)
  * 
  *         return res             # <<<<<<<<<<<<<<
@@ -7836,7 +7988,7 @@ static PyObject *__pyx_f_4dawg_14CompletionDAWG_keys(struct __pyx_obj_4dawg_Comp
   __pyx_r = __pyx_v_res;
   goto __pyx_L0;
 
-  /* "dawg.pyx":307
+  /* "dawg.pyx":313
  *         self.guide.Clear()
  * 
  *     cpdef list keys(self, unicode prefix=""):             # <<<<<<<<<<<<<<
@@ -7891,7 +8043,7 @@ static PyObject *__pyx_pw_4dawg_14CompletionDAWG_5keys(PyObject *__pyx_v_self, P
         }
       }
       if (unlikely(kw_args > 0)) {
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "keys") < 0)) __PYX_ERR(0, 307, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "keys") < 0)) __PYX_ERR(0, 313, __pyx_L3_error)
       }
     } else {
       switch (PyTuple_GET_SIZE(__pyx_args)) {
@@ -7905,13 +8057,13 @@ static PyObject *__pyx_pw_4dawg_14CompletionDAWG_5keys(PyObject *__pyx_v_self, P
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("keys", 0, 0, 1, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 307, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("keys", 0, 0, 1, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 313, __pyx_L3_error)
   __pyx_L3_error:;
   __Pyx_AddTraceback("dawg.CompletionDAWG.keys", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_prefix), (&PyUnicode_Type), 1, "prefix", 1))) __PYX_ERR(0, 307, __pyx_L1_error)
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_prefix), (&PyUnicode_Type), 1, "prefix", 1))) __PYX_ERR(0, 313, __pyx_L1_error)
   __pyx_r = __pyx_pf_4dawg_14CompletionDAWG_4keys(((struct __pyx_obj_4dawg_CompletionDAWG *)__pyx_v_self), __pyx_v_prefix);
 
   /* function exit code */
@@ -7932,7 +8084,7 @@ static PyObject *__pyx_pf_4dawg_14CompletionDAWG_4keys(struct __pyx_obj_4dawg_Co
   __Pyx_XDECREF(__pyx_r);
   __pyx_t_2.__pyx_n = 1;
   __pyx_t_2.prefix = __pyx_v_prefix;
-  __pyx_t_1 = __pyx_vtabptr_4dawg_CompletionDAWG->keys(__pyx_v_self, 1, &__pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 307, __pyx_L1_error)
+  __pyx_t_1 = __pyx_vtabptr_4dawg_CompletionDAWG->keys(__pyx_v_self, 1, &__pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 313, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
@@ -7950,7 +8102,7 @@ static PyObject *__pyx_pf_4dawg_14CompletionDAWG_4keys(struct __pyx_obj_4dawg_Co
 }
 static PyObject *__pyx_gb_4dawg_14CompletionDAWG_8generator1(__pyx_CoroutineObject *__pyx_generator, CYTHON_UNUSED PyThreadState *__pyx_tstate, PyObject *__pyx_sent_value); /* proto */
 
-/* "dawg.pyx":325
+/* "dawg.pyx":331
  *         return res
  * 
  *     def iterkeys(self, unicode prefix=""):             # <<<<<<<<<<<<<<
@@ -7988,7 +8140,7 @@ static PyObject *__pyx_pw_4dawg_14CompletionDAWG_7iterkeys(PyObject *__pyx_v_sel
         }
       }
       if (unlikely(kw_args > 0)) {
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "iterkeys") < 0)) __PYX_ERR(0, 325, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "iterkeys") < 0)) __PYX_ERR(0, 331, __pyx_L3_error)
       }
     } else {
       switch (PyTuple_GET_SIZE(__pyx_args)) {
@@ -8002,13 +8154,13 @@ static PyObject *__pyx_pw_4dawg_14CompletionDAWG_7iterkeys(PyObject *__pyx_v_sel
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("iterkeys", 0, 0, 1, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 325, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("iterkeys", 0, 0, 1, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 331, __pyx_L3_error)
   __pyx_L3_error:;
   __Pyx_AddTraceback("dawg.CompletionDAWG.iterkeys", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_prefix), (&PyUnicode_Type), 1, "prefix", 1))) __PYX_ERR(0, 325, __pyx_L1_error)
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_prefix), (&PyUnicode_Type), 1, "prefix", 1))) __PYX_ERR(0, 331, __pyx_L1_error)
   __pyx_r = __pyx_pf_4dawg_14CompletionDAWG_6iterkeys(((struct __pyx_obj_4dawg_CompletionDAWG *)__pyx_v_self), __pyx_v_prefix);
 
   /* function exit code */
@@ -8029,7 +8181,7 @@ static PyObject *__pyx_pf_4dawg_14CompletionDAWG_6iterkeys(struct __pyx_obj_4daw
   if (unlikely(!__pyx_cur_scope)) {
     __pyx_cur_scope = ((struct __pyx_obj_4dawg___pyx_scope_struct_3_iterkeys *)Py_None);
     __Pyx_INCREF(Py_None);
-    __PYX_ERR(0, 325, __pyx_L1_error)
+    __PYX_ERR(0, 331, __pyx_L1_error)
   } else {
     __Pyx_GOTREF(__pyx_cur_scope);
   }
@@ -8040,7 +8192,7 @@ static PyObject *__pyx_pf_4dawg_14CompletionDAWG_6iterkeys(struct __pyx_obj_4daw
   __Pyx_INCREF(__pyx_cur_scope->__pyx_v_prefix);
   __Pyx_GIVEREF(__pyx_cur_scope->__pyx_v_prefix);
   {
-    __pyx_CoroutineObject *gen = __Pyx_Generator_New((__pyx_coroutine_body_t) __pyx_gb_4dawg_14CompletionDAWG_8generator1, NULL, (PyObject *) __pyx_cur_scope, __pyx_n_s_iterkeys, __pyx_n_s_CompletionDAWG_iterkeys, __pyx_n_s_dawg); if (unlikely(!gen)) __PYX_ERR(0, 325, __pyx_L1_error)
+    __pyx_CoroutineObject *gen = __Pyx_Generator_New((__pyx_coroutine_body_t) __pyx_gb_4dawg_14CompletionDAWG_8generator1, NULL, (PyObject *) __pyx_cur_scope, __pyx_n_s_iterkeys, __pyx_n_s_CompletionDAWG_iterkeys, __pyx_n_s_dawg); if (unlikely(!gen)) __PYX_ERR(0, 331, __pyx_L1_error)
     __Pyx_DECREF(__pyx_cur_scope);
     __Pyx_RefNannyFinishContext();
     return (PyObject *) gen;
@@ -8074,9 +8226,9 @@ static PyObject *__pyx_gb_4dawg_14CompletionDAWG_8generator1(__pyx_CoroutineObje
     return NULL;
   }
   __pyx_L3_first_run:;
-  if (unlikely(!__pyx_sent_value)) __PYX_ERR(0, 325, __pyx_L1_error)
+  if (unlikely(!__pyx_sent_value)) __PYX_ERR(0, 331, __pyx_L1_error)
 
-  /* "dawg.pyx":326
+  /* "dawg.pyx":332
  * 
  *     def iterkeys(self, unicode prefix=""):
  *         cdef bytes b_prefix = prefix.encode('utf8')             # <<<<<<<<<<<<<<
@@ -8085,15 +8237,15 @@ static PyObject *__pyx_gb_4dawg_14CompletionDAWG_8generator1(__pyx_CoroutineObje
  */
   if (unlikely(__pyx_cur_scope->__pyx_v_prefix == Py_None)) {
     PyErr_Format(PyExc_AttributeError, "'NoneType' object has no attribute '%.30s'", "encode");
-    __PYX_ERR(0, 326, __pyx_L1_error)
+    __PYX_ERR(0, 332, __pyx_L1_error)
   }
-  __pyx_t_1 = PyUnicode_AsUTF8String(__pyx_cur_scope->__pyx_v_prefix); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 326, __pyx_L1_error)
+  __pyx_t_1 = PyUnicode_AsUTF8String(__pyx_cur_scope->__pyx_v_prefix); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 332, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_GIVEREF(__pyx_t_1);
   __pyx_cur_scope->__pyx_v_b_prefix = ((PyObject*)__pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "dawg.pyx":327
+  /* "dawg.pyx":333
  *     def iterkeys(self, unicode prefix=""):
  *         cdef bytes b_prefix = prefix.encode('utf8')
  *         cdef BaseType index = self.dct.root()             # <<<<<<<<<<<<<<
@@ -8102,7 +8254,7 @@ static PyObject *__pyx_gb_4dawg_14CompletionDAWG_8generator1(__pyx_CoroutineObje
  */
   __pyx_cur_scope->__pyx_v_index = __pyx_cur_scope->__pyx_v_self->__pyx_base.dct.root();
 
-  /* "dawg.pyx":329
+  /* "dawg.pyx":335
  *         cdef BaseType index = self.dct.root()
  * 
  *         if not self.dct.Follow(b_prefix, &index):             # <<<<<<<<<<<<<<
@@ -8111,13 +8263,13 @@ static PyObject *__pyx_gb_4dawg_14CompletionDAWG_8generator1(__pyx_CoroutineObje
  */
   if (unlikely(__pyx_cur_scope->__pyx_v_b_prefix == Py_None)) {
     PyErr_SetString(PyExc_TypeError, "expected bytes, NoneType found");
-    __PYX_ERR(0, 329, __pyx_L1_error)
+    __PYX_ERR(0, 335, __pyx_L1_error)
   }
-  __pyx_t_2 = __Pyx_PyBytes_AsWritableString(__pyx_cur_scope->__pyx_v_b_prefix); if (unlikely((!__pyx_t_2) && PyErr_Occurred())) __PYX_ERR(0, 329, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyBytes_AsWritableString(__pyx_cur_scope->__pyx_v_b_prefix); if (unlikely((!__pyx_t_2) && PyErr_Occurred())) __PYX_ERR(0, 335, __pyx_L1_error)
   __pyx_t_3 = ((!(__pyx_cur_scope->__pyx_v_self->__pyx_base.dct.Follow(__pyx_t_2, (&__pyx_cur_scope->__pyx_v_index)) != 0)) != 0);
   if (__pyx_t_3) {
 
-    /* "dawg.pyx":330
+    /* "dawg.pyx":336
  * 
  *         if not self.dct.Follow(b_prefix, &index):
  *             return             # <<<<<<<<<<<<<<
@@ -8128,7 +8280,7 @@ static PyObject *__pyx_gb_4dawg_14CompletionDAWG_8generator1(__pyx_CoroutineObje
     __pyx_r = NULL;
     goto __pyx_L0;
 
-    /* "dawg.pyx":329
+    /* "dawg.pyx":335
  *         cdef BaseType index = self.dct.root()
  * 
  *         if not self.dct.Follow(b_prefix, &index):             # <<<<<<<<<<<<<<
@@ -8137,7 +8289,7 @@ static PyObject *__pyx_gb_4dawg_14CompletionDAWG_8generator1(__pyx_CoroutineObje
  */
   }
 
-  /* "dawg.pyx":333
+  /* "dawg.pyx":339
  * 
  *         cdef Completer completer
  *         init_completer(completer, self.dct, self.guide)             # <<<<<<<<<<<<<<
@@ -8146,7 +8298,7 @@ static PyObject *__pyx_gb_4dawg_14CompletionDAWG_8generator1(__pyx_CoroutineObje
  */
   __pyx_f_4dawg_init_completer(__pyx_cur_scope->__pyx_v_completer, __pyx_cur_scope->__pyx_v_self->__pyx_base.dct, __pyx_cur_scope->__pyx_v_self->guide);
 
-  /* "dawg.pyx":334
+  /* "dawg.pyx":340
  *         cdef Completer completer
  *         init_completer(completer, self.dct, self.guide)
  *         completer.Start(index, b_prefix)             # <<<<<<<<<<<<<<
@@ -8155,12 +8307,12 @@ static PyObject *__pyx_gb_4dawg_14CompletionDAWG_8generator1(__pyx_CoroutineObje
  */
   if (unlikely(__pyx_cur_scope->__pyx_v_b_prefix == Py_None)) {
     PyErr_SetString(PyExc_TypeError, "expected bytes, NoneType found");
-    __PYX_ERR(0, 334, __pyx_L1_error)
+    __PYX_ERR(0, 340, __pyx_L1_error)
   }
-  __pyx_t_4 = __Pyx_PyBytes_AsWritableString(__pyx_cur_scope->__pyx_v_b_prefix); if (unlikely((!__pyx_t_4) && PyErr_Occurred())) __PYX_ERR(0, 334, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyBytes_AsWritableString(__pyx_cur_scope->__pyx_v_b_prefix); if (unlikely((!__pyx_t_4) && PyErr_Occurred())) __PYX_ERR(0, 340, __pyx_L1_error)
   __pyx_cur_scope->__pyx_v_completer.Start(__pyx_cur_scope->__pyx_v_index, __pyx_t_4);
 
-  /* "dawg.pyx":336
+  /* "dawg.pyx":342
  *         completer.Start(index, b_prefix)
  * 
  *         while completer.Next():             # <<<<<<<<<<<<<<
@@ -8171,7 +8323,7 @@ static PyObject *__pyx_gb_4dawg_14CompletionDAWG_8generator1(__pyx_CoroutineObje
     __pyx_t_3 = (__pyx_cur_scope->__pyx_v_completer.Next() != 0);
     if (!__pyx_t_3) break;
 
-    /* "dawg.pyx":337
+    /* "dawg.pyx":343
  * 
  *         while completer.Next():
  *             key = (<char*>completer.key()).decode('utf8')             # <<<<<<<<<<<<<<
@@ -8179,7 +8331,7 @@ static PyObject *__pyx_gb_4dawg_14CompletionDAWG_8generator1(__pyx_CoroutineObje
  * 
  */
     __pyx_t_4 = ((char *)__pyx_cur_scope->__pyx_v_completer.key());
-    __pyx_t_1 = __Pyx_decode_c_string(__pyx_t_4, 0, strlen(__pyx_t_4), NULL, NULL, PyUnicode_DecodeUTF8); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 337, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_decode_c_string(__pyx_t_4, 0, strlen(__pyx_t_4), NULL, NULL, PyUnicode_DecodeUTF8); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 343, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_INCREF(__pyx_t_1);
     __Pyx_XGOTREF(__pyx_cur_scope->__pyx_v_key);
@@ -8187,7 +8339,7 @@ static PyObject *__pyx_gb_4dawg_14CompletionDAWG_8generator1(__pyx_CoroutineObje
     __Pyx_GIVEREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-    /* "dawg.pyx":338
+    /* "dawg.pyx":344
  *         while completer.Next():
  *             key = (<char*>completer.key()).decode('utf8')
  *             yield key             # <<<<<<<<<<<<<<
@@ -8203,11 +8355,11 @@ static PyObject *__pyx_gb_4dawg_14CompletionDAWG_8generator1(__pyx_CoroutineObje
     __pyx_generator->resume_label = 1;
     return __pyx_r;
     __pyx_L7_resume_from_yield:;
-    if (unlikely(!__pyx_sent_value)) __PYX_ERR(0, 338, __pyx_L1_error)
+    if (unlikely(!__pyx_sent_value)) __PYX_ERR(0, 344, __pyx_L1_error)
   }
   CYTHON_MAYBE_UNUSED_VAR(__pyx_cur_scope);
 
-  /* "dawg.pyx":325
+  /* "dawg.pyx":331
  *         return res
  * 
  *     def iterkeys(self, unicode prefix=""):             # <<<<<<<<<<<<<<
@@ -8232,7 +8384,7 @@ static PyObject *__pyx_gb_4dawg_14CompletionDAWG_8generator1(__pyx_CoroutineObje
   return __pyx_r;
 }
 
-/* "dawg.pyx":340
+/* "dawg.pyx":346
  *             yield key
  * 
  *     def has_keys_with_prefix(self, unicode prefix):             # <<<<<<<<<<<<<<
@@ -8247,7 +8399,7 @@ static PyObject *__pyx_pw_4dawg_14CompletionDAWG_10has_keys_with_prefix(PyObject
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("has_keys_with_prefix (wrapper)", 0);
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_prefix), (&PyUnicode_Type), 1, "prefix", 1))) __PYX_ERR(0, 340, __pyx_L1_error)
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_prefix), (&PyUnicode_Type), 1, "prefix", 1))) __PYX_ERR(0, 346, __pyx_L1_error)
   __pyx_r = __pyx_pf_4dawg_14CompletionDAWG_9has_keys_with_prefix(((struct __pyx_obj_4dawg_CompletionDAWG *)__pyx_v_self), ((PyObject*)__pyx_v_prefix));
 
   /* function exit code */
@@ -8271,7 +8423,7 @@ static PyObject *__pyx_pf_4dawg_14CompletionDAWG_9has_keys_with_prefix(struct __
   char *__pyx_t_4;
   __Pyx_RefNannySetupContext("has_keys_with_prefix", 0);
 
-  /* "dawg.pyx":341
+  /* "dawg.pyx":347
  * 
  *     def has_keys_with_prefix(self, unicode prefix):
  *         cdef bytes b_prefix = prefix.encode('utf8')             # <<<<<<<<<<<<<<
@@ -8280,14 +8432,14 @@ static PyObject *__pyx_pf_4dawg_14CompletionDAWG_9has_keys_with_prefix(struct __
  */
   if (unlikely(__pyx_v_prefix == Py_None)) {
     PyErr_Format(PyExc_AttributeError, "'NoneType' object has no attribute '%.30s'", "encode");
-    __PYX_ERR(0, 341, __pyx_L1_error)
+    __PYX_ERR(0, 347, __pyx_L1_error)
   }
-  __pyx_t_1 = PyUnicode_AsUTF8String(__pyx_v_prefix); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 341, __pyx_L1_error)
+  __pyx_t_1 = PyUnicode_AsUTF8String(__pyx_v_prefix); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 347, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_v_b_prefix = ((PyObject*)__pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "dawg.pyx":342
+  /* "dawg.pyx":348
  *     def has_keys_with_prefix(self, unicode prefix):
  *         cdef bytes b_prefix = prefix.encode('utf8')
  *         cdef BaseType index = self.dct.root()             # <<<<<<<<<<<<<<
@@ -8296,7 +8448,7 @@ static PyObject *__pyx_pf_4dawg_14CompletionDAWG_9has_keys_with_prefix(struct __
  */
   __pyx_v_index = __pyx_v_self->__pyx_base.dct.root();
 
-  /* "dawg.pyx":344
+  /* "dawg.pyx":350
  *         cdef BaseType index = self.dct.root()
  * 
  *         if not self.dct.Follow(b_prefix, &index):             # <<<<<<<<<<<<<<
@@ -8305,13 +8457,13 @@ static PyObject *__pyx_pf_4dawg_14CompletionDAWG_9has_keys_with_prefix(struct __
  */
   if (unlikely(__pyx_v_b_prefix == Py_None)) {
     PyErr_SetString(PyExc_TypeError, "expected bytes, NoneType found");
-    __PYX_ERR(0, 344, __pyx_L1_error)
+    __PYX_ERR(0, 350, __pyx_L1_error)
   }
-  __pyx_t_2 = __Pyx_PyBytes_AsWritableString(__pyx_v_b_prefix); if (unlikely((!__pyx_t_2) && PyErr_Occurred())) __PYX_ERR(0, 344, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyBytes_AsWritableString(__pyx_v_b_prefix); if (unlikely((!__pyx_t_2) && PyErr_Occurred())) __PYX_ERR(0, 350, __pyx_L1_error)
   __pyx_t_3 = ((!(__pyx_v_self->__pyx_base.dct.Follow(__pyx_t_2, (&__pyx_v_index)) != 0)) != 0);
   if (__pyx_t_3) {
 
-    /* "dawg.pyx":345
+    /* "dawg.pyx":351
  * 
  *         if not self.dct.Follow(b_prefix, &index):
  *             return False             # <<<<<<<<<<<<<<
@@ -8323,7 +8475,7 @@ static PyObject *__pyx_pf_4dawg_14CompletionDAWG_9has_keys_with_prefix(struct __
     __pyx_r = Py_False;
     goto __pyx_L0;
 
-    /* "dawg.pyx":344
+    /* "dawg.pyx":350
  *         cdef BaseType index = self.dct.root()
  * 
  *         if not self.dct.Follow(b_prefix, &index):             # <<<<<<<<<<<<<<
@@ -8332,7 +8484,7 @@ static PyObject *__pyx_pf_4dawg_14CompletionDAWG_9has_keys_with_prefix(struct __
  */
   }
 
-  /* "dawg.pyx":348
+  /* "dawg.pyx":354
  * 
  *         cdef Completer completer
  *         init_completer(completer, self.dct, self.guide)             # <<<<<<<<<<<<<<
@@ -8341,7 +8493,7 @@ static PyObject *__pyx_pf_4dawg_14CompletionDAWG_9has_keys_with_prefix(struct __
  */
   __pyx_f_4dawg_init_completer(__pyx_v_completer, __pyx_v_self->__pyx_base.dct, __pyx_v_self->guide);
 
-  /* "dawg.pyx":349
+  /* "dawg.pyx":355
  *         cdef Completer completer
  *         init_completer(completer, self.dct, self.guide)
  *         completer.Start(index, b_prefix)             # <<<<<<<<<<<<<<
@@ -8350,12 +8502,12 @@ static PyObject *__pyx_pf_4dawg_14CompletionDAWG_9has_keys_with_prefix(struct __
  */
   if (unlikely(__pyx_v_b_prefix == Py_None)) {
     PyErr_SetString(PyExc_TypeError, "expected bytes, NoneType found");
-    __PYX_ERR(0, 349, __pyx_L1_error)
+    __PYX_ERR(0, 355, __pyx_L1_error)
   }
-  __pyx_t_4 = __Pyx_PyBytes_AsWritableString(__pyx_v_b_prefix); if (unlikely((!__pyx_t_4) && PyErr_Occurred())) __PYX_ERR(0, 349, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyBytes_AsWritableString(__pyx_v_b_prefix); if (unlikely((!__pyx_t_4) && PyErr_Occurred())) __PYX_ERR(0, 355, __pyx_L1_error)
   __pyx_v_completer.Start(__pyx_v_index, __pyx_t_4);
 
-  /* "dawg.pyx":351
+  /* "dawg.pyx":357
  *         completer.Start(index, b_prefix)
  * 
  *         return completer.Next()             # <<<<<<<<<<<<<<
@@ -8363,13 +8515,13 @@ static PyObject *__pyx_pf_4dawg_14CompletionDAWG_9has_keys_with_prefix(struct __
  *     cpdef bytes tobytes(self) except +:
  */
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = __Pyx_PyBool_FromLong(__pyx_v_completer.Next()); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 351, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyBool_FromLong(__pyx_v_completer.Next()); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 357, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "dawg.pyx":340
+  /* "dawg.pyx":346
  *             yield key
  * 
  *     def has_keys_with_prefix(self, unicode prefix):             # <<<<<<<<<<<<<<
@@ -8389,7 +8541,7 @@ static PyObject *__pyx_pf_4dawg_14CompletionDAWG_9has_keys_with_prefix(struct __
   return __pyx_r;
 }
 
-/* "dawg.pyx":353
+/* "dawg.pyx":359
  *         return completer.Next()
  * 
  *     cpdef bytes tobytes(self) except +:             # <<<<<<<<<<<<<<
@@ -8417,7 +8569,7 @@ static PyObject *__pyx_f_4dawg_14CompletionDAWG_tobytes(struct __pyx_obj_4dawg_C
     if (unlikely(!__Pyx_object_dict_version_matches(((PyObject *)__pyx_v_self), __pyx_tp_dict_version, __pyx_obj_dict_version))) {
       PY_UINT64_T __pyx_type_dict_guard = __Pyx_get_tp_dict_version(((PyObject *)__pyx_v_self));
       #endif
-      __pyx_t_1 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_tobytes); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 353, __pyx_L1_error)
+      __pyx_t_1 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_tobytes); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 359, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_1);
       if (!PyCFunction_Check(__pyx_t_1) || (PyCFunction_GET_FUNCTION(__pyx_t_1) != (PyCFunction)(void*)__pyx_pw_4dawg_14CompletionDAWG_12tobytes)) {
         __Pyx_XDECREF(__pyx_r);
@@ -8434,10 +8586,10 @@ static PyObject *__pyx_f_4dawg_14CompletionDAWG_tobytes(struct __pyx_obj_4dawg_C
         }
         __pyx_t_2 = (__pyx_t_4) ? __Pyx_PyObject_CallOneArg(__pyx_t_3, __pyx_t_4) : __Pyx_PyObject_CallNoArg(__pyx_t_3);
         __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
-        if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 353, __pyx_L1_error)
+        if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 359, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_2);
         __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-        if (!(likely(PyBytes_CheckExact(__pyx_t_2))||((__pyx_t_2) == Py_None)||(PyErr_Format(PyExc_TypeError, "Expected %.16s, got %.200s", "bytes", Py_TYPE(__pyx_t_2)->tp_name), 0))) __PYX_ERR(0, 353, __pyx_L1_error)
+        if (!(likely(PyBytes_CheckExact(__pyx_t_2))||((__pyx_t_2) == Py_None)||(PyErr_Format(PyExc_TypeError, "Expected %.16s, got %.200s", "bytes", Py_TYPE(__pyx_t_2)->tp_name), 0))) __PYX_ERR(0, 359, __pyx_L1_error)
         __pyx_r = ((PyObject*)__pyx_t_2);
         __pyx_t_2 = 0;
         __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
@@ -8456,7 +8608,7 @@ static PyObject *__pyx_f_4dawg_14CompletionDAWG_tobytes(struct __pyx_obj_4dawg_C
     #endif
   }
 
-  /* "dawg.pyx":358
+  /* "dawg.pyx":364
  *         """
  *         cdef stringstream stream
  *         self.dct.Write(<ostream *> &stream)             # <<<<<<<<<<<<<<
@@ -8467,10 +8619,10 @@ static PyObject *__pyx_f_4dawg_14CompletionDAWG_tobytes(struct __pyx_obj_4dawg_C
     __pyx_v_self->__pyx_base.dct.Write(((std::ostream *)(&__pyx_v_stream)));
   } catch(...) {
     __Pyx_CppExn2PyErr();
-    __PYX_ERR(0, 358, __pyx_L1_error)
+    __PYX_ERR(0, 364, __pyx_L1_error)
   }
 
-  /* "dawg.pyx":359
+  /* "dawg.pyx":365
  *         cdef stringstream stream
  *         self.dct.Write(<ostream *> &stream)
  *         self.guide.Write(<ostream *> &stream)             # <<<<<<<<<<<<<<
@@ -8479,19 +8631,19 @@ static PyObject *__pyx_f_4dawg_14CompletionDAWG_tobytes(struct __pyx_obj_4dawg_C
  */
   (void)(__pyx_v_self->guide.Write(((std::ostream *)(&__pyx_v_stream))));
 
-  /* "dawg.pyx":360
+  /* "dawg.pyx":366
  *         self.dct.Write(<ostream *> &stream)
  *         self.guide.Write(<ostream *> &stream)
  *         cdef bytes res = stream.str()             # <<<<<<<<<<<<<<
  *         return res
  * 
  */
-  __pyx_t_1 = __pyx_convert_PyBytes_string_to_py_std__in_string(__pyx_v_stream.str()); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 360, __pyx_L1_error)
+  __pyx_t_1 = __pyx_convert_PyBytes_string_to_py_std__in_string(__pyx_v_stream.str()); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 366, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_v_res = ((PyObject*)__pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "dawg.pyx":361
+  /* "dawg.pyx":367
  *         self.guide.Write(<ostream *> &stream)
  *         cdef bytes res = stream.str()
  *         return res             # <<<<<<<<<<<<<<
@@ -8503,7 +8655,7 @@ static PyObject *__pyx_f_4dawg_14CompletionDAWG_tobytes(struct __pyx_obj_4dawg_C
   __pyx_r = __pyx_v_res;
   goto __pyx_L0;
 
-  /* "dawg.pyx":353
+  /* "dawg.pyx":359
  *         return completer.Next()
  * 
  *     cpdef bytes tobytes(self) except +:             # <<<<<<<<<<<<<<
@@ -8548,10 +8700,10 @@ static PyObject *__pyx_pf_4dawg_14CompletionDAWG_11tobytes(struct __pyx_obj_4daw
   __Pyx_XDECREF(__pyx_r);
   try {
     __pyx_t_1 = __pyx_f_4dawg_14CompletionDAWG_tobytes(__pyx_v_self, 1);
-    if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 353, __pyx_L1_error)
+    if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 359, __pyx_L1_error)
   } catch(...) {
     __Pyx_CppExn2PyErr();
-    __PYX_ERR(0, 353, __pyx_L1_error)
+    __PYX_ERR(0, 359, __pyx_L1_error)
   }
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
@@ -8569,7 +8721,7 @@ static PyObject *__pyx_pf_4dawg_14CompletionDAWG_11tobytes(struct __pyx_obj_4daw
   return __pyx_r;
 }
 
-/* "dawg.pyx":363
+/* "dawg.pyx":369
  *         return res
  * 
  *     cpdef frombytes(self, bytes data):             # <<<<<<<<<<<<<<
@@ -8601,7 +8753,7 @@ static PyObject *__pyx_f_4dawg_14CompletionDAWG_frombytes(struct __pyx_obj_4dawg
     if (unlikely(!__Pyx_object_dict_version_matches(((PyObject *)__pyx_v_self), __pyx_tp_dict_version, __pyx_obj_dict_version))) {
       PY_UINT64_T __pyx_type_dict_guard = __Pyx_get_tp_dict_version(((PyObject *)__pyx_v_self));
       #endif
-      __pyx_t_1 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_frombytes); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 363, __pyx_L1_error)
+      __pyx_t_1 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_frombytes); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 369, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_1);
       if (!PyCFunction_Check(__pyx_t_1) || (PyCFunction_GET_FUNCTION(__pyx_t_1) != (PyCFunction)(void*)__pyx_pw_4dawg_14CompletionDAWG_14frombytes)) {
         __Pyx_XDECREF(__pyx_r);
@@ -8618,7 +8770,7 @@ static PyObject *__pyx_f_4dawg_14CompletionDAWG_frombytes(struct __pyx_obj_4dawg
         }
         __pyx_t_2 = (__pyx_t_4) ? __Pyx_PyObject_Call2Args(__pyx_t_3, __pyx_t_4, __pyx_v_data) : __Pyx_PyObject_CallOneArg(__pyx_t_3, __pyx_v_data);
         __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
-        if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 363, __pyx_L1_error)
+        if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 369, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_2);
         __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
         __pyx_r = __pyx_t_2;
@@ -8639,7 +8791,7 @@ static PyObject *__pyx_f_4dawg_14CompletionDAWG_frombytes(struct __pyx_obj_4dawg
     #endif
   }
 
-  /* "dawg.pyx":370
+  /* "dawg.pyx":376
  *         loaded using frombytes vs load).
  *         """
  *         cdef char* c_data = data             # <<<<<<<<<<<<<<
@@ -8648,12 +8800,12 @@ static PyObject *__pyx_f_4dawg_14CompletionDAWG_frombytes(struct __pyx_obj_4dawg
  */
   if (unlikely(__pyx_v_data == Py_None)) {
     PyErr_SetString(PyExc_TypeError, "expected bytes, NoneType found");
-    __PYX_ERR(0, 370, __pyx_L1_error)
+    __PYX_ERR(0, 376, __pyx_L1_error)
   }
-  __pyx_t_5 = __Pyx_PyBytes_AsWritableString(__pyx_v_data); if (unlikely((!__pyx_t_5) && PyErr_Occurred())) __PYX_ERR(0, 370, __pyx_L1_error)
+  __pyx_t_5 = __Pyx_PyBytes_AsWritableString(__pyx_v_data); if (unlikely((!__pyx_t_5) && PyErr_Occurred())) __PYX_ERR(0, 376, __pyx_L1_error)
   __pyx_v_c_data = __pyx_t_5;
 
-  /* "dawg.pyx":372
+  /* "dawg.pyx":378
  *         cdef char* c_data = data
  *         cdef stringstream stream
  *         stream.write(c_data, len(data))             # <<<<<<<<<<<<<<
@@ -8662,12 +8814,12 @@ static PyObject *__pyx_f_4dawg_14CompletionDAWG_frombytes(struct __pyx_obj_4dawg
  */
   if (unlikely(__pyx_v_data == Py_None)) {
     PyErr_SetString(PyExc_TypeError, "object of type 'NoneType' has no len()");
-    __PYX_ERR(0, 372, __pyx_L1_error)
+    __PYX_ERR(0, 378, __pyx_L1_error)
   }
-  __pyx_t_6 = PyBytes_GET_SIZE(__pyx_v_data); if (unlikely(__pyx_t_6 == ((Py_ssize_t)-1))) __PYX_ERR(0, 372, __pyx_L1_error)
+  __pyx_t_6 = PyBytes_GET_SIZE(__pyx_v_data); if (unlikely(__pyx_t_6 == ((Py_ssize_t)-1))) __PYX_ERR(0, 378, __pyx_L1_error)
   (void)(__pyx_v_stream.write(__pyx_v_c_data, __pyx_t_6));
 
-  /* "dawg.pyx":373
+  /* "dawg.pyx":379
  *         cdef stringstream stream
  *         stream.write(c_data, len(data))
  *         stream.seekg(0)             # <<<<<<<<<<<<<<
@@ -8676,7 +8828,7 @@ static PyObject *__pyx_f_4dawg_14CompletionDAWG_frombytes(struct __pyx_obj_4dawg
  */
   (void)(__pyx_v_stream.seekg(0));
 
-  /* "dawg.pyx":375
+  /* "dawg.pyx":381
  *         stream.seekg(0)
  * 
  *         res = self.dct.Read(<istream*> &stream)             # <<<<<<<<<<<<<<
@@ -8687,11 +8839,11 @@ static PyObject *__pyx_f_4dawg_14CompletionDAWG_frombytes(struct __pyx_obj_4dawg
     __pyx_t_7 = __pyx_v_self->__pyx_base.dct.Read(((std::istream *)(&__pyx_v_stream)));
   } catch(...) {
     __Pyx_CppExn2PyErr();
-    __PYX_ERR(0, 375, __pyx_L1_error)
+    __PYX_ERR(0, 381, __pyx_L1_error)
   }
   __pyx_v_res = __pyx_t_7;
 
-  /* "dawg.pyx":376
+  /* "dawg.pyx":382
  * 
  *         res = self.dct.Read(<istream*> &stream)
  *         if not res:             # <<<<<<<<<<<<<<
@@ -8701,7 +8853,7 @@ static PyObject *__pyx_f_4dawg_14CompletionDAWG_frombytes(struct __pyx_obj_4dawg
   __pyx_t_7 = ((!(__pyx_v_res != 0)) != 0);
   if (unlikely(__pyx_t_7)) {
 
-    /* "dawg.pyx":377
+    /* "dawg.pyx":383
  *         res = self.dct.Read(<istream*> &stream)
  *         if not res:
  *             self.dct.Clear()             # <<<<<<<<<<<<<<
@@ -8710,20 +8862,20 @@ static PyObject *__pyx_f_4dawg_14CompletionDAWG_frombytes(struct __pyx_obj_4dawg
  */
     __pyx_v_self->__pyx_base.dct.Clear();
 
-    /* "dawg.pyx":378
+    /* "dawg.pyx":384
  *         if not res:
  *             self.dct.Clear()
  *             raise IOError("Invalid data format: can't load _dawg.Dictionary")             # <<<<<<<<<<<<<<
  * 
  *         res = self.guide.Read(<istream*> &stream)
  */
-    __pyx_t_1 = __Pyx_PyObject_Call(__pyx_builtin_IOError, __pyx_tuple__8, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 378, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyObject_Call(__pyx_builtin_IOError, __pyx_tuple__8, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 384, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_Raise(__pyx_t_1, 0, 0, 0);
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-    __PYX_ERR(0, 378, __pyx_L1_error)
+    __PYX_ERR(0, 384, __pyx_L1_error)
 
-    /* "dawg.pyx":376
+    /* "dawg.pyx":382
  * 
  *         res = self.dct.Read(<istream*> &stream)
  *         if not res:             # <<<<<<<<<<<<<<
@@ -8732,7 +8884,7 @@ static PyObject *__pyx_f_4dawg_14CompletionDAWG_frombytes(struct __pyx_obj_4dawg
  */
   }
 
-  /* "dawg.pyx":380
+  /* "dawg.pyx":386
  *             raise IOError("Invalid data format: can't load _dawg.Dictionary")
  * 
  *         res = self.guide.Read(<istream*> &stream)             # <<<<<<<<<<<<<<
@@ -8741,7 +8893,7 @@ static PyObject *__pyx_f_4dawg_14CompletionDAWG_frombytes(struct __pyx_obj_4dawg
  */
   __pyx_v_res = __pyx_v_self->guide.Read(((std::istream *)(&__pyx_v_stream)));
 
-  /* "dawg.pyx":381
+  /* "dawg.pyx":387
  * 
  *         res = self.guide.Read(<istream*> &stream)
  *         if not res:             # <<<<<<<<<<<<<<
@@ -8751,7 +8903,7 @@ static PyObject *__pyx_f_4dawg_14CompletionDAWG_frombytes(struct __pyx_obj_4dawg
   __pyx_t_7 = ((!(__pyx_v_res != 0)) != 0);
   if (unlikely(__pyx_t_7)) {
 
-    /* "dawg.pyx":382
+    /* "dawg.pyx":388
  *         res = self.guide.Read(<istream*> &stream)
  *         if not res:
  *             self.guide.Clear()             # <<<<<<<<<<<<<<
@@ -8760,7 +8912,7 @@ static PyObject *__pyx_f_4dawg_14CompletionDAWG_frombytes(struct __pyx_obj_4dawg
  */
     __pyx_v_self->guide.Clear();
 
-    /* "dawg.pyx":383
+    /* "dawg.pyx":389
  *         if not res:
  *             self.guide.Clear()
  *             self.dct.Clear()             # <<<<<<<<<<<<<<
@@ -8769,20 +8921,20 @@ static PyObject *__pyx_f_4dawg_14CompletionDAWG_frombytes(struct __pyx_obj_4dawg
  */
     __pyx_v_self->__pyx_base.dct.Clear();
 
-    /* "dawg.pyx":384
+    /* "dawg.pyx":390
  *             self.guide.Clear()
  *             self.dct.Clear()
  *             raise IOError("Invalid data format: can't load _dawg.Guide")             # <<<<<<<<<<<<<<
  * 
  *         return self
  */
-    __pyx_t_1 = __Pyx_PyObject_Call(__pyx_builtin_IOError, __pyx_tuple__9, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 384, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyObject_Call(__pyx_builtin_IOError, __pyx_tuple__9, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 390, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_Raise(__pyx_t_1, 0, 0, 0);
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-    __PYX_ERR(0, 384, __pyx_L1_error)
+    __PYX_ERR(0, 390, __pyx_L1_error)
 
-    /* "dawg.pyx":381
+    /* "dawg.pyx":387
  * 
  *         res = self.guide.Read(<istream*> &stream)
  *         if not res:             # <<<<<<<<<<<<<<
@@ -8791,7 +8943,7 @@ static PyObject *__pyx_f_4dawg_14CompletionDAWG_frombytes(struct __pyx_obj_4dawg
  */
   }
 
-  /* "dawg.pyx":386
+  /* "dawg.pyx":392
  *             raise IOError("Invalid data format: can't load _dawg.Guide")
  * 
  *         return self             # <<<<<<<<<<<<<<
@@ -8803,7 +8955,7 @@ static PyObject *__pyx_f_4dawg_14CompletionDAWG_frombytes(struct __pyx_obj_4dawg
   __pyx_r = ((PyObject *)__pyx_v_self);
   goto __pyx_L0;
 
-  /* "dawg.pyx":363
+  /* "dawg.pyx":369
  *         return res
  * 
  *     cpdef frombytes(self, bytes data):             # <<<<<<<<<<<<<<
@@ -8832,7 +8984,7 @@ static PyObject *__pyx_pw_4dawg_14CompletionDAWG_14frombytes(PyObject *__pyx_v_s
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("frombytes (wrapper)", 0);
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_data), (&PyBytes_Type), 1, "data", 1))) __PYX_ERR(0, 363, __pyx_L1_error)
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_data), (&PyBytes_Type), 1, "data", 1))) __PYX_ERR(0, 369, __pyx_L1_error)
   __pyx_r = __pyx_pf_4dawg_14CompletionDAWG_13frombytes(((struct __pyx_obj_4dawg_CompletionDAWG *)__pyx_v_self), ((PyObject*)__pyx_v_data));
 
   /* function exit code */
@@ -8850,7 +9002,7 @@ static PyObject *__pyx_pf_4dawg_14CompletionDAWG_13frombytes(struct __pyx_obj_4d
   PyObject *__pyx_t_1 = NULL;
   __Pyx_RefNannySetupContext("frombytes", 0);
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = __pyx_f_4dawg_14CompletionDAWG_frombytes(__pyx_v_self, __pyx_v_data, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 363, __pyx_L1_error)
+  __pyx_t_1 = __pyx_f_4dawg_14CompletionDAWG_frombytes(__pyx_v_self, __pyx_v_data, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 369, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
@@ -8867,7 +9019,7 @@ static PyObject *__pyx_pf_4dawg_14CompletionDAWG_13frombytes(struct __pyx_obj_4d
   return __pyx_r;
 }
 
-/* "dawg.pyx":388
+/* "dawg.pyx":394
  *         return self
  * 
  *     def load(self, path):             # <<<<<<<<<<<<<<
@@ -8915,7 +9067,7 @@ static PyObject *__pyx_pf_4dawg_14CompletionDAWG_15load(struct __pyx_obj_4dawg_C
   __Pyx_RefNannySetupContext("load", 0);
   __Pyx_INCREF(__pyx_v_path);
 
-  /* "dawg.pyx":392
+  /* "dawg.pyx":398
  *         Load DAWG from a file.
  *         """
  *         if isinstance(path, unicode):             # <<<<<<<<<<<<<<
@@ -8926,18 +9078,18 @@ static PyObject *__pyx_pf_4dawg_14CompletionDAWG_15load(struct __pyx_obj_4dawg_C
   __pyx_t_2 = (__pyx_t_1 != 0);
   if (__pyx_t_2) {
 
-    /* "dawg.pyx":393
+    /* "dawg.pyx":399
  *         """
  *         if isinstance(path, unicode):
  *             path = path.encode(sys.getfilesystemencoding())             # <<<<<<<<<<<<<<
  * 
  *         cdef ifstream stream
  */
-    __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_v_path, __pyx_n_s_encode); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 393, __pyx_L1_error)
+    __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_v_path, __pyx_n_s_encode); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 399, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_4);
-    __Pyx_GetModuleGlobalName(__pyx_t_6, __pyx_n_s_sys); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 393, __pyx_L1_error)
+    __Pyx_GetModuleGlobalName(__pyx_t_6, __pyx_n_s_sys); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 399, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_6);
-    __pyx_t_7 = __Pyx_PyObject_GetAttrStr(__pyx_t_6, __pyx_n_s_getfilesystemencoding); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 393, __pyx_L1_error)
+    __pyx_t_7 = __Pyx_PyObject_GetAttrStr(__pyx_t_6, __pyx_n_s_getfilesystemencoding); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 399, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_7);
     __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
     __pyx_t_6 = NULL;
@@ -8952,7 +9104,7 @@ static PyObject *__pyx_pf_4dawg_14CompletionDAWG_15load(struct __pyx_obj_4dawg_C
     }
     __pyx_t_5 = (__pyx_t_6) ? __Pyx_PyObject_CallOneArg(__pyx_t_7, __pyx_t_6) : __Pyx_PyObject_CallNoArg(__pyx_t_7);
     __Pyx_XDECREF(__pyx_t_6); __pyx_t_6 = 0;
-    if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 393, __pyx_L1_error)
+    if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 399, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_5);
     __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
     __pyx_t_7 = NULL;
@@ -8968,13 +9120,13 @@ static PyObject *__pyx_pf_4dawg_14CompletionDAWG_15load(struct __pyx_obj_4dawg_C
     __pyx_t_3 = (__pyx_t_7) ? __Pyx_PyObject_Call2Args(__pyx_t_4, __pyx_t_7, __pyx_t_5) : __Pyx_PyObject_CallOneArg(__pyx_t_4, __pyx_t_5);
     __Pyx_XDECREF(__pyx_t_7); __pyx_t_7 = 0;
     __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-    if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 393, __pyx_L1_error)
+    if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 399, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
     __Pyx_DECREF_SET(__pyx_v_path, __pyx_t_3);
     __pyx_t_3 = 0;
 
-    /* "dawg.pyx":392
+    /* "dawg.pyx":398
  *         Load DAWG from a file.
  *         """
  *         if isinstance(path, unicode):             # <<<<<<<<<<<<<<
@@ -8983,22 +9135,22 @@ static PyObject *__pyx_pf_4dawg_14CompletionDAWG_15load(struct __pyx_obj_4dawg_C
  */
   }
 
-  /* "dawg.pyx":396
+  /* "dawg.pyx":402
  * 
  *         cdef ifstream stream
  *         stream.open(path, iostream.binary)             # <<<<<<<<<<<<<<
  *         if stream.fail():
  *             raise IOError("It's not possible to read file stream")
  */
-  __pyx_t_8 = __Pyx_PyObject_AsWritableString(__pyx_v_path); if (unlikely((!__pyx_t_8) && PyErr_Occurred())) __PYX_ERR(0, 396, __pyx_L1_error)
+  __pyx_t_8 = __Pyx_PyObject_AsWritableString(__pyx_v_path); if (unlikely((!__pyx_t_8) && PyErr_Occurred())) __PYX_ERR(0, 402, __pyx_L1_error)
   try {
     __pyx_v_stream.open(__pyx_t_8, std::stringstream::binary);
   } catch(...) {
     __Pyx_CppExn2PyErr();
-    __PYX_ERR(0, 396, __pyx_L1_error)
+    __PYX_ERR(0, 402, __pyx_L1_error)
   }
 
-  /* "dawg.pyx":397
+  /* "dawg.pyx":403
  *         cdef ifstream stream
  *         stream.open(path, iostream.binary)
  *         if stream.fail():             # <<<<<<<<<<<<<<
@@ -9009,25 +9161,25 @@ static PyObject *__pyx_pf_4dawg_14CompletionDAWG_15load(struct __pyx_obj_4dawg_C
     __pyx_t_9 = __pyx_v_stream.fail();
   } catch(...) {
     __Pyx_CppExn2PyErr();
-    __PYX_ERR(0, 397, __pyx_L1_error)
+    __PYX_ERR(0, 403, __pyx_L1_error)
   }
   __pyx_t_2 = (__pyx_t_9 != 0);
   if (unlikely(__pyx_t_2)) {
 
-    /* "dawg.pyx":398
+    /* "dawg.pyx":404
  *         stream.open(path, iostream.binary)
  *         if stream.fail():
  *             raise IOError("It's not possible to read file stream")             # <<<<<<<<<<<<<<
  * 
  *         try:
  */
-    __pyx_t_3 = __Pyx_PyObject_Call(__pyx_builtin_IOError, __pyx_tuple__4, NULL); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 398, __pyx_L1_error)
+    __pyx_t_3 = __Pyx_PyObject_Call(__pyx_builtin_IOError, __pyx_tuple__4, NULL); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 404, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
     __Pyx_Raise(__pyx_t_3, 0, 0, 0);
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-    __PYX_ERR(0, 398, __pyx_L1_error)
+    __PYX_ERR(0, 404, __pyx_L1_error)
 
-    /* "dawg.pyx":397
+    /* "dawg.pyx":403
  *         cdef ifstream stream
  *         stream.open(path, iostream.binary)
  *         if stream.fail():             # <<<<<<<<<<<<<<
@@ -9036,7 +9188,7 @@ static PyObject *__pyx_pf_4dawg_14CompletionDAWG_15load(struct __pyx_obj_4dawg_C
  */
   }
 
-  /* "dawg.pyx":400
+  /* "dawg.pyx":406
  *             raise IOError("It's not possible to read file stream")
  * 
  *         try:             # <<<<<<<<<<<<<<
@@ -9045,7 +9197,7 @@ static PyObject *__pyx_pf_4dawg_14CompletionDAWG_15load(struct __pyx_obj_4dawg_C
  */
   /*try:*/ {
 
-    /* "dawg.pyx":401
+    /* "dawg.pyx":407
  * 
  *         try:
  *             res = self.dct.Read(<istream*> &stream)             # <<<<<<<<<<<<<<
@@ -9056,11 +9208,11 @@ static PyObject *__pyx_pf_4dawg_14CompletionDAWG_15load(struct __pyx_obj_4dawg_C
       __pyx_t_2 = __pyx_v_self->__pyx_base.dct.Read(((std::istream *)(&__pyx_v_stream)));
     } catch(...) {
       __Pyx_CppExn2PyErr();
-      __PYX_ERR(0, 401, __pyx_L6_error)
+      __PYX_ERR(0, 407, __pyx_L6_error)
     }
     __pyx_v_res = __pyx_t_2;
 
-    /* "dawg.pyx":402
+    /* "dawg.pyx":408
  *         try:
  *             res = self.dct.Read(<istream*> &stream)
  *             if not res:             # <<<<<<<<<<<<<<
@@ -9070,7 +9222,7 @@ static PyObject *__pyx_pf_4dawg_14CompletionDAWG_15load(struct __pyx_obj_4dawg_C
     __pyx_t_2 = ((!(__pyx_v_res != 0)) != 0);
     if (unlikely(__pyx_t_2)) {
 
-      /* "dawg.pyx":403
+      /* "dawg.pyx":409
  *             res = self.dct.Read(<istream*> &stream)
  *             if not res:
  *                 self.dct.Clear()             # <<<<<<<<<<<<<<
@@ -9079,20 +9231,20 @@ static PyObject *__pyx_pf_4dawg_14CompletionDAWG_15load(struct __pyx_obj_4dawg_C
  */
       __pyx_v_self->__pyx_base.dct.Clear();
 
-      /* "dawg.pyx":404
+      /* "dawg.pyx":410
  *             if not res:
  *                 self.dct.Clear()
  *                 raise IOError("Invalid data format: can't load _dawg.Dictionary")             # <<<<<<<<<<<<<<
  * 
  *             res = self.guide.Read(<istream*> &stream)
  */
-      __pyx_t_3 = __Pyx_PyObject_Call(__pyx_builtin_IOError, __pyx_tuple__8, NULL); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 404, __pyx_L6_error)
+      __pyx_t_3 = __Pyx_PyObject_Call(__pyx_builtin_IOError, __pyx_tuple__8, NULL); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 410, __pyx_L6_error)
       __Pyx_GOTREF(__pyx_t_3);
       __Pyx_Raise(__pyx_t_3, 0, 0, 0);
       __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-      __PYX_ERR(0, 404, __pyx_L6_error)
+      __PYX_ERR(0, 410, __pyx_L6_error)
 
-      /* "dawg.pyx":402
+      /* "dawg.pyx":408
  *         try:
  *             res = self.dct.Read(<istream*> &stream)
  *             if not res:             # <<<<<<<<<<<<<<
@@ -9101,7 +9253,7 @@ static PyObject *__pyx_pf_4dawg_14CompletionDAWG_15load(struct __pyx_obj_4dawg_C
  */
     }
 
-    /* "dawg.pyx":406
+    /* "dawg.pyx":412
  *                 raise IOError("Invalid data format: can't load _dawg.Dictionary")
  * 
  *             res = self.guide.Read(<istream*> &stream)             # <<<<<<<<<<<<<<
@@ -9110,7 +9262,7 @@ static PyObject *__pyx_pf_4dawg_14CompletionDAWG_15load(struct __pyx_obj_4dawg_C
  */
     __pyx_v_res = __pyx_v_self->guide.Read(((std::istream *)(&__pyx_v_stream)));
 
-    /* "dawg.pyx":407
+    /* "dawg.pyx":413
  * 
  *             res = self.guide.Read(<istream*> &stream)
  *             if not res:             # <<<<<<<<<<<<<<
@@ -9120,7 +9272,7 @@ static PyObject *__pyx_pf_4dawg_14CompletionDAWG_15load(struct __pyx_obj_4dawg_C
     __pyx_t_2 = ((!(__pyx_v_res != 0)) != 0);
     if (unlikely(__pyx_t_2)) {
 
-      /* "dawg.pyx":408
+      /* "dawg.pyx":414
  *             res = self.guide.Read(<istream*> &stream)
  *             if not res:
  *                 self.guide.Clear()             # <<<<<<<<<<<<<<
@@ -9129,7 +9281,7 @@ static PyObject *__pyx_pf_4dawg_14CompletionDAWG_15load(struct __pyx_obj_4dawg_C
  */
       __pyx_v_self->guide.Clear();
 
-      /* "dawg.pyx":409
+      /* "dawg.pyx":415
  *             if not res:
  *                 self.guide.Clear()
  *                 self.dct.Clear()             # <<<<<<<<<<<<<<
@@ -9138,20 +9290,20 @@ static PyObject *__pyx_pf_4dawg_14CompletionDAWG_15load(struct __pyx_obj_4dawg_C
  */
       __pyx_v_self->__pyx_base.dct.Clear();
 
-      /* "dawg.pyx":410
+      /* "dawg.pyx":416
  *                 self.guide.Clear()
  *                 self.dct.Clear()
  *                 raise IOError("Invalid data format: can't load _dawg.Guide")             # <<<<<<<<<<<<<<
  * 
  *         finally:
  */
-      __pyx_t_3 = __Pyx_PyObject_Call(__pyx_builtin_IOError, __pyx_tuple__9, NULL); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 410, __pyx_L6_error)
+      __pyx_t_3 = __Pyx_PyObject_Call(__pyx_builtin_IOError, __pyx_tuple__9, NULL); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 416, __pyx_L6_error)
       __Pyx_GOTREF(__pyx_t_3);
       __Pyx_Raise(__pyx_t_3, 0, 0, 0);
       __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-      __PYX_ERR(0, 410, __pyx_L6_error)
+      __PYX_ERR(0, 416, __pyx_L6_error)
 
-      /* "dawg.pyx":407
+      /* "dawg.pyx":413
  * 
  *             res = self.guide.Read(<istream*> &stream)
  *             if not res:             # <<<<<<<<<<<<<<
@@ -9161,7 +9313,7 @@ static PyObject *__pyx_pf_4dawg_14CompletionDAWG_15load(struct __pyx_obj_4dawg_C
     }
   }
 
-  /* "dawg.pyx":413
+  /* "dawg.pyx":419
  * 
  *         finally:
  *             stream.close()             # <<<<<<<<<<<<<<
@@ -9174,7 +9326,7 @@ static PyObject *__pyx_pf_4dawg_14CompletionDAWG_15load(struct __pyx_obj_4dawg_C
         __pyx_v_stream.close();
       } catch(...) {
         __Pyx_CppExn2PyErr();
-        __PYX_ERR(0, 413, __pyx_L1_error)
+        __PYX_ERR(0, 419, __pyx_L1_error)
       }
       goto __pyx_L7;
     }
@@ -9202,7 +9354,7 @@ static PyObject *__pyx_pf_4dawg_14CompletionDAWG_15load(struct __pyx_obj_4dawg_C
           __pyx_v_stream.close();
         } catch(...) {
           __Pyx_CppExn2PyErr();
-          __PYX_ERR(0, 413, __pyx_L11_error)
+          __PYX_ERR(0, 419, __pyx_L11_error)
         }
       }
       if (PY_MAJOR_VERSION >= 3) {
@@ -9234,7 +9386,7 @@ static PyObject *__pyx_pf_4dawg_14CompletionDAWG_15load(struct __pyx_obj_4dawg_C
     __pyx_L7:;
   }
 
-  /* "dawg.pyx":415
+  /* "dawg.pyx":421
  *             stream.close()
  * 
  *         return self             # <<<<<<<<<<<<<<
@@ -9246,7 +9398,7 @@ static PyObject *__pyx_pf_4dawg_14CompletionDAWG_15load(struct __pyx_obj_4dawg_C
   __pyx_r = ((PyObject *)__pyx_v_self);
   goto __pyx_L0;
 
-  /* "dawg.pyx":388
+  /* "dawg.pyx":394
  *         return self
  * 
  *     def load(self, path):             # <<<<<<<<<<<<<<
@@ -9270,7 +9422,7 @@ static PyObject *__pyx_pf_4dawg_14CompletionDAWG_15load(struct __pyx_obj_4dawg_C
   return __pyx_r;
 }
 
-/* "dawg.pyx":417
+/* "dawg.pyx":423
  *         return self
  * 
  *     def _transitions(self):             # <<<<<<<<<<<<<<
@@ -9312,19 +9464,19 @@ static PyObject *__pyx_pf_4dawg_14CompletionDAWG_17_transitions(struct __pyx_obj
   int __pyx_t_9;
   __Pyx_RefNannySetupContext("_transitions", 0);
 
-  /* "dawg.pyx":418
+  /* "dawg.pyx":424
  * 
  *     def _transitions(self):
  *         transitions = set()             # <<<<<<<<<<<<<<
  *         cdef BaseType index, prev_index, completer_index
  *         cdef char* key
  */
-  __pyx_t_1 = PySet_New(0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 418, __pyx_L1_error)
+  __pyx_t_1 = PySet_New(0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 424, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_v_transitions = ((PyObject*)__pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "dawg.pyx":423
+  /* "dawg.pyx":429
  * 
  *         cdef Completer completer
  *         init_completer(completer, self.dct, self.guide)             # <<<<<<<<<<<<<<
@@ -9333,7 +9485,7 @@ static PyObject *__pyx_pf_4dawg_14CompletionDAWG_17_transitions(struct __pyx_obj
  */
   __pyx_f_4dawg_init_completer(__pyx_v_completer, __pyx_v_self->__pyx_base.dct, __pyx_v_self->guide);
 
-  /* "dawg.pyx":424
+  /* "dawg.pyx":430
  *         cdef Completer completer
  *         init_completer(completer, self.dct, self.guide)
  *         completer.Start(self.dct.root())             # <<<<<<<<<<<<<<
@@ -9342,7 +9494,7 @@ static PyObject *__pyx_pf_4dawg_14CompletionDAWG_17_transitions(struct __pyx_obj
  */
   __pyx_v_completer.Start(__pyx_v_self->__pyx_base.dct.root());
 
-  /* "dawg.pyx":426
+  /* "dawg.pyx":432
  *         completer.Start(self.dct.root())
  * 
  *         while completer.Next():             # <<<<<<<<<<<<<<
@@ -9353,7 +9505,7 @@ static PyObject *__pyx_pf_4dawg_14CompletionDAWG_17_transitions(struct __pyx_obj
     __pyx_t_2 = (__pyx_v_completer.Next() != 0);
     if (!__pyx_t_2) break;
 
-    /* "dawg.pyx":427
+    /* "dawg.pyx":433
  * 
  *         while completer.Next():
  *             key = <char*>completer.key()             # <<<<<<<<<<<<<<
@@ -9362,7 +9514,7 @@ static PyObject *__pyx_pf_4dawg_14CompletionDAWG_17_transitions(struct __pyx_obj
  */
     __pyx_v_key = ((char *)__pyx_v_completer.key());
 
-    /* "dawg.pyx":429
+    /* "dawg.pyx":435
  *             key = <char*>completer.key()
  * 
  *             index = self.dct.root()             # <<<<<<<<<<<<<<
@@ -9371,7 +9523,7 @@ static PyObject *__pyx_pf_4dawg_14CompletionDAWG_17_transitions(struct __pyx_obj
  */
     __pyx_v_index = __pyx_v_self->__pyx_base.dct.root();
 
-    /* "dawg.pyx":431
+    /* "dawg.pyx":437
  *             index = self.dct.root()
  * 
  *             for i in range(completer.length()):             # <<<<<<<<<<<<<<
@@ -9383,7 +9535,7 @@ static PyObject *__pyx_pf_4dawg_14CompletionDAWG_17_transitions(struct __pyx_obj
     for (__pyx_t_5 = 0; __pyx_t_5 < __pyx_t_4; __pyx_t_5+=1) {
       __pyx_v_i = __pyx_t_5;
 
-      /* "dawg.pyx":432
+      /* "dawg.pyx":438
  * 
  *             for i in range(completer.length()):
  *                 prev_index = index             # <<<<<<<<<<<<<<
@@ -9392,7 +9544,7 @@ static PyObject *__pyx_pf_4dawg_14CompletionDAWG_17_transitions(struct __pyx_obj
  */
       __pyx_v_prev_index = __pyx_v_index;
 
-      /* "dawg.pyx":433
+      /* "dawg.pyx":439
  *             for i in range(completer.length()):
  *                 prev_index = index
  *                 self.dct.Follow(&(key[i]), 1, &index)             # <<<<<<<<<<<<<<
@@ -9401,20 +9553,20 @@ static PyObject *__pyx_pf_4dawg_14CompletionDAWG_17_transitions(struct __pyx_obj
  */
       (void)(__pyx_v_self->__pyx_base.dct.Follow((&(__pyx_v_key[__pyx_v_i])), 1, (&__pyx_v_index)));
 
-      /* "dawg.pyx":435
+      /* "dawg.pyx":441
  *                 self.dct.Follow(&(key[i]), 1, &index)
  *                 transitions.add(
  *                     (prev_index, <unsigned char>key[i], index)             # <<<<<<<<<<<<<<
  *                 )
  * 
  */
-      __pyx_t_1 = __Pyx_PyInt_From_dawgdic_3a__3a_BaseType(__pyx_v_prev_index); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 435, __pyx_L1_error)
+      __pyx_t_1 = __Pyx_PyInt_From_dawgdic_3a__3a_BaseType(__pyx_v_prev_index); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 441, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_1);
-      __pyx_t_6 = __Pyx_PyInt_From_unsigned_char(((unsigned char)(__pyx_v_key[__pyx_v_i]))); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 435, __pyx_L1_error)
+      __pyx_t_6 = __Pyx_PyInt_From_unsigned_char(((unsigned char)(__pyx_v_key[__pyx_v_i]))); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 441, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_6);
-      __pyx_t_7 = __Pyx_PyInt_From_dawgdic_3a__3a_BaseType(__pyx_v_index); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 435, __pyx_L1_error)
+      __pyx_t_7 = __Pyx_PyInt_From_dawgdic_3a__3a_BaseType(__pyx_v_index); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 441, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_7);
-      __pyx_t_8 = PyTuple_New(3); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 435, __pyx_L1_error)
+      __pyx_t_8 = PyTuple_New(3); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 441, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_8);
       __Pyx_GIVEREF(__pyx_t_1);
       PyTuple_SET_ITEM(__pyx_t_8, 0, __pyx_t_1);
@@ -9426,19 +9578,19 @@ static PyObject *__pyx_pf_4dawg_14CompletionDAWG_17_transitions(struct __pyx_obj
       __pyx_t_6 = 0;
       __pyx_t_7 = 0;
 
-      /* "dawg.pyx":434
+      /* "dawg.pyx":440
  *                 prev_index = index
  *                 self.dct.Follow(&(key[i]), 1, &index)
  *                 transitions.add(             # <<<<<<<<<<<<<<
  *                     (prev_index, <unsigned char>key[i], index)
  *                 )
  */
-      __pyx_t_9 = PySet_Add(__pyx_v_transitions, __pyx_t_8); if (unlikely(__pyx_t_9 == ((int)-1))) __PYX_ERR(0, 434, __pyx_L1_error)
+      __pyx_t_9 = PySet_Add(__pyx_v_transitions, __pyx_t_8); if (unlikely(__pyx_t_9 == ((int)-1))) __PYX_ERR(0, 440, __pyx_L1_error)
       __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
     }
   }
 
-  /* "dawg.pyx":438
+  /* "dawg.pyx":444
  *                 )
  * 
  *         return sorted(list(transitions))             # <<<<<<<<<<<<<<
@@ -9446,19 +9598,19 @@ static PyObject *__pyx_pf_4dawg_14CompletionDAWG_17_transitions(struct __pyx_obj
  * 
  */
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_7 = PySequence_List(__pyx_v_transitions); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 438, __pyx_L1_error)
+  __pyx_t_7 = PySequence_List(__pyx_v_transitions); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 444, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_7);
-  __pyx_t_6 = PySequence_List(__pyx_t_7); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 438, __pyx_L1_error)
+  __pyx_t_6 = PySequence_List(__pyx_t_7); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 444, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_6);
   __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
   __pyx_t_8 = ((PyObject*)__pyx_t_6);
   __pyx_t_6 = 0;
-  __pyx_t_9 = PyList_Sort(__pyx_t_8); if (unlikely(__pyx_t_9 == ((int)-1))) __PYX_ERR(0, 438, __pyx_L1_error)
+  __pyx_t_9 = PyList_Sort(__pyx_t_8); if (unlikely(__pyx_t_9 == ((int)-1))) __PYX_ERR(0, 444, __pyx_L1_error)
   __pyx_r = __pyx_t_8;
   __pyx_t_8 = 0;
   goto __pyx_L0;
 
-  /* "dawg.pyx":417
+  /* "dawg.pyx":423
  *         return self
  * 
  *     def _transitions(self):             # <<<<<<<<<<<<<<
@@ -9481,7 +9633,7 @@ static PyObject *__pyx_pf_4dawg_14CompletionDAWG_17_transitions(struct __pyx_obj
   return __pyx_r;
 }
 
-/* "dawg.pyx":473
+/* "dawg.pyx":479
  *     cdef Completer* _completer
  * 
  *     def __init__(self, arg=None, input_is_sorted=False, bytes payload_separator=PAYLOAD_SEPARATOR):             # <<<<<<<<<<<<<<
@@ -9542,7 +9694,7 @@ static int __pyx_pw_4dawg_9BytesDAWG_1__init__(PyObject *__pyx_v_self, PyObject 
         }
       }
       if (unlikely(kw_args > 0)) {
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "__init__") < 0)) __PYX_ERR(0, 473, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "__init__") < 0)) __PYX_ERR(0, 479, __pyx_L3_error)
       }
     } else {
       switch (PyTuple_GET_SIZE(__pyx_args)) {
@@ -9562,13 +9714,13 @@ static int __pyx_pw_4dawg_9BytesDAWG_1__init__(PyObject *__pyx_v_self, PyObject 
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("__init__", 0, 0, 3, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 473, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("__init__", 0, 0, 3, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 479, __pyx_L3_error)
   __pyx_L3_error:;
   __Pyx_AddTraceback("dawg.BytesDAWG.__init__", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return -1;
   __pyx_L4_argument_unpacking_done:;
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_payload_separator), (&PyBytes_Type), 1, "payload_separator", 1))) __PYX_ERR(0, 473, __pyx_L1_error)
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_payload_separator), (&PyBytes_Type), 1, "payload_separator", 1))) __PYX_ERR(0, 479, __pyx_L1_error)
   __pyx_r = __pyx_pf_4dawg_9BytesDAWG___init__(((struct __pyx_obj_4dawg_BytesDAWG *)__pyx_v_self), __pyx_v_arg, __pyx_v_input_is_sorted, __pyx_v_payload_separator);
 
   /* function exit code */
@@ -9581,7 +9733,7 @@ static int __pyx_pw_4dawg_9BytesDAWG_1__init__(PyObject *__pyx_v_self, PyObject 
 }
 static PyObject *__pyx_gb_4dawg_9BytesDAWG_8__init___2generator7(__pyx_CoroutineObject *__pyx_generator, CYTHON_UNUSED PyThreadState *__pyx_tstate, PyObject *__pyx_sent_value); /* proto */
 
-/* "dawg.pyx":483
+/* "dawg.pyx":489
  *         self._c_payload_separator = <unsigned int>ord(payload_separator)
  * 
  *         keys = (self._raw_key(d[0], d[1]) for d in arg)             # <<<<<<<<<<<<<<
@@ -9598,7 +9750,7 @@ static PyObject *__pyx_pf_4dawg_9BytesDAWG_8__init___genexpr(PyObject *__pyx_sel
   if (unlikely(!__pyx_cur_scope)) {
     __pyx_cur_scope = ((struct __pyx_obj_4dawg___pyx_scope_struct_5_genexpr *)Py_None);
     __Pyx_INCREF(Py_None);
-    __PYX_ERR(0, 483, __pyx_L1_error)
+    __PYX_ERR(0, 489, __pyx_L1_error)
   } else {
     __Pyx_GOTREF(__pyx_cur_scope);
   }
@@ -9606,7 +9758,7 @@ static PyObject *__pyx_pf_4dawg_9BytesDAWG_8__init___genexpr(PyObject *__pyx_sel
   __Pyx_INCREF(((PyObject *)__pyx_cur_scope->__pyx_outer_scope));
   __Pyx_GIVEREF(__pyx_cur_scope->__pyx_outer_scope);
   {
-    __pyx_CoroutineObject *gen = __Pyx_Generator_New((__pyx_coroutine_body_t) __pyx_gb_4dawg_9BytesDAWG_8__init___2generator7, NULL, (PyObject *) __pyx_cur_scope, __pyx_n_s_genexpr, __pyx_n_s_init___locals_genexpr, __pyx_n_s_dawg); if (unlikely(!gen)) __PYX_ERR(0, 483, __pyx_L1_error)
+    __pyx_CoroutineObject *gen = __Pyx_Generator_New((__pyx_coroutine_body_t) __pyx_gb_4dawg_9BytesDAWG_8__init___2generator7, NULL, (PyObject *) __pyx_cur_scope, __pyx_n_s_genexpr, __pyx_n_s_init___locals_genexpr, __pyx_n_s_dawg); if (unlikely(!gen)) __PYX_ERR(0, 489, __pyx_L1_error)
     __Pyx_DECREF(__pyx_cur_scope);
     __Pyx_RefNannyFinishContext();
     return (PyObject *) gen;
@@ -9642,32 +9794,32 @@ static PyObject *__pyx_gb_4dawg_9BytesDAWG_8__init___2generator7(__pyx_Coroutine
     return NULL;
   }
   __pyx_L3_first_run:;
-  if (unlikely(!__pyx_sent_value)) __PYX_ERR(0, 483, __pyx_L1_error)
-  if (unlikely(!__pyx_cur_scope->__pyx_outer_scope->__pyx_v_arg)) { __Pyx_RaiseClosureNameError("arg"); __PYX_ERR(0, 483, __pyx_L1_error) }
+  if (unlikely(!__pyx_sent_value)) __PYX_ERR(0, 489, __pyx_L1_error)
+  if (unlikely(!__pyx_cur_scope->__pyx_outer_scope->__pyx_v_arg)) { __Pyx_RaiseClosureNameError("arg"); __PYX_ERR(0, 489, __pyx_L1_error) }
   if (likely(PyList_CheckExact(__pyx_cur_scope->__pyx_outer_scope->__pyx_v_arg)) || PyTuple_CheckExact(__pyx_cur_scope->__pyx_outer_scope->__pyx_v_arg)) {
     __pyx_t_1 = __pyx_cur_scope->__pyx_outer_scope->__pyx_v_arg; __Pyx_INCREF(__pyx_t_1); __pyx_t_2 = 0;
     __pyx_t_3 = NULL;
   } else {
-    __pyx_t_2 = -1; __pyx_t_1 = PyObject_GetIter(__pyx_cur_scope->__pyx_outer_scope->__pyx_v_arg); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 483, __pyx_L1_error)
+    __pyx_t_2 = -1; __pyx_t_1 = PyObject_GetIter(__pyx_cur_scope->__pyx_outer_scope->__pyx_v_arg); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 489, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
-    __pyx_t_3 = Py_TYPE(__pyx_t_1)->tp_iternext; if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 483, __pyx_L1_error)
+    __pyx_t_3 = Py_TYPE(__pyx_t_1)->tp_iternext; if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 489, __pyx_L1_error)
   }
   for (;;) {
     if (likely(!__pyx_t_3)) {
       if (likely(PyList_CheckExact(__pyx_t_1))) {
         if (__pyx_t_2 >= PyList_GET_SIZE(__pyx_t_1)) break;
         #if CYTHON_ASSUME_SAFE_MACROS && !CYTHON_AVOID_BORROWED_REFS
-        __pyx_t_4 = PyList_GET_ITEM(__pyx_t_1, __pyx_t_2); __Pyx_INCREF(__pyx_t_4); __pyx_t_2++; if (unlikely(0 < 0)) __PYX_ERR(0, 483, __pyx_L1_error)
+        __pyx_t_4 = PyList_GET_ITEM(__pyx_t_1, __pyx_t_2); __Pyx_INCREF(__pyx_t_4); __pyx_t_2++; if (unlikely(0 < 0)) __PYX_ERR(0, 489, __pyx_L1_error)
         #else
-        __pyx_t_4 = PySequence_ITEM(__pyx_t_1, __pyx_t_2); __pyx_t_2++; if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 483, __pyx_L1_error)
+        __pyx_t_4 = PySequence_ITEM(__pyx_t_1, __pyx_t_2); __pyx_t_2++; if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 489, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_4);
         #endif
       } else {
         if (__pyx_t_2 >= PyTuple_GET_SIZE(__pyx_t_1)) break;
         #if CYTHON_ASSUME_SAFE_MACROS && !CYTHON_AVOID_BORROWED_REFS
-        __pyx_t_4 = PyTuple_GET_ITEM(__pyx_t_1, __pyx_t_2); __Pyx_INCREF(__pyx_t_4); __pyx_t_2++; if (unlikely(0 < 0)) __PYX_ERR(0, 483, __pyx_L1_error)
+        __pyx_t_4 = PyTuple_GET_ITEM(__pyx_t_1, __pyx_t_2); __Pyx_INCREF(__pyx_t_4); __pyx_t_2++; if (unlikely(0 < 0)) __PYX_ERR(0, 489, __pyx_L1_error)
         #else
-        __pyx_t_4 = PySequence_ITEM(__pyx_t_1, __pyx_t_2); __pyx_t_2++; if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 483, __pyx_L1_error)
+        __pyx_t_4 = PySequence_ITEM(__pyx_t_1, __pyx_t_2); __pyx_t_2++; if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 489, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_4);
         #endif
       }
@@ -9677,7 +9829,7 @@ static PyObject *__pyx_gb_4dawg_9BytesDAWG_8__init___2generator7(__pyx_Coroutine
         PyObject* exc_type = PyErr_Occurred();
         if (exc_type) {
           if (likely(__Pyx_PyErr_GivenExceptionMatches(exc_type, PyExc_StopIteration))) PyErr_Clear();
-          else __PYX_ERR(0, 483, __pyx_L1_error)
+          else __PYX_ERR(0, 489, __pyx_L1_error)
         }
         break;
       }
@@ -9687,14 +9839,14 @@ static PyObject *__pyx_gb_4dawg_9BytesDAWG_8__init___2generator7(__pyx_Coroutine
     __Pyx_XDECREF_SET(__pyx_cur_scope->__pyx_v_d, __pyx_t_4);
     __Pyx_GIVEREF(__pyx_t_4);
     __pyx_t_4 = 0;
-    if (unlikely(!__pyx_cur_scope->__pyx_outer_scope->__pyx_v_self)) { __Pyx_RaiseClosureNameError("self"); __PYX_ERR(0, 483, __pyx_L1_error) }
-    __pyx_t_4 = __Pyx_GetItemInt(__pyx_cur_scope->__pyx_v_d, 0, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 483, __pyx_L1_error)
+    if (unlikely(!__pyx_cur_scope->__pyx_outer_scope->__pyx_v_self)) { __Pyx_RaiseClosureNameError("self"); __PYX_ERR(0, 489, __pyx_L1_error) }
+    __pyx_t_4 = __Pyx_GetItemInt(__pyx_cur_scope->__pyx_v_d, 0, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 489, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_4);
-    if (!(likely(PyUnicode_CheckExact(__pyx_t_4))||((__pyx_t_4) == Py_None)||(PyErr_Format(PyExc_TypeError, "Expected %.16s, got %.200s", "unicode", Py_TYPE(__pyx_t_4)->tp_name), 0))) __PYX_ERR(0, 483, __pyx_L1_error)
-    __pyx_t_5 = __Pyx_GetItemInt(__pyx_cur_scope->__pyx_v_d, 1, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 483, __pyx_L1_error)
+    if (!(likely(PyUnicode_CheckExact(__pyx_t_4))||((__pyx_t_4) == Py_None)||(PyErr_Format(PyExc_TypeError, "Expected %.16s, got %.200s", "unicode", Py_TYPE(__pyx_t_4)->tp_name), 0))) __PYX_ERR(0, 489, __pyx_L1_error)
+    __pyx_t_5 = __Pyx_GetItemInt(__pyx_cur_scope->__pyx_v_d, 1, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 489, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_5);
-    if (!(likely(PyBytes_CheckExact(__pyx_t_5))||((__pyx_t_5) == Py_None)||(PyErr_Format(PyExc_TypeError, "Expected %.16s, got %.200s", "bytes", Py_TYPE(__pyx_t_5)->tp_name), 0))) __PYX_ERR(0, 483, __pyx_L1_error)
-    __pyx_t_6 = ((struct __pyx_vtabstruct_4dawg_BytesDAWG *)__pyx_cur_scope->__pyx_outer_scope->__pyx_v_self->__pyx_base.__pyx_base.__pyx_vtab)->_raw_key(__pyx_cur_scope->__pyx_outer_scope->__pyx_v_self, ((PyObject*)__pyx_t_4), ((PyObject*)__pyx_t_5), 0); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 483, __pyx_L1_error)
+    if (!(likely(PyBytes_CheckExact(__pyx_t_5))||((__pyx_t_5) == Py_None)||(PyErr_Format(PyExc_TypeError, "Expected %.16s, got %.200s", "bytes", Py_TYPE(__pyx_t_5)->tp_name), 0))) __PYX_ERR(0, 489, __pyx_L1_error)
+    __pyx_t_6 = ((struct __pyx_vtabstruct_4dawg_BytesDAWG *)__pyx_cur_scope->__pyx_outer_scope->__pyx_v_self->__pyx_base.__pyx_base.__pyx_vtab)->_raw_key(__pyx_cur_scope->__pyx_outer_scope->__pyx_v_self, ((PyObject*)__pyx_t_4), ((PyObject*)__pyx_t_5), 0); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 489, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_6);
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
     __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
@@ -9716,7 +9868,7 @@ static PyObject *__pyx_gb_4dawg_9BytesDAWG_8__init___2generator7(__pyx_Coroutine
     __Pyx_XGOTREF(__pyx_t_1);
     __pyx_t_2 = __pyx_cur_scope->__pyx_t_1;
     __pyx_t_3 = __pyx_cur_scope->__pyx_t_2;
-    if (unlikely(!__pyx_sent_value)) __PYX_ERR(0, 483, __pyx_L1_error)
+    if (unlikely(!__pyx_sent_value)) __PYX_ERR(0, 489, __pyx_L1_error)
   }
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   CYTHON_MAYBE_UNUSED_VAR(__pyx_cur_scope);
@@ -9741,7 +9893,7 @@ static PyObject *__pyx_gb_4dawg_9BytesDAWG_8__init___2generator7(__pyx_Coroutine
   return __pyx_r;
 }
 
-/* "dawg.pyx":473
+/* "dawg.pyx":479
  *     cdef Completer* _completer
  * 
  *     def __init__(self, arg=None, input_is_sorted=False, bytes payload_separator=PAYLOAD_SEPARATOR):             # <<<<<<<<<<<<<<
@@ -9767,7 +9919,7 @@ static int __pyx_pf_4dawg_9BytesDAWG___init__(struct __pyx_obj_4dawg_BytesDAWG *
   if (unlikely(!__pyx_cur_scope)) {
     __pyx_cur_scope = ((struct __pyx_obj_4dawg___pyx_scope_struct_4___init__ *)Py_None);
     __Pyx_INCREF(Py_None);
-    __PYX_ERR(0, 473, __pyx_L1_error)
+    __PYX_ERR(0, 479, __pyx_L1_error)
   } else {
     __Pyx_GOTREF(__pyx_cur_scope);
   }
@@ -9778,7 +9930,7 @@ static int __pyx_pf_4dawg_9BytesDAWG___init__(struct __pyx_obj_4dawg_BytesDAWG *
   __Pyx_INCREF(__pyx_cur_scope->__pyx_v_arg);
   __Pyx_GIVEREF(__pyx_cur_scope->__pyx_v_arg);
 
-  /* "dawg.pyx":477
+  /* "dawg.pyx":483
  *         ``arg`` must be an iterable of tuples (unicode_key, bytes_payload).
  *         """
  *         if arg is None:             # <<<<<<<<<<<<<<
@@ -9789,21 +9941,21 @@ static int __pyx_pf_4dawg_9BytesDAWG___init__(struct __pyx_obj_4dawg_BytesDAWG *
   __pyx_t_2 = (__pyx_t_1 != 0);
   if (__pyx_t_2) {
 
-    /* "dawg.pyx":478
+    /* "dawg.pyx":484
  *         """
  *         if arg is None:
  *             arg = []             # <<<<<<<<<<<<<<
  * 
  *         self._b_payload_separator = payload_separator
  */
-    __pyx_t_3 = PyList_New(0); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 478, __pyx_L1_error)
+    __pyx_t_3 = PyList_New(0); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 484, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
     __Pyx_GOTREF(__pyx_cur_scope->__pyx_v_arg);
     __Pyx_DECREF_SET(__pyx_cur_scope->__pyx_v_arg, __pyx_t_3);
     __Pyx_GIVEREF(__pyx_t_3);
     __pyx_t_3 = 0;
 
-    /* "dawg.pyx":477
+    /* "dawg.pyx":483
  *         ``arg`` must be an iterable of tuples (unicode_key, bytes_payload).
  *         """
  *         if arg is None:             # <<<<<<<<<<<<<<
@@ -9812,7 +9964,7 @@ static int __pyx_pf_4dawg_9BytesDAWG___init__(struct __pyx_obj_4dawg_BytesDAWG *
  */
   }
 
-  /* "dawg.pyx":480
+  /* "dawg.pyx":486
  *             arg = []
  * 
  *         self._b_payload_separator = payload_separator             # <<<<<<<<<<<<<<
@@ -9825,36 +9977,36 @@ static int __pyx_pf_4dawg_9BytesDAWG___init__(struct __pyx_obj_4dawg_BytesDAWG *
   __Pyx_DECREF(__pyx_cur_scope->__pyx_v_self->_b_payload_separator);
   __pyx_cur_scope->__pyx_v_self->_b_payload_separator = __pyx_v_payload_separator;
 
-  /* "dawg.pyx":481
+  /* "dawg.pyx":487
  * 
  *         self._b_payload_separator = payload_separator
  *         self._c_payload_separator = <unsigned int>ord(payload_separator)             # <<<<<<<<<<<<<<
  * 
  *         keys = (self._raw_key(d[0], d[1]) for d in arg)
  */
-  __pyx_t_4 = __Pyx_PyObject_Ord(__pyx_v_payload_separator); if (unlikely(__pyx_t_4 == ((long)(long)(Py_UCS4)-1))) __PYX_ERR(0, 481, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyObject_Ord(__pyx_v_payload_separator); if (unlikely(__pyx_t_4 == ((long)(long)(Py_UCS4)-1))) __PYX_ERR(0, 487, __pyx_L1_error)
   __pyx_cur_scope->__pyx_v_self->_c_payload_separator = ((unsigned int)__pyx_t_4);
 
-  /* "dawg.pyx":483
+  /* "dawg.pyx":489
  *         self._c_payload_separator = <unsigned int>ord(payload_separator)
  * 
  *         keys = (self._raw_key(d[0], d[1]) for d in arg)             # <<<<<<<<<<<<<<
  *         super(BytesDAWG, self).__init__(keys, input_is_sorted)
  * 
  */
-  __pyx_t_3 = __pyx_pf_4dawg_9BytesDAWG_8__init___genexpr(((PyObject*)__pyx_cur_scope)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 483, __pyx_L1_error)
+  __pyx_t_3 = __pyx_pf_4dawg_9BytesDAWG_8__init___genexpr(((PyObject*)__pyx_cur_scope)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 489, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __pyx_v_keys = __pyx_t_3;
   __pyx_t_3 = 0;
 
-  /* "dawg.pyx":484
+  /* "dawg.pyx":490
  * 
  *         keys = (self._raw_key(d[0], d[1]) for d in arg)
  *         super(BytesDAWG, self).__init__(keys, input_is_sorted)             # <<<<<<<<<<<<<<
  * 
  *         self._update_completer()
  */
-  __pyx_t_5 = PyTuple_New(2); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 484, __pyx_L1_error)
+  __pyx_t_5 = PyTuple_New(2); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 490, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
   __Pyx_INCREF(((PyObject *)__pyx_ptype_4dawg_BytesDAWG));
   __Pyx_GIVEREF(((PyObject *)__pyx_ptype_4dawg_BytesDAWG));
@@ -9862,10 +10014,10 @@ static int __pyx_pf_4dawg_9BytesDAWG___init__(struct __pyx_obj_4dawg_BytesDAWG *
   __Pyx_INCREF(((PyObject *)__pyx_cur_scope->__pyx_v_self));
   __Pyx_GIVEREF(((PyObject *)__pyx_cur_scope->__pyx_v_self));
   PyTuple_SET_ITEM(__pyx_t_5, 1, ((PyObject *)__pyx_cur_scope->__pyx_v_self));
-  __pyx_t_6 = __Pyx_PyObject_Call(__pyx_builtin_super, __pyx_t_5, NULL); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 484, __pyx_L1_error)
+  __pyx_t_6 = __Pyx_PyObject_Call(__pyx_builtin_super, __pyx_t_5, NULL); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 490, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_6);
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-  __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_t_6, __pyx_n_s_init); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 484, __pyx_L1_error)
+  __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_t_6, __pyx_n_s_init); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 490, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
   __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
   __pyx_t_6 = NULL;
@@ -9883,7 +10035,7 @@ static int __pyx_pf_4dawg_9BytesDAWG___init__(struct __pyx_obj_4dawg_BytesDAWG *
   #if CYTHON_FAST_PYCALL
   if (PyFunction_Check(__pyx_t_5)) {
     PyObject *__pyx_temp[3] = {__pyx_t_6, __pyx_v_keys, __pyx_v_input_is_sorted};
-    __pyx_t_3 = __Pyx_PyFunction_FastCall(__pyx_t_5, __pyx_temp+1-__pyx_t_7, 2+__pyx_t_7); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 484, __pyx_L1_error)
+    __pyx_t_3 = __Pyx_PyFunction_FastCall(__pyx_t_5, __pyx_temp+1-__pyx_t_7, 2+__pyx_t_7); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 490, __pyx_L1_error)
     __Pyx_XDECREF(__pyx_t_6); __pyx_t_6 = 0;
     __Pyx_GOTREF(__pyx_t_3);
   } else
@@ -9891,13 +10043,13 @@ static int __pyx_pf_4dawg_9BytesDAWG___init__(struct __pyx_obj_4dawg_BytesDAWG *
   #if CYTHON_FAST_PYCCALL
   if (__Pyx_PyFastCFunction_Check(__pyx_t_5)) {
     PyObject *__pyx_temp[3] = {__pyx_t_6, __pyx_v_keys, __pyx_v_input_is_sorted};
-    __pyx_t_3 = __Pyx_PyCFunction_FastCall(__pyx_t_5, __pyx_temp+1-__pyx_t_7, 2+__pyx_t_7); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 484, __pyx_L1_error)
+    __pyx_t_3 = __Pyx_PyCFunction_FastCall(__pyx_t_5, __pyx_temp+1-__pyx_t_7, 2+__pyx_t_7); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 490, __pyx_L1_error)
     __Pyx_XDECREF(__pyx_t_6); __pyx_t_6 = 0;
     __Pyx_GOTREF(__pyx_t_3);
   } else
   #endif
   {
-    __pyx_t_8 = PyTuple_New(2+__pyx_t_7); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 484, __pyx_L1_error)
+    __pyx_t_8 = PyTuple_New(2+__pyx_t_7); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 490, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_8);
     if (__pyx_t_6) {
       __Pyx_GIVEREF(__pyx_t_6); PyTuple_SET_ITEM(__pyx_t_8, 0, __pyx_t_6); __pyx_t_6 = NULL;
@@ -9908,25 +10060,25 @@ static int __pyx_pf_4dawg_9BytesDAWG___init__(struct __pyx_obj_4dawg_BytesDAWG *
     __Pyx_INCREF(__pyx_v_input_is_sorted);
     __Pyx_GIVEREF(__pyx_v_input_is_sorted);
     PyTuple_SET_ITEM(__pyx_t_8, 1+__pyx_t_7, __pyx_v_input_is_sorted);
-    __pyx_t_3 = __Pyx_PyObject_Call(__pyx_t_5, __pyx_t_8, NULL); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 484, __pyx_L1_error)
+    __pyx_t_3 = __Pyx_PyObject_Call(__pyx_t_5, __pyx_t_8, NULL); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 490, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
     __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
   }
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "dawg.pyx":486
+  /* "dawg.pyx":492
  *         super(BytesDAWG, self).__init__(keys, input_is_sorted)
  * 
  *         self._update_completer()             # <<<<<<<<<<<<<<
  * 
  *     def __dealloc__(self):
  */
-  __pyx_t_3 = ((struct __pyx_vtabstruct_4dawg_BytesDAWG *)__pyx_cur_scope->__pyx_v_self->__pyx_base.__pyx_base.__pyx_vtab)->_update_completer(__pyx_cur_scope->__pyx_v_self); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 486, __pyx_L1_error)
+  __pyx_t_3 = ((struct __pyx_vtabstruct_4dawg_BytesDAWG *)__pyx_cur_scope->__pyx_v_self->__pyx_base.__pyx_base.__pyx_vtab)->_update_completer(__pyx_cur_scope->__pyx_v_self); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 492, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "dawg.pyx":473
+  /* "dawg.pyx":479
  *     cdef Completer* _completer
  * 
  *     def __init__(self, arg=None, input_is_sorted=False, bytes payload_separator=PAYLOAD_SEPARATOR):             # <<<<<<<<<<<<<<
@@ -9951,7 +10103,7 @@ static int __pyx_pf_4dawg_9BytesDAWG___init__(struct __pyx_obj_4dawg_BytesDAWG *
   return __pyx_r;
 }
 
-/* "dawg.pyx":488
+/* "dawg.pyx":494
  *         self._update_completer()
  * 
  *     def __dealloc__(self):             # <<<<<<<<<<<<<<
@@ -9975,7 +10127,7 @@ static void __pyx_pf_4dawg_9BytesDAWG_2__dealloc__(struct __pyx_obj_4dawg_BytesD
   int __pyx_t_1;
   __Pyx_RefNannySetupContext("__dealloc__", 0);
 
-  /* "dawg.pyx":489
+  /* "dawg.pyx":495
  * 
  *     def __dealloc__(self):
  *         if self._completer:             # <<<<<<<<<<<<<<
@@ -9985,7 +10137,7 @@ static void __pyx_pf_4dawg_9BytesDAWG_2__dealloc__(struct __pyx_obj_4dawg_BytesD
   __pyx_t_1 = (__pyx_v_self->_completer != 0);
   if (__pyx_t_1) {
 
-    /* "dawg.pyx":490
+    /* "dawg.pyx":496
  *     def __dealloc__(self):
  *         if self._completer:
  *             del self._completer             # <<<<<<<<<<<<<<
@@ -9994,7 +10146,7 @@ static void __pyx_pf_4dawg_9BytesDAWG_2__dealloc__(struct __pyx_obj_4dawg_BytesD
  */
     delete __pyx_v_self->_completer;
 
-    /* "dawg.pyx":489
+    /* "dawg.pyx":495
  * 
  *     def __dealloc__(self):
  *         if self._completer:             # <<<<<<<<<<<<<<
@@ -10003,7 +10155,7 @@ static void __pyx_pf_4dawg_9BytesDAWG_2__dealloc__(struct __pyx_obj_4dawg_BytesD
  */
   }
 
-  /* "dawg.pyx":488
+  /* "dawg.pyx":494
  *         self._update_completer()
  * 
  *     def __dealloc__(self):             # <<<<<<<<<<<<<<
@@ -10015,7 +10167,7 @@ static void __pyx_pf_4dawg_9BytesDAWG_2__dealloc__(struct __pyx_obj_4dawg_BytesD
   __Pyx_RefNannyFinishContext();
 }
 
-/* "dawg.pyx":492
+/* "dawg.pyx":498
  *             del self._completer
  * 
  *     cpdef bytes _raw_key(self, unicode key, bytes payload):             # <<<<<<<<<<<<<<
@@ -10049,7 +10201,7 @@ static PyObject *__pyx_f_4dawg_9BytesDAWG__raw_key(struct __pyx_obj_4dawg_BytesD
     if (unlikely(!__Pyx_object_dict_version_matches(((PyObject *)__pyx_v_self), __pyx_tp_dict_version, __pyx_obj_dict_version))) {
       PY_UINT64_T __pyx_type_dict_guard = __Pyx_get_tp_dict_version(((PyObject *)__pyx_v_self));
       #endif
-      __pyx_t_1 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_raw_key); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 492, __pyx_L1_error)
+      __pyx_t_1 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_raw_key); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 498, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_1);
       if (!PyCFunction_Check(__pyx_t_1) || (PyCFunction_GET_FUNCTION(__pyx_t_1) != (PyCFunction)(void*)__pyx_pw_4dawg_9BytesDAWG_5_raw_key)) {
         __Pyx_XDECREF(__pyx_r);
@@ -10069,7 +10221,7 @@ static PyObject *__pyx_f_4dawg_9BytesDAWG__raw_key(struct __pyx_obj_4dawg_BytesD
         #if CYTHON_FAST_PYCALL
         if (PyFunction_Check(__pyx_t_3)) {
           PyObject *__pyx_temp[3] = {__pyx_t_4, __pyx_v_key, __pyx_v_payload};
-          __pyx_t_2 = __Pyx_PyFunction_FastCall(__pyx_t_3, __pyx_temp+1-__pyx_t_5, 2+__pyx_t_5); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 492, __pyx_L1_error)
+          __pyx_t_2 = __Pyx_PyFunction_FastCall(__pyx_t_3, __pyx_temp+1-__pyx_t_5, 2+__pyx_t_5); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 498, __pyx_L1_error)
           __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
           __Pyx_GOTREF(__pyx_t_2);
         } else
@@ -10077,13 +10229,13 @@ static PyObject *__pyx_f_4dawg_9BytesDAWG__raw_key(struct __pyx_obj_4dawg_BytesD
         #if CYTHON_FAST_PYCCALL
         if (__Pyx_PyFastCFunction_Check(__pyx_t_3)) {
           PyObject *__pyx_temp[3] = {__pyx_t_4, __pyx_v_key, __pyx_v_payload};
-          __pyx_t_2 = __Pyx_PyCFunction_FastCall(__pyx_t_3, __pyx_temp+1-__pyx_t_5, 2+__pyx_t_5); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 492, __pyx_L1_error)
+          __pyx_t_2 = __Pyx_PyCFunction_FastCall(__pyx_t_3, __pyx_temp+1-__pyx_t_5, 2+__pyx_t_5); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 498, __pyx_L1_error)
           __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
           __Pyx_GOTREF(__pyx_t_2);
         } else
         #endif
         {
-          __pyx_t_6 = PyTuple_New(2+__pyx_t_5); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 492, __pyx_L1_error)
+          __pyx_t_6 = PyTuple_New(2+__pyx_t_5); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 498, __pyx_L1_error)
           __Pyx_GOTREF(__pyx_t_6);
           if (__pyx_t_4) {
             __Pyx_GIVEREF(__pyx_t_4); PyTuple_SET_ITEM(__pyx_t_6, 0, __pyx_t_4); __pyx_t_4 = NULL;
@@ -10094,12 +10246,12 @@ static PyObject *__pyx_f_4dawg_9BytesDAWG__raw_key(struct __pyx_obj_4dawg_BytesD
           __Pyx_INCREF(__pyx_v_payload);
           __Pyx_GIVEREF(__pyx_v_payload);
           PyTuple_SET_ITEM(__pyx_t_6, 1+__pyx_t_5, __pyx_v_payload);
-          __pyx_t_2 = __Pyx_PyObject_Call(__pyx_t_3, __pyx_t_6, NULL); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 492, __pyx_L1_error)
+          __pyx_t_2 = __Pyx_PyObject_Call(__pyx_t_3, __pyx_t_6, NULL); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 498, __pyx_L1_error)
           __Pyx_GOTREF(__pyx_t_2);
           __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
         }
         __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-        if (!(likely(PyBytes_CheckExact(__pyx_t_2))||((__pyx_t_2) == Py_None)||(PyErr_Format(PyExc_TypeError, "Expected %.16s, got %.200s", "bytes", Py_TYPE(__pyx_t_2)->tp_name), 0))) __PYX_ERR(0, 492, __pyx_L1_error)
+        if (!(likely(PyBytes_CheckExact(__pyx_t_2))||((__pyx_t_2) == Py_None)||(PyErr_Format(PyExc_TypeError, "Expected %.16s, got %.200s", "bytes", Py_TYPE(__pyx_t_2)->tp_name), 0))) __PYX_ERR(0, 498, __pyx_L1_error)
         __pyx_r = ((PyObject*)__pyx_t_2);
         __pyx_t_2 = 0;
         __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
@@ -10118,7 +10270,7 @@ static PyObject *__pyx_f_4dawg_9BytesDAWG__raw_key(struct __pyx_obj_4dawg_BytesD
     #endif
   }
 
-  /* "dawg.pyx":493
+  /* "dawg.pyx":499
  * 
  *     cpdef bytes _raw_key(self, unicode key, bytes payload):
  *         cdef bytes b_key = <bytes>key.encode('utf8')             # <<<<<<<<<<<<<<
@@ -10127,9 +10279,9 @@ static PyObject *__pyx_f_4dawg_9BytesDAWG__raw_key(struct __pyx_obj_4dawg_BytesD
  */
   if (unlikely(__pyx_v_key == Py_None)) {
     PyErr_Format(PyExc_AttributeError, "'NoneType' object has no attribute '%.30s'", "encode");
-    __PYX_ERR(0, 493, __pyx_L1_error)
+    __PYX_ERR(0, 499, __pyx_L1_error)
   }
-  __pyx_t_1 = PyUnicode_AsUTF8String(__pyx_v_key); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 493, __pyx_L1_error)
+  __pyx_t_1 = PyUnicode_AsUTF8String(__pyx_v_key); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 499, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_t_2 = __pyx_t_1;
   __Pyx_INCREF(__pyx_t_2);
@@ -10137,27 +10289,27 @@ static PyObject *__pyx_f_4dawg_9BytesDAWG__raw_key(struct __pyx_obj_4dawg_BytesD
   __pyx_v_b_key = ((PyObject*)__pyx_t_2);
   __pyx_t_2 = 0;
 
-  /* "dawg.pyx":495
+  /* "dawg.pyx":501
  *         cdef bytes b_key = <bytes>key.encode('utf8')
  * 
  *         if self._b_payload_separator in b_key:             # <<<<<<<<<<<<<<
  *             raise Error("Payload separator (%r) is found within utf8-encoded key ('%s')" % (self._b_payload_separator, key))
  * 
  */
-  __pyx_t_7 = (__Pyx_PySequence_ContainsTF(__pyx_v_self->_b_payload_separator, __pyx_v_b_key, Py_EQ)); if (unlikely(__pyx_t_7 < 0)) __PYX_ERR(0, 495, __pyx_L1_error)
+  __pyx_t_7 = (__Pyx_PySequence_ContainsTF(__pyx_v_self->_b_payload_separator, __pyx_v_b_key, Py_EQ)); if (unlikely(__pyx_t_7 < 0)) __PYX_ERR(0, 501, __pyx_L1_error)
   __pyx_t_8 = (__pyx_t_7 != 0);
   if (unlikely(__pyx_t_8)) {
 
-    /* "dawg.pyx":496
+    /* "dawg.pyx":502
  * 
  *         if self._b_payload_separator in b_key:
  *             raise Error("Payload separator (%r) is found within utf8-encoded key ('%s')" % (self._b_payload_separator, key))             # <<<<<<<<<<<<<<
  * 
  *         cdef bytes encoded_payload = b2a_base64(payload)
  */
-    __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_Error); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 496, __pyx_L1_error)
+    __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_Error); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 502, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
-    __pyx_t_3 = PyTuple_New(5); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 496, __pyx_L1_error)
+    __pyx_t_3 = PyTuple_New(5); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 502, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
     __pyx_t_9 = 0;
     __pyx_t_10 = 127;
@@ -10165,7 +10317,7 @@ static PyObject *__pyx_f_4dawg_9BytesDAWG__raw_key(struct __pyx_obj_4dawg_BytesD
     __pyx_t_9 += 19;
     __Pyx_GIVEREF(__pyx_kp_u_Payload_separator);
     PyTuple_SET_ITEM(__pyx_t_3, 0, __pyx_kp_u_Payload_separator);
-    __pyx_t_6 = __Pyx_PyObject_FormatSimpleAndDecref(PyObject_Repr(__pyx_v_self->_b_payload_separator), __pyx_empty_unicode); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 496, __pyx_L1_error)
+    __pyx_t_6 = __Pyx_PyObject_FormatSimpleAndDecref(PyObject_Repr(__pyx_v_self->_b_payload_separator), __pyx_empty_unicode); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 502, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_6);
     __pyx_t_10 = (__Pyx_PyUnicode_MAX_CHAR_VALUE(__pyx_t_6) > __pyx_t_10) ? __Pyx_PyUnicode_MAX_CHAR_VALUE(__pyx_t_6) : __pyx_t_10;
     __pyx_t_9 += __Pyx_PyUnicode_GET_LENGTH(__pyx_t_6);
@@ -10176,7 +10328,7 @@ static PyObject *__pyx_f_4dawg_9BytesDAWG__raw_key(struct __pyx_obj_4dawg_BytesD
     __pyx_t_9 += 37;
     __Pyx_GIVEREF(__pyx_kp_u_is_found_within_utf8_encoded_ke);
     PyTuple_SET_ITEM(__pyx_t_3, 2, __pyx_kp_u_is_found_within_utf8_encoded_ke);
-    __pyx_t_6 = __Pyx_PyUnicode_Unicode(__pyx_v_key); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 496, __pyx_L1_error)
+    __pyx_t_6 = __Pyx_PyUnicode_Unicode(__pyx_v_key); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 502, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_6);
     __pyx_t_10 = (__Pyx_PyUnicode_MAX_CHAR_VALUE(__pyx_t_6) > __pyx_t_10) ? __Pyx_PyUnicode_MAX_CHAR_VALUE(__pyx_t_6) : __pyx_t_10;
     __pyx_t_9 += __Pyx_PyUnicode_GET_LENGTH(__pyx_t_6);
@@ -10187,7 +10339,7 @@ static PyObject *__pyx_f_4dawg_9BytesDAWG__raw_key(struct __pyx_obj_4dawg_BytesD
     __pyx_t_9 += 2;
     __Pyx_GIVEREF(__pyx_kp_u__11);
     PyTuple_SET_ITEM(__pyx_t_3, 4, __pyx_kp_u__11);
-    __pyx_t_6 = __Pyx_PyUnicode_Join(__pyx_t_3, 5, __pyx_t_9, __pyx_t_10); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 496, __pyx_L1_error)
+    __pyx_t_6 = __Pyx_PyUnicode_Join(__pyx_t_3, 5, __pyx_t_9, __pyx_t_10); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 502, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_6);
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
     __pyx_t_3 = NULL;
@@ -10203,14 +10355,14 @@ static PyObject *__pyx_f_4dawg_9BytesDAWG__raw_key(struct __pyx_obj_4dawg_BytesD
     __pyx_t_2 = (__pyx_t_3) ? __Pyx_PyObject_Call2Args(__pyx_t_1, __pyx_t_3, __pyx_t_6) : __Pyx_PyObject_CallOneArg(__pyx_t_1, __pyx_t_6);
     __Pyx_XDECREF(__pyx_t_3); __pyx_t_3 = 0;
     __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
-    if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 496, __pyx_L1_error)
+    if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 502, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
     __Pyx_Raise(__pyx_t_2, 0, 0, 0);
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-    __PYX_ERR(0, 496, __pyx_L1_error)
+    __PYX_ERR(0, 502, __pyx_L1_error)
 
-    /* "dawg.pyx":495
+    /* "dawg.pyx":501
  *         cdef bytes b_key = <bytes>key.encode('utf8')
  * 
  *         if self._b_payload_separator in b_key:             # <<<<<<<<<<<<<<
@@ -10219,14 +10371,14 @@ static PyObject *__pyx_f_4dawg_9BytesDAWG__raw_key(struct __pyx_obj_4dawg_BytesD
  */
   }
 
-  /* "dawg.pyx":498
+  /* "dawg.pyx":504
  *             raise Error("Payload separator (%r) is found within utf8-encoded key ('%s')" % (self._b_payload_separator, key))
  * 
  *         cdef bytes encoded_payload = b2a_base64(payload)             # <<<<<<<<<<<<<<
  *         return b_key + self._b_payload_separator + encoded_payload
  * 
  */
-  __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_b2a_base64); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 498, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_b2a_base64); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 504, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_t_6 = NULL;
   if (CYTHON_UNPACK_METHODS && unlikely(PyMethod_Check(__pyx_t_1))) {
@@ -10240,14 +10392,14 @@ static PyObject *__pyx_f_4dawg_9BytesDAWG__raw_key(struct __pyx_obj_4dawg_BytesD
   }
   __pyx_t_2 = (__pyx_t_6) ? __Pyx_PyObject_Call2Args(__pyx_t_1, __pyx_t_6, __pyx_v_payload) : __Pyx_PyObject_CallOneArg(__pyx_t_1, __pyx_v_payload);
   __Pyx_XDECREF(__pyx_t_6); __pyx_t_6 = 0;
-  if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 498, __pyx_L1_error)
+  if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 504, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  if (!(likely(PyBytes_CheckExact(__pyx_t_2))||((__pyx_t_2) == Py_None)||(PyErr_Format(PyExc_TypeError, "Expected %.16s, got %.200s", "bytes", Py_TYPE(__pyx_t_2)->tp_name), 0))) __PYX_ERR(0, 498, __pyx_L1_error)
+  if (!(likely(PyBytes_CheckExact(__pyx_t_2))||((__pyx_t_2) == Py_None)||(PyErr_Format(PyExc_TypeError, "Expected %.16s, got %.200s", "bytes", Py_TYPE(__pyx_t_2)->tp_name), 0))) __PYX_ERR(0, 504, __pyx_L1_error)
   __pyx_v_encoded_payload = ((PyObject*)__pyx_t_2);
   __pyx_t_2 = 0;
 
-  /* "dawg.pyx":499
+  /* "dawg.pyx":505
  * 
  *         cdef bytes encoded_payload = b2a_base64(payload)
  *         return b_key + self._b_payload_separator + encoded_payload             # <<<<<<<<<<<<<<
@@ -10255,16 +10407,16 @@ static PyObject *__pyx_f_4dawg_9BytesDAWG__raw_key(struct __pyx_obj_4dawg_BytesD
  *     cdef _update_completer(self):
  */
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_2 = PyNumber_Add(__pyx_v_b_key, __pyx_v_self->_b_payload_separator); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 499, __pyx_L1_error)
+  __pyx_t_2 = PyNumber_Add(__pyx_v_b_key, __pyx_v_self->_b_payload_separator); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 505, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_1 = PyNumber_Add(__pyx_t_2, __pyx_v_encoded_payload); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 499, __pyx_L1_error)
+  __pyx_t_1 = PyNumber_Add(__pyx_t_2, __pyx_v_encoded_payload); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 505, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __pyx_r = ((PyObject*)__pyx_t_1);
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "dawg.pyx":492
+  /* "dawg.pyx":498
  *             del self._completer
  * 
  *     cpdef bytes _raw_key(self, unicode key, bytes payload):             # <<<<<<<<<<<<<<
@@ -10321,11 +10473,11 @@ static PyObject *__pyx_pw_4dawg_9BytesDAWG_5_raw_key(PyObject *__pyx_v_self, PyO
         case  1:
         if (likely((values[1] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_payload)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("_raw_key", 1, 2, 2, 1); __PYX_ERR(0, 492, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("_raw_key", 1, 2, 2, 1); __PYX_ERR(0, 498, __pyx_L3_error)
         }
       }
       if (unlikely(kw_args > 0)) {
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "_raw_key") < 0)) __PYX_ERR(0, 492, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "_raw_key") < 0)) __PYX_ERR(0, 498, __pyx_L3_error)
       }
     } else if (PyTuple_GET_SIZE(__pyx_args) != 2) {
       goto __pyx_L5_argtuple_error;
@@ -10338,14 +10490,14 @@ static PyObject *__pyx_pw_4dawg_9BytesDAWG_5_raw_key(PyObject *__pyx_v_self, PyO
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("_raw_key", 1, 2, 2, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 492, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("_raw_key", 1, 2, 2, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 498, __pyx_L3_error)
   __pyx_L3_error:;
   __Pyx_AddTraceback("dawg.BytesDAWG._raw_key", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_key), (&PyUnicode_Type), 1, "key", 1))) __PYX_ERR(0, 492, __pyx_L1_error)
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_payload), (&PyBytes_Type), 1, "payload", 1))) __PYX_ERR(0, 492, __pyx_L1_error)
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_key), (&PyUnicode_Type), 1, "key", 1))) __PYX_ERR(0, 498, __pyx_L1_error)
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_payload), (&PyBytes_Type), 1, "payload", 1))) __PYX_ERR(0, 498, __pyx_L1_error)
   __pyx_r = __pyx_pf_4dawg_9BytesDAWG_4_raw_key(((struct __pyx_obj_4dawg_BytesDAWG *)__pyx_v_self), __pyx_v_key, __pyx_v_payload);
 
   /* function exit code */
@@ -10363,7 +10515,7 @@ static PyObject *__pyx_pf_4dawg_9BytesDAWG_4_raw_key(struct __pyx_obj_4dawg_Byte
   PyObject *__pyx_t_1 = NULL;
   __Pyx_RefNannySetupContext("_raw_key", 0);
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = __pyx_f_4dawg_9BytesDAWG__raw_key(__pyx_v_self, __pyx_v_key, __pyx_v_payload, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 492, __pyx_L1_error)
+  __pyx_t_1 = __pyx_f_4dawg_9BytesDAWG__raw_key(__pyx_v_self, __pyx_v_key, __pyx_v_payload, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 498, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
@@ -10380,7 +10532,7 @@ static PyObject *__pyx_pf_4dawg_9BytesDAWG_4_raw_key(struct __pyx_obj_4dawg_Byte
   return __pyx_r;
 }
 
-/* "dawg.pyx":501
+/* "dawg.pyx":507
  *         return b_key + self._b_payload_separator + encoded_payload
  * 
  *     cdef _update_completer(self):             # <<<<<<<<<<<<<<
@@ -10394,7 +10546,7 @@ static PyObject *__pyx_f_4dawg_9BytesDAWG__update_completer(struct __pyx_obj_4da
   int __pyx_t_1;
   __Pyx_RefNannySetupContext("_update_completer", 0);
 
-  /* "dawg.pyx":502
+  /* "dawg.pyx":508
  * 
  *     cdef _update_completer(self):
  *         if self._completer:             # <<<<<<<<<<<<<<
@@ -10404,7 +10556,7 @@ static PyObject *__pyx_f_4dawg_9BytesDAWG__update_completer(struct __pyx_obj_4da
   __pyx_t_1 = (__pyx_v_self->_completer != 0);
   if (__pyx_t_1) {
 
-    /* "dawg.pyx":503
+    /* "dawg.pyx":509
  *     cdef _update_completer(self):
  *         if self._completer:
  *             del self._completer             # <<<<<<<<<<<<<<
@@ -10413,7 +10565,7 @@ static PyObject *__pyx_f_4dawg_9BytesDAWG__update_completer(struct __pyx_obj_4da
  */
     delete __pyx_v_self->_completer;
 
-    /* "dawg.pyx":502
+    /* "dawg.pyx":508
  * 
  *     cdef _update_completer(self):
  *         if self._completer:             # <<<<<<<<<<<<<<
@@ -10422,7 +10574,7 @@ static PyObject *__pyx_f_4dawg_9BytesDAWG__update_completer(struct __pyx_obj_4da
  */
   }
 
-  /* "dawg.pyx":504
+  /* "dawg.pyx":510
  *         if self._completer:
  *             del self._completer
  *         self._completer = new Completer(self.dct, self.guide)             # <<<<<<<<<<<<<<
@@ -10431,7 +10583,7 @@ static PyObject *__pyx_f_4dawg_9BytesDAWG__update_completer(struct __pyx_obj_4da
  */
   __pyx_v_self->_completer = new dawgdic::Completer(__pyx_v_self->__pyx_base.__pyx_base.dct, __pyx_v_self->__pyx_base.guide);
 
-  /* "dawg.pyx":501
+  /* "dawg.pyx":507
  *         return b_key + self._b_payload_separator + encoded_payload
  * 
  *     cdef _update_completer(self):             # <<<<<<<<<<<<<<
@@ -10446,7 +10598,7 @@ static PyObject *__pyx_f_4dawg_9BytesDAWG__update_completer(struct __pyx_obj_4da
   return __pyx_r;
 }
 
-/* "dawg.pyx":506
+/* "dawg.pyx":512
  *         self._completer = new Completer(self.dct, self.guide)
  * 
  *     def load(self, path):             # <<<<<<<<<<<<<<
@@ -10477,14 +10629,14 @@ static PyObject *__pyx_pf_4dawg_9BytesDAWG_6load(struct __pyx_obj_4dawg_BytesDAW
   PyObject *__pyx_t_3 = NULL;
   __Pyx_RefNannySetupContext("load", 0);
 
-  /* "dawg.pyx":507
+  /* "dawg.pyx":513
  * 
  *     def load(self, path):
  *         res = super(BytesDAWG, self).load(path)             # <<<<<<<<<<<<<<
  *         self._update_completer()
  *         return res
  */
-  __pyx_t_2 = PyTuple_New(2); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 507, __pyx_L1_error)
+  __pyx_t_2 = PyTuple_New(2); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 513, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_INCREF(((PyObject *)__pyx_ptype_4dawg_BytesDAWG));
   __Pyx_GIVEREF(((PyObject *)__pyx_ptype_4dawg_BytesDAWG));
@@ -10492,10 +10644,10 @@ static PyObject *__pyx_pf_4dawg_9BytesDAWG_6load(struct __pyx_obj_4dawg_BytesDAW
   __Pyx_INCREF(((PyObject *)__pyx_v_self));
   __Pyx_GIVEREF(((PyObject *)__pyx_v_self));
   PyTuple_SET_ITEM(__pyx_t_2, 1, ((PyObject *)__pyx_v_self));
-  __pyx_t_3 = __Pyx_PyObject_Call(__pyx_builtin_super, __pyx_t_2, NULL); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 507, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyObject_Call(__pyx_builtin_super, __pyx_t_2, NULL); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 513, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_load); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 507, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_load); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 513, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __pyx_t_3 = NULL;
@@ -10510,24 +10662,24 @@ static PyObject *__pyx_pf_4dawg_9BytesDAWG_6load(struct __pyx_obj_4dawg_BytesDAW
   }
   __pyx_t_1 = (__pyx_t_3) ? __Pyx_PyObject_Call2Args(__pyx_t_2, __pyx_t_3, __pyx_v_path) : __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_v_path);
   __Pyx_XDECREF(__pyx_t_3); __pyx_t_3 = 0;
-  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 507, __pyx_L1_error)
+  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 513, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __pyx_v_res = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "dawg.pyx":508
+  /* "dawg.pyx":514
  *     def load(self, path):
  *         res = super(BytesDAWG, self).load(path)
  *         self._update_completer()             # <<<<<<<<<<<<<<
  *         return res
  * 
  */
-  __pyx_t_1 = ((struct __pyx_vtabstruct_4dawg_BytesDAWG *)__pyx_v_self->__pyx_base.__pyx_base.__pyx_vtab)->_update_completer(__pyx_v_self); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 508, __pyx_L1_error)
+  __pyx_t_1 = ((struct __pyx_vtabstruct_4dawg_BytesDAWG *)__pyx_v_self->__pyx_base.__pyx_base.__pyx_vtab)->_update_completer(__pyx_v_self); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 514, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "dawg.pyx":509
+  /* "dawg.pyx":515
  *         res = super(BytesDAWG, self).load(path)
  *         self._update_completer()
  *         return res             # <<<<<<<<<<<<<<
@@ -10539,7 +10691,7 @@ static PyObject *__pyx_pf_4dawg_9BytesDAWG_6load(struct __pyx_obj_4dawg_BytesDAW
   __pyx_r = __pyx_v_res;
   goto __pyx_L0;
 
-  /* "dawg.pyx":506
+  /* "dawg.pyx":512
  *         self._completer = new Completer(self.dct, self.guide)
  * 
  *     def load(self, path):             # <<<<<<<<<<<<<<
@@ -10561,7 +10713,7 @@ static PyObject *__pyx_pf_4dawg_9BytesDAWG_6load(struct __pyx_obj_4dawg_BytesDAW
   return __pyx_r;
 }
 
-/* "dawg.pyx":511
+/* "dawg.pyx":517
  *         return res
  * 
  *     cpdef frombytes(self, bytes data):             # <<<<<<<<<<<<<<
@@ -10588,7 +10740,7 @@ static PyObject *__pyx_f_4dawg_9BytesDAWG_frombytes(struct __pyx_obj_4dawg_Bytes
     if (unlikely(!__Pyx_object_dict_version_matches(((PyObject *)__pyx_v_self), __pyx_tp_dict_version, __pyx_obj_dict_version))) {
       PY_UINT64_T __pyx_type_dict_guard = __Pyx_get_tp_dict_version(((PyObject *)__pyx_v_self));
       #endif
-      __pyx_t_1 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_frombytes); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 511, __pyx_L1_error)
+      __pyx_t_1 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_frombytes); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 517, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_1);
       if (!PyCFunction_Check(__pyx_t_1) || (PyCFunction_GET_FUNCTION(__pyx_t_1) != (PyCFunction)(void*)__pyx_pw_4dawg_9BytesDAWG_9frombytes)) {
         __Pyx_XDECREF(__pyx_r);
@@ -10605,7 +10757,7 @@ static PyObject *__pyx_f_4dawg_9BytesDAWG_frombytes(struct __pyx_obj_4dawg_Bytes
         }
         __pyx_t_2 = (__pyx_t_4) ? __Pyx_PyObject_Call2Args(__pyx_t_3, __pyx_t_4, __pyx_v_data) : __Pyx_PyObject_CallOneArg(__pyx_t_3, __pyx_v_data);
         __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
-        if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 511, __pyx_L1_error)
+        if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 517, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_2);
         __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
         __pyx_r = __pyx_t_2;
@@ -10626,14 +10778,14 @@ static PyObject *__pyx_f_4dawg_9BytesDAWG_frombytes(struct __pyx_obj_4dawg_Bytes
     #endif
   }
 
-  /* "dawg.pyx":512
+  /* "dawg.pyx":518
  * 
  *     cpdef frombytes(self, bytes data):
  *         res = super(BytesDAWG, self).frombytes(data)             # <<<<<<<<<<<<<<
  *         self._update_completer()
  *         return res
  */
-  __pyx_t_2 = PyTuple_New(2); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 512, __pyx_L1_error)
+  __pyx_t_2 = PyTuple_New(2); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 518, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_INCREF(((PyObject *)__pyx_ptype_4dawg_BytesDAWG));
   __Pyx_GIVEREF(((PyObject *)__pyx_ptype_4dawg_BytesDAWG));
@@ -10641,10 +10793,10 @@ static PyObject *__pyx_f_4dawg_9BytesDAWG_frombytes(struct __pyx_obj_4dawg_Bytes
   __Pyx_INCREF(((PyObject *)__pyx_v_self));
   __Pyx_GIVEREF(((PyObject *)__pyx_v_self));
   PyTuple_SET_ITEM(__pyx_t_2, 1, ((PyObject *)__pyx_v_self));
-  __pyx_t_3 = __Pyx_PyObject_Call(__pyx_builtin_super, __pyx_t_2, NULL); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 512, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyObject_Call(__pyx_builtin_super, __pyx_t_2, NULL); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 518, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_frombytes); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 512, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_frombytes); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 518, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __pyx_t_3 = NULL;
@@ -10659,24 +10811,24 @@ static PyObject *__pyx_f_4dawg_9BytesDAWG_frombytes(struct __pyx_obj_4dawg_Bytes
   }
   __pyx_t_1 = (__pyx_t_3) ? __Pyx_PyObject_Call2Args(__pyx_t_2, __pyx_t_3, __pyx_v_data) : __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_v_data);
   __Pyx_XDECREF(__pyx_t_3); __pyx_t_3 = 0;
-  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 512, __pyx_L1_error)
+  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 518, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __pyx_v_res = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "dawg.pyx":513
+  /* "dawg.pyx":519
  *     cpdef frombytes(self, bytes data):
  *         res = super(BytesDAWG, self).frombytes(data)
  *         self._update_completer()             # <<<<<<<<<<<<<<
  *         return res
  * 
  */
-  __pyx_t_1 = ((struct __pyx_vtabstruct_4dawg_BytesDAWG *)__pyx_v_self->__pyx_base.__pyx_base.__pyx_vtab)->_update_completer(__pyx_v_self); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 513, __pyx_L1_error)
+  __pyx_t_1 = ((struct __pyx_vtabstruct_4dawg_BytesDAWG *)__pyx_v_self->__pyx_base.__pyx_base.__pyx_vtab)->_update_completer(__pyx_v_self); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 519, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "dawg.pyx":514
+  /* "dawg.pyx":520
  *         res = super(BytesDAWG, self).frombytes(data)
  *         self._update_completer()
  *         return res             # <<<<<<<<<<<<<<
@@ -10688,7 +10840,7 @@ static PyObject *__pyx_f_4dawg_9BytesDAWG_frombytes(struct __pyx_obj_4dawg_Bytes
   __pyx_r = __pyx_v_res;
   goto __pyx_L0;
 
-  /* "dawg.pyx":511
+  /* "dawg.pyx":517
  *         return res
  * 
  *     cpdef frombytes(self, bytes data):             # <<<<<<<<<<<<<<
@@ -10718,7 +10870,7 @@ static PyObject *__pyx_pw_4dawg_9BytesDAWG_9frombytes(PyObject *__pyx_v_self, Py
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("frombytes (wrapper)", 0);
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_data), (&PyBytes_Type), 1, "data", 1))) __PYX_ERR(0, 511, __pyx_L1_error)
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_data), (&PyBytes_Type), 1, "data", 1))) __PYX_ERR(0, 517, __pyx_L1_error)
   __pyx_r = __pyx_pf_4dawg_9BytesDAWG_8frombytes(((struct __pyx_obj_4dawg_BytesDAWG *)__pyx_v_self), ((PyObject*)__pyx_v_data));
 
   /* function exit code */
@@ -10736,7 +10888,7 @@ static PyObject *__pyx_pf_4dawg_9BytesDAWG_8frombytes(struct __pyx_obj_4dawg_Byt
   PyObject *__pyx_t_1 = NULL;
   __Pyx_RefNannySetupContext("frombytes", 0);
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = __pyx_f_4dawg_9BytesDAWG_frombytes(__pyx_v_self, __pyx_v_data, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 511, __pyx_L1_error)
+  __pyx_t_1 = __pyx_f_4dawg_9BytesDAWG_frombytes(__pyx_v_self, __pyx_v_data, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 517, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
@@ -10753,7 +10905,7 @@ static PyObject *__pyx_pf_4dawg_9BytesDAWG_8frombytes(struct __pyx_obj_4dawg_Byt
   return __pyx_r;
 }
 
-/* "dawg.pyx":516
+/* "dawg.pyx":522
  *         return res
  * 
  *     cpdef bint b_has_key(self, bytes key) except -1:             # <<<<<<<<<<<<<<
@@ -10781,7 +10933,7 @@ static int __pyx_f_4dawg_9BytesDAWG_b_has_key(struct __pyx_obj_4dawg_BytesDAWG *
     if (unlikely(!__Pyx_object_dict_version_matches(((PyObject *)__pyx_v_self), __pyx_tp_dict_version, __pyx_obj_dict_version))) {
       PY_UINT64_T __pyx_type_dict_guard = __Pyx_get_tp_dict_version(((PyObject *)__pyx_v_self));
       #endif
-      __pyx_t_1 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_b_has_key); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 516, __pyx_L1_error)
+      __pyx_t_1 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_b_has_key); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 522, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_1);
       if (!PyCFunction_Check(__pyx_t_1) || (PyCFunction_GET_FUNCTION(__pyx_t_1) != (PyCFunction)(void*)__pyx_pw_4dawg_9BytesDAWG_11b_has_key)) {
         __Pyx_INCREF(__pyx_t_1);
@@ -10797,10 +10949,10 @@ static int __pyx_f_4dawg_9BytesDAWG_b_has_key(struct __pyx_obj_4dawg_BytesDAWG *
         }
         __pyx_t_2 = (__pyx_t_4) ? __Pyx_PyObject_Call2Args(__pyx_t_3, __pyx_t_4, __pyx_v_key) : __Pyx_PyObject_CallOneArg(__pyx_t_3, __pyx_v_key);
         __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
-        if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 516, __pyx_L1_error)
+        if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 522, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_2);
         __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-        __pyx_t_5 = __Pyx_PyObject_IsTrue(__pyx_t_2); if (unlikely((__pyx_t_5 == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 516, __pyx_L1_error)
+        __pyx_t_5 = __Pyx_PyObject_IsTrue(__pyx_t_2); if (unlikely((__pyx_t_5 == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 522, __pyx_L1_error)
         __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
         __pyx_r = __pyx_t_5;
         __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
@@ -10819,7 +10971,7 @@ static int __pyx_f_4dawg_9BytesDAWG_b_has_key(struct __pyx_obj_4dawg_BytesDAWG *
     #endif
   }
 
-  /* "dawg.pyx":518
+  /* "dawg.pyx":524
  *     cpdef bint b_has_key(self, bytes key) except -1:
  *         cdef BaseType index
  *         return self._follow_key(key, &index)             # <<<<<<<<<<<<<<
@@ -10829,7 +10981,7 @@ static int __pyx_f_4dawg_9BytesDAWG_b_has_key(struct __pyx_obj_4dawg_BytesDAWG *
   __pyx_r = ((struct __pyx_vtabstruct_4dawg_BytesDAWG *)__pyx_v_self->__pyx_base.__pyx_base.__pyx_vtab)->_follow_key(__pyx_v_self, __pyx_v_key, (&__pyx_v_index));
   goto __pyx_L0;
 
-  /* "dawg.pyx":516
+  /* "dawg.pyx":522
  *         return res
  * 
  *     cpdef bint b_has_key(self, bytes key) except -1:             # <<<<<<<<<<<<<<
@@ -10857,7 +11009,7 @@ static PyObject *__pyx_pw_4dawg_9BytesDAWG_11b_has_key(PyObject *__pyx_v_self, P
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("b_has_key (wrapper)", 0);
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_key), (&PyBytes_Type), 1, "key", 1))) __PYX_ERR(0, 516, __pyx_L1_error)
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_key), (&PyBytes_Type), 1, "key", 1))) __PYX_ERR(0, 522, __pyx_L1_error)
   __pyx_r = __pyx_pf_4dawg_9BytesDAWG_10b_has_key(((struct __pyx_obj_4dawg_BytesDAWG *)__pyx_v_self), ((PyObject*)__pyx_v_key));
 
   /* function exit code */
@@ -10876,8 +11028,8 @@ static PyObject *__pyx_pf_4dawg_9BytesDAWG_10b_has_key(struct __pyx_obj_4dawg_By
   PyObject *__pyx_t_2 = NULL;
   __Pyx_RefNannySetupContext("b_has_key", 0);
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = __pyx_f_4dawg_9BytesDAWG_b_has_key(__pyx_v_self, __pyx_v_key, 1); if (unlikely(__pyx_t_1 == ((int)-1))) __PYX_ERR(0, 516, __pyx_L1_error)
-  __pyx_t_2 = __Pyx_PyBool_FromLong(__pyx_t_1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 516, __pyx_L1_error)
+  __pyx_t_1 = __pyx_f_4dawg_9BytesDAWG_b_has_key(__pyx_v_self, __pyx_v_key, 1); if (unlikely(__pyx_t_1 == ((int)-1))) __PYX_ERR(0, 522, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyBool_FromLong(__pyx_t_1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 522, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __pyx_r = __pyx_t_2;
   __pyx_t_2 = 0;
@@ -10894,7 +11046,7 @@ static PyObject *__pyx_pf_4dawg_9BytesDAWG_10b_has_key(struct __pyx_obj_4dawg_By
   return __pyx_r;
 }
 
-/* "dawg.pyx":520
+/* "dawg.pyx":526
  *         return self._follow_key(key, &index)
  * 
  *     def __getitem__(self, key):             # <<<<<<<<<<<<<<
@@ -10924,19 +11076,19 @@ static PyObject *__pyx_pf_4dawg_9BytesDAWG_12__getitem__(struct __pyx_obj_4dawg_
   int __pyx_t_3;
   __Pyx_RefNannySetupContext("__getitem__", 0);
 
-  /* "dawg.pyx":521
+  /* "dawg.pyx":527
  * 
  *     def __getitem__(self, key):
  *         res = self.get(key)             # <<<<<<<<<<<<<<
  *         if res is None:
  *             raise KeyError(key)
  */
-  __pyx_t_1 = ((struct __pyx_vtabstruct_4dawg_BytesDAWG *)__pyx_v_self->__pyx_base.__pyx_base.__pyx_vtab)->get(__pyx_v_self, __pyx_v_key, 0, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 521, __pyx_L1_error)
+  __pyx_t_1 = ((struct __pyx_vtabstruct_4dawg_BytesDAWG *)__pyx_v_self->__pyx_base.__pyx_base.__pyx_vtab)->get(__pyx_v_self, __pyx_v_key, 0, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 527, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_v_res = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "dawg.pyx":522
+  /* "dawg.pyx":528
  *     def __getitem__(self, key):
  *         res = self.get(key)
  *         if res is None:             # <<<<<<<<<<<<<<
@@ -10947,20 +11099,20 @@ static PyObject *__pyx_pf_4dawg_9BytesDAWG_12__getitem__(struct __pyx_obj_4dawg_
   __pyx_t_3 = (__pyx_t_2 != 0);
   if (unlikely(__pyx_t_3)) {
 
-    /* "dawg.pyx":523
+    /* "dawg.pyx":529
  *         res = self.get(key)
  *         if res is None:
  *             raise KeyError(key)             # <<<<<<<<<<<<<<
  *         return res
  * 
  */
-    __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_builtin_KeyError, __pyx_v_key); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 523, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_builtin_KeyError, __pyx_v_key); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 529, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_Raise(__pyx_t_1, 0, 0, 0);
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-    __PYX_ERR(0, 523, __pyx_L1_error)
+    __PYX_ERR(0, 529, __pyx_L1_error)
 
-    /* "dawg.pyx":522
+    /* "dawg.pyx":528
  *     def __getitem__(self, key):
  *         res = self.get(key)
  *         if res is None:             # <<<<<<<<<<<<<<
@@ -10969,7 +11121,7 @@ static PyObject *__pyx_pf_4dawg_9BytesDAWG_12__getitem__(struct __pyx_obj_4dawg_
  */
   }
 
-  /* "dawg.pyx":524
+  /* "dawg.pyx":530
  *         if res is None:
  *             raise KeyError(key)
  *         return res             # <<<<<<<<<<<<<<
@@ -10981,7 +11133,7 @@ static PyObject *__pyx_pf_4dawg_9BytesDAWG_12__getitem__(struct __pyx_obj_4dawg_
   __pyx_r = __pyx_v_res;
   goto __pyx_L0;
 
-  /* "dawg.pyx":520
+  /* "dawg.pyx":526
  *         return self._follow_key(key, &index)
  * 
  *     def __getitem__(self, key):             # <<<<<<<<<<<<<<
@@ -11001,7 +11153,7 @@ static PyObject *__pyx_pf_4dawg_9BytesDAWG_12__getitem__(struct __pyx_obj_4dawg_
   return __pyx_r;
 }
 
-/* "dawg.pyx":526
+/* "dawg.pyx":532
  *         return res
  * 
  *     cpdef get(self, key, default=None):             # <<<<<<<<<<<<<<
@@ -11038,7 +11190,7 @@ static PyObject *__pyx_f_4dawg_9BytesDAWG_get(struct __pyx_obj_4dawg_BytesDAWG *
     if (unlikely(!__Pyx_object_dict_version_matches(((PyObject *)__pyx_v_self), __pyx_tp_dict_version, __pyx_obj_dict_version))) {
       PY_UINT64_T __pyx_type_dict_guard = __Pyx_get_tp_dict_version(((PyObject *)__pyx_v_self));
       #endif
-      __pyx_t_1 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_get); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 526, __pyx_L1_error)
+      __pyx_t_1 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_get); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 532, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_1);
       if (!PyCFunction_Check(__pyx_t_1) || (PyCFunction_GET_FUNCTION(__pyx_t_1) != (PyCFunction)(void*)__pyx_pw_4dawg_9BytesDAWG_15get)) {
         __Pyx_XDECREF(__pyx_r);
@@ -11058,7 +11210,7 @@ static PyObject *__pyx_f_4dawg_9BytesDAWG_get(struct __pyx_obj_4dawg_BytesDAWG *
         #if CYTHON_FAST_PYCALL
         if (PyFunction_Check(__pyx_t_3)) {
           PyObject *__pyx_temp[3] = {__pyx_t_4, __pyx_v_key, __pyx_v_default};
-          __pyx_t_2 = __Pyx_PyFunction_FastCall(__pyx_t_3, __pyx_temp+1-__pyx_t_5, 2+__pyx_t_5); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 526, __pyx_L1_error)
+          __pyx_t_2 = __Pyx_PyFunction_FastCall(__pyx_t_3, __pyx_temp+1-__pyx_t_5, 2+__pyx_t_5); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 532, __pyx_L1_error)
           __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
           __Pyx_GOTREF(__pyx_t_2);
         } else
@@ -11066,13 +11218,13 @@ static PyObject *__pyx_f_4dawg_9BytesDAWG_get(struct __pyx_obj_4dawg_BytesDAWG *
         #if CYTHON_FAST_PYCCALL
         if (__Pyx_PyFastCFunction_Check(__pyx_t_3)) {
           PyObject *__pyx_temp[3] = {__pyx_t_4, __pyx_v_key, __pyx_v_default};
-          __pyx_t_2 = __Pyx_PyCFunction_FastCall(__pyx_t_3, __pyx_temp+1-__pyx_t_5, 2+__pyx_t_5); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 526, __pyx_L1_error)
+          __pyx_t_2 = __Pyx_PyCFunction_FastCall(__pyx_t_3, __pyx_temp+1-__pyx_t_5, 2+__pyx_t_5); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 532, __pyx_L1_error)
           __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
           __Pyx_GOTREF(__pyx_t_2);
         } else
         #endif
         {
-          __pyx_t_6 = PyTuple_New(2+__pyx_t_5); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 526, __pyx_L1_error)
+          __pyx_t_6 = PyTuple_New(2+__pyx_t_5); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 532, __pyx_L1_error)
           __Pyx_GOTREF(__pyx_t_6);
           if (__pyx_t_4) {
             __Pyx_GIVEREF(__pyx_t_4); PyTuple_SET_ITEM(__pyx_t_6, 0, __pyx_t_4); __pyx_t_4 = NULL;
@@ -11083,7 +11235,7 @@ static PyObject *__pyx_f_4dawg_9BytesDAWG_get(struct __pyx_obj_4dawg_BytesDAWG *
           __Pyx_INCREF(__pyx_v_default);
           __Pyx_GIVEREF(__pyx_v_default);
           PyTuple_SET_ITEM(__pyx_t_6, 1+__pyx_t_5, __pyx_v_default);
-          __pyx_t_2 = __Pyx_PyObject_Call(__pyx_t_3, __pyx_t_6, NULL); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 526, __pyx_L1_error)
+          __pyx_t_2 = __Pyx_PyObject_Call(__pyx_t_3, __pyx_t_6, NULL); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 532, __pyx_L1_error)
           __Pyx_GOTREF(__pyx_t_2);
           __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
         }
@@ -11106,7 +11258,7 @@ static PyObject *__pyx_f_4dawg_9BytesDAWG_get(struct __pyx_obj_4dawg_BytesDAWG *
     #endif
   }
 
-  /* "dawg.pyx":531
+  /* "dawg.pyx":537
  *         or ``default`` if the key is not found.
  *         """
  *         if isinstance(key, unicode):             # <<<<<<<<<<<<<<
@@ -11117,19 +11269,19 @@ static PyObject *__pyx_f_4dawg_9BytesDAWG_get(struct __pyx_obj_4dawg_BytesDAWG *
   __pyx_t_8 = (__pyx_t_7 != 0);
   if (__pyx_t_8) {
 
-    /* "dawg.pyx":532
+    /* "dawg.pyx":538
  *         """
  *         if isinstance(key, unicode):
  *             res = self.get_value(<unicode>key)             # <<<<<<<<<<<<<<
  *         else:
  *             res = self.b_get_value(key)
  */
-    __pyx_t_1 = ((struct __pyx_vtabstruct_4dawg_BytesDAWG *)__pyx_v_self->__pyx_base.__pyx_base.__pyx_vtab)->get_value(__pyx_v_self, ((PyObject*)__pyx_v_key), 0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 532, __pyx_L1_error)
+    __pyx_t_1 = ((struct __pyx_vtabstruct_4dawg_BytesDAWG *)__pyx_v_self->__pyx_base.__pyx_base.__pyx_vtab)->get_value(__pyx_v_self, ((PyObject*)__pyx_v_key), 0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 538, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __pyx_v_res = ((PyObject*)__pyx_t_1);
     __pyx_t_1 = 0;
 
-    /* "dawg.pyx":531
+    /* "dawg.pyx":537
  *         or ``default`` if the key is not found.
  *         """
  *         if isinstance(key, unicode):             # <<<<<<<<<<<<<<
@@ -11139,7 +11291,7 @@ static PyObject *__pyx_f_4dawg_9BytesDAWG_get(struct __pyx_obj_4dawg_BytesDAWG *
     goto __pyx_L3;
   }
 
-  /* "dawg.pyx":534
+  /* "dawg.pyx":540
  *             res = self.get_value(<unicode>key)
  *         else:
  *             res = self.b_get_value(key)             # <<<<<<<<<<<<<<
@@ -11147,15 +11299,15 @@ static PyObject *__pyx_f_4dawg_9BytesDAWG_get(struct __pyx_obj_4dawg_BytesDAWG *
  *         if not res:
  */
   /*else*/ {
-    if (!(likely(PyBytes_CheckExact(__pyx_v_key))||((__pyx_v_key) == Py_None)||(PyErr_Format(PyExc_TypeError, "Expected %.16s, got %.200s", "bytes", Py_TYPE(__pyx_v_key)->tp_name), 0))) __PYX_ERR(0, 534, __pyx_L1_error)
-    __pyx_t_1 = ((struct __pyx_vtabstruct_4dawg_BytesDAWG *)__pyx_v_self->__pyx_base.__pyx_base.__pyx_vtab)->b_get_value(__pyx_v_self, ((PyObject*)__pyx_v_key), 0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 534, __pyx_L1_error)
+    if (!(likely(PyBytes_CheckExact(__pyx_v_key))||((__pyx_v_key) == Py_None)||(PyErr_Format(PyExc_TypeError, "Expected %.16s, got %.200s", "bytes", Py_TYPE(__pyx_v_key)->tp_name), 0))) __PYX_ERR(0, 540, __pyx_L1_error)
+    __pyx_t_1 = ((struct __pyx_vtabstruct_4dawg_BytesDAWG *)__pyx_v_self->__pyx_base.__pyx_base.__pyx_vtab)->b_get_value(__pyx_v_self, ((PyObject*)__pyx_v_key), 0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 540, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __pyx_v_res = ((PyObject*)__pyx_t_1);
     __pyx_t_1 = 0;
   }
   __pyx_L3:;
 
-  /* "dawg.pyx":536
+  /* "dawg.pyx":542
  *             res = self.b_get_value(key)
  * 
  *         if not res:             # <<<<<<<<<<<<<<
@@ -11166,7 +11318,7 @@ static PyObject *__pyx_f_4dawg_9BytesDAWG_get(struct __pyx_obj_4dawg_BytesDAWG *
   __pyx_t_7 = ((!__pyx_t_8) != 0);
   if (__pyx_t_7) {
 
-    /* "dawg.pyx":537
+    /* "dawg.pyx":543
  * 
  *         if not res:
  *             return default             # <<<<<<<<<<<<<<
@@ -11178,7 +11330,7 @@ static PyObject *__pyx_f_4dawg_9BytesDAWG_get(struct __pyx_obj_4dawg_BytesDAWG *
     __pyx_r = __pyx_v_default;
     goto __pyx_L0;
 
-    /* "dawg.pyx":536
+    /* "dawg.pyx":542
  *             res = self.b_get_value(key)
  * 
  *         if not res:             # <<<<<<<<<<<<<<
@@ -11187,7 +11339,7 @@ static PyObject *__pyx_f_4dawg_9BytesDAWG_get(struct __pyx_obj_4dawg_BytesDAWG *
  */
   }
 
-  /* "dawg.pyx":538
+  /* "dawg.pyx":544
  *         if not res:
  *             return default
  *         return res             # <<<<<<<<<<<<<<
@@ -11199,7 +11351,7 @@ static PyObject *__pyx_f_4dawg_9BytesDAWG_get(struct __pyx_obj_4dawg_BytesDAWG *
   __pyx_r = __pyx_v_res;
   goto __pyx_L0;
 
-  /* "dawg.pyx":526
+  /* "dawg.pyx":532
  *         return res
  * 
  *     cpdef get(self, key, default=None):             # <<<<<<<<<<<<<<
@@ -11260,7 +11412,7 @@ static PyObject *__pyx_pw_4dawg_9BytesDAWG_15get(PyObject *__pyx_v_self, PyObjec
         }
       }
       if (unlikely(kw_args > 0)) {
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "get") < 0)) __PYX_ERR(0, 526, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "get") < 0)) __PYX_ERR(0, 532, __pyx_L3_error)
       }
     } else {
       switch (PyTuple_GET_SIZE(__pyx_args)) {
@@ -11276,7 +11428,7 @@ static PyObject *__pyx_pw_4dawg_9BytesDAWG_15get(PyObject *__pyx_v_self, PyObjec
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("get", 0, 1, 2, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 526, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("get", 0, 1, 2, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 532, __pyx_L3_error)
   __pyx_L3_error:;
   __Pyx_AddTraceback("dawg.BytesDAWG.get", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
@@ -11298,7 +11450,7 @@ static PyObject *__pyx_pf_4dawg_9BytesDAWG_14get(struct __pyx_obj_4dawg_BytesDAW
   __Pyx_XDECREF(__pyx_r);
   __pyx_t_2.__pyx_n = 1;
   __pyx_t_2.__pyx_default = __pyx_v_default;
-  __pyx_t_1 = __pyx_vtabptr_4dawg_BytesDAWG->get(__pyx_v_self, __pyx_v_key, 1, &__pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 526, __pyx_L1_error)
+  __pyx_t_1 = __pyx_vtabptr_4dawg_BytesDAWG->get(__pyx_v_self, __pyx_v_key, 1, &__pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 532, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
@@ -11315,7 +11467,7 @@ static PyObject *__pyx_pf_4dawg_9BytesDAWG_14get(struct __pyx_obj_4dawg_BytesDAW
   return __pyx_r;
 }
 
-/* "dawg.pyx":540
+/* "dawg.pyx":546
  *         return res
  * 
  *     cdef bint _follow_key(self, bytes key, BaseType* index):             # <<<<<<<<<<<<<<
@@ -11331,7 +11483,7 @@ static int __pyx_f_4dawg_9BytesDAWG__follow_key(struct __pyx_obj_4dawg_BytesDAWG
   int __pyx_t_3;
   __Pyx_RefNannySetupContext("_follow_key", 0);
 
-  /* "dawg.pyx":541
+  /* "dawg.pyx":547
  * 
  *     cdef bint _follow_key(self, bytes key, BaseType* index):
  *         index[0] = self.dct.root()             # <<<<<<<<<<<<<<
@@ -11340,7 +11492,7 @@ static int __pyx_f_4dawg_9BytesDAWG__follow_key(struct __pyx_obj_4dawg_BytesDAWG
  */
   (__pyx_v_index[0]) = __pyx_v_self->__pyx_base.__pyx_base.dct.root();
 
-  /* "dawg.pyx":542
+  /* "dawg.pyx":548
  *     cdef bint _follow_key(self, bytes key, BaseType* index):
  *         index[0] = self.dct.root()
  *         if not self.dct.Follow(key, len(key), index):             # <<<<<<<<<<<<<<
@@ -11349,18 +11501,18 @@ static int __pyx_f_4dawg_9BytesDAWG__follow_key(struct __pyx_obj_4dawg_BytesDAWG
  */
   if (unlikely(__pyx_v_key == Py_None)) {
     PyErr_SetString(PyExc_TypeError, "expected bytes, NoneType found");
-    __PYX_ERR(0, 542, __pyx_L1_error)
+    __PYX_ERR(0, 548, __pyx_L1_error)
   }
-  __pyx_t_1 = __Pyx_PyBytes_AsWritableString(__pyx_v_key); if (unlikely((!__pyx_t_1) && PyErr_Occurred())) __PYX_ERR(0, 542, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyBytes_AsWritableString(__pyx_v_key); if (unlikely((!__pyx_t_1) && PyErr_Occurred())) __PYX_ERR(0, 548, __pyx_L1_error)
   if (unlikely(__pyx_v_key == Py_None)) {
     PyErr_SetString(PyExc_TypeError, "object of type 'NoneType' has no len()");
-    __PYX_ERR(0, 542, __pyx_L1_error)
+    __PYX_ERR(0, 548, __pyx_L1_error)
   }
-  __pyx_t_2 = PyBytes_GET_SIZE(__pyx_v_key); if (unlikely(__pyx_t_2 == ((Py_ssize_t)-1))) __PYX_ERR(0, 542, __pyx_L1_error)
+  __pyx_t_2 = PyBytes_GET_SIZE(__pyx_v_key); if (unlikely(__pyx_t_2 == ((Py_ssize_t)-1))) __PYX_ERR(0, 548, __pyx_L1_error)
   __pyx_t_3 = ((!(__pyx_v_self->__pyx_base.__pyx_base.dct.Follow(__pyx_t_1, __pyx_t_2, __pyx_v_index) != 0)) != 0);
   if (__pyx_t_3) {
 
-    /* "dawg.pyx":543
+    /* "dawg.pyx":549
  *         index[0] = self.dct.root()
  *         if not self.dct.Follow(key, len(key), index):
  *             return False             # <<<<<<<<<<<<<<
@@ -11370,7 +11522,7 @@ static int __pyx_f_4dawg_9BytesDAWG__follow_key(struct __pyx_obj_4dawg_BytesDAWG
     __pyx_r = 0;
     goto __pyx_L0;
 
-    /* "dawg.pyx":542
+    /* "dawg.pyx":548
  *     cdef bint _follow_key(self, bytes key, BaseType* index):
  *         index[0] = self.dct.root()
  *         if not self.dct.Follow(key, len(key), index):             # <<<<<<<<<<<<<<
@@ -11379,7 +11531,7 @@ static int __pyx_f_4dawg_9BytesDAWG__follow_key(struct __pyx_obj_4dawg_BytesDAWG
  */
   }
 
-  /* "dawg.pyx":544
+  /* "dawg.pyx":550
  *         if not self.dct.Follow(key, len(key), index):
  *             return False
  *         return self.dct.Follow(self._c_payload_separator, index)             # <<<<<<<<<<<<<<
@@ -11389,7 +11541,7 @@ static int __pyx_f_4dawg_9BytesDAWG__follow_key(struct __pyx_obj_4dawg_BytesDAWG
   __pyx_r = __pyx_v_self->__pyx_base.__pyx_base.dct.Follow(__pyx_v_self->_c_payload_separator, __pyx_v_index);
   goto __pyx_L0;
 
-  /* "dawg.pyx":540
+  /* "dawg.pyx":546
  *         return res
  * 
  *     cdef bint _follow_key(self, bytes key, BaseType* index):             # <<<<<<<<<<<<<<
@@ -11406,7 +11558,7 @@ static int __pyx_f_4dawg_9BytesDAWG__follow_key(struct __pyx_obj_4dawg_BytesDAWG
   return __pyx_r;
 }
 
-/* "dawg.pyx":546
+/* "dawg.pyx":552
  *         return self.dct.Follow(self._c_payload_separator, index)
  * 
  *     cpdef list get_value(self, unicode key):             # <<<<<<<<<<<<<<
@@ -11432,7 +11584,7 @@ static PyObject *__pyx_f_4dawg_9BytesDAWG_get_value(struct __pyx_obj_4dawg_Bytes
     if (unlikely(!__Pyx_object_dict_version_matches(((PyObject *)__pyx_v_self), __pyx_tp_dict_version, __pyx_obj_dict_version))) {
       PY_UINT64_T __pyx_type_dict_guard = __Pyx_get_tp_dict_version(((PyObject *)__pyx_v_self));
       #endif
-      __pyx_t_1 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_get_value); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 546, __pyx_L1_error)
+      __pyx_t_1 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_get_value); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 552, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_1);
       if (!PyCFunction_Check(__pyx_t_1) || (PyCFunction_GET_FUNCTION(__pyx_t_1) != (PyCFunction)(void*)__pyx_pw_4dawg_9BytesDAWG_17get_value)) {
         __Pyx_XDECREF(__pyx_r);
@@ -11449,10 +11601,10 @@ static PyObject *__pyx_f_4dawg_9BytesDAWG_get_value(struct __pyx_obj_4dawg_Bytes
         }
         __pyx_t_2 = (__pyx_t_4) ? __Pyx_PyObject_Call2Args(__pyx_t_3, __pyx_t_4, __pyx_v_key) : __Pyx_PyObject_CallOneArg(__pyx_t_3, __pyx_v_key);
         __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
-        if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 546, __pyx_L1_error)
+        if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 552, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_2);
         __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-        if (!(likely(PyList_CheckExact(__pyx_t_2))||((__pyx_t_2) == Py_None)||(PyErr_Format(PyExc_TypeError, "Expected %.16s, got %.200s", "list", Py_TYPE(__pyx_t_2)->tp_name), 0))) __PYX_ERR(0, 546, __pyx_L1_error)
+        if (!(likely(PyList_CheckExact(__pyx_t_2))||((__pyx_t_2) == Py_None)||(PyErr_Format(PyExc_TypeError, "Expected %.16s, got %.200s", "list", Py_TYPE(__pyx_t_2)->tp_name), 0))) __PYX_ERR(0, 552, __pyx_L1_error)
         __pyx_r = ((PyObject*)__pyx_t_2);
         __pyx_t_2 = 0;
         __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
@@ -11471,7 +11623,7 @@ static PyObject *__pyx_f_4dawg_9BytesDAWG_get_value(struct __pyx_obj_4dawg_Bytes
     #endif
   }
 
-  /* "dawg.pyx":547
+  /* "dawg.pyx":553
  * 
  *     cpdef list get_value(self, unicode key):
  *         return self.b_get_value(<bytes>key.encode('utf8'))             # <<<<<<<<<<<<<<
@@ -11481,18 +11633,18 @@ static PyObject *__pyx_f_4dawg_9BytesDAWG_get_value(struct __pyx_obj_4dawg_Bytes
   __Pyx_XDECREF(__pyx_r);
   if (unlikely(__pyx_v_key == Py_None)) {
     PyErr_Format(PyExc_AttributeError, "'NoneType' object has no attribute '%.30s'", "encode");
-    __PYX_ERR(0, 547, __pyx_L1_error)
+    __PYX_ERR(0, 553, __pyx_L1_error)
   }
-  __pyx_t_1 = PyUnicode_AsUTF8String(__pyx_v_key); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 547, __pyx_L1_error)
+  __pyx_t_1 = PyUnicode_AsUTF8String(__pyx_v_key); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 553, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_2 = ((struct __pyx_vtabstruct_4dawg_BytesDAWG *)__pyx_v_self->__pyx_base.__pyx_base.__pyx_vtab)->b_get_value(__pyx_v_self, ((PyObject*)__pyx_t_1), 0); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 547, __pyx_L1_error)
+  __pyx_t_2 = ((struct __pyx_vtabstruct_4dawg_BytesDAWG *)__pyx_v_self->__pyx_base.__pyx_base.__pyx_vtab)->b_get_value(__pyx_v_self, ((PyObject*)__pyx_t_1), 0); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 553, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __pyx_r = ((PyObject*)__pyx_t_2);
   __pyx_t_2 = 0;
   goto __pyx_L0;
 
-  /* "dawg.pyx":546
+  /* "dawg.pyx":552
  *         return self.dct.Follow(self._c_payload_separator, index)
  * 
  *     cpdef list get_value(self, unicode key):             # <<<<<<<<<<<<<<
@@ -11521,7 +11673,7 @@ static PyObject *__pyx_pw_4dawg_9BytesDAWG_17get_value(PyObject *__pyx_v_self, P
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("get_value (wrapper)", 0);
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_key), (&PyUnicode_Type), 1, "key", 1))) __PYX_ERR(0, 546, __pyx_L1_error)
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_key), (&PyUnicode_Type), 1, "key", 1))) __PYX_ERR(0, 552, __pyx_L1_error)
   __pyx_r = __pyx_pf_4dawg_9BytesDAWG_16get_value(((struct __pyx_obj_4dawg_BytesDAWG *)__pyx_v_self), ((PyObject*)__pyx_v_key));
 
   /* function exit code */
@@ -11539,7 +11691,7 @@ static PyObject *__pyx_pf_4dawg_9BytesDAWG_16get_value(struct __pyx_obj_4dawg_By
   PyObject *__pyx_t_1 = NULL;
   __Pyx_RefNannySetupContext("get_value", 0);
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = __pyx_f_4dawg_9BytesDAWG_get_value(__pyx_v_self, __pyx_v_key, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 546, __pyx_L1_error)
+  __pyx_t_1 = __pyx_f_4dawg_9BytesDAWG_get_value(__pyx_v_self, __pyx_v_key, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 552, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
@@ -11556,7 +11708,7 @@ static PyObject *__pyx_pf_4dawg_9BytesDAWG_16get_value(struct __pyx_obj_4dawg_By
   return __pyx_r;
 }
 
-/* "dawg.pyx":549
+/* "dawg.pyx":555
  *         return self.b_get_value(<bytes>key.encode('utf8'))
  * 
  *     cdef list _value_for_index(self, BaseType index):             # <<<<<<<<<<<<<<
@@ -11576,7 +11728,7 @@ static PyObject *__pyx_f_4dawg_9BytesDAWG__value_for_index(struct __pyx_obj_4daw
   PyObject *__pyx_t_3 = NULL;
   __Pyx_RefNannySetupContext("_value_for_index", 0);
 
-  /* "dawg.pyx":563
+  /* "dawg.pyx":569
  *         cdef vector[string] results
  * 
  *         self._completer.Start(index)             # <<<<<<<<<<<<<<
@@ -11585,7 +11737,7 @@ static PyObject *__pyx_f_4dawg_9BytesDAWG__value_for_index(struct __pyx_obj_4daw
  */
   __pyx_v_self->_completer->Start(__pyx_v_index);
 
-  /* "dawg.pyx":565
+  /* "dawg.pyx":571
  *         self._completer.Start(index)
  * 
  *         while self._completer.Next():             # <<<<<<<<<<<<<<
@@ -11596,7 +11748,7 @@ static PyObject *__pyx_f_4dawg_9BytesDAWG__value_for_index(struct __pyx_obj_4daw
     __pyx_t_1 = (__pyx_v_self->_completer->Next() != 0);
     if (!__pyx_t_1) break;
 
-    /* "dawg.pyx":566
+    /* "dawg.pyx":572
  * 
  *         while self._completer.Next():
  *             b64_decoder.init()             # <<<<<<<<<<<<<<
@@ -11605,7 +11757,7 @@ static PyObject *__pyx_f_4dawg_9BytesDAWG__value_for_index(struct __pyx_obj_4daw
  */
     __pyx_v_b64_decoder.init();
 
-    /* "dawg.pyx":567
+    /* "dawg.pyx":573
  *         while self._completer.Next():
  *             b64_decoder.init()
  *             key_len = b64_decoder.decode(             # <<<<<<<<<<<<<<
@@ -11614,7 +11766,7 @@ static PyObject *__pyx_f_4dawg_9BytesDAWG__value_for_index(struct __pyx_obj_4daw
  */
     __pyx_v_key_len = __pyx_v_b64_decoder.decode(__pyx_v_self->_completer->key(), __pyx_v_self->_completer->length(), __pyx_v_b64_decoder_storage);
 
-    /* "dawg.pyx":572
+    /* "dawg.pyx":578
  *                 b64_decoder_storage
  *             )
  *             results.push_back(string(b64_decoder_storage, key_len))             # <<<<<<<<<<<<<<
@@ -11625,17 +11777,17 @@ static PyObject *__pyx_f_4dawg_9BytesDAWG__value_for_index(struct __pyx_obj_4daw
       __pyx_t_2 = std::string(__pyx_v_b64_decoder_storage, __pyx_v_key_len);
     } catch(...) {
       __Pyx_CppExn2PyErr();
-      __PYX_ERR(0, 572, __pyx_L1_error)
+      __PYX_ERR(0, 578, __pyx_L1_error)
     }
     try {
       __pyx_v_results.push_back(__pyx_t_2);
     } catch(...) {
       __Pyx_CppExn2PyErr();
-      __PYX_ERR(0, 572, __pyx_L1_error)
+      __PYX_ERR(0, 578, __pyx_L1_error)
     }
   }
 
-  /* "dawg.pyx":574
+  /* "dawg.pyx":580
  *             results.push_back(string(b64_decoder_storage, key_len))
  * 
  *         return results             # <<<<<<<<<<<<<<
@@ -11643,14 +11795,14 @@ static PyObject *__pyx_f_4dawg_9BytesDAWG__value_for_index(struct __pyx_obj_4daw
  *     cpdef list b_get_value(self, bytes key):
  */
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_3 = __pyx_convert_vector_to_py_std_3a__3a_string(__pyx_v_results); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 574, __pyx_L1_error)
+  __pyx_t_3 = __pyx_convert_vector_to_py_std_3a__3a_string(__pyx_v_results); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 580, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  if (!(likely(PyList_CheckExact(__pyx_t_3))||(PyErr_Format(PyExc_TypeError, "Expected %.16s, got %.200s", "list", Py_TYPE(__pyx_t_3)->tp_name), 0))) __PYX_ERR(0, 574, __pyx_L1_error)
+  if (!(likely(PyList_CheckExact(__pyx_t_3))||(PyErr_Format(PyExc_TypeError, "Expected %.16s, got %.200s", "list", Py_TYPE(__pyx_t_3)->tp_name), 0))) __PYX_ERR(0, 580, __pyx_L1_error)
   __pyx_r = ((PyObject*)__pyx_t_3);
   __pyx_t_3 = 0;
   goto __pyx_L0;
 
-  /* "dawg.pyx":549
+  /* "dawg.pyx":555
  *         return self.b_get_value(<bytes>key.encode('utf8'))
  * 
  *     cdef list _value_for_index(self, BaseType index):             # <<<<<<<<<<<<<<
@@ -11669,7 +11821,7 @@ static PyObject *__pyx_f_4dawg_9BytesDAWG__value_for_index(struct __pyx_obj_4daw
   return __pyx_r;
 }
 
-/* "dawg.pyx":576
+/* "dawg.pyx":582
  *         return results
  * 
  *     cpdef list b_get_value(self, bytes key):             # <<<<<<<<<<<<<<
@@ -11697,7 +11849,7 @@ static PyObject *__pyx_f_4dawg_9BytesDAWG_b_get_value(struct __pyx_obj_4dawg_Byt
     if (unlikely(!__Pyx_object_dict_version_matches(((PyObject *)__pyx_v_self), __pyx_tp_dict_version, __pyx_obj_dict_version))) {
       PY_UINT64_T __pyx_type_dict_guard = __Pyx_get_tp_dict_version(((PyObject *)__pyx_v_self));
       #endif
-      __pyx_t_1 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_b_get_value); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 576, __pyx_L1_error)
+      __pyx_t_1 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_b_get_value); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 582, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_1);
       if (!PyCFunction_Check(__pyx_t_1) || (PyCFunction_GET_FUNCTION(__pyx_t_1) != (PyCFunction)(void*)__pyx_pw_4dawg_9BytesDAWG_19b_get_value)) {
         __Pyx_XDECREF(__pyx_r);
@@ -11714,10 +11866,10 @@ static PyObject *__pyx_f_4dawg_9BytesDAWG_b_get_value(struct __pyx_obj_4dawg_Byt
         }
         __pyx_t_2 = (__pyx_t_4) ? __Pyx_PyObject_Call2Args(__pyx_t_3, __pyx_t_4, __pyx_v_key) : __Pyx_PyObject_CallOneArg(__pyx_t_3, __pyx_v_key);
         __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
-        if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 576, __pyx_L1_error)
+        if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 582, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_2);
         __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-        if (!(likely(PyList_CheckExact(__pyx_t_2))||((__pyx_t_2) == Py_None)||(PyErr_Format(PyExc_TypeError, "Expected %.16s, got %.200s", "list", Py_TYPE(__pyx_t_2)->tp_name), 0))) __PYX_ERR(0, 576, __pyx_L1_error)
+        if (!(likely(PyList_CheckExact(__pyx_t_2))||((__pyx_t_2) == Py_None)||(PyErr_Format(PyExc_TypeError, "Expected %.16s, got %.200s", "list", Py_TYPE(__pyx_t_2)->tp_name), 0))) __PYX_ERR(0, 582, __pyx_L1_error)
         __pyx_r = ((PyObject*)__pyx_t_2);
         __pyx_t_2 = 0;
         __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
@@ -11736,7 +11888,7 @@ static PyObject *__pyx_f_4dawg_9BytesDAWG_b_get_value(struct __pyx_obj_4dawg_Byt
     #endif
   }
 
-  /* "dawg.pyx":578
+  /* "dawg.pyx":584
  *     cpdef list b_get_value(self, bytes key):
  *         cdef BaseType index
  *         if not self._follow_key(key, &index):             # <<<<<<<<<<<<<<
@@ -11746,7 +11898,7 @@ static PyObject *__pyx_f_4dawg_9BytesDAWG_b_get_value(struct __pyx_obj_4dawg_Byt
   __pyx_t_5 = ((!(((struct __pyx_vtabstruct_4dawg_BytesDAWG *)__pyx_v_self->__pyx_base.__pyx_base.__pyx_vtab)->_follow_key(__pyx_v_self, __pyx_v_key, (&__pyx_v_index)) != 0)) != 0);
   if (__pyx_t_5) {
 
-    /* "dawg.pyx":579
+    /* "dawg.pyx":585
  *         cdef BaseType index
  *         if not self._follow_key(key, &index):
  *             return []             # <<<<<<<<<<<<<<
@@ -11754,13 +11906,13 @@ static PyObject *__pyx_f_4dawg_9BytesDAWG_b_get_value(struct __pyx_obj_4dawg_Byt
  * 
  */
     __Pyx_XDECREF(__pyx_r);
-    __pyx_t_1 = PyList_New(0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 579, __pyx_L1_error)
+    __pyx_t_1 = PyList_New(0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 585, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __pyx_r = ((PyObject*)__pyx_t_1);
     __pyx_t_1 = 0;
     goto __pyx_L0;
 
-    /* "dawg.pyx":578
+    /* "dawg.pyx":584
  *     cpdef list b_get_value(self, bytes key):
  *         cdef BaseType index
  *         if not self._follow_key(key, &index):             # <<<<<<<<<<<<<<
@@ -11769,7 +11921,7 @@ static PyObject *__pyx_f_4dawg_9BytesDAWG_b_get_value(struct __pyx_obj_4dawg_Byt
  */
   }
 
-  /* "dawg.pyx":580
+  /* "dawg.pyx":586
  *         if not self._follow_key(key, &index):
  *             return []
  *         return self._value_for_index(index)             # <<<<<<<<<<<<<<
@@ -11777,13 +11929,13 @@ static PyObject *__pyx_f_4dawg_9BytesDAWG_b_get_value(struct __pyx_obj_4dawg_Byt
  *     cpdef list items(self, unicode prefix=""):
  */
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = ((struct __pyx_vtabstruct_4dawg_BytesDAWG *)__pyx_v_self->__pyx_base.__pyx_base.__pyx_vtab)->_value_for_index(__pyx_v_self, __pyx_v_index); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 580, __pyx_L1_error)
+  __pyx_t_1 = ((struct __pyx_vtabstruct_4dawg_BytesDAWG *)__pyx_v_self->__pyx_base.__pyx_base.__pyx_vtab)->_value_for_index(__pyx_v_self, __pyx_v_index); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 586, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = ((PyObject*)__pyx_t_1);
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "dawg.pyx":576
+  /* "dawg.pyx":582
  *         return results
  * 
  *     cpdef list b_get_value(self, bytes key):             # <<<<<<<<<<<<<<
@@ -11812,7 +11964,7 @@ static PyObject *__pyx_pw_4dawg_9BytesDAWG_19b_get_value(PyObject *__pyx_v_self,
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("b_get_value (wrapper)", 0);
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_key), (&PyBytes_Type), 1, "key", 1))) __PYX_ERR(0, 576, __pyx_L1_error)
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_key), (&PyBytes_Type), 1, "key", 1))) __PYX_ERR(0, 582, __pyx_L1_error)
   __pyx_r = __pyx_pf_4dawg_9BytesDAWG_18b_get_value(((struct __pyx_obj_4dawg_BytesDAWG *)__pyx_v_self), ((PyObject*)__pyx_v_key));
 
   /* function exit code */
@@ -11830,7 +11982,7 @@ static PyObject *__pyx_pf_4dawg_9BytesDAWG_18b_get_value(struct __pyx_obj_4dawg_
   PyObject *__pyx_t_1 = NULL;
   __Pyx_RefNannySetupContext("b_get_value", 0);
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = __pyx_f_4dawg_9BytesDAWG_b_get_value(__pyx_v_self, __pyx_v_key, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 576, __pyx_L1_error)
+  __pyx_t_1 = __pyx_f_4dawg_9BytesDAWG_b_get_value(__pyx_v_self, __pyx_v_key, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 582, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
@@ -11847,7 +11999,7 @@ static PyObject *__pyx_pf_4dawg_9BytesDAWG_18b_get_value(struct __pyx_obj_4dawg_
   return __pyx_r;
 }
 
-/* "dawg.pyx":582
+/* "dawg.pyx":588
  *         return self._value_for_index(index)
  * 
  *     cpdef list items(self, unicode prefix=""):             # <<<<<<<<<<<<<<
@@ -11899,7 +12051,7 @@ static PyObject *__pyx_f_4dawg_9BytesDAWG_items(struct __pyx_obj_4dawg_BytesDAWG
     if (unlikely(!__Pyx_object_dict_version_matches(((PyObject *)__pyx_v_self), __pyx_tp_dict_version, __pyx_obj_dict_version))) {
       PY_UINT64_T __pyx_type_dict_guard = __Pyx_get_tp_dict_version(((PyObject *)__pyx_v_self));
       #endif
-      __pyx_t_1 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_items); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 582, __pyx_L1_error)
+      __pyx_t_1 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_items); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 588, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_1);
       if (!PyCFunction_Check(__pyx_t_1) || (PyCFunction_GET_FUNCTION(__pyx_t_1) != (PyCFunction)(void*)__pyx_pw_4dawg_9BytesDAWG_21items)) {
         __Pyx_XDECREF(__pyx_r);
@@ -11916,10 +12068,10 @@ static PyObject *__pyx_f_4dawg_9BytesDAWG_items(struct __pyx_obj_4dawg_BytesDAWG
         }
         __pyx_t_2 = (__pyx_t_4) ? __Pyx_PyObject_Call2Args(__pyx_t_3, __pyx_t_4, __pyx_v_prefix) : __Pyx_PyObject_CallOneArg(__pyx_t_3, __pyx_v_prefix);
         __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
-        if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 582, __pyx_L1_error)
+        if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 588, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_2);
         __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-        if (!(likely(PyList_CheckExact(__pyx_t_2))||((__pyx_t_2) == Py_None)||(PyErr_Format(PyExc_TypeError, "Expected %.16s, got %.200s", "list", Py_TYPE(__pyx_t_2)->tp_name), 0))) __PYX_ERR(0, 582, __pyx_L1_error)
+        if (!(likely(PyList_CheckExact(__pyx_t_2))||((__pyx_t_2) == Py_None)||(PyErr_Format(PyExc_TypeError, "Expected %.16s, got %.200s", "list", Py_TYPE(__pyx_t_2)->tp_name), 0))) __PYX_ERR(0, 588, __pyx_L1_error)
         __pyx_r = ((PyObject*)__pyx_t_2);
         __pyx_t_2 = 0;
         __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
@@ -11938,7 +12090,7 @@ static PyObject *__pyx_f_4dawg_9BytesDAWG_items(struct __pyx_obj_4dawg_BytesDAWG
     #endif
   }
 
-  /* "dawg.pyx":583
+  /* "dawg.pyx":589
  * 
  *     cpdef list items(self, unicode prefix=""):
  *         cdef bytes b_prefix = prefix.encode('utf8')             # <<<<<<<<<<<<<<
@@ -11947,26 +12099,26 @@ static PyObject *__pyx_f_4dawg_9BytesDAWG_items(struct __pyx_obj_4dawg_BytesDAWG
  */
   if (unlikely(__pyx_v_prefix == Py_None)) {
     PyErr_Format(PyExc_AttributeError, "'NoneType' object has no attribute '%.30s'", "encode");
-    __PYX_ERR(0, 583, __pyx_L1_error)
+    __PYX_ERR(0, 589, __pyx_L1_error)
   }
-  __pyx_t_1 = PyUnicode_AsUTF8String(__pyx_v_prefix); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 583, __pyx_L1_error)
+  __pyx_t_1 = PyUnicode_AsUTF8String(__pyx_v_prefix); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 589, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_v_b_prefix = ((PyObject*)__pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "dawg.pyx":586
+  /* "dawg.pyx":592
  *         cdef bytes value
  *         cdef int i
  *         cdef list res = []             # <<<<<<<<<<<<<<
  *         cdef char* raw_key
  *         cdef char* raw_value
  */
-  __pyx_t_1 = PyList_New(0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 586, __pyx_L1_error)
+  __pyx_t_1 = PyList_New(0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 592, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_v_res = ((PyObject*)__pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "dawg.pyx":591
+  /* "dawg.pyx":597
  *         cdef int raw_value_len
  * 
  *         cdef BaseType index = self.dct.root()             # <<<<<<<<<<<<<<
@@ -11975,7 +12127,7 @@ static PyObject *__pyx_f_4dawg_9BytesDAWG_items(struct __pyx_obj_4dawg_BytesDAWG
  */
   __pyx_v_index = __pyx_v_self->__pyx_base.__pyx_base.dct.root();
 
-  /* "dawg.pyx":592
+  /* "dawg.pyx":598
  * 
  *         cdef BaseType index = self.dct.root()
  *         if not self.dct.Follow(b_prefix, &index):             # <<<<<<<<<<<<<<
@@ -11984,13 +12136,13 @@ static PyObject *__pyx_f_4dawg_9BytesDAWG_items(struct __pyx_obj_4dawg_BytesDAWG
  */
   if (unlikely(__pyx_v_b_prefix == Py_None)) {
     PyErr_SetString(PyExc_TypeError, "expected bytes, NoneType found");
-    __PYX_ERR(0, 592, __pyx_L1_error)
+    __PYX_ERR(0, 598, __pyx_L1_error)
   }
-  __pyx_t_5 = __Pyx_PyBytes_AsWritableString(__pyx_v_b_prefix); if (unlikely((!__pyx_t_5) && PyErr_Occurred())) __PYX_ERR(0, 592, __pyx_L1_error)
+  __pyx_t_5 = __Pyx_PyBytes_AsWritableString(__pyx_v_b_prefix); if (unlikely((!__pyx_t_5) && PyErr_Occurred())) __PYX_ERR(0, 598, __pyx_L1_error)
   __pyx_t_6 = ((!(__pyx_v_self->__pyx_base.__pyx_base.dct.Follow(__pyx_t_5, (&__pyx_v_index)) != 0)) != 0);
   if (__pyx_t_6) {
 
-    /* "dawg.pyx":593
+    /* "dawg.pyx":599
  *         cdef BaseType index = self.dct.root()
  *         if not self.dct.Follow(b_prefix, &index):
  *             return res             # <<<<<<<<<<<<<<
@@ -12002,7 +12154,7 @@ static PyObject *__pyx_f_4dawg_9BytesDAWG_items(struct __pyx_obj_4dawg_BytesDAWG
     __pyx_r = __pyx_v_res;
     goto __pyx_L0;
 
-    /* "dawg.pyx":592
+    /* "dawg.pyx":598
  * 
  *         cdef BaseType index = self.dct.root()
  *         if not self.dct.Follow(b_prefix, &index):             # <<<<<<<<<<<<<<
@@ -12011,7 +12163,7 @@ static PyObject *__pyx_f_4dawg_9BytesDAWG_items(struct __pyx_obj_4dawg_BytesDAWG
  */
   }
 
-  /* "dawg.pyx":600
+  /* "dawg.pyx":606
  * 
  *         cdef Completer completer
  *         init_completer(completer, self.dct, self.guide)             # <<<<<<<<<<<<<<
@@ -12020,7 +12172,7 @@ static PyObject *__pyx_f_4dawg_9BytesDAWG_items(struct __pyx_obj_4dawg_BytesDAWG
  */
   __pyx_f_4dawg_init_completer(__pyx_v_completer, __pyx_v_self->__pyx_base.__pyx_base.dct, __pyx_v_self->__pyx_base.guide);
 
-  /* "dawg.pyx":601
+  /* "dawg.pyx":607
  *         cdef Completer completer
  *         init_completer(completer, self.dct, self.guide)
  *         completer.Start(index, b_prefix)             # <<<<<<<<<<<<<<
@@ -12029,12 +12181,12 @@ static PyObject *__pyx_f_4dawg_9BytesDAWG_items(struct __pyx_obj_4dawg_BytesDAWG
  */
   if (unlikely(__pyx_v_b_prefix == Py_None)) {
     PyErr_SetString(PyExc_TypeError, "expected bytes, NoneType found");
-    __PYX_ERR(0, 601, __pyx_L1_error)
+    __PYX_ERR(0, 607, __pyx_L1_error)
   }
-  __pyx_t_7 = __Pyx_PyBytes_AsWritableString(__pyx_v_b_prefix); if (unlikely((!__pyx_t_7) && PyErr_Occurred())) __PYX_ERR(0, 601, __pyx_L1_error)
+  __pyx_t_7 = __Pyx_PyBytes_AsWritableString(__pyx_v_b_prefix); if (unlikely((!__pyx_t_7) && PyErr_Occurred())) __PYX_ERR(0, 607, __pyx_L1_error)
   __pyx_v_completer.Start(__pyx_v_index, __pyx_t_7);
 
-  /* "dawg.pyx":603
+  /* "dawg.pyx":609
  *         completer.Start(index, b_prefix)
  * 
  *         while completer.Next():             # <<<<<<<<<<<<<<
@@ -12045,7 +12197,7 @@ static PyObject *__pyx_f_4dawg_9BytesDAWG_items(struct __pyx_obj_4dawg_BytesDAWG
     __pyx_t_6 = (__pyx_v_completer.Next() != 0);
     if (!__pyx_t_6) break;
 
-    /* "dawg.pyx":604
+    /* "dawg.pyx":610
  * 
  *         while completer.Next():
  *             raw_key = <char*>completer.key()             # <<<<<<<<<<<<<<
@@ -12054,7 +12206,7 @@ static PyObject *__pyx_f_4dawg_9BytesDAWG_items(struct __pyx_obj_4dawg_BytesDAWG
  */
     __pyx_v_raw_key = ((char *)__pyx_v_completer.key());
 
-    /* "dawg.pyx":606
+    /* "dawg.pyx":612
  *             raw_key = <char*>completer.key()
  * 
  *             for i in range(0, completer.length()):             # <<<<<<<<<<<<<<
@@ -12066,7 +12218,7 @@ static PyObject *__pyx_f_4dawg_9BytesDAWG_items(struct __pyx_obj_4dawg_BytesDAWG
     for (__pyx_t_10 = 0; __pyx_t_10 < __pyx_t_9; __pyx_t_10+=1) {
       __pyx_v_i = __pyx_t_10;
 
-      /* "dawg.pyx":607
+      /* "dawg.pyx":613
  * 
  *             for i in range(0, completer.length()):
  *                 if raw_key[i] == self._c_payload_separator:             # <<<<<<<<<<<<<<
@@ -12076,7 +12228,7 @@ static PyObject *__pyx_f_4dawg_9BytesDAWG_items(struct __pyx_obj_4dawg_BytesDAWG
       __pyx_t_6 = (((__pyx_v_raw_key[__pyx_v_i]) == __pyx_v_self->_c_payload_separator) != 0);
       if (__pyx_t_6) {
 
-        /* "dawg.pyx":608
+        /* "dawg.pyx":614
  *             for i in range(0, completer.length()):
  *                 if raw_key[i] == self._c_payload_separator:
  *                     break             # <<<<<<<<<<<<<<
@@ -12085,7 +12237,7 @@ static PyObject *__pyx_f_4dawg_9BytesDAWG_items(struct __pyx_obj_4dawg_BytesDAWG
  */
         goto __pyx_L7_break;
 
-        /* "dawg.pyx":607
+        /* "dawg.pyx":613
  * 
  *             for i in range(0, completer.length()):
  *                 if raw_key[i] == self._c_payload_separator:             # <<<<<<<<<<<<<<
@@ -12096,7 +12248,7 @@ static PyObject *__pyx_f_4dawg_9BytesDAWG_items(struct __pyx_obj_4dawg_BytesDAWG
     }
     __pyx_L7_break:;
 
-    /* "dawg.pyx":610
+    /* "dawg.pyx":616
  *                     break
  * 
  *             raw_value = &(raw_key[i])             # <<<<<<<<<<<<<<
@@ -12105,7 +12257,7 @@ static PyObject *__pyx_f_4dawg_9BytesDAWG_items(struct __pyx_obj_4dawg_BytesDAWG
  */
     __pyx_v_raw_value = (&(__pyx_v_raw_key[__pyx_v_i]));
 
-    /* "dawg.pyx":611
+    /* "dawg.pyx":617
  * 
  *             raw_value = &(raw_key[i])
  *             raw_value_len = completer.length() - i             # <<<<<<<<<<<<<<
@@ -12114,7 +12266,7 @@ static PyObject *__pyx_f_4dawg_9BytesDAWG_items(struct __pyx_obj_4dawg_BytesDAWG
  */
     __pyx_v_raw_value_len = (__pyx_v_completer.length() - __pyx_v_i);
 
-    /* "dawg.pyx":613
+    /* "dawg.pyx":619
  *             raw_value_len = completer.length() - i
  * 
  *             _b64_decoder.init()             # <<<<<<<<<<<<<<
@@ -12123,7 +12275,7 @@ static PyObject *__pyx_f_4dawg_9BytesDAWG_items(struct __pyx_obj_4dawg_BytesDAWG
  */
     __pyx_v__b64_decoder.init();
 
-    /* "dawg.pyx":614
+    /* "dawg.pyx":620
  * 
  *             _b64_decoder.init()
  *             _len = _b64_decoder.decode(raw_value, raw_value_len, _b64_decoder_storage)             # <<<<<<<<<<<<<<
@@ -12132,38 +12284,38 @@ static PyObject *__pyx_f_4dawg_9BytesDAWG_items(struct __pyx_obj_4dawg_BytesDAWG
  */
     __pyx_v__len = __pyx_v__b64_decoder.decode(__pyx_v_raw_value, __pyx_v_raw_value_len, __pyx_v__b64_decoder_storage);
 
-    /* "dawg.pyx":615
+    /* "dawg.pyx":621
  *             _b64_decoder.init()
  *             _len = _b64_decoder.decode(raw_value, raw_value_len, _b64_decoder_storage)
  *             value = _b64_decoder_storage[:_len]             # <<<<<<<<<<<<<<
  * 
  *             u_key = raw_key[:i].decode('utf8')
  */
-    __pyx_t_1 = __Pyx_PyBytes_FromStringAndSize(((const char*)__pyx_v__b64_decoder_storage) + 0, __pyx_v__len - 0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 615, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyBytes_FromStringAndSize(((const char*)__pyx_v__b64_decoder_storage) + 0, __pyx_v__len - 0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 621, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_XDECREF_SET(__pyx_v_value, ((PyObject*)__pyx_t_1));
     __pyx_t_1 = 0;
 
-    /* "dawg.pyx":617
+    /* "dawg.pyx":623
  *             value = _b64_decoder_storage[:_len]
  * 
  *             u_key = raw_key[:i].decode('utf8')             # <<<<<<<<<<<<<<
  *             res.append(
  *                 (u_key, value)
  */
-    __pyx_t_1 = __Pyx_decode_c_string(__pyx_v_raw_key, 0, __pyx_v_i, NULL, NULL, PyUnicode_DecodeUTF8); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 617, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_decode_c_string(__pyx_v_raw_key, 0, __pyx_v_i, NULL, NULL, PyUnicode_DecodeUTF8); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 623, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_XDECREF_SET(__pyx_v_u_key, __pyx_t_1);
     __pyx_t_1 = 0;
 
-    /* "dawg.pyx":619
+    /* "dawg.pyx":625
  *             u_key = raw_key[:i].decode('utf8')
  *             res.append(
  *                 (u_key, value)             # <<<<<<<<<<<<<<
  *             )
  * 
  */
-    __pyx_t_1 = PyTuple_New(2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 619, __pyx_L1_error)
+    __pyx_t_1 = PyTuple_New(2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 625, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_INCREF(__pyx_v_u_key);
     __Pyx_GIVEREF(__pyx_v_u_key);
@@ -12172,18 +12324,18 @@ static PyObject *__pyx_f_4dawg_9BytesDAWG_items(struct __pyx_obj_4dawg_BytesDAWG
     __Pyx_GIVEREF(__pyx_v_value);
     PyTuple_SET_ITEM(__pyx_t_1, 1, __pyx_v_value);
 
-    /* "dawg.pyx":618
+    /* "dawg.pyx":624
  * 
  *             u_key = raw_key[:i].decode('utf8')
  *             res.append(             # <<<<<<<<<<<<<<
  *                 (u_key, value)
  *             )
  */
-    __pyx_t_11 = __Pyx_PyList_Append(__pyx_v_res, __pyx_t_1); if (unlikely(__pyx_t_11 == ((int)-1))) __PYX_ERR(0, 618, __pyx_L1_error)
+    __pyx_t_11 = __Pyx_PyList_Append(__pyx_v_res, __pyx_t_1); if (unlikely(__pyx_t_11 == ((int)-1))) __PYX_ERR(0, 624, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   }
 
-  /* "dawg.pyx":622
+  /* "dawg.pyx":628
  *             )
  * 
  *         return res             # <<<<<<<<<<<<<<
@@ -12195,7 +12347,7 @@ static PyObject *__pyx_f_4dawg_9BytesDAWG_items(struct __pyx_obj_4dawg_BytesDAWG
   __pyx_r = __pyx_v_res;
   goto __pyx_L0;
 
-  /* "dawg.pyx":582
+  /* "dawg.pyx":588
  *         return self._value_for_index(index)
  * 
  *     cpdef list items(self, unicode prefix=""):             # <<<<<<<<<<<<<<
@@ -12251,7 +12403,7 @@ static PyObject *__pyx_pw_4dawg_9BytesDAWG_21items(PyObject *__pyx_v_self, PyObj
         }
       }
       if (unlikely(kw_args > 0)) {
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "items") < 0)) __PYX_ERR(0, 582, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "items") < 0)) __PYX_ERR(0, 588, __pyx_L3_error)
       }
     } else {
       switch (PyTuple_GET_SIZE(__pyx_args)) {
@@ -12265,13 +12417,13 @@ static PyObject *__pyx_pw_4dawg_9BytesDAWG_21items(PyObject *__pyx_v_self, PyObj
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("items", 0, 0, 1, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 582, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("items", 0, 0, 1, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 588, __pyx_L3_error)
   __pyx_L3_error:;
   __Pyx_AddTraceback("dawg.BytesDAWG.items", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_prefix), (&PyUnicode_Type), 1, "prefix", 1))) __PYX_ERR(0, 582, __pyx_L1_error)
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_prefix), (&PyUnicode_Type), 1, "prefix", 1))) __PYX_ERR(0, 588, __pyx_L1_error)
   __pyx_r = __pyx_pf_4dawg_9BytesDAWG_20items(((struct __pyx_obj_4dawg_BytesDAWG *)__pyx_v_self), __pyx_v_prefix);
 
   /* function exit code */
@@ -12292,7 +12444,7 @@ static PyObject *__pyx_pf_4dawg_9BytesDAWG_20items(struct __pyx_obj_4dawg_BytesD
   __Pyx_XDECREF(__pyx_r);
   __pyx_t_2.__pyx_n = 1;
   __pyx_t_2.prefix = __pyx_v_prefix;
-  __pyx_t_1 = __pyx_vtabptr_4dawg_BytesDAWG->items(__pyx_v_self, 1, &__pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 582, __pyx_L1_error)
+  __pyx_t_1 = __pyx_vtabptr_4dawg_BytesDAWG->items(__pyx_v_self, 1, &__pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 588, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
@@ -12310,7 +12462,7 @@ static PyObject *__pyx_pf_4dawg_9BytesDAWG_20items(struct __pyx_obj_4dawg_BytesD
 }
 static PyObject *__pyx_gb_4dawg_9BytesDAWG_24generator2(__pyx_CoroutineObject *__pyx_generator, CYTHON_UNUSED PyThreadState *__pyx_tstate, PyObject *__pyx_sent_value); /* proto */
 
-/* "dawg.pyx":624
+/* "dawg.pyx":630
  *         return res
  * 
  *     def iteritems(self, unicode prefix=""):             # <<<<<<<<<<<<<<
@@ -12348,7 +12500,7 @@ static PyObject *__pyx_pw_4dawg_9BytesDAWG_23iteritems(PyObject *__pyx_v_self, P
         }
       }
       if (unlikely(kw_args > 0)) {
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "iteritems") < 0)) __PYX_ERR(0, 624, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "iteritems") < 0)) __PYX_ERR(0, 630, __pyx_L3_error)
       }
     } else {
       switch (PyTuple_GET_SIZE(__pyx_args)) {
@@ -12362,13 +12514,13 @@ static PyObject *__pyx_pw_4dawg_9BytesDAWG_23iteritems(PyObject *__pyx_v_self, P
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("iteritems", 0, 0, 1, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 624, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("iteritems", 0, 0, 1, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 630, __pyx_L3_error)
   __pyx_L3_error:;
   __Pyx_AddTraceback("dawg.BytesDAWG.iteritems", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_prefix), (&PyUnicode_Type), 1, "prefix", 1))) __PYX_ERR(0, 624, __pyx_L1_error)
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_prefix), (&PyUnicode_Type), 1, "prefix", 1))) __PYX_ERR(0, 630, __pyx_L1_error)
   __pyx_r = __pyx_pf_4dawg_9BytesDAWG_22iteritems(((struct __pyx_obj_4dawg_BytesDAWG *)__pyx_v_self), __pyx_v_prefix);
 
   /* function exit code */
@@ -12389,7 +12541,7 @@ static PyObject *__pyx_pf_4dawg_9BytesDAWG_22iteritems(struct __pyx_obj_4dawg_By
   if (unlikely(!__pyx_cur_scope)) {
     __pyx_cur_scope = ((struct __pyx_obj_4dawg___pyx_scope_struct_6_iteritems *)Py_None);
     __Pyx_INCREF(Py_None);
-    __PYX_ERR(0, 624, __pyx_L1_error)
+    __PYX_ERR(0, 630, __pyx_L1_error)
   } else {
     __Pyx_GOTREF(__pyx_cur_scope);
   }
@@ -12400,7 +12552,7 @@ static PyObject *__pyx_pf_4dawg_9BytesDAWG_22iteritems(struct __pyx_obj_4dawg_By
   __Pyx_INCREF(__pyx_cur_scope->__pyx_v_prefix);
   __Pyx_GIVEREF(__pyx_cur_scope->__pyx_v_prefix);
   {
-    __pyx_CoroutineObject *gen = __Pyx_Generator_New((__pyx_coroutine_body_t) __pyx_gb_4dawg_9BytesDAWG_24generator2, NULL, (PyObject *) __pyx_cur_scope, __pyx_n_s_iteritems, __pyx_n_s_BytesDAWG_iteritems, __pyx_n_s_dawg); if (unlikely(!gen)) __PYX_ERR(0, 624, __pyx_L1_error)
+    __pyx_CoroutineObject *gen = __Pyx_Generator_New((__pyx_coroutine_body_t) __pyx_gb_4dawg_9BytesDAWG_24generator2, NULL, (PyObject *) __pyx_cur_scope, __pyx_n_s_iteritems, __pyx_n_s_BytesDAWG_iteritems, __pyx_n_s_dawg); if (unlikely(!gen)) __PYX_ERR(0, 630, __pyx_L1_error)
     __Pyx_DECREF(__pyx_cur_scope);
     __Pyx_RefNannyFinishContext();
     return (PyObject *) gen;
@@ -12437,9 +12589,9 @@ static PyObject *__pyx_gb_4dawg_9BytesDAWG_24generator2(__pyx_CoroutineObject *_
     return NULL;
   }
   __pyx_L3_first_run:;
-  if (unlikely(!__pyx_sent_value)) __PYX_ERR(0, 624, __pyx_L1_error)
+  if (unlikely(!__pyx_sent_value)) __PYX_ERR(0, 630, __pyx_L1_error)
 
-  /* "dawg.pyx":625
+  /* "dawg.pyx":631
  * 
  *     def iteritems(self, unicode prefix=""):
  *         cdef bytes b_prefix = prefix.encode('utf8')             # <<<<<<<<<<<<<<
@@ -12448,15 +12600,15 @@ static PyObject *__pyx_gb_4dawg_9BytesDAWG_24generator2(__pyx_CoroutineObject *_
  */
   if (unlikely(__pyx_cur_scope->__pyx_v_prefix == Py_None)) {
     PyErr_Format(PyExc_AttributeError, "'NoneType' object has no attribute '%.30s'", "encode");
-    __PYX_ERR(0, 625, __pyx_L1_error)
+    __PYX_ERR(0, 631, __pyx_L1_error)
   }
-  __pyx_t_1 = PyUnicode_AsUTF8String(__pyx_cur_scope->__pyx_v_prefix); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 625, __pyx_L1_error)
+  __pyx_t_1 = PyUnicode_AsUTF8String(__pyx_cur_scope->__pyx_v_prefix); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 631, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_GIVEREF(__pyx_t_1);
   __pyx_cur_scope->__pyx_v_b_prefix = ((PyObject*)__pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "dawg.pyx":632
+  /* "dawg.pyx":638
  *         cdef int raw_value_len
  * 
  *         cdef BaseType index = self.dct.root()             # <<<<<<<<<<<<<<
@@ -12465,7 +12617,7 @@ static PyObject *__pyx_gb_4dawg_9BytesDAWG_24generator2(__pyx_CoroutineObject *_
  */
   __pyx_cur_scope->__pyx_v_index = __pyx_cur_scope->__pyx_v_self->__pyx_base.__pyx_base.dct.root();
 
-  /* "dawg.pyx":633
+  /* "dawg.pyx":639
  * 
  *         cdef BaseType index = self.dct.root()
  *         if not self.dct.Follow(b_prefix, &index):             # <<<<<<<<<<<<<<
@@ -12474,13 +12626,13 @@ static PyObject *__pyx_gb_4dawg_9BytesDAWG_24generator2(__pyx_CoroutineObject *_
  */
   if (unlikely(__pyx_cur_scope->__pyx_v_b_prefix == Py_None)) {
     PyErr_SetString(PyExc_TypeError, "expected bytes, NoneType found");
-    __PYX_ERR(0, 633, __pyx_L1_error)
+    __PYX_ERR(0, 639, __pyx_L1_error)
   }
-  __pyx_t_2 = __Pyx_PyBytes_AsWritableString(__pyx_cur_scope->__pyx_v_b_prefix); if (unlikely((!__pyx_t_2) && PyErr_Occurred())) __PYX_ERR(0, 633, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyBytes_AsWritableString(__pyx_cur_scope->__pyx_v_b_prefix); if (unlikely((!__pyx_t_2) && PyErr_Occurred())) __PYX_ERR(0, 639, __pyx_L1_error)
   __pyx_t_3 = ((!(__pyx_cur_scope->__pyx_v_self->__pyx_base.__pyx_base.dct.Follow(__pyx_t_2, (&__pyx_cur_scope->__pyx_v_index)) != 0)) != 0);
   if (__pyx_t_3) {
 
-    /* "dawg.pyx":634
+    /* "dawg.pyx":640
  *         cdef BaseType index = self.dct.root()
  *         if not self.dct.Follow(b_prefix, &index):
  *             return             # <<<<<<<<<<<<<<
@@ -12491,7 +12643,7 @@ static PyObject *__pyx_gb_4dawg_9BytesDAWG_24generator2(__pyx_CoroutineObject *_
     __pyx_r = NULL;
     goto __pyx_L0;
 
-    /* "dawg.pyx":633
+    /* "dawg.pyx":639
  * 
  *         cdef BaseType index = self.dct.root()
  *         if not self.dct.Follow(b_prefix, &index):             # <<<<<<<<<<<<<<
@@ -12500,7 +12652,7 @@ static PyObject *__pyx_gb_4dawg_9BytesDAWG_24generator2(__pyx_CoroutineObject *_
  */
   }
 
-  /* "dawg.pyx":641
+  /* "dawg.pyx":647
  * 
  *         cdef Completer completer
  *         init_completer(completer, self.dct, self.guide)             # <<<<<<<<<<<<<<
@@ -12509,7 +12661,7 @@ static PyObject *__pyx_gb_4dawg_9BytesDAWG_24generator2(__pyx_CoroutineObject *_
  */
   __pyx_f_4dawg_init_completer(__pyx_cur_scope->__pyx_v_completer, __pyx_cur_scope->__pyx_v_self->__pyx_base.__pyx_base.dct, __pyx_cur_scope->__pyx_v_self->__pyx_base.guide);
 
-  /* "dawg.pyx":642
+  /* "dawg.pyx":648
  *         cdef Completer completer
  *         init_completer(completer, self.dct, self.guide)
  *         completer.Start(index, b_prefix)             # <<<<<<<<<<<<<<
@@ -12518,12 +12670,12 @@ static PyObject *__pyx_gb_4dawg_9BytesDAWG_24generator2(__pyx_CoroutineObject *_
  */
   if (unlikely(__pyx_cur_scope->__pyx_v_b_prefix == Py_None)) {
     PyErr_SetString(PyExc_TypeError, "expected bytes, NoneType found");
-    __PYX_ERR(0, 642, __pyx_L1_error)
+    __PYX_ERR(0, 648, __pyx_L1_error)
   }
-  __pyx_t_4 = __Pyx_PyBytes_AsWritableString(__pyx_cur_scope->__pyx_v_b_prefix); if (unlikely((!__pyx_t_4) && PyErr_Occurred())) __PYX_ERR(0, 642, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyBytes_AsWritableString(__pyx_cur_scope->__pyx_v_b_prefix); if (unlikely((!__pyx_t_4) && PyErr_Occurred())) __PYX_ERR(0, 648, __pyx_L1_error)
   __pyx_cur_scope->__pyx_v_completer.Start(__pyx_cur_scope->__pyx_v_index, __pyx_t_4);
 
-  /* "dawg.pyx":644
+  /* "dawg.pyx":650
  *         completer.Start(index, b_prefix)
  * 
  *         while completer.Next():             # <<<<<<<<<<<<<<
@@ -12534,7 +12686,7 @@ static PyObject *__pyx_gb_4dawg_9BytesDAWG_24generator2(__pyx_CoroutineObject *_
     __pyx_t_3 = (__pyx_cur_scope->__pyx_v_completer.Next() != 0);
     if (!__pyx_t_3) break;
 
-    /* "dawg.pyx":645
+    /* "dawg.pyx":651
  * 
  *         while completer.Next():
  *             raw_key = <char*>completer.key()             # <<<<<<<<<<<<<<
@@ -12543,7 +12695,7 @@ static PyObject *__pyx_gb_4dawg_9BytesDAWG_24generator2(__pyx_CoroutineObject *_
  */
     __pyx_cur_scope->__pyx_v_raw_key = ((char *)__pyx_cur_scope->__pyx_v_completer.key());
 
-    /* "dawg.pyx":647
+    /* "dawg.pyx":653
  *             raw_key = <char*>completer.key()
  * 
  *             for i in range(0, completer.length()):             # <<<<<<<<<<<<<<
@@ -12555,7 +12707,7 @@ static PyObject *__pyx_gb_4dawg_9BytesDAWG_24generator2(__pyx_CoroutineObject *_
     for (__pyx_t_7 = 0; __pyx_t_7 < __pyx_t_6; __pyx_t_7+=1) {
       __pyx_cur_scope->__pyx_v_i = __pyx_t_7;
 
-      /* "dawg.pyx":648
+      /* "dawg.pyx":654
  * 
  *             for i in range(0, completer.length()):
  *                 if raw_key[i] == self._c_payload_separator:             # <<<<<<<<<<<<<<
@@ -12565,7 +12717,7 @@ static PyObject *__pyx_gb_4dawg_9BytesDAWG_24generator2(__pyx_CoroutineObject *_
       __pyx_t_3 = (((__pyx_cur_scope->__pyx_v_raw_key[__pyx_cur_scope->__pyx_v_i]) == __pyx_cur_scope->__pyx_v_self->_c_payload_separator) != 0);
       if (__pyx_t_3) {
 
-        /* "dawg.pyx":649
+        /* "dawg.pyx":655
  *             for i in range(0, completer.length()):
  *                 if raw_key[i] == self._c_payload_separator:
  *                     break             # <<<<<<<<<<<<<<
@@ -12574,7 +12726,7 @@ static PyObject *__pyx_gb_4dawg_9BytesDAWG_24generator2(__pyx_CoroutineObject *_
  */
         goto __pyx_L8_break;
 
-        /* "dawg.pyx":648
+        /* "dawg.pyx":654
  * 
  *             for i in range(0, completer.length()):
  *                 if raw_key[i] == self._c_payload_separator:             # <<<<<<<<<<<<<<
@@ -12585,7 +12737,7 @@ static PyObject *__pyx_gb_4dawg_9BytesDAWG_24generator2(__pyx_CoroutineObject *_
     }
     __pyx_L8_break:;
 
-    /* "dawg.pyx":651
+    /* "dawg.pyx":657
  *                     break
  * 
  *             raw_value = &(raw_key[i])             # <<<<<<<<<<<<<<
@@ -12594,7 +12746,7 @@ static PyObject *__pyx_gb_4dawg_9BytesDAWG_24generator2(__pyx_CoroutineObject *_
  */
     __pyx_cur_scope->__pyx_v_raw_value = (&(__pyx_cur_scope->__pyx_v_raw_key[__pyx_cur_scope->__pyx_v_i]));
 
-    /* "dawg.pyx":652
+    /* "dawg.pyx":658
  * 
  *             raw_value = &(raw_key[i])
  *             raw_value_len = completer.length() - i             # <<<<<<<<<<<<<<
@@ -12603,7 +12755,7 @@ static PyObject *__pyx_gb_4dawg_9BytesDAWG_24generator2(__pyx_CoroutineObject *_
  */
     __pyx_cur_scope->__pyx_v_raw_value_len = (__pyx_cur_scope->__pyx_v_completer.length() - __pyx_cur_scope->__pyx_v_i);
 
-    /* "dawg.pyx":654
+    /* "dawg.pyx":660
  *             raw_value_len = completer.length() - i
  * 
  *             _b64_decoder.init()             # <<<<<<<<<<<<<<
@@ -12612,7 +12764,7 @@ static PyObject *__pyx_gb_4dawg_9BytesDAWG_24generator2(__pyx_CoroutineObject *_
  */
     __pyx_cur_scope->__pyx_v__b64_decoder.init();
 
-    /* "dawg.pyx":655
+    /* "dawg.pyx":661
  * 
  *             _b64_decoder.init()
  *             _len = _b64_decoder.decode(raw_value, raw_value_len, _b64_decoder_storage)             # <<<<<<<<<<<<<<
@@ -12621,42 +12773,42 @@ static PyObject *__pyx_gb_4dawg_9BytesDAWG_24generator2(__pyx_CoroutineObject *_
  */
     __pyx_cur_scope->__pyx_v__len = __pyx_cur_scope->__pyx_v__b64_decoder.decode(__pyx_cur_scope->__pyx_v_raw_value, __pyx_cur_scope->__pyx_v_raw_value_len, __pyx_cur_scope->__pyx_v__b64_decoder_storage);
 
-    /* "dawg.pyx":656
+    /* "dawg.pyx":662
  *             _b64_decoder.init()
  *             _len = _b64_decoder.decode(raw_value, raw_value_len, _b64_decoder_storage)
  *             value = _b64_decoder_storage[:_len]             # <<<<<<<<<<<<<<
  * 
  *             u_key = raw_key[:i].decode('utf8')
  */
-    __pyx_t_1 = __Pyx_PyBytes_FromStringAndSize(((const char*)__pyx_cur_scope->__pyx_v__b64_decoder_storage) + 0, __pyx_cur_scope->__pyx_v__len - 0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 656, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyBytes_FromStringAndSize(((const char*)__pyx_cur_scope->__pyx_v__b64_decoder_storage) + 0, __pyx_cur_scope->__pyx_v__len - 0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 662, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_XGOTREF(__pyx_cur_scope->__pyx_v_value);
     __Pyx_XDECREF_SET(__pyx_cur_scope->__pyx_v_value, ((PyObject*)__pyx_t_1));
     __Pyx_GIVEREF(__pyx_t_1);
     __pyx_t_1 = 0;
 
-    /* "dawg.pyx":658
+    /* "dawg.pyx":664
  *             value = _b64_decoder_storage[:_len]
  * 
  *             u_key = raw_key[:i].decode('utf8')             # <<<<<<<<<<<<<<
  *             yield (u_key, value)
  * 
  */
-    __pyx_t_1 = __Pyx_decode_c_string(__pyx_cur_scope->__pyx_v_raw_key, 0, __pyx_cur_scope->__pyx_v_i, NULL, NULL, PyUnicode_DecodeUTF8); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 658, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_decode_c_string(__pyx_cur_scope->__pyx_v_raw_key, 0, __pyx_cur_scope->__pyx_v_i, NULL, NULL, PyUnicode_DecodeUTF8); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 664, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_XGOTREF(__pyx_cur_scope->__pyx_v_u_key);
     __Pyx_XDECREF_SET(__pyx_cur_scope->__pyx_v_u_key, __pyx_t_1);
     __Pyx_GIVEREF(__pyx_t_1);
     __pyx_t_1 = 0;
 
-    /* "dawg.pyx":659
+    /* "dawg.pyx":665
  * 
  *             u_key = raw_key[:i].decode('utf8')
  *             yield (u_key, value)             # <<<<<<<<<<<<<<
  * 
  *     cpdef list keys(self, unicode prefix=""):
  */
-    __pyx_t_1 = PyTuple_New(2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 659, __pyx_L1_error)
+    __pyx_t_1 = PyTuple_New(2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 665, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_INCREF(__pyx_cur_scope->__pyx_v_u_key);
     __Pyx_GIVEREF(__pyx_cur_scope->__pyx_v_u_key);
@@ -12673,11 +12825,11 @@ static PyObject *__pyx_gb_4dawg_9BytesDAWG_24generator2(__pyx_CoroutineObject *_
     __pyx_generator->resume_label = 1;
     return __pyx_r;
     __pyx_L10_resume_from_yield:;
-    if (unlikely(!__pyx_sent_value)) __PYX_ERR(0, 659, __pyx_L1_error)
+    if (unlikely(!__pyx_sent_value)) __PYX_ERR(0, 665, __pyx_L1_error)
   }
   CYTHON_MAYBE_UNUSED_VAR(__pyx_cur_scope);
 
-  /* "dawg.pyx":624
+  /* "dawg.pyx":630
  *         return res
  * 
  *     def iteritems(self, unicode prefix=""):             # <<<<<<<<<<<<<<
@@ -12702,7 +12854,7 @@ static PyObject *__pyx_gb_4dawg_9BytesDAWG_24generator2(__pyx_CoroutineObject *_
   return __pyx_r;
 }
 
-/* "dawg.pyx":661
+/* "dawg.pyx":667
  *             yield (u_key, value)
  * 
  *     cpdef list keys(self, unicode prefix=""):             # <<<<<<<<<<<<<<
@@ -12748,7 +12900,7 @@ static PyObject *__pyx_f_4dawg_9BytesDAWG_keys(struct __pyx_obj_4dawg_BytesDAWG 
     if (unlikely(!__Pyx_object_dict_version_matches(((PyObject *)__pyx_v_self), __pyx_tp_dict_version, __pyx_obj_dict_version))) {
       PY_UINT64_T __pyx_type_dict_guard = __Pyx_get_tp_dict_version(((PyObject *)__pyx_v_self));
       #endif
-      __pyx_t_1 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_keys); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 661, __pyx_L1_error)
+      __pyx_t_1 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_keys); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 667, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_1);
       if (!PyCFunction_Check(__pyx_t_1) || (PyCFunction_GET_FUNCTION(__pyx_t_1) != (PyCFunction)(void*)__pyx_pw_4dawg_9BytesDAWG_26keys)) {
         __Pyx_XDECREF(__pyx_r);
@@ -12765,10 +12917,10 @@ static PyObject *__pyx_f_4dawg_9BytesDAWG_keys(struct __pyx_obj_4dawg_BytesDAWG 
         }
         __pyx_t_2 = (__pyx_t_4) ? __Pyx_PyObject_Call2Args(__pyx_t_3, __pyx_t_4, __pyx_v_prefix) : __Pyx_PyObject_CallOneArg(__pyx_t_3, __pyx_v_prefix);
         __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
-        if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 661, __pyx_L1_error)
+        if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 667, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_2);
         __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-        if (!(likely(PyList_CheckExact(__pyx_t_2))||((__pyx_t_2) == Py_None)||(PyErr_Format(PyExc_TypeError, "Expected %.16s, got %.200s", "list", Py_TYPE(__pyx_t_2)->tp_name), 0))) __PYX_ERR(0, 661, __pyx_L1_error)
+        if (!(likely(PyList_CheckExact(__pyx_t_2))||((__pyx_t_2) == Py_None)||(PyErr_Format(PyExc_TypeError, "Expected %.16s, got %.200s", "list", Py_TYPE(__pyx_t_2)->tp_name), 0))) __PYX_ERR(0, 667, __pyx_L1_error)
         __pyx_r = ((PyObject*)__pyx_t_2);
         __pyx_t_2 = 0;
         __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
@@ -12787,7 +12939,7 @@ static PyObject *__pyx_f_4dawg_9BytesDAWG_keys(struct __pyx_obj_4dawg_BytesDAWG 
     #endif
   }
 
-  /* "dawg.pyx":662
+  /* "dawg.pyx":668
  * 
  *     cpdef list keys(self, unicode prefix=""):
  *         cdef bytes b_prefix = prefix.encode('utf8')             # <<<<<<<<<<<<<<
@@ -12796,26 +12948,26 @@ static PyObject *__pyx_f_4dawg_9BytesDAWG_keys(struct __pyx_obj_4dawg_BytesDAWG 
  */
   if (unlikely(__pyx_v_prefix == Py_None)) {
     PyErr_Format(PyExc_AttributeError, "'NoneType' object has no attribute '%.30s'", "encode");
-    __PYX_ERR(0, 662, __pyx_L1_error)
+    __PYX_ERR(0, 668, __pyx_L1_error)
   }
-  __pyx_t_1 = PyUnicode_AsUTF8String(__pyx_v_prefix); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 662, __pyx_L1_error)
+  __pyx_t_1 = PyUnicode_AsUTF8String(__pyx_v_prefix); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 668, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_v_b_prefix = ((PyObject*)__pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "dawg.pyx":664
+  /* "dawg.pyx":670
  *         cdef bytes b_prefix = prefix.encode('utf8')
  *         cdef int i
  *         cdef list res = []             # <<<<<<<<<<<<<<
  *         cdef char* raw_key
  * 
  */
-  __pyx_t_1 = PyList_New(0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 664, __pyx_L1_error)
+  __pyx_t_1 = PyList_New(0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 670, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_v_res = ((PyObject*)__pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "dawg.pyx":667
+  /* "dawg.pyx":673
  *         cdef char* raw_key
  * 
  *         cdef BaseType index = self.dct.root()             # <<<<<<<<<<<<<<
@@ -12824,7 +12976,7 @@ static PyObject *__pyx_f_4dawg_9BytesDAWG_keys(struct __pyx_obj_4dawg_BytesDAWG 
  */
   __pyx_v_index = __pyx_v_self->__pyx_base.__pyx_base.dct.root();
 
-  /* "dawg.pyx":668
+  /* "dawg.pyx":674
  * 
  *         cdef BaseType index = self.dct.root()
  *         if not self.dct.Follow(b_prefix, &index):             # <<<<<<<<<<<<<<
@@ -12833,13 +12985,13 @@ static PyObject *__pyx_f_4dawg_9BytesDAWG_keys(struct __pyx_obj_4dawg_BytesDAWG 
  */
   if (unlikely(__pyx_v_b_prefix == Py_None)) {
     PyErr_SetString(PyExc_TypeError, "expected bytes, NoneType found");
-    __PYX_ERR(0, 668, __pyx_L1_error)
+    __PYX_ERR(0, 674, __pyx_L1_error)
   }
-  __pyx_t_5 = __Pyx_PyBytes_AsWritableString(__pyx_v_b_prefix); if (unlikely((!__pyx_t_5) && PyErr_Occurred())) __PYX_ERR(0, 668, __pyx_L1_error)
+  __pyx_t_5 = __Pyx_PyBytes_AsWritableString(__pyx_v_b_prefix); if (unlikely((!__pyx_t_5) && PyErr_Occurred())) __PYX_ERR(0, 674, __pyx_L1_error)
   __pyx_t_6 = ((!(__pyx_v_self->__pyx_base.__pyx_base.dct.Follow(__pyx_t_5, (&__pyx_v_index)) != 0)) != 0);
   if (__pyx_t_6) {
 
-    /* "dawg.pyx":669
+    /* "dawg.pyx":675
  *         cdef BaseType index = self.dct.root()
  *         if not self.dct.Follow(b_prefix, &index):
  *             return res             # <<<<<<<<<<<<<<
@@ -12851,7 +13003,7 @@ static PyObject *__pyx_f_4dawg_9BytesDAWG_keys(struct __pyx_obj_4dawg_BytesDAWG 
     __pyx_r = __pyx_v_res;
     goto __pyx_L0;
 
-    /* "dawg.pyx":668
+    /* "dawg.pyx":674
  * 
  *         cdef BaseType index = self.dct.root()
  *         if not self.dct.Follow(b_prefix, &index):             # <<<<<<<<<<<<<<
@@ -12860,7 +13012,7 @@ static PyObject *__pyx_f_4dawg_9BytesDAWG_keys(struct __pyx_obj_4dawg_BytesDAWG 
  */
   }
 
-  /* "dawg.pyx":672
+  /* "dawg.pyx":678
  * 
  *         cdef Completer completer
  *         init_completer(completer, self.dct, self.guide)             # <<<<<<<<<<<<<<
@@ -12869,7 +13021,7 @@ static PyObject *__pyx_f_4dawg_9BytesDAWG_keys(struct __pyx_obj_4dawg_BytesDAWG 
  */
   __pyx_f_4dawg_init_completer(__pyx_v_completer, __pyx_v_self->__pyx_base.__pyx_base.dct, __pyx_v_self->__pyx_base.guide);
 
-  /* "dawg.pyx":673
+  /* "dawg.pyx":679
  *         cdef Completer completer
  *         init_completer(completer, self.dct, self.guide)
  *         completer.Start(index, b_prefix)             # <<<<<<<<<<<<<<
@@ -12878,12 +13030,12 @@ static PyObject *__pyx_f_4dawg_9BytesDAWG_keys(struct __pyx_obj_4dawg_BytesDAWG 
  */
   if (unlikely(__pyx_v_b_prefix == Py_None)) {
     PyErr_SetString(PyExc_TypeError, "expected bytes, NoneType found");
-    __PYX_ERR(0, 673, __pyx_L1_error)
+    __PYX_ERR(0, 679, __pyx_L1_error)
   }
-  __pyx_t_7 = __Pyx_PyBytes_AsWritableString(__pyx_v_b_prefix); if (unlikely((!__pyx_t_7) && PyErr_Occurred())) __PYX_ERR(0, 673, __pyx_L1_error)
+  __pyx_t_7 = __Pyx_PyBytes_AsWritableString(__pyx_v_b_prefix); if (unlikely((!__pyx_t_7) && PyErr_Occurred())) __PYX_ERR(0, 679, __pyx_L1_error)
   __pyx_v_completer.Start(__pyx_v_index, __pyx_t_7);
 
-  /* "dawg.pyx":675
+  /* "dawg.pyx":681
  *         completer.Start(index, b_prefix)
  * 
  *         while completer.Next():             # <<<<<<<<<<<<<<
@@ -12894,7 +13046,7 @@ static PyObject *__pyx_f_4dawg_9BytesDAWG_keys(struct __pyx_obj_4dawg_BytesDAWG 
     __pyx_t_6 = (__pyx_v_completer.Next() != 0);
     if (!__pyx_t_6) break;
 
-    /* "dawg.pyx":676
+    /* "dawg.pyx":682
  * 
  *         while completer.Next():
  *             raw_key = <char*>completer.key()             # <<<<<<<<<<<<<<
@@ -12903,7 +13055,7 @@ static PyObject *__pyx_f_4dawg_9BytesDAWG_keys(struct __pyx_obj_4dawg_BytesDAWG 
  */
     __pyx_v_raw_key = ((char *)__pyx_v_completer.key());
 
-    /* "dawg.pyx":678
+    /* "dawg.pyx":684
  *             raw_key = <char*>completer.key()
  * 
  *             for i in range(0, completer.length()):             # <<<<<<<<<<<<<<
@@ -12915,7 +13067,7 @@ static PyObject *__pyx_f_4dawg_9BytesDAWG_keys(struct __pyx_obj_4dawg_BytesDAWG 
     for (__pyx_t_10 = 0; __pyx_t_10 < __pyx_t_9; __pyx_t_10+=1) {
       __pyx_v_i = __pyx_t_10;
 
-      /* "dawg.pyx":679
+      /* "dawg.pyx":685
  * 
  *             for i in range(0, completer.length()):
  *                 if raw_key[i] == self._c_payload_separator:             # <<<<<<<<<<<<<<
@@ -12925,7 +13077,7 @@ static PyObject *__pyx_f_4dawg_9BytesDAWG_keys(struct __pyx_obj_4dawg_BytesDAWG 
       __pyx_t_6 = (((__pyx_v_raw_key[__pyx_v_i]) == __pyx_v_self->_c_payload_separator) != 0);
       if (__pyx_t_6) {
 
-        /* "dawg.pyx":680
+        /* "dawg.pyx":686
  *             for i in range(0, completer.length()):
  *                 if raw_key[i] == self._c_payload_separator:
  *                     break             # <<<<<<<<<<<<<<
@@ -12934,7 +13086,7 @@ static PyObject *__pyx_f_4dawg_9BytesDAWG_keys(struct __pyx_obj_4dawg_BytesDAWG 
  */
         goto __pyx_L7_break;
 
-        /* "dawg.pyx":679
+        /* "dawg.pyx":685
  * 
  *             for i in range(0, completer.length()):
  *                 if raw_key[i] == self._c_payload_separator:             # <<<<<<<<<<<<<<
@@ -12945,29 +13097,29 @@ static PyObject *__pyx_f_4dawg_9BytesDAWG_keys(struct __pyx_obj_4dawg_BytesDAWG 
     }
     __pyx_L7_break:;
 
-    /* "dawg.pyx":682
+    /* "dawg.pyx":688
  *                     break
  * 
  *             u_key = raw_key[:i].decode('utf8')             # <<<<<<<<<<<<<<
  *             res.append(u_key)
  *         return res
  */
-    __pyx_t_1 = __Pyx_decode_c_string(__pyx_v_raw_key, 0, __pyx_v_i, NULL, NULL, PyUnicode_DecodeUTF8); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 682, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_decode_c_string(__pyx_v_raw_key, 0, __pyx_v_i, NULL, NULL, PyUnicode_DecodeUTF8); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 688, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_XDECREF_SET(__pyx_v_u_key, __pyx_t_1);
     __pyx_t_1 = 0;
 
-    /* "dawg.pyx":683
+    /* "dawg.pyx":689
  * 
  *             u_key = raw_key[:i].decode('utf8')
  *             res.append(u_key)             # <<<<<<<<<<<<<<
  *         return res
  * 
  */
-    __pyx_t_11 = __Pyx_PyList_Append(__pyx_v_res, __pyx_v_u_key); if (unlikely(__pyx_t_11 == ((int)-1))) __PYX_ERR(0, 683, __pyx_L1_error)
+    __pyx_t_11 = __Pyx_PyList_Append(__pyx_v_res, __pyx_v_u_key); if (unlikely(__pyx_t_11 == ((int)-1))) __PYX_ERR(0, 689, __pyx_L1_error)
   }
 
-  /* "dawg.pyx":684
+  /* "dawg.pyx":690
  *             u_key = raw_key[:i].decode('utf8')
  *             res.append(u_key)
  *         return res             # <<<<<<<<<<<<<<
@@ -12979,7 +13131,7 @@ static PyObject *__pyx_f_4dawg_9BytesDAWG_keys(struct __pyx_obj_4dawg_BytesDAWG 
   __pyx_r = __pyx_v_res;
   goto __pyx_L0;
 
-  /* "dawg.pyx":661
+  /* "dawg.pyx":667
  *             yield (u_key, value)
  * 
  *     cpdef list keys(self, unicode prefix=""):             # <<<<<<<<<<<<<<
@@ -13034,7 +13186,7 @@ static PyObject *__pyx_pw_4dawg_9BytesDAWG_26keys(PyObject *__pyx_v_self, PyObje
         }
       }
       if (unlikely(kw_args > 0)) {
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "keys") < 0)) __PYX_ERR(0, 661, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "keys") < 0)) __PYX_ERR(0, 667, __pyx_L3_error)
       }
     } else {
       switch (PyTuple_GET_SIZE(__pyx_args)) {
@@ -13048,13 +13200,13 @@ static PyObject *__pyx_pw_4dawg_9BytesDAWG_26keys(PyObject *__pyx_v_self, PyObje
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("keys", 0, 0, 1, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 661, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("keys", 0, 0, 1, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 667, __pyx_L3_error)
   __pyx_L3_error:;
   __Pyx_AddTraceback("dawg.BytesDAWG.keys", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_prefix), (&PyUnicode_Type), 1, "prefix", 1))) __PYX_ERR(0, 661, __pyx_L1_error)
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_prefix), (&PyUnicode_Type), 1, "prefix", 1))) __PYX_ERR(0, 667, __pyx_L1_error)
   __pyx_r = __pyx_pf_4dawg_9BytesDAWG_25keys(((struct __pyx_obj_4dawg_BytesDAWG *)__pyx_v_self), __pyx_v_prefix);
 
   /* function exit code */
@@ -13075,7 +13227,7 @@ static PyObject *__pyx_pf_4dawg_9BytesDAWG_25keys(struct __pyx_obj_4dawg_BytesDA
   __Pyx_XDECREF(__pyx_r);
   __pyx_t_2.__pyx_n = 1;
   __pyx_t_2.prefix = __pyx_v_prefix;
-  __pyx_t_1 = __pyx_vtabptr_4dawg_BytesDAWG->__pyx_base.keys(((struct __pyx_obj_4dawg_CompletionDAWG *)__pyx_v_self), 1, &__pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 661, __pyx_L1_error)
+  __pyx_t_1 = __pyx_vtabptr_4dawg_BytesDAWG->__pyx_base.keys(((struct __pyx_obj_4dawg_CompletionDAWG *)__pyx_v_self), 1, &__pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 667, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
@@ -13093,7 +13245,7 @@ static PyObject *__pyx_pf_4dawg_9BytesDAWG_25keys(struct __pyx_obj_4dawg_BytesDA
 }
 static PyObject *__pyx_gb_4dawg_9BytesDAWG_29generator3(__pyx_CoroutineObject *__pyx_generator, CYTHON_UNUSED PyThreadState *__pyx_tstate, PyObject *__pyx_sent_value); /* proto */
 
-/* "dawg.pyx":686
+/* "dawg.pyx":692
  *         return res
  * 
  *     def iterkeys(self, unicode prefix=""):             # <<<<<<<<<<<<<<
@@ -13131,7 +13283,7 @@ static PyObject *__pyx_pw_4dawg_9BytesDAWG_28iterkeys(PyObject *__pyx_v_self, Py
         }
       }
       if (unlikely(kw_args > 0)) {
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "iterkeys") < 0)) __PYX_ERR(0, 686, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "iterkeys") < 0)) __PYX_ERR(0, 692, __pyx_L3_error)
       }
     } else {
       switch (PyTuple_GET_SIZE(__pyx_args)) {
@@ -13145,13 +13297,13 @@ static PyObject *__pyx_pw_4dawg_9BytesDAWG_28iterkeys(PyObject *__pyx_v_self, Py
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("iterkeys", 0, 0, 1, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 686, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("iterkeys", 0, 0, 1, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 692, __pyx_L3_error)
   __pyx_L3_error:;
   __Pyx_AddTraceback("dawg.BytesDAWG.iterkeys", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_prefix), (&PyUnicode_Type), 1, "prefix", 1))) __PYX_ERR(0, 686, __pyx_L1_error)
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_prefix), (&PyUnicode_Type), 1, "prefix", 1))) __PYX_ERR(0, 692, __pyx_L1_error)
   __pyx_r = __pyx_pf_4dawg_9BytesDAWG_27iterkeys(((struct __pyx_obj_4dawg_BytesDAWG *)__pyx_v_self), __pyx_v_prefix);
 
   /* function exit code */
@@ -13172,7 +13324,7 @@ static PyObject *__pyx_pf_4dawg_9BytesDAWG_27iterkeys(struct __pyx_obj_4dawg_Byt
   if (unlikely(!__pyx_cur_scope)) {
     __pyx_cur_scope = ((struct __pyx_obj_4dawg___pyx_scope_struct_7_iterkeys *)Py_None);
     __Pyx_INCREF(Py_None);
-    __PYX_ERR(0, 686, __pyx_L1_error)
+    __PYX_ERR(0, 692, __pyx_L1_error)
   } else {
     __Pyx_GOTREF(__pyx_cur_scope);
   }
@@ -13183,7 +13335,7 @@ static PyObject *__pyx_pf_4dawg_9BytesDAWG_27iterkeys(struct __pyx_obj_4dawg_Byt
   __Pyx_INCREF(__pyx_cur_scope->__pyx_v_prefix);
   __Pyx_GIVEREF(__pyx_cur_scope->__pyx_v_prefix);
   {
-    __pyx_CoroutineObject *gen = __Pyx_Generator_New((__pyx_coroutine_body_t) __pyx_gb_4dawg_9BytesDAWG_29generator3, NULL, (PyObject *) __pyx_cur_scope, __pyx_n_s_iterkeys, __pyx_n_s_BytesDAWG_iterkeys, __pyx_n_s_dawg); if (unlikely(!gen)) __PYX_ERR(0, 686, __pyx_L1_error)
+    __pyx_CoroutineObject *gen = __Pyx_Generator_New((__pyx_coroutine_body_t) __pyx_gb_4dawg_9BytesDAWG_29generator3, NULL, (PyObject *) __pyx_cur_scope, __pyx_n_s_iterkeys, __pyx_n_s_BytesDAWG_iterkeys, __pyx_n_s_dawg); if (unlikely(!gen)) __PYX_ERR(0, 692, __pyx_L1_error)
     __Pyx_DECREF(__pyx_cur_scope);
     __Pyx_RefNannyFinishContext();
     return (PyObject *) gen;
@@ -13220,9 +13372,9 @@ static PyObject *__pyx_gb_4dawg_9BytesDAWG_29generator3(__pyx_CoroutineObject *_
     return NULL;
   }
   __pyx_L3_first_run:;
-  if (unlikely(!__pyx_sent_value)) __PYX_ERR(0, 686, __pyx_L1_error)
+  if (unlikely(!__pyx_sent_value)) __PYX_ERR(0, 692, __pyx_L1_error)
 
-  /* "dawg.pyx":687
+  /* "dawg.pyx":693
  * 
  *     def iterkeys(self, unicode prefix=""):
  *         cdef bytes b_prefix = prefix.encode('utf8')             # <<<<<<<<<<<<<<
@@ -13231,15 +13383,15 @@ static PyObject *__pyx_gb_4dawg_9BytesDAWG_29generator3(__pyx_CoroutineObject *_
  */
   if (unlikely(__pyx_cur_scope->__pyx_v_prefix == Py_None)) {
     PyErr_Format(PyExc_AttributeError, "'NoneType' object has no attribute '%.30s'", "encode");
-    __PYX_ERR(0, 687, __pyx_L1_error)
+    __PYX_ERR(0, 693, __pyx_L1_error)
   }
-  __pyx_t_1 = PyUnicode_AsUTF8String(__pyx_cur_scope->__pyx_v_prefix); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 687, __pyx_L1_error)
+  __pyx_t_1 = PyUnicode_AsUTF8String(__pyx_cur_scope->__pyx_v_prefix); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 693, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_GIVEREF(__pyx_t_1);
   __pyx_cur_scope->__pyx_v_b_prefix = ((PyObject*)__pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "dawg.pyx":691
+  /* "dawg.pyx":697
  *         cdef char* raw_key
  * 
  *         cdef BaseType index = self.dct.root()             # <<<<<<<<<<<<<<
@@ -13248,7 +13400,7 @@ static PyObject *__pyx_gb_4dawg_9BytesDAWG_29generator3(__pyx_CoroutineObject *_
  */
   __pyx_cur_scope->__pyx_v_index = __pyx_cur_scope->__pyx_v_self->__pyx_base.__pyx_base.dct.root();
 
-  /* "dawg.pyx":692
+  /* "dawg.pyx":698
  * 
  *         cdef BaseType index = self.dct.root()
  *         if not self.dct.Follow(b_prefix, &index):             # <<<<<<<<<<<<<<
@@ -13257,13 +13409,13 @@ static PyObject *__pyx_gb_4dawg_9BytesDAWG_29generator3(__pyx_CoroutineObject *_
  */
   if (unlikely(__pyx_cur_scope->__pyx_v_b_prefix == Py_None)) {
     PyErr_SetString(PyExc_TypeError, "expected bytes, NoneType found");
-    __PYX_ERR(0, 692, __pyx_L1_error)
+    __PYX_ERR(0, 698, __pyx_L1_error)
   }
-  __pyx_t_2 = __Pyx_PyBytes_AsWritableString(__pyx_cur_scope->__pyx_v_b_prefix); if (unlikely((!__pyx_t_2) && PyErr_Occurred())) __PYX_ERR(0, 692, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyBytes_AsWritableString(__pyx_cur_scope->__pyx_v_b_prefix); if (unlikely((!__pyx_t_2) && PyErr_Occurred())) __PYX_ERR(0, 698, __pyx_L1_error)
   __pyx_t_3 = ((!(__pyx_cur_scope->__pyx_v_self->__pyx_base.__pyx_base.dct.Follow(__pyx_t_2, (&__pyx_cur_scope->__pyx_v_index)) != 0)) != 0);
   if (__pyx_t_3) {
 
-    /* "dawg.pyx":693
+    /* "dawg.pyx":699
  *         cdef BaseType index = self.dct.root()
  *         if not self.dct.Follow(b_prefix, &index):
  *             return             # <<<<<<<<<<<<<<
@@ -13274,7 +13426,7 @@ static PyObject *__pyx_gb_4dawg_9BytesDAWG_29generator3(__pyx_CoroutineObject *_
     __pyx_r = NULL;
     goto __pyx_L0;
 
-    /* "dawg.pyx":692
+    /* "dawg.pyx":698
  * 
  *         cdef BaseType index = self.dct.root()
  *         if not self.dct.Follow(b_prefix, &index):             # <<<<<<<<<<<<<<
@@ -13283,7 +13435,7 @@ static PyObject *__pyx_gb_4dawg_9BytesDAWG_29generator3(__pyx_CoroutineObject *_
  */
   }
 
-  /* "dawg.pyx":696
+  /* "dawg.pyx":702
  * 
  *         cdef Completer completer
  *         init_completer(completer, self.dct, self.guide)             # <<<<<<<<<<<<<<
@@ -13292,7 +13444,7 @@ static PyObject *__pyx_gb_4dawg_9BytesDAWG_29generator3(__pyx_CoroutineObject *_
  */
   __pyx_f_4dawg_init_completer(__pyx_cur_scope->__pyx_v_completer, __pyx_cur_scope->__pyx_v_self->__pyx_base.__pyx_base.dct, __pyx_cur_scope->__pyx_v_self->__pyx_base.guide);
 
-  /* "dawg.pyx":697
+  /* "dawg.pyx":703
  *         cdef Completer completer
  *         init_completer(completer, self.dct, self.guide)
  *         completer.Start(index, b_prefix)             # <<<<<<<<<<<<<<
@@ -13301,12 +13453,12 @@ static PyObject *__pyx_gb_4dawg_9BytesDAWG_29generator3(__pyx_CoroutineObject *_
  */
   if (unlikely(__pyx_cur_scope->__pyx_v_b_prefix == Py_None)) {
     PyErr_SetString(PyExc_TypeError, "expected bytes, NoneType found");
-    __PYX_ERR(0, 697, __pyx_L1_error)
+    __PYX_ERR(0, 703, __pyx_L1_error)
   }
-  __pyx_t_4 = __Pyx_PyBytes_AsWritableString(__pyx_cur_scope->__pyx_v_b_prefix); if (unlikely((!__pyx_t_4) && PyErr_Occurred())) __PYX_ERR(0, 697, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyBytes_AsWritableString(__pyx_cur_scope->__pyx_v_b_prefix); if (unlikely((!__pyx_t_4) && PyErr_Occurred())) __PYX_ERR(0, 703, __pyx_L1_error)
   __pyx_cur_scope->__pyx_v_completer.Start(__pyx_cur_scope->__pyx_v_index, __pyx_t_4);
 
-  /* "dawg.pyx":699
+  /* "dawg.pyx":705
  *         completer.Start(index, b_prefix)
  * 
  *         while completer.Next():             # <<<<<<<<<<<<<<
@@ -13317,7 +13469,7 @@ static PyObject *__pyx_gb_4dawg_9BytesDAWG_29generator3(__pyx_CoroutineObject *_
     __pyx_t_3 = (__pyx_cur_scope->__pyx_v_completer.Next() != 0);
     if (!__pyx_t_3) break;
 
-    /* "dawg.pyx":700
+    /* "dawg.pyx":706
  * 
  *         while completer.Next():
  *             raw_key = <char*>completer.key()             # <<<<<<<<<<<<<<
@@ -13326,7 +13478,7 @@ static PyObject *__pyx_gb_4dawg_9BytesDAWG_29generator3(__pyx_CoroutineObject *_
  */
     __pyx_cur_scope->__pyx_v_raw_key = ((char *)__pyx_cur_scope->__pyx_v_completer.key());
 
-    /* "dawg.pyx":702
+    /* "dawg.pyx":708
  *             raw_key = <char*>completer.key()
  * 
  *             for i in range(0, completer.length()):             # <<<<<<<<<<<<<<
@@ -13338,7 +13490,7 @@ static PyObject *__pyx_gb_4dawg_9BytesDAWG_29generator3(__pyx_CoroutineObject *_
     for (__pyx_t_7 = 0; __pyx_t_7 < __pyx_t_6; __pyx_t_7+=1) {
       __pyx_cur_scope->__pyx_v_i = __pyx_t_7;
 
-      /* "dawg.pyx":703
+      /* "dawg.pyx":709
  * 
  *             for i in range(0, completer.length()):
  *                 if raw_key[i] == self._c_payload_separator:             # <<<<<<<<<<<<<<
@@ -13348,7 +13500,7 @@ static PyObject *__pyx_gb_4dawg_9BytesDAWG_29generator3(__pyx_CoroutineObject *_
       __pyx_t_3 = (((__pyx_cur_scope->__pyx_v_raw_key[__pyx_cur_scope->__pyx_v_i]) == __pyx_cur_scope->__pyx_v_self->_c_payload_separator) != 0);
       if (__pyx_t_3) {
 
-        /* "dawg.pyx":704
+        /* "dawg.pyx":710
  *             for i in range(0, completer.length()):
  *                 if raw_key[i] == self._c_payload_separator:
  *                     break             # <<<<<<<<<<<<<<
@@ -13357,7 +13509,7 @@ static PyObject *__pyx_gb_4dawg_9BytesDAWG_29generator3(__pyx_CoroutineObject *_
  */
         goto __pyx_L8_break;
 
-        /* "dawg.pyx":703
+        /* "dawg.pyx":709
  * 
  *             for i in range(0, completer.length()):
  *                 if raw_key[i] == self._c_payload_separator:             # <<<<<<<<<<<<<<
@@ -13368,21 +13520,21 @@ static PyObject *__pyx_gb_4dawg_9BytesDAWG_29generator3(__pyx_CoroutineObject *_
     }
     __pyx_L8_break:;
 
-    /* "dawg.pyx":706
+    /* "dawg.pyx":712
  *                     break
  * 
  *             u_key = raw_key[:i].decode('utf8')             # <<<<<<<<<<<<<<
  *             yield u_key
  * 
  */
-    __pyx_t_1 = __Pyx_decode_c_string(__pyx_cur_scope->__pyx_v_raw_key, 0, __pyx_cur_scope->__pyx_v_i, NULL, NULL, PyUnicode_DecodeUTF8); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 706, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_decode_c_string(__pyx_cur_scope->__pyx_v_raw_key, 0, __pyx_cur_scope->__pyx_v_i, NULL, NULL, PyUnicode_DecodeUTF8); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 712, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_XGOTREF(__pyx_cur_scope->__pyx_v_u_key);
     __Pyx_XDECREF_SET(__pyx_cur_scope->__pyx_v_u_key, __pyx_t_1);
     __Pyx_GIVEREF(__pyx_t_1);
     __pyx_t_1 = 0;
 
-    /* "dawg.pyx":707
+    /* "dawg.pyx":713
  * 
  *             u_key = raw_key[:i].decode('utf8')
  *             yield u_key             # <<<<<<<<<<<<<<
@@ -13398,11 +13550,11 @@ static PyObject *__pyx_gb_4dawg_9BytesDAWG_29generator3(__pyx_CoroutineObject *_
     __pyx_generator->resume_label = 1;
     return __pyx_r;
     __pyx_L10_resume_from_yield:;
-    if (unlikely(!__pyx_sent_value)) __PYX_ERR(0, 707, __pyx_L1_error)
+    if (unlikely(!__pyx_sent_value)) __PYX_ERR(0, 713, __pyx_L1_error)
   }
   CYTHON_MAYBE_UNUSED_VAR(__pyx_cur_scope);
 
-  /* "dawg.pyx":686
+  /* "dawg.pyx":692
  *         return res
  * 
  *     def iterkeys(self, unicode prefix=""):             # <<<<<<<<<<<<<<
@@ -13427,7 +13579,7 @@ static PyObject *__pyx_gb_4dawg_9BytesDAWG_29generator3(__pyx_CoroutineObject *_
   return __pyx_r;
 }
 
-/* "dawg.pyx":709
+/* "dawg.pyx":715
  *             yield u_key
  * 
  *     cdef bint _has_value(self, BaseType index):             # <<<<<<<<<<<<<<
@@ -13441,7 +13593,7 @@ static int __pyx_f_4dawg_9BytesDAWG__has_value(struct __pyx_obj_4dawg_BytesDAWG 
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("_has_value", 0);
 
-  /* "dawg.pyx":710
+  /* "dawg.pyx":716
  * 
  *     cdef bint _has_value(self, BaseType index):
  *         cdef BaseType _index = index             # <<<<<<<<<<<<<<
@@ -13450,7 +13602,7 @@ static int __pyx_f_4dawg_9BytesDAWG__has_value(struct __pyx_obj_4dawg_BytesDAWG 
  */
   __pyx_v__index = __pyx_v_index;
 
-  /* "dawg.pyx":711
+  /* "dawg.pyx":717
  *     cdef bint _has_value(self, BaseType index):
  *         cdef BaseType _index = index
  *         return self.dct.Follow(self._c_payload_separator, &_index)             # <<<<<<<<<<<<<<
@@ -13460,7 +13612,7 @@ static int __pyx_f_4dawg_9BytesDAWG__has_value(struct __pyx_obj_4dawg_BytesDAWG 
   __pyx_r = __pyx_v_self->__pyx_base.__pyx_base.dct.Follow(__pyx_v_self->_c_payload_separator, (&__pyx_v__index));
   goto __pyx_L0;
 
-  /* "dawg.pyx":709
+  /* "dawg.pyx":715
  *             yield u_key
  * 
  *     cdef bint _has_value(self, BaseType index):             # <<<<<<<<<<<<<<
@@ -13474,7 +13626,7 @@ static int __pyx_f_4dawg_9BytesDAWG__has_value(struct __pyx_obj_4dawg_BytesDAWG 
   return __pyx_r;
 }
 
-/* "dawg.pyx":713
+/* "dawg.pyx":719
  *         return self.dct.Follow(self._c_payload_separator, &_index)
  * 
  *     cdef list _similar_items(self, unicode current_prefix, unicode key, BaseType cur_index, dict replace_chars):             # <<<<<<<<<<<<<<
@@ -13509,7 +13661,7 @@ static PyObject *__pyx_f_4dawg_9BytesDAWG__similar_items(struct __pyx_obj_4dawg_
   int __pyx_t_9;
   __Pyx_RefNannySetupContext("_similar_items", 0);
 
-  /* "dawg.pyx":714
+  /* "dawg.pyx":720
  * 
  *     cdef list _similar_items(self, unicode current_prefix, unicode key, BaseType cur_index, dict replace_chars):
  *         cdef BaseType next_index, index = cur_index             # <<<<<<<<<<<<<<
@@ -13518,19 +13670,19 @@ static PyObject *__pyx_f_4dawg_9BytesDAWG__similar_items(struct __pyx_obj_4dawg_
  */
   __pyx_v_index = __pyx_v_cur_index;
 
-  /* "dawg.pyx":717
+  /* "dawg.pyx":723
  *         cdef unicode prefix, u_replace_char, found_key
  *         cdef bytes b_step, b_replace_char
  *         cdef list res = []             # <<<<<<<<<<<<<<
  *         cdef list extra_items, value
  * 
  */
-  __pyx_t_1 = PyList_New(0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 717, __pyx_L1_error)
+  __pyx_t_1 = PyList_New(0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 723, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_v_res = ((PyObject*)__pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "dawg.pyx":720
+  /* "dawg.pyx":726
  *         cdef list extra_items, value
  * 
  *         cdef int start_pos = len(current_prefix)             # <<<<<<<<<<<<<<
@@ -13539,12 +13691,12 @@ static PyObject *__pyx_f_4dawg_9BytesDAWG__similar_items(struct __pyx_obj_4dawg_
  */
   if (unlikely(__pyx_v_current_prefix == Py_None)) {
     PyErr_SetString(PyExc_TypeError, "object of type 'NoneType' has no len()");
-    __PYX_ERR(0, 720, __pyx_L1_error)
+    __PYX_ERR(0, 726, __pyx_L1_error)
   }
-  __pyx_t_2 = __Pyx_PyUnicode_GET_LENGTH(__pyx_v_current_prefix); if (unlikely(__pyx_t_2 == ((Py_ssize_t)-1))) __PYX_ERR(0, 720, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyUnicode_GET_LENGTH(__pyx_v_current_prefix); if (unlikely(__pyx_t_2 == ((Py_ssize_t)-1))) __PYX_ERR(0, 726, __pyx_L1_error)
   __pyx_v_start_pos = __pyx_t_2;
 
-  /* "dawg.pyx":721
+  /* "dawg.pyx":727
  * 
  *         cdef int start_pos = len(current_prefix)
  *         cdef int end_pos = len(key)             # <<<<<<<<<<<<<<
@@ -13553,12 +13705,12 @@ static PyObject *__pyx_f_4dawg_9BytesDAWG__similar_items(struct __pyx_obj_4dawg_
  */
   if (unlikely(__pyx_v_key == Py_None)) {
     PyErr_SetString(PyExc_TypeError, "object of type 'NoneType' has no len()");
-    __PYX_ERR(0, 721, __pyx_L1_error)
+    __PYX_ERR(0, 727, __pyx_L1_error)
   }
-  __pyx_t_2 = __Pyx_PyUnicode_GET_LENGTH(__pyx_v_key); if (unlikely(__pyx_t_2 == ((Py_ssize_t)-1))) __PYX_ERR(0, 721, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyUnicode_GET_LENGTH(__pyx_v_key); if (unlikely(__pyx_t_2 == ((Py_ssize_t)-1))) __PYX_ERR(0, 727, __pyx_L1_error)
   __pyx_v_end_pos = __pyx_t_2;
 
-  /* "dawg.pyx":722
+  /* "dawg.pyx":728
  *         cdef int start_pos = len(current_prefix)
  *         cdef int end_pos = len(key)
  *         cdef int word_pos = start_pos             # <<<<<<<<<<<<<<
@@ -13567,7 +13719,7 @@ static PyObject *__pyx_f_4dawg_9BytesDAWG__similar_items(struct __pyx_obj_4dawg_
  */
   __pyx_v_word_pos = __pyx_v_start_pos;
 
-  /* "dawg.pyx":724
+  /* "dawg.pyx":730
  *         cdef int word_pos = start_pos
  * 
  *         while word_pos < end_pos:             # <<<<<<<<<<<<<<
@@ -13578,17 +13730,17 @@ static PyObject *__pyx_f_4dawg_9BytesDAWG__similar_items(struct __pyx_obj_4dawg_
     __pyx_t_3 = ((__pyx_v_word_pos < __pyx_v_end_pos) != 0);
     if (!__pyx_t_3) break;
 
-    /* "dawg.pyx":725
+    /* "dawg.pyx":731
  * 
  *         while word_pos < end_pos:
  *             b_step = <bytes>(key[word_pos].encode('utf8'))             # <<<<<<<<<<<<<<
  * 
  *             if b_step in replace_chars:
  */
-    __pyx_t_4 = __Pyx_GetItemInt_Unicode(__pyx_v_key, __pyx_v_word_pos, int, 1, __Pyx_PyInt_From_int, 0, 1, 1); if (unlikely(__pyx_t_4 == (Py_UCS4)-1)) __PYX_ERR(0, 725, __pyx_L1_error)
-    __pyx_t_1 = PyUnicode_FromOrdinal(__pyx_t_4); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 725, __pyx_L1_error)
+    __pyx_t_4 = __Pyx_GetItemInt_Unicode(__pyx_v_key, __pyx_v_word_pos, int, 1, __Pyx_PyInt_From_int, 0, 1, 1); if (unlikely(__pyx_t_4 == (Py_UCS4)-1)) __PYX_ERR(0, 731, __pyx_L1_error)
+    __pyx_t_1 = PyUnicode_FromOrdinal(__pyx_t_4); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 731, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
-    __pyx_t_5 = PyUnicode_AsUTF8String(((PyObject*)__pyx_t_1)); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 725, __pyx_L1_error)
+    __pyx_t_5 = PyUnicode_AsUTF8String(((PyObject*)__pyx_t_1)); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 731, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_5);
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
     __pyx_t_1 = __pyx_t_5;
@@ -13597,7 +13749,7 @@ static PyObject *__pyx_f_4dawg_9BytesDAWG__similar_items(struct __pyx_obj_4dawg_
     __Pyx_XDECREF_SET(__pyx_v_b_step, ((PyObject*)__pyx_t_1));
     __pyx_t_1 = 0;
 
-    /* "dawg.pyx":727
+    /* "dawg.pyx":733
  *             b_step = <bytes>(key[word_pos].encode('utf8'))
  * 
  *             if b_step in replace_chars:             # <<<<<<<<<<<<<<
@@ -13606,13 +13758,13 @@ static PyObject *__pyx_f_4dawg_9BytesDAWG__similar_items(struct __pyx_obj_4dawg_
  */
     if (unlikely(__pyx_v_replace_chars == Py_None)) {
       PyErr_SetString(PyExc_TypeError, "'NoneType' object is not iterable");
-      __PYX_ERR(0, 727, __pyx_L1_error)
+      __PYX_ERR(0, 733, __pyx_L1_error)
     }
-    __pyx_t_3 = (__Pyx_PyDict_ContainsTF(__pyx_v_b_step, __pyx_v_replace_chars, Py_EQ)); if (unlikely(__pyx_t_3 < 0)) __PYX_ERR(0, 727, __pyx_L1_error)
+    __pyx_t_3 = (__Pyx_PyDict_ContainsTF(__pyx_v_b_step, __pyx_v_replace_chars, Py_EQ)); if (unlikely(__pyx_t_3 < 0)) __PYX_ERR(0, 733, __pyx_L1_error)
     __pyx_t_6 = (__pyx_t_3 != 0);
     if (__pyx_t_6) {
 
-      /* "dawg.pyx":728
+      /* "dawg.pyx":734
  * 
  *             if b_step in replace_chars:
  *                 next_index = index             # <<<<<<<<<<<<<<
@@ -13621,7 +13773,7 @@ static PyObject *__pyx_f_4dawg_9BytesDAWG__similar_items(struct __pyx_obj_4dawg_
  */
       __pyx_v_next_index = __pyx_v_index;
 
-      /* "dawg.pyx":729
+      /* "dawg.pyx":735
  *             if b_step in replace_chars:
  *                 next_index = index
  *                 b_replace_char, u_replace_char = <tuple>replace_chars[b_step]             # <<<<<<<<<<<<<<
@@ -13630,9 +13782,9 @@ static PyObject *__pyx_f_4dawg_9BytesDAWG__similar_items(struct __pyx_obj_4dawg_
  */
       if (unlikely(__pyx_v_replace_chars == Py_None)) {
         PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
-        __PYX_ERR(0, 729, __pyx_L1_error)
+        __PYX_ERR(0, 735, __pyx_L1_error)
       }
-      __pyx_t_1 = __Pyx_PyDict_GetItem(__pyx_v_replace_chars, __pyx_v_b_step); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 729, __pyx_L1_error)
+      __pyx_t_1 = __Pyx_PyDict_GetItem(__pyx_v_replace_chars, __pyx_v_b_step); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 735, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_1);
       __pyx_t_5 = __pyx_t_1;
       __Pyx_INCREF(__pyx_t_5);
@@ -13643,7 +13795,7 @@ static PyObject *__pyx_f_4dawg_9BytesDAWG__similar_items(struct __pyx_obj_4dawg_
         if (unlikely(size != 2)) {
           if (size > 2) __Pyx_RaiseTooManyValuesError(2);
           else if (size >= 0) __Pyx_RaiseNeedMoreValuesError(size);
-          __PYX_ERR(0, 729, __pyx_L1_error)
+          __PYX_ERR(0, 735, __pyx_L1_error)
         }
         #if CYTHON_ASSUME_SAFE_MACROS && !CYTHON_AVOID_BORROWED_REFS
         __pyx_t_1 = PyTuple_GET_ITEM(sequence, 0); 
@@ -13651,23 +13803,23 @@ static PyObject *__pyx_f_4dawg_9BytesDAWG__similar_items(struct __pyx_obj_4dawg_
         __Pyx_INCREF(__pyx_t_1);
         __Pyx_INCREF(__pyx_t_7);
         #else
-        __pyx_t_1 = PySequence_ITEM(sequence, 0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 729, __pyx_L1_error)
+        __pyx_t_1 = PySequence_ITEM(sequence, 0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 735, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_1);
-        __pyx_t_7 = PySequence_ITEM(sequence, 1); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 729, __pyx_L1_error)
+        __pyx_t_7 = PySequence_ITEM(sequence, 1); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 735, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_7);
         #endif
         __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
       } else {
-        __Pyx_RaiseNoneNotIterableError(); __PYX_ERR(0, 729, __pyx_L1_error)
+        __Pyx_RaiseNoneNotIterableError(); __PYX_ERR(0, 735, __pyx_L1_error)
       }
-      if (!(likely(PyBytes_CheckExact(__pyx_t_1))||((__pyx_t_1) == Py_None)||(PyErr_Format(PyExc_TypeError, "Expected %.16s, got %.200s", "bytes", Py_TYPE(__pyx_t_1)->tp_name), 0))) __PYX_ERR(0, 729, __pyx_L1_error)
-      if (!(likely(PyUnicode_CheckExact(__pyx_t_7))||((__pyx_t_7) == Py_None)||(PyErr_Format(PyExc_TypeError, "Expected %.16s, got %.200s", "unicode", Py_TYPE(__pyx_t_7)->tp_name), 0))) __PYX_ERR(0, 729, __pyx_L1_error)
+      if (!(likely(PyBytes_CheckExact(__pyx_t_1))||((__pyx_t_1) == Py_None)||(PyErr_Format(PyExc_TypeError, "Expected %.16s, got %.200s", "bytes", Py_TYPE(__pyx_t_1)->tp_name), 0))) __PYX_ERR(0, 735, __pyx_L1_error)
+      if (!(likely(PyUnicode_CheckExact(__pyx_t_7))||((__pyx_t_7) == Py_None)||(PyErr_Format(PyExc_TypeError, "Expected %.16s, got %.200s", "unicode", Py_TYPE(__pyx_t_7)->tp_name), 0))) __PYX_ERR(0, 735, __pyx_L1_error)
       __Pyx_XDECREF_SET(__pyx_v_b_replace_char, ((PyObject*)__pyx_t_1));
       __pyx_t_1 = 0;
       __Pyx_XDECREF_SET(__pyx_v_u_replace_char, ((PyObject*)__pyx_t_7));
       __pyx_t_7 = 0;
 
-      /* "dawg.pyx":731
+      /* "dawg.pyx":737
  *                 b_replace_char, u_replace_char = <tuple>replace_chars[b_step]
  * 
  *                 if self.dct.Follow(b_replace_char, &next_index):             # <<<<<<<<<<<<<<
@@ -13676,13 +13828,13 @@ static PyObject *__pyx_f_4dawg_9BytesDAWG__similar_items(struct __pyx_obj_4dawg_
  */
       if (unlikely(__pyx_v_b_replace_char == Py_None)) {
         PyErr_SetString(PyExc_TypeError, "expected bytes, NoneType found");
-        __PYX_ERR(0, 731, __pyx_L1_error)
+        __PYX_ERR(0, 737, __pyx_L1_error)
       }
-      __pyx_t_8 = __Pyx_PyBytes_AsWritableString(__pyx_v_b_replace_char); if (unlikely((!__pyx_t_8) && PyErr_Occurred())) __PYX_ERR(0, 731, __pyx_L1_error)
+      __pyx_t_8 = __Pyx_PyBytes_AsWritableString(__pyx_v_b_replace_char); if (unlikely((!__pyx_t_8) && PyErr_Occurred())) __PYX_ERR(0, 737, __pyx_L1_error)
       __pyx_t_6 = (__pyx_v_self->__pyx_base.__pyx_base.dct.Follow(__pyx_t_8, (&__pyx_v_next_index)) != 0);
       if (__pyx_t_6) {
 
-        /* "dawg.pyx":732
+        /* "dawg.pyx":738
  * 
  *                 if self.dct.Follow(b_replace_char, &next_index):
  *                     prefix = current_prefix + key[start_pos:word_pos] + u_replace_char             # <<<<<<<<<<<<<<
@@ -13691,41 +13843,41 @@ static PyObject *__pyx_f_4dawg_9BytesDAWG__similar_items(struct __pyx_obj_4dawg_
  */
         if (unlikely(__pyx_v_key == Py_None)) {
           PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
-          __PYX_ERR(0, 732, __pyx_L1_error)
+          __PYX_ERR(0, 738, __pyx_L1_error)
         }
-        __pyx_t_5 = __Pyx_PyUnicode_Substring(__pyx_v_key, __pyx_v_start_pos, __pyx_v_word_pos); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 732, __pyx_L1_error)
+        __pyx_t_5 = __Pyx_PyUnicode_Substring(__pyx_v_key, __pyx_v_start_pos, __pyx_v_word_pos); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 738, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_5);
-        __pyx_t_7 = __Pyx_PyUnicode_ConcatSafe(__pyx_v_current_prefix, __pyx_t_5); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 732, __pyx_L1_error)
+        __pyx_t_7 = __Pyx_PyUnicode_ConcatSafe(__pyx_v_current_prefix, __pyx_t_5); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 738, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_7);
         __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-        __pyx_t_5 = __Pyx_PyUnicode_ConcatSafe(__pyx_t_7, __pyx_v_u_replace_char); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 732, __pyx_L1_error)
+        __pyx_t_5 = __Pyx_PyUnicode_ConcatSafe(__pyx_t_7, __pyx_v_u_replace_char); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 738, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_5);
         __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
         __Pyx_XDECREF_SET(__pyx_v_prefix, ((PyObject*)__pyx_t_5));
         __pyx_t_5 = 0;
 
-        /* "dawg.pyx":733
+        /* "dawg.pyx":739
  *                 if self.dct.Follow(b_replace_char, &next_index):
  *                     prefix = current_prefix + key[start_pos:word_pos] + u_replace_char
  *                     extra_items = self._similar_items(prefix, key, next_index, replace_chars)             # <<<<<<<<<<<<<<
  *                     res.extend(extra_items)
  * 
  */
-        __pyx_t_5 = ((struct __pyx_vtabstruct_4dawg_BytesDAWG *)__pyx_v_self->__pyx_base.__pyx_base.__pyx_vtab)->_similar_items(__pyx_v_self, __pyx_v_prefix, __pyx_v_key, __pyx_v_next_index, __pyx_v_replace_chars); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 733, __pyx_L1_error)
+        __pyx_t_5 = ((struct __pyx_vtabstruct_4dawg_BytesDAWG *)__pyx_v_self->__pyx_base.__pyx_base.__pyx_vtab)->_similar_items(__pyx_v_self, __pyx_v_prefix, __pyx_v_key, __pyx_v_next_index, __pyx_v_replace_chars); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 739, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_5);
         __Pyx_XDECREF_SET(__pyx_v_extra_items, ((PyObject*)__pyx_t_5));
         __pyx_t_5 = 0;
 
-        /* "dawg.pyx":734
+        /* "dawg.pyx":740
  *                     prefix = current_prefix + key[start_pos:word_pos] + u_replace_char
  *                     extra_items = self._similar_items(prefix, key, next_index, replace_chars)
  *                     res.extend(extra_items)             # <<<<<<<<<<<<<<
  * 
  *             if not self.dct.Follow(b_step, &index):
  */
-        __pyx_t_9 = __Pyx_PyList_Extend(__pyx_v_res, __pyx_v_extra_items); if (unlikely(__pyx_t_9 == ((int)-1))) __PYX_ERR(0, 734, __pyx_L1_error)
+        __pyx_t_9 = __Pyx_PyList_Extend(__pyx_v_res, __pyx_v_extra_items); if (unlikely(__pyx_t_9 == ((int)-1))) __PYX_ERR(0, 740, __pyx_L1_error)
 
-        /* "dawg.pyx":731
+        /* "dawg.pyx":737
  *                 b_replace_char, u_replace_char = <tuple>replace_chars[b_step]
  * 
  *                 if self.dct.Follow(b_replace_char, &next_index):             # <<<<<<<<<<<<<<
@@ -13734,7 +13886,7 @@ static PyObject *__pyx_f_4dawg_9BytesDAWG__similar_items(struct __pyx_obj_4dawg_
  */
       }
 
-      /* "dawg.pyx":727
+      /* "dawg.pyx":733
  *             b_step = <bytes>(key[word_pos].encode('utf8'))
  * 
  *             if b_step in replace_chars:             # <<<<<<<<<<<<<<
@@ -13743,7 +13895,7 @@ static PyObject *__pyx_f_4dawg_9BytesDAWG__similar_items(struct __pyx_obj_4dawg_
  */
     }
 
-    /* "dawg.pyx":736
+    /* "dawg.pyx":742
  *                     res.extend(extra_items)
  * 
  *             if not self.dct.Follow(b_step, &index):             # <<<<<<<<<<<<<<
@@ -13752,13 +13904,13 @@ static PyObject *__pyx_f_4dawg_9BytesDAWG__similar_items(struct __pyx_obj_4dawg_
  */
     if (unlikely(__pyx_v_b_step == Py_None)) {
       PyErr_SetString(PyExc_TypeError, "expected bytes, NoneType found");
-      __PYX_ERR(0, 736, __pyx_L1_error)
+      __PYX_ERR(0, 742, __pyx_L1_error)
     }
-    __pyx_t_8 = __Pyx_PyBytes_AsWritableString(__pyx_v_b_step); if (unlikely((!__pyx_t_8) && PyErr_Occurred())) __PYX_ERR(0, 736, __pyx_L1_error)
+    __pyx_t_8 = __Pyx_PyBytes_AsWritableString(__pyx_v_b_step); if (unlikely((!__pyx_t_8) && PyErr_Occurred())) __PYX_ERR(0, 742, __pyx_L1_error)
     __pyx_t_6 = ((!(__pyx_v_self->__pyx_base.__pyx_base.dct.Follow(__pyx_t_8, (&__pyx_v_index)) != 0)) != 0);
     if (__pyx_t_6) {
 
-      /* "dawg.pyx":737
+      /* "dawg.pyx":743
  * 
  *             if not self.dct.Follow(b_step, &index):
  *                 break             # <<<<<<<<<<<<<<
@@ -13767,7 +13919,7 @@ static PyObject *__pyx_f_4dawg_9BytesDAWG__similar_items(struct __pyx_obj_4dawg_
  */
       goto __pyx_L4_break;
 
-      /* "dawg.pyx":736
+      /* "dawg.pyx":742
  *                     res.extend(extra_items)
  * 
  *             if not self.dct.Follow(b_step, &index):             # <<<<<<<<<<<<<<
@@ -13776,7 +13928,7 @@ static PyObject *__pyx_f_4dawg_9BytesDAWG__similar_items(struct __pyx_obj_4dawg_
  */
     }
 
-    /* "dawg.pyx":738
+    /* "dawg.pyx":744
  *             if not self.dct.Follow(b_step, &index):
  *                 break
  *             word_pos += 1             # <<<<<<<<<<<<<<
@@ -13786,7 +13938,7 @@ static PyObject *__pyx_f_4dawg_9BytesDAWG__similar_items(struct __pyx_obj_4dawg_
     __pyx_v_word_pos = (__pyx_v_word_pos + 1);
   }
 
-  /* "dawg.pyx":741
+  /* "dawg.pyx":747
  * 
  *         else:
  *             if self.dct.Follow(self._c_payload_separator, &index):             # <<<<<<<<<<<<<<
@@ -13797,7 +13949,7 @@ static PyObject *__pyx_f_4dawg_9BytesDAWG__similar_items(struct __pyx_obj_4dawg_
     __pyx_t_6 = (__pyx_v_self->__pyx_base.__pyx_base.dct.Follow(__pyx_v_self->_c_payload_separator, (&__pyx_v_index)) != 0);
     if (__pyx_t_6) {
 
-      /* "dawg.pyx":742
+      /* "dawg.pyx":748
  *         else:
  *             if self.dct.Follow(self._c_payload_separator, &index):
  *                 found_key = current_prefix + key[start_pos:]             # <<<<<<<<<<<<<<
@@ -13806,36 +13958,36 @@ static PyObject *__pyx_f_4dawg_9BytesDAWG__similar_items(struct __pyx_obj_4dawg_
  */
       if (unlikely(__pyx_v_key == Py_None)) {
         PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
-        __PYX_ERR(0, 742, __pyx_L1_error)
+        __PYX_ERR(0, 748, __pyx_L1_error)
       }
-      __pyx_t_5 = __Pyx_PyUnicode_Substring(__pyx_v_key, __pyx_v_start_pos, PY_SSIZE_T_MAX); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 742, __pyx_L1_error)
+      __pyx_t_5 = __Pyx_PyUnicode_Substring(__pyx_v_key, __pyx_v_start_pos, PY_SSIZE_T_MAX); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 748, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_5);
-      __pyx_t_7 = __Pyx_PyUnicode_ConcatSafe(__pyx_v_current_prefix, __pyx_t_5); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 742, __pyx_L1_error)
+      __pyx_t_7 = __Pyx_PyUnicode_ConcatSafe(__pyx_v_current_prefix, __pyx_t_5); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 748, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_7);
       __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
       __pyx_v_found_key = ((PyObject*)__pyx_t_7);
       __pyx_t_7 = 0;
 
-      /* "dawg.pyx":743
+      /* "dawg.pyx":749
  *             if self.dct.Follow(self._c_payload_separator, &index):
  *                 found_key = current_prefix + key[start_pos:]
  *                 value = self._value_for_index(index)             # <<<<<<<<<<<<<<
  *                 res.insert(0, (found_key, value))
  * 
  */
-      __pyx_t_7 = ((struct __pyx_vtabstruct_4dawg_BytesDAWG *)__pyx_v_self->__pyx_base.__pyx_base.__pyx_vtab)->_value_for_index(__pyx_v_self, __pyx_v_index); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 743, __pyx_L1_error)
+      __pyx_t_7 = ((struct __pyx_vtabstruct_4dawg_BytesDAWG *)__pyx_v_self->__pyx_base.__pyx_base.__pyx_vtab)->_value_for_index(__pyx_v_self, __pyx_v_index); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 749, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_7);
       __pyx_v_value = ((PyObject*)__pyx_t_7);
       __pyx_t_7 = 0;
 
-      /* "dawg.pyx":744
+      /* "dawg.pyx":750
  *                 found_key = current_prefix + key[start_pos:]
  *                 value = self._value_for_index(index)
  *                 res.insert(0, (found_key, value))             # <<<<<<<<<<<<<<
  * 
  *         return res
  */
-      __pyx_t_7 = PyTuple_New(2); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 744, __pyx_L1_error)
+      __pyx_t_7 = PyTuple_New(2); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 750, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_7);
       __Pyx_INCREF(__pyx_v_found_key);
       __Pyx_GIVEREF(__pyx_v_found_key);
@@ -13843,10 +13995,10 @@ static PyObject *__pyx_f_4dawg_9BytesDAWG__similar_items(struct __pyx_obj_4dawg_
       __Pyx_INCREF(__pyx_v_value);
       __Pyx_GIVEREF(__pyx_v_value);
       PyTuple_SET_ITEM(__pyx_t_7, 1, __pyx_v_value);
-      __pyx_t_9 = PyList_Insert(__pyx_v_res, 0, __pyx_t_7); if (unlikely(__pyx_t_9 == ((int)-1))) __PYX_ERR(0, 744, __pyx_L1_error)
+      __pyx_t_9 = PyList_Insert(__pyx_v_res, 0, __pyx_t_7); if (unlikely(__pyx_t_9 == ((int)-1))) __PYX_ERR(0, 750, __pyx_L1_error)
       __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
 
-      /* "dawg.pyx":741
+      /* "dawg.pyx":747
  * 
  *         else:
  *             if self.dct.Follow(self._c_payload_separator, &index):             # <<<<<<<<<<<<<<
@@ -13857,7 +14009,7 @@ static PyObject *__pyx_f_4dawg_9BytesDAWG__similar_items(struct __pyx_obj_4dawg_
   }
   __pyx_L4_break:;
 
-  /* "dawg.pyx":746
+  /* "dawg.pyx":752
  *                 res.insert(0, (found_key, value))
  * 
  *         return res             # <<<<<<<<<<<<<<
@@ -13869,7 +14021,7 @@ static PyObject *__pyx_f_4dawg_9BytesDAWG__similar_items(struct __pyx_obj_4dawg_
   __pyx_r = __pyx_v_res;
   goto __pyx_L0;
 
-  /* "dawg.pyx":713
+  /* "dawg.pyx":719
  *         return self.dct.Follow(self._c_payload_separator, &_index)
  * 
  *     cdef list _similar_items(self, unicode current_prefix, unicode key, BaseType cur_index, dict replace_chars):             # <<<<<<<<<<<<<<
@@ -13898,7 +14050,7 @@ static PyObject *__pyx_f_4dawg_9BytesDAWG__similar_items(struct __pyx_obj_4dawg_
   return __pyx_r;
 }
 
-/* "dawg.pyx":748
+/* "dawg.pyx":754
  *         return res
  * 
  *     cpdef list similar_items(self, unicode key, dict replaces):             # <<<<<<<<<<<<<<
@@ -13926,7 +14078,7 @@ static PyObject *__pyx_f_4dawg_9BytesDAWG_similar_items(struct __pyx_obj_4dawg_B
     if (unlikely(!__Pyx_object_dict_version_matches(((PyObject *)__pyx_v_self), __pyx_tp_dict_version, __pyx_obj_dict_version))) {
       PY_UINT64_T __pyx_type_dict_guard = __Pyx_get_tp_dict_version(((PyObject *)__pyx_v_self));
       #endif
-      __pyx_t_1 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_similar_items); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 748, __pyx_L1_error)
+      __pyx_t_1 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_similar_items); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 754, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_1);
       if (!PyCFunction_Check(__pyx_t_1) || (PyCFunction_GET_FUNCTION(__pyx_t_1) != (PyCFunction)(void*)__pyx_pw_4dawg_9BytesDAWG_31similar_items)) {
         __Pyx_XDECREF(__pyx_r);
@@ -13946,7 +14098,7 @@ static PyObject *__pyx_f_4dawg_9BytesDAWG_similar_items(struct __pyx_obj_4dawg_B
         #if CYTHON_FAST_PYCALL
         if (PyFunction_Check(__pyx_t_3)) {
           PyObject *__pyx_temp[3] = {__pyx_t_4, __pyx_v_key, __pyx_v_replaces};
-          __pyx_t_2 = __Pyx_PyFunction_FastCall(__pyx_t_3, __pyx_temp+1-__pyx_t_5, 2+__pyx_t_5); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 748, __pyx_L1_error)
+          __pyx_t_2 = __Pyx_PyFunction_FastCall(__pyx_t_3, __pyx_temp+1-__pyx_t_5, 2+__pyx_t_5); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 754, __pyx_L1_error)
           __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
           __Pyx_GOTREF(__pyx_t_2);
         } else
@@ -13954,13 +14106,13 @@ static PyObject *__pyx_f_4dawg_9BytesDAWG_similar_items(struct __pyx_obj_4dawg_B
         #if CYTHON_FAST_PYCCALL
         if (__Pyx_PyFastCFunction_Check(__pyx_t_3)) {
           PyObject *__pyx_temp[3] = {__pyx_t_4, __pyx_v_key, __pyx_v_replaces};
-          __pyx_t_2 = __Pyx_PyCFunction_FastCall(__pyx_t_3, __pyx_temp+1-__pyx_t_5, 2+__pyx_t_5); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 748, __pyx_L1_error)
+          __pyx_t_2 = __Pyx_PyCFunction_FastCall(__pyx_t_3, __pyx_temp+1-__pyx_t_5, 2+__pyx_t_5); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 754, __pyx_L1_error)
           __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
           __Pyx_GOTREF(__pyx_t_2);
         } else
         #endif
         {
-          __pyx_t_6 = PyTuple_New(2+__pyx_t_5); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 748, __pyx_L1_error)
+          __pyx_t_6 = PyTuple_New(2+__pyx_t_5); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 754, __pyx_L1_error)
           __Pyx_GOTREF(__pyx_t_6);
           if (__pyx_t_4) {
             __Pyx_GIVEREF(__pyx_t_4); PyTuple_SET_ITEM(__pyx_t_6, 0, __pyx_t_4); __pyx_t_4 = NULL;
@@ -13971,12 +14123,12 @@ static PyObject *__pyx_f_4dawg_9BytesDAWG_similar_items(struct __pyx_obj_4dawg_B
           __Pyx_INCREF(__pyx_v_replaces);
           __Pyx_GIVEREF(__pyx_v_replaces);
           PyTuple_SET_ITEM(__pyx_t_6, 1+__pyx_t_5, __pyx_v_replaces);
-          __pyx_t_2 = __Pyx_PyObject_Call(__pyx_t_3, __pyx_t_6, NULL); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 748, __pyx_L1_error)
+          __pyx_t_2 = __Pyx_PyObject_Call(__pyx_t_3, __pyx_t_6, NULL); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 754, __pyx_L1_error)
           __Pyx_GOTREF(__pyx_t_2);
           __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
         }
         __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-        if (!(likely(PyList_CheckExact(__pyx_t_2))||((__pyx_t_2) == Py_None)||(PyErr_Format(PyExc_TypeError, "Expected %.16s, got %.200s", "list", Py_TYPE(__pyx_t_2)->tp_name), 0))) __PYX_ERR(0, 748, __pyx_L1_error)
+        if (!(likely(PyList_CheckExact(__pyx_t_2))||((__pyx_t_2) == Py_None)||(PyErr_Format(PyExc_TypeError, "Expected %.16s, got %.200s", "list", Py_TYPE(__pyx_t_2)->tp_name), 0))) __PYX_ERR(0, 754, __pyx_L1_error)
         __pyx_r = ((PyObject*)__pyx_t_2);
         __pyx_t_2 = 0;
         __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
@@ -13995,7 +14147,7 @@ static PyObject *__pyx_f_4dawg_9BytesDAWG_similar_items(struct __pyx_obj_4dawg_B
     #endif
   }
 
-  /* "dawg.pyx":758
+  /* "dawg.pyx":764
  *         unicode strings.
  *         """
  *         return self._similar_items("", key, self.dct.root(), replaces)             # <<<<<<<<<<<<<<
@@ -14003,13 +14155,13 @@ static PyObject *__pyx_f_4dawg_9BytesDAWG_similar_items(struct __pyx_obj_4dawg_B
  *     cdef list _similar_item_values(self, int start_pos, unicode key, BaseType cur_index, dict replace_chars):
  */
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = ((struct __pyx_vtabstruct_4dawg_BytesDAWG *)__pyx_v_self->__pyx_base.__pyx_base.__pyx_vtab)->_similar_items(__pyx_v_self, __pyx_kp_u__6, __pyx_v_key, __pyx_v_self->__pyx_base.__pyx_base.dct.root(), __pyx_v_replaces); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 758, __pyx_L1_error)
+  __pyx_t_1 = ((struct __pyx_vtabstruct_4dawg_BytesDAWG *)__pyx_v_self->__pyx_base.__pyx_base.__pyx_vtab)->_similar_items(__pyx_v_self, __pyx_kp_u__6, __pyx_v_key, __pyx_v_self->__pyx_base.__pyx_base.dct.root(), __pyx_v_replaces); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 764, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = ((PyObject*)__pyx_t_1);
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "dawg.pyx":748
+  /* "dawg.pyx":754
  *         return res
  * 
  *     cpdef list similar_items(self, unicode key, dict replaces):             # <<<<<<<<<<<<<<
@@ -14064,11 +14216,11 @@ static PyObject *__pyx_pw_4dawg_9BytesDAWG_31similar_items(PyObject *__pyx_v_sel
         case  1:
         if (likely((values[1] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_replaces)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("similar_items", 1, 2, 2, 1); __PYX_ERR(0, 748, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("similar_items", 1, 2, 2, 1); __PYX_ERR(0, 754, __pyx_L3_error)
         }
       }
       if (unlikely(kw_args > 0)) {
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "similar_items") < 0)) __PYX_ERR(0, 748, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "similar_items") < 0)) __PYX_ERR(0, 754, __pyx_L3_error)
       }
     } else if (PyTuple_GET_SIZE(__pyx_args) != 2) {
       goto __pyx_L5_argtuple_error;
@@ -14081,14 +14233,14 @@ static PyObject *__pyx_pw_4dawg_9BytesDAWG_31similar_items(PyObject *__pyx_v_sel
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("similar_items", 1, 2, 2, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 748, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("similar_items", 1, 2, 2, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 754, __pyx_L3_error)
   __pyx_L3_error:;
   __Pyx_AddTraceback("dawg.BytesDAWG.similar_items", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_key), (&PyUnicode_Type), 1, "key", 1))) __PYX_ERR(0, 748, __pyx_L1_error)
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_replaces), (&PyDict_Type), 1, "replaces", 1))) __PYX_ERR(0, 748, __pyx_L1_error)
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_key), (&PyUnicode_Type), 1, "key", 1))) __PYX_ERR(0, 754, __pyx_L1_error)
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_replaces), (&PyDict_Type), 1, "replaces", 1))) __PYX_ERR(0, 754, __pyx_L1_error)
   __pyx_r = __pyx_pf_4dawg_9BytesDAWG_30similar_items(((struct __pyx_obj_4dawg_BytesDAWG *)__pyx_v_self), __pyx_v_key, __pyx_v_replaces);
 
   /* function exit code */
@@ -14106,7 +14258,7 @@ static PyObject *__pyx_pf_4dawg_9BytesDAWG_30similar_items(struct __pyx_obj_4daw
   PyObject *__pyx_t_1 = NULL;
   __Pyx_RefNannySetupContext("similar_items", 0);
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = __pyx_f_4dawg_9BytesDAWG_similar_items(__pyx_v_self, __pyx_v_key, __pyx_v_replaces, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 748, __pyx_L1_error)
+  __pyx_t_1 = __pyx_f_4dawg_9BytesDAWG_similar_items(__pyx_v_self, __pyx_v_key, __pyx_v_replaces, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 754, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
@@ -14123,7 +14275,7 @@ static PyObject *__pyx_pf_4dawg_9BytesDAWG_30similar_items(struct __pyx_obj_4daw
   return __pyx_r;
 }
 
-/* "dawg.pyx":760
+/* "dawg.pyx":766
  *         return self._similar_items("", key, self.dct.root(), replaces)
  * 
  *     cdef list _similar_item_values(self, int start_pos, unicode key, BaseType cur_index, dict replace_chars):             # <<<<<<<<<<<<<<
@@ -14155,7 +14307,7 @@ static PyObject *__pyx_f_4dawg_9BytesDAWG__similar_item_values(struct __pyx_obj_
   int __pyx_t_9;
   __Pyx_RefNannySetupContext("_similar_item_values", 0);
 
-  /* "dawg.pyx":761
+  /* "dawg.pyx":767
  * 
  *     cdef list _similar_item_values(self, int start_pos, unicode key, BaseType cur_index, dict replace_chars):
  *         cdef BaseType next_index, index = cur_index             # <<<<<<<<<<<<<<
@@ -14164,19 +14316,19 @@ static PyObject *__pyx_f_4dawg_9BytesDAWG__similar_item_values(struct __pyx_obj_
  */
   __pyx_v_index = __pyx_v_cur_index;
 
-  /* "dawg.pyx":764
+  /* "dawg.pyx":770
  *         cdef unicode prefix, u_replace_char, found_key
  *         cdef bytes b_step, b_replace_char
  *         cdef list res = []             # <<<<<<<<<<<<<<
  *         cdef list extra_items, value
  * 
  */
-  __pyx_t_1 = PyList_New(0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 764, __pyx_L1_error)
+  __pyx_t_1 = PyList_New(0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 770, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_v_res = ((PyObject*)__pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "dawg.pyx":768
+  /* "dawg.pyx":774
  * 
  *         #cdef int start_pos = len(current_prefix)
  *         cdef int end_pos = len(key)             # <<<<<<<<<<<<<<
@@ -14185,12 +14337,12 @@ static PyObject *__pyx_f_4dawg_9BytesDAWG__similar_item_values(struct __pyx_obj_
  */
   if (unlikely(__pyx_v_key == Py_None)) {
     PyErr_SetString(PyExc_TypeError, "object of type 'NoneType' has no len()");
-    __PYX_ERR(0, 768, __pyx_L1_error)
+    __PYX_ERR(0, 774, __pyx_L1_error)
   }
-  __pyx_t_2 = __Pyx_PyUnicode_GET_LENGTH(__pyx_v_key); if (unlikely(__pyx_t_2 == ((Py_ssize_t)-1))) __PYX_ERR(0, 768, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyUnicode_GET_LENGTH(__pyx_v_key); if (unlikely(__pyx_t_2 == ((Py_ssize_t)-1))) __PYX_ERR(0, 774, __pyx_L1_error)
   __pyx_v_end_pos = __pyx_t_2;
 
-  /* "dawg.pyx":769
+  /* "dawg.pyx":775
  *         #cdef int start_pos = len(current_prefix)
  *         cdef int end_pos = len(key)
  *         cdef int word_pos = start_pos             # <<<<<<<<<<<<<<
@@ -14199,7 +14351,7 @@ static PyObject *__pyx_f_4dawg_9BytesDAWG__similar_item_values(struct __pyx_obj_
  */
   __pyx_v_word_pos = __pyx_v_start_pos;
 
-  /* "dawg.pyx":771
+  /* "dawg.pyx":777
  *         cdef int word_pos = start_pos
  * 
  *         while word_pos < end_pos:             # <<<<<<<<<<<<<<
@@ -14210,17 +14362,17 @@ static PyObject *__pyx_f_4dawg_9BytesDAWG__similar_item_values(struct __pyx_obj_
     __pyx_t_3 = ((__pyx_v_word_pos < __pyx_v_end_pos) != 0);
     if (!__pyx_t_3) break;
 
-    /* "dawg.pyx":772
+    /* "dawg.pyx":778
  * 
  *         while word_pos < end_pos:
  *             b_step = <bytes>(key[word_pos].encode('utf8'))             # <<<<<<<<<<<<<<
  * 
  *             if b_step in replace_chars:
  */
-    __pyx_t_4 = __Pyx_GetItemInt_Unicode(__pyx_v_key, __pyx_v_word_pos, int, 1, __Pyx_PyInt_From_int, 0, 1, 1); if (unlikely(__pyx_t_4 == (Py_UCS4)-1)) __PYX_ERR(0, 772, __pyx_L1_error)
-    __pyx_t_1 = PyUnicode_FromOrdinal(__pyx_t_4); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 772, __pyx_L1_error)
+    __pyx_t_4 = __Pyx_GetItemInt_Unicode(__pyx_v_key, __pyx_v_word_pos, int, 1, __Pyx_PyInt_From_int, 0, 1, 1); if (unlikely(__pyx_t_4 == (Py_UCS4)-1)) __PYX_ERR(0, 778, __pyx_L1_error)
+    __pyx_t_1 = PyUnicode_FromOrdinal(__pyx_t_4); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 778, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
-    __pyx_t_5 = PyUnicode_AsUTF8String(((PyObject*)__pyx_t_1)); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 772, __pyx_L1_error)
+    __pyx_t_5 = PyUnicode_AsUTF8String(((PyObject*)__pyx_t_1)); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 778, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_5);
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
     __pyx_t_1 = __pyx_t_5;
@@ -14229,7 +14381,7 @@ static PyObject *__pyx_f_4dawg_9BytesDAWG__similar_item_values(struct __pyx_obj_
     __Pyx_XDECREF_SET(__pyx_v_b_step, ((PyObject*)__pyx_t_1));
     __pyx_t_1 = 0;
 
-    /* "dawg.pyx":774
+    /* "dawg.pyx":780
  *             b_step = <bytes>(key[word_pos].encode('utf8'))
  * 
  *             if b_step in replace_chars:             # <<<<<<<<<<<<<<
@@ -14238,13 +14390,13 @@ static PyObject *__pyx_f_4dawg_9BytesDAWG__similar_item_values(struct __pyx_obj_
  */
     if (unlikely(__pyx_v_replace_chars == Py_None)) {
       PyErr_SetString(PyExc_TypeError, "'NoneType' object is not iterable");
-      __PYX_ERR(0, 774, __pyx_L1_error)
+      __PYX_ERR(0, 780, __pyx_L1_error)
     }
-    __pyx_t_3 = (__Pyx_PyDict_ContainsTF(__pyx_v_b_step, __pyx_v_replace_chars, Py_EQ)); if (unlikely(__pyx_t_3 < 0)) __PYX_ERR(0, 774, __pyx_L1_error)
+    __pyx_t_3 = (__Pyx_PyDict_ContainsTF(__pyx_v_b_step, __pyx_v_replace_chars, Py_EQ)); if (unlikely(__pyx_t_3 < 0)) __PYX_ERR(0, 780, __pyx_L1_error)
     __pyx_t_6 = (__pyx_t_3 != 0);
     if (__pyx_t_6) {
 
-      /* "dawg.pyx":775
+      /* "dawg.pyx":781
  * 
  *             if b_step in replace_chars:
  *                 next_index = index             # <<<<<<<<<<<<<<
@@ -14253,7 +14405,7 @@ static PyObject *__pyx_f_4dawg_9BytesDAWG__similar_item_values(struct __pyx_obj_
  */
       __pyx_v_next_index = __pyx_v_index;
 
-      /* "dawg.pyx":776
+      /* "dawg.pyx":782
  *             if b_step in replace_chars:
  *                 next_index = index
  *                 b_replace_char, u_replace_char = <tuple>replace_chars[b_step]             # <<<<<<<<<<<<<<
@@ -14262,9 +14414,9 @@ static PyObject *__pyx_f_4dawg_9BytesDAWG__similar_item_values(struct __pyx_obj_
  */
       if (unlikely(__pyx_v_replace_chars == Py_None)) {
         PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
-        __PYX_ERR(0, 776, __pyx_L1_error)
+        __PYX_ERR(0, 782, __pyx_L1_error)
       }
-      __pyx_t_1 = __Pyx_PyDict_GetItem(__pyx_v_replace_chars, __pyx_v_b_step); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 776, __pyx_L1_error)
+      __pyx_t_1 = __Pyx_PyDict_GetItem(__pyx_v_replace_chars, __pyx_v_b_step); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 782, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_1);
       __pyx_t_5 = __pyx_t_1;
       __Pyx_INCREF(__pyx_t_5);
@@ -14275,7 +14427,7 @@ static PyObject *__pyx_f_4dawg_9BytesDAWG__similar_item_values(struct __pyx_obj_
         if (unlikely(size != 2)) {
           if (size > 2) __Pyx_RaiseTooManyValuesError(2);
           else if (size >= 0) __Pyx_RaiseNeedMoreValuesError(size);
-          __PYX_ERR(0, 776, __pyx_L1_error)
+          __PYX_ERR(0, 782, __pyx_L1_error)
         }
         #if CYTHON_ASSUME_SAFE_MACROS && !CYTHON_AVOID_BORROWED_REFS
         __pyx_t_1 = PyTuple_GET_ITEM(sequence, 0); 
@@ -14283,23 +14435,23 @@ static PyObject *__pyx_f_4dawg_9BytesDAWG__similar_item_values(struct __pyx_obj_
         __Pyx_INCREF(__pyx_t_1);
         __Pyx_INCREF(__pyx_t_7);
         #else
-        __pyx_t_1 = PySequence_ITEM(sequence, 0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 776, __pyx_L1_error)
+        __pyx_t_1 = PySequence_ITEM(sequence, 0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 782, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_1);
-        __pyx_t_7 = PySequence_ITEM(sequence, 1); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 776, __pyx_L1_error)
+        __pyx_t_7 = PySequence_ITEM(sequence, 1); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 782, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_7);
         #endif
         __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
       } else {
-        __Pyx_RaiseNoneNotIterableError(); __PYX_ERR(0, 776, __pyx_L1_error)
+        __Pyx_RaiseNoneNotIterableError(); __PYX_ERR(0, 782, __pyx_L1_error)
       }
-      if (!(likely(PyBytes_CheckExact(__pyx_t_1))||((__pyx_t_1) == Py_None)||(PyErr_Format(PyExc_TypeError, "Expected %.16s, got %.200s", "bytes", Py_TYPE(__pyx_t_1)->tp_name), 0))) __PYX_ERR(0, 776, __pyx_L1_error)
-      if (!(likely(PyUnicode_CheckExact(__pyx_t_7))||((__pyx_t_7) == Py_None)||(PyErr_Format(PyExc_TypeError, "Expected %.16s, got %.200s", "unicode", Py_TYPE(__pyx_t_7)->tp_name), 0))) __PYX_ERR(0, 776, __pyx_L1_error)
+      if (!(likely(PyBytes_CheckExact(__pyx_t_1))||((__pyx_t_1) == Py_None)||(PyErr_Format(PyExc_TypeError, "Expected %.16s, got %.200s", "bytes", Py_TYPE(__pyx_t_1)->tp_name), 0))) __PYX_ERR(0, 782, __pyx_L1_error)
+      if (!(likely(PyUnicode_CheckExact(__pyx_t_7))||((__pyx_t_7) == Py_None)||(PyErr_Format(PyExc_TypeError, "Expected %.16s, got %.200s", "unicode", Py_TYPE(__pyx_t_7)->tp_name), 0))) __PYX_ERR(0, 782, __pyx_L1_error)
       __Pyx_XDECREF_SET(__pyx_v_b_replace_char, ((PyObject*)__pyx_t_1));
       __pyx_t_1 = 0;
       __Pyx_XDECREF_SET(__pyx_v_u_replace_char, ((PyObject*)__pyx_t_7));
       __pyx_t_7 = 0;
 
-      /* "dawg.pyx":778
+      /* "dawg.pyx":784
  *                 b_replace_char, u_replace_char = <tuple>replace_chars[b_step]
  * 
  *                 if self.dct.Follow(b_replace_char, &next_index):             # <<<<<<<<<<<<<<
@@ -14308,34 +14460,34 @@ static PyObject *__pyx_f_4dawg_9BytesDAWG__similar_item_values(struct __pyx_obj_
  */
       if (unlikely(__pyx_v_b_replace_char == Py_None)) {
         PyErr_SetString(PyExc_TypeError, "expected bytes, NoneType found");
-        __PYX_ERR(0, 778, __pyx_L1_error)
+        __PYX_ERR(0, 784, __pyx_L1_error)
       }
-      __pyx_t_8 = __Pyx_PyBytes_AsWritableString(__pyx_v_b_replace_char); if (unlikely((!__pyx_t_8) && PyErr_Occurred())) __PYX_ERR(0, 778, __pyx_L1_error)
+      __pyx_t_8 = __Pyx_PyBytes_AsWritableString(__pyx_v_b_replace_char); if (unlikely((!__pyx_t_8) && PyErr_Occurred())) __PYX_ERR(0, 784, __pyx_L1_error)
       __pyx_t_6 = (__pyx_v_self->__pyx_base.__pyx_base.dct.Follow(__pyx_t_8, (&__pyx_v_next_index)) != 0);
       if (__pyx_t_6) {
 
-        /* "dawg.pyx":779
+        /* "dawg.pyx":785
  * 
  *                 if self.dct.Follow(b_replace_char, &next_index):
  *                     extra_items = self._similar_item_values(word_pos+1, key, next_index, replace_chars)             # <<<<<<<<<<<<<<
  *                     res.extend(extra_items)
  * 
  */
-        __pyx_t_5 = ((struct __pyx_vtabstruct_4dawg_BytesDAWG *)__pyx_v_self->__pyx_base.__pyx_base.__pyx_vtab)->_similar_item_values(__pyx_v_self, (__pyx_v_word_pos + 1), __pyx_v_key, __pyx_v_next_index, __pyx_v_replace_chars); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 779, __pyx_L1_error)
+        __pyx_t_5 = ((struct __pyx_vtabstruct_4dawg_BytesDAWG *)__pyx_v_self->__pyx_base.__pyx_base.__pyx_vtab)->_similar_item_values(__pyx_v_self, (__pyx_v_word_pos + 1), __pyx_v_key, __pyx_v_next_index, __pyx_v_replace_chars); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 785, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_5);
         __Pyx_XDECREF_SET(__pyx_v_extra_items, ((PyObject*)__pyx_t_5));
         __pyx_t_5 = 0;
 
-        /* "dawg.pyx":780
+        /* "dawg.pyx":786
  *                 if self.dct.Follow(b_replace_char, &next_index):
  *                     extra_items = self._similar_item_values(word_pos+1, key, next_index, replace_chars)
  *                     res.extend(extra_items)             # <<<<<<<<<<<<<<
  * 
  *             if not self.dct.Follow(b_step, &index):
  */
-        __pyx_t_9 = __Pyx_PyList_Extend(__pyx_v_res, __pyx_v_extra_items); if (unlikely(__pyx_t_9 == ((int)-1))) __PYX_ERR(0, 780, __pyx_L1_error)
+        __pyx_t_9 = __Pyx_PyList_Extend(__pyx_v_res, __pyx_v_extra_items); if (unlikely(__pyx_t_9 == ((int)-1))) __PYX_ERR(0, 786, __pyx_L1_error)
 
-        /* "dawg.pyx":778
+        /* "dawg.pyx":784
  *                 b_replace_char, u_replace_char = <tuple>replace_chars[b_step]
  * 
  *                 if self.dct.Follow(b_replace_char, &next_index):             # <<<<<<<<<<<<<<
@@ -14344,7 +14496,7 @@ static PyObject *__pyx_f_4dawg_9BytesDAWG__similar_item_values(struct __pyx_obj_
  */
       }
 
-      /* "dawg.pyx":774
+      /* "dawg.pyx":780
  *             b_step = <bytes>(key[word_pos].encode('utf8'))
  * 
  *             if b_step in replace_chars:             # <<<<<<<<<<<<<<
@@ -14353,7 +14505,7 @@ static PyObject *__pyx_f_4dawg_9BytesDAWG__similar_item_values(struct __pyx_obj_
  */
     }
 
-    /* "dawg.pyx":782
+    /* "dawg.pyx":788
  *                     res.extend(extra_items)
  * 
  *             if not self.dct.Follow(b_step, &index):             # <<<<<<<<<<<<<<
@@ -14362,13 +14514,13 @@ static PyObject *__pyx_f_4dawg_9BytesDAWG__similar_item_values(struct __pyx_obj_
  */
     if (unlikely(__pyx_v_b_step == Py_None)) {
       PyErr_SetString(PyExc_TypeError, "expected bytes, NoneType found");
-      __PYX_ERR(0, 782, __pyx_L1_error)
+      __PYX_ERR(0, 788, __pyx_L1_error)
     }
-    __pyx_t_8 = __Pyx_PyBytes_AsWritableString(__pyx_v_b_step); if (unlikely((!__pyx_t_8) && PyErr_Occurred())) __PYX_ERR(0, 782, __pyx_L1_error)
+    __pyx_t_8 = __Pyx_PyBytes_AsWritableString(__pyx_v_b_step); if (unlikely((!__pyx_t_8) && PyErr_Occurred())) __PYX_ERR(0, 788, __pyx_L1_error)
     __pyx_t_6 = ((!(__pyx_v_self->__pyx_base.__pyx_base.dct.Follow(__pyx_t_8, (&__pyx_v_index)) != 0)) != 0);
     if (__pyx_t_6) {
 
-      /* "dawg.pyx":783
+      /* "dawg.pyx":789
  * 
  *             if not self.dct.Follow(b_step, &index):
  *                 break             # <<<<<<<<<<<<<<
@@ -14377,7 +14529,7 @@ static PyObject *__pyx_f_4dawg_9BytesDAWG__similar_item_values(struct __pyx_obj_
  */
       goto __pyx_L4_break;
 
-      /* "dawg.pyx":782
+      /* "dawg.pyx":788
  *                     res.extend(extra_items)
  * 
  *             if not self.dct.Follow(b_step, &index):             # <<<<<<<<<<<<<<
@@ -14386,7 +14538,7 @@ static PyObject *__pyx_f_4dawg_9BytesDAWG__similar_item_values(struct __pyx_obj_
  */
     }
 
-    /* "dawg.pyx":784
+    /* "dawg.pyx":790
  *             if not self.dct.Follow(b_step, &index):
  *                 break
  *             word_pos += 1             # <<<<<<<<<<<<<<
@@ -14396,7 +14548,7 @@ static PyObject *__pyx_f_4dawg_9BytesDAWG__similar_item_values(struct __pyx_obj_
     __pyx_v_word_pos = (__pyx_v_word_pos + 1);
   }
 
-  /* "dawg.pyx":787
+  /* "dawg.pyx":793
  * 
  *         else:
  *             if self.dct.Follow(self._c_payload_separator, &index):             # <<<<<<<<<<<<<<
@@ -14407,28 +14559,28 @@ static PyObject *__pyx_f_4dawg_9BytesDAWG__similar_item_values(struct __pyx_obj_
     __pyx_t_6 = (__pyx_v_self->__pyx_base.__pyx_base.dct.Follow(__pyx_v_self->_c_payload_separator, (&__pyx_v_index)) != 0);
     if (__pyx_t_6) {
 
-      /* "dawg.pyx":788
+      /* "dawg.pyx":794
  *         else:
  *             if self.dct.Follow(self._c_payload_separator, &index):
  *                 value = self._value_for_index(index)             # <<<<<<<<<<<<<<
  *                 res.insert(0, value)
  * 
  */
-      __pyx_t_5 = ((struct __pyx_vtabstruct_4dawg_BytesDAWG *)__pyx_v_self->__pyx_base.__pyx_base.__pyx_vtab)->_value_for_index(__pyx_v_self, __pyx_v_index); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 788, __pyx_L1_error)
+      __pyx_t_5 = ((struct __pyx_vtabstruct_4dawg_BytesDAWG *)__pyx_v_self->__pyx_base.__pyx_base.__pyx_vtab)->_value_for_index(__pyx_v_self, __pyx_v_index); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 794, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_5);
       __pyx_v_value = ((PyObject*)__pyx_t_5);
       __pyx_t_5 = 0;
 
-      /* "dawg.pyx":789
+      /* "dawg.pyx":795
  *             if self.dct.Follow(self._c_payload_separator, &index):
  *                 value = self._value_for_index(index)
  *                 res.insert(0, value)             # <<<<<<<<<<<<<<
  * 
  *         return res
  */
-      __pyx_t_9 = PyList_Insert(__pyx_v_res, 0, __pyx_v_value); if (unlikely(__pyx_t_9 == ((int)-1))) __PYX_ERR(0, 789, __pyx_L1_error)
+      __pyx_t_9 = PyList_Insert(__pyx_v_res, 0, __pyx_v_value); if (unlikely(__pyx_t_9 == ((int)-1))) __PYX_ERR(0, 795, __pyx_L1_error)
 
-      /* "dawg.pyx":787
+      /* "dawg.pyx":793
  * 
  *         else:
  *             if self.dct.Follow(self._c_payload_separator, &index):             # <<<<<<<<<<<<<<
@@ -14439,7 +14591,7 @@ static PyObject *__pyx_f_4dawg_9BytesDAWG__similar_item_values(struct __pyx_obj_
   }
   __pyx_L4_break:;
 
-  /* "dawg.pyx":791
+  /* "dawg.pyx":797
  *                 res.insert(0, value)
  * 
  *         return res             # <<<<<<<<<<<<<<
@@ -14451,7 +14603,7 @@ static PyObject *__pyx_f_4dawg_9BytesDAWG__similar_item_values(struct __pyx_obj_
   __pyx_r = __pyx_v_res;
   goto __pyx_L0;
 
-  /* "dawg.pyx":760
+  /* "dawg.pyx":766
  *         return self._similar_items("", key, self.dct.root(), replaces)
  * 
  *     cdef list _similar_item_values(self, int start_pos, unicode key, BaseType cur_index, dict replace_chars):             # <<<<<<<<<<<<<<
@@ -14478,7 +14630,7 @@ static PyObject *__pyx_f_4dawg_9BytesDAWG__similar_item_values(struct __pyx_obj_
   return __pyx_r;
 }
 
-/* "dawg.pyx":793
+/* "dawg.pyx":799
  *         return res
  * 
  *     cpdef list similar_item_values(self, unicode key, dict replaces):             # <<<<<<<<<<<<<<
@@ -14506,7 +14658,7 @@ static PyObject *__pyx_f_4dawg_9BytesDAWG_similar_item_values(struct __pyx_obj_4
     if (unlikely(!__Pyx_object_dict_version_matches(((PyObject *)__pyx_v_self), __pyx_tp_dict_version, __pyx_obj_dict_version))) {
       PY_UINT64_T __pyx_type_dict_guard = __Pyx_get_tp_dict_version(((PyObject *)__pyx_v_self));
       #endif
-      __pyx_t_1 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_similar_item_values); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 793, __pyx_L1_error)
+      __pyx_t_1 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_similar_item_values); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 799, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_1);
       if (!PyCFunction_Check(__pyx_t_1) || (PyCFunction_GET_FUNCTION(__pyx_t_1) != (PyCFunction)(void*)__pyx_pw_4dawg_9BytesDAWG_33similar_item_values)) {
         __Pyx_XDECREF(__pyx_r);
@@ -14526,7 +14678,7 @@ static PyObject *__pyx_f_4dawg_9BytesDAWG_similar_item_values(struct __pyx_obj_4
         #if CYTHON_FAST_PYCALL
         if (PyFunction_Check(__pyx_t_3)) {
           PyObject *__pyx_temp[3] = {__pyx_t_4, __pyx_v_key, __pyx_v_replaces};
-          __pyx_t_2 = __Pyx_PyFunction_FastCall(__pyx_t_3, __pyx_temp+1-__pyx_t_5, 2+__pyx_t_5); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 793, __pyx_L1_error)
+          __pyx_t_2 = __Pyx_PyFunction_FastCall(__pyx_t_3, __pyx_temp+1-__pyx_t_5, 2+__pyx_t_5); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 799, __pyx_L1_error)
           __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
           __Pyx_GOTREF(__pyx_t_2);
         } else
@@ -14534,13 +14686,13 @@ static PyObject *__pyx_f_4dawg_9BytesDAWG_similar_item_values(struct __pyx_obj_4
         #if CYTHON_FAST_PYCCALL
         if (__Pyx_PyFastCFunction_Check(__pyx_t_3)) {
           PyObject *__pyx_temp[3] = {__pyx_t_4, __pyx_v_key, __pyx_v_replaces};
-          __pyx_t_2 = __Pyx_PyCFunction_FastCall(__pyx_t_3, __pyx_temp+1-__pyx_t_5, 2+__pyx_t_5); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 793, __pyx_L1_error)
+          __pyx_t_2 = __Pyx_PyCFunction_FastCall(__pyx_t_3, __pyx_temp+1-__pyx_t_5, 2+__pyx_t_5); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 799, __pyx_L1_error)
           __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
           __Pyx_GOTREF(__pyx_t_2);
         } else
         #endif
         {
-          __pyx_t_6 = PyTuple_New(2+__pyx_t_5); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 793, __pyx_L1_error)
+          __pyx_t_6 = PyTuple_New(2+__pyx_t_5); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 799, __pyx_L1_error)
           __Pyx_GOTREF(__pyx_t_6);
           if (__pyx_t_4) {
             __Pyx_GIVEREF(__pyx_t_4); PyTuple_SET_ITEM(__pyx_t_6, 0, __pyx_t_4); __pyx_t_4 = NULL;
@@ -14551,12 +14703,12 @@ static PyObject *__pyx_f_4dawg_9BytesDAWG_similar_item_values(struct __pyx_obj_4
           __Pyx_INCREF(__pyx_v_replaces);
           __Pyx_GIVEREF(__pyx_v_replaces);
           PyTuple_SET_ITEM(__pyx_t_6, 1+__pyx_t_5, __pyx_v_replaces);
-          __pyx_t_2 = __Pyx_PyObject_Call(__pyx_t_3, __pyx_t_6, NULL); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 793, __pyx_L1_error)
+          __pyx_t_2 = __Pyx_PyObject_Call(__pyx_t_3, __pyx_t_6, NULL); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 799, __pyx_L1_error)
           __Pyx_GOTREF(__pyx_t_2);
           __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
         }
         __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-        if (!(likely(PyList_CheckExact(__pyx_t_2))||((__pyx_t_2) == Py_None)||(PyErr_Format(PyExc_TypeError, "Expected %.16s, got %.200s", "list", Py_TYPE(__pyx_t_2)->tp_name), 0))) __PYX_ERR(0, 793, __pyx_L1_error)
+        if (!(likely(PyList_CheckExact(__pyx_t_2))||((__pyx_t_2) == Py_None)||(PyErr_Format(PyExc_TypeError, "Expected %.16s, got %.200s", "list", Py_TYPE(__pyx_t_2)->tp_name), 0))) __PYX_ERR(0, 799, __pyx_L1_error)
         __pyx_r = ((PyObject*)__pyx_t_2);
         __pyx_t_2 = 0;
         __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
@@ -14575,7 +14727,7 @@ static PyObject *__pyx_f_4dawg_9BytesDAWG_similar_item_values(struct __pyx_obj_4
     #endif
   }
 
-  /* "dawg.pyx":803
+  /* "dawg.pyx":809
  *         unicode strings.
  *         """
  *         return self._similar_item_values(0, key, self.dct.root(), replaces)             # <<<<<<<<<<<<<<
@@ -14583,13 +14735,13 @@ static PyObject *__pyx_f_4dawg_9BytesDAWG_similar_item_values(struct __pyx_obj_4
  * 
  */
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = ((struct __pyx_vtabstruct_4dawg_BytesDAWG *)__pyx_v_self->__pyx_base.__pyx_base.__pyx_vtab)->_similar_item_values(__pyx_v_self, 0, __pyx_v_key, __pyx_v_self->__pyx_base.__pyx_base.dct.root(), __pyx_v_replaces); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 803, __pyx_L1_error)
+  __pyx_t_1 = ((struct __pyx_vtabstruct_4dawg_BytesDAWG *)__pyx_v_self->__pyx_base.__pyx_base.__pyx_vtab)->_similar_item_values(__pyx_v_self, 0, __pyx_v_key, __pyx_v_self->__pyx_base.__pyx_base.dct.root(), __pyx_v_replaces); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 809, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = ((PyObject*)__pyx_t_1);
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "dawg.pyx":793
+  /* "dawg.pyx":799
  *         return res
  * 
  *     cpdef list similar_item_values(self, unicode key, dict replaces):             # <<<<<<<<<<<<<<
@@ -14644,11 +14796,11 @@ static PyObject *__pyx_pw_4dawg_9BytesDAWG_33similar_item_values(PyObject *__pyx
         case  1:
         if (likely((values[1] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_replaces)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("similar_item_values", 1, 2, 2, 1); __PYX_ERR(0, 793, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("similar_item_values", 1, 2, 2, 1); __PYX_ERR(0, 799, __pyx_L3_error)
         }
       }
       if (unlikely(kw_args > 0)) {
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "similar_item_values") < 0)) __PYX_ERR(0, 793, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "similar_item_values") < 0)) __PYX_ERR(0, 799, __pyx_L3_error)
       }
     } else if (PyTuple_GET_SIZE(__pyx_args) != 2) {
       goto __pyx_L5_argtuple_error;
@@ -14661,14 +14813,14 @@ static PyObject *__pyx_pw_4dawg_9BytesDAWG_33similar_item_values(PyObject *__pyx
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("similar_item_values", 1, 2, 2, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 793, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("similar_item_values", 1, 2, 2, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 799, __pyx_L3_error)
   __pyx_L3_error:;
   __Pyx_AddTraceback("dawg.BytesDAWG.similar_item_values", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_key), (&PyUnicode_Type), 1, "key", 1))) __PYX_ERR(0, 793, __pyx_L1_error)
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_replaces), (&PyDict_Type), 1, "replaces", 1))) __PYX_ERR(0, 793, __pyx_L1_error)
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_key), (&PyUnicode_Type), 1, "key", 1))) __PYX_ERR(0, 799, __pyx_L1_error)
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_replaces), (&PyDict_Type), 1, "replaces", 1))) __PYX_ERR(0, 799, __pyx_L1_error)
   __pyx_r = __pyx_pf_4dawg_9BytesDAWG_32similar_item_values(((struct __pyx_obj_4dawg_BytesDAWG *)__pyx_v_self), __pyx_v_key, __pyx_v_replaces);
 
   /* function exit code */
@@ -14686,7 +14838,7 @@ static PyObject *__pyx_pf_4dawg_9BytesDAWG_32similar_item_values(struct __pyx_ob
   PyObject *__pyx_t_1 = NULL;
   __Pyx_RefNannySetupContext("similar_item_values", 0);
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = __pyx_f_4dawg_9BytesDAWG_similar_item_values(__pyx_v_self, __pyx_v_key, __pyx_v_replaces, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 793, __pyx_L1_error)
+  __pyx_t_1 = __pyx_f_4dawg_9BytesDAWG_similar_item_values(__pyx_v_self, __pyx_v_key, __pyx_v_replaces, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 799, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
@@ -14703,7 +14855,7 @@ static PyObject *__pyx_pf_4dawg_9BytesDAWG_32similar_item_values(struct __pyx_ob
   return __pyx_r;
 }
 
-/* "dawg.pyx":824
+/* "dawg.pyx":830
  *     cdef _struct
  * 
  *     def __init__(self, fmt, arg=None, input_is_sorted=False, bytes payload_separator=PAYLOAD_SEPARATOR):             # <<<<<<<<<<<<<<
@@ -14771,7 +14923,7 @@ static int __pyx_pw_4dawg_10RecordDAWG_1__init__(PyObject *__pyx_v_self, PyObjec
         }
       }
       if (unlikely(kw_args > 0)) {
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "__init__") < 0)) __PYX_ERR(0, 824, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "__init__") < 0)) __PYX_ERR(0, 830, __pyx_L3_error)
       }
     } else {
       switch (PyTuple_GET_SIZE(__pyx_args)) {
@@ -14793,13 +14945,13 @@ static int __pyx_pw_4dawg_10RecordDAWG_1__init__(PyObject *__pyx_v_self, PyObjec
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("__init__", 0, 1, 4, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 824, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("__init__", 0, 1, 4, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 830, __pyx_L3_error)
   __pyx_L3_error:;
   __Pyx_AddTraceback("dawg.RecordDAWG.__init__", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return -1;
   __pyx_L4_argument_unpacking_done:;
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_payload_separator), (&PyBytes_Type), 1, "payload_separator", 1))) __PYX_ERR(0, 824, __pyx_L1_error)
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_payload_separator), (&PyBytes_Type), 1, "payload_separator", 1))) __PYX_ERR(0, 830, __pyx_L1_error)
   __pyx_r = __pyx_pf_4dawg_10RecordDAWG___init__(((struct __pyx_obj_4dawg_RecordDAWG *)__pyx_v_self), __pyx_v_fmt, __pyx_v_arg, __pyx_v_input_is_sorted, __pyx_v_payload_separator);
 
   /* function exit code */
@@ -14812,7 +14964,7 @@ static int __pyx_pw_4dawg_10RecordDAWG_1__init__(PyObject *__pyx_v_self, PyObjec
 }
 static PyObject *__pyx_gb_4dawg_10RecordDAWG_8__init___2generator8(__pyx_CoroutineObject *__pyx_generator, CYTHON_UNUSED PyThreadState *__pyx_tstate, PyObject *__pyx_sent_value); /* proto */
 
-/* "dawg.pyx":839
+/* "dawg.pyx":845
  *             arg = []
  * 
  *         keys = ((d[0], self._struct.pack(*d[1])) for d in arg)             # <<<<<<<<<<<<<<
@@ -14829,7 +14981,7 @@ static PyObject *__pyx_pf_4dawg_10RecordDAWG_8__init___genexpr(PyObject *__pyx_s
   if (unlikely(!__pyx_cur_scope)) {
     __pyx_cur_scope = ((struct __pyx_obj_4dawg___pyx_scope_struct_9_genexpr *)Py_None);
     __Pyx_INCREF(Py_None);
-    __PYX_ERR(0, 839, __pyx_L1_error)
+    __PYX_ERR(0, 845, __pyx_L1_error)
   } else {
     __Pyx_GOTREF(__pyx_cur_scope);
   }
@@ -14837,7 +14989,7 @@ static PyObject *__pyx_pf_4dawg_10RecordDAWG_8__init___genexpr(PyObject *__pyx_s
   __Pyx_INCREF(((PyObject *)__pyx_cur_scope->__pyx_outer_scope));
   __Pyx_GIVEREF(__pyx_cur_scope->__pyx_outer_scope);
   {
-    __pyx_CoroutineObject *gen = __Pyx_Generator_New((__pyx_coroutine_body_t) __pyx_gb_4dawg_10RecordDAWG_8__init___2generator8, NULL, (PyObject *) __pyx_cur_scope, __pyx_n_s_genexpr, __pyx_n_s_init___locals_genexpr, __pyx_n_s_dawg); if (unlikely(!gen)) __PYX_ERR(0, 839, __pyx_L1_error)
+    __pyx_CoroutineObject *gen = __Pyx_Generator_New((__pyx_coroutine_body_t) __pyx_gb_4dawg_10RecordDAWG_8__init___2generator8, NULL, (PyObject *) __pyx_cur_scope, __pyx_n_s_genexpr, __pyx_n_s_init___locals_genexpr, __pyx_n_s_dawg); if (unlikely(!gen)) __PYX_ERR(0, 845, __pyx_L1_error)
     __Pyx_DECREF(__pyx_cur_scope);
     __Pyx_RefNannyFinishContext();
     return (PyObject *) gen;
@@ -14874,32 +15026,32 @@ static PyObject *__pyx_gb_4dawg_10RecordDAWG_8__init___2generator8(__pyx_Corouti
     return NULL;
   }
   __pyx_L3_first_run:;
-  if (unlikely(!__pyx_sent_value)) __PYX_ERR(0, 839, __pyx_L1_error)
-  if (unlikely(!__pyx_cur_scope->__pyx_outer_scope->__pyx_v_arg)) { __Pyx_RaiseClosureNameError("arg"); __PYX_ERR(0, 839, __pyx_L1_error) }
+  if (unlikely(!__pyx_sent_value)) __PYX_ERR(0, 845, __pyx_L1_error)
+  if (unlikely(!__pyx_cur_scope->__pyx_outer_scope->__pyx_v_arg)) { __Pyx_RaiseClosureNameError("arg"); __PYX_ERR(0, 845, __pyx_L1_error) }
   if (likely(PyList_CheckExact(__pyx_cur_scope->__pyx_outer_scope->__pyx_v_arg)) || PyTuple_CheckExact(__pyx_cur_scope->__pyx_outer_scope->__pyx_v_arg)) {
     __pyx_t_1 = __pyx_cur_scope->__pyx_outer_scope->__pyx_v_arg; __Pyx_INCREF(__pyx_t_1); __pyx_t_2 = 0;
     __pyx_t_3 = NULL;
   } else {
-    __pyx_t_2 = -1; __pyx_t_1 = PyObject_GetIter(__pyx_cur_scope->__pyx_outer_scope->__pyx_v_arg); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 839, __pyx_L1_error)
+    __pyx_t_2 = -1; __pyx_t_1 = PyObject_GetIter(__pyx_cur_scope->__pyx_outer_scope->__pyx_v_arg); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 845, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
-    __pyx_t_3 = Py_TYPE(__pyx_t_1)->tp_iternext; if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 839, __pyx_L1_error)
+    __pyx_t_3 = Py_TYPE(__pyx_t_1)->tp_iternext; if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 845, __pyx_L1_error)
   }
   for (;;) {
     if (likely(!__pyx_t_3)) {
       if (likely(PyList_CheckExact(__pyx_t_1))) {
         if (__pyx_t_2 >= PyList_GET_SIZE(__pyx_t_1)) break;
         #if CYTHON_ASSUME_SAFE_MACROS && !CYTHON_AVOID_BORROWED_REFS
-        __pyx_t_4 = PyList_GET_ITEM(__pyx_t_1, __pyx_t_2); __Pyx_INCREF(__pyx_t_4); __pyx_t_2++; if (unlikely(0 < 0)) __PYX_ERR(0, 839, __pyx_L1_error)
+        __pyx_t_4 = PyList_GET_ITEM(__pyx_t_1, __pyx_t_2); __Pyx_INCREF(__pyx_t_4); __pyx_t_2++; if (unlikely(0 < 0)) __PYX_ERR(0, 845, __pyx_L1_error)
         #else
-        __pyx_t_4 = PySequence_ITEM(__pyx_t_1, __pyx_t_2); __pyx_t_2++; if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 839, __pyx_L1_error)
+        __pyx_t_4 = PySequence_ITEM(__pyx_t_1, __pyx_t_2); __pyx_t_2++; if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 845, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_4);
         #endif
       } else {
         if (__pyx_t_2 >= PyTuple_GET_SIZE(__pyx_t_1)) break;
         #if CYTHON_ASSUME_SAFE_MACROS && !CYTHON_AVOID_BORROWED_REFS
-        __pyx_t_4 = PyTuple_GET_ITEM(__pyx_t_1, __pyx_t_2); __Pyx_INCREF(__pyx_t_4); __pyx_t_2++; if (unlikely(0 < 0)) __PYX_ERR(0, 839, __pyx_L1_error)
+        __pyx_t_4 = PyTuple_GET_ITEM(__pyx_t_1, __pyx_t_2); __Pyx_INCREF(__pyx_t_4); __pyx_t_2++; if (unlikely(0 < 0)) __PYX_ERR(0, 845, __pyx_L1_error)
         #else
-        __pyx_t_4 = PySequence_ITEM(__pyx_t_1, __pyx_t_2); __pyx_t_2++; if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 839, __pyx_L1_error)
+        __pyx_t_4 = PySequence_ITEM(__pyx_t_1, __pyx_t_2); __pyx_t_2++; if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 845, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_4);
         #endif
       }
@@ -14909,7 +15061,7 @@ static PyObject *__pyx_gb_4dawg_10RecordDAWG_8__init___2generator8(__pyx_Corouti
         PyObject* exc_type = PyErr_Occurred();
         if (exc_type) {
           if (likely(__Pyx_PyErr_GivenExceptionMatches(exc_type, PyExc_StopIteration))) PyErr_Clear();
-          else __PYX_ERR(0, 839, __pyx_L1_error)
+          else __PYX_ERR(0, 845, __pyx_L1_error)
         }
         break;
       }
@@ -14919,21 +15071,21 @@ static PyObject *__pyx_gb_4dawg_10RecordDAWG_8__init___2generator8(__pyx_Corouti
     __Pyx_XDECREF_SET(__pyx_cur_scope->__pyx_v_d, __pyx_t_4);
     __Pyx_GIVEREF(__pyx_t_4);
     __pyx_t_4 = 0;
-    __pyx_t_4 = __Pyx_GetItemInt(__pyx_cur_scope->__pyx_v_d, 0, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 839, __pyx_L1_error)
+    __pyx_t_4 = __Pyx_GetItemInt(__pyx_cur_scope->__pyx_v_d, 0, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 845, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_4);
-    if (unlikely(!__pyx_cur_scope->__pyx_outer_scope->__pyx_v_self)) { __Pyx_RaiseClosureNameError("self"); __PYX_ERR(0, 839, __pyx_L1_error) }
-    __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_cur_scope->__pyx_outer_scope->__pyx_v_self->_struct, __pyx_n_s_pack); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 839, __pyx_L1_error)
+    if (unlikely(!__pyx_cur_scope->__pyx_outer_scope->__pyx_v_self)) { __Pyx_RaiseClosureNameError("self"); __PYX_ERR(0, 845, __pyx_L1_error) }
+    __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_cur_scope->__pyx_outer_scope->__pyx_v_self->_struct, __pyx_n_s_pack); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 845, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_5);
-    __pyx_t_6 = __Pyx_GetItemInt(__pyx_cur_scope->__pyx_v_d, 1, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 839, __pyx_L1_error)
+    __pyx_t_6 = __Pyx_GetItemInt(__pyx_cur_scope->__pyx_v_d, 1, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 845, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_6);
-    __pyx_t_7 = __Pyx_PySequence_Tuple(__pyx_t_6); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 839, __pyx_L1_error)
+    __pyx_t_7 = __Pyx_PySequence_Tuple(__pyx_t_6); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 845, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_7);
     __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
-    __pyx_t_6 = __Pyx_PyObject_Call(__pyx_t_5, __pyx_t_7, NULL); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 839, __pyx_L1_error)
+    __pyx_t_6 = __Pyx_PyObject_Call(__pyx_t_5, __pyx_t_7, NULL); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 845, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_6);
     __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
     __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
-    __pyx_t_7 = PyTuple_New(2); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 839, __pyx_L1_error)
+    __pyx_t_7 = PyTuple_New(2); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 845, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_7);
     __Pyx_GIVEREF(__pyx_t_4);
     PyTuple_SET_ITEM(__pyx_t_7, 0, __pyx_t_4);
@@ -14959,7 +15111,7 @@ static PyObject *__pyx_gb_4dawg_10RecordDAWG_8__init___2generator8(__pyx_Corouti
     __Pyx_XGOTREF(__pyx_t_1);
     __pyx_t_2 = __pyx_cur_scope->__pyx_t_1;
     __pyx_t_3 = __pyx_cur_scope->__pyx_t_2;
-    if (unlikely(!__pyx_sent_value)) __PYX_ERR(0, 839, __pyx_L1_error)
+    if (unlikely(!__pyx_sent_value)) __PYX_ERR(0, 845, __pyx_L1_error)
   }
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   CYTHON_MAYBE_UNUSED_VAR(__pyx_cur_scope);
@@ -14985,7 +15137,7 @@ static PyObject *__pyx_gb_4dawg_10RecordDAWG_8__init___2generator8(__pyx_Corouti
   return __pyx_r;
 }
 
-/* "dawg.pyx":824
+/* "dawg.pyx":830
  *     cdef _struct
  * 
  *     def __init__(self, fmt, arg=None, input_is_sorted=False, bytes payload_separator=PAYLOAD_SEPARATOR):             # <<<<<<<<<<<<<<
@@ -15010,7 +15162,7 @@ static int __pyx_pf_4dawg_10RecordDAWG___init__(struct __pyx_obj_4dawg_RecordDAW
   if (unlikely(!__pyx_cur_scope)) {
     __pyx_cur_scope = ((struct __pyx_obj_4dawg___pyx_scope_struct_8___init__ *)Py_None);
     __Pyx_INCREF(Py_None);
-    __PYX_ERR(0, 824, __pyx_L1_error)
+    __PYX_ERR(0, 830, __pyx_L1_error)
   } else {
     __Pyx_GOTREF(__pyx_cur_scope);
   }
@@ -15021,19 +15173,19 @@ static int __pyx_pf_4dawg_10RecordDAWG___init__(struct __pyx_obj_4dawg_RecordDAW
   __Pyx_INCREF(__pyx_cur_scope->__pyx_v_arg);
   __Pyx_GIVEREF(__pyx_cur_scope->__pyx_v_arg);
 
-  /* "dawg.pyx":834
+  /* "dawg.pyx":840
  *         format string specification.
  *         """
  *         self._struct = struct.Struct(str(fmt))             # <<<<<<<<<<<<<<
  * 
  *         if arg is None:
  */
-  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_struct); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 834, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_struct); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 840, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_Struct); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 834, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_Struct); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 840, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  __pyx_t_2 = __Pyx_PyObject_CallOneArg(((PyObject *)(&PyString_Type)), __pyx_v_fmt); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 834, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_CallOneArg(((PyObject *)(&PyString_Type)), __pyx_v_fmt); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 840, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __pyx_t_4 = NULL;
   if (CYTHON_UNPACK_METHODS && unlikely(PyMethod_Check(__pyx_t_3))) {
@@ -15048,7 +15200,7 @@ static int __pyx_pf_4dawg_10RecordDAWG___init__(struct __pyx_obj_4dawg_RecordDAW
   __pyx_t_1 = (__pyx_t_4) ? __Pyx_PyObject_Call2Args(__pyx_t_3, __pyx_t_4, __pyx_t_2) : __Pyx_PyObject_CallOneArg(__pyx_t_3, __pyx_t_2);
   __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 834, __pyx_L1_error)
+  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 840, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __Pyx_GIVEREF(__pyx_t_1);
@@ -15057,7 +15209,7 @@ static int __pyx_pf_4dawg_10RecordDAWG___init__(struct __pyx_obj_4dawg_RecordDAW
   __pyx_cur_scope->__pyx_v_self->_struct = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "dawg.pyx":836
+  /* "dawg.pyx":842
  *         self._struct = struct.Struct(str(fmt))
  * 
  *         if arg is None:             # <<<<<<<<<<<<<<
@@ -15068,21 +15220,21 @@ static int __pyx_pf_4dawg_10RecordDAWG___init__(struct __pyx_obj_4dawg_RecordDAW
   __pyx_t_6 = (__pyx_t_5 != 0);
   if (__pyx_t_6) {
 
-    /* "dawg.pyx":837
+    /* "dawg.pyx":843
  * 
  *         if arg is None:
  *             arg = []             # <<<<<<<<<<<<<<
  * 
  *         keys = ((d[0], self._struct.pack(*d[1])) for d in arg)
  */
-    __pyx_t_1 = PyList_New(0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 837, __pyx_L1_error)
+    __pyx_t_1 = PyList_New(0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 843, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_GOTREF(__pyx_cur_scope->__pyx_v_arg);
     __Pyx_DECREF_SET(__pyx_cur_scope->__pyx_v_arg, __pyx_t_1);
     __Pyx_GIVEREF(__pyx_t_1);
     __pyx_t_1 = 0;
 
-    /* "dawg.pyx":836
+    /* "dawg.pyx":842
  *         self._struct = struct.Struct(str(fmt))
  * 
  *         if arg is None:             # <<<<<<<<<<<<<<
@@ -15091,26 +15243,26 @@ static int __pyx_pf_4dawg_10RecordDAWG___init__(struct __pyx_obj_4dawg_RecordDAW
  */
   }
 
-  /* "dawg.pyx":839
+  /* "dawg.pyx":845
  *             arg = []
  * 
  *         keys = ((d[0], self._struct.pack(*d[1])) for d in arg)             # <<<<<<<<<<<<<<
  *         super(RecordDAWG, self).__init__(keys, input_is_sorted, payload_separator)
  * 
  */
-  __pyx_t_1 = __pyx_pf_4dawg_10RecordDAWG_8__init___genexpr(((PyObject*)__pyx_cur_scope)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 839, __pyx_L1_error)
+  __pyx_t_1 = __pyx_pf_4dawg_10RecordDAWG_8__init___genexpr(((PyObject*)__pyx_cur_scope)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 845, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_v_keys = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "dawg.pyx":840
+  /* "dawg.pyx":846
  * 
  *         keys = ((d[0], self._struct.pack(*d[1])) for d in arg)
  *         super(RecordDAWG, self).__init__(keys, input_is_sorted, payload_separator)             # <<<<<<<<<<<<<<
  * 
  *     cdef list _value_for_index(self, BaseType index):
  */
-  __pyx_t_3 = PyTuple_New(2); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 840, __pyx_L1_error)
+  __pyx_t_3 = PyTuple_New(2); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 846, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_INCREF(((PyObject *)__pyx_ptype_4dawg_RecordDAWG));
   __Pyx_GIVEREF(((PyObject *)__pyx_ptype_4dawg_RecordDAWG));
@@ -15118,10 +15270,10 @@ static int __pyx_pf_4dawg_10RecordDAWG___init__(struct __pyx_obj_4dawg_RecordDAW
   __Pyx_INCREF(((PyObject *)__pyx_cur_scope->__pyx_v_self));
   __Pyx_GIVEREF(((PyObject *)__pyx_cur_scope->__pyx_v_self));
   PyTuple_SET_ITEM(__pyx_t_3, 1, ((PyObject *)__pyx_cur_scope->__pyx_v_self));
-  __pyx_t_2 = __Pyx_PyObject_Call(__pyx_builtin_super, __pyx_t_3, NULL); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 840, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_Call(__pyx_builtin_super, __pyx_t_3, NULL); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 846, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_init); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 840, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_init); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 846, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __pyx_t_2 = NULL;
@@ -15139,7 +15291,7 @@ static int __pyx_pf_4dawg_10RecordDAWG___init__(struct __pyx_obj_4dawg_RecordDAW
   #if CYTHON_FAST_PYCALL
   if (PyFunction_Check(__pyx_t_3)) {
     PyObject *__pyx_temp[4] = {__pyx_t_2, __pyx_v_keys, __pyx_v_input_is_sorted, __pyx_v_payload_separator};
-    __pyx_t_1 = __Pyx_PyFunction_FastCall(__pyx_t_3, __pyx_temp+1-__pyx_t_7, 3+__pyx_t_7); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 840, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyFunction_FastCall(__pyx_t_3, __pyx_temp+1-__pyx_t_7, 3+__pyx_t_7); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 846, __pyx_L1_error)
     __Pyx_XDECREF(__pyx_t_2); __pyx_t_2 = 0;
     __Pyx_GOTREF(__pyx_t_1);
   } else
@@ -15147,13 +15299,13 @@ static int __pyx_pf_4dawg_10RecordDAWG___init__(struct __pyx_obj_4dawg_RecordDAW
   #if CYTHON_FAST_PYCCALL
   if (__Pyx_PyFastCFunction_Check(__pyx_t_3)) {
     PyObject *__pyx_temp[4] = {__pyx_t_2, __pyx_v_keys, __pyx_v_input_is_sorted, __pyx_v_payload_separator};
-    __pyx_t_1 = __Pyx_PyCFunction_FastCall(__pyx_t_3, __pyx_temp+1-__pyx_t_7, 3+__pyx_t_7); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 840, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyCFunction_FastCall(__pyx_t_3, __pyx_temp+1-__pyx_t_7, 3+__pyx_t_7); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 846, __pyx_L1_error)
     __Pyx_XDECREF(__pyx_t_2); __pyx_t_2 = 0;
     __Pyx_GOTREF(__pyx_t_1);
   } else
   #endif
   {
-    __pyx_t_4 = PyTuple_New(3+__pyx_t_7); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 840, __pyx_L1_error)
+    __pyx_t_4 = PyTuple_New(3+__pyx_t_7); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 846, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_4);
     if (__pyx_t_2) {
       __Pyx_GIVEREF(__pyx_t_2); PyTuple_SET_ITEM(__pyx_t_4, 0, __pyx_t_2); __pyx_t_2 = NULL;
@@ -15167,14 +15319,14 @@ static int __pyx_pf_4dawg_10RecordDAWG___init__(struct __pyx_obj_4dawg_RecordDAW
     __Pyx_INCREF(__pyx_v_payload_separator);
     __Pyx_GIVEREF(__pyx_v_payload_separator);
     PyTuple_SET_ITEM(__pyx_t_4, 2+__pyx_t_7, __pyx_v_payload_separator);
-    __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_3, __pyx_t_4, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 840, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_3, __pyx_t_4, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 846, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
   }
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "dawg.pyx":824
+  /* "dawg.pyx":830
  *     cdef _struct
  * 
  *     def __init__(self, fmt, arg=None, input_is_sorted=False, bytes payload_separator=PAYLOAD_SEPARATOR):             # <<<<<<<<<<<<<<
@@ -15199,7 +15351,7 @@ static int __pyx_pf_4dawg_10RecordDAWG___init__(struct __pyx_obj_4dawg_RecordDAW
   return __pyx_r;
 }
 
-/* "dawg.pyx":842
+/* "dawg.pyx":848
  *         super(RecordDAWG, self).__init__(keys, input_is_sorted, payload_separator)
  * 
  *     cdef list _value_for_index(self, BaseType index):             # <<<<<<<<<<<<<<
@@ -15220,19 +15372,19 @@ static PyObject *__pyx_f_4dawg_10RecordDAWG__value_for_index(struct __pyx_obj_4d
   PyObject *__pyx_t_6 = NULL;
   __Pyx_RefNannySetupContext("_value_for_index", 0);
 
-  /* "dawg.pyx":843
+  /* "dawg.pyx":849
  * 
  *     cdef list _value_for_index(self, BaseType index):
  *         cdef list value = BytesDAWG._value_for_index(self, index)             # <<<<<<<<<<<<<<
  *         return [self._struct.unpack(val) for val in value]
  * 
  */
-  __pyx_t_1 = __pyx_f_4dawg_9BytesDAWG__value_for_index(((struct __pyx_obj_4dawg_BytesDAWG *)__pyx_v_self), __pyx_v_index); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 843, __pyx_L1_error)
+  __pyx_t_1 = __pyx_f_4dawg_9BytesDAWG__value_for_index(((struct __pyx_obj_4dawg_BytesDAWG *)__pyx_v_self), __pyx_v_index); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 849, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_v_value = ((PyObject*)__pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "dawg.pyx":844
+  /* "dawg.pyx":850
  *     cdef list _value_for_index(self, BaseType index):
  *         cdef list value = BytesDAWG._value_for_index(self, index)
  *         return [self._struct.unpack(val) for val in value]             # <<<<<<<<<<<<<<
@@ -15240,24 +15392,24 @@ static PyObject *__pyx_f_4dawg_10RecordDAWG__value_for_index(struct __pyx_obj_4d
  *     cpdef list items(self, unicode prefix=""):
  */
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = PyList_New(0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 844, __pyx_L1_error)
+  __pyx_t_1 = PyList_New(0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 850, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   if (unlikely(__pyx_v_value == Py_None)) {
     PyErr_SetString(PyExc_TypeError, "'NoneType' object is not iterable");
-    __PYX_ERR(0, 844, __pyx_L1_error)
+    __PYX_ERR(0, 850, __pyx_L1_error)
   }
   __pyx_t_2 = __pyx_v_value; __Pyx_INCREF(__pyx_t_2); __pyx_t_3 = 0;
   for (;;) {
     if (__pyx_t_3 >= PyList_GET_SIZE(__pyx_t_2)) break;
     #if CYTHON_ASSUME_SAFE_MACROS && !CYTHON_AVOID_BORROWED_REFS
-    __pyx_t_4 = PyList_GET_ITEM(__pyx_t_2, __pyx_t_3); __Pyx_INCREF(__pyx_t_4); __pyx_t_3++; if (unlikely(0 < 0)) __PYX_ERR(0, 844, __pyx_L1_error)
+    __pyx_t_4 = PyList_GET_ITEM(__pyx_t_2, __pyx_t_3); __Pyx_INCREF(__pyx_t_4); __pyx_t_3++; if (unlikely(0 < 0)) __PYX_ERR(0, 850, __pyx_L1_error)
     #else
-    __pyx_t_4 = PySequence_ITEM(__pyx_t_2, __pyx_t_3); __pyx_t_3++; if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 844, __pyx_L1_error)
+    __pyx_t_4 = PySequence_ITEM(__pyx_t_2, __pyx_t_3); __pyx_t_3++; if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 850, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_4);
     #endif
     __Pyx_XDECREF_SET(__pyx_v_val, __pyx_t_4);
     __pyx_t_4 = 0;
-    __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_v_self->_struct, __pyx_n_s_unpack); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 844, __pyx_L1_error)
+    __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_v_self->_struct, __pyx_n_s_unpack); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 850, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_5);
     __pyx_t_6 = NULL;
     if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_5))) {
@@ -15271,10 +15423,10 @@ static PyObject *__pyx_f_4dawg_10RecordDAWG__value_for_index(struct __pyx_obj_4d
     }
     __pyx_t_4 = (__pyx_t_6) ? __Pyx_PyObject_Call2Args(__pyx_t_5, __pyx_t_6, __pyx_v_val) : __Pyx_PyObject_CallOneArg(__pyx_t_5, __pyx_v_val);
     __Pyx_XDECREF(__pyx_t_6); __pyx_t_6 = 0;
-    if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 844, __pyx_L1_error)
+    if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 850, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_4);
     __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-    if (unlikely(__Pyx_ListComp_Append(__pyx_t_1, (PyObject*)__pyx_t_4))) __PYX_ERR(0, 844, __pyx_L1_error)
+    if (unlikely(__Pyx_ListComp_Append(__pyx_t_1, (PyObject*)__pyx_t_4))) __PYX_ERR(0, 850, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
   }
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
@@ -15282,7 +15434,7 @@ static PyObject *__pyx_f_4dawg_10RecordDAWG__value_for_index(struct __pyx_obj_4d
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "dawg.pyx":842
+  /* "dawg.pyx":848
  *         super(RecordDAWG, self).__init__(keys, input_is_sorted, payload_separator)
  * 
  *     cdef list _value_for_index(self, BaseType index):             # <<<<<<<<<<<<<<
@@ -15307,7 +15459,7 @@ static PyObject *__pyx_f_4dawg_10RecordDAWG__value_for_index(struct __pyx_obj_4d
   return __pyx_r;
 }
 
-/* "dawg.pyx":846
+/* "dawg.pyx":852
  *         return [self._struct.unpack(val) for val in value]
  * 
  *     cpdef list items(self, unicode prefix=""):             # <<<<<<<<<<<<<<
@@ -15347,7 +15499,7 @@ static PyObject *__pyx_f_4dawg_10RecordDAWG_items(struct __pyx_obj_4dawg_RecordD
     if (unlikely(!__Pyx_object_dict_version_matches(((PyObject *)__pyx_v_self), __pyx_tp_dict_version, __pyx_obj_dict_version))) {
       PY_UINT64_T __pyx_type_dict_guard = __Pyx_get_tp_dict_version(((PyObject *)__pyx_v_self));
       #endif
-      __pyx_t_1 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_items); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 846, __pyx_L1_error)
+      __pyx_t_1 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_items); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 852, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_1);
       if (!PyCFunction_Check(__pyx_t_1) || (PyCFunction_GET_FUNCTION(__pyx_t_1) != (PyCFunction)(void*)__pyx_pw_4dawg_10RecordDAWG_3items)) {
         __Pyx_XDECREF(__pyx_r);
@@ -15364,10 +15516,10 @@ static PyObject *__pyx_f_4dawg_10RecordDAWG_items(struct __pyx_obj_4dawg_RecordD
         }
         __pyx_t_2 = (__pyx_t_4) ? __Pyx_PyObject_Call2Args(__pyx_t_3, __pyx_t_4, __pyx_v_prefix) : __Pyx_PyObject_CallOneArg(__pyx_t_3, __pyx_v_prefix);
         __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
-        if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 846, __pyx_L1_error)
+        if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 852, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_2);
         __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-        if (!(likely(PyList_CheckExact(__pyx_t_2))||((__pyx_t_2) == Py_None)||(PyErr_Format(PyExc_TypeError, "Expected %.16s, got %.200s", "list", Py_TYPE(__pyx_t_2)->tp_name), 0))) __PYX_ERR(0, 846, __pyx_L1_error)
+        if (!(likely(PyList_CheckExact(__pyx_t_2))||((__pyx_t_2) == Py_None)||(PyErr_Format(PyExc_TypeError, "Expected %.16s, got %.200s", "list", Py_TYPE(__pyx_t_2)->tp_name), 0))) __PYX_ERR(0, 852, __pyx_L1_error)
         __pyx_r = ((PyObject*)__pyx_t_2);
         __pyx_t_2 = 0;
         __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
@@ -15386,7 +15538,7 @@ static PyObject *__pyx_f_4dawg_10RecordDAWG_items(struct __pyx_obj_4dawg_RecordD
     #endif
   }
 
-  /* "dawg.pyx":847
+  /* "dawg.pyx":853
  * 
  *     cpdef list items(self, unicode prefix=""):
  *         cdef list items = BytesDAWG.items(self, prefix)             # <<<<<<<<<<<<<<
@@ -15395,12 +15547,12 @@ static PyObject *__pyx_f_4dawg_10RecordDAWG_items(struct __pyx_obj_4dawg_RecordD
  */
   __pyx_t_5.__pyx_n = 1;
   __pyx_t_5.prefix = __pyx_v_prefix;
-  __pyx_t_1 = __pyx_vtabptr_4dawg_BytesDAWG->items(((struct __pyx_obj_4dawg_BytesDAWG *)__pyx_v_self), 1, &__pyx_t_5); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 847, __pyx_L1_error)
+  __pyx_t_1 = __pyx_vtabptr_4dawg_BytesDAWG->items(((struct __pyx_obj_4dawg_BytesDAWG *)__pyx_v_self), 1, &__pyx_t_5); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 853, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_v_items = ((PyObject*)__pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "dawg.pyx":848
+  /* "dawg.pyx":854
  *     cpdef list items(self, unicode prefix=""):
  *         cdef list items = BytesDAWG.items(self, prefix)
  *         return [(key, self._struct.unpack(val)) for (key, val) in items]             # <<<<<<<<<<<<<<
@@ -15408,19 +15560,19 @@ static PyObject *__pyx_f_4dawg_10RecordDAWG_items(struct __pyx_obj_4dawg_RecordD
  *     def iteritems(self, unicode prefix=""):
  */
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = PyList_New(0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 848, __pyx_L1_error)
+  __pyx_t_1 = PyList_New(0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 854, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   if (unlikely(__pyx_v_items == Py_None)) {
     PyErr_SetString(PyExc_TypeError, "'NoneType' object is not iterable");
-    __PYX_ERR(0, 848, __pyx_L1_error)
+    __PYX_ERR(0, 854, __pyx_L1_error)
   }
   __pyx_t_2 = __pyx_v_items; __Pyx_INCREF(__pyx_t_2); __pyx_t_6 = 0;
   for (;;) {
     if (__pyx_t_6 >= PyList_GET_SIZE(__pyx_t_2)) break;
     #if CYTHON_ASSUME_SAFE_MACROS && !CYTHON_AVOID_BORROWED_REFS
-    __pyx_t_3 = PyList_GET_ITEM(__pyx_t_2, __pyx_t_6); __Pyx_INCREF(__pyx_t_3); __pyx_t_6++; if (unlikely(0 < 0)) __PYX_ERR(0, 848, __pyx_L1_error)
+    __pyx_t_3 = PyList_GET_ITEM(__pyx_t_2, __pyx_t_6); __Pyx_INCREF(__pyx_t_3); __pyx_t_6++; if (unlikely(0 < 0)) __PYX_ERR(0, 854, __pyx_L1_error)
     #else
-    __pyx_t_3 = PySequence_ITEM(__pyx_t_2, __pyx_t_6); __pyx_t_6++; if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 848, __pyx_L1_error)
+    __pyx_t_3 = PySequence_ITEM(__pyx_t_2, __pyx_t_6); __pyx_t_6++; if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 854, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
     #endif
     if ((likely(PyTuple_CheckExact(__pyx_t_3))) || (PyList_CheckExact(__pyx_t_3))) {
@@ -15429,7 +15581,7 @@ static PyObject *__pyx_f_4dawg_10RecordDAWG_items(struct __pyx_obj_4dawg_RecordD
       if (unlikely(size != 2)) {
         if (size > 2) __Pyx_RaiseTooManyValuesError(2);
         else if (size >= 0) __Pyx_RaiseNeedMoreValuesError(size);
-        __PYX_ERR(0, 848, __pyx_L1_error)
+        __PYX_ERR(0, 854, __pyx_L1_error)
       }
       #if CYTHON_ASSUME_SAFE_MACROS && !CYTHON_AVOID_BORROWED_REFS
       if (likely(PyTuple_CheckExact(sequence))) {
@@ -15442,15 +15594,15 @@ static PyObject *__pyx_f_4dawg_10RecordDAWG_items(struct __pyx_obj_4dawg_RecordD
       __Pyx_INCREF(__pyx_t_4);
       __Pyx_INCREF(__pyx_t_7);
       #else
-      __pyx_t_4 = PySequence_ITEM(sequence, 0); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 848, __pyx_L1_error)
+      __pyx_t_4 = PySequence_ITEM(sequence, 0); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 854, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_4);
-      __pyx_t_7 = PySequence_ITEM(sequence, 1); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 848, __pyx_L1_error)
+      __pyx_t_7 = PySequence_ITEM(sequence, 1); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 854, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_7);
       #endif
       __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
     } else {
       Py_ssize_t index = -1;
-      __pyx_t_8 = PyObject_GetIter(__pyx_t_3); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 848, __pyx_L1_error)
+      __pyx_t_8 = PyObject_GetIter(__pyx_t_3); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 854, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_8);
       __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
       __pyx_t_9 = Py_TYPE(__pyx_t_8)->tp_iternext;
@@ -15458,7 +15610,7 @@ static PyObject *__pyx_f_4dawg_10RecordDAWG_items(struct __pyx_obj_4dawg_RecordD
       __Pyx_GOTREF(__pyx_t_4);
       index = 1; __pyx_t_7 = __pyx_t_9(__pyx_t_8); if (unlikely(!__pyx_t_7)) goto __pyx_L5_unpacking_failed;
       __Pyx_GOTREF(__pyx_t_7);
-      if (__Pyx_IternextUnpackEndCheck(__pyx_t_9(__pyx_t_8), 2) < 0) __PYX_ERR(0, 848, __pyx_L1_error)
+      if (__Pyx_IternextUnpackEndCheck(__pyx_t_9(__pyx_t_8), 2) < 0) __PYX_ERR(0, 854, __pyx_L1_error)
       __pyx_t_9 = NULL;
       __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
       goto __pyx_L6_unpacking_done;
@@ -15466,14 +15618,14 @@ static PyObject *__pyx_f_4dawg_10RecordDAWG_items(struct __pyx_obj_4dawg_RecordD
       __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
       __pyx_t_9 = NULL;
       if (__Pyx_IterFinish() == 0) __Pyx_RaiseNeedMoreValuesError(index);
-      __PYX_ERR(0, 848, __pyx_L1_error)
+      __PYX_ERR(0, 854, __pyx_L1_error)
       __pyx_L6_unpacking_done:;
     }
     __Pyx_XDECREF_SET(__pyx_v_key, __pyx_t_4);
     __pyx_t_4 = 0;
     __Pyx_XDECREF_SET(__pyx_v_val, __pyx_t_7);
     __pyx_t_7 = 0;
-    __pyx_t_7 = __Pyx_PyObject_GetAttrStr(__pyx_v_self->_struct, __pyx_n_s_unpack); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 848, __pyx_L1_error)
+    __pyx_t_7 = __Pyx_PyObject_GetAttrStr(__pyx_v_self->_struct, __pyx_n_s_unpack); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 854, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_7);
     __pyx_t_4 = NULL;
     if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_7))) {
@@ -15487,10 +15639,10 @@ static PyObject *__pyx_f_4dawg_10RecordDAWG_items(struct __pyx_obj_4dawg_RecordD
     }
     __pyx_t_3 = (__pyx_t_4) ? __Pyx_PyObject_Call2Args(__pyx_t_7, __pyx_t_4, __pyx_v_val) : __Pyx_PyObject_CallOneArg(__pyx_t_7, __pyx_v_val);
     __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
-    if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 848, __pyx_L1_error)
+    if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 854, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
     __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
-    __pyx_t_7 = PyTuple_New(2); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 848, __pyx_L1_error)
+    __pyx_t_7 = PyTuple_New(2); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 854, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_7);
     __Pyx_INCREF(__pyx_v_key);
     __Pyx_GIVEREF(__pyx_v_key);
@@ -15498,7 +15650,7 @@ static PyObject *__pyx_f_4dawg_10RecordDAWG_items(struct __pyx_obj_4dawg_RecordD
     __Pyx_GIVEREF(__pyx_t_3);
     PyTuple_SET_ITEM(__pyx_t_7, 1, __pyx_t_3);
     __pyx_t_3 = 0;
-    if (unlikely(__Pyx_ListComp_Append(__pyx_t_1, (PyObject*)__pyx_t_7))) __PYX_ERR(0, 848, __pyx_L1_error)
+    if (unlikely(__Pyx_ListComp_Append(__pyx_t_1, (PyObject*)__pyx_t_7))) __PYX_ERR(0, 854, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
   }
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
@@ -15506,7 +15658,7 @@ static PyObject *__pyx_f_4dawg_10RecordDAWG_items(struct __pyx_obj_4dawg_RecordD
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "dawg.pyx":846
+  /* "dawg.pyx":852
  *         return [self._struct.unpack(val) for val in value]
  * 
  *     cpdef list items(self, unicode prefix=""):             # <<<<<<<<<<<<<<
@@ -15563,7 +15715,7 @@ static PyObject *__pyx_pw_4dawg_10RecordDAWG_3items(PyObject *__pyx_v_self, PyOb
         }
       }
       if (unlikely(kw_args > 0)) {
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "items") < 0)) __PYX_ERR(0, 846, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "items") < 0)) __PYX_ERR(0, 852, __pyx_L3_error)
       }
     } else {
       switch (PyTuple_GET_SIZE(__pyx_args)) {
@@ -15577,13 +15729,13 @@ static PyObject *__pyx_pw_4dawg_10RecordDAWG_3items(PyObject *__pyx_v_self, PyOb
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("items", 0, 0, 1, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 846, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("items", 0, 0, 1, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 852, __pyx_L3_error)
   __pyx_L3_error:;
   __Pyx_AddTraceback("dawg.RecordDAWG.items", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_prefix), (&PyUnicode_Type), 1, "prefix", 1))) __PYX_ERR(0, 846, __pyx_L1_error)
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_prefix), (&PyUnicode_Type), 1, "prefix", 1))) __PYX_ERR(0, 852, __pyx_L1_error)
   __pyx_r = __pyx_pf_4dawg_10RecordDAWG_2items(((struct __pyx_obj_4dawg_RecordDAWG *)__pyx_v_self), __pyx_v_prefix);
 
   /* function exit code */
@@ -15604,7 +15756,7 @@ static PyObject *__pyx_pf_4dawg_10RecordDAWG_2items(struct __pyx_obj_4dawg_Recor
   __Pyx_XDECREF(__pyx_r);
   __pyx_t_2.__pyx_n = 1;
   __pyx_t_2.prefix = __pyx_v_prefix;
-  __pyx_t_1 = __pyx_vtabptr_4dawg_RecordDAWG->__pyx_base.items(((struct __pyx_obj_4dawg_BytesDAWG *)__pyx_v_self), 1, &__pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 846, __pyx_L1_error)
+  __pyx_t_1 = __pyx_vtabptr_4dawg_RecordDAWG->__pyx_base.items(((struct __pyx_obj_4dawg_BytesDAWG *)__pyx_v_self), 1, &__pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 852, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
@@ -15622,7 +15774,7 @@ static PyObject *__pyx_pf_4dawg_10RecordDAWG_2items(struct __pyx_obj_4dawg_Recor
 }
 static PyObject *__pyx_gb_4dawg_10RecordDAWG_6generator4(__pyx_CoroutineObject *__pyx_generator, CYTHON_UNUSED PyThreadState *__pyx_tstate, PyObject *__pyx_sent_value); /* proto */
 
-/* "dawg.pyx":850
+/* "dawg.pyx":856
  *         return [(key, self._struct.unpack(val)) for (key, val) in items]
  * 
  *     def iteritems(self, unicode prefix=""):             # <<<<<<<<<<<<<<
@@ -15660,7 +15812,7 @@ static PyObject *__pyx_pw_4dawg_10RecordDAWG_5iteritems(PyObject *__pyx_v_self, 
         }
       }
       if (unlikely(kw_args > 0)) {
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "iteritems") < 0)) __PYX_ERR(0, 850, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "iteritems") < 0)) __PYX_ERR(0, 856, __pyx_L3_error)
       }
     } else {
       switch (PyTuple_GET_SIZE(__pyx_args)) {
@@ -15674,13 +15826,13 @@ static PyObject *__pyx_pw_4dawg_10RecordDAWG_5iteritems(PyObject *__pyx_v_self, 
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("iteritems", 0, 0, 1, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 850, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("iteritems", 0, 0, 1, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 856, __pyx_L3_error)
   __pyx_L3_error:;
   __Pyx_AddTraceback("dawg.RecordDAWG.iteritems", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_prefix), (&PyUnicode_Type), 1, "prefix", 1))) __PYX_ERR(0, 850, __pyx_L1_error)
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_prefix), (&PyUnicode_Type), 1, "prefix", 1))) __PYX_ERR(0, 856, __pyx_L1_error)
   __pyx_r = __pyx_pf_4dawg_10RecordDAWG_4iteritems(((struct __pyx_obj_4dawg_RecordDAWG *)__pyx_v_self), __pyx_v_prefix);
 
   /* function exit code */
@@ -15701,7 +15853,7 @@ static PyObject *__pyx_pf_4dawg_10RecordDAWG_4iteritems(struct __pyx_obj_4dawg_R
   if (unlikely(!__pyx_cur_scope)) {
     __pyx_cur_scope = ((struct __pyx_obj_4dawg___pyx_scope_struct_10_iteritems *)Py_None);
     __Pyx_INCREF(Py_None);
-    __PYX_ERR(0, 850, __pyx_L1_error)
+    __PYX_ERR(0, 856, __pyx_L1_error)
   } else {
     __Pyx_GOTREF(__pyx_cur_scope);
   }
@@ -15712,7 +15864,7 @@ static PyObject *__pyx_pf_4dawg_10RecordDAWG_4iteritems(struct __pyx_obj_4dawg_R
   __Pyx_INCREF(__pyx_cur_scope->__pyx_v_prefix);
   __Pyx_GIVEREF(__pyx_cur_scope->__pyx_v_prefix);
   {
-    __pyx_CoroutineObject *gen = __Pyx_Generator_New((__pyx_coroutine_body_t) __pyx_gb_4dawg_10RecordDAWG_6generator4, NULL, (PyObject *) __pyx_cur_scope, __pyx_n_s_iteritems, __pyx_n_s_RecordDAWG_iteritems, __pyx_n_s_dawg); if (unlikely(!gen)) __PYX_ERR(0, 850, __pyx_L1_error)
+    __pyx_CoroutineObject *gen = __Pyx_Generator_New((__pyx_coroutine_body_t) __pyx_gb_4dawg_10RecordDAWG_6generator4, NULL, (PyObject *) __pyx_cur_scope, __pyx_n_s_iteritems, __pyx_n_s_RecordDAWG_iteritems, __pyx_n_s_dawg); if (unlikely(!gen)) __PYX_ERR(0, 856, __pyx_L1_error)
     __Pyx_DECREF(__pyx_cur_scope);
     __Pyx_RefNannyFinishContext();
     return (PyObject *) gen;
@@ -15751,16 +15903,16 @@ static PyObject *__pyx_gb_4dawg_10RecordDAWG_6generator4(__pyx_CoroutineObject *
     return NULL;
   }
   __pyx_L3_first_run:;
-  if (unlikely(!__pyx_sent_value)) __PYX_ERR(0, 850, __pyx_L1_error)
+  if (unlikely(!__pyx_sent_value)) __PYX_ERR(0, 856, __pyx_L1_error)
 
-  /* "dawg.pyx":851
+  /* "dawg.pyx":857
  * 
  *     def iteritems(self, unicode prefix=""):
  *         for key, val in BytesDAWG.iteritems(self, prefix):             # <<<<<<<<<<<<<<
  *             yield (key, self._struct.unpack(val))
  * 
  */
-  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_ptype_4dawg_BytesDAWG), __pyx_n_s_iteritems); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 851, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_ptype_4dawg_BytesDAWG), __pyx_n_s_iteritems); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 857, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __pyx_t_3 = NULL;
   __pyx_t_4 = 0;
@@ -15777,7 +15929,7 @@ static PyObject *__pyx_gb_4dawg_10RecordDAWG_6generator4(__pyx_CoroutineObject *
   #if CYTHON_FAST_PYCALL
   if (PyFunction_Check(__pyx_t_2)) {
     PyObject *__pyx_temp[3] = {__pyx_t_3, ((PyObject *)__pyx_cur_scope->__pyx_v_self), __pyx_cur_scope->__pyx_v_prefix};
-    __pyx_t_1 = __Pyx_PyFunction_FastCall(__pyx_t_2, __pyx_temp+1-__pyx_t_4, 2+__pyx_t_4); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 851, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyFunction_FastCall(__pyx_t_2, __pyx_temp+1-__pyx_t_4, 2+__pyx_t_4); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 857, __pyx_L1_error)
     __Pyx_XDECREF(__pyx_t_3); __pyx_t_3 = 0;
     __Pyx_GOTREF(__pyx_t_1);
   } else
@@ -15785,13 +15937,13 @@ static PyObject *__pyx_gb_4dawg_10RecordDAWG_6generator4(__pyx_CoroutineObject *
   #if CYTHON_FAST_PYCCALL
   if (__Pyx_PyFastCFunction_Check(__pyx_t_2)) {
     PyObject *__pyx_temp[3] = {__pyx_t_3, ((PyObject *)__pyx_cur_scope->__pyx_v_self), __pyx_cur_scope->__pyx_v_prefix};
-    __pyx_t_1 = __Pyx_PyCFunction_FastCall(__pyx_t_2, __pyx_temp+1-__pyx_t_4, 2+__pyx_t_4); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 851, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyCFunction_FastCall(__pyx_t_2, __pyx_temp+1-__pyx_t_4, 2+__pyx_t_4); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 857, __pyx_L1_error)
     __Pyx_XDECREF(__pyx_t_3); __pyx_t_3 = 0;
     __Pyx_GOTREF(__pyx_t_1);
   } else
   #endif
   {
-    __pyx_t_5 = PyTuple_New(2+__pyx_t_4); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 851, __pyx_L1_error)
+    __pyx_t_5 = PyTuple_New(2+__pyx_t_4); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 857, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_5);
     if (__pyx_t_3) {
       __Pyx_GIVEREF(__pyx_t_3); PyTuple_SET_ITEM(__pyx_t_5, 0, __pyx_t_3); __pyx_t_3 = NULL;
@@ -15802,7 +15954,7 @@ static PyObject *__pyx_gb_4dawg_10RecordDAWG_6generator4(__pyx_CoroutineObject *
     __Pyx_INCREF(__pyx_cur_scope->__pyx_v_prefix);
     __Pyx_GIVEREF(__pyx_cur_scope->__pyx_v_prefix);
     PyTuple_SET_ITEM(__pyx_t_5, 1+__pyx_t_4, __pyx_cur_scope->__pyx_v_prefix);
-    __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_t_5, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 851, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_t_5, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 857, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
   }
@@ -15811,9 +15963,9 @@ static PyObject *__pyx_gb_4dawg_10RecordDAWG_6generator4(__pyx_CoroutineObject *
     __pyx_t_2 = __pyx_t_1; __Pyx_INCREF(__pyx_t_2); __pyx_t_6 = 0;
     __pyx_t_7 = NULL;
   } else {
-    __pyx_t_6 = -1; __pyx_t_2 = PyObject_GetIter(__pyx_t_1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 851, __pyx_L1_error)
+    __pyx_t_6 = -1; __pyx_t_2 = PyObject_GetIter(__pyx_t_1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 857, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
-    __pyx_t_7 = Py_TYPE(__pyx_t_2)->tp_iternext; if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 851, __pyx_L1_error)
+    __pyx_t_7 = Py_TYPE(__pyx_t_2)->tp_iternext; if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 857, __pyx_L1_error)
   }
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   for (;;) {
@@ -15821,17 +15973,17 @@ static PyObject *__pyx_gb_4dawg_10RecordDAWG_6generator4(__pyx_CoroutineObject *
       if (likely(PyList_CheckExact(__pyx_t_2))) {
         if (__pyx_t_6 >= PyList_GET_SIZE(__pyx_t_2)) break;
         #if CYTHON_ASSUME_SAFE_MACROS && !CYTHON_AVOID_BORROWED_REFS
-        __pyx_t_1 = PyList_GET_ITEM(__pyx_t_2, __pyx_t_6); __Pyx_INCREF(__pyx_t_1); __pyx_t_6++; if (unlikely(0 < 0)) __PYX_ERR(0, 851, __pyx_L1_error)
+        __pyx_t_1 = PyList_GET_ITEM(__pyx_t_2, __pyx_t_6); __Pyx_INCREF(__pyx_t_1); __pyx_t_6++; if (unlikely(0 < 0)) __PYX_ERR(0, 857, __pyx_L1_error)
         #else
-        __pyx_t_1 = PySequence_ITEM(__pyx_t_2, __pyx_t_6); __pyx_t_6++; if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 851, __pyx_L1_error)
+        __pyx_t_1 = PySequence_ITEM(__pyx_t_2, __pyx_t_6); __pyx_t_6++; if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 857, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_1);
         #endif
       } else {
         if (__pyx_t_6 >= PyTuple_GET_SIZE(__pyx_t_2)) break;
         #if CYTHON_ASSUME_SAFE_MACROS && !CYTHON_AVOID_BORROWED_REFS
-        __pyx_t_1 = PyTuple_GET_ITEM(__pyx_t_2, __pyx_t_6); __Pyx_INCREF(__pyx_t_1); __pyx_t_6++; if (unlikely(0 < 0)) __PYX_ERR(0, 851, __pyx_L1_error)
+        __pyx_t_1 = PyTuple_GET_ITEM(__pyx_t_2, __pyx_t_6); __Pyx_INCREF(__pyx_t_1); __pyx_t_6++; if (unlikely(0 < 0)) __PYX_ERR(0, 857, __pyx_L1_error)
         #else
-        __pyx_t_1 = PySequence_ITEM(__pyx_t_2, __pyx_t_6); __pyx_t_6++; if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 851, __pyx_L1_error)
+        __pyx_t_1 = PySequence_ITEM(__pyx_t_2, __pyx_t_6); __pyx_t_6++; if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 857, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_1);
         #endif
       }
@@ -15841,7 +15993,7 @@ static PyObject *__pyx_gb_4dawg_10RecordDAWG_6generator4(__pyx_CoroutineObject *
         PyObject* exc_type = PyErr_Occurred();
         if (exc_type) {
           if (likely(__Pyx_PyErr_GivenExceptionMatches(exc_type, PyExc_StopIteration))) PyErr_Clear();
-          else __PYX_ERR(0, 851, __pyx_L1_error)
+          else __PYX_ERR(0, 857, __pyx_L1_error)
         }
         break;
       }
@@ -15853,7 +16005,7 @@ static PyObject *__pyx_gb_4dawg_10RecordDAWG_6generator4(__pyx_CoroutineObject *
       if (unlikely(size != 2)) {
         if (size > 2) __Pyx_RaiseTooManyValuesError(2);
         else if (size >= 0) __Pyx_RaiseNeedMoreValuesError(size);
-        __PYX_ERR(0, 851, __pyx_L1_error)
+        __PYX_ERR(0, 857, __pyx_L1_error)
       }
       #if CYTHON_ASSUME_SAFE_MACROS && !CYTHON_AVOID_BORROWED_REFS
       if (likely(PyTuple_CheckExact(sequence))) {
@@ -15866,15 +16018,15 @@ static PyObject *__pyx_gb_4dawg_10RecordDAWG_6generator4(__pyx_CoroutineObject *
       __Pyx_INCREF(__pyx_t_5);
       __Pyx_INCREF(__pyx_t_3);
       #else
-      __pyx_t_5 = PySequence_ITEM(sequence, 0); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 851, __pyx_L1_error)
+      __pyx_t_5 = PySequence_ITEM(sequence, 0); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 857, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_5);
-      __pyx_t_3 = PySequence_ITEM(sequence, 1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 851, __pyx_L1_error)
+      __pyx_t_3 = PySequence_ITEM(sequence, 1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 857, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_3);
       #endif
       __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
     } else {
       Py_ssize_t index = -1;
-      __pyx_t_8 = PyObject_GetIter(__pyx_t_1); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 851, __pyx_L1_error)
+      __pyx_t_8 = PyObject_GetIter(__pyx_t_1); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 857, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_8);
       __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
       __pyx_t_9 = Py_TYPE(__pyx_t_8)->tp_iternext;
@@ -15882,7 +16034,7 @@ static PyObject *__pyx_gb_4dawg_10RecordDAWG_6generator4(__pyx_CoroutineObject *
       __Pyx_GOTREF(__pyx_t_5);
       index = 1; __pyx_t_3 = __pyx_t_9(__pyx_t_8); if (unlikely(!__pyx_t_3)) goto __pyx_L6_unpacking_failed;
       __Pyx_GOTREF(__pyx_t_3);
-      if (__Pyx_IternextUnpackEndCheck(__pyx_t_9(__pyx_t_8), 2) < 0) __PYX_ERR(0, 851, __pyx_L1_error)
+      if (__Pyx_IternextUnpackEndCheck(__pyx_t_9(__pyx_t_8), 2) < 0) __PYX_ERR(0, 857, __pyx_L1_error)
       __pyx_t_9 = NULL;
       __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
       goto __pyx_L7_unpacking_done;
@@ -15890,7 +16042,7 @@ static PyObject *__pyx_gb_4dawg_10RecordDAWG_6generator4(__pyx_CoroutineObject *
       __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
       __pyx_t_9 = NULL;
       if (__Pyx_IterFinish() == 0) __Pyx_RaiseNeedMoreValuesError(index);
-      __PYX_ERR(0, 851, __pyx_L1_error)
+      __PYX_ERR(0, 857, __pyx_L1_error)
       __pyx_L7_unpacking_done:;
     }
     __Pyx_XGOTREF(__pyx_cur_scope->__pyx_v_key);
@@ -15902,14 +16054,14 @@ static PyObject *__pyx_gb_4dawg_10RecordDAWG_6generator4(__pyx_CoroutineObject *
     __Pyx_GIVEREF(__pyx_t_3);
     __pyx_t_3 = 0;
 
-    /* "dawg.pyx":852
+    /* "dawg.pyx":858
  *     def iteritems(self, unicode prefix=""):
  *         for key, val in BytesDAWG.iteritems(self, prefix):
  *             yield (key, self._struct.unpack(val))             # <<<<<<<<<<<<<<
  * 
  * 
  */
-    __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_cur_scope->__pyx_v_self->_struct, __pyx_n_s_unpack); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 852, __pyx_L1_error)
+    __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_cur_scope->__pyx_v_self->_struct, __pyx_n_s_unpack); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 858, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
     __pyx_t_5 = NULL;
     if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_3))) {
@@ -15923,10 +16075,10 @@ static PyObject *__pyx_gb_4dawg_10RecordDAWG_6generator4(__pyx_CoroutineObject *
     }
     __pyx_t_1 = (__pyx_t_5) ? __Pyx_PyObject_Call2Args(__pyx_t_3, __pyx_t_5, __pyx_cur_scope->__pyx_v_val) : __Pyx_PyObject_CallOneArg(__pyx_t_3, __pyx_cur_scope->__pyx_v_val);
     __Pyx_XDECREF(__pyx_t_5); __pyx_t_5 = 0;
-    if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 852, __pyx_L1_error)
+    if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 858, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-    __pyx_t_3 = PyTuple_New(2); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 852, __pyx_L1_error)
+    __pyx_t_3 = PyTuple_New(2); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 858, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
     __Pyx_INCREF(__pyx_cur_scope->__pyx_v_key);
     __Pyx_GIVEREF(__pyx_cur_scope->__pyx_v_key);
@@ -15952,9 +16104,9 @@ static PyObject *__pyx_gb_4dawg_10RecordDAWG_6generator4(__pyx_CoroutineObject *
     __Pyx_XGOTREF(__pyx_t_2);
     __pyx_t_6 = __pyx_cur_scope->__pyx_t_1;
     __pyx_t_7 = __pyx_cur_scope->__pyx_t_2;
-    if (unlikely(!__pyx_sent_value)) __PYX_ERR(0, 852, __pyx_L1_error)
+    if (unlikely(!__pyx_sent_value)) __PYX_ERR(0, 858, __pyx_L1_error)
 
-    /* "dawg.pyx":851
+    /* "dawg.pyx":857
  * 
  *     def iteritems(self, unicode prefix=""):
  *         for key, val in BytesDAWG.iteritems(self, prefix):             # <<<<<<<<<<<<<<
@@ -15965,7 +16117,7 @@ static PyObject *__pyx_gb_4dawg_10RecordDAWG_6generator4(__pyx_CoroutineObject *
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   CYTHON_MAYBE_UNUSED_VAR(__pyx_cur_scope);
 
-  /* "dawg.pyx":850
+  /* "dawg.pyx":856
  *         return [(key, self._struct.unpack(val)) for (key, val) in items]
  * 
  *     def iteritems(self, unicode prefix=""):             # <<<<<<<<<<<<<<
@@ -15994,7 +16146,7 @@ static PyObject *__pyx_gb_4dawg_10RecordDAWG_6generator4(__pyx_CoroutineObject *
   return __pyx_r;
 }
 
-/* "dawg.pyx":855
+/* "dawg.pyx":861
  * 
  * 
  * def _iterable_from_argument(arg):             # <<<<<<<<<<<<<<
@@ -16018,7 +16170,7 @@ static PyObject *__pyx_pw_4dawg_1_iterable_from_argument(PyObject *__pyx_self, P
 }
 static PyObject *__pyx_gb_4dawg_23_iterable_from_argument_2generator9(__pyx_CoroutineObject *__pyx_generator, CYTHON_UNUSED PyThreadState *__pyx_tstate, PyObject *__pyx_sent_value); /* proto */
 
-/* "dawg.pyx":860
+/* "dawg.pyx":866
  * 
  *     if isinstance(arg, Mapping):
  *         return ((key, arg[key]) for key in arg)             # <<<<<<<<<<<<<<
@@ -16035,7 +16187,7 @@ static PyObject *__pyx_pf_4dawg_23_iterable_from_argument_genexpr(PyObject *__py
   if (unlikely(!__pyx_cur_scope)) {
     __pyx_cur_scope = ((struct __pyx_obj_4dawg___pyx_scope_struct_12_genexpr *)Py_None);
     __Pyx_INCREF(Py_None);
-    __PYX_ERR(0, 860, __pyx_L1_error)
+    __PYX_ERR(0, 866, __pyx_L1_error)
   } else {
     __Pyx_GOTREF(__pyx_cur_scope);
   }
@@ -16043,7 +16195,7 @@ static PyObject *__pyx_pf_4dawg_23_iterable_from_argument_genexpr(PyObject *__py
   __Pyx_INCREF(((PyObject *)__pyx_cur_scope->__pyx_outer_scope));
   __Pyx_GIVEREF(__pyx_cur_scope->__pyx_outer_scope);
   {
-    __pyx_CoroutineObject *gen = __Pyx_Generator_New((__pyx_coroutine_body_t) __pyx_gb_4dawg_23_iterable_from_argument_2generator9, NULL, (PyObject *) __pyx_cur_scope, __pyx_n_s_genexpr, __pyx_n_s_iterable_from_argument_locals_g, __pyx_n_s_dawg); if (unlikely(!gen)) __PYX_ERR(0, 860, __pyx_L1_error)
+    __pyx_CoroutineObject *gen = __Pyx_Generator_New((__pyx_coroutine_body_t) __pyx_gb_4dawg_23_iterable_from_argument_2generator9, NULL, (PyObject *) __pyx_cur_scope, __pyx_n_s_genexpr, __pyx_n_s_iterable_from_argument_locals_g, __pyx_n_s_dawg); if (unlikely(!gen)) __PYX_ERR(0, 866, __pyx_L1_error)
     __Pyx_DECREF(__pyx_cur_scope);
     __Pyx_RefNannyFinishContext();
     return (PyObject *) gen;
@@ -16078,32 +16230,32 @@ static PyObject *__pyx_gb_4dawg_23_iterable_from_argument_2generator9(__pyx_Coro
     return NULL;
   }
   __pyx_L3_first_run:;
-  if (unlikely(!__pyx_sent_value)) __PYX_ERR(0, 860, __pyx_L1_error)
-  if (unlikely(!__pyx_cur_scope->__pyx_outer_scope->__pyx_v_arg)) { __Pyx_RaiseClosureNameError("arg"); __PYX_ERR(0, 860, __pyx_L1_error) }
+  if (unlikely(!__pyx_sent_value)) __PYX_ERR(0, 866, __pyx_L1_error)
+  if (unlikely(!__pyx_cur_scope->__pyx_outer_scope->__pyx_v_arg)) { __Pyx_RaiseClosureNameError("arg"); __PYX_ERR(0, 866, __pyx_L1_error) }
   if (likely(PyList_CheckExact(__pyx_cur_scope->__pyx_outer_scope->__pyx_v_arg)) || PyTuple_CheckExact(__pyx_cur_scope->__pyx_outer_scope->__pyx_v_arg)) {
     __pyx_t_1 = __pyx_cur_scope->__pyx_outer_scope->__pyx_v_arg; __Pyx_INCREF(__pyx_t_1); __pyx_t_2 = 0;
     __pyx_t_3 = NULL;
   } else {
-    __pyx_t_2 = -1; __pyx_t_1 = PyObject_GetIter(__pyx_cur_scope->__pyx_outer_scope->__pyx_v_arg); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 860, __pyx_L1_error)
+    __pyx_t_2 = -1; __pyx_t_1 = PyObject_GetIter(__pyx_cur_scope->__pyx_outer_scope->__pyx_v_arg); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 866, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
-    __pyx_t_3 = Py_TYPE(__pyx_t_1)->tp_iternext; if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 860, __pyx_L1_error)
+    __pyx_t_3 = Py_TYPE(__pyx_t_1)->tp_iternext; if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 866, __pyx_L1_error)
   }
   for (;;) {
     if (likely(!__pyx_t_3)) {
       if (likely(PyList_CheckExact(__pyx_t_1))) {
         if (__pyx_t_2 >= PyList_GET_SIZE(__pyx_t_1)) break;
         #if CYTHON_ASSUME_SAFE_MACROS && !CYTHON_AVOID_BORROWED_REFS
-        __pyx_t_4 = PyList_GET_ITEM(__pyx_t_1, __pyx_t_2); __Pyx_INCREF(__pyx_t_4); __pyx_t_2++; if (unlikely(0 < 0)) __PYX_ERR(0, 860, __pyx_L1_error)
+        __pyx_t_4 = PyList_GET_ITEM(__pyx_t_1, __pyx_t_2); __Pyx_INCREF(__pyx_t_4); __pyx_t_2++; if (unlikely(0 < 0)) __PYX_ERR(0, 866, __pyx_L1_error)
         #else
-        __pyx_t_4 = PySequence_ITEM(__pyx_t_1, __pyx_t_2); __pyx_t_2++; if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 860, __pyx_L1_error)
+        __pyx_t_4 = PySequence_ITEM(__pyx_t_1, __pyx_t_2); __pyx_t_2++; if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 866, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_4);
         #endif
       } else {
         if (__pyx_t_2 >= PyTuple_GET_SIZE(__pyx_t_1)) break;
         #if CYTHON_ASSUME_SAFE_MACROS && !CYTHON_AVOID_BORROWED_REFS
-        __pyx_t_4 = PyTuple_GET_ITEM(__pyx_t_1, __pyx_t_2); __Pyx_INCREF(__pyx_t_4); __pyx_t_2++; if (unlikely(0 < 0)) __PYX_ERR(0, 860, __pyx_L1_error)
+        __pyx_t_4 = PyTuple_GET_ITEM(__pyx_t_1, __pyx_t_2); __Pyx_INCREF(__pyx_t_4); __pyx_t_2++; if (unlikely(0 < 0)) __PYX_ERR(0, 866, __pyx_L1_error)
         #else
-        __pyx_t_4 = PySequence_ITEM(__pyx_t_1, __pyx_t_2); __pyx_t_2++; if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 860, __pyx_L1_error)
+        __pyx_t_4 = PySequence_ITEM(__pyx_t_1, __pyx_t_2); __pyx_t_2++; if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 866, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_4);
         #endif
       }
@@ -16113,7 +16265,7 @@ static PyObject *__pyx_gb_4dawg_23_iterable_from_argument_2generator9(__pyx_Coro
         PyObject* exc_type = PyErr_Occurred();
         if (exc_type) {
           if (likely(__Pyx_PyErr_GivenExceptionMatches(exc_type, PyExc_StopIteration))) PyErr_Clear();
-          else __PYX_ERR(0, 860, __pyx_L1_error)
+          else __PYX_ERR(0, 866, __pyx_L1_error)
         }
         break;
       }
@@ -16123,10 +16275,10 @@ static PyObject *__pyx_gb_4dawg_23_iterable_from_argument_2generator9(__pyx_Coro
     __Pyx_XDECREF_SET(__pyx_cur_scope->__pyx_v_key, __pyx_t_4);
     __Pyx_GIVEREF(__pyx_t_4);
     __pyx_t_4 = 0;
-    if (unlikely(!__pyx_cur_scope->__pyx_outer_scope->__pyx_v_arg)) { __Pyx_RaiseClosureNameError("arg"); __PYX_ERR(0, 860, __pyx_L1_error) }
-    __pyx_t_4 = __Pyx_PyObject_GetItem(__pyx_cur_scope->__pyx_outer_scope->__pyx_v_arg, __pyx_cur_scope->__pyx_v_key); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 860, __pyx_L1_error)
+    if (unlikely(!__pyx_cur_scope->__pyx_outer_scope->__pyx_v_arg)) { __Pyx_RaiseClosureNameError("arg"); __PYX_ERR(0, 866, __pyx_L1_error) }
+    __pyx_t_4 = __Pyx_PyObject_GetItem(__pyx_cur_scope->__pyx_outer_scope->__pyx_v_arg, __pyx_cur_scope->__pyx_v_key); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 866, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_4);
-    __pyx_t_5 = PyTuple_New(2); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 860, __pyx_L1_error)
+    __pyx_t_5 = PyTuple_New(2); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 866, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_5);
     __Pyx_INCREF(__pyx_cur_scope->__pyx_v_key);
     __Pyx_GIVEREF(__pyx_cur_scope->__pyx_v_key);
@@ -16152,7 +16304,7 @@ static PyObject *__pyx_gb_4dawg_23_iterable_from_argument_2generator9(__pyx_Coro
     __Pyx_XGOTREF(__pyx_t_1);
     __pyx_t_2 = __pyx_cur_scope->__pyx_t_1;
     __pyx_t_3 = __pyx_cur_scope->__pyx_t_2;
-    if (unlikely(!__pyx_sent_value)) __PYX_ERR(0, 860, __pyx_L1_error)
+    if (unlikely(!__pyx_sent_value)) __PYX_ERR(0, 866, __pyx_L1_error)
   }
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   CYTHON_MAYBE_UNUSED_VAR(__pyx_cur_scope);
@@ -16176,7 +16328,7 @@ static PyObject *__pyx_gb_4dawg_23_iterable_from_argument_2generator9(__pyx_Coro
   return __pyx_r;
 }
 
-/* "dawg.pyx":855
+/* "dawg.pyx":861
  * 
  * 
  * def _iterable_from_argument(arg):             # <<<<<<<<<<<<<<
@@ -16197,7 +16349,7 @@ static PyObject *__pyx_pf_4dawg__iterable_from_argument(CYTHON_UNUSED PyObject *
   if (unlikely(!__pyx_cur_scope)) {
     __pyx_cur_scope = ((struct __pyx_obj_4dawg___pyx_scope_struct_11__iterable_from_argument *)Py_None);
     __Pyx_INCREF(Py_None);
-    __PYX_ERR(0, 855, __pyx_L1_error)
+    __PYX_ERR(0, 861, __pyx_L1_error)
   } else {
     __Pyx_GOTREF(__pyx_cur_scope);
   }
@@ -16205,7 +16357,7 @@ static PyObject *__pyx_pf_4dawg__iterable_from_argument(CYTHON_UNUSED PyObject *
   __Pyx_INCREF(__pyx_cur_scope->__pyx_v_arg);
   __Pyx_GIVEREF(__pyx_cur_scope->__pyx_v_arg);
 
-  /* "dawg.pyx":856
+  /* "dawg.pyx":862
  * 
  * def _iterable_from_argument(arg):
  *     if arg is None:             # <<<<<<<<<<<<<<
@@ -16216,21 +16368,21 @@ static PyObject *__pyx_pf_4dawg__iterable_from_argument(CYTHON_UNUSED PyObject *
   __pyx_t_2 = (__pyx_t_1 != 0);
   if (__pyx_t_2) {
 
-    /* "dawg.pyx":857
+    /* "dawg.pyx":863
  * def _iterable_from_argument(arg):
  *     if arg is None:
  *         arg = []             # <<<<<<<<<<<<<<
  * 
  *     if isinstance(arg, Mapping):
  */
-    __pyx_t_3 = PyList_New(0); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 857, __pyx_L1_error)
+    __pyx_t_3 = PyList_New(0); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 863, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
     __Pyx_GOTREF(__pyx_cur_scope->__pyx_v_arg);
     __Pyx_DECREF_SET(__pyx_cur_scope->__pyx_v_arg, __pyx_t_3);
     __Pyx_GIVEREF(__pyx_t_3);
     __pyx_t_3 = 0;
 
-    /* "dawg.pyx":856
+    /* "dawg.pyx":862
  * 
  * def _iterable_from_argument(arg):
  *     if arg is None:             # <<<<<<<<<<<<<<
@@ -16239,7 +16391,7 @@ static PyObject *__pyx_pf_4dawg__iterable_from_argument(CYTHON_UNUSED PyObject *
  */
   }
 
-  /* "dawg.pyx":859
+  /* "dawg.pyx":865
  *         arg = []
  * 
  *     if isinstance(arg, Mapping):             # <<<<<<<<<<<<<<
@@ -16248,15 +16400,15 @@ static PyObject *__pyx_pf_4dawg__iterable_from_argument(CYTHON_UNUSED PyObject *
  */
   __pyx_t_3 = __pyx_cur_scope->__pyx_v_arg;
   __Pyx_INCREF(__pyx_t_3);
-  __Pyx_GetModuleGlobalName(__pyx_t_4, __pyx_n_s_Mapping); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 859, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_4, __pyx_n_s_Mapping); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 865, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
-  __pyx_t_2 = PyObject_IsInstance(__pyx_t_3, __pyx_t_4); if (unlikely(__pyx_t_2 == ((int)-1))) __PYX_ERR(0, 859, __pyx_L1_error)
+  __pyx_t_2 = PyObject_IsInstance(__pyx_t_3, __pyx_t_4); if (unlikely(__pyx_t_2 == ((int)-1))) __PYX_ERR(0, 865, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
   __pyx_t_1 = (__pyx_t_2 != 0);
   if (__pyx_t_1) {
 
-    /* "dawg.pyx":860
+    /* "dawg.pyx":866
  * 
  *     if isinstance(arg, Mapping):
  *         return ((key, arg[key]) for key in arg)             # <<<<<<<<<<<<<<
@@ -16264,13 +16416,13 @@ static PyObject *__pyx_pf_4dawg__iterable_from_argument(CYTHON_UNUSED PyObject *
  *         return arg
  */
     __Pyx_XDECREF(__pyx_r);
-    __pyx_t_4 = __pyx_pf_4dawg_23_iterable_from_argument_genexpr(((PyObject*)__pyx_cur_scope)); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 860, __pyx_L1_error)
+    __pyx_t_4 = __pyx_pf_4dawg_23_iterable_from_argument_genexpr(((PyObject*)__pyx_cur_scope)); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 866, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_4);
     __pyx_r = __pyx_t_4;
     __pyx_t_4 = 0;
     goto __pyx_L0;
 
-    /* "dawg.pyx":859
+    /* "dawg.pyx":865
  *         arg = []
  * 
  *     if isinstance(arg, Mapping):             # <<<<<<<<<<<<<<
@@ -16279,7 +16431,7 @@ static PyObject *__pyx_pf_4dawg__iterable_from_argument(CYTHON_UNUSED PyObject *
  */
   }
 
-  /* "dawg.pyx":862
+  /* "dawg.pyx":868
  *         return ((key, arg[key]) for key in arg)
  *     else:
  *         return arg             # <<<<<<<<<<<<<<
@@ -16293,7 +16445,7 @@ static PyObject *__pyx_pf_4dawg__iterable_from_argument(CYTHON_UNUSED PyObject *
     goto __pyx_L0;
   }
 
-  /* "dawg.pyx":855
+  /* "dawg.pyx":861
  * 
  * 
  * def _iterable_from_argument(arg):             # <<<<<<<<<<<<<<
@@ -16314,7 +16466,7 @@ static PyObject *__pyx_pf_4dawg__iterable_from_argument(CYTHON_UNUSED PyObject *
   return __pyx_r;
 }
 
-/* "dawg.pyx":871
+/* "dawg.pyx":877
  *     It can store integer values for unicode keys.
  *     """
  *     def __init__(self, arg=None, input_is_sorted=False):             # <<<<<<<<<<<<<<
@@ -16365,7 +16517,7 @@ static int __pyx_pw_4dawg_7IntDAWG_1__init__(PyObject *__pyx_v_self, PyObject *_
         }
       }
       if (unlikely(kw_args > 0)) {
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "__init__") < 0)) __PYX_ERR(0, 871, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "__init__") < 0)) __PYX_ERR(0, 877, __pyx_L3_error)
       }
     } else {
       switch (PyTuple_GET_SIZE(__pyx_args)) {
@@ -16382,7 +16534,7 @@ static int __pyx_pw_4dawg_7IntDAWG_1__init__(PyObject *__pyx_v_self, PyObject *_
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("__init__", 0, 0, 2, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 871, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("__init__", 0, 0, 2, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 877, __pyx_L3_error)
   __pyx_L3_error:;
   __Pyx_AddTraceback("dawg.IntDAWG.__init__", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
@@ -16406,14 +16558,14 @@ static int __pyx_pf_4dawg_7IntDAWG___init__(struct __pyx_obj_4dawg_IntDAWG *__py
   PyObject *__pyx_t_5 = NULL;
   __Pyx_RefNannySetupContext("__init__", 0);
 
-  /* "dawg.pyx":876
+  /* "dawg.pyx":882
  *         or a dict {unicode_key: int_value}.
  *         """
  *         iterable = _iterable_from_argument(arg)             # <<<<<<<<<<<<<<
  *         super(IntDAWG, self).__init__(iterable, input_is_sorted)
  * 
  */
-  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_iterable_from_argument); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 876, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_iterable_from_argument); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 882, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __pyx_t_3 = NULL;
   if (CYTHON_UNPACK_METHODS && unlikely(PyMethod_Check(__pyx_t_2))) {
@@ -16427,20 +16579,20 @@ static int __pyx_pf_4dawg_7IntDAWG___init__(struct __pyx_obj_4dawg_IntDAWG *__py
   }
   __pyx_t_1 = (__pyx_t_3) ? __Pyx_PyObject_Call2Args(__pyx_t_2, __pyx_t_3, __pyx_v_arg) : __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_v_arg);
   __Pyx_XDECREF(__pyx_t_3); __pyx_t_3 = 0;
-  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 876, __pyx_L1_error)
+  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 882, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __pyx_v_iterable = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "dawg.pyx":877
+  /* "dawg.pyx":883
  *         """
  *         iterable = _iterable_from_argument(arg)
  *         super(IntDAWG, self).__init__(iterable, input_is_sorted)             # <<<<<<<<<<<<<<
  * 
  *     def __getitem__(self, key):
  */
-  __pyx_t_2 = PyTuple_New(2); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 877, __pyx_L1_error)
+  __pyx_t_2 = PyTuple_New(2); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 883, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_INCREF(((PyObject *)__pyx_ptype_4dawg_IntDAWG));
   __Pyx_GIVEREF(((PyObject *)__pyx_ptype_4dawg_IntDAWG));
@@ -16448,10 +16600,10 @@ static int __pyx_pf_4dawg_7IntDAWG___init__(struct __pyx_obj_4dawg_IntDAWG *__py
   __Pyx_INCREF(((PyObject *)__pyx_v_self));
   __Pyx_GIVEREF(((PyObject *)__pyx_v_self));
   PyTuple_SET_ITEM(__pyx_t_2, 1, ((PyObject *)__pyx_v_self));
-  __pyx_t_3 = __Pyx_PyObject_Call(__pyx_builtin_super, __pyx_t_2, NULL); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 877, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyObject_Call(__pyx_builtin_super, __pyx_t_2, NULL); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 883, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_init); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 877, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_init); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 883, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __pyx_t_3 = NULL;
@@ -16469,7 +16621,7 @@ static int __pyx_pf_4dawg_7IntDAWG___init__(struct __pyx_obj_4dawg_IntDAWG *__py
   #if CYTHON_FAST_PYCALL
   if (PyFunction_Check(__pyx_t_2)) {
     PyObject *__pyx_temp[3] = {__pyx_t_3, __pyx_v_iterable, __pyx_v_input_is_sorted};
-    __pyx_t_1 = __Pyx_PyFunction_FastCall(__pyx_t_2, __pyx_temp+1-__pyx_t_4, 2+__pyx_t_4); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 877, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyFunction_FastCall(__pyx_t_2, __pyx_temp+1-__pyx_t_4, 2+__pyx_t_4); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 883, __pyx_L1_error)
     __Pyx_XDECREF(__pyx_t_3); __pyx_t_3 = 0;
     __Pyx_GOTREF(__pyx_t_1);
   } else
@@ -16477,13 +16629,13 @@ static int __pyx_pf_4dawg_7IntDAWG___init__(struct __pyx_obj_4dawg_IntDAWG *__py
   #if CYTHON_FAST_PYCCALL
   if (__Pyx_PyFastCFunction_Check(__pyx_t_2)) {
     PyObject *__pyx_temp[3] = {__pyx_t_3, __pyx_v_iterable, __pyx_v_input_is_sorted};
-    __pyx_t_1 = __Pyx_PyCFunction_FastCall(__pyx_t_2, __pyx_temp+1-__pyx_t_4, 2+__pyx_t_4); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 877, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyCFunction_FastCall(__pyx_t_2, __pyx_temp+1-__pyx_t_4, 2+__pyx_t_4); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 883, __pyx_L1_error)
     __Pyx_XDECREF(__pyx_t_3); __pyx_t_3 = 0;
     __Pyx_GOTREF(__pyx_t_1);
   } else
   #endif
   {
-    __pyx_t_5 = PyTuple_New(2+__pyx_t_4); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 877, __pyx_L1_error)
+    __pyx_t_5 = PyTuple_New(2+__pyx_t_4); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 883, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_5);
     if (__pyx_t_3) {
       __Pyx_GIVEREF(__pyx_t_3); PyTuple_SET_ITEM(__pyx_t_5, 0, __pyx_t_3); __pyx_t_3 = NULL;
@@ -16494,14 +16646,14 @@ static int __pyx_pf_4dawg_7IntDAWG___init__(struct __pyx_obj_4dawg_IntDAWG *__py
     __Pyx_INCREF(__pyx_v_input_is_sorted);
     __Pyx_GIVEREF(__pyx_v_input_is_sorted);
     PyTuple_SET_ITEM(__pyx_t_5, 1+__pyx_t_4, __pyx_v_input_is_sorted);
-    __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_t_5, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 877, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_t_5, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 883, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
   }
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "dawg.pyx":871
+  /* "dawg.pyx":877
  *     It can store integer values for unicode keys.
  *     """
  *     def __init__(self, arg=None, input_is_sorted=False):             # <<<<<<<<<<<<<<
@@ -16525,7 +16677,7 @@ static int __pyx_pf_4dawg_7IntDAWG___init__(struct __pyx_obj_4dawg_IntDAWG *__py
   return __pyx_r;
 }
 
-/* "dawg.pyx":879
+/* "dawg.pyx":885
  *         super(IntDAWG, self).__init__(iterable, input_is_sorted)
  * 
  *     def __getitem__(self, key):             # <<<<<<<<<<<<<<
@@ -16556,7 +16708,7 @@ static PyObject *__pyx_pf_4dawg_7IntDAWG_2__getitem__(struct __pyx_obj_4dawg_Int
   int __pyx_t_4;
   __Pyx_RefNannySetupContext("__getitem__", 0);
 
-  /* "dawg.pyx":880
+  /* "dawg.pyx":886
  * 
  *     def __getitem__(self, key):
  *         cdef int res = self.get(key, LOOKUP_ERROR)             # <<<<<<<<<<<<<<
@@ -16565,13 +16717,13 @@ static PyObject *__pyx_pf_4dawg_7IntDAWG_2__getitem__(struct __pyx_obj_4dawg_Int
  */
   __pyx_t_2.__pyx_n = 1;
   __pyx_t_2.__pyx_default = __pyx_int_neg_1;
-  __pyx_t_1 = ((struct __pyx_vtabstruct_4dawg_IntDAWG *)__pyx_v_self->__pyx_base.__pyx_vtab)->get(__pyx_v_self, __pyx_v_key, 0, &__pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 880, __pyx_L1_error)
+  __pyx_t_1 = ((struct __pyx_vtabstruct_4dawg_IntDAWG *)__pyx_v_self->__pyx_base.__pyx_vtab)->get(__pyx_v_self, __pyx_v_key, 0, &__pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 886, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_3 = __Pyx_PyInt_As_int(__pyx_t_1); if (unlikely((__pyx_t_3 == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 880, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyInt_As_int(__pyx_t_1); if (unlikely((__pyx_t_3 == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 886, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __pyx_v_res = __pyx_t_3;
 
-  /* "dawg.pyx":881
+  /* "dawg.pyx":887
  *     def __getitem__(self, key):
  *         cdef int res = self.get(key, LOOKUP_ERROR)
  *         if res == LOOKUP_ERROR:             # <<<<<<<<<<<<<<
@@ -16581,20 +16733,20 @@ static PyObject *__pyx_pf_4dawg_7IntDAWG_2__getitem__(struct __pyx_obj_4dawg_Int
   __pyx_t_4 = ((__pyx_v_res == -1L) != 0);
   if (unlikely(__pyx_t_4)) {
 
-    /* "dawg.pyx":882
+    /* "dawg.pyx":888
  *         cdef int res = self.get(key, LOOKUP_ERROR)
  *         if res == LOOKUP_ERROR:
  *             raise KeyError(key)             # <<<<<<<<<<<<<<
  *         return res
  * 
  */
-    __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_builtin_KeyError, __pyx_v_key); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 882, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_builtin_KeyError, __pyx_v_key); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 888, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_Raise(__pyx_t_1, 0, 0, 0);
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-    __PYX_ERR(0, 882, __pyx_L1_error)
+    __PYX_ERR(0, 888, __pyx_L1_error)
 
-    /* "dawg.pyx":881
+    /* "dawg.pyx":887
  *     def __getitem__(self, key):
  *         cdef int res = self.get(key, LOOKUP_ERROR)
  *         if res == LOOKUP_ERROR:             # <<<<<<<<<<<<<<
@@ -16603,7 +16755,7 @@ static PyObject *__pyx_pf_4dawg_7IntDAWG_2__getitem__(struct __pyx_obj_4dawg_Int
  */
   }
 
-  /* "dawg.pyx":883
+  /* "dawg.pyx":889
  *         if res == LOOKUP_ERROR:
  *             raise KeyError(key)
  *         return res             # <<<<<<<<<<<<<<
@@ -16611,13 +16763,13 @@ static PyObject *__pyx_pf_4dawg_7IntDAWG_2__getitem__(struct __pyx_obj_4dawg_Int
  *     cpdef get(self, key, default=None):
  */
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = __Pyx_PyInt_From_int(__pyx_v_res); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 883, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyInt_From_int(__pyx_v_res); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 889, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "dawg.pyx":879
+  /* "dawg.pyx":885
  *         super(IntDAWG, self).__init__(iterable, input_is_sorted)
  * 
  *     def __getitem__(self, key):             # <<<<<<<<<<<<<<
@@ -16636,7 +16788,7 @@ static PyObject *__pyx_pf_4dawg_7IntDAWG_2__getitem__(struct __pyx_obj_4dawg_Int
   return __pyx_r;
 }
 
-/* "dawg.pyx":885
+/* "dawg.pyx":891
  *         return res
  * 
  *     cpdef get(self, key, default=None):             # <<<<<<<<<<<<<<
@@ -16673,7 +16825,7 @@ static PyObject *__pyx_f_4dawg_7IntDAWG_get(struct __pyx_obj_4dawg_IntDAWG *__py
     if (unlikely(!__Pyx_object_dict_version_matches(((PyObject *)__pyx_v_self), __pyx_tp_dict_version, __pyx_obj_dict_version))) {
       PY_UINT64_T __pyx_type_dict_guard = __Pyx_get_tp_dict_version(((PyObject *)__pyx_v_self));
       #endif
-      __pyx_t_1 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_get); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 885, __pyx_L1_error)
+      __pyx_t_1 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_get); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 891, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_1);
       if (!PyCFunction_Check(__pyx_t_1) || (PyCFunction_GET_FUNCTION(__pyx_t_1) != (PyCFunction)(void*)__pyx_pw_4dawg_7IntDAWG_5get)) {
         __Pyx_XDECREF(__pyx_r);
@@ -16693,7 +16845,7 @@ static PyObject *__pyx_f_4dawg_7IntDAWG_get(struct __pyx_obj_4dawg_IntDAWG *__py
         #if CYTHON_FAST_PYCALL
         if (PyFunction_Check(__pyx_t_3)) {
           PyObject *__pyx_temp[3] = {__pyx_t_4, __pyx_v_key, __pyx_v_default};
-          __pyx_t_2 = __Pyx_PyFunction_FastCall(__pyx_t_3, __pyx_temp+1-__pyx_t_5, 2+__pyx_t_5); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 885, __pyx_L1_error)
+          __pyx_t_2 = __Pyx_PyFunction_FastCall(__pyx_t_3, __pyx_temp+1-__pyx_t_5, 2+__pyx_t_5); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 891, __pyx_L1_error)
           __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
           __Pyx_GOTREF(__pyx_t_2);
         } else
@@ -16701,13 +16853,13 @@ static PyObject *__pyx_f_4dawg_7IntDAWG_get(struct __pyx_obj_4dawg_IntDAWG *__py
         #if CYTHON_FAST_PYCCALL
         if (__Pyx_PyFastCFunction_Check(__pyx_t_3)) {
           PyObject *__pyx_temp[3] = {__pyx_t_4, __pyx_v_key, __pyx_v_default};
-          __pyx_t_2 = __Pyx_PyCFunction_FastCall(__pyx_t_3, __pyx_temp+1-__pyx_t_5, 2+__pyx_t_5); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 885, __pyx_L1_error)
+          __pyx_t_2 = __Pyx_PyCFunction_FastCall(__pyx_t_3, __pyx_temp+1-__pyx_t_5, 2+__pyx_t_5); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 891, __pyx_L1_error)
           __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
           __Pyx_GOTREF(__pyx_t_2);
         } else
         #endif
         {
-          __pyx_t_6 = PyTuple_New(2+__pyx_t_5); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 885, __pyx_L1_error)
+          __pyx_t_6 = PyTuple_New(2+__pyx_t_5); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 891, __pyx_L1_error)
           __Pyx_GOTREF(__pyx_t_6);
           if (__pyx_t_4) {
             __Pyx_GIVEREF(__pyx_t_4); PyTuple_SET_ITEM(__pyx_t_6, 0, __pyx_t_4); __pyx_t_4 = NULL;
@@ -16718,7 +16870,7 @@ static PyObject *__pyx_f_4dawg_7IntDAWG_get(struct __pyx_obj_4dawg_IntDAWG *__py
           __Pyx_INCREF(__pyx_v_default);
           __Pyx_GIVEREF(__pyx_v_default);
           PyTuple_SET_ITEM(__pyx_t_6, 1+__pyx_t_5, __pyx_v_default);
-          __pyx_t_2 = __Pyx_PyObject_Call(__pyx_t_3, __pyx_t_6, NULL); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 885, __pyx_L1_error)
+          __pyx_t_2 = __Pyx_PyObject_Call(__pyx_t_3, __pyx_t_6, NULL); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 891, __pyx_L1_error)
           __Pyx_GOTREF(__pyx_t_2);
           __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
         }
@@ -16741,7 +16893,7 @@ static PyObject *__pyx_f_4dawg_7IntDAWG_get(struct __pyx_obj_4dawg_IntDAWG *__py
     #endif
   }
 
-  /* "dawg.pyx":891
+  /* "dawg.pyx":897
  *         cdef int res
  * 
  *         if isinstance(key, unicode):             # <<<<<<<<<<<<<<
@@ -16752,7 +16904,7 @@ static PyObject *__pyx_f_4dawg_7IntDAWG_get(struct __pyx_obj_4dawg_IntDAWG *__py
   __pyx_t_8 = (__pyx_t_7 != 0);
   if (__pyx_t_8) {
 
-    /* "dawg.pyx":892
+    /* "dawg.pyx":898
  * 
  *         if isinstance(key, unicode):
  *             res = self.get_value(<unicode>key)             # <<<<<<<<<<<<<<
@@ -16761,7 +16913,7 @@ static PyObject *__pyx_f_4dawg_7IntDAWG_get(struct __pyx_obj_4dawg_IntDAWG *__py
  */
     __pyx_v_res = ((struct __pyx_vtabstruct_4dawg_IntDAWG *)__pyx_v_self->__pyx_base.__pyx_vtab)->get_value(__pyx_v_self, ((PyObject*)__pyx_v_key), 0);
 
-    /* "dawg.pyx":891
+    /* "dawg.pyx":897
  *         cdef int res
  * 
  *         if isinstance(key, unicode):             # <<<<<<<<<<<<<<
@@ -16771,7 +16923,7 @@ static PyObject *__pyx_f_4dawg_7IntDAWG_get(struct __pyx_obj_4dawg_IntDAWG *__py
     goto __pyx_L3;
   }
 
-  /* "dawg.pyx":894
+  /* "dawg.pyx":900
  *             res = self.get_value(<unicode>key)
  *         else:
  *             res = self.b_get_value(key)             # <<<<<<<<<<<<<<
@@ -16779,12 +16931,12 @@ static PyObject *__pyx_f_4dawg_7IntDAWG_get(struct __pyx_obj_4dawg_IntDAWG *__py
  *         if res == LOOKUP_ERROR:
  */
   /*else*/ {
-    if (!(likely(PyBytes_CheckExact(__pyx_v_key))||((__pyx_v_key) == Py_None)||(PyErr_Format(PyExc_TypeError, "Expected %.16s, got %.200s", "bytes", Py_TYPE(__pyx_v_key)->tp_name), 0))) __PYX_ERR(0, 894, __pyx_L1_error)
+    if (!(likely(PyBytes_CheckExact(__pyx_v_key))||((__pyx_v_key) == Py_None)||(PyErr_Format(PyExc_TypeError, "Expected %.16s, got %.200s", "bytes", Py_TYPE(__pyx_v_key)->tp_name), 0))) __PYX_ERR(0, 900, __pyx_L1_error)
     __pyx_v_res = ((struct __pyx_vtabstruct_4dawg_IntDAWG *)__pyx_v_self->__pyx_base.__pyx_vtab)->b_get_value(__pyx_v_self, ((PyObject*)__pyx_v_key), 0);
   }
   __pyx_L3:;
 
-  /* "dawg.pyx":896
+  /* "dawg.pyx":902
  *             res = self.b_get_value(key)
  * 
  *         if res == LOOKUP_ERROR:             # <<<<<<<<<<<<<<
@@ -16794,7 +16946,7 @@ static PyObject *__pyx_f_4dawg_7IntDAWG_get(struct __pyx_obj_4dawg_IntDAWG *__py
   __pyx_t_8 = ((__pyx_v_res == -1L) != 0);
   if (__pyx_t_8) {
 
-    /* "dawg.pyx":897
+    /* "dawg.pyx":903
  * 
  *         if res == LOOKUP_ERROR:
  *             return default             # <<<<<<<<<<<<<<
@@ -16806,7 +16958,7 @@ static PyObject *__pyx_f_4dawg_7IntDAWG_get(struct __pyx_obj_4dawg_IntDAWG *__py
     __pyx_r = __pyx_v_default;
     goto __pyx_L0;
 
-    /* "dawg.pyx":896
+    /* "dawg.pyx":902
  *             res = self.b_get_value(key)
  * 
  *         if res == LOOKUP_ERROR:             # <<<<<<<<<<<<<<
@@ -16815,7 +16967,7 @@ static PyObject *__pyx_f_4dawg_7IntDAWG_get(struct __pyx_obj_4dawg_IntDAWG *__py
  */
   }
 
-  /* "dawg.pyx":898
+  /* "dawg.pyx":904
  *         if res == LOOKUP_ERROR:
  *             return default
  *         return res             # <<<<<<<<<<<<<<
@@ -16823,13 +16975,13 @@ static PyObject *__pyx_f_4dawg_7IntDAWG_get(struct __pyx_obj_4dawg_IntDAWG *__py
  *     cpdef int get_value(self, unicode key):
  */
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = __Pyx_PyInt_From_int(__pyx_v_res); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 898, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyInt_From_int(__pyx_v_res); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 904, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "dawg.pyx":885
+  /* "dawg.pyx":891
  *         return res
  * 
  *     cpdef get(self, key, default=None):             # <<<<<<<<<<<<<<
@@ -16889,7 +17041,7 @@ static PyObject *__pyx_pw_4dawg_7IntDAWG_5get(PyObject *__pyx_v_self, PyObject *
         }
       }
       if (unlikely(kw_args > 0)) {
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "get") < 0)) __PYX_ERR(0, 885, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "get") < 0)) __PYX_ERR(0, 891, __pyx_L3_error)
       }
     } else {
       switch (PyTuple_GET_SIZE(__pyx_args)) {
@@ -16905,7 +17057,7 @@ static PyObject *__pyx_pw_4dawg_7IntDAWG_5get(PyObject *__pyx_v_self, PyObject *
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("get", 0, 1, 2, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 885, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("get", 0, 1, 2, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 891, __pyx_L3_error)
   __pyx_L3_error:;
   __Pyx_AddTraceback("dawg.IntDAWG.get", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
@@ -16927,7 +17079,7 @@ static PyObject *__pyx_pf_4dawg_7IntDAWG_4get(struct __pyx_obj_4dawg_IntDAWG *__
   __Pyx_XDECREF(__pyx_r);
   __pyx_t_2.__pyx_n = 1;
   __pyx_t_2.__pyx_default = __pyx_v_default;
-  __pyx_t_1 = __pyx_vtabptr_4dawg_IntDAWG->get(__pyx_v_self, __pyx_v_key, 1, &__pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 885, __pyx_L1_error)
+  __pyx_t_1 = __pyx_vtabptr_4dawg_IntDAWG->get(__pyx_v_self, __pyx_v_key, 1, &__pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 891, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
@@ -16944,7 +17096,7 @@ static PyObject *__pyx_pf_4dawg_7IntDAWG_4get(struct __pyx_obj_4dawg_IntDAWG *__
   return __pyx_r;
 }
 
-/* "dawg.pyx":900
+/* "dawg.pyx":906
  *         return res
  * 
  *     cpdef int get_value(self, unicode key):             # <<<<<<<<<<<<<<
@@ -16973,7 +17125,7 @@ static int __pyx_f_4dawg_7IntDAWG_get_value(struct __pyx_obj_4dawg_IntDAWG *__py
     if (unlikely(!__Pyx_object_dict_version_matches(((PyObject *)__pyx_v_self), __pyx_tp_dict_version, __pyx_obj_dict_version))) {
       PY_UINT64_T __pyx_type_dict_guard = __Pyx_get_tp_dict_version(((PyObject *)__pyx_v_self));
       #endif
-      __pyx_t_1 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_get_value); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 900, __pyx_L1_error)
+      __pyx_t_1 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_get_value); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 906, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_1);
       if (!PyCFunction_Check(__pyx_t_1) || (PyCFunction_GET_FUNCTION(__pyx_t_1) != (PyCFunction)(void*)__pyx_pw_4dawg_7IntDAWG_7get_value)) {
         __Pyx_INCREF(__pyx_t_1);
@@ -16989,10 +17141,10 @@ static int __pyx_f_4dawg_7IntDAWG_get_value(struct __pyx_obj_4dawg_IntDAWG *__py
         }
         __pyx_t_2 = (__pyx_t_4) ? __Pyx_PyObject_Call2Args(__pyx_t_3, __pyx_t_4, __pyx_v_key) : __Pyx_PyObject_CallOneArg(__pyx_t_3, __pyx_v_key);
         __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
-        if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 900, __pyx_L1_error)
+        if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 906, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_2);
         __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-        __pyx_t_5 = __Pyx_PyInt_As_int(__pyx_t_2); if (unlikely((__pyx_t_5 == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 900, __pyx_L1_error)
+        __pyx_t_5 = __Pyx_PyInt_As_int(__pyx_t_2); if (unlikely((__pyx_t_5 == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 906, __pyx_L1_error)
         __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
         __pyx_r = __pyx_t_5;
         __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
@@ -17011,7 +17163,7 @@ static int __pyx_f_4dawg_7IntDAWG_get_value(struct __pyx_obj_4dawg_IntDAWG *__py
     #endif
   }
 
-  /* "dawg.pyx":901
+  /* "dawg.pyx":907
  * 
  *     cpdef int get_value(self, unicode key):
  *         cdef bytes b_key = <bytes>key.encode('utf8')             # <<<<<<<<<<<<<<
@@ -17020,9 +17172,9 @@ static int __pyx_f_4dawg_7IntDAWG_get_value(struct __pyx_obj_4dawg_IntDAWG *__py
  */
   if (unlikely(__pyx_v_key == Py_None)) {
     PyErr_Format(PyExc_AttributeError, "'NoneType' object has no attribute '%.30s'", "encode");
-    __PYX_ERR(0, 901, __pyx_L1_error)
+    __PYX_ERR(0, 907, __pyx_L1_error)
   }
-  __pyx_t_1 = PyUnicode_AsUTF8String(__pyx_v_key); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 901, __pyx_L1_error)
+  __pyx_t_1 = PyUnicode_AsUTF8String(__pyx_v_key); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 907, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_t_2 = __pyx_t_1;
   __Pyx_INCREF(__pyx_t_2);
@@ -17030,7 +17182,7 @@ static int __pyx_f_4dawg_7IntDAWG_get_value(struct __pyx_obj_4dawg_IntDAWG *__py
   __pyx_v_b_key = ((PyObject*)__pyx_t_2);
   __pyx_t_2 = 0;
 
-  /* "dawg.pyx":902
+  /* "dawg.pyx":908
  *     cpdef int get_value(self, unicode key):
  *         cdef bytes b_key = <bytes>key.encode('utf8')
  *         return self.dct.Find(b_key)             # <<<<<<<<<<<<<<
@@ -17039,13 +17191,13 @@ static int __pyx_f_4dawg_7IntDAWG_get_value(struct __pyx_obj_4dawg_IntDAWG *__py
  */
   if (unlikely(__pyx_v_b_key == Py_None)) {
     PyErr_SetString(PyExc_TypeError, "expected bytes, NoneType found");
-    __PYX_ERR(0, 902, __pyx_L1_error)
+    __PYX_ERR(0, 908, __pyx_L1_error)
   }
-  __pyx_t_6 = __Pyx_PyBytes_AsWritableString(__pyx_v_b_key); if (unlikely((!__pyx_t_6) && PyErr_Occurred())) __PYX_ERR(0, 902, __pyx_L1_error)
+  __pyx_t_6 = __Pyx_PyBytes_AsWritableString(__pyx_v_b_key); if (unlikely((!__pyx_t_6) && PyErr_Occurred())) __PYX_ERR(0, 908, __pyx_L1_error)
   __pyx_r = __pyx_v_self->__pyx_base.dct.Find(__pyx_t_6);
   goto __pyx_L0;
 
-  /* "dawg.pyx":900
+  /* "dawg.pyx":906
  *         return res
  * 
  *     cpdef int get_value(self, unicode key):             # <<<<<<<<<<<<<<
@@ -17074,7 +17226,7 @@ static PyObject *__pyx_pw_4dawg_7IntDAWG_7get_value(PyObject *__pyx_v_self, PyOb
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("get_value (wrapper)", 0);
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_key), (&PyUnicode_Type), 1, "key", 1))) __PYX_ERR(0, 900, __pyx_L1_error)
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_key), (&PyUnicode_Type), 1, "key", 1))) __PYX_ERR(0, 906, __pyx_L1_error)
   __pyx_r = __pyx_pf_4dawg_7IntDAWG_6get_value(((struct __pyx_obj_4dawg_IntDAWG *)__pyx_v_self), ((PyObject*)__pyx_v_key));
 
   /* function exit code */
@@ -17092,7 +17244,7 @@ static PyObject *__pyx_pf_4dawg_7IntDAWG_6get_value(struct __pyx_obj_4dawg_IntDA
   PyObject *__pyx_t_1 = NULL;
   __Pyx_RefNannySetupContext("get_value", 0);
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = __Pyx_PyInt_From_int(__pyx_f_4dawg_7IntDAWG_get_value(__pyx_v_self, __pyx_v_key, 1)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 900, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyInt_From_int(__pyx_f_4dawg_7IntDAWG_get_value(__pyx_v_self, __pyx_v_key, 1)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 906, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
@@ -17109,7 +17261,7 @@ static PyObject *__pyx_pf_4dawg_7IntDAWG_6get_value(struct __pyx_obj_4dawg_IntDA
   return __pyx_r;
 }
 
-/* "dawg.pyx":904
+/* "dawg.pyx":910
  *         return self.dct.Find(b_key)
  * 
  *     cpdef int b_get_value(self, bytes key):             # <<<<<<<<<<<<<<
@@ -17137,7 +17289,7 @@ static int __pyx_f_4dawg_7IntDAWG_b_get_value(struct __pyx_obj_4dawg_IntDAWG *__
     if (unlikely(!__Pyx_object_dict_version_matches(((PyObject *)__pyx_v_self), __pyx_tp_dict_version, __pyx_obj_dict_version))) {
       PY_UINT64_T __pyx_type_dict_guard = __Pyx_get_tp_dict_version(((PyObject *)__pyx_v_self));
       #endif
-      __pyx_t_1 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_b_get_value); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 904, __pyx_L1_error)
+      __pyx_t_1 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_b_get_value); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 910, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_1);
       if (!PyCFunction_Check(__pyx_t_1) || (PyCFunction_GET_FUNCTION(__pyx_t_1) != (PyCFunction)(void*)__pyx_pw_4dawg_7IntDAWG_9b_get_value)) {
         __Pyx_INCREF(__pyx_t_1);
@@ -17153,10 +17305,10 @@ static int __pyx_f_4dawg_7IntDAWG_b_get_value(struct __pyx_obj_4dawg_IntDAWG *__
         }
         __pyx_t_2 = (__pyx_t_4) ? __Pyx_PyObject_Call2Args(__pyx_t_3, __pyx_t_4, __pyx_v_key) : __Pyx_PyObject_CallOneArg(__pyx_t_3, __pyx_v_key);
         __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
-        if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 904, __pyx_L1_error)
+        if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 910, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_2);
         __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-        __pyx_t_5 = __Pyx_PyInt_As_int(__pyx_t_2); if (unlikely((__pyx_t_5 == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 904, __pyx_L1_error)
+        __pyx_t_5 = __Pyx_PyInt_As_int(__pyx_t_2); if (unlikely((__pyx_t_5 == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 910, __pyx_L1_error)
         __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
         __pyx_r = __pyx_t_5;
         __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
@@ -17175,7 +17327,7 @@ static int __pyx_f_4dawg_7IntDAWG_b_get_value(struct __pyx_obj_4dawg_IntDAWG *__
     #endif
   }
 
-  /* "dawg.pyx":905
+  /* "dawg.pyx":911
  * 
  *     cpdef int b_get_value(self, bytes key):
  *         return self.dct.Find(key)             # <<<<<<<<<<<<<<
@@ -17184,13 +17336,13 @@ static int __pyx_f_4dawg_7IntDAWG_b_get_value(struct __pyx_obj_4dawg_IntDAWG *__
  */
   if (unlikely(__pyx_v_key == Py_None)) {
     PyErr_SetString(PyExc_TypeError, "expected bytes, NoneType found");
-    __PYX_ERR(0, 905, __pyx_L1_error)
+    __PYX_ERR(0, 911, __pyx_L1_error)
   }
-  __pyx_t_6 = __Pyx_PyBytes_AsWritableString(__pyx_v_key); if (unlikely((!__pyx_t_6) && PyErr_Occurred())) __PYX_ERR(0, 905, __pyx_L1_error)
+  __pyx_t_6 = __Pyx_PyBytes_AsWritableString(__pyx_v_key); if (unlikely((!__pyx_t_6) && PyErr_Occurred())) __PYX_ERR(0, 911, __pyx_L1_error)
   __pyx_r = __pyx_v_self->__pyx_base.dct.Find(__pyx_t_6);
   goto __pyx_L0;
 
-  /* "dawg.pyx":904
+  /* "dawg.pyx":910
  *         return self.dct.Find(b_key)
  * 
  *     cpdef int b_get_value(self, bytes key):             # <<<<<<<<<<<<<<
@@ -17218,7 +17370,7 @@ static PyObject *__pyx_pw_4dawg_7IntDAWG_9b_get_value(PyObject *__pyx_v_self, Py
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("b_get_value (wrapper)", 0);
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_key), (&PyBytes_Type), 1, "key", 1))) __PYX_ERR(0, 904, __pyx_L1_error)
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_key), (&PyBytes_Type), 1, "key", 1))) __PYX_ERR(0, 910, __pyx_L1_error)
   __pyx_r = __pyx_pf_4dawg_7IntDAWG_8b_get_value(((struct __pyx_obj_4dawg_IntDAWG *)__pyx_v_self), ((PyObject*)__pyx_v_key));
 
   /* function exit code */
@@ -17236,7 +17388,7 @@ static PyObject *__pyx_pf_4dawg_7IntDAWG_8b_get_value(struct __pyx_obj_4dawg_Int
   PyObject *__pyx_t_1 = NULL;
   __Pyx_RefNannySetupContext("b_get_value", 0);
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = __Pyx_PyInt_From_int(__pyx_f_4dawg_7IntDAWG_b_get_value(__pyx_v_self, __pyx_v_key, 1)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 904, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyInt_From_int(__pyx_f_4dawg_7IntDAWG_b_get_value(__pyx_v_self, __pyx_v_key, 1)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 910, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
@@ -17253,7 +17405,7 @@ static PyObject *__pyx_pf_4dawg_7IntDAWG_8b_get_value(struct __pyx_obj_4dawg_Int
   return __pyx_r;
 }
 
-/* "dawg.pyx":915
+/* "dawg.pyx":921
  *     """
  * 
  *     def __init__(self, arg=None, input_is_sorted=False):             # <<<<<<<<<<<<<<
@@ -17304,7 +17456,7 @@ static int __pyx_pw_4dawg_17IntCompletionDAWG_1__init__(PyObject *__pyx_v_self, 
         }
       }
       if (unlikely(kw_args > 0)) {
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "__init__") < 0)) __PYX_ERR(0, 915, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "__init__") < 0)) __PYX_ERR(0, 921, __pyx_L3_error)
       }
     } else {
       switch (PyTuple_GET_SIZE(__pyx_args)) {
@@ -17321,7 +17473,7 @@ static int __pyx_pw_4dawg_17IntCompletionDAWG_1__init__(PyObject *__pyx_v_self, 
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("__init__", 0, 0, 2, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 915, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("__init__", 0, 0, 2, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 921, __pyx_L3_error)
   __pyx_L3_error:;
   __Pyx_AddTraceback("dawg.IntCompletionDAWG.__init__", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
@@ -17345,14 +17497,14 @@ static int __pyx_pf_4dawg_17IntCompletionDAWG___init__(struct __pyx_obj_4dawg_In
   PyObject *__pyx_t_5 = NULL;
   __Pyx_RefNannySetupContext("__init__", 0);
 
-  /* "dawg.pyx":920
+  /* "dawg.pyx":926
  *         or a dict {unicode_key: int_value}.
  *         """
  *         iterable = _iterable_from_argument(arg)             # <<<<<<<<<<<<<<
  *         super(IntCompletionDAWG, self).__init__(iterable, input_is_sorted)
  * 
  */
-  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_iterable_from_argument); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 920, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_iterable_from_argument); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 926, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __pyx_t_3 = NULL;
   if (CYTHON_UNPACK_METHODS && unlikely(PyMethod_Check(__pyx_t_2))) {
@@ -17366,20 +17518,20 @@ static int __pyx_pf_4dawg_17IntCompletionDAWG___init__(struct __pyx_obj_4dawg_In
   }
   __pyx_t_1 = (__pyx_t_3) ? __Pyx_PyObject_Call2Args(__pyx_t_2, __pyx_t_3, __pyx_v_arg) : __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_v_arg);
   __Pyx_XDECREF(__pyx_t_3); __pyx_t_3 = 0;
-  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 920, __pyx_L1_error)
+  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 926, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __pyx_v_iterable = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "dawg.pyx":921
+  /* "dawg.pyx":927
  *         """
  *         iterable = _iterable_from_argument(arg)
  *         super(IntCompletionDAWG, self).__init__(iterable, input_is_sorted)             # <<<<<<<<<<<<<<
  * 
  *     def __getitem__(self, key):
  */
-  __pyx_t_2 = PyTuple_New(2); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 921, __pyx_L1_error)
+  __pyx_t_2 = PyTuple_New(2); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 927, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_INCREF(((PyObject *)__pyx_ptype_4dawg_IntCompletionDAWG));
   __Pyx_GIVEREF(((PyObject *)__pyx_ptype_4dawg_IntCompletionDAWG));
@@ -17387,10 +17539,10 @@ static int __pyx_pf_4dawg_17IntCompletionDAWG___init__(struct __pyx_obj_4dawg_In
   __Pyx_INCREF(((PyObject *)__pyx_v_self));
   __Pyx_GIVEREF(((PyObject *)__pyx_v_self));
   PyTuple_SET_ITEM(__pyx_t_2, 1, ((PyObject *)__pyx_v_self));
-  __pyx_t_3 = __Pyx_PyObject_Call(__pyx_builtin_super, __pyx_t_2, NULL); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 921, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyObject_Call(__pyx_builtin_super, __pyx_t_2, NULL); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 927, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_init); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 921, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_init); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 927, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __pyx_t_3 = NULL;
@@ -17408,7 +17560,7 @@ static int __pyx_pf_4dawg_17IntCompletionDAWG___init__(struct __pyx_obj_4dawg_In
   #if CYTHON_FAST_PYCALL
   if (PyFunction_Check(__pyx_t_2)) {
     PyObject *__pyx_temp[3] = {__pyx_t_3, __pyx_v_iterable, __pyx_v_input_is_sorted};
-    __pyx_t_1 = __Pyx_PyFunction_FastCall(__pyx_t_2, __pyx_temp+1-__pyx_t_4, 2+__pyx_t_4); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 921, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyFunction_FastCall(__pyx_t_2, __pyx_temp+1-__pyx_t_4, 2+__pyx_t_4); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 927, __pyx_L1_error)
     __Pyx_XDECREF(__pyx_t_3); __pyx_t_3 = 0;
     __Pyx_GOTREF(__pyx_t_1);
   } else
@@ -17416,13 +17568,13 @@ static int __pyx_pf_4dawg_17IntCompletionDAWG___init__(struct __pyx_obj_4dawg_In
   #if CYTHON_FAST_PYCCALL
   if (__Pyx_PyFastCFunction_Check(__pyx_t_2)) {
     PyObject *__pyx_temp[3] = {__pyx_t_3, __pyx_v_iterable, __pyx_v_input_is_sorted};
-    __pyx_t_1 = __Pyx_PyCFunction_FastCall(__pyx_t_2, __pyx_temp+1-__pyx_t_4, 2+__pyx_t_4); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 921, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyCFunction_FastCall(__pyx_t_2, __pyx_temp+1-__pyx_t_4, 2+__pyx_t_4); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 927, __pyx_L1_error)
     __Pyx_XDECREF(__pyx_t_3); __pyx_t_3 = 0;
     __Pyx_GOTREF(__pyx_t_1);
   } else
   #endif
   {
-    __pyx_t_5 = PyTuple_New(2+__pyx_t_4); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 921, __pyx_L1_error)
+    __pyx_t_5 = PyTuple_New(2+__pyx_t_4); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 927, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_5);
     if (__pyx_t_3) {
       __Pyx_GIVEREF(__pyx_t_3); PyTuple_SET_ITEM(__pyx_t_5, 0, __pyx_t_3); __pyx_t_3 = NULL;
@@ -17433,14 +17585,14 @@ static int __pyx_pf_4dawg_17IntCompletionDAWG___init__(struct __pyx_obj_4dawg_In
     __Pyx_INCREF(__pyx_v_input_is_sorted);
     __Pyx_GIVEREF(__pyx_v_input_is_sorted);
     PyTuple_SET_ITEM(__pyx_t_5, 1+__pyx_t_4, __pyx_v_input_is_sorted);
-    __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_t_5, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 921, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_t_5, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 927, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
   }
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "dawg.pyx":915
+  /* "dawg.pyx":921
  *     """
  * 
  *     def __init__(self, arg=None, input_is_sorted=False):             # <<<<<<<<<<<<<<
@@ -17464,7 +17616,7 @@ static int __pyx_pf_4dawg_17IntCompletionDAWG___init__(struct __pyx_obj_4dawg_In
   return __pyx_r;
 }
 
-/* "dawg.pyx":923
+/* "dawg.pyx":929
  *         super(IntCompletionDAWG, self).__init__(iterable, input_is_sorted)
  * 
  *     def __getitem__(self, key):             # <<<<<<<<<<<<<<
@@ -17495,7 +17647,7 @@ static PyObject *__pyx_pf_4dawg_17IntCompletionDAWG_2__getitem__(struct __pyx_ob
   int __pyx_t_4;
   __Pyx_RefNannySetupContext("__getitem__", 0);
 
-  /* "dawg.pyx":924
+  /* "dawg.pyx":930
  * 
  *     def __getitem__(self, key):
  *         cdef int res = self.get(key, LOOKUP_ERROR)             # <<<<<<<<<<<<<<
@@ -17504,13 +17656,13 @@ static PyObject *__pyx_pf_4dawg_17IntCompletionDAWG_2__getitem__(struct __pyx_ob
  */
   __pyx_t_2.__pyx_n = 1;
   __pyx_t_2.__pyx_default = __pyx_int_neg_1;
-  __pyx_t_1 = ((struct __pyx_vtabstruct_4dawg_IntCompletionDAWG *)__pyx_v_self->__pyx_base.__pyx_base.__pyx_vtab)->get(__pyx_v_self, __pyx_v_key, 0, &__pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 924, __pyx_L1_error)
+  __pyx_t_1 = ((struct __pyx_vtabstruct_4dawg_IntCompletionDAWG *)__pyx_v_self->__pyx_base.__pyx_base.__pyx_vtab)->get(__pyx_v_self, __pyx_v_key, 0, &__pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 930, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_3 = __Pyx_PyInt_As_int(__pyx_t_1); if (unlikely((__pyx_t_3 == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 924, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyInt_As_int(__pyx_t_1); if (unlikely((__pyx_t_3 == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 930, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __pyx_v_res = __pyx_t_3;
 
-  /* "dawg.pyx":925
+  /* "dawg.pyx":931
  *     def __getitem__(self, key):
  *         cdef int res = self.get(key, LOOKUP_ERROR)
  *         if res == LOOKUP_ERROR:             # <<<<<<<<<<<<<<
@@ -17520,20 +17672,20 @@ static PyObject *__pyx_pf_4dawg_17IntCompletionDAWG_2__getitem__(struct __pyx_ob
   __pyx_t_4 = ((__pyx_v_res == -1L) != 0);
   if (unlikely(__pyx_t_4)) {
 
-    /* "dawg.pyx":926
+    /* "dawg.pyx":932
  *         cdef int res = self.get(key, LOOKUP_ERROR)
  *         if res == LOOKUP_ERROR:
  *             raise KeyError(key)             # <<<<<<<<<<<<<<
  *         return res
  * 
  */
-    __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_builtin_KeyError, __pyx_v_key); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 926, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_builtin_KeyError, __pyx_v_key); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 932, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_Raise(__pyx_t_1, 0, 0, 0);
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-    __PYX_ERR(0, 926, __pyx_L1_error)
+    __PYX_ERR(0, 932, __pyx_L1_error)
 
-    /* "dawg.pyx":925
+    /* "dawg.pyx":931
  *     def __getitem__(self, key):
  *         cdef int res = self.get(key, LOOKUP_ERROR)
  *         if res == LOOKUP_ERROR:             # <<<<<<<<<<<<<<
@@ -17542,7 +17694,7 @@ static PyObject *__pyx_pf_4dawg_17IntCompletionDAWG_2__getitem__(struct __pyx_ob
  */
   }
 
-  /* "dawg.pyx":927
+  /* "dawg.pyx":933
  *         if res == LOOKUP_ERROR:
  *             raise KeyError(key)
  *         return res             # <<<<<<<<<<<<<<
@@ -17550,13 +17702,13 @@ static PyObject *__pyx_pf_4dawg_17IntCompletionDAWG_2__getitem__(struct __pyx_ob
  *     cpdef get(self, key, default=None):
  */
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = __Pyx_PyInt_From_int(__pyx_v_res); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 927, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyInt_From_int(__pyx_v_res); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 933, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "dawg.pyx":923
+  /* "dawg.pyx":929
  *         super(IntCompletionDAWG, self).__init__(iterable, input_is_sorted)
  * 
  *     def __getitem__(self, key):             # <<<<<<<<<<<<<<
@@ -17575,7 +17727,7 @@ static PyObject *__pyx_pf_4dawg_17IntCompletionDAWG_2__getitem__(struct __pyx_ob
   return __pyx_r;
 }
 
-/* "dawg.pyx":929
+/* "dawg.pyx":935
  *         return res
  * 
  *     cpdef get(self, key, default=None):             # <<<<<<<<<<<<<<
@@ -17612,7 +17764,7 @@ static PyObject *__pyx_f_4dawg_17IntCompletionDAWG_get(struct __pyx_obj_4dawg_In
     if (unlikely(!__Pyx_object_dict_version_matches(((PyObject *)__pyx_v_self), __pyx_tp_dict_version, __pyx_obj_dict_version))) {
       PY_UINT64_T __pyx_type_dict_guard = __Pyx_get_tp_dict_version(((PyObject *)__pyx_v_self));
       #endif
-      __pyx_t_1 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_get); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 929, __pyx_L1_error)
+      __pyx_t_1 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_get); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 935, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_1);
       if (!PyCFunction_Check(__pyx_t_1) || (PyCFunction_GET_FUNCTION(__pyx_t_1) != (PyCFunction)(void*)__pyx_pw_4dawg_17IntCompletionDAWG_5get)) {
         __Pyx_XDECREF(__pyx_r);
@@ -17632,7 +17784,7 @@ static PyObject *__pyx_f_4dawg_17IntCompletionDAWG_get(struct __pyx_obj_4dawg_In
         #if CYTHON_FAST_PYCALL
         if (PyFunction_Check(__pyx_t_3)) {
           PyObject *__pyx_temp[3] = {__pyx_t_4, __pyx_v_key, __pyx_v_default};
-          __pyx_t_2 = __Pyx_PyFunction_FastCall(__pyx_t_3, __pyx_temp+1-__pyx_t_5, 2+__pyx_t_5); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 929, __pyx_L1_error)
+          __pyx_t_2 = __Pyx_PyFunction_FastCall(__pyx_t_3, __pyx_temp+1-__pyx_t_5, 2+__pyx_t_5); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 935, __pyx_L1_error)
           __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
           __Pyx_GOTREF(__pyx_t_2);
         } else
@@ -17640,13 +17792,13 @@ static PyObject *__pyx_f_4dawg_17IntCompletionDAWG_get(struct __pyx_obj_4dawg_In
         #if CYTHON_FAST_PYCCALL
         if (__Pyx_PyFastCFunction_Check(__pyx_t_3)) {
           PyObject *__pyx_temp[3] = {__pyx_t_4, __pyx_v_key, __pyx_v_default};
-          __pyx_t_2 = __Pyx_PyCFunction_FastCall(__pyx_t_3, __pyx_temp+1-__pyx_t_5, 2+__pyx_t_5); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 929, __pyx_L1_error)
+          __pyx_t_2 = __Pyx_PyCFunction_FastCall(__pyx_t_3, __pyx_temp+1-__pyx_t_5, 2+__pyx_t_5); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 935, __pyx_L1_error)
           __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
           __Pyx_GOTREF(__pyx_t_2);
         } else
         #endif
         {
-          __pyx_t_6 = PyTuple_New(2+__pyx_t_5); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 929, __pyx_L1_error)
+          __pyx_t_6 = PyTuple_New(2+__pyx_t_5); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 935, __pyx_L1_error)
           __Pyx_GOTREF(__pyx_t_6);
           if (__pyx_t_4) {
             __Pyx_GIVEREF(__pyx_t_4); PyTuple_SET_ITEM(__pyx_t_6, 0, __pyx_t_4); __pyx_t_4 = NULL;
@@ -17657,7 +17809,7 @@ static PyObject *__pyx_f_4dawg_17IntCompletionDAWG_get(struct __pyx_obj_4dawg_In
           __Pyx_INCREF(__pyx_v_default);
           __Pyx_GIVEREF(__pyx_v_default);
           PyTuple_SET_ITEM(__pyx_t_6, 1+__pyx_t_5, __pyx_v_default);
-          __pyx_t_2 = __Pyx_PyObject_Call(__pyx_t_3, __pyx_t_6, NULL); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 929, __pyx_L1_error)
+          __pyx_t_2 = __Pyx_PyObject_Call(__pyx_t_3, __pyx_t_6, NULL); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 935, __pyx_L1_error)
           __Pyx_GOTREF(__pyx_t_2);
           __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
         }
@@ -17680,7 +17832,7 @@ static PyObject *__pyx_f_4dawg_17IntCompletionDAWG_get(struct __pyx_obj_4dawg_In
     #endif
   }
 
-  /* "dawg.pyx":935
+  /* "dawg.pyx":941
  *         cdef int res
  * 
  *         if isinstance(key, unicode):             # <<<<<<<<<<<<<<
@@ -17691,7 +17843,7 @@ static PyObject *__pyx_f_4dawg_17IntCompletionDAWG_get(struct __pyx_obj_4dawg_In
   __pyx_t_8 = (__pyx_t_7 != 0);
   if (__pyx_t_8) {
 
-    /* "dawg.pyx":936
+    /* "dawg.pyx":942
  * 
  *         if isinstance(key, unicode):
  *             res = self.get_value(<unicode>key)             # <<<<<<<<<<<<<<
@@ -17700,7 +17852,7 @@ static PyObject *__pyx_f_4dawg_17IntCompletionDAWG_get(struct __pyx_obj_4dawg_In
  */
     __pyx_v_res = ((struct __pyx_vtabstruct_4dawg_IntCompletionDAWG *)__pyx_v_self->__pyx_base.__pyx_base.__pyx_vtab)->get_value(__pyx_v_self, ((PyObject*)__pyx_v_key), 0);
 
-    /* "dawg.pyx":935
+    /* "dawg.pyx":941
  *         cdef int res
  * 
  *         if isinstance(key, unicode):             # <<<<<<<<<<<<<<
@@ -17710,7 +17862,7 @@ static PyObject *__pyx_f_4dawg_17IntCompletionDAWG_get(struct __pyx_obj_4dawg_In
     goto __pyx_L3;
   }
 
-  /* "dawg.pyx":938
+  /* "dawg.pyx":944
  *             res = self.get_value(<unicode>key)
  *         else:
  *             res = self.b_get_value(key)             # <<<<<<<<<<<<<<
@@ -17718,12 +17870,12 @@ static PyObject *__pyx_f_4dawg_17IntCompletionDAWG_get(struct __pyx_obj_4dawg_In
  *         if res == LOOKUP_ERROR:
  */
   /*else*/ {
-    if (!(likely(PyBytes_CheckExact(__pyx_v_key))||((__pyx_v_key) == Py_None)||(PyErr_Format(PyExc_TypeError, "Expected %.16s, got %.200s", "bytes", Py_TYPE(__pyx_v_key)->tp_name), 0))) __PYX_ERR(0, 938, __pyx_L1_error)
+    if (!(likely(PyBytes_CheckExact(__pyx_v_key))||((__pyx_v_key) == Py_None)||(PyErr_Format(PyExc_TypeError, "Expected %.16s, got %.200s", "bytes", Py_TYPE(__pyx_v_key)->tp_name), 0))) __PYX_ERR(0, 944, __pyx_L1_error)
     __pyx_v_res = ((struct __pyx_vtabstruct_4dawg_IntCompletionDAWG *)__pyx_v_self->__pyx_base.__pyx_base.__pyx_vtab)->b_get_value(__pyx_v_self, ((PyObject*)__pyx_v_key), 0);
   }
   __pyx_L3:;
 
-  /* "dawg.pyx":940
+  /* "dawg.pyx":946
  *             res = self.b_get_value(key)
  * 
  *         if res == LOOKUP_ERROR:             # <<<<<<<<<<<<<<
@@ -17733,7 +17885,7 @@ static PyObject *__pyx_f_4dawg_17IntCompletionDAWG_get(struct __pyx_obj_4dawg_In
   __pyx_t_8 = ((__pyx_v_res == -1L) != 0);
   if (__pyx_t_8) {
 
-    /* "dawg.pyx":941
+    /* "dawg.pyx":947
  * 
  *         if res == LOOKUP_ERROR:
  *             return default             # <<<<<<<<<<<<<<
@@ -17745,7 +17897,7 @@ static PyObject *__pyx_f_4dawg_17IntCompletionDAWG_get(struct __pyx_obj_4dawg_In
     __pyx_r = __pyx_v_default;
     goto __pyx_L0;
 
-    /* "dawg.pyx":940
+    /* "dawg.pyx":946
  *             res = self.b_get_value(key)
  * 
  *         if res == LOOKUP_ERROR:             # <<<<<<<<<<<<<<
@@ -17754,7 +17906,7 @@ static PyObject *__pyx_f_4dawg_17IntCompletionDAWG_get(struct __pyx_obj_4dawg_In
  */
   }
 
-  /* "dawg.pyx":942
+  /* "dawg.pyx":948
  *         if res == LOOKUP_ERROR:
  *             return default
  *         return res             # <<<<<<<<<<<<<<
@@ -17762,13 +17914,13 @@ static PyObject *__pyx_f_4dawg_17IntCompletionDAWG_get(struct __pyx_obj_4dawg_In
  *     cpdef int get_value(self, unicode key):
  */
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = __Pyx_PyInt_From_int(__pyx_v_res); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 942, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyInt_From_int(__pyx_v_res); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 948, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "dawg.pyx":929
+  /* "dawg.pyx":935
  *         return res
  * 
  *     cpdef get(self, key, default=None):             # <<<<<<<<<<<<<<
@@ -17828,7 +17980,7 @@ static PyObject *__pyx_pw_4dawg_17IntCompletionDAWG_5get(PyObject *__pyx_v_self,
         }
       }
       if (unlikely(kw_args > 0)) {
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "get") < 0)) __PYX_ERR(0, 929, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "get") < 0)) __PYX_ERR(0, 935, __pyx_L3_error)
       }
     } else {
       switch (PyTuple_GET_SIZE(__pyx_args)) {
@@ -17844,7 +17996,7 @@ static PyObject *__pyx_pw_4dawg_17IntCompletionDAWG_5get(PyObject *__pyx_v_self,
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("get", 0, 1, 2, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 929, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("get", 0, 1, 2, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 935, __pyx_L3_error)
   __pyx_L3_error:;
   __Pyx_AddTraceback("dawg.IntCompletionDAWG.get", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
@@ -17866,7 +18018,7 @@ static PyObject *__pyx_pf_4dawg_17IntCompletionDAWG_4get(struct __pyx_obj_4dawg_
   __Pyx_XDECREF(__pyx_r);
   __pyx_t_2.__pyx_n = 1;
   __pyx_t_2.__pyx_default = __pyx_v_default;
-  __pyx_t_1 = __pyx_vtabptr_4dawg_IntCompletionDAWG->get(__pyx_v_self, __pyx_v_key, 1, &__pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 929, __pyx_L1_error)
+  __pyx_t_1 = __pyx_vtabptr_4dawg_IntCompletionDAWG->get(__pyx_v_self, __pyx_v_key, 1, &__pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 935, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
@@ -17883,7 +18035,7 @@ static PyObject *__pyx_pf_4dawg_17IntCompletionDAWG_4get(struct __pyx_obj_4dawg_
   return __pyx_r;
 }
 
-/* "dawg.pyx":944
+/* "dawg.pyx":950
  *         return res
  * 
  *     cpdef int get_value(self, unicode key):             # <<<<<<<<<<<<<<
@@ -17912,7 +18064,7 @@ static int __pyx_f_4dawg_17IntCompletionDAWG_get_value(struct __pyx_obj_4dawg_In
     if (unlikely(!__Pyx_object_dict_version_matches(((PyObject *)__pyx_v_self), __pyx_tp_dict_version, __pyx_obj_dict_version))) {
       PY_UINT64_T __pyx_type_dict_guard = __Pyx_get_tp_dict_version(((PyObject *)__pyx_v_self));
       #endif
-      __pyx_t_1 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_get_value); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 944, __pyx_L1_error)
+      __pyx_t_1 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_get_value); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 950, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_1);
       if (!PyCFunction_Check(__pyx_t_1) || (PyCFunction_GET_FUNCTION(__pyx_t_1) != (PyCFunction)(void*)__pyx_pw_4dawg_17IntCompletionDAWG_7get_value)) {
         __Pyx_INCREF(__pyx_t_1);
@@ -17928,10 +18080,10 @@ static int __pyx_f_4dawg_17IntCompletionDAWG_get_value(struct __pyx_obj_4dawg_In
         }
         __pyx_t_2 = (__pyx_t_4) ? __Pyx_PyObject_Call2Args(__pyx_t_3, __pyx_t_4, __pyx_v_key) : __Pyx_PyObject_CallOneArg(__pyx_t_3, __pyx_v_key);
         __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
-        if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 944, __pyx_L1_error)
+        if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 950, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_2);
         __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-        __pyx_t_5 = __Pyx_PyInt_As_int(__pyx_t_2); if (unlikely((__pyx_t_5 == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 944, __pyx_L1_error)
+        __pyx_t_5 = __Pyx_PyInt_As_int(__pyx_t_2); if (unlikely((__pyx_t_5 == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 950, __pyx_L1_error)
         __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
         __pyx_r = __pyx_t_5;
         __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
@@ -17950,7 +18102,7 @@ static int __pyx_f_4dawg_17IntCompletionDAWG_get_value(struct __pyx_obj_4dawg_In
     #endif
   }
 
-  /* "dawg.pyx":945
+  /* "dawg.pyx":951
  * 
  *     cpdef int get_value(self, unicode key):
  *         cdef bytes b_key = <bytes>key.encode('utf8')             # <<<<<<<<<<<<<<
@@ -17959,9 +18111,9 @@ static int __pyx_f_4dawg_17IntCompletionDAWG_get_value(struct __pyx_obj_4dawg_In
  */
   if (unlikely(__pyx_v_key == Py_None)) {
     PyErr_Format(PyExc_AttributeError, "'NoneType' object has no attribute '%.30s'", "encode");
-    __PYX_ERR(0, 945, __pyx_L1_error)
+    __PYX_ERR(0, 951, __pyx_L1_error)
   }
-  __pyx_t_1 = PyUnicode_AsUTF8String(__pyx_v_key); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 945, __pyx_L1_error)
+  __pyx_t_1 = PyUnicode_AsUTF8String(__pyx_v_key); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 951, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_t_2 = __pyx_t_1;
   __Pyx_INCREF(__pyx_t_2);
@@ -17969,7 +18121,7 @@ static int __pyx_f_4dawg_17IntCompletionDAWG_get_value(struct __pyx_obj_4dawg_In
   __pyx_v_b_key = ((PyObject*)__pyx_t_2);
   __pyx_t_2 = 0;
 
-  /* "dawg.pyx":946
+  /* "dawg.pyx":952
  *     cpdef int get_value(self, unicode key):
  *         cdef bytes b_key = <bytes>key.encode('utf8')
  *         return self.dct.Find(b_key)             # <<<<<<<<<<<<<<
@@ -17978,13 +18130,13 @@ static int __pyx_f_4dawg_17IntCompletionDAWG_get_value(struct __pyx_obj_4dawg_In
  */
   if (unlikely(__pyx_v_b_key == Py_None)) {
     PyErr_SetString(PyExc_TypeError, "expected bytes, NoneType found");
-    __PYX_ERR(0, 946, __pyx_L1_error)
+    __PYX_ERR(0, 952, __pyx_L1_error)
   }
-  __pyx_t_6 = __Pyx_PyBytes_AsWritableString(__pyx_v_b_key); if (unlikely((!__pyx_t_6) && PyErr_Occurred())) __PYX_ERR(0, 946, __pyx_L1_error)
+  __pyx_t_6 = __Pyx_PyBytes_AsWritableString(__pyx_v_b_key); if (unlikely((!__pyx_t_6) && PyErr_Occurred())) __PYX_ERR(0, 952, __pyx_L1_error)
   __pyx_r = __pyx_v_self->__pyx_base.__pyx_base.dct.Find(__pyx_t_6);
   goto __pyx_L0;
 
-  /* "dawg.pyx":944
+  /* "dawg.pyx":950
  *         return res
  * 
  *     cpdef int get_value(self, unicode key):             # <<<<<<<<<<<<<<
@@ -18013,7 +18165,7 @@ static PyObject *__pyx_pw_4dawg_17IntCompletionDAWG_7get_value(PyObject *__pyx_v
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("get_value (wrapper)", 0);
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_key), (&PyUnicode_Type), 1, "key", 1))) __PYX_ERR(0, 944, __pyx_L1_error)
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_key), (&PyUnicode_Type), 1, "key", 1))) __PYX_ERR(0, 950, __pyx_L1_error)
   __pyx_r = __pyx_pf_4dawg_17IntCompletionDAWG_6get_value(((struct __pyx_obj_4dawg_IntCompletionDAWG *)__pyx_v_self), ((PyObject*)__pyx_v_key));
 
   /* function exit code */
@@ -18031,7 +18183,7 @@ static PyObject *__pyx_pf_4dawg_17IntCompletionDAWG_6get_value(struct __pyx_obj_
   PyObject *__pyx_t_1 = NULL;
   __Pyx_RefNannySetupContext("get_value", 0);
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = __Pyx_PyInt_From_int(__pyx_f_4dawg_17IntCompletionDAWG_get_value(__pyx_v_self, __pyx_v_key, 1)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 944, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyInt_From_int(__pyx_f_4dawg_17IntCompletionDAWG_get_value(__pyx_v_self, __pyx_v_key, 1)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 950, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
@@ -18048,7 +18200,7 @@ static PyObject *__pyx_pf_4dawg_17IntCompletionDAWG_6get_value(struct __pyx_obj_
   return __pyx_r;
 }
 
-/* "dawg.pyx":948
+/* "dawg.pyx":954
  *         return self.dct.Find(b_key)
  * 
  *     cpdef int b_get_value(self, bytes key):             # <<<<<<<<<<<<<<
@@ -18076,7 +18228,7 @@ static int __pyx_f_4dawg_17IntCompletionDAWG_b_get_value(struct __pyx_obj_4dawg_
     if (unlikely(!__Pyx_object_dict_version_matches(((PyObject *)__pyx_v_self), __pyx_tp_dict_version, __pyx_obj_dict_version))) {
       PY_UINT64_T __pyx_type_dict_guard = __Pyx_get_tp_dict_version(((PyObject *)__pyx_v_self));
       #endif
-      __pyx_t_1 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_b_get_value); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 948, __pyx_L1_error)
+      __pyx_t_1 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_b_get_value); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 954, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_1);
       if (!PyCFunction_Check(__pyx_t_1) || (PyCFunction_GET_FUNCTION(__pyx_t_1) != (PyCFunction)(void*)__pyx_pw_4dawg_17IntCompletionDAWG_9b_get_value)) {
         __Pyx_INCREF(__pyx_t_1);
@@ -18092,10 +18244,10 @@ static int __pyx_f_4dawg_17IntCompletionDAWG_b_get_value(struct __pyx_obj_4dawg_
         }
         __pyx_t_2 = (__pyx_t_4) ? __Pyx_PyObject_Call2Args(__pyx_t_3, __pyx_t_4, __pyx_v_key) : __Pyx_PyObject_CallOneArg(__pyx_t_3, __pyx_v_key);
         __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
-        if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 948, __pyx_L1_error)
+        if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 954, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_2);
         __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-        __pyx_t_5 = __Pyx_PyInt_As_int(__pyx_t_2); if (unlikely((__pyx_t_5 == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 948, __pyx_L1_error)
+        __pyx_t_5 = __Pyx_PyInt_As_int(__pyx_t_2); if (unlikely((__pyx_t_5 == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 954, __pyx_L1_error)
         __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
         __pyx_r = __pyx_t_5;
         __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
@@ -18114,7 +18266,7 @@ static int __pyx_f_4dawg_17IntCompletionDAWG_b_get_value(struct __pyx_obj_4dawg_
     #endif
   }
 
-  /* "dawg.pyx":949
+  /* "dawg.pyx":955
  * 
  *     cpdef int b_get_value(self, bytes key):
  *         return self.dct.Find(key)             # <<<<<<<<<<<<<<
@@ -18123,13 +18275,13 @@ static int __pyx_f_4dawg_17IntCompletionDAWG_b_get_value(struct __pyx_obj_4dawg_
  */
   if (unlikely(__pyx_v_key == Py_None)) {
     PyErr_SetString(PyExc_TypeError, "expected bytes, NoneType found");
-    __PYX_ERR(0, 949, __pyx_L1_error)
+    __PYX_ERR(0, 955, __pyx_L1_error)
   }
-  __pyx_t_6 = __Pyx_PyBytes_AsWritableString(__pyx_v_key); if (unlikely((!__pyx_t_6) && PyErr_Occurred())) __PYX_ERR(0, 949, __pyx_L1_error)
+  __pyx_t_6 = __Pyx_PyBytes_AsWritableString(__pyx_v_key); if (unlikely((!__pyx_t_6) && PyErr_Occurred())) __PYX_ERR(0, 955, __pyx_L1_error)
   __pyx_r = __pyx_v_self->__pyx_base.__pyx_base.dct.Find(__pyx_t_6);
   goto __pyx_L0;
 
-  /* "dawg.pyx":948
+  /* "dawg.pyx":954
  *         return self.dct.Find(b_key)
  * 
  *     cpdef int b_get_value(self, bytes key):             # <<<<<<<<<<<<<<
@@ -18157,7 +18309,7 @@ static PyObject *__pyx_pw_4dawg_17IntCompletionDAWG_9b_get_value(PyObject *__pyx
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("b_get_value (wrapper)", 0);
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_key), (&PyBytes_Type), 1, "key", 1))) __PYX_ERR(0, 948, __pyx_L1_error)
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_key), (&PyBytes_Type), 1, "key", 1))) __PYX_ERR(0, 954, __pyx_L1_error)
   __pyx_r = __pyx_pf_4dawg_17IntCompletionDAWG_8b_get_value(((struct __pyx_obj_4dawg_IntCompletionDAWG *)__pyx_v_self), ((PyObject*)__pyx_v_key));
 
   /* function exit code */
@@ -18175,7 +18327,7 @@ static PyObject *__pyx_pf_4dawg_17IntCompletionDAWG_8b_get_value(struct __pyx_ob
   PyObject *__pyx_t_1 = NULL;
   __Pyx_RefNannySetupContext("b_get_value", 0);
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = __Pyx_PyInt_From_int(__pyx_f_4dawg_17IntCompletionDAWG_b_get_value(__pyx_v_self, __pyx_v_key, 1)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 948, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyInt_From_int(__pyx_f_4dawg_17IntCompletionDAWG_b_get_value(__pyx_v_self, __pyx_v_key, 1)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 954, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
@@ -18192,7 +18344,7 @@ static PyObject *__pyx_pf_4dawg_17IntCompletionDAWG_8b_get_value(struct __pyx_ob
   return __pyx_r;
 }
 
-/* "dawg.pyx":951
+/* "dawg.pyx":957
  *         return self.dct.Find(key)
  * 
  *     cpdef list items(self, unicode prefix=""):             # <<<<<<<<<<<<<<
@@ -18234,7 +18386,7 @@ static PyObject *__pyx_f_4dawg_17IntCompletionDAWG_items(struct __pyx_obj_4dawg_
     if (unlikely(!__Pyx_object_dict_version_matches(((PyObject *)__pyx_v_self), __pyx_tp_dict_version, __pyx_obj_dict_version))) {
       PY_UINT64_T __pyx_type_dict_guard = __Pyx_get_tp_dict_version(((PyObject *)__pyx_v_self));
       #endif
-      __pyx_t_1 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_items); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 951, __pyx_L1_error)
+      __pyx_t_1 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_items); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 957, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_1);
       if (!PyCFunction_Check(__pyx_t_1) || (PyCFunction_GET_FUNCTION(__pyx_t_1) != (PyCFunction)(void*)__pyx_pw_4dawg_17IntCompletionDAWG_11items)) {
         __Pyx_XDECREF(__pyx_r);
@@ -18251,10 +18403,10 @@ static PyObject *__pyx_f_4dawg_17IntCompletionDAWG_items(struct __pyx_obj_4dawg_
         }
         __pyx_t_2 = (__pyx_t_4) ? __Pyx_PyObject_Call2Args(__pyx_t_3, __pyx_t_4, __pyx_v_prefix) : __Pyx_PyObject_CallOneArg(__pyx_t_3, __pyx_v_prefix);
         __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
-        if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 951, __pyx_L1_error)
+        if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 957, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_2);
         __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-        if (!(likely(PyList_CheckExact(__pyx_t_2))||((__pyx_t_2) == Py_None)||(PyErr_Format(PyExc_TypeError, "Expected %.16s, got %.200s", "list", Py_TYPE(__pyx_t_2)->tp_name), 0))) __PYX_ERR(0, 951, __pyx_L1_error)
+        if (!(likely(PyList_CheckExact(__pyx_t_2))||((__pyx_t_2) == Py_None)||(PyErr_Format(PyExc_TypeError, "Expected %.16s, got %.200s", "list", Py_TYPE(__pyx_t_2)->tp_name), 0))) __PYX_ERR(0, 957, __pyx_L1_error)
         __pyx_r = ((PyObject*)__pyx_t_2);
         __pyx_t_2 = 0;
         __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
@@ -18273,7 +18425,7 @@ static PyObject *__pyx_f_4dawg_17IntCompletionDAWG_items(struct __pyx_obj_4dawg_
     #endif
   }
 
-  /* "dawg.pyx":952
+  /* "dawg.pyx":958
  * 
  *     cpdef list items(self, unicode prefix=""):
  *         cdef bytes b_prefix = prefix.encode('utf8')             # <<<<<<<<<<<<<<
@@ -18282,14 +18434,14 @@ static PyObject *__pyx_f_4dawg_17IntCompletionDAWG_items(struct __pyx_obj_4dawg_
  */
   if (unlikely(__pyx_v_prefix == Py_None)) {
     PyErr_Format(PyExc_AttributeError, "'NoneType' object has no attribute '%.30s'", "encode");
-    __PYX_ERR(0, 952, __pyx_L1_error)
+    __PYX_ERR(0, 958, __pyx_L1_error)
   }
-  __pyx_t_1 = PyUnicode_AsUTF8String(__pyx_v_prefix); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 952, __pyx_L1_error)
+  __pyx_t_1 = PyUnicode_AsUTF8String(__pyx_v_prefix); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 958, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_v_b_prefix = ((PyObject*)__pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "dawg.pyx":953
+  /* "dawg.pyx":959
  *     cpdef list items(self, unicode prefix=""):
  *         cdef bytes b_prefix = prefix.encode('utf8')
  *         cdef BaseType index = self.dct.root()             # <<<<<<<<<<<<<<
@@ -18298,19 +18450,19 @@ static PyObject *__pyx_f_4dawg_17IntCompletionDAWG_items(struct __pyx_obj_4dawg_
  */
   __pyx_v_index = __pyx_v_self->__pyx_base.__pyx_base.dct.root();
 
-  /* "dawg.pyx":954
+  /* "dawg.pyx":960
  *         cdef bytes b_prefix = prefix.encode('utf8')
  *         cdef BaseType index = self.dct.root()
  *         cdef list res = []             # <<<<<<<<<<<<<<
  *         cdef int value
  * 
  */
-  __pyx_t_1 = PyList_New(0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 954, __pyx_L1_error)
+  __pyx_t_1 = PyList_New(0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 960, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_v_res = ((PyObject*)__pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "dawg.pyx":957
+  /* "dawg.pyx":963
  *         cdef int value
  * 
  *         if not self.dct.Follow(b_prefix, &index):             # <<<<<<<<<<<<<<
@@ -18319,13 +18471,13 @@ static PyObject *__pyx_f_4dawg_17IntCompletionDAWG_items(struct __pyx_obj_4dawg_
  */
   if (unlikely(__pyx_v_b_prefix == Py_None)) {
     PyErr_SetString(PyExc_TypeError, "expected bytes, NoneType found");
-    __PYX_ERR(0, 957, __pyx_L1_error)
+    __PYX_ERR(0, 963, __pyx_L1_error)
   }
-  __pyx_t_5 = __Pyx_PyBytes_AsWritableString(__pyx_v_b_prefix); if (unlikely((!__pyx_t_5) && PyErr_Occurred())) __PYX_ERR(0, 957, __pyx_L1_error)
+  __pyx_t_5 = __Pyx_PyBytes_AsWritableString(__pyx_v_b_prefix); if (unlikely((!__pyx_t_5) && PyErr_Occurred())) __PYX_ERR(0, 963, __pyx_L1_error)
   __pyx_t_6 = ((!(__pyx_v_self->__pyx_base.__pyx_base.dct.Follow(__pyx_t_5, (&__pyx_v_index)) != 0)) != 0);
   if (__pyx_t_6) {
 
-    /* "dawg.pyx":958
+    /* "dawg.pyx":964
  * 
  *         if not self.dct.Follow(b_prefix, &index):
  *             return res             # <<<<<<<<<<<<<<
@@ -18337,7 +18489,7 @@ static PyObject *__pyx_f_4dawg_17IntCompletionDAWG_items(struct __pyx_obj_4dawg_
     __pyx_r = __pyx_v_res;
     goto __pyx_L0;
 
-    /* "dawg.pyx":957
+    /* "dawg.pyx":963
  *         cdef int value
  * 
  *         if not self.dct.Follow(b_prefix, &index):             # <<<<<<<<<<<<<<
@@ -18346,7 +18498,7 @@ static PyObject *__pyx_f_4dawg_17IntCompletionDAWG_items(struct __pyx_obj_4dawg_
  */
   }
 
-  /* "dawg.pyx":961
+  /* "dawg.pyx":967
  * 
  *         cdef Completer completer
  *         init_completer(completer, self.dct, self.guide)             # <<<<<<<<<<<<<<
@@ -18355,7 +18507,7 @@ static PyObject *__pyx_f_4dawg_17IntCompletionDAWG_items(struct __pyx_obj_4dawg_
  */
   __pyx_f_4dawg_init_completer(__pyx_v_completer, __pyx_v_self->__pyx_base.__pyx_base.dct, __pyx_v_self->__pyx_base.guide);
 
-  /* "dawg.pyx":962
+  /* "dawg.pyx":968
  *         cdef Completer completer
  *         init_completer(completer, self.dct, self.guide)
  *         completer.Start(index, b_prefix)             # <<<<<<<<<<<<<<
@@ -18364,12 +18516,12 @@ static PyObject *__pyx_f_4dawg_17IntCompletionDAWG_items(struct __pyx_obj_4dawg_
  */
   if (unlikely(__pyx_v_b_prefix == Py_None)) {
     PyErr_SetString(PyExc_TypeError, "expected bytes, NoneType found");
-    __PYX_ERR(0, 962, __pyx_L1_error)
+    __PYX_ERR(0, 968, __pyx_L1_error)
   }
-  __pyx_t_7 = __Pyx_PyBytes_AsWritableString(__pyx_v_b_prefix); if (unlikely((!__pyx_t_7) && PyErr_Occurred())) __PYX_ERR(0, 962, __pyx_L1_error)
+  __pyx_t_7 = __Pyx_PyBytes_AsWritableString(__pyx_v_b_prefix); if (unlikely((!__pyx_t_7) && PyErr_Occurred())) __PYX_ERR(0, 968, __pyx_L1_error)
   __pyx_v_completer.Start(__pyx_v_index, __pyx_t_7);
 
-  /* "dawg.pyx":964
+  /* "dawg.pyx":970
  *         completer.Start(index, b_prefix)
  * 
  *         while completer.Next():             # <<<<<<<<<<<<<<
@@ -18380,7 +18532,7 @@ static PyObject *__pyx_f_4dawg_17IntCompletionDAWG_items(struct __pyx_obj_4dawg_
     __pyx_t_6 = (__pyx_v_completer.Next() != 0);
     if (!__pyx_t_6) break;
 
-    /* "dawg.pyx":965
+    /* "dawg.pyx":971
  * 
  *         while completer.Next():
  *             key = (<char*>completer.key()).decode('utf8')             # <<<<<<<<<<<<<<
@@ -18388,13 +18540,13 @@ static PyObject *__pyx_f_4dawg_17IntCompletionDAWG_items(struct __pyx_obj_4dawg_
  *             res.append((key, value))
  */
     __pyx_t_7 = ((char *)__pyx_v_completer.key());
-    __pyx_t_1 = __Pyx_decode_c_string(__pyx_t_7, 0, strlen(__pyx_t_7), NULL, NULL, PyUnicode_DecodeUTF8); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 965, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_decode_c_string(__pyx_t_7, 0, strlen(__pyx_t_7), NULL, NULL, PyUnicode_DecodeUTF8); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 971, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_INCREF(__pyx_t_1);
     __Pyx_XDECREF_SET(__pyx_v_key, __pyx_t_1);
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-    /* "dawg.pyx":966
+    /* "dawg.pyx":972
  *         while completer.Next():
  *             key = (<char*>completer.key()).decode('utf8')
  *             value = completer.value()             # <<<<<<<<<<<<<<
@@ -18403,16 +18555,16 @@ static PyObject *__pyx_f_4dawg_17IntCompletionDAWG_items(struct __pyx_obj_4dawg_
  */
     __pyx_v_value = __pyx_v_completer.value();
 
-    /* "dawg.pyx":967
+    /* "dawg.pyx":973
  *             key = (<char*>completer.key()).decode('utf8')
  *             value = completer.value()
  *             res.append((key, value))             # <<<<<<<<<<<<<<
  * 
  *         return res
  */
-    __pyx_t_1 = __Pyx_PyInt_From_int(__pyx_v_value); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 967, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyInt_From_int(__pyx_v_value); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 973, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
-    __pyx_t_2 = PyTuple_New(2); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 967, __pyx_L1_error)
+    __pyx_t_2 = PyTuple_New(2); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 973, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
     __Pyx_INCREF(__pyx_v_key);
     __Pyx_GIVEREF(__pyx_v_key);
@@ -18420,11 +18572,11 @@ static PyObject *__pyx_f_4dawg_17IntCompletionDAWG_items(struct __pyx_obj_4dawg_
     __Pyx_GIVEREF(__pyx_t_1);
     PyTuple_SET_ITEM(__pyx_t_2, 1, __pyx_t_1);
     __pyx_t_1 = 0;
-    __pyx_t_8 = __Pyx_PyList_Append(__pyx_v_res, __pyx_t_2); if (unlikely(__pyx_t_8 == ((int)-1))) __PYX_ERR(0, 967, __pyx_L1_error)
+    __pyx_t_8 = __Pyx_PyList_Append(__pyx_v_res, __pyx_t_2); if (unlikely(__pyx_t_8 == ((int)-1))) __PYX_ERR(0, 973, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   }
 
-  /* "dawg.pyx":969
+  /* "dawg.pyx":975
  *             res.append((key, value))
  * 
  *         return res             # <<<<<<<<<<<<<<
@@ -18436,7 +18588,7 @@ static PyObject *__pyx_f_4dawg_17IntCompletionDAWG_items(struct __pyx_obj_4dawg_
   __pyx_r = __pyx_v_res;
   goto __pyx_L0;
 
-  /* "dawg.pyx":951
+  /* "dawg.pyx":957
  *         return self.dct.Find(key)
  * 
  *     cpdef list items(self, unicode prefix=""):             # <<<<<<<<<<<<<<
@@ -18491,7 +18643,7 @@ static PyObject *__pyx_pw_4dawg_17IntCompletionDAWG_11items(PyObject *__pyx_v_se
         }
       }
       if (unlikely(kw_args > 0)) {
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "items") < 0)) __PYX_ERR(0, 951, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "items") < 0)) __PYX_ERR(0, 957, __pyx_L3_error)
       }
     } else {
       switch (PyTuple_GET_SIZE(__pyx_args)) {
@@ -18505,13 +18657,13 @@ static PyObject *__pyx_pw_4dawg_17IntCompletionDAWG_11items(PyObject *__pyx_v_se
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("items", 0, 0, 1, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 951, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("items", 0, 0, 1, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 957, __pyx_L3_error)
   __pyx_L3_error:;
   __Pyx_AddTraceback("dawg.IntCompletionDAWG.items", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_prefix), (&PyUnicode_Type), 1, "prefix", 1))) __PYX_ERR(0, 951, __pyx_L1_error)
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_prefix), (&PyUnicode_Type), 1, "prefix", 1))) __PYX_ERR(0, 957, __pyx_L1_error)
   __pyx_r = __pyx_pf_4dawg_17IntCompletionDAWG_10items(((struct __pyx_obj_4dawg_IntCompletionDAWG *)__pyx_v_self), __pyx_v_prefix);
 
   /* function exit code */
@@ -18532,7 +18684,7 @@ static PyObject *__pyx_pf_4dawg_17IntCompletionDAWG_10items(struct __pyx_obj_4da
   __Pyx_XDECREF(__pyx_r);
   __pyx_t_2.__pyx_n = 1;
   __pyx_t_2.prefix = __pyx_v_prefix;
-  __pyx_t_1 = __pyx_vtabptr_4dawg_IntCompletionDAWG->items(__pyx_v_self, 1, &__pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 951, __pyx_L1_error)
+  __pyx_t_1 = __pyx_vtabptr_4dawg_IntCompletionDAWG->items(__pyx_v_self, 1, &__pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 957, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
@@ -18550,7 +18702,7 @@ static PyObject *__pyx_pf_4dawg_17IntCompletionDAWG_10items(struct __pyx_obj_4da
 }
 static PyObject *__pyx_gb_4dawg_17IntCompletionDAWG_14generator5(__pyx_CoroutineObject *__pyx_generator, CYTHON_UNUSED PyThreadState *__pyx_tstate, PyObject *__pyx_sent_value); /* proto */
 
-/* "dawg.pyx":971
+/* "dawg.pyx":977
  *         return res
  * 
  *     def iteritems(self, unicode prefix=""):             # <<<<<<<<<<<<<<
@@ -18588,7 +18740,7 @@ static PyObject *__pyx_pw_4dawg_17IntCompletionDAWG_13iteritems(PyObject *__pyx_
         }
       }
       if (unlikely(kw_args > 0)) {
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "iteritems") < 0)) __PYX_ERR(0, 971, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "iteritems") < 0)) __PYX_ERR(0, 977, __pyx_L3_error)
       }
     } else {
       switch (PyTuple_GET_SIZE(__pyx_args)) {
@@ -18602,13 +18754,13 @@ static PyObject *__pyx_pw_4dawg_17IntCompletionDAWG_13iteritems(PyObject *__pyx_
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("iteritems", 0, 0, 1, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 971, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("iteritems", 0, 0, 1, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 977, __pyx_L3_error)
   __pyx_L3_error:;
   __Pyx_AddTraceback("dawg.IntCompletionDAWG.iteritems", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_prefix), (&PyUnicode_Type), 1, "prefix", 1))) __PYX_ERR(0, 971, __pyx_L1_error)
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_prefix), (&PyUnicode_Type), 1, "prefix", 1))) __PYX_ERR(0, 977, __pyx_L1_error)
   __pyx_r = __pyx_pf_4dawg_17IntCompletionDAWG_12iteritems(((struct __pyx_obj_4dawg_IntCompletionDAWG *)__pyx_v_self), __pyx_v_prefix);
 
   /* function exit code */
@@ -18629,7 +18781,7 @@ static PyObject *__pyx_pf_4dawg_17IntCompletionDAWG_12iteritems(struct __pyx_obj
   if (unlikely(!__pyx_cur_scope)) {
     __pyx_cur_scope = ((struct __pyx_obj_4dawg___pyx_scope_struct_13_iteritems *)Py_None);
     __Pyx_INCREF(Py_None);
-    __PYX_ERR(0, 971, __pyx_L1_error)
+    __PYX_ERR(0, 977, __pyx_L1_error)
   } else {
     __Pyx_GOTREF(__pyx_cur_scope);
   }
@@ -18640,7 +18792,7 @@ static PyObject *__pyx_pf_4dawg_17IntCompletionDAWG_12iteritems(struct __pyx_obj
   __Pyx_INCREF(__pyx_cur_scope->__pyx_v_prefix);
   __Pyx_GIVEREF(__pyx_cur_scope->__pyx_v_prefix);
   {
-    __pyx_CoroutineObject *gen = __Pyx_Generator_New((__pyx_coroutine_body_t) __pyx_gb_4dawg_17IntCompletionDAWG_14generator5, NULL, (PyObject *) __pyx_cur_scope, __pyx_n_s_iteritems, __pyx_n_s_IntCompletionDAWG_iteritems, __pyx_n_s_dawg); if (unlikely(!gen)) __PYX_ERR(0, 971, __pyx_L1_error)
+    __pyx_CoroutineObject *gen = __Pyx_Generator_New((__pyx_coroutine_body_t) __pyx_gb_4dawg_17IntCompletionDAWG_14generator5, NULL, (PyObject *) __pyx_cur_scope, __pyx_n_s_iteritems, __pyx_n_s_IntCompletionDAWG_iteritems, __pyx_n_s_dawg); if (unlikely(!gen)) __PYX_ERR(0, 977, __pyx_L1_error)
     __Pyx_DECREF(__pyx_cur_scope);
     __Pyx_RefNannyFinishContext();
     return (PyObject *) gen;
@@ -18675,9 +18827,9 @@ static PyObject *__pyx_gb_4dawg_17IntCompletionDAWG_14generator5(__pyx_Coroutine
     return NULL;
   }
   __pyx_L3_first_run:;
-  if (unlikely(!__pyx_sent_value)) __PYX_ERR(0, 971, __pyx_L1_error)
+  if (unlikely(!__pyx_sent_value)) __PYX_ERR(0, 977, __pyx_L1_error)
 
-  /* "dawg.pyx":972
+  /* "dawg.pyx":978
  * 
  *     def iteritems(self, unicode prefix=""):
  *         cdef bytes b_prefix = prefix.encode('utf8')             # <<<<<<<<<<<<<<
@@ -18686,15 +18838,15 @@ static PyObject *__pyx_gb_4dawg_17IntCompletionDAWG_14generator5(__pyx_Coroutine
  */
   if (unlikely(__pyx_cur_scope->__pyx_v_prefix == Py_None)) {
     PyErr_Format(PyExc_AttributeError, "'NoneType' object has no attribute '%.30s'", "encode");
-    __PYX_ERR(0, 972, __pyx_L1_error)
+    __PYX_ERR(0, 978, __pyx_L1_error)
   }
-  __pyx_t_1 = PyUnicode_AsUTF8String(__pyx_cur_scope->__pyx_v_prefix); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 972, __pyx_L1_error)
+  __pyx_t_1 = PyUnicode_AsUTF8String(__pyx_cur_scope->__pyx_v_prefix); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 978, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_GIVEREF(__pyx_t_1);
   __pyx_cur_scope->__pyx_v_b_prefix = ((PyObject*)__pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "dawg.pyx":973
+  /* "dawg.pyx":979
  *     def iteritems(self, unicode prefix=""):
  *         cdef bytes b_prefix = prefix.encode('utf8')
  *         cdef BaseType index = self.dct.root()             # <<<<<<<<<<<<<<
@@ -18703,7 +18855,7 @@ static PyObject *__pyx_gb_4dawg_17IntCompletionDAWG_14generator5(__pyx_Coroutine
  */
   __pyx_cur_scope->__pyx_v_index = __pyx_cur_scope->__pyx_v_self->__pyx_base.__pyx_base.dct.root();
 
-  /* "dawg.pyx":976
+  /* "dawg.pyx":982
  *         cdef int value
  * 
  *         if not self.dct.Follow(b_prefix, &index):             # <<<<<<<<<<<<<<
@@ -18712,13 +18864,13 @@ static PyObject *__pyx_gb_4dawg_17IntCompletionDAWG_14generator5(__pyx_Coroutine
  */
   if (unlikely(__pyx_cur_scope->__pyx_v_b_prefix == Py_None)) {
     PyErr_SetString(PyExc_TypeError, "expected bytes, NoneType found");
-    __PYX_ERR(0, 976, __pyx_L1_error)
+    __PYX_ERR(0, 982, __pyx_L1_error)
   }
-  __pyx_t_2 = __Pyx_PyBytes_AsWritableString(__pyx_cur_scope->__pyx_v_b_prefix); if (unlikely((!__pyx_t_2) && PyErr_Occurred())) __PYX_ERR(0, 976, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyBytes_AsWritableString(__pyx_cur_scope->__pyx_v_b_prefix); if (unlikely((!__pyx_t_2) && PyErr_Occurred())) __PYX_ERR(0, 982, __pyx_L1_error)
   __pyx_t_3 = ((!(__pyx_cur_scope->__pyx_v_self->__pyx_base.__pyx_base.dct.Follow(__pyx_t_2, (&__pyx_cur_scope->__pyx_v_index)) != 0)) != 0);
   if (__pyx_t_3) {
 
-    /* "dawg.pyx":977
+    /* "dawg.pyx":983
  * 
  *         if not self.dct.Follow(b_prefix, &index):
  *             return             # <<<<<<<<<<<<<<
@@ -18729,7 +18881,7 @@ static PyObject *__pyx_gb_4dawg_17IntCompletionDAWG_14generator5(__pyx_Coroutine
     __pyx_r = NULL;
     goto __pyx_L0;
 
-    /* "dawg.pyx":976
+    /* "dawg.pyx":982
  *         cdef int value
  * 
  *         if not self.dct.Follow(b_prefix, &index):             # <<<<<<<<<<<<<<
@@ -18738,7 +18890,7 @@ static PyObject *__pyx_gb_4dawg_17IntCompletionDAWG_14generator5(__pyx_Coroutine
  */
   }
 
-  /* "dawg.pyx":980
+  /* "dawg.pyx":986
  * 
  *         cdef Completer completer
  *         init_completer(completer, self.dct, self.guide)             # <<<<<<<<<<<<<<
@@ -18747,7 +18899,7 @@ static PyObject *__pyx_gb_4dawg_17IntCompletionDAWG_14generator5(__pyx_Coroutine
  */
   __pyx_f_4dawg_init_completer(__pyx_cur_scope->__pyx_v_completer, __pyx_cur_scope->__pyx_v_self->__pyx_base.__pyx_base.dct, __pyx_cur_scope->__pyx_v_self->__pyx_base.guide);
 
-  /* "dawg.pyx":981
+  /* "dawg.pyx":987
  *         cdef Completer completer
  *         init_completer(completer, self.dct, self.guide)
  *         completer.Start(index, b_prefix)             # <<<<<<<<<<<<<<
@@ -18756,12 +18908,12 @@ static PyObject *__pyx_gb_4dawg_17IntCompletionDAWG_14generator5(__pyx_Coroutine
  */
   if (unlikely(__pyx_cur_scope->__pyx_v_b_prefix == Py_None)) {
     PyErr_SetString(PyExc_TypeError, "expected bytes, NoneType found");
-    __PYX_ERR(0, 981, __pyx_L1_error)
+    __PYX_ERR(0, 987, __pyx_L1_error)
   }
-  __pyx_t_4 = __Pyx_PyBytes_AsWritableString(__pyx_cur_scope->__pyx_v_b_prefix); if (unlikely((!__pyx_t_4) && PyErr_Occurred())) __PYX_ERR(0, 981, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyBytes_AsWritableString(__pyx_cur_scope->__pyx_v_b_prefix); if (unlikely((!__pyx_t_4) && PyErr_Occurred())) __PYX_ERR(0, 987, __pyx_L1_error)
   __pyx_cur_scope->__pyx_v_completer.Start(__pyx_cur_scope->__pyx_v_index, __pyx_t_4);
 
-  /* "dawg.pyx":983
+  /* "dawg.pyx":989
  *         completer.Start(index, b_prefix)
  * 
  *         while completer.Next():             # <<<<<<<<<<<<<<
@@ -18772,7 +18924,7 @@ static PyObject *__pyx_gb_4dawg_17IntCompletionDAWG_14generator5(__pyx_Coroutine
     __pyx_t_3 = (__pyx_cur_scope->__pyx_v_completer.Next() != 0);
     if (!__pyx_t_3) break;
 
-    /* "dawg.pyx":984
+    /* "dawg.pyx":990
  * 
  *         while completer.Next():
  *             key = (<char*>completer.key()).decode('utf8')             # <<<<<<<<<<<<<<
@@ -18780,7 +18932,7 @@ static PyObject *__pyx_gb_4dawg_17IntCompletionDAWG_14generator5(__pyx_Coroutine
  *             yield key, value
  */
     __pyx_t_4 = ((char *)__pyx_cur_scope->__pyx_v_completer.key());
-    __pyx_t_1 = __Pyx_decode_c_string(__pyx_t_4, 0, strlen(__pyx_t_4), NULL, NULL, PyUnicode_DecodeUTF8); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 984, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_decode_c_string(__pyx_t_4, 0, strlen(__pyx_t_4), NULL, NULL, PyUnicode_DecodeUTF8); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 990, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_INCREF(__pyx_t_1);
     __Pyx_XGOTREF(__pyx_cur_scope->__pyx_v_key);
@@ -18788,7 +18940,7 @@ static PyObject *__pyx_gb_4dawg_17IntCompletionDAWG_14generator5(__pyx_Coroutine
     __Pyx_GIVEREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-    /* "dawg.pyx":985
+    /* "dawg.pyx":991
  *         while completer.Next():
  *             key = (<char*>completer.key()).decode('utf8')
  *             value = completer.value()             # <<<<<<<<<<<<<<
@@ -18796,14 +18948,14 @@ static PyObject *__pyx_gb_4dawg_17IntCompletionDAWG_14generator5(__pyx_Coroutine
  */
     __pyx_cur_scope->__pyx_v_value = __pyx_cur_scope->__pyx_v_completer.value();
 
-    /* "dawg.pyx":986
+    /* "dawg.pyx":992
  *             key = (<char*>completer.key()).decode('utf8')
  *             value = completer.value()
  *             yield key, value             # <<<<<<<<<<<<<<
  */
-    __pyx_t_1 = __Pyx_PyInt_From_int(__pyx_cur_scope->__pyx_v_value); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 986, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyInt_From_int(__pyx_cur_scope->__pyx_v_value); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 992, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
-    __pyx_t_5 = PyTuple_New(2); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 986, __pyx_L1_error)
+    __pyx_t_5 = PyTuple_New(2); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 992, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_5);
     __Pyx_INCREF(__pyx_cur_scope->__pyx_v_key);
     __Pyx_GIVEREF(__pyx_cur_scope->__pyx_v_key);
@@ -18820,11 +18972,11 @@ static PyObject *__pyx_gb_4dawg_17IntCompletionDAWG_14generator5(__pyx_Coroutine
     __pyx_generator->resume_label = 1;
     return __pyx_r;
     __pyx_L7_resume_from_yield:;
-    if (unlikely(!__pyx_sent_value)) __PYX_ERR(0, 986, __pyx_L1_error)
+    if (unlikely(!__pyx_sent_value)) __PYX_ERR(0, 992, __pyx_L1_error)
   }
   CYTHON_MAYBE_UNUSED_VAR(__pyx_cur_scope);
 
-  /* "dawg.pyx":971
+  /* "dawg.pyx":977
  *         return res
  * 
  *     def iteritems(self, unicode prefix=""):             # <<<<<<<<<<<<<<
@@ -19246,39 +19398,46 @@ static void __pyx_tp_dealloc_4dawg_DAWG(PyObject *o) {
 }
 
 static PyMethodDef __pyx_methods_4dawg_DAWG[] = {
-  {"_build_from_iterable", (PyCFunction)__pyx_pw_4dawg_4DAWG_5_build_from_iterable, METH_O, __pyx_doc_4dawg_4DAWG_4_build_from_iterable},
-  {"has_key", (PyCFunction)__pyx_pw_4dawg_4DAWG_9has_key, METH_O, __pyx_doc_4dawg_4DAWG_8has_key},
-  {"b_has_key", (PyCFunction)__pyx_pw_4dawg_4DAWG_11b_has_key, METH_O, __pyx_doc_4dawg_4DAWG_10b_has_key},
-  {"tobytes", (PyCFunction)__pyx_pw_4dawg_4DAWG_13tobytes, METH_NOARGS, __pyx_doc_4dawg_4DAWG_12tobytes},
-  {"frombytes", (PyCFunction)__pyx_pw_4dawg_4DAWG_15frombytes, METH_O, __pyx_doc_4dawg_4DAWG_14frombytes},
-  {"read", (PyCFunction)__pyx_pw_4dawg_4DAWG_17read, METH_O, __pyx_doc_4dawg_4DAWG_16read},
-  {"write", (PyCFunction)__pyx_pw_4dawg_4DAWG_19write, METH_O, __pyx_doc_4dawg_4DAWG_18write},
-  {"load", (PyCFunction)__pyx_pw_4dawg_4DAWG_21load, METH_O, __pyx_doc_4dawg_4DAWG_20load},
-  {"save", (PyCFunction)__pyx_pw_4dawg_4DAWG_23save, METH_O, __pyx_doc_4dawg_4DAWG_22save},
-  {"__reduce__", (PyCFunction)__pyx_pw_4dawg_4DAWG_25__reduce__, METH_NOARGS, __pyx_doc_4dawg_4DAWG_24__reduce__},
-  {"__setstate__", (PyCFunction)__pyx_pw_4dawg_4DAWG_27__setstate__, METH_O, __pyx_doc_4dawg_4DAWG_26__setstate__},
-  {"_size", (PyCFunction)__pyx_pw_4dawg_4DAWG_29_size, METH_NOARGS, __pyx_doc_4dawg_4DAWG_28_size},
-  {"_total_size", (PyCFunction)__pyx_pw_4dawg_4DAWG_31_total_size, METH_NOARGS, __pyx_doc_4dawg_4DAWG_30_total_size},
-  {"_file_size", (PyCFunction)__pyx_pw_4dawg_4DAWG_33_file_size, METH_NOARGS, __pyx_doc_4dawg_4DAWG_32_file_size},
-  {"similar_keys", (PyCFunction)(void*)(PyCFunctionWithKeywords)__pyx_pw_4dawg_4DAWG_35similar_keys, METH_VARARGS|METH_KEYWORDS, __pyx_doc_4dawg_4DAWG_34similar_keys},
-  {"prefixes", (PyCFunction)__pyx_pw_4dawg_4DAWG_37prefixes, METH_O, __pyx_doc_4dawg_4DAWG_36prefixes},
-  {"b_prefixes", (PyCFunction)__pyx_pw_4dawg_4DAWG_39b_prefixes, METH_O, __pyx_doc_4dawg_4DAWG_38b_prefixes},
-  {"iterprefixes", (PyCFunction)__pyx_pw_4dawg_4DAWG_41iterprefixes, METH_O, __pyx_doc_4dawg_4DAWG_40iterprefixes},
-  {"compile_replaces", (PyCFunction)__pyx_pw_4dawg_4DAWG_44compile_replaces, METH_O, __pyx_doc_4dawg_4DAWG_43compile_replaces},
+  {"__sizeof__", (PyCFunction)__pyx_pw_4dawg_4DAWG_5__sizeof__, METH_NOARGS, __pyx_doc_4dawg_4DAWG_4__sizeof__},
+  {"_build_from_iterable", (PyCFunction)__pyx_pw_4dawg_4DAWG_7_build_from_iterable, METH_O, __pyx_doc_4dawg_4DAWG_6_build_from_iterable},
+  {"has_key", (PyCFunction)__pyx_pw_4dawg_4DAWG_13has_key, METH_O, __pyx_doc_4dawg_4DAWG_12has_key},
+  {"b_has_key", (PyCFunction)__pyx_pw_4dawg_4DAWG_15b_has_key, METH_O, __pyx_doc_4dawg_4DAWG_14b_has_key},
+  {"tobytes", (PyCFunction)__pyx_pw_4dawg_4DAWG_17tobytes, METH_NOARGS, __pyx_doc_4dawg_4DAWG_16tobytes},
+  {"frombytes", (PyCFunction)__pyx_pw_4dawg_4DAWG_19frombytes, METH_O, __pyx_doc_4dawg_4DAWG_18frombytes},
+  {"read", (PyCFunction)__pyx_pw_4dawg_4DAWG_21read, METH_O, __pyx_doc_4dawg_4DAWG_20read},
+  {"write", (PyCFunction)__pyx_pw_4dawg_4DAWG_23write, METH_O, __pyx_doc_4dawg_4DAWG_22write},
+  {"load", (PyCFunction)__pyx_pw_4dawg_4DAWG_25load, METH_O, __pyx_doc_4dawg_4DAWG_24load},
+  {"save", (PyCFunction)__pyx_pw_4dawg_4DAWG_27save, METH_O, __pyx_doc_4dawg_4DAWG_26save},
+  {"__reduce__", (PyCFunction)__pyx_pw_4dawg_4DAWG_29__reduce__, METH_NOARGS, __pyx_doc_4dawg_4DAWG_28__reduce__},
+  {"__setstate__", (PyCFunction)__pyx_pw_4dawg_4DAWG_31__setstate__, METH_O, __pyx_doc_4dawg_4DAWG_30__setstate__},
+  {"_size", (PyCFunction)__pyx_pw_4dawg_4DAWG_33_size, METH_NOARGS, __pyx_doc_4dawg_4DAWG_32_size},
+  {"_total_size", (PyCFunction)__pyx_pw_4dawg_4DAWG_35_total_size, METH_NOARGS, __pyx_doc_4dawg_4DAWG_34_total_size},
+  {"_file_size", (PyCFunction)__pyx_pw_4dawg_4DAWG_37_file_size, METH_NOARGS, __pyx_doc_4dawg_4DAWG_36_file_size},
+  {"similar_keys", (PyCFunction)(void*)(PyCFunctionWithKeywords)__pyx_pw_4dawg_4DAWG_39similar_keys, METH_VARARGS|METH_KEYWORDS, __pyx_doc_4dawg_4DAWG_38similar_keys},
+  {"prefixes", (PyCFunction)__pyx_pw_4dawg_4DAWG_41prefixes, METH_O, __pyx_doc_4dawg_4DAWG_40prefixes},
+  {"b_prefixes", (PyCFunction)__pyx_pw_4dawg_4DAWG_43b_prefixes, METH_O, __pyx_doc_4dawg_4DAWG_42b_prefixes},
+  {"iterprefixes", (PyCFunction)__pyx_pw_4dawg_4DAWG_45iterprefixes, METH_O, __pyx_doc_4dawg_4DAWG_44iterprefixes},
+  {"compile_replaces", (PyCFunction)__pyx_pw_4dawg_4DAWG_48compile_replaces, METH_O, __pyx_doc_4dawg_4DAWG_47compile_replaces},
   {0, 0, 0, 0}
 };
 
 static PySequenceMethods __pyx_tp_as_sequence_DAWG = {
-  0, /*sq_length*/
+  __pyx_pw_4dawg_4DAWG_9__len__, /*sq_length*/
   0, /*sq_concat*/
   0, /*sq_repeat*/
   0, /*sq_item*/
   0, /*sq_slice*/
   0, /*sq_ass_item*/
   0, /*sq_ass_slice*/
-  __pyx_pw_4dawg_4DAWG_7__contains__, /*sq_contains*/
+  __pyx_pw_4dawg_4DAWG_11__contains__, /*sq_contains*/
   0, /*sq_inplace_concat*/
   0, /*sq_inplace_repeat*/
+};
+
+static PyMappingMethods __pyx_tp_as_mapping_DAWG = {
+  __pyx_pw_4dawg_4DAWG_9__len__, /*mp_length*/
+  0, /*mp_subscript*/
+  0, /*mp_ass_subscript*/
 };
 
 static PyTypeObject __pyx_type_4dawg_DAWG = {
@@ -19304,7 +19463,7 @@ static PyTypeObject __pyx_type_4dawg_DAWG = {
   0, /*tp_repr*/
   0, /*tp_as_number*/
   &__pyx_tp_as_sequence_DAWG, /*tp_as_sequence*/
-  0, /*tp_as_mapping*/
+  &__pyx_tp_as_mapping_DAWG, /*tp_as_mapping*/
   0, /*tp_hash*/
   0, /*tp_call*/
   0, /*tp_str*/
@@ -19515,7 +19674,11 @@ static PyMethodDef __pyx_methods_4dawg_BytesDAWG[] = {
 };
 
 static PySequenceMethods __pyx_tp_as_sequence_BytesDAWG = {
+  #if CYTHON_COMPILING_IN_PYPY
+  __pyx_pw_4dawg_4DAWG_9__len__, /*sq_length*/
+  #else
   0, /*sq_length*/
+  #endif
   0, /*sq_concat*/
   0, /*sq_repeat*/
   __pyx_sq_item_4dawg_BytesDAWG, /*sq_item*/
@@ -19523,7 +19686,7 @@ static PySequenceMethods __pyx_tp_as_sequence_BytesDAWG = {
   0, /*sq_ass_item*/
   0, /*sq_ass_slice*/
   #if CYTHON_COMPILING_IN_PYPY
-  __pyx_pw_4dawg_4DAWG_7__contains__, /*sq_contains*/
+  __pyx_pw_4dawg_4DAWG_11__contains__, /*sq_contains*/
   #else
   0, /*sq_contains*/
   #endif
@@ -19532,7 +19695,11 @@ static PySequenceMethods __pyx_tp_as_sequence_BytesDAWG = {
 };
 
 static PyMappingMethods __pyx_tp_as_mapping_BytesDAWG = {
+  #if CYTHON_COMPILING_IN_PYPY
+  __pyx_pw_4dawg_4DAWG_9__len__, /*mp_length*/
+  #else
   0, /*mp_length*/
+  #endif
   __pyx_pw_4dawg_9BytesDAWG_13__getitem__, /*mp_subscript*/
   0, /*mp_ass_subscript*/
 };
@@ -19753,7 +19920,11 @@ static PyMethodDef __pyx_methods_4dawg_IntDAWG[] = {
 };
 
 static PySequenceMethods __pyx_tp_as_sequence_IntDAWG = {
+  #if CYTHON_COMPILING_IN_PYPY
+  __pyx_pw_4dawg_4DAWG_9__len__, /*sq_length*/
+  #else
   0, /*sq_length*/
+  #endif
   0, /*sq_concat*/
   0, /*sq_repeat*/
   __pyx_sq_item_4dawg_IntDAWG, /*sq_item*/
@@ -19761,7 +19932,7 @@ static PySequenceMethods __pyx_tp_as_sequence_IntDAWG = {
   0, /*sq_ass_item*/
   0, /*sq_ass_slice*/
   #if CYTHON_COMPILING_IN_PYPY
-  __pyx_pw_4dawg_4DAWG_7__contains__, /*sq_contains*/
+  __pyx_pw_4dawg_4DAWG_11__contains__, /*sq_contains*/
   #else
   0, /*sq_contains*/
   #endif
@@ -19770,7 +19941,11 @@ static PySequenceMethods __pyx_tp_as_sequence_IntDAWG = {
 };
 
 static PyMappingMethods __pyx_tp_as_mapping_IntDAWG = {
+  #if CYTHON_COMPILING_IN_PYPY
+  __pyx_pw_4dawg_4DAWG_9__len__, /*mp_length*/
+  #else
   0, /*mp_length*/
+  #endif
   __pyx_pw_4dawg_7IntDAWG_3__getitem__, /*mp_subscript*/
   0, /*mp_ass_subscript*/
 };
@@ -19871,7 +20046,11 @@ static PyMethodDef __pyx_methods_4dawg_IntCompletionDAWG[] = {
 };
 
 static PySequenceMethods __pyx_tp_as_sequence_IntCompletionDAWG = {
+  #if CYTHON_COMPILING_IN_PYPY
+  __pyx_pw_4dawg_4DAWG_9__len__, /*sq_length*/
+  #else
   0, /*sq_length*/
+  #endif
   0, /*sq_concat*/
   0, /*sq_repeat*/
   __pyx_sq_item_4dawg_IntCompletionDAWG, /*sq_item*/
@@ -19879,7 +20058,7 @@ static PySequenceMethods __pyx_tp_as_sequence_IntCompletionDAWG = {
   0, /*sq_ass_item*/
   0, /*sq_ass_slice*/
   #if CYTHON_COMPILING_IN_PYPY
-  __pyx_pw_4dawg_4DAWG_7__contains__, /*sq_contains*/
+  __pyx_pw_4dawg_4DAWG_11__contains__, /*sq_contains*/
   #else
   0, /*sq_contains*/
   #endif
@@ -19888,7 +20067,11 @@ static PySequenceMethods __pyx_tp_as_sequence_IntCompletionDAWG = {
 };
 
 static PyMappingMethods __pyx_tp_as_mapping_IntCompletionDAWG = {
+  #if CYTHON_COMPILING_IN_PYPY
+  __pyx_pw_4dawg_4DAWG_9__len__, /*mp_length*/
+  #else
   0, /*mp_length*/
+  #endif
   __pyx_pw_4dawg_17IntCompletionDAWG_3__getitem__, /*mp_subscript*/
   0, /*mp_ass_subscript*/
 };
@@ -21732,6 +21915,7 @@ static __Pyx_StringTabEntry __pyx_string_tab[] = {
   {&__pyx_n_s_similar_item_values, __pyx_k_similar_item_values, sizeof(__pyx_k_similar_item_values), 0, 0, 1, 1},
   {&__pyx_n_s_similar_items, __pyx_k_similar_items, sizeof(__pyx_k_similar_items), 0, 0, 1, 1},
   {&__pyx_n_s_similar_keys, __pyx_k_similar_keys, sizeof(__pyx_k_similar_keys), 0, 0, 1, 1},
+  {&__pyx_n_s_sizeof, __pyx_k_sizeof, sizeof(__pyx_k_sizeof), 0, 0, 1, 1},
   {&__pyx_n_s_sort, __pyx_k_sort, sizeof(__pyx_k_sort), 0, 0, 1, 1},
   {&__pyx_kp_s_src_dawg_pyx, __pyx_k_src_dawg_pyx, sizeof(__pyx_k_src_dawg_pyx), 0, 0, 1, 0},
   {&__pyx_n_s_struct, __pyx_k_struct, sizeof(__pyx_k_struct), 0, 0, 1, 1},
@@ -21749,12 +21933,12 @@ static __Pyx_StringTabEntry __pyx_string_tab[] = {
 };
 static CYTHON_SMALL_CODE int __Pyx_InitCachedBuiltins(void) {
   __pyx_builtin_ImportError = __Pyx_GetBuiltinName(__pyx_n_s_ImportError); if (!__pyx_builtin_ImportError) __PYX_ERR(0, 21, __pyx_L1_error)
-  __pyx_builtin_ValueError = __Pyx_GetBuiltinName(__pyx_n_s_ValueError); if (!__pyx_builtin_ValueError) __PYX_ERR(0, 64, __pyx_L1_error)
-  __pyx_builtin_IOError = __Pyx_GetBuiltinName(__pyx_n_s_IOError); if (!__pyx_builtin_IOError) __PYX_ERR(0, 118, __pyx_L1_error)
-  __pyx_builtin_open = __Pyx_GetBuiltinName(__pyx_n_s_open); if (!__pyx_builtin_open) __PYX_ERR(0, 164, __pyx_L1_error)
-  __pyx_builtin_super = __Pyx_GetBuiltinName(__pyx_n_s_super); if (!__pyx_builtin_super) __PYX_ERR(0, 300, __pyx_L1_error)
-  __pyx_builtin_range = __Pyx_GetBuiltinName(__pyx_n_s_range); if (!__pyx_builtin_range) __PYX_ERR(0, 431, __pyx_L1_error)
-  __pyx_builtin_KeyError = __Pyx_GetBuiltinName(__pyx_n_s_KeyError); if (!__pyx_builtin_KeyError) __PYX_ERR(0, 523, __pyx_L1_error)
+  __pyx_builtin_super = __Pyx_GetBuiltinName(__pyx_n_s_super); if (!__pyx_builtin_super) __PYX_ERR(0, 56, __pyx_L1_error)
+  __pyx_builtin_ValueError = __Pyx_GetBuiltinName(__pyx_n_s_ValueError); if (!__pyx_builtin_ValueError) __PYX_ERR(0, 67, __pyx_L1_error)
+  __pyx_builtin_IOError = __Pyx_GetBuiltinName(__pyx_n_s_IOError); if (!__pyx_builtin_IOError) __PYX_ERR(0, 124, __pyx_L1_error)
+  __pyx_builtin_open = __Pyx_GetBuiltinName(__pyx_n_s_open); if (!__pyx_builtin_open) __PYX_ERR(0, 170, __pyx_L1_error)
+  __pyx_builtin_range = __Pyx_GetBuiltinName(__pyx_n_s_range); if (!__pyx_builtin_range) __PYX_ERR(0, 437, __pyx_L1_error)
+  __pyx_builtin_KeyError = __Pyx_GetBuiltinName(__pyx_n_s_KeyError); if (!__pyx_builtin_KeyError) __PYX_ERR(0, 529, __pyx_L1_error)
   return 0;
   __pyx_L1_error:;
   return -1;
@@ -21764,94 +21948,94 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("__Pyx_InitCachedConstants", 0);
 
-  /* "dawg.pyx":64
+  /* "dawg.pyx":67
  *                 key, value = key
  *                 if value < 0:
  *                     raise ValueError("Negative values are not supported")             # <<<<<<<<<<<<<<
  *             else:
  *                 value = 0
  */
-  __pyx_tuple_ = PyTuple_Pack(1, __pyx_kp_u_Negative_values_are_not_supporte); if (unlikely(!__pyx_tuple_)) __PYX_ERR(0, 64, __pyx_L1_error)
+  __pyx_tuple_ = PyTuple_Pack(1, __pyx_kp_u_Negative_values_are_not_supporte); if (unlikely(!__pyx_tuple_)) __PYX_ERR(0, 67, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple_);
   __Pyx_GIVEREF(__pyx_tuple_);
 
-  /* "dawg.pyx":118
+  /* "dawg.pyx":124
  *             if not res:
  *                 self.dct.Clear()
  *                 raise IOError("Invalid data format")             # <<<<<<<<<<<<<<
  * 
  *             return self
  */
-  __pyx_tuple__3 = PyTuple_Pack(1, __pyx_kp_u_Invalid_data_format); if (unlikely(!__pyx_tuple__3)) __PYX_ERR(0, 118, __pyx_L1_error)
+  __pyx_tuple__3 = PyTuple_Pack(1, __pyx_kp_u_Invalid_data_format); if (unlikely(!__pyx_tuple__3)) __PYX_ERR(0, 124, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__3);
   __Pyx_GIVEREF(__pyx_tuple__3);
 
-  /* "dawg.pyx":148
+  /* "dawg.pyx":154
  *         stream.open(path, iostream.binary)
  *         if stream.fail():
  *             raise IOError("It's not possible to read file stream")             # <<<<<<<<<<<<<<
  * 
  *         res = self.dct.Read(<istream*> &stream)
  */
-  __pyx_tuple__4 = PyTuple_Pack(1, __pyx_kp_u_It_s_not_possible_to_read_file_s); if (unlikely(!__pyx_tuple__4)) __PYX_ERR(0, 148, __pyx_L1_error)
+  __pyx_tuple__4 = PyTuple_Pack(1, __pyx_kp_u_It_s_not_possible_to_read_file_s); if (unlikely(!__pyx_tuple__4)) __PYX_ERR(0, 154, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__4);
   __Pyx_GIVEREF(__pyx_tuple__4);
 
-  /* "dawg.pyx":164
+  /* "dawg.pyx":170
  *         Save DAWG to a file.
  *         """
  *         with open(path, 'wb') as f:             # <<<<<<<<<<<<<<
  *             self.write(f)
  * 
  */
-  __pyx_tuple__5 = PyTuple_Pack(3, Py_None, Py_None, Py_None); if (unlikely(!__pyx_tuple__5)) __PYX_ERR(0, 164, __pyx_L1_error)
+  __pyx_tuple__5 = PyTuple_Pack(3, Py_None, Py_None, Py_None); if (unlikely(!__pyx_tuple__5)) __PYX_ERR(0, 170, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__5);
   __Pyx_GIVEREF(__pyx_tuple__5);
 
-  /* "dawg.pyx":277
+  /* "dawg.pyx":283
  *         for k,v in replaces.items():
  *             if len(k) != 1 or len(v) != 1:
  *                 raise ValueError("Keys and values must be single-char unicode strings.")             # <<<<<<<<<<<<<<
  * 
  *         return dict(
  */
-  __pyx_tuple__7 = PyTuple_Pack(1, __pyx_kp_u_Keys_and_values_must_be_single_c); if (unlikely(!__pyx_tuple__7)) __PYX_ERR(0, 277, __pyx_L1_error)
+  __pyx_tuple__7 = PyTuple_Pack(1, __pyx_kp_u_Keys_and_values_must_be_single_c); if (unlikely(!__pyx_tuple__7)) __PYX_ERR(0, 283, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__7);
   __Pyx_GIVEREF(__pyx_tuple__7);
 
-  /* "dawg.pyx":378
+  /* "dawg.pyx":384
  *         if not res:
  *             self.dct.Clear()
  *             raise IOError("Invalid data format: can't load _dawg.Dictionary")             # <<<<<<<<<<<<<<
  * 
  *         res = self.guide.Read(<istream*> &stream)
  */
-  __pyx_tuple__8 = PyTuple_Pack(1, __pyx_kp_u_Invalid_data_format_can_t_load); if (unlikely(!__pyx_tuple__8)) __PYX_ERR(0, 378, __pyx_L1_error)
+  __pyx_tuple__8 = PyTuple_Pack(1, __pyx_kp_u_Invalid_data_format_can_t_load); if (unlikely(!__pyx_tuple__8)) __PYX_ERR(0, 384, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__8);
   __Pyx_GIVEREF(__pyx_tuple__8);
 
-  /* "dawg.pyx":384
+  /* "dawg.pyx":390
  *             self.guide.Clear()
  *             self.dct.Clear()
  *             raise IOError("Invalid data format: can't load _dawg.Guide")             # <<<<<<<<<<<<<<
  * 
  *         return self
  */
-  __pyx_tuple__9 = PyTuple_Pack(1, __pyx_kp_u_Invalid_data_format_can_t_load_2); if (unlikely(!__pyx_tuple__9)) __PYX_ERR(0, 384, __pyx_L1_error)
+  __pyx_tuple__9 = PyTuple_Pack(1, __pyx_kp_u_Invalid_data_format_can_t_load_2); if (unlikely(!__pyx_tuple__9)) __PYX_ERR(0, 390, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__9);
   __Pyx_GIVEREF(__pyx_tuple__9);
 
-  /* "dawg.pyx":855
+  /* "dawg.pyx":861
  * 
  * 
  * def _iterable_from_argument(arg):             # <<<<<<<<<<<<<<
  *     if arg is None:
  *         arg = []
  */
-  __pyx_tuple__14 = PyTuple_Pack(3, __pyx_n_s_arg, __pyx_n_s_genexpr, __pyx_n_s_genexpr); if (unlikely(!__pyx_tuple__14)) __PYX_ERR(0, 855, __pyx_L1_error)
+  __pyx_tuple__14 = PyTuple_Pack(3, __pyx_n_s_arg, __pyx_n_s_genexpr, __pyx_n_s_genexpr); if (unlikely(!__pyx_tuple__14)) __PYX_ERR(0, 861, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__14);
   __Pyx_GIVEREF(__pyx_tuple__14);
-  __pyx_codeobj__15 = (PyObject*)__Pyx_PyCode_New(1, 0, 3, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__14, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_src_dawg_pyx, __pyx_n_s_iterable_from_argument, 855, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__15)) __PYX_ERR(0, 855, __pyx_L1_error)
+  __pyx_codeobj__15 = (PyObject*)__Pyx_PyCode_New(1, 0, 3, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__14, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_src_dawg_pyx, __pyx_n_s_iterable_from_argument, 861, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__15)) __PYX_ERR(0, 861, __pyx_L1_error)
   __Pyx_RefNannyFinishContext();
   return 0;
   __pyx_L1_error:;
@@ -21930,15 +22114,15 @@ static int __Pyx_modinit_type_init_code(void) {
   __pyx_vtable_4dawg_CompletionDAWG.__pyx_base.frombytes = (PyObject *(*)(struct __pyx_obj_4dawg_DAWG *, PyObject *, int __pyx_skip_dispatch))__pyx_f_4dawg_14CompletionDAWG_frombytes;
   __pyx_vtable_4dawg_CompletionDAWG.keys = (PyObject *(*)(struct __pyx_obj_4dawg_CompletionDAWG *, int __pyx_skip_dispatch, struct __pyx_opt_args_4dawg_14CompletionDAWG_keys *__pyx_optional_args))__pyx_f_4dawg_14CompletionDAWG_keys;
   __pyx_type_4dawg_CompletionDAWG.tp_base = __pyx_ptype_4dawg_DAWG;
-  if (PyType_Ready(&__pyx_type_4dawg_CompletionDAWG) < 0) __PYX_ERR(0, 293, __pyx_L1_error)
+  if (PyType_Ready(&__pyx_type_4dawg_CompletionDAWG) < 0) __PYX_ERR(0, 299, __pyx_L1_error)
   #if PY_VERSION_HEX < 0x030800B1
   __pyx_type_4dawg_CompletionDAWG.tp_print = 0;
   #endif
   if ((CYTHON_USE_TYPE_SLOTS && CYTHON_USE_PYTYPE_LOOKUP) && likely(!__pyx_type_4dawg_CompletionDAWG.tp_dictoffset && __pyx_type_4dawg_CompletionDAWG.tp_getattro == PyObject_GenericGetAttr)) {
     __pyx_type_4dawg_CompletionDAWG.tp_getattro = __Pyx_PyObject_GenericGetAttr;
   }
-  if (__Pyx_SetVtable(__pyx_type_4dawg_CompletionDAWG.tp_dict, __pyx_vtabptr_4dawg_CompletionDAWG) < 0) __PYX_ERR(0, 293, __pyx_L1_error)
-  if (PyObject_SetAttr(__pyx_m, __pyx_n_s_CompletionDAWG, (PyObject *)&__pyx_type_4dawg_CompletionDAWG) < 0) __PYX_ERR(0, 293, __pyx_L1_error)
+  if (__Pyx_SetVtable(__pyx_type_4dawg_CompletionDAWG.tp_dict, __pyx_vtabptr_4dawg_CompletionDAWG) < 0) __PYX_ERR(0, 299, __pyx_L1_error)
+  if (PyObject_SetAttr(__pyx_m, __pyx_n_s_CompletionDAWG, (PyObject *)&__pyx_type_4dawg_CompletionDAWG) < 0) __PYX_ERR(0, 299, __pyx_L1_error)
   __pyx_ptype_4dawg_CompletionDAWG = &__pyx_type_4dawg_CompletionDAWG;
   __pyx_vtabptr_4dawg_BytesDAWG = &__pyx_vtable_4dawg_BytesDAWG;
   __pyx_vtable_4dawg_BytesDAWG.__pyx_base = *__pyx_vtabptr_4dawg_CompletionDAWG;
@@ -21959,7 +22143,7 @@ static int __Pyx_modinit_type_init_code(void) {
   __pyx_vtable_4dawg_BytesDAWG._similar_item_values = (PyObject *(*)(struct __pyx_obj_4dawg_BytesDAWG *, int, PyObject *, dawgdic::BaseType, PyObject *))__pyx_f_4dawg_9BytesDAWG__similar_item_values;
   __pyx_vtable_4dawg_BytesDAWG.similar_item_values = (PyObject *(*)(struct __pyx_obj_4dawg_BytesDAWG *, PyObject *, PyObject *, int __pyx_skip_dispatch))__pyx_f_4dawg_9BytesDAWG_similar_item_values;
   __pyx_type_4dawg_BytesDAWG.tp_base = __pyx_ptype_4dawg_CompletionDAWG;
-  if (PyType_Ready(&__pyx_type_4dawg_BytesDAWG) < 0) __PYX_ERR(0, 460, __pyx_L1_error)
+  if (PyType_Ready(&__pyx_type_4dawg_BytesDAWG) < 0) __PYX_ERR(0, 466, __pyx_L1_error)
   #if PY_VERSION_HEX < 0x030800B1
   __pyx_type_4dawg_BytesDAWG.tp_print = 0;
   #endif
@@ -21968,7 +22152,7 @@ static int __Pyx_modinit_type_init_code(void) {
   }
   #if CYTHON_COMPILING_IN_CPYTHON
   {
-    PyObject *wrapper = PyObject_GetAttrString((PyObject *)&__pyx_type_4dawg_BytesDAWG, "__init__"); if (unlikely(!wrapper)) __PYX_ERR(0, 460, __pyx_L1_error)
+    PyObject *wrapper = PyObject_GetAttrString((PyObject *)&__pyx_type_4dawg_BytesDAWG, "__init__"); if (unlikely(!wrapper)) __PYX_ERR(0, 466, __pyx_L1_error)
     if (Py_TYPE(wrapper) == &PyWrapperDescr_Type) {
       __pyx_wrapperbase_4dawg_9BytesDAWG___init__ = *((PyWrapperDescrObject *)wrapper)->d_base;
       __pyx_wrapperbase_4dawg_9BytesDAWG___init__.doc = __pyx_doc_4dawg_9BytesDAWG___init__;
@@ -21976,15 +22160,15 @@ static int __Pyx_modinit_type_init_code(void) {
     }
   }
   #endif
-  if (__Pyx_SetVtable(__pyx_type_4dawg_BytesDAWG.tp_dict, __pyx_vtabptr_4dawg_BytesDAWG) < 0) __PYX_ERR(0, 460, __pyx_L1_error)
-  if (PyObject_SetAttr(__pyx_m, __pyx_n_s_BytesDAWG, (PyObject *)&__pyx_type_4dawg_BytesDAWG) < 0) __PYX_ERR(0, 460, __pyx_L1_error)
+  if (__Pyx_SetVtable(__pyx_type_4dawg_BytesDAWG.tp_dict, __pyx_vtabptr_4dawg_BytesDAWG) < 0) __PYX_ERR(0, 466, __pyx_L1_error)
+  if (PyObject_SetAttr(__pyx_m, __pyx_n_s_BytesDAWG, (PyObject *)&__pyx_type_4dawg_BytesDAWG) < 0) __PYX_ERR(0, 466, __pyx_L1_error)
   __pyx_ptype_4dawg_BytesDAWG = &__pyx_type_4dawg_BytesDAWG;
   __pyx_vtabptr_4dawg_RecordDAWG = &__pyx_vtable_4dawg_RecordDAWG;
   __pyx_vtable_4dawg_RecordDAWG.__pyx_base = *__pyx_vtabptr_4dawg_BytesDAWG;
   __pyx_vtable_4dawg_RecordDAWG.__pyx_base._value_for_index = (PyObject *(*)(struct __pyx_obj_4dawg_BytesDAWG *, dawgdic::BaseType))__pyx_f_4dawg_10RecordDAWG__value_for_index;
   __pyx_vtable_4dawg_RecordDAWG.__pyx_base.items = (PyObject *(*)(struct __pyx_obj_4dawg_BytesDAWG *, int __pyx_skip_dispatch, struct __pyx_opt_args_4dawg_9BytesDAWG_items *__pyx_optional_args))__pyx_f_4dawg_10RecordDAWG_items;
   __pyx_type_4dawg_RecordDAWG.tp_base = __pyx_ptype_4dawg_BytesDAWG;
-  if (PyType_Ready(&__pyx_type_4dawg_RecordDAWG) < 0) __PYX_ERR(0, 807, __pyx_L1_error)
+  if (PyType_Ready(&__pyx_type_4dawg_RecordDAWG) < 0) __PYX_ERR(0, 813, __pyx_L1_error)
   #if PY_VERSION_HEX < 0x030800B1
   __pyx_type_4dawg_RecordDAWG.tp_print = 0;
   #endif
@@ -21993,7 +22177,7 @@ static int __Pyx_modinit_type_init_code(void) {
   }
   #if CYTHON_COMPILING_IN_CPYTHON
   {
-    PyObject *wrapper = PyObject_GetAttrString((PyObject *)&__pyx_type_4dawg_RecordDAWG, "__init__"); if (unlikely(!wrapper)) __PYX_ERR(0, 807, __pyx_L1_error)
+    PyObject *wrapper = PyObject_GetAttrString((PyObject *)&__pyx_type_4dawg_RecordDAWG, "__init__"); if (unlikely(!wrapper)) __PYX_ERR(0, 813, __pyx_L1_error)
     if (Py_TYPE(wrapper) == &PyWrapperDescr_Type) {
       __pyx_wrapperbase_4dawg_10RecordDAWG___init__ = *((PyWrapperDescrObject *)wrapper)->d_base;
       __pyx_wrapperbase_4dawg_10RecordDAWG___init__.doc = __pyx_doc_4dawg_10RecordDAWG___init__;
@@ -22001,8 +22185,8 @@ static int __Pyx_modinit_type_init_code(void) {
     }
   }
   #endif
-  if (__Pyx_SetVtable(__pyx_type_4dawg_RecordDAWG.tp_dict, __pyx_vtabptr_4dawg_RecordDAWG) < 0) __PYX_ERR(0, 807, __pyx_L1_error)
-  if (PyObject_SetAttr(__pyx_m, __pyx_n_s_RecordDAWG, (PyObject *)&__pyx_type_4dawg_RecordDAWG) < 0) __PYX_ERR(0, 807, __pyx_L1_error)
+  if (__Pyx_SetVtable(__pyx_type_4dawg_RecordDAWG.tp_dict, __pyx_vtabptr_4dawg_RecordDAWG) < 0) __PYX_ERR(0, 813, __pyx_L1_error)
+  if (PyObject_SetAttr(__pyx_m, __pyx_n_s_RecordDAWG, (PyObject *)&__pyx_type_4dawg_RecordDAWG) < 0) __PYX_ERR(0, 813, __pyx_L1_error)
   __pyx_ptype_4dawg_RecordDAWG = &__pyx_type_4dawg_RecordDAWG;
   __pyx_vtabptr_4dawg_IntDAWG = &__pyx_vtable_4dawg_IntDAWG;
   __pyx_vtable_4dawg_IntDAWG.__pyx_base = *__pyx_vtabptr_4dawg_DAWG;
@@ -22010,7 +22194,7 @@ static int __Pyx_modinit_type_init_code(void) {
   __pyx_vtable_4dawg_IntDAWG.get_value = (int (*)(struct __pyx_obj_4dawg_IntDAWG *, PyObject *, int __pyx_skip_dispatch))__pyx_f_4dawg_7IntDAWG_get_value;
   __pyx_vtable_4dawg_IntDAWG.b_get_value = (int (*)(struct __pyx_obj_4dawg_IntDAWG *, PyObject *, int __pyx_skip_dispatch))__pyx_f_4dawg_7IntDAWG_b_get_value;
   __pyx_type_4dawg_IntDAWG.tp_base = __pyx_ptype_4dawg_DAWG;
-  if (PyType_Ready(&__pyx_type_4dawg_IntDAWG) < 0) __PYX_ERR(0, 866, __pyx_L1_error)
+  if (PyType_Ready(&__pyx_type_4dawg_IntDAWG) < 0) __PYX_ERR(0, 872, __pyx_L1_error)
   #if PY_VERSION_HEX < 0x030800B1
   __pyx_type_4dawg_IntDAWG.tp_print = 0;
   #endif
@@ -22019,7 +22203,7 @@ static int __Pyx_modinit_type_init_code(void) {
   }
   #if CYTHON_COMPILING_IN_CPYTHON
   {
-    PyObject *wrapper = PyObject_GetAttrString((PyObject *)&__pyx_type_4dawg_IntDAWG, "__init__"); if (unlikely(!wrapper)) __PYX_ERR(0, 866, __pyx_L1_error)
+    PyObject *wrapper = PyObject_GetAttrString((PyObject *)&__pyx_type_4dawg_IntDAWG, "__init__"); if (unlikely(!wrapper)) __PYX_ERR(0, 872, __pyx_L1_error)
     if (Py_TYPE(wrapper) == &PyWrapperDescr_Type) {
       __pyx_wrapperbase_4dawg_7IntDAWG___init__ = *((PyWrapperDescrObject *)wrapper)->d_base;
       __pyx_wrapperbase_4dawg_7IntDAWG___init__.doc = __pyx_doc_4dawg_7IntDAWG___init__;
@@ -22027,8 +22211,8 @@ static int __Pyx_modinit_type_init_code(void) {
     }
   }
   #endif
-  if (__Pyx_SetVtable(__pyx_type_4dawg_IntDAWG.tp_dict, __pyx_vtabptr_4dawg_IntDAWG) < 0) __PYX_ERR(0, 866, __pyx_L1_error)
-  if (PyObject_SetAttr(__pyx_m, __pyx_n_s_IntDAWG, (PyObject *)&__pyx_type_4dawg_IntDAWG) < 0) __PYX_ERR(0, 866, __pyx_L1_error)
+  if (__Pyx_SetVtable(__pyx_type_4dawg_IntDAWG.tp_dict, __pyx_vtabptr_4dawg_IntDAWG) < 0) __PYX_ERR(0, 872, __pyx_L1_error)
+  if (PyObject_SetAttr(__pyx_m, __pyx_n_s_IntDAWG, (PyObject *)&__pyx_type_4dawg_IntDAWG) < 0) __PYX_ERR(0, 872, __pyx_L1_error)
   __pyx_ptype_4dawg_IntDAWG = &__pyx_type_4dawg_IntDAWG;
   __pyx_vtabptr_4dawg_IntCompletionDAWG = &__pyx_vtable_4dawg_IntCompletionDAWG;
   __pyx_vtable_4dawg_IntCompletionDAWG.__pyx_base = *__pyx_vtabptr_4dawg_CompletionDAWG;
@@ -22037,7 +22221,7 @@ static int __Pyx_modinit_type_init_code(void) {
   __pyx_vtable_4dawg_IntCompletionDAWG.b_get_value = (int (*)(struct __pyx_obj_4dawg_IntCompletionDAWG *, PyObject *, int __pyx_skip_dispatch))__pyx_f_4dawg_17IntCompletionDAWG_b_get_value;
   __pyx_vtable_4dawg_IntCompletionDAWG.items = (PyObject *(*)(struct __pyx_obj_4dawg_IntCompletionDAWG *, int __pyx_skip_dispatch, struct __pyx_opt_args_4dawg_17IntCompletionDAWG_items *__pyx_optional_args))__pyx_f_4dawg_17IntCompletionDAWG_items;
   __pyx_type_4dawg_IntCompletionDAWG.tp_base = __pyx_ptype_4dawg_CompletionDAWG;
-  if (PyType_Ready(&__pyx_type_4dawg_IntCompletionDAWG) < 0) __PYX_ERR(0, 909, __pyx_L1_error)
+  if (PyType_Ready(&__pyx_type_4dawg_IntCompletionDAWG) < 0) __PYX_ERR(0, 915, __pyx_L1_error)
   #if PY_VERSION_HEX < 0x030800B1
   __pyx_type_4dawg_IntCompletionDAWG.tp_print = 0;
   #endif
@@ -22046,7 +22230,7 @@ static int __Pyx_modinit_type_init_code(void) {
   }
   #if CYTHON_COMPILING_IN_CPYTHON
   {
-    PyObject *wrapper = PyObject_GetAttrString((PyObject *)&__pyx_type_4dawg_IntCompletionDAWG, "__init__"); if (unlikely(!wrapper)) __PYX_ERR(0, 909, __pyx_L1_error)
+    PyObject *wrapper = PyObject_GetAttrString((PyObject *)&__pyx_type_4dawg_IntCompletionDAWG, "__init__"); if (unlikely(!wrapper)) __PYX_ERR(0, 915, __pyx_L1_error)
     if (Py_TYPE(wrapper) == &PyWrapperDescr_Type) {
       __pyx_wrapperbase_4dawg_17IntCompletionDAWG___init__ = *((PyWrapperDescrObject *)wrapper)->d_base;
       __pyx_wrapperbase_4dawg_17IntCompletionDAWG___init__.doc = __pyx_doc_4dawg_17IntCompletionDAWG___init__;
@@ -22054,10 +22238,10 @@ static int __Pyx_modinit_type_init_code(void) {
     }
   }
   #endif
-  if (__Pyx_SetVtable(__pyx_type_4dawg_IntCompletionDAWG.tp_dict, __pyx_vtabptr_4dawg_IntCompletionDAWG) < 0) __PYX_ERR(0, 909, __pyx_L1_error)
-  if (PyObject_SetAttr(__pyx_m, __pyx_n_s_IntCompletionDAWG, (PyObject *)&__pyx_type_4dawg_IntCompletionDAWG) < 0) __PYX_ERR(0, 909, __pyx_L1_error)
+  if (__Pyx_SetVtable(__pyx_type_4dawg_IntCompletionDAWG.tp_dict, __pyx_vtabptr_4dawg_IntCompletionDAWG) < 0) __PYX_ERR(0, 915, __pyx_L1_error)
+  if (PyObject_SetAttr(__pyx_m, __pyx_n_s_IntCompletionDAWG, (PyObject *)&__pyx_type_4dawg_IntCompletionDAWG) < 0) __PYX_ERR(0, 915, __pyx_L1_error)
   __pyx_ptype_4dawg_IntCompletionDAWG = &__pyx_type_4dawg_IntCompletionDAWG;
-  if (PyType_Ready(&__pyx_type_4dawg___pyx_scope_struct__iterprefixes) < 0) __PYX_ERR(0, 256, __pyx_L1_error)
+  if (PyType_Ready(&__pyx_type_4dawg___pyx_scope_struct__iterprefixes) < 0) __PYX_ERR(0, 262, __pyx_L1_error)
   #if PY_VERSION_HEX < 0x030800B1
   __pyx_type_4dawg___pyx_scope_struct__iterprefixes.tp_print = 0;
   #endif
@@ -22065,7 +22249,7 @@ static int __Pyx_modinit_type_init_code(void) {
     __pyx_type_4dawg___pyx_scope_struct__iterprefixes.tp_getattro = __Pyx_PyObject_GenericGetAttrNoDict;
   }
   __pyx_ptype_4dawg___pyx_scope_struct__iterprefixes = &__pyx_type_4dawg___pyx_scope_struct__iterprefixes;
-  if (PyType_Ready(&__pyx_type_4dawg___pyx_scope_struct_1_compile_replaces) < 0) __PYX_ERR(0, 273, __pyx_L1_error)
+  if (PyType_Ready(&__pyx_type_4dawg___pyx_scope_struct_1_compile_replaces) < 0) __PYX_ERR(0, 279, __pyx_L1_error)
   #if PY_VERSION_HEX < 0x030800B1
   __pyx_type_4dawg___pyx_scope_struct_1_compile_replaces.tp_print = 0;
   #endif
@@ -22073,7 +22257,7 @@ static int __Pyx_modinit_type_init_code(void) {
     __pyx_type_4dawg___pyx_scope_struct_1_compile_replaces.tp_getattro = __Pyx_PyObject_GenericGetAttrNoDict;
   }
   __pyx_ptype_4dawg___pyx_scope_struct_1_compile_replaces = &__pyx_type_4dawg___pyx_scope_struct_1_compile_replaces;
-  if (PyType_Ready(&__pyx_type_4dawg___pyx_scope_struct_2_genexpr) < 0) __PYX_ERR(0, 281, __pyx_L1_error)
+  if (PyType_Ready(&__pyx_type_4dawg___pyx_scope_struct_2_genexpr) < 0) __PYX_ERR(0, 287, __pyx_L1_error)
   #if PY_VERSION_HEX < 0x030800B1
   __pyx_type_4dawg___pyx_scope_struct_2_genexpr.tp_print = 0;
   #endif
@@ -22081,7 +22265,7 @@ static int __Pyx_modinit_type_init_code(void) {
     __pyx_type_4dawg___pyx_scope_struct_2_genexpr.tp_getattro = __Pyx_PyObject_GenericGetAttrNoDict;
   }
   __pyx_ptype_4dawg___pyx_scope_struct_2_genexpr = &__pyx_type_4dawg___pyx_scope_struct_2_genexpr;
-  if (PyType_Ready(&__pyx_type_4dawg___pyx_scope_struct_3_iterkeys) < 0) __PYX_ERR(0, 325, __pyx_L1_error)
+  if (PyType_Ready(&__pyx_type_4dawg___pyx_scope_struct_3_iterkeys) < 0) __PYX_ERR(0, 331, __pyx_L1_error)
   #if PY_VERSION_HEX < 0x030800B1
   __pyx_type_4dawg___pyx_scope_struct_3_iterkeys.tp_print = 0;
   #endif
@@ -22089,7 +22273,7 @@ static int __Pyx_modinit_type_init_code(void) {
     __pyx_type_4dawg___pyx_scope_struct_3_iterkeys.tp_getattro = __Pyx_PyObject_GenericGetAttrNoDict;
   }
   __pyx_ptype_4dawg___pyx_scope_struct_3_iterkeys = &__pyx_type_4dawg___pyx_scope_struct_3_iterkeys;
-  if (PyType_Ready(&__pyx_type_4dawg___pyx_scope_struct_4___init__) < 0) __PYX_ERR(0, 473, __pyx_L1_error)
+  if (PyType_Ready(&__pyx_type_4dawg___pyx_scope_struct_4___init__) < 0) __PYX_ERR(0, 479, __pyx_L1_error)
   #if PY_VERSION_HEX < 0x030800B1
   __pyx_type_4dawg___pyx_scope_struct_4___init__.tp_print = 0;
   #endif
@@ -22097,7 +22281,7 @@ static int __Pyx_modinit_type_init_code(void) {
     __pyx_type_4dawg___pyx_scope_struct_4___init__.tp_getattro = __Pyx_PyObject_GenericGetAttrNoDict;
   }
   __pyx_ptype_4dawg___pyx_scope_struct_4___init__ = &__pyx_type_4dawg___pyx_scope_struct_4___init__;
-  if (PyType_Ready(&__pyx_type_4dawg___pyx_scope_struct_5_genexpr) < 0) __PYX_ERR(0, 483, __pyx_L1_error)
+  if (PyType_Ready(&__pyx_type_4dawg___pyx_scope_struct_5_genexpr) < 0) __PYX_ERR(0, 489, __pyx_L1_error)
   #if PY_VERSION_HEX < 0x030800B1
   __pyx_type_4dawg___pyx_scope_struct_5_genexpr.tp_print = 0;
   #endif
@@ -22105,7 +22289,7 @@ static int __Pyx_modinit_type_init_code(void) {
     __pyx_type_4dawg___pyx_scope_struct_5_genexpr.tp_getattro = __Pyx_PyObject_GenericGetAttrNoDict;
   }
   __pyx_ptype_4dawg___pyx_scope_struct_5_genexpr = &__pyx_type_4dawg___pyx_scope_struct_5_genexpr;
-  if (PyType_Ready(&__pyx_type_4dawg___pyx_scope_struct_6_iteritems) < 0) __PYX_ERR(0, 624, __pyx_L1_error)
+  if (PyType_Ready(&__pyx_type_4dawg___pyx_scope_struct_6_iteritems) < 0) __PYX_ERR(0, 630, __pyx_L1_error)
   #if PY_VERSION_HEX < 0x030800B1
   __pyx_type_4dawg___pyx_scope_struct_6_iteritems.tp_print = 0;
   #endif
@@ -22113,7 +22297,7 @@ static int __Pyx_modinit_type_init_code(void) {
     __pyx_type_4dawg___pyx_scope_struct_6_iteritems.tp_getattro = __Pyx_PyObject_GenericGetAttrNoDict;
   }
   __pyx_ptype_4dawg___pyx_scope_struct_6_iteritems = &__pyx_type_4dawg___pyx_scope_struct_6_iteritems;
-  if (PyType_Ready(&__pyx_type_4dawg___pyx_scope_struct_7_iterkeys) < 0) __PYX_ERR(0, 686, __pyx_L1_error)
+  if (PyType_Ready(&__pyx_type_4dawg___pyx_scope_struct_7_iterkeys) < 0) __PYX_ERR(0, 692, __pyx_L1_error)
   #if PY_VERSION_HEX < 0x030800B1
   __pyx_type_4dawg___pyx_scope_struct_7_iterkeys.tp_print = 0;
   #endif
@@ -22121,7 +22305,7 @@ static int __Pyx_modinit_type_init_code(void) {
     __pyx_type_4dawg___pyx_scope_struct_7_iterkeys.tp_getattro = __Pyx_PyObject_GenericGetAttrNoDict;
   }
   __pyx_ptype_4dawg___pyx_scope_struct_7_iterkeys = &__pyx_type_4dawg___pyx_scope_struct_7_iterkeys;
-  if (PyType_Ready(&__pyx_type_4dawg___pyx_scope_struct_8___init__) < 0) __PYX_ERR(0, 824, __pyx_L1_error)
+  if (PyType_Ready(&__pyx_type_4dawg___pyx_scope_struct_8___init__) < 0) __PYX_ERR(0, 830, __pyx_L1_error)
   #if PY_VERSION_HEX < 0x030800B1
   __pyx_type_4dawg___pyx_scope_struct_8___init__.tp_print = 0;
   #endif
@@ -22129,7 +22313,7 @@ static int __Pyx_modinit_type_init_code(void) {
     __pyx_type_4dawg___pyx_scope_struct_8___init__.tp_getattro = __Pyx_PyObject_GenericGetAttrNoDict;
   }
   __pyx_ptype_4dawg___pyx_scope_struct_8___init__ = &__pyx_type_4dawg___pyx_scope_struct_8___init__;
-  if (PyType_Ready(&__pyx_type_4dawg___pyx_scope_struct_9_genexpr) < 0) __PYX_ERR(0, 839, __pyx_L1_error)
+  if (PyType_Ready(&__pyx_type_4dawg___pyx_scope_struct_9_genexpr) < 0) __PYX_ERR(0, 845, __pyx_L1_error)
   #if PY_VERSION_HEX < 0x030800B1
   __pyx_type_4dawg___pyx_scope_struct_9_genexpr.tp_print = 0;
   #endif
@@ -22137,7 +22321,7 @@ static int __Pyx_modinit_type_init_code(void) {
     __pyx_type_4dawg___pyx_scope_struct_9_genexpr.tp_getattro = __Pyx_PyObject_GenericGetAttrNoDict;
   }
   __pyx_ptype_4dawg___pyx_scope_struct_9_genexpr = &__pyx_type_4dawg___pyx_scope_struct_9_genexpr;
-  if (PyType_Ready(&__pyx_type_4dawg___pyx_scope_struct_10_iteritems) < 0) __PYX_ERR(0, 850, __pyx_L1_error)
+  if (PyType_Ready(&__pyx_type_4dawg___pyx_scope_struct_10_iteritems) < 0) __PYX_ERR(0, 856, __pyx_L1_error)
   #if PY_VERSION_HEX < 0x030800B1
   __pyx_type_4dawg___pyx_scope_struct_10_iteritems.tp_print = 0;
   #endif
@@ -22145,7 +22329,7 @@ static int __Pyx_modinit_type_init_code(void) {
     __pyx_type_4dawg___pyx_scope_struct_10_iteritems.tp_getattro = __Pyx_PyObject_GenericGetAttrNoDict;
   }
   __pyx_ptype_4dawg___pyx_scope_struct_10_iteritems = &__pyx_type_4dawg___pyx_scope_struct_10_iteritems;
-  if (PyType_Ready(&__pyx_type_4dawg___pyx_scope_struct_11__iterable_from_argument) < 0) __PYX_ERR(0, 855, __pyx_L1_error)
+  if (PyType_Ready(&__pyx_type_4dawg___pyx_scope_struct_11__iterable_from_argument) < 0) __PYX_ERR(0, 861, __pyx_L1_error)
   #if PY_VERSION_HEX < 0x030800B1
   __pyx_type_4dawg___pyx_scope_struct_11__iterable_from_argument.tp_print = 0;
   #endif
@@ -22153,7 +22337,7 @@ static int __Pyx_modinit_type_init_code(void) {
     __pyx_type_4dawg___pyx_scope_struct_11__iterable_from_argument.tp_getattro = __Pyx_PyObject_GenericGetAttrNoDict;
   }
   __pyx_ptype_4dawg___pyx_scope_struct_11__iterable_from_argument = &__pyx_type_4dawg___pyx_scope_struct_11__iterable_from_argument;
-  if (PyType_Ready(&__pyx_type_4dawg___pyx_scope_struct_12_genexpr) < 0) __PYX_ERR(0, 860, __pyx_L1_error)
+  if (PyType_Ready(&__pyx_type_4dawg___pyx_scope_struct_12_genexpr) < 0) __PYX_ERR(0, 866, __pyx_L1_error)
   #if PY_VERSION_HEX < 0x030800B1
   __pyx_type_4dawg___pyx_scope_struct_12_genexpr.tp_print = 0;
   #endif
@@ -22161,7 +22345,7 @@ static int __Pyx_modinit_type_init_code(void) {
     __pyx_type_4dawg___pyx_scope_struct_12_genexpr.tp_getattro = __Pyx_PyObject_GenericGetAttrNoDict;
   }
   __pyx_ptype_4dawg___pyx_scope_struct_12_genexpr = &__pyx_type_4dawg___pyx_scope_struct_12_genexpr;
-  if (PyType_Ready(&__pyx_type_4dawg___pyx_scope_struct_13_iteritems) < 0) __PYX_ERR(0, 971, __pyx_L1_error)
+  if (PyType_Ready(&__pyx_type_4dawg___pyx_scope_struct_13_iteritems) < 0) __PYX_ERR(0, 977, __pyx_L1_error)
   #if PY_VERSION_HEX < 0x030800B1
   __pyx_type_4dawg___pyx_scope_struct_13_iteritems.tp_print = 0;
   #endif
@@ -22590,31 +22774,31 @@ if (!__Pyx_RefNanny) {
   __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-  /* "dawg.pyx":273
+  /* "dawg.pyx":279
  * 
  *     @classmethod
  *     def compile_replaces(cls, replaces):             # <<<<<<<<<<<<<<
  * 
  *         for k,v in replaces.items():
  */
-  __Pyx_GetNameInClass(__pyx_t_4, (PyObject *)__pyx_ptype_4dawg_DAWG, __pyx_n_s_compile_replaces); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 273, __pyx_L1_error)
+  __Pyx_GetNameInClass(__pyx_t_4, (PyObject *)__pyx_ptype_4dawg_DAWG, __pyx_n_s_compile_replaces); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 279, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
 
-  /* "dawg.pyx":272
+  /* "dawg.pyx":278
  *             pos += 1
  * 
  *     @classmethod             # <<<<<<<<<<<<<<
  *     def compile_replaces(cls, replaces):
  * 
  */
-  __pyx_t_7 = __Pyx_Method_ClassMethod(__pyx_t_4); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 272, __pyx_L1_error)
+  __pyx_t_7 = __Pyx_Method_ClassMethod(__pyx_t_4); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 278, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_7);
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-  if (PyDict_SetItem((PyObject *)__pyx_ptype_4dawg_DAWG->tp_dict, __pyx_n_s_compile_replaces, __pyx_t_7) < 0) __PYX_ERR(0, 273, __pyx_L1_error)
+  if (PyDict_SetItem((PyObject *)__pyx_ptype_4dawg_DAWG->tp_dict, __pyx_n_s_compile_replaces, __pyx_t_7) < 0) __PYX_ERR(0, 279, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
   PyType_Modified(__pyx_ptype_4dawg_DAWG);
 
-  /* "dawg.pyx":456
+  /* "dawg.pyx":462
  * # are not supported anyway because dawgdic doesn't support keys containing
  * # chr(0).
  * cdef bytes PAYLOAD_SEPARATOR = b'\x01'             # <<<<<<<<<<<<<<
@@ -22626,7 +22810,7 @@ if (!__Pyx_RefNanny) {
   __Pyx_DECREF_SET(__pyx_v_4dawg_PAYLOAD_SEPARATOR, __pyx_kp_b__13);
   __Pyx_GIVEREF(__pyx_kp_b__13);
 
-  /* "dawg.pyx":473
+  /* "dawg.pyx":479
  *     cdef Completer* _completer
  * 
  *     def __init__(self, arg=None, input_is_sorted=False, bytes payload_separator=PAYLOAD_SEPARATOR):             # <<<<<<<<<<<<<<
@@ -22637,7 +22821,7 @@ if (!__Pyx_RefNanny) {
   __pyx_k__10 = __pyx_v_4dawg_PAYLOAD_SEPARATOR;
   __Pyx_GIVEREF(__pyx_v_4dawg_PAYLOAD_SEPARATOR);
 
-  /* "dawg.pyx":824
+  /* "dawg.pyx":830
  *     cdef _struct
  * 
  *     def __init__(self, fmt, arg=None, input_is_sorted=False, bytes payload_separator=PAYLOAD_SEPARATOR):             # <<<<<<<<<<<<<<
@@ -22648,16 +22832,16 @@ if (!__Pyx_RefNanny) {
   __pyx_k__12 = __pyx_v_4dawg_PAYLOAD_SEPARATOR;
   __Pyx_GIVEREF(__pyx_v_4dawg_PAYLOAD_SEPARATOR);
 
-  /* "dawg.pyx":855
+  /* "dawg.pyx":861
  * 
  * 
  * def _iterable_from_argument(arg):             # <<<<<<<<<<<<<<
  *     if arg is None:
  *         arg = []
  */
-  __pyx_t_7 = PyCFunction_NewEx(&__pyx_mdef_4dawg_1_iterable_from_argument, NULL, __pyx_n_s_dawg); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 855, __pyx_L1_error)
+  __pyx_t_7 = PyCFunction_NewEx(&__pyx_mdef_4dawg_1_iterable_from_argument, NULL, __pyx_n_s_dawg); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 861, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_7);
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_iterable_from_argument, __pyx_t_7) < 0) __PYX_ERR(0, 855, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_iterable_from_argument, __pyx_t_7) < 0) __PYX_ERR(0, 861, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
 
   /* "dawg.pyx":1
@@ -24867,28 +25051,6 @@ bad:
     Py_XDECREF(py_frame);
 }
 
-/* CIntFromPyVerify */
-#define __PYX_VERIFY_RETURN_INT(target_type, func_type, func_value)\
-    __PYX__VERIFY_RETURN_INT(target_type, func_type, func_value, 0)
-#define __PYX_VERIFY_RETURN_INT_EXC(target_type, func_type, func_value)\
-    __PYX__VERIFY_RETURN_INT(target_type, func_type, func_value, 1)
-#define __PYX__VERIFY_RETURN_INT(target_type, func_type, func_value, exc)\
-    {\
-        func_type value = func_value;\
-        if (sizeof(target_type) < sizeof(func_type)) {\
-            if (unlikely(value != (func_type) (target_type) value)) {\
-                func_type zero = 0;\
-                if (exc && unlikely(value == (func_type)-1 && PyErr_Occurred()))\
-                    return (target_type) -1;\
-                if (is_unsigned && unlikely(value < zero))\
-                    goto raise_neg_overflow;\
-                else\
-                    goto raise_overflow;\
-            }\
-        }\
-        return (target_type) value;\
-    }
-
 /* CIntToPy */
 static CYTHON_INLINE PyObject* __Pyx_PyInt_From_dawgdic_3a__3a_SizeType(dawgdic::SizeType value) {
     const dawgdic::SizeType neg_one = (dawgdic::SizeType) ((dawgdic::SizeType) 0 - (dawgdic::SizeType) 1), const_zero = (dawgdic::SizeType) 0;
@@ -24919,6 +25081,28 @@ static CYTHON_INLINE PyObject* __Pyx_PyInt_From_dawgdic_3a__3a_SizeType(dawgdic:
                                      little, !is_unsigned);
     }
 }
+
+/* CIntFromPyVerify */
+#define __PYX_VERIFY_RETURN_INT(target_type, func_type, func_value)\
+    __PYX__VERIFY_RETURN_INT(target_type, func_type, func_value, 0)
+#define __PYX_VERIFY_RETURN_INT_EXC(target_type, func_type, func_value)\
+    __PYX__VERIFY_RETURN_INT(target_type, func_type, func_value, 1)
+#define __PYX__VERIFY_RETURN_INT(target_type, func_type, func_value, exc)\
+    {\
+        func_type value = func_value;\
+        if (sizeof(target_type) < sizeof(func_type)) {\
+            if (unlikely(value != (func_type) (target_type) value)) {\
+                func_type zero = 0;\
+                if (exc && unlikely(value == (func_type)-1 && PyErr_Occurred()))\
+                    return (target_type) -1;\
+                if (is_unsigned && unlikely(value < zero))\
+                    goto raise_neg_overflow;\
+                else\
+                    goto raise_overflow;\
+            }\
+        }\
+        return (target_type) value;\
+    }
 
 /* CIntToPy */
 static CYTHON_INLINE PyObject* __Pyx_PyInt_From_int(int value) {
