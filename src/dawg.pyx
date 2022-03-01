@@ -52,6 +52,9 @@ cdef class DAWG:
         self.dct.Clear()
         self.dawg.Clear()
 
+    def __sizeof__(self):
+        return super(DAWG, self).__sizeof__() + self.dct.total_size()
+
     def _build_from_iterable(self, iterable):
         cdef DawgBuilder dawg_builder
         cdef bytes b_key
