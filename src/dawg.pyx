@@ -569,7 +569,7 @@ cdef class BytesDAWG(CompletionDAWG):
                 self._completer.length(),
                 b64_decoder_storage
             )
-            results.push_back(string(b64_decoder_storage, key_len))
+            results.push_back(string(<char*>b64_decoder_storage, key_len))
 
         return results
 
